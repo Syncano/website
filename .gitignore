@@ -1,5 +1,6 @@
 *~
 .DS_Store
+config.codekit
 
 # jekyll build
 _site/*
