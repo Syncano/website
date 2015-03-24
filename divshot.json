@@ -1,0 +1,6 @@
+{
+  "name": "new-syncano",
+  "root": "/_site",
+  "clean_urls": true,
+  "error_page": "n"
+}
