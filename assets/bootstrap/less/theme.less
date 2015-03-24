@@ -278,17 +278,58 @@ footer {
   &.columns {
     background-color: @gray-light;
     padding: 80px 0 50px;
-    h4 {
-      margin-top: 0;
-      font-size: @font-size-small;
-      line-height: @font-size-small;
-      text-transform: uppercase;
-      margin-bottom: 30px;
-      color: @gray-dark;
+    margin-top: 40px;
+    .row > div {
+      h4 {
+        margin-top: 0;
+        font-size: @font-size-small;
+        line-height: @font-size-small;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        color: @gray-dark;
+        font-family: @font-bold;
+      }
+      p {
+        color: @gray-dark;
+        font-size: 13px;
+        line-height: 21px;
+        margin-bottom: 20px;
+      }
+      &.cta {
+        background-color: @gray-lighter;
+        margin-top: -@grid-gutter-width;
+        padding: 40px 0 30px;
+        text-align: center;
+        h3 {
+          margin-top: 0;
+          font-size: 20px;
+          font-weight: bold;
+          color: #4f4f4f;
+        }
+        .btn {
+          margin: 25px 0;
+          display: inline-block;
+          font-size: 13px;
+          padding: 15px 20px;
+          letter-spacing: 2px;
+        }
+        p {
+          margin-bottom: 0;
+          font-family: @font-light;
+        }
+      }
     }
   }
   background-color: @gray-darker;
   padding: 20px 0;
+
+  p.copyright {
+    color: white;
+    font-size: @font-size-small;
+    font-family: @font-light;
+    margin-bottom: 0;
+    line-height: @font-size-small * 2;
+  }
 
   ul {
     padding-left: 0;
@@ -296,6 +337,9 @@ footer {
     li {
       padding: 5px 0;
       margin: 0;
+      &:first-child {
+        padding-top: 0;
+      }
       a {
         margin: 0;
         font-size: 13px;
