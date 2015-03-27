@@ -1,0 +1,9 @@
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+  {% endif %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+  {% endif %}
+</div>
