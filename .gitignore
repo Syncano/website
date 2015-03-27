@@ -39,3 +39,6 @@ _site/*
 *.asf
 *.wmv
 *.avi
+=======
+_site/
+.sass-cache/
