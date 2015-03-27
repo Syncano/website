@@ -1,0 +1,9 @@
+# Site settings
+title:       Syncano
+email:       your_email@example.com
+author:      Syncano
+description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
+baseurl:     ""
+url:         "http://syncano.com"
+permalink:    /:title
+paginate:     6

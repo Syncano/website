@@ -265,7 +265,86 @@
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1);
 }
+.post-header {
+  padding-bottom: 35px;
+  margin-bottom: 35px;
+  text-align: center;
+}
+.post-header.image {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.post-header h1 {
+  margin: 0;
+}
+.post-header .post-meta {
+  position: relative;
+  top: 33%;
+}
+.post-content {
+  color: #676767;
+  font-family: 'OpenSansLight';
+}
+.post-content h2 {
+  font-size: 22px;
+  line-height: 36px;
+  margin: 0 0 10px 0;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+}
+.post-content h3 {
+  font-size: 19px;
+  line-height: 34px;
+  font-family: 'OpenSansBold';
+  font-weight: normal;
+  letter-spacing: -0.5px;
+  -webkit-font-smoothing: antialiased;
+}
+.post-content p {
+  margin-bottom: 27px;
+  font-size: 15px;
+  line-height: 27px;
+}
+.social-share {
+  background-color: white;
+  border-top: 1px solid #ddd;
+  padding: 10px 15px;
+  line-height: 30px;
+  z-index: 5;
+}
+.social-share i {
+  border: 1px solid #abb0b7;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 4px;
+}
+.social-share i.facebook {
+  color: #3b5998;
+}
+.social-share i.twitter {
+  color: #55acee;
+}
+.social-share i.gplus {
+  color: #dd4b39;
+}
+.social-share i.pinterest {
+  color: #cb2027;
+}
+.social-share #subscribe {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
+.social-share button.btn {
+  border: 1px solid #33b5e4;
+  font-weight: bold;
+  color: #33b5e4;
+}
 footer {
+  position: relative;
+  z-index: 10;
   background-color: #2f353e;
   padding: 20px 0;
 }

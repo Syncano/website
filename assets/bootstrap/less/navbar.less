@@ -9,7 +9,10 @@
 // other navbar variations.
 //for fixed header
 body {
-  padding-top: (@grid-gutter-width * 2) + @logo-height;
+  padding-top: @grid-gutter-width + @logo-height;
+  &.transparent_nav {
+    padding-top: 0;
+  }
 }
 
 .navbar {
@@ -17,8 +20,11 @@ body {
   min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   padding:  0;
   background-color: white;
+  &.transparent {
+    background-color: transparent;
+  }
   > .container {
-    padding: @grid-gutter-width;
+    padding: (@grid-gutter-width / 2) @grid-gutter-width;
   }
   -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.22);
      -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.22);
@@ -26,6 +32,24 @@ body {
 
   // Prevent floats from breaking the navbar
   &:extend(.clearfix all);
+  img.light-version {
+    display: none;
+  }
+  &.dark {
+    img.light-version {
+      display: inline-block;
+    }
+    img.dark-version {
+      display: none;
+    }
+    .navbar-nav {
+      >  li {
+        > a {
+          color: white;
+        }
+      }
+    }
+  }
 }
 
 
@@ -244,9 +268,7 @@ body {
     line-height: @line-height-computed;
     font-size: 13px;
   }
-  @media (min-width: @grid-float-breakpoint-max) {
-    margin-left: 20%!important;
-  }
+
   @media (max-width: @grid-float-breakpoint-max) {
     // Dropdowns get custom display when collapsed
     .open .dropdown-menu {
@@ -275,7 +297,7 @@ body {
   @media (min-width: @grid-float-breakpoint) {
     float: left;
     margin: 0;
-
+    margin-left: 22.4%;
     > li {
       float: left;
       > a {

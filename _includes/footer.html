@@ -11,34 +11,33 @@
 			<p><a href="mailto:hello@syncano.com">hello@syncano.com</a></p>
 			<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="http://platform.twitter.com/widgets/follow_button.3afdf1fe9dd484034da3e37c7d9e99ed.en.html#_=1427235012460&amp;dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=syncano&amp;show_count=false&amp;show_screen_name=true&amp;size=m" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 115px; height: 20px; opacity: 1;"></iframe>
 		</div>
-
 		<div class="col-md-2">
 			<h4>Company</h4>
 			<ul>
-				<li><a href="#">Our Blog</a></li>
-				<li><a href="#">About Us</a></li>
-				<li><a href="#">The Team</a></li>
-				<li><a href="#">Jobs</a></li>
+				<li><a href="/blog">Our Blog</a></li>
+				<li><a href="/about">About Us</a></li>
+				<li><a href="/about#team">The Team</a></li>
+				<li><a href="/about#jobs">Jobs</a></li>
 			</ul>
 		</div>
 
 		<div class="col-md-2">
 			<h4>Help, Support</h4>
 			<ul>
-				<li><a href="#">Get Support</a></li>
-				<li><a href="#">API Status</a></li>
-				<li><a href="#">Legal</a></li>
-				<li><a href="#">Contact Us</a></li>
+				<li><a href="http://docs.syncano.com/v3.2.1/discuss">Get Support</a></li>
+				<li><a href="http://syncano.statuspage.io/">API Status</a></li>
+				<li><a href="/terms-of-service/">Legal</a></li>
+				<li><a href="/contact/">Contact Us</a></li>
 			</ul>
 		</div>
 
 		<div class="col-md-2">
 			<h4>Resources</h4>
 			<ul>
-				<li><a href="#">Documentation</a></li>
+				<li><a href="http://docs.syncano.com/">Documentation</a></li>
 				<li><a href="#">Tutorials</a></li>
-				<li><a href="#">API</a></li>
-				<li><a href="#">Client Library</a></li>
+				<li><a href="https://login.syncano.com/docs/rest/">API</a></li>
+				<li><a href="http://docs.syncano.com/v3.2.1/docs/syncano-libraries">Client libraries</a></li>
 			</ul>
 		</div>
 
@@ -51,7 +50,6 @@
 			</p>
 		</div>
 	</div><!-- END row -->
-
 </div>
 
 </footer>
@@ -67,7 +65,9 @@
 	</div>
 </div>
 </footer>
-
-
+{% if page.custom_js %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="/assets/js/custom.js"></script>
+{% endif %}
 </body>
 </html>

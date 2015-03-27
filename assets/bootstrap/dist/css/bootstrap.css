@@ -4046,7 +4046,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-top-left-radius: 0;
 }
 body {
-  padding-top: 93px;
+  padding-top: 63px;
+}
+body.transparent_nav {
+  padding-top: 0;
 }
 .navbar {
   position: relative;
@@ -4057,8 +4060,11 @@ body {
   -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.22);
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.22);
 }
+.navbar.transparent {
+  background-color: transparent;
+}
 .navbar > .container {
-  padding: 30px;
+  padding: 15px 30px;
 }
 @media (min-width: 768px) {
   .navbar-header {

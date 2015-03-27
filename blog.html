@@ -1,0 +1,50 @@
+---
+layout: default
+title: Syncano | Real-time apps, simplified.
+permalink: /blog/
+body_class: ['blog ', 'archive']
+---
+
+<div class="container blog">
+  <div class="posts">
+    {% for post in site.posts %}
+      <div class="row post">
+        <div class="col-md-1 date">
+          <span class="month">{{ post.date | date: "%b" }}</span>
+          <span class="day">{{ post.date | date: "%-d" }}</spam>
+        </div>
+
+        <div class="col-md-11 post-content">
+          {% if post.image %}
+          <div class="featured-image"><img src="{{post.image}}" alt="{{post.title}}" /></div>
+          {% endif %}
+          <div class="post-meta">
+            <h1 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+            {% assign author = site.data.authors[post.author] %}
+            {% if author %}
+            <span class="author">By {{ author.name }}</span>
+            {% endif %}
+            <span class="categories">
+            {% for pc in post.categories %}
+              {{ pc }}
+            {% endfor %}
+            </span>
+            <span class="comment-count">No Comments</span>
+          </div>
+          <p class="post-summary">
+            {% if post.summary %}
+              {{ post.summary }}
+            {% else %}
+              {{ post.excerpt }}
+            {% endif %}
+          </p>
+          <a href="{{ post.url }}" class="read-more btn btn-primary">Read More</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="container">
+{% include blog-cta.html %}
+</div>

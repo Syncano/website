@@ -1,4 +1,4 @@
-<nav class="navbar navbar-fixed-top">
+<nav class="navbar navbar-fixed-top {% for c in page.nav_class %}{{ c }}{% endfor %}" style="{% if page.transparent_header %} background-color: #{{page.bg_color}} {% endif %}">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
@@ -7,20 +7,23 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><img class="dark-version" alt="Syncano" src="http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/09/syncano-logo.png" /></a>
+      <a class="navbar-brand" href="/">
+        <img class="dark-version" alt="Syncano" src="/assets/images/syncano-logo.png" />
+        <img class="light-version" alt="Syncano" src="http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/10/syncano-white.png" />
+      </a>
     </div>
 
     <div class="collapse navbar-collapse" id="navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="/get-started">Get Started</a></li>
         <li><a href="/features">Features</a></li>
-        <li><a href="/docs">Docs</a></li>
+        <li><a href="http://docs.syncano.com/">Docs</a></li>
         <li><a href="/pricing">Pricing</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" class="btn btn-primary">Login</a></li>
-        <li><a href="#" class="btn btn-success">Sign Up</a></li>
+        <li><a href="https://login.syncano.com/login" class="btn btn-primary">Login</a></li>
+        <li><a href="https://login.syncano.com/sign_up" class="btn btn-success">Sign Up</a></li>
       </ul>
-    </div><!-- /.navbar-collapse -->
+    </div>
   </div>
 </nav>
