@@ -5,7 +5,6 @@ date: 2015-03-12 11:21:29
 author: mariusz
 summary: "In this tutorial, I’m going to show you how easy it is to create a simple chat app (using Swift) on Syncano. We’ll start with the basics, and then add user accounts, user profiles, etc. in Part 2."
 categories: ['javascript', 'Data Modeling']
-bg_height: 700px
 image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2015/03/create-ios-chat-app.png
 ---
 

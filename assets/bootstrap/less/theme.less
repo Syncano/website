@@ -414,6 +414,7 @@
     background-image: url('http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/05/new-bg.png');
     background-color: @gray-darker;
     min-height: 500px;
+    background-position: 0 75%;
   }
 
   .highlights {
@@ -616,13 +617,29 @@
 }
 
 //
-// Pricing
+// Pricing, Vision
 // --------------------------------------------------
 .pricing {
   .text-hero {
-    padding: 89px 0;
     background-color: @gray-darker;
+  }
+}
+
+.vision {
+  .text-hero {
+    background-color: @brand-primary;
+  }
+}
+
+.pricing,
+.vision {
+  .text-hero {
+    padding: 89px 0;
     color: white;
+  }
+  h2 {
+    line-height: 38px;
+    margin-bottom: 20px;
   }
   h3 {
     color: #444;
@@ -635,6 +652,15 @@
   }
   .pricing-calculator-new {
     padding-top: 40px;
+  }
+  p {
+    margin-bottom: 25px;
+    padding-bottom: 0;
+    font-size: 15px;
+    line-height: 27px;
+  }
+  ul {
+    line-height: 27px;
   }
 }
 
@@ -858,23 +884,18 @@
 // --------------------------------------------------
 
 .post-header {
-  padding-bottom: 35px;
-  margin-bottom: 35px;
   text-align: center;
-  position: relative;
   z-index: 10;
   &.image {
     background-size: cover;
     background-repeat: no-repeat;
   }
   h1 {
-    margin: 0;
-    color: white;
-    text-transform: uppercase;
-    font-size: 50px;
-    line-height: 66px;
-    letter-spacing: .05em;
-    font-weight: bold;
+    margin: 0 0 10px 0;
+    font-size: 28px;
+    line-height: 42px;
+    letter-spacing: -1px;
+    font-family: @font-semi-bold;
     -webkit-font-smoothing: antialiased;
   }
   h4 {
@@ -882,10 +903,40 @@
     font-size: 12px;
     -webkit-font-smoothing: antialiased;
   }
-  .post-meta {
+  &.hero {
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+    text-align: center;
     position: relative;
-    top: 33%;
-    color: white;
+    h1 {
+      margin: 0;
+      color: white;
+      text-transform: uppercase;
+      font-size: 50px;
+      line-height: 66px;
+      letter-spacing: .05em;
+      font-weight: bold;
+      -webkit-font-smoothing: antialiased;
+    }
+    .post-meta {
+      position: relative;
+      top: 33%;
+      color: white;
+    }
+  }
+  .post-meta {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+    padding: 10px;
+    .categories {
+      span.sep:last-child {
+        display: none;
+      }
+    }
+    .author h3 {
+      font-family: @font-light;
+      -webkit-font-smoothing: antialiased;
+    }
   }
 }
 
@@ -919,9 +970,12 @@
 .post-cta {
   background-color: @gray-darker;
   text-align: center;
-  padding: (@grid-gutter-width * 2) 0;
-  margin: (@grid-gutter-width * 3) 0;
+  padding-top: (@grid-gutter-width * 2);
+  padding-bottom: (@grid-gutter-width * 2);
+  margin-top: (@grid-gutter-width * 3);
+  margin-bottom: (@grid-gutter-width * 3);
   border-radius: 4px;
+  clear: both;
   h2 {
     margin: 0;
     color: white;
@@ -975,28 +1029,28 @@
     padding: 5px 10px;
     margin-right: 5px;
     border-radius: 4px;
-    &.facebook {
+    &.fa-facebook {
       color: #3b5998;
       &:hover {
         background-color: #3b5998;
         border: 1px solid #3b5998;
       }
     }
-    &.twitter {
+    &.fa-twitter {
       color: #55acee;
       &:hover {
         background-color: #55acee;
         border: 1px solid #55acee;
       }
     }
-    &.gplus {
+    &.fa-google {
       color: #dd4b39;
       &:hover {
         background-color: #dd4b39;
         border: 1px solid #dd4b39;
       }
     }
-    &.pinterest {
+    &.fa-pinterest {
       color: #cb2027;
       &:hover {
         background-color: #cb2027;
@@ -1034,6 +1088,58 @@
 }
 
 //
+// Contact
+// --------------------------------------------------
+
+.contact {
+  h1 {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+//
+// Terms Pages
+// --------------------------------------------------
+
+.terms {
+  padding-top: 70px;
+  h1 {
+    margin: 0 0 7px 0;
+    color: #444;
+    letter-spacing: -0.5px;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    font-family: @font-semi-bold;
+    font-size: 30px;
+    line-height: 42px;
+  }
+  nav {
+    h2 {
+      color: #999;
+      font-family: @font-bold;
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+    .nav > li {
+      > a {
+        padding-left: 0;
+      }
+    }
+  }
+  p, div {
+    margin-bottom: 27px;
+    padding-bottom: 0;
+    color: #676767;
+    font-family: @font-normal;
+    line-height: 27px;
+    font-size: 15px;
+  }
+}
+
+//
 // Footer
 // --------------------------------------------------
 
@@ -1044,6 +1150,9 @@ footer {
     background-color: @gray-light;
     padding: 80px 0 50px;
     margin-top: 40px;
+    iframe {
+      border: none;
+    }
     .row > div {
       h4 {
         margin-top: 0;

@@ -5,13 +5,10 @@ date: 2015-02-24 11:21:29
 author: resham
 summary: "How do great developers get to be that way? It’s not just because they have a knack for solving thorny programming problems. It’s not because they write bug-free code—no one does. It’s because they understand the big picture: how both the business and development cycle work, and what the best practices to support them. Here are five big-picture mistakes that the great developers never make"
 categories: ['info']
-bg_color: f0db4f
-bg_height: 700px
 image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/08/5-mistakes-developers.png
-only_on_post: true
 ---
 
-How do great developers get to be that way? It’s not just because they have a knack for solving thorny programming problems. It’s not because they write bug-free code—no one does. It’s because they understand the big picture: how both the business and development cycle work, and what the best practices to support them. Here are five big-picture mistakes that the great developers never make:<!--more-->
+How do great developers get to be that way? It’s not just because they have a knack for solving thorny programming problems. It’s not because they write bug-free code—no one does. It’s because they understand the big picture: how both the business and development cycle work, and what the best practices to support them. Here are five big-picture mistakes that the great developers never make:
 <h2>Forgetting to plan ahead</h2>
 Coders love to do what? Code! The trouble is, some developers love to code so much that they skip the planning step and end up rewriting code over and over again. Planning is important because it requires you to understand the context of the code you are writing—how does it relate to the pieces that other coders are working on? What enhancements will be needed two or three versions down the road, and how can you code to anticipate those future needs?
 <h2>Not understanding the requirements – or the end users</h2>

@@ -5,7 +5,6 @@ date: 2015-03-18 11:21:29
 author: eric_schles
 summary: "Node.js is an engine for running javascript locally and it is a library for doing server-side web development. In short, it is a development platform for JS on the server."
 categories: ['javascript', 'Tutorial']
-bg_height: 700px
 image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2015/03/intro-node-js.png
 ---
 <p>Node.js is an engine for running javascript locally and it is a library for doing server-side web development.  In short, it is a development platform for JS on the server.<!--more--></p>

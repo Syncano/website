@@ -1,32 +1,45 @@
 {% include header.html %}
 
 {% if page.only_on_post == true %}
-  <div class="post-header" style="height: {{page.bg_height}}; background-color: #{{page.bg_color}};">
+  <div class="post-header hero" style="height: {{page.bg_height}}; background-color: #{{page.bg_color}};">
 {% elsif page.image %}
-  <div class="post-header image" style="background-image: url('{{page.image}}'); height: {{page.bg_height}}; ">
+  {% if page.bg_height %}
+    <div class="post-header image hero" style="background-image: url('{{page.image}}'); height: {{page.bg_height}}; ">
+  {% else %}
+    <div class="post-header">
+  {% endif %}
 {% else %}
-  <div class="post-header" style="height: {{page.bg_height}}; background-color: #{{page.bg_color}};">
+  <div class="post-header">
 {% endif %}
 
   <div class="container post-meta">
-    <h4>{{ page.categories}}</h4>
+    <h4 class="categories">{% for pc in page.categories %}{{ pc }}<span class="sep">, </span>{% endfor %}</h4>
     <h1>{{ page.title }}</h1>
+    <!-- div class="featured-image"><img src="{{page.image}}" alt="{{page.title}}"/></div -->
+    
     <div class="author">
-      <img src="#" />
       {% assign author = site.data.authors[page.author] %}
+      
+      {% if author.image %}
+        <img src="{{author.image}}" alt="{{author.name}}"/>
+      {% endif %}
+      
       {% if author %}
       <h3>By {{ author.name }}</h3>
       {% endif %}
     </div>
   </div>
-</div>
+</div><!-- END post header -->
 
 <div class="container">
-
-<article class="post-content">
-  {{ content }}
-</article>
-
+  <article class="post-content">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+      {{ content }}
+      </div>
+    </div>
+  </article>
+</div>
 {% include blog-cta.html %}
 {% include sharing.html %}
 {% include footer.html %}

@@ -7,7 +7,6 @@ summary: "I’ve been trying to learn how to program since I was ten years old. 
 
 And then came Python, with it’s obvious conventions and simple syntax. For the first time in my life, I thought I could write code. Even more than that, I wanted to write code. I hope that by the end of this post, you’ll share my love of Python (or at least begin to understand why I love it as much as I do)."
 categories: ['python', 'Tutorial']
-bg_height: 700px
 image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2015/03/Intro-to-Python.png
 ---
 I've been trying to learn how to program since I was ten years old. I tried many times - mostly because my dad is a developer and wanted to share the thing he loves - but Java, C, and C++ always looked scary. I couldn't really get into it. There was too much I had to understand. Just getting started felt hard.
