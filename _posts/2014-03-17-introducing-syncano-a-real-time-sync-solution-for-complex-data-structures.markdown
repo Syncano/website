@@ -4,7 +4,7 @@ title: Introducing Syncano - A Real-Time Sync API and Storage Solution
 date: 2014-03-17 11:21:29
 author: sara_cowie
 categories: ['News']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/04/Screen-Shot-2014-04-05-at-7.33.32-PM.png
+image: /public/Screen-Shot-2014-04-05-at-7.33.32-PM.png
 summary: "Back in 2008, we were on the cusp of a real-time technology revolution, involved in creating user experiences that synced across mobile, TV, and even giant event screens in real-time."
 ---
 <p dir="ltr">Back in 2008, we were on the cusp of a real-time technology revolution, involved in creating user experiences that synced across mobile, TV, and even <a href="http://vimeo.com/63690045">giant event screens in real-time</a>. <!--more-->We duplicated text and photo synchronization solutions for concerts, festivals, and television programming, when we realized the technologies we were using didn’t handle synchronization as well as they could have. Even though we didn’t see it yet, the world as we knew it was going to undergo a major transformation. Devices, screens, and everyday items would soon need to connect seamlessly with one another, and the world would need technology to allow developers to do so easily and efficiently.</p>

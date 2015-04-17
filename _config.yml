@@ -7,4 +7,7 @@ baseurl:     ""
 url:         "http://syncano.com"
 permalink:    /:title
 paginate:     6
-paginate_path: "/page/:num/"
+paginate_path: "blog/page:num/"
+exclude:
+  - divshot.json
+  - config.codekit

@@ -224,7 +224,6 @@ body {
 .navbar-toggle {
   position: relative;
   float: right;
-  margin-right: @navbar-padding-horizontal;
   padding: 9px 10px;
   .navbar-vertical-align(34px);
   background-color: transparent;
@@ -244,6 +243,7 @@ body {
     width: 22px;
     height: 2px;
     border-radius: 1px;
+    background-color: #a9a9a9;
   }
   .icon-bar + .icon-bar {
     margin-top: 4px;
@@ -267,6 +267,7 @@ body {
     padding-bottom: 10px;
     line-height: @line-height-computed;
     font-size: 13px;
+    text-transform: uppercase;
   }
 
   @media (max-width: @grid-float-breakpoint-max) {
@@ -297,7 +298,7 @@ body {
   @media (min-width: @grid-float-breakpoint) {
     float: left;
     margin: 0;
-    margin-left: 22.4%;
+    margin-left: 20%;
     > li {
       float: left;
       > a {

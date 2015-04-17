@@ -5,7 +5,9 @@ date: 2015-03-23 11:21:29
 author: eric_schles
 summary: "JavaScript is a reasonably new language compared to the standard choices for studying data structures: Java, C, or C++. The reason for it’s choosing is twofold: first, because JavaScript exposes references rather than forcing one to make use of pointers; second, because JavaScript is easier to understand, which allows the concepts to shine rather than the minutiae."
 categories: ['javascript', 'Data Modeling']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2015/03/data-structures-javascript.png
+image: /public/data-structures-javascript.png
+keywords: 'JavaScript, Data Structures, Node, Tree Structures'
+seo_description: "We'll begin with an example and then extract from it a definition of data structures, beginning with the node and classes."
 ---
 JavaScript is a reasonably new language compared to the standard choices for studying data structures: Java, C, or C++. The reason for it's choosing is twofold: first, because JavaScript exposes references rather than forcing one to make use of pointers; second, because JavaScript is easier to understand, which allows the concepts to shine rather than the minutiae.
 <h2>The node and classes</h2>
