@@ -4,7 +4,7 @@ title: Getting Started With Docker
 date: 2014-10-17 11:21:29
 author: justyna
 categories: ['Docker', 'How Tos', 'Tutorial']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/10/getting-started-docker.png
+share_image: /public/getting-started-docker.png
 summary: "Since we started using Docker here at Syncano, we’ve become avid fans. Here’s some of our best knowledge on getting started with it. If you’re not sure about what Docker is or whether you should use it, check out the last post in this series."
 ---
 Since we started using Docker here at Syncano, we've become avid fans. Here's some of our best knowledge on getting started with it. If you're not sure about what Docker is or whether you should use it, check out <a href="http://www.syncano.com/reasons-use-docker-linux-project-syncano/">the last post in this series.</a><!--more-->
@@ -23,54 +23,54 @@ Since we started using Docker here at Syncano, we've become avid fans. Here's so
 
 <p>If you want to download an <em>ubuntu</em> Docker image, all you have to do is type this into <em>terminal</em>:</p>
 
-<pre><code class="terminal">$ docker pull ubuntu
-</code></pre>
+{% highlight javascript linenos %}$ docker pull ubuntu
+{% endhighlight %}
 
 <p>If you get a <em>permission denied</em> error, add <em>sudo</em> before <em>Docker</em> in your commands, like below:</p>
 
-<pre><code class="terminal">$ sudo docker pull ubuntu
-</code></pre>
+{% highlight javascript linenos %}$ sudo docker pull ubuntu
+{% endhighlight %}
 
 <p>Pulling Docker images for the first time is similar to cloning a github repository. With the line above, you downloaded an ubuntu image with various versions of ubuntu, such as 14.04, 13.10 and so on. It probably took a few minutes.</p>
 
 <p>You can also be more specific and download only the version you need. In Docker, versions are marked with tags. For example, to download a specific debian box, write:</p>
 
-<pre><code class="terminal">$ docker pull debian:squeeze
-</code></pre>
+{% highlight javascript linenos %}$ docker pull debian:squeeze
+{% endhighlight %}
 
 <p>To see what Docker images are available on your machine, write:</p>
 
-<pre><code class="terminal">$ docker images
+{% highlight javascript linenos %}$ docker images
 
 ubuntu                           14.10                                      f14704ad99b8    3 days ago          226.8 MB
 ubuntu                           utopic                                     f14704ad99b8    3 days ago          226.8 MB
 ...
-</code></pre>
+{% endhighlight %}
 
 <h2>Docker run command</h2>
 
 <p>After downloading an image, you can run it using Docker's <em>run</em> command, which looks like:</p>
 
-<pre><code class="terminal">$ docker run [OPTIONS] IMAGE[:TAG] [COMMAND] [ARG...]
-</code></pre>
+{% highlight javascript linenos %}$ docker run [OPTIONS] IMAGE[:TAG] [COMMAND] [ARG...]
+{% endhighlight %}
 
 <p>Use this to test the image with a simple <em>ls</em> command run on your Docker image:</p>
 
-<pre><code class="terminal">$ docker run -t ubuntu:14.04 ls
+{% highlight javascript linenos %}$ docker run -t ubuntu:14.04 ls
 
 bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
 boot  etc  lib   media  opt  root  sbin  sys  usr
-</code></pre>
+{% endhighlight %}
 
 <p>Congratulations! You've just run your first command on Docker container. To try your container interactively, use:</p>
 
-<pre><code class="terminal">$ docker run -t ubuntu:14.04
-</code></pre>
+{% highlight javascript linenos %}$ docker run -t ubuntu:14.04
+{% endhighlight %}
 
 <p>or</p>
 
-<pre><code class="terminal">$ docker run -i -t ubuntu:14:04 /bin/bash
-</code></pre>
+{% highlight javascript linenos %}$ docker run -i -t ubuntu:14:04 /bin/bash
+{% endhighlight %}
 
 <p>Now you have the newest ubuntu with root access at your fingertips. Try some commands like  <em>pwd</em> or <em>cd</em> to make sure that it works.</p>
 
@@ -82,14 +82,14 @@ boot  etc  lib   media  opt  root  sbin  sys  usr
 
 <p>You can find its image in Docker's registry using Docker's search command:</p>
 
-<pre><code class="terminal">$ docker search redis
-</code></pre>
+{% highlight javascript linenos %}$ docker search redis
+{% endhighlight %}
 
 <p>You'll notice the command prints almost eight houndred images!</p>
 
-<pre><code class="terminal">$ docker search redis | wc -l
+{% highlight javascript linenos %}$ docker search redis | wc -l
 779
-</code></pre>
+{% endhighlight %}
 
 <p>Choose one of the most popular images: <a href="https://github.com/dockerfile/redis/blob/master/Dockerfile"><em>dockerfile/redis</em></a>.</p>
 
@@ -116,27 +116,27 @@ boot  etc  lib   media  opt  root  sbin  sys  usr
 
 <p>Creating a directory is simple:</p>
 
-<pre><code class="terminal">$ mkdir /var/docker/redis
-</code></pre>
+{% highlight javascript linenos %}$ mkdir /var/docker/redis
+{% endhighlight %}
 
 <p>You can mount by:</p>
 
-<pre><code class="terminal">$ docker run -v /host_directory:/container_directory docker_image
+{% highlight javascript linenos %}$ docker run -v /host_directory:/container_directory docker_image
 
 $ docker run -d -v /var/docker/redis:/data dockerfile/redis
-</code></pre>
+{% endhighlight %}
 
 <p>You can find more information about docker volumes <a href="https://docs.docker.com/userguide/dockervolumes/">here</a>.</p>
 
 <p>The last part is networking. Redis uses port 6379 by default, so you have to forward this port to make it accessible from your computer. To forward <em>$CONTAINERPORT</em> to <em>$HOSTPORT</em> on your computer use:</p>
 
-<pre><code class="terminal">$ docker run -p $HOSTPORT:$CONTAINERPORT --name CONTAINER -t someimage
-</code></pre>
+{% highlight javascript linenos %}$ docker run -p $HOSTPORT:$CONTAINERPORT --name CONTAINER -t someimage
+{% endhighlight %}
 
 <p>For this example, it should look like:</p>
 
-<pre><code class="terminal">$ docker run -d -v /var/docker/redis:/data -p 6379:6379 --name=redis dockerfile/redis
-</code></pre>
+{% highlight javascript linenos %}$ docker run -d -v /var/docker/redis:/data -p 6379:6379 --name=redis dockerfile/redis
+{% endhighlight %}
 
 <p>And you're done! You can check if your Redis container works with <a href="http://redisdesktop.com/">Redis desktop manager</a> or <a href="http://webd.is/">Webdis</a> - both are pretty cool tools that you should check out if you use Redis.</p>
 
@@ -144,8 +144,8 @@ $ docker run -d -v /var/docker/redis:/data dockerfile/redis
 
 <p>To see which Docker containers are on your computer, type:</p>
 
-<pre><code class="terminal">$ docker ps -a
-</code></pre>
+{% highlight javascript linenos %}$ docker ps -a
+{% endhighlight %}
 
 <p>This will show you:</p>
 
@@ -162,17 +162,17 @@ $ docker run -d -v /var/docker/redis:/data dockerfile/redis
 
 <p>That's a lot's of information! But wait, there's more. Let's spy a bit on our container with the <em>inspect</em> command.</p>
 
-<pre><code class="terminal">$ docker inspect &lt;docker_container_id or name&gt;
-</code></pre>
+{% highlight javascript linenos %}$ docker inspect &lt;docker_container_id or name&gt;
+{% endhighlight %}
 
 <p>If you run a Redis container with the <em>--name</em> flag, you can inspect it with the below command:</p>
 
-<pre><code class="terminal">$ docker inspect redis
-</code></pre>
+{% highlight javascript linenos %}$ docker inspect redis
+{% endhighlight %}
 
 <p>This prints a lot of useful information, including the configuration of the container, its environment variables, forwarded ports, mounted volumes, container constraints, and so on. Below is only small fragment of what you can see:</p>
 
-<pre><code class="terminal">...
+{% highlight javascript linenos %}...
 "NetworkSettings": {
     "Bridge": "docker0",
     "Gateway": "172.17.42.1",
@@ -203,17 +203,17 @@ $ docker run -d -v /var/docker/redis:/data dockerfile/redis
     "/data": "/var/docker/redis"
 },
 ...
-</code></pre>
+{% endhighlight %}
 
 <p>The other valuable commands are:</p>
 
-<pre><code class="terminal">$ docker logs redis
-</code></pre>
+{% highlight javascript linenos %}$ docker logs redis
+{% endhighlight %}
 
 <p>Which will let you see what container prints to STDIO and STDOUT, and</p>
 
-<pre><code class="terminal">$ docker top redis
-</code></pre>
+{% highlight javascript linenos %}$ docker top redis
+{% endhighlight %}
 
 <p>Which tells you what processes are currently running on you Docker container. It's similar to a unix tool called <a href="http://linux.about.com/od/commands/l/blcmdl1_top.htm">top</a>.</p>
 

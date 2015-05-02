@@ -4,7 +4,7 @@ title: 'How to Create Great Applications: 4 Rules to Follow'
 date: 2014-06-18 11:21:29
 author: thomas_hagner
 categories: ['How Tos', 'Real-Time Sync']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/06/origin_4588410548.jpg
+share_image: /public/origin_4588410548.jpg
 summary: "We believe the difference between good apps and great apps can be both a matter of small details and a matter of greater purpose. Today, users are demanding dynamic performance and a flawless cross platform user experience. Make your apps great by incorporating these four characteristics into your end product."
 ---
 We believe the difference between good apps and <i>great</i> apps can be both a matter of small details and a matter of greater purpose. Today, users are demanding dynamic performance and a flawless cross platform user experience. Make your apps great by incorporating these four characteristics into your end product.<!--more-->

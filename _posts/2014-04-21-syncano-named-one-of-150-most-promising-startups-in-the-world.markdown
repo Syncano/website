@@ -4,7 +4,7 @@ title: Syncano Named One of 150 Most Promising Startups in the World
 date: 2014-04-21 11:21:29
 author: sara_cowie
 categories: ['News']
-image: /public/Screen-Shot-2014-04-25-at-1.44.12-PM.png
+share_image: /public/Screen-Shot-2014-04-25-at-1.44.12-PM.png
 summary: "We are excited to share Syncano has been selected among 150 of the “most promising” startups in the world – from a pool of thousands of applicants!"
 ---
 We are excited to share Syncano has been selected among 150 of the “most promising” startups in the world - from a pool of thousands of applicants!

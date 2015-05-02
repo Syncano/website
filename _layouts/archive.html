@@ -1,51 +1,66 @@
 {% include header.html %}
+{% assign counter=0 %}
+{% for post in site.posts %}
+  {% for pc in post.categories %}
+    {% if pc == page.category %}
+      {% assign counter=counter | plus:1 %}
+      {% if counter < 2 %}
+        <a href="{{post.url}}">
+          <div class="hero" style="background-image: url('{{post.image}}'); min-height: {{post.image_height}};">
+            <div class="container">
+              <div class="post info">
+                <span class="categories">
+                {% for pc in post.categories %}
+                  {{ pc }}<span class="sep">, </span>
+                {% endfor %}
+                </span><!-- END categories -->
+                <h1>{{post.title}}</h1>
+                {% assign author = site.data.authors[post.author] %}
+                {% if author %}
+                  <div><img src="{{author.image}}" alt="{{author.name}}" height="50" width="50"/></div>
+                  <span class="author"><em>By</em> <strong>{{ author.name }}</strong></span>
+                {% endif %}
+              </div><!-- END post info -->
+            </div><!-- END container -->
+          </div><!-- END hero -->
+        </a>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+    
 <div class="container blog">
   <div class="posts">
+    {% assign counter=0 %}
     {% for post in site.posts %}
-    <h1>hello asdlkf</h1>
-      <div class="row post">
-        <div class="col-md-1 date">
-          <span class="month">{{ post.date | date: "%b" }}</span>
-          <span class="day">{{ post.date | date: "%-d" }}</span>
-        </div>
-
-        <div class="col-md-11 post-content">
-          {% if post.image %}
-          <div class="featured-image"><a href="{{post.url}}"><img src="{{post.image}}" alt="{{post.title}}" /></a></div>
+      {% for pc in post.categories %}
+        {% if pc == page.category %}
+          {% assign counter=counter | plus:1 %}
+          {% if counter > 2 %}
+            <div class="col-md-6 post-content">
+              <a href="{{ post.url }}" class="permalink">
+                <div class="background-image"><img src="{{post.share_image}}" /></div>
+                <div class="post-meta">
+                  <span class="categories">
+                    {% for pc in post.categories %}
+                      {{ pc }}<span class="sep">, </span>
+                    {% endfor %}
+                  </span><!-- END categories -->
+                  <h1 class="title">{{ post.title }}</h1>
+                  {% assign author = site.data.authors[post.author] %}
+                  {% if author %}
+                    <span class="author">By {{ author.name }}</span>
+                  {% endif %}
+                </div><!-- END post-meta -->
+              </a>
+            </div><!-- END col-md-6 -->
           {% endif %}
-          <div class="post-meta">
-            <h1 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-            {% assign author = site.data.authors[post.author] %}
-            {% if author %}
-            <span class="author">By {{ author.name }}</span>
-            {% endif %}
-            <span class="categories">
-            {% for pc in post.categories %}
-              {{ pc }}
-            {% endfor %}
-            </span>
-          </div>
-          <p class="post-summary">
-            {% if post.summary %}
-              {{ post.summary }}
-            {% else %}
-              {{ post.excerpt }}
-            {% endif %}
-          </p>
-          <a href="{{ post.url }}" class="read-more btn btn-primary">Read More</a>
-        </div>
-      </div>
-
+        {% endif %}
+      {% endfor %}
     {% endfor %}
-  </div>
-</div>
-<div class="pagination container">
-  <div class="row">
-    {% include pagination.html %}
-  </div>
-</div>
-<div class="container">
-{% include blog-cta.html %}
-</div>
+  </div><!-- END posts -->
+</div><!-- END container blog -->
+
+{% include sharing.html %}
 
 {% include footer.html %}

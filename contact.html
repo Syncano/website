@@ -1,22 +1,49 @@
 ---
 layout: default
-title: Contact
+title: Contact Us
 permalink: /contact/
 body_class: ['contact']
+seo_description: "Contact Syncano, a real-time sync API and backend in the cloud that helps developers create real-time apps."
+keywords: "real-time apps, real-time app, contact syncano, syncano contact"
+images: ['/public/new_york_office_hydra_420px.jpg']
 ---
 
 <div class="container">
 	<div class="col-md-6">
 		<h1>We Would Love to Hear from You!</h1>
-	<script charset="utf-8" src="//js.hsforms.net/forms/current.js"></script>
-	<script>
-	  hbspt.forms.create({ 
-	    portalId: '382732',
-	    formId: '6dd4b0ac-c809-40b6-a3b1-249ebba84398'
-	  });
-	</script>
+		<form action="//formspree.io/hello@syncano.com" method="POST">
+			<input type="hidden" name="_subject" value="Contact Form Submission from syncano.com" />
+			<input type="text" name="_gotcha" style="display:none" />
+			<input type="hidden" name="_next" value="//syncano.com/thank-contacting-us" />
+			<div class="form-group">
+    			<label for="fname">First Name</label>
+    			<input class="form-control" type="text" name="fname">
+  			</div>
+
+  			<div class="form-group">
+    			<label for="lname">Last Name</label>
+    			<input class="form-control" type="text" name="lname">
+  			</div>
+
+  			<div class="form-group">
+    			<label for="_replyto">Email</label>
+    			<input class="form-control" type="email" name="_replyto">
+  			</div>
+
+  			<div class="form-group">
+    			<label for="company">Company</label>
+    			<input class="form-control" type="text" name="company">
+  			</div>
+    	
+    		<div class="form-group">
+    			<label for="message">Message</label>
+    			<textarea class="form-control" rows="3" name="message"></textarea>
+  			</div>
+    	
+    		<input type="submit" value="Send" class="btn btn-success">
+		</form>
 	</div>
 	<div class="col-md-6">
-		<img src="http://gethydra.staging.wpengine.com/wp-content/uploads/2013/07/new_york_office_hydra_420px.jpg" alt="New York City" />
+		<img src="/public/new_york_office_hydra_420px.jpg" alt="New York City" />
 	</div>
 </div><!-- END container -->

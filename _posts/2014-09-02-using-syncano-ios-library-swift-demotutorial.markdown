@@ -4,7 +4,7 @@ title: Using the Syncano iOS Library with Swift - Demo/Tutorial
 date: 2014-09-02 11:21:29
 author: mariusz
 categories: ['API', 'How Tos', 'iOS', 'Real-Time Sync']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/09/Apple_Swift_Logo.png
+share_image: /public/Apple_Swift_Logo.png
 summary: "Although written in Objective-C, the Syncano iOS library is perfectly compatible with Swift. Here are some simple steps to get started:"
 ---
 <p>Although written in Objective-C, the Syncano iOS library is perfectly compatible with Swift. Here are some simple steps to get started:</p><!--more-->
@@ -15,8 +15,8 @@ summary: "Although written in Objective-C, the Syncano iOS library is perfectly 
 
 <p>To install CocoaPods, open Terminal and paste the following line:</p>
 
-<pre><code class="objectivec">$ sudo gem install cocoapods
-</code></pre>
+{% highlight javascript linenos %}$ sudo gem install cocoapods
+{% endhighlight %}
 
 <h2><strong>2. XCode</strong></h2>
 
@@ -41,24 +41,24 @@ summary: "Although written in Objective-C, the Syncano iOS library is perfectly 
 
 <p>Open Terminal and change the directory to the folder where you chose to save your project. If you don’t know how to do this, type:</p>
 
-<pre><code class="objectivec">$ cd
-</code></pre>
+{% highlight javascript linenos %}$ cd
+{% endhighlight %}
 
 <p>then drag &amp; drop the folder which contains your XCode project into the Terminal app (if you followed previous steps, you should have a file named <strong>SyncanoProject.xcodeproj</strong> inside a folder <strong>SyncanoProject</strong>). Press ENTER to confirm.</p>
 
 <p>Next, type:</p>
 
-<pre><code class="objectivec">$ pod init
-</code></pre>
+{% highlight javascript linenos %}$ pod init
+{% endhighlight %}
 
 <p>Now, open the file named <strong>Podfile</strong> in your desired text editor. Under the project's application target and before <strong>end</strong>, add line:</p>
 
-<pre><code class="objectivec">pod 'syncano-ios'
-</code></pre>
+{% highlight javascript linenos %}pod 'syncano-ios'
+{% endhighlight %}
 
 <p>If you used our naming suggestions, your <strong>Podfile</strong> should now look like this:</p>
 
-<pre><code class="objectivec"># Uncomment this line to define a global platform for your project
+{% highlight javascript linenos %}# Uncomment this line to define a global platform for your project
 # platform :ios, "6.0"
 
 target "SyncanoProject" do
@@ -68,19 +68,19 @@ end
 target "SyncanoProjectTests" do
 
 end
-</code></pre>
+{% endhighlight %}
 
 <p>Save the Podfile. Go back to Terminal and install the Syncano library by typing:</p>
 
-<pre><code class="objectivec">$ pod install
-</code></pre>
+{% highlight javascript linenos %}$ pod install
+{% endhighlight %}
 
 <p>When the process is finished, you should see a new <strong>.xworkspace</strong> file in the same folder as your project (presumably <strong>SyncanoProject.xcworkspace</strong>). From now on, use this file instead of the <strong>.xcodeproj</strong> one.</p>
 
 <p>You can open the workspace by double clicking it in Finder or typing this in Terminal:</p>
 
-<pre><code class="objectivec">$ open SyncanoProject.xcworkspace
-</code></pre>
+{% highlight javascript linenos %}$ open SyncanoProject.xcworkspace
+{% endhighlight %}
 
 <p>The library has been downloaded and added to your project.</p>
 
@@ -102,9 +102,9 @@ end
 </ol>
 
 
-<pre><code class="objectivec">#import &lt;Syncano/Syncano.h&gt;
+{% highlight javascript linenos %}#import &lt;Syncano/Syncano.h&gt;
 #import &lt;Syncano/SyncanoSyncServer.h&gt;
-</code></pre>
+{% endhighlight %}
 
 <p>Because you already have library files included in the bridging header, there’s no need to import anything else in your <strong>.swift</strong> files.</p>
 
@@ -114,7 +114,7 @@ end
 
 <p>In the class body, add two variables and initialize them so at the end it looks like this:</p>
 
-<pre><code class="objectivec">class ViewController: UIViewController {
+{% highlight javascript linenos %}class ViewController: UIViewController {
 
   var syncano = Syncano(forDomain: "YOUR_DOMAIN", apiKey: "YOUR_API_KEY")
   var syncServer = SyncanoSyncServer(forDomain: "YOUR_DOMAIN", apiKey: "YOUR_API_KEY")
@@ -127,7 +127,7 @@ end
     super.didReceiveMemoryWarning()
   }
 }
-</code></pre>
+{% endhighlight %}
 
 <p>You can obtain your domain name and your API key as well as the desired project and collection ID in the <a href="http://login.syncano.com/"><strong>Admin GUI</strong></a>.</p>
 
@@ -135,7 +135,7 @@ end
 
 <p>Add this function to create a data object:</p>
 
-<pre><code class="objectivec">func createDataObject() {
+{% highlight javascript linenos %}func createDataObject() {
   //Create parameteres for API request
   //Change "123456789" with project_id and collection_id with
   //data from your instance
@@ -159,13 +159,13 @@ end
     println("Number of pirates: \(numberOfPirates)")
   }
 }
-</code></pre>
+{% endhighlight %}
 
 <h2>5.4 Downloading the newest Data Objects</h2>
 
 <p>Add this function to download the newest data objects:</p>
 
-<pre><code class="objectivec">func downloadNewestDataObject() {
+{% highlight javascript linenos %}func downloadNewestDataObject() {
   //Create parameteres for API request
   //Change "123456789" with project_id and collection_id with
   //data from your instance
@@ -191,13 +191,13 @@ end
     }
   }
 }
-</code></pre>
+{% endhighlight %}
 
 <h2>5.5 Deleting a Data Object</h2>
 
 <p>Add this function to delete a specific data object. You can obtain the ID of an object to be deleted through <a href="https://login.syncano.com/"><strong>Admin GUI</strong></a>, or use the ID of a previously downloaded object.</p>
 
-<pre><code class="objectivec">func deleteDataObject() {
+{% highlight javascript linenos %}func deleteDataObject() {
   //Create parameteres for API request
   //Change "123456789" with project_id and collection_id with
   //data from your instance
@@ -218,7 +218,7 @@ end
     }
   }
 }
-</code></pre>
+{% endhighlight %}
 
 <h2>5.6 Receiving notifications</h2>
 
@@ -226,36 +226,36 @@ end
 
 <p>Add this to the class information so that it implements the SyncanoSyncServerDelegate protocol:</p>
 
-<pre><code class="objectivec">class ViewController: UIViewController, SyncanoSyncServerDelegate {
+{% highlight javascript linenos %}class ViewController: UIViewController, SyncanoSyncServerDelegate {
   ...
 }
-</code></pre>
+{% endhighlight %}
 
 <p>Set your class as a delegate on a Sync Server object:</p>
 
-<pre><code class="objectivec">self.syncServer.delegate = self;
-</code></pre>
+{% highlight javascript linenos %}self.syncServer.delegate = self;
+{% endhighlight %}
 
 <p>Start connection with the Sync Server by using the instance name and API key you used previously. You can pass the pointer to an error that will be set if it occurs while opening the connection:</p>
 
-<pre><code class="objectivec">var error : NSError?
+{% highlight javascript linenos %}var error : NSError?
 self.syncServer.connect(&amp;error)
-</code></pre>
+{% endhighlight %}
 
 <p>After those steps, your viewDidLoad should look like this:</p>
 
-<pre><code class="objectivec">override func viewDidLoad() {
+{% highlight javascript linenos %}override func viewDidLoad() {
   super.viewDidLoad()
   self.syncServer.delegate = self
 
   var error : NSError?
   self.syncServer.connect(&amp;error)
 }
-</code></pre>
+{% endhighlight %}
 
 <p>Implement protocol methods (there are more than what's shown here, but only two of them are required and only one more is needed to receive notifications). Add this code before the end of your class implementation:</p>
 
-<pre><code class="objectivec">//Called when Sync Server connection was successfully opened
+{% highlight javascript linenos %}//Called when Sync Server connection was successfully opened
 func syncServerConnectionOpened(syncServer: SyncanoSyncServer!) {
   println("Connection opened.")
 }
@@ -269,13 +269,13 @@ func syncServer(syncServer: SyncanoSyncServer!, connectionClosedWithError error:
 func syncServer(syncServer: SyncanoSyncServer!, messageReceived message: AnyObject!) {
   println("Message received: \(message)")
 }
-</code></pre>
+{% endhighlight %}
 
 <h2>5.7 Sending notifications</h2>
 
 <p>Open the Sync Server connection as described in point <strong>5.6</strong> and add this method to send notifications:</p>
 
-<pre><code class="objectivec">func sendNotification() {
+{% highlight javascript linenos %}func sendNotification() {
   //Create parameteres for API request
   let params = SyncanoParameters_Notifications_Send()
 
@@ -298,7 +298,7 @@ func syncServer(syncServer: SyncanoSyncServer!, messageReceived message: AnyObje
     }
   }
 }
-</code></pre>
+{% endhighlight %}
 
 <h2><strong>6. Support</strong></h2>
 

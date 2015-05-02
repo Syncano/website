@@ -4,7 +4,7 @@ title: How to Facilitate Friendlier Code Reviews
 date: 2014-11-20 11:21:29
 author: justyna
 categories: ['Culture', 'How Tos']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/11/friendly-code-review.png
+share_image: /public/friendly-code-review.png
 summary: "Imagine that you’ve worked on a feature for two days, and it’s finally ready. You tested it a little bit – so it should work – and now you can just merge it and push the feature to production. That way, everyone will be able to instantly see and use it, and you can move on. But instead of a new feature, this is what happens"
 ---
 
@@ -48,9 +48,9 @@ Give people the benefit of the doubt. Ie., a docstring <em>'sfaldfja'</em> isn't
 Yeah, code reviews can be fun.
 <h4>Exhibit A</h4>
 If you see something like this in the code:
-<pre><code class="python">
+{% highlight javascript linenos %}
 some_value = 300
-</code></pre>
+{% endhighlight %}
 Instead of commenting:
 <code>We should avoid hardcoding a magic number in our code. It's a code smell. Why exactly 300?</code>
 Try something like:
@@ -58,11 +58,11 @@ Try something like:
 
 <h4>Exhibit B</h4>
 For something like:
-<pre><code>try:
+{% highlight javascript linenos %}try:
     do_something()
 except:
     pass
-</code></pre>
+{% endhighlight %}
 You can comment back:
 <code>Do you really want to catch <em>all</em> excetpions here? ^^ <img src="http://media0.giphy.com/media/vIUaUFHRFT4XK/giphy.gif" alt="fire" /></code>
 <h3>Helpful Rules For Authors</h3>

@@ -4,7 +4,7 @@ title: Getting Started with Swift Playground
 date: 2014-10-09 11:21:29
 author: mariusz
 categories: ['iOS', 'Swift']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/10/Apple-Swift-2.png
+share_image: /public/Apple-Swift-2.png
 summary: "<p>As Apple announced during their latest event, you can now write Swift applications and submit them to the AppStore.</p>
 <p>One of the most interesting features of Swift and the new XCode IDE are its interactive playgrounds. In the playgrounds, you can type a line of code and the result appears immediately – enabling you to run your code after you make changes without creating new projects. You can finally stop flinching in pain when you’re designer tells you a button needs to be just a few pixels farther to the left.</p>"
 ---
@@ -20,12 +20,12 @@ summary: "<p>As Apple announced during their latest event, you can now write Swi
 
 <p>When you create a new playground file, it will be filled with this content by default:</p>
 
-<pre><code class="objectivec">// Playground - noun: a place where people can play
+{% highlight javascript linenos %}// Playground - noun: a place where people can play
 
 import UIKit
 
 var str = "Hello, playground"
-</code></pre>
+{% endhighlight %}
 
 <p>The code will fill whole left side of the file, and on the right you can see its corresponding results:</p>
 
@@ -35,12 +35,12 @@ var str = "Hello, playground"
 
 <p>Let's add a function to the playground to see if it works properly. Start by calculating the sum of 3 + 7:</p>
 
-<pre><code class="objectivec">func sumOfTwoNumbers(firstNumber: Int, secondNumber: Int) -&gt; Int {
+{% highlight javascript linenos %}func sumOfTwoNumbers(firstNumber: Int, secondNumber: Int) -&gt; Int {
 &nbpsp; return firstNumber + secondNumber
 }
 
 sumOfTwoNumbers(3, 7)
-</code></pre>
+{% endhighlight %}
 
 <p><img src="http://www.syncano.com/wp-content/uploads/2014/10/SwiftPlayground_02.png" alt="SwiftPlayground_02" width="581" height="78" class="aligncenter size-full wp-image-10106" /></p>
 
@@ -52,10 +52,10 @@ sumOfTwoNumbers(3, 7)
 
 <p>Here's an example of how this works. Add a loop to your code by entering:</p>
 
-<pre><code class="objectivec">for index in 0...10 {
+{% highlight javascript linenos %}for index in 0...10 {
   sumOfTwoNumbers(index, index);
 }
-</code></pre>
+{% endhighlight %}
 
 <p><a href="http://www.syncano.com/wp-content/uploads/2014/10/SwiftPlayground_03.png"><img src="http://www.syncano.com/wp-content/uploads/2014/10/SwiftPlayground_03.png" alt="SwiftPlayground_03" width="416" height="48" class="aligncenter size-full wp-image-10105" /></a></p>
 
@@ -73,13 +73,13 @@ sumOfTwoNumbers(3, 7)
 
 <p><em>Notice what happens if we change our code to multiply both numbers when the first number is greater than 5:</em></p>
 
-<pre><code class="objectivec">func sumOfTwoNumbers(firstNumber: Int, secondNumber: Int) -&gt; Int {
+{% highlight javascript linenos %}func sumOfTwoNumbers(firstNumber: Int, secondNumber: Int) -&gt; Int {
  &npsp; if (firstNumber &gt; 5) {
  &npsp; &npsp; return firstNumber * secondNumber
 &npsp; }
  &npsp; return firstNumber + secondNumber
 }
-</code></pre>
+{% endhighlight %}
 
 <p>the chart would now look like this:</p>
 
@@ -89,12 +89,12 @@ sumOfTwoNumbers(3, 7)
 
 <p>You can also use UI code in Playground - a pretty neat feature. Start here by creating and configuring a simple UILabel.</p>
 
-<pre><code class="objectivec">let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
+{% highlight javascript linenos %}let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
 label.textAlignment = NSTextAlignment.Center
 label.font = UIFont.italicSystemFontOfSize(20)
 label.textColor = UIColor.blueColor()
 label.text = "Swift Playground"
-</code></pre>
+{% endhighlight %}
 
 <p>Now, click the <em>Quick Look</em> icon (the eye icon) next to the last line of your code to see how the label looks.</p>
 
@@ -102,10 +102,10 @@ label.text = "Swift Playground"
 
 <p>You can also see how the label would look with varying gray backgrounds.  Add this loop to change it to different UIColor instances:</p>
 
-<pre><code class="objectivec">for var grayColor : CGFloat = 0.9; grayColor &gt; 0.0; grayColor -= 0.1 {
+{% highlight javascript linenos %}for var grayColor : CGFloat = 0.9; grayColor &gt; 0.0; grayColor -= 0.1 {
 &nbsp; label.backgroundColor = UIColor(white: grayColor, alpha: 1.0)
 }
-</code></pre>
+{% endhighlight %}
 
 <p>To see the history of how the background changed, click the <em>Value History</em> icon (plus sign icon), next to the line where we set the background color.</p>
 
@@ -121,7 +121,7 @@ label.text = "Swift Playground"
 
 <p>To create a custom header view, use the same code you used to create a label with one of the background colors we used earlier:</p>
 
-<pre><code class="objectivec">class Delegate : NSObject, UITableViewDelegate {
+{% highlight javascript linenos %}class Delegate : NSObject, UITableViewDelegate {
 &nbsp; func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -&gt; CGFloat {
 &nbsp; &nbsp; return 44
 &nbsp; }
@@ -136,7 +136,7 @@ label.text = "Swift Playground"
 &nbsp; &nbsp; return label
 &nbsp; }
 }
-</code></pre>
+{% endhighlight %}
 
 <hr />
 
@@ -148,7 +148,7 @@ label.text = "Swift Playground"
 
 <p>Next, add a DataSource class. Implement obligatory functions returning the number of rows in a section, a cell for index path, and as an extra - the number of sections in a table view to see how creating the header view in Delegate works:</p>
 
-<pre><code class="objectivec">class DataSource : NSObject, UITableViewDataSource {
+{% highlight javascript linenos %}class DataSource : NSObject, UITableViewDataSource {
 &nbsp; func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
 &nbsp; &nbsp; return 2
 &nbsp; }
@@ -169,17 +169,17 @@ label.text = "Swift Playground"
 &nbsp; &nbsp; return cell!
 &nbsp; }
 }
-</code></pre>
+{% endhighlight %}
 
 <p>Now you need to create Delegate and DataSource objects and set them as properties of our newly created UITableView. At the end, you have to perform a <em>reloadData()</em> function for the tableView to fetch data from your data source.</p>
 
-<pre><code class="objectivec">let delegate = Delegate()
+{% highlight javascript linenos %}let delegate = Delegate()
 let dataSource = DataSource()
 let tableView = UITableView(frame: CGRect(x: 0, y: 0, width: 320, height: 480), style: UITableViewStyle.Grouped)
 tableView.delegate = delegate
 tableView.dataSource = dataSource
 tableView.reloadData()
-</code></pre>
+{% endhighlight %}
 
 <p>Now on the last line (the one with <em>reloadData()</em>), you can use either <em>Quick Look</em> or <em>Value History</em> to see how your tableView looks. For this example, click on the latter to see how it changes while we change the code.</p>
 
@@ -189,7 +189,7 @@ tableView.reloadData()
 
 <p>In the Delegate class, change the function creating header view to:</p>
 
-<pre><code class="objectivec">func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -&gt; UIView? {
+{% highlight javascript linenos %}func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -&gt; UIView? {
 &nbsp; &nbsp; let label = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 50))
 &nbsp; &nbsp; label.textAlignment = NSTextAlignment.Center
 &nbsp; &nbsp; label.font = UIFont.italicSystemFontOfSize(20)
@@ -198,11 +198,11 @@ tableView.reloadData()
 &nbsp; &nbsp; label.text = "Section: \(section)"
 &nbsp; &nbsp; return label
 &nbsp; }
-</code></pre>
+{% endhighlight %}
 
 <p>And then update the function creating a cell in the Data Source:</p>
 
-<pre><code class="objectivec">func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -&gt; UITableViewCell {
+{% highlight javascript linenos %}func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -&gt; UITableViewCell {
 &nbsp; &nbsp; var identifier = "Identifier"
 &nbsp; &nbsp; var cell : UITableViewCell? = nil
 &nbsp; &nbsp; cell = tableView.dequeueReusableCellWithIdentifier(identifier) as UITableViewCell?
@@ -214,7 +214,7 @@ tableView.reloadData()
 &nbsp; &nbsp; cell?.detailTextLabel?.text = "Section Number: \(indexPath.section)"
 &nbsp; &nbsp; return cell!
 &nbsp; }
-</code></pre>
+{% endhighlight %}
 
 <p>After a short while, Timeline will refresh, and your Table View will change:</p>
 

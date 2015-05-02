@@ -4,7 +4,7 @@ title: What Would the World Be Like Without Real-Time Sync?
 date: 2014-08-01 11:21:29
 author: thomas_hagner
 categories: ['Real-Time Sync']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/08/4355457660_3bf87da0fd_b-e1411727956761.jpg
+share_image: /public/4355457660_3bf87da0fd_b-e1411727956761.jpg
 summary: "It’s 7:00am. You just woke up and are getting your clothes on for your morning run. You grab your phone and put your headphones in so you can listen to the new running playlist you added to Spotify last night. On your way out, you realize – the playlist isn’t anywhere to be found. 'What? I swear I saw it yesterday and added it,' you think."
 ---
 It’s 7:00am. You just woke up and are getting your clothes on for your morning run. You grab your phone and put your headphones in so you can listen to the new running playlist you added to Spotify last night. On your way out, you realize - the playlist isn’t anywhere to be found. “<i>What? I swear I saw it yesterday and added it,”</i> you think. <!--more-->That's okay. You’ll listen to “Happy” again - no big deal.

@@ -4,7 +4,7 @@ title: Four Insane (But True) Facts About the Internet of Things
 date: 2014-07-15 11:21:29
 author: madeleine
 categories: ['Internet of Things']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/07/brown-216001_1280.jpg
+share_image: /public/brown-216001_1280.jpg
 summary: "The 'Internet of Things'—it’s a term that gets tossed around a lot. With more and more 'things' being connected everyday, the relevancy of the IoT is increasing in our businesses and day-to day-lives. From smart refrigerators to wireless heart monitors, there is no limit to the way things are being connected. Here are four insane “things” you should know about the rapidly advancing Internet of Things."
 ---
 The "Internet of Things"—it’s a term that gets tossed around a lot. With more and more “things” being connected everyday, the relevancy of the IoT is increasing in our businesses and day-to day-lives. From smart refrigerators to wireless heart monitors, there is no limit to the way things are being connected. Here are four insane “things” you should know about the rapidly advancing Internet of Things.<!--more-->

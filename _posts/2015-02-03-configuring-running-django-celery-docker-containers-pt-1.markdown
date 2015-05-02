@@ -4,7 +4,7 @@ title: Configuring and Running Django and Celery in Docker Containers (pt. 1)
 date: 2015-02-03 11:21:29
 author: justyna
 categories: ['Celery', 'Django', 'Docker', 'Fig.sh']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2015/02/docker-django-celery.png
+share_image: /public/docker-django-celery.png
 summary: "Today, you’ll learn how to setup a distributed task processing system for quick prototyping. You will configure Celery with Django, Postgres, Redis, and Rabbitmq, and then run everything in Docker containers. You’ll need some working knowledge of Docker for this tutorial, which you can get in one my previous posts here."
 ---
 
@@ -59,7 +59,7 @@ Sooner or later, you will end up with a pretty complex distributed system - and 
 With Docker, it's much easier to test solutions on a system level - by prototyping different task designs and the interactions between them.
 <h2>Your setup</h2>
 Start with the standard Django project structure. It can be created with django-admin, if you have it installed.
-<pre><code>
+{% highlight javascript linenos %}
 
 $ tree -I *.pyc
 .
@@ -82,12 +82,12 @@ $ tree -I *.pyc
 ├── run_celery.sh
 └── run_web.sh
 
-</code></pre>
+{% endhighlight %}
 <h2>Creating containers</h2>
 Since we are working with Docker, we need a proper Dockerfile to specify how our image will be built.
 <h3>Custom container</h3>
 <strong>Dockerfile</strong>
-<pre><code>
+{% highlight javascript linenos %}
  
 # use base python image with python 2.7
 FROM python:2.7
@@ -104,10 +104,10 @@ RUN pip install -r requirements.txt
 # create unprivileged user
 RUN adduser --disabled-password --gecos '' myuser
 
-</code></pre>
+{% endhighlight %}
 Our dependencies are:
 <strong>requirements.txt</strong>
-<pre><code>
+{% highlight javascript linenos %}
 
 django==1.7.2
 celery==3.1.17
@@ -115,7 +115,7 @@ Djangorestframework==3.0.3
 psycopg2==2.5.4
 redis==2.10.3
 
-</code></pre>
+{% endhighlight %}
 I've frozen versions of dependencies to make sure that you will have a working setup. If you wish, you can update any of them, but it's not guaranteed to work.
 <h3>Choosing images for services</h3>
 Now we only need to set up Rabbitmq, Postgresql, and Redis. Since Docker introduced its official library, I use their official images whenever possible. However, even these can be broken sometimes. When that happens, you'll have to use something else.
@@ -130,7 +130,7 @@ Here are the images I tested and selected for this project:
 Now you'll use <a href="http://www.fig.sh/">fig.sh</a> to combine your own containers with the ones we chose in the last section. If you're not familiar with Fig.sh, check out my post on <a href="http://www.syncano.com/docker-workflow-fig-sh/">making your Docker workflow awesome with fig</a>.
 
 <strong>fig.yml</strong>
-<pre><code>
+{% highlight javascript linenos %}
 
 # database container
 db:
@@ -172,12 +172,12 @@ worker:
     - rabbitmq:rabbit
     - redis:redis
 
-</code></pre>
+{% endhighlight %}
 <h2>Configuring the webserver and worker</h2>
 You've probably noticed that both the worker and web server run some starting scripts. Here they are:
 
 <strong>run_web.sh</strong>
-<pre><code>
+{% highlight javascript linenos %}
 
 #!/bin/sh
  
@@ -187,9 +187,9 @@ su -m myuser -c "python manage.py migrate"
 # start development server on public ip interface, on port 8000
 su -m myuser -c "python manage.py runserver 0.0.0.0:8000"
 
-</code></pre>
+{% endhighlight %}
 <strong>run_celery.sh</strong>
-<pre><code>
+{% highlight javascript linenos %}
 
 #!/bin/sh
  
@@ -197,7 +197,7 @@ cd myproject
 # run Celery worker for our project myproject with Celery configuration stored in Celeryconf
 su -m myuser -c "celery worker -A myproject.celeryconf -Q default -n default@%h"
 
-</code></pre>
+{% endhighlight %}
 The first script - <strong>run_web.sh</strong> - will migrate the database and start django development server on port 8000.
 Ths second one , <strong>run_celery.sh</strong>, will start a celery worker listening on a queue <em>default</em>.
 
@@ -206,7 +206,7 @@ At this stage, these scripts won't work as we'd like them to because we haven't 
 But before we get to that, there are some useful Celery settings that will make your system perform better. Below are complete settings of this django app.
 
 <strong>myproject/settings.py</strong>
-<pre><code>
+{% highlight javascript linenos %}
 
 import os
  
@@ -333,13 +333,13 @@ CELERYD_HIJACK_ROOT_LOGGER = False
 CELERYD_PREFETCH_MULTIPLIER = 1
 CELERYD_MAX_TASKS_PER_CHILD = 1000
 
-</code></pre>
+{% endhighlight %}
 Those settings will configure django app so that it will discover PostgreSQL database, redis cache and celery.
 
 Now, it's time to connect Celery to the app. Create file <em>celeryconf.py</em> and paste in this code:
 
 <strong>myproject/celeryconf.py</strong>
-<pre><code>
+{% highlight javascript linenos %}
 
 import os
  
@@ -355,33 +355,33 @@ CELERY_TIMEZONE = 'UTC'
 app.config_from_object('django.conf:settings')
 app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
 
-</code></pre>
+{% endhighlight %}
 That should be enough to connect Celery to our app so the run_X scripts will work. You can read more about first steps with Django and Celery <a href="http://celery.readthedocs.org/en/latest/django/first-steps-with-django.html">here</a>.
 <h2>Defining tasks</h2>
 Celery looks for tasks inside the <em>tasks.py</em> file in each Django app. Usually, tasks are created either with decorator or by inheriting after the Celery Task class.
 
 Here's how you can create a task using decorator:
-<pre><code>
+{% highlight javascript linenos %}
 
 @app.task
 def power(n):
     """Return 2 to the n'th power"""
     return 2 ** n
 
-</code></pre>
+{% endhighlight %}
 And here's how you can create a task by inheriting after the Celery Task class:
-<pre><code>
+{% highlight javascript linenos %}
 
 class PowerTask(app.Task):
     def run(self, n):
     """Return 2 to the n'th power"""
         return 2 ** n
 
-</code></pre>
+{% endhighlight %}
 Both are fine and good for slightly different use cases.
 
 <strong>myproject/tasks.py</strong>
-<pre><code>
+{% highlight javascript linenos %}
 
 from functools import wraps
  
@@ -444,14 +444,14 @@ TASK_MAPPING = {
     'fibonacci': fib
 }
 
-</code></pre>
+{% endhighlight %}
 <h2>Building an API for scheduling tasks</h2>
 If you have tasks in your system, how do you run them? In this section, you'll create a user interface for job scheduling. In a backend application, the API will be your user interface. Let's use the <a href="http://www.django-rest-framework.org/">Django REST Framework</a> for your API.
 
 To make it as simple as possible, your app will have one model and only one ViewSet (endpoint with many HTTP methods).
 
 Create your model, called <em>Job</em>, in <strong>myproject/models.py</strong>.
-<pre><code>
+{% highlight javascript linenos %}
 
 from django.db import models
  
@@ -489,11 +489,11 @@ class Job(models.Model):
             task = TASK_MAPPING[self.type]
             task.delay(job_id=self.id, n=self.argument)
  
-</code></pre>
+{% endhighlight %}
 Then create a <em>serializer</em>, <em>view</em> and url configuration to access it.
 
 <strong>myproject/serializers.py</strong>
-<pre><code>
+{% highlight javascript linenos %}
 
 from rest_framework import serializers
  
@@ -504,9 +504,9 @@ class JobSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Job
 
-</code></pre>
+{% endhighlight %}
 <strong>myproject/views.py</strong>
-<pre><code>
+{% highlight javascript linenos %}
 
 from rest_framework import mixins, viewsets
  
@@ -524,9 +524,9 @@ class JobViewSet(mixins.CreateModelMixin,
     queryset = Job.objects.all()
     serializer_class = JobSerializer
 
-</code></pre>
+{% endhighlight %}
 <strong>myproject/urls.py</strong>
-<pre><code>
+{% highlight javascript linenos %}
 
 from django.conf.urls import url, include
 from rest_framework import routers
@@ -545,9 +545,9 @@ urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
 
-</code></pre>
+{% endhighlight %}
 For completeness, there is also <strong>myproject/wsgi.py</strong> defining wsgi config for the project:
-<pre><code>
+{% highlight javascript linenos %}
 
 import os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "myproject.settings")
@@ -555,9 +555,9 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "myproject.settings")
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
 
-</code></pre>
+{% endhighlight %}
 and <strong>manage.py</strong>
-<pre><code>
+{% highlight javascript linenos %}
 
 #!/usr/bin/env python
 import os
@@ -570,19 +570,19 @@ if __name__ == "__main__":
   
     execute_from_command_line(sys.argv)
 
-</code></pre>
+{% endhighlight %}
 <strong><em>__init__.py</em></strong> is traditionally empty.
 
 That's all. Uh... lots of code. Luckily everything is on <a href="https://github.com/atteroTheGreatest/docker-Django-Celery">github</a>, so you can just fork it.
 <h2>Running the setup</h2>
 Since everything is run from Fig, make sure you have both Docker and Fig installed before you try to start the app:
-<pre><code>
+{% highlight javascript linenos %}
 
 $ cd /path/to/myproject/where/is/fig.yml
 $ fig build
 $ fig up
 
-</code></pre>
+{% endhighlight %}
 The last command will start five different containers, so just start using your API and have some fun with Celery in the mean time.
 <h2>Accessing the API</h2>
 Navigate in your browser to 127.0.0.1:8000 to browse your API and schedule some jobs.
@@ -590,7 +590,7 @@ Navigate in your browser to 127.0.0.1:8000 to browse your API and schedule some 
 Put this <strong>demo gif</strong> in the queue.
 <h2>Scale things out</h2>
 Currently we have only one instance of each container. We can get information about our group of containers with the <em>fig ps</em> command.
-<pre><code>
+{% highlight javascript linenos %}
 
 ✗ fig ps
   
@@ -603,9 +603,9 @@ dockerdjangocelery_web_1        ./run_web.sh                     Up      0.0.0.0
 dockerdjangocelery_web_run_5    bash                             Up      8000/tcp                                         
 dockerdjangocelery_worker_1     ./run_Celery.sh                  Up       
 
-</code></pre>
+{% endhighlight %}
 Scaling out a container with Fig is extremely easy. Just use the <em>fig scale</em> command with the container name and amount:
-<pre><code>
+{% highlight javascript linenos %}
 
 ✗ fig scale worker=5
   
@@ -614,9 +614,9 @@ Starting dockerdjangocelery_worker_3...
 Starting dockerdjangocelery_worker_4...
 Starting dockerdjangocelery_worker_5...
 
-</code></pre>
+{% endhighlight %}
 Output says that Fig just created an additional four worker containers for us. We can double check it with the <em>fig ps</em> command again:
-<pre><code>
+{% highlight javascript linenos %}
 
 ➜  docker-django-celery git:(master) ✗ fig ps
   
@@ -633,7 +633,7 @@ dockerdjangocelery_worker_3     ./run_celery.sh                  Up
 dockerdjangocelery_worker_4     ./run_celery.sh                  Up                                                     
 dockerdjangocelery_worker_5     ./run_celery.sh                  Up
 
-</code></pre>
+{% endhighlight %}
 You'll see there five powerful Celery workers. Nice!
 <h2>Summary</h2>
 You just married Django with Celery to build a distributed asynchronous computation system. I think you'll agree it was pretty easy to build an API and even easier to scale workers for it! However, life isn't always so nice to us, and sometimes we have to troubleshoot.

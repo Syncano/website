@@ -4,7 +4,7 @@ title: The Best New Features in Syncano 3.1
 date: 2014-04-07 11:21:29
 author: maciej
 categories: ['News', 'Real-Time Sync']
-image: /public/Resham-Admin-GUI-Syncano-copy.png
+share_image: /public/Resham-Admin-GUI-Syncano-copy.png
 summary: "We’re excited to open Syncano to the public for the first time with version 3.1! While we’re still in beta, we feel this new version is a huge accomplishment equipped with a simplified sign up process, completely re-invented admin GUI, new API functionality, and easier access to support. Here are some of our key new features"
 ---
 <p dir="ltr">We’re excited to open Syncano to the public for the first time with version 3.1! While we’re still in beta, we feel this new version is a huge accomplishment equipped with a simplified sign up process, completely re-invented admin GUI, new API functionality, and easier access to support. Here are some of our key new features:<!--more--></p>

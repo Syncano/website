@@ -4,7 +4,7 @@ title: 3 Ways to Build More Apps in Less Time
 date: 2014-07-09 11:21:29
 author: maciej
 categories: ['API', 'Backend as a Service', 'How Tos', 'Real-Time Apps', 'Real-Time Sync']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/07/7103502393_f5178f5c9e_h.jpg
+share_image: /public/7103502393_f5178f5c9e_h.jpg
 summary: "'How fast can you build it?' You’ve probably heard this question a thousand times. A few years ago, building apps quickly wasn’t an option. You had to keep multiple moving parts in mind, synchronize your team, and estimate a timeline that extended far into the future. But with today’s technology, you can build more apps in less time, keep your clients happy, and grow your business at the same time – you just need a few good shortcuts. The good news is: we know what they are. Here are three expert tips so you can develop high-quality apps in less time."
 ---
 “How fast can you build it?” You’ve probably heard this question a thousand times. A few years ago, building apps quickly wasn’t an option. You had to keep multiple moving parts in mind, synchronize your team, and estimate a timeline that extended far into the future. But with today’s technology, you can build more apps in less time, keep your clients happy, and grow your business at the same time - you just need a few good shortcuts. The good news is: we know what they are. Here are three expert tips so you can develop high-quality apps in less time.<!--more-->

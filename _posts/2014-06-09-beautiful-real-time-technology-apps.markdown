@@ -4,7 +4,7 @@ title: 6 Real-Time Applications That Are Absolutely Stunning
 date: 2014-06-09 11:21:29
 author: sara_cowie
 categories: ['Real-Time Apps', 'Real-Time Sync']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/06/calendar-main.jpg
+share_image: /public/calendar-main.jpg
 summary: "As we use more and more devices, we need apps that seamlessly integrate them into our lives. From collaboration tools for businesses to second screen apps for entertainment, we’re seeing a new generation of beautiful, powerful apps that use real-time sync for incredible user experiences. Here are six gorgeous apps that show the capabilities of real-time technology."
 ---
 <p style="color: #3a3a3c;">As we use more and more devices, we need apps that seamlessly integrate them into our lives. From collaboration tools for businesses to second screen apps for entertainment, we’re seeing a new generation of beautiful, powerful apps that use real-time sync for incredible user experiences. Here are six gorgeous apps that show the capabilities of real-time technology.<!--more--></p>

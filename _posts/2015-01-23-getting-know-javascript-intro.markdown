@@ -4,7 +4,7 @@ title: Getting to Know JavaScript - An Intro
 date: 2015-01-23 11:21:29
 author: eric_schles
 categories: ['javascript', 'Tutorial']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2015/01/intro-javascript.jpg
+share_image: /public/intro-javascript.jpg
 summary: "JavaScript is probably one of the oddest languages in history – partly because of its back story. It was introduced with two different design principles for two separate communities. As a result, it developed into two distinct sets of paradigms."
 ---
 <h2>A little history</h2>
@@ -25,7 +25,7 @@ That being said, browser security is continually improving. It's a slow process 
 Because its imperative that backwards compatibility to older sites isn't broken, security issues won't be going away any time soon. It's an important danger to consider, but it shouldn't stop you from using this wonderful flexible language. Just know about the traps out there so you are mindful to not fall into them.
 <h2>JavaScript and HTML</h2>
 Like CSS, JavaScript can live in the same file or a separate file from your HTML. In the interest of clarity, we'll show it in the same file as the HTML:
-<pre><code>
+{% highlight javascript linenos %}
 &lt;!doctype html&gt;
 &lt;html&gt;
 &lt;body&gt;
@@ -46,13 +46,13 @@ function myFunction()
 &lt;/body&gt;
 &lt;/html&gt;
 
-</code></pre>
+{% endhighlight %}
 There are a bunch of things going on in this example. To run it, save it as a .html file and then open it with your favorite browser. There are some standard HTML elements, like tags. But there is also a script tag where the JavaScript is written. JavaScript can appear in either head or body tags. It's typically good practice to include all JavaScript in between the head tags. We include it here in the body for demonstrative purposes. Notice how well the HTML and the JavaScript integrate: We are including a JavaScript function inside an HTML tag! There are plenty of other languages that integrate with the web, but none of them do it as obviously as JavaScript.
 
 Now onto the actual JavaScript. First we call document.getElementById("demo").innerHTML and set it equal to the built in Date() function. This is an example of HTML and Javascript interacting with the DOM. The getElementById part of the of code references the "demo" id which we define in the p tag. Don't worry about the .innerHTML right now. When I explain the DOM in detail, it will become clear how it fits in. The next thing to notice is the onclick event in the button tag. This tells the browser when to execute the JavaScript. The major ways that JavaScript can be executed is on click, on hover, and on load. 
 
 In the next few examples, you will write pure JavaScript and learn the language. Here is a skeleton to run your JavaScript:
-<pre><code>
+{% highlight javascript linenos %}
 &lt;!doctype html&gt;
 &lt;html&gt;
 &lt;body&gt;
@@ -70,7 +70,7 @@ function main(){
 &lt;/body&gt;
 &lt;/html&gt;
 
-</code></pre>
+{% endhighlight %}
 <h2>JavaScript and the DOM</h2>
 There are two ways that JavaScript can be taught from here: (1) as a stand alone language without any reference to web development until later or (2) as a web development tool with explanations as you go. We're going to go with the latter.
 <h2>Definition: The DOM</h2>
@@ -89,7 +89,7 @@ In computer science, a tree data structure is any data that is organized in a hi
 And here's what this looks like executed as an HTML tree:
 
 <img src="http://www.w3schools.com/js/pic_htmltree.gif" alt="" />
-<pre><code>
+{% highlight javascript linenos %}
 
 &lt;html&gt;
 &lt;head&gt;
@@ -101,10 +101,10 @@ And here's what this looks like executed as an HTML tree:
 &lt;/body&gt;
 &lt;/html&gt;
 
-</code></pre>
+{% endhighlight %}
 Notice that the DOM only shows the openning tags, because it is assumed that any openned tags will be closed.
 <h2>Example #1: Hello World!</h2>
-<pre><code>
+{% highlight javascript linenos %}
 
 &lt;html&gt;
 &lt;body&gt;
@@ -116,7 +116,7 @@ document.write(txt);
 &lt;/body&gt;
 &lt;/html&gt;
 
-</code></pre>
+{% endhighlight %}
 This first example follows traditions of the <a title="K&amp;R Book (introduction to C)" href="http://www.amazon.com/The-Programming-Language-2nd-Edition/dp/0131103628">K&amp;R book (introduction to C) </a>- a must have for any serious programmer. The document object is how JavaScript interacts with the DOM in general. Here we make use of two methods:
 
 <strong>getElementById("first")</strong>: This method grabs any elements with id "first". It doesn't do anything specific with the element, but it's handy for interacting with a specific HTML element or set of HTML elements.
@@ -126,7 +126,7 @@ This first example follows traditions of the <a title="K&amp;R Book (introductio
 Notice that JavaScript is very heavy on object oriented programming. The way you interact with, access, and write data is through objects.
 
 For those of you unfamiliar with object oriented programming, you can find a good intro <a href="http://cs.nyu.edu/courses/spring13/CSCI-UA.0101-006/Notes.pdf">here.</a>
-<pre><code>
+{% highlight javascript linenos %}
 
 &lt;HTML&gt;
       &lt;HEAD&gt;
@@ -156,7 +156,7 @@ For those of you unfamiliar with object oriented programming, you can find a goo
       &lt;/BODY&gt;
 &lt;/HTML&gt;
 
-</code></pre>
+{% endhighlight %}
 There is a ton of stuff going on here. First, we use a form to grab the input from the user. Then, we write a personalized greeting to the screen for the person.
 
 <strong>Let's talk about forms:</strong>
@@ -180,7 +180,7 @@ Write a few web forms. Get different kinds of information from the user. Return 
 For a reference to a list of common ways to interact with the DOM see: <a href="http://www.w3schools.com/js/js_htmldom_document.asp">JavaScript DOM reference</a>
 
 Next, we'll change a picture on click:
-<pre><code>&lt;!doctype html&gt;
+{% highlight javascript linenos %}&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;body&gt;
 
@@ -201,7 +201,7 @@ document.getElementById("description").innerHTML = "The face is sad!";
 &lt;/body&gt;
 &lt;/html&gt;
 
-</code></pre>
+{% endhighlight %}
 Notice there isn't too much no information here.  The big difference is the type of data we are working with.  So, first off, you should copy the above code into your favorite text editor and give it a try!  In case you are lazy, here's what it does:
 
 The code displays a picture of a many with a happy face and the text:  "The face is happy!"
@@ -209,15 +209,15 @@ The code displays a picture of a many with a happy face and the text:  "The fac
 Then if you click the submit button the text and picture change from the smiling face to a very serious looking man with the text "The face is sad!"
 
 As we did in the first example, we made use of document.getElementById and then referenced two specific attributes, in this case src and innerHTML.  The src attribute of an img tag will change the image that is displayed.  We manipulate this with:
-<pre><code>document.getElementById([name of tag]).src = [new image source]</code></pre>
+{% highlight javascript linenos %}document.getElementById([name of tag]).src = [new image source]{% endhighlight %}
 &nbsp;
 
 We do the same thing with the text displayed by the html as follows:
-<pre><code>document.getElementById([name of tag]).innerHTML = [new text]</code></pre>
+{% highlight javascript linenos %}document.getElementById([name of tag]).innerHTML = [new text]{% endhighlight %}
 &nbsp;
 
 Notice the pattern for interacting with images and text is almost the same, the difference being the specific attribute being referenced.
-<pre><code>
+{% highlight javascript linenos %}
 &lt;html&gt;
 &lt;body&gt;
 
@@ -231,19 +231,19 @@ document.getElementById("changeable_text").style.color="blue";
 &lt;/body&gt;
 &lt;/html&gt;
 
-</code></pre>
+{% endhighlight %}
 Here we've made some CSS happen on the fly! Typically when dealing with Javascript you'll want it to be caused by some user interaction like an onclick event or on hover event or something, however, I think it's also important to understand that this need not be the case.  Here we show that the Javascript does execute on load of the page.  Notice that we included the same text twice, once with the id="changeable_text" and once with it.  As you can see, since I reference the element by id, only the p tag with id="changeable_text" is affected.  To experiment with this, copy and paste the above code into your favorite text editor.  
 
 Try commenting out the
-<pre><code>document.getElementById("changeable_text").style.color="blue";</code></pre>
+{% highlight javascript linenos %}document.getElementById("changeable_text").style.color="blue";{% endhighlight %}
 
 By doing this:
 
-<pre><code>//document.getElementById("changeable_text").style.color="blue";</code></pre>
+{% highlight javascript linenos %}//document.getElementById("changeable_text").style.color="blue";{% endhighlight %}
 &nbsp;
 
 You should also try playing with the color of the text. Here's an example of another color you could set:
-<pre><code>document.getElementById("changeable_text").style.color="green";</code></pre>
+{% highlight javascript linenos %}document.getElementById("changeable_text").style.color="green";{% endhighlight %}
 &nbsp;
 
 All the major colors will work, give it a whirl!
@@ -265,7 +265,7 @@ Here's a list of some common HTML 'events':
 	<li>When a user strokes a key.</li>
 </ul>
 We've already seen examples of on-click events. Let's look at one more onclick now that we understand that the javascript is being used to handle some event.
-<pre><code>&lt;HTML&gt;
+{% highlight javascript linenos %}&lt;HTML&gt;
  &lt;HEAD&gt;
  &lt;TITLE&gt;Greeting&lt;/TITLE&gt;
 
@@ -292,7 +292,7 @@ We've already seen examples of on-click events. Let's look at one more onclick n
  &lt;/ol&gt;
  
  &lt;/BODY&gt;
-&lt;/HTML&gt;</code></pre>
+&lt;/HTML&gt;{% endhighlight %}
 Here, the new stuff is
 
 1. Making use of JavaScript's built-in alert function
@@ -301,7 +301,7 @@ Here, the new stuff is
 This covers two very big cases for onclick - manipulating something on the page and sending messages to the user. The alert pattern isn't used much in websites anymore, except when the user does something they really aren't supposed to. I personally enjoy the alert function for quick debugging. If you have a larger set of issues, you should always make use of developer tools for this! This can be accessed by right-clicking (two finger click on Mac) and going to inspect element. Then click on the console tab. This gives you a command line environment in your browser! If those steps were unclear, check out <a title="this video" href="https://www.youtube.com/watch?v=nOEw9iiopwI">this video</a> explaining how to do it, by showing you.
 
 Now that we have a strong grasp of onclick events and some of their uses lets look at another type of event in Javascript land, onload.
-<pre><code>
+{% highlight javascript linenos %}
 &lt;!doctype html&gt;
 &lt;html&gt;
 &lt;body onload="checkCookies()"&gt;
@@ -323,19 +323,19 @@ else
 &lt;p&gt;An alert box should tell you if your browser has enabled cookies or not.&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
+{% endhighlight %}
 This code tells you whether or not cookies are enabled in your browser.  Notice the onload attribute in the body tag.  This ensures the Javascript is loaded first by the browser and is good practice.  The navigator class has a few useful functions, but the most useful is the cookiesEnabled method.  This let's us know if the user will be able to view the page in a stateful manner or not.  This allows us to program for both cases - when the cookies are enabled and when they are not.  If the idea of state doesn't make sense, don't worry, I'm going to get into cookies generally below.
 
 The another thing to understand here is the use of flow - namely through if/else statements.  An if statement is a way of ensuring code only executes under certain conditions.  The condition is listed in the parenthesis after the if keyword as follows:
-<pre><code>
+{% highlight javascript linenos %}
 if ( [boolean statement] ) {
 
 ... code goes here
 
 }
-</code></pre>
+{% endhighlight %}
 If the boolean statement evaluates to true then the code inside the curly braces will be executed.  If the boolean fails one can include another case like we did above:
-<pre><code>
+{% highlight javascript linenos %}
 if ([ boolean statement] {
 
 ..code goes here...
@@ -345,7 +345,7 @@ if ([ boolean statement] {
 .. code goes here ...
 
 }
-</code></pre>
+{% endhighlight %}
 So here, should the boolean statement fail the code block in the curly braces after the else keyword will be executed.
 
 So, looking back at our example we can see - if cookies are enabled, we let the user know with an alert statement telling them so.  Otherwise we tell them cookies aren't enabled.  So this is all possible because of the navigator class.  Let's take a closer look at this class and understand some history about the modern internet, all at the same time.
@@ -374,7 +374,7 @@ In the above example we told the user whether or not cookies were enabled.  Now
 <h2>How cookies work</h2>
 Cookies are data, stored in small text files on your computer. They are usually saved in name-value pairs like: username=Eric Schles or Syncano=awesome. When a browser requests a web page from the server, cookies belonging to the page are added to the request. This way, the server gets the necessary data to "remember" information about users. JavaScript can create cookies, read cookies, and delete cookies with the property document.cookie. Note cookies need to be enabled in order for us to create, read, or use cookies, which we get from the navigator class. So any functionality relating to cookies should be wrapped in an "if" statement that checks if cookies are enabled.
 <h2>Creating cookies</h2>
-<pre><code>
+{% highlight javascript linenos %}
 &lt;!doctype html&gt;
 &lt;html&gt;
 &lt;body&gt;
@@ -400,9 +400,9 @@ function displayCookies()
 &lt;/body&gt;
 &lt;/html&gt;
 
-</code></pre>
+{% endhighlight %}
 The above code should create five buttons. One that creates the firstname cookie, one that creates the lastname cookie, one that deletes the firstname cookie, one that deletes the lastname cookie, and one that displays all the cookies. Note this is a toy example and doesn't show you how people typically use cookies. A better example that does almost the same thing, but with far greater complexity is:
-<pre><code>
+{% highlight javascript linenos %}
 &lt;html&gt;
 &lt;head&gt;
 &lt;script&gt;
@@ -447,7 +447,7 @@ else
 &lt;body onload="checkCookie()"&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
+{% endhighlight %}
 If you don't completely understand this example don't worry. I include it more so that you are aware of how cookies are used in practice.
 <h2>Exercise:</h2>
 Write a simple website that lets you log in. The start page should ask you if you already have an account. If you don't, there should be a link to a page that allows you to create a username and password. Otherwise, you should be able to log in. Once logged in, you should have three functions: One to display the user's name, one to change the user's password, and one to log you out.
@@ -461,7 +461,7 @@ Now that we've learned some javascript, let's make use of it.  Lets make sure w
 Up until now we've only been manipulating attributes of our tags - creating some small sense of dynamics within our webpage.  Here we will learn how to create and remove html tags.  How to truly manipulate the DOM.  Thus allowing us to dynamically alter the overall structure of our webpages, creating a richer fuller user experience.
 <h3>Definition: Node</h3>
 To add a new element to the HTML DOM, you must create the element (element node) first, and then append it to an existing element
-<pre><code>
+{% highlight javascript linenos %}
 &lt;!doctype html&gt;
 &lt;html&gt;
 &lt;body&gt;
@@ -483,7 +483,7 @@ element.appendChild(para);
 &lt;/body&gt;
 &lt;/html&gt;
 
-</code></pre>
+{% endhighlight %}
 The createElement method creates the new tag. To write to this element, you have to create the text node using createTextNode. Append the text to newly created tag, and then simply append the newly created node to the DOM at the appropriate place. In this case, we are appending to the div tag. Therefore the new tag will appear inside the div.
 
 <a href="http://www.w3schools.com/js/js_htmldom_document.asp">DOM reference</a>
@@ -504,7 +504,7 @@ There are two key methods:
 </ul>
 </ul>
 Let's check out an example of setInterval
-<pre><code>
+{% highlight javascript linenos %}
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;body&gt;
@@ -523,9 +523,9 @@ setInterval(function(){alert("Hello")},3000);
 &lt;/body&gt;
 &lt;/html&gt;
 
-</code></pre>
+{% endhighlight %}
 Now we'll look at setTimeout
-<pre><code>
+{% highlight javascript linenos %}
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;body&gt;
@@ -543,7 +543,7 @@ setTimeout(function(){alert("Hello")},3000);
 &lt;/body&gt;
 &lt;/html&gt;
 
-</code></pre>
+{% endhighlight %}
 Looking at both of these examples it should be obvious the difference between setTimeout and setInterval.  The setTimeout does an action once and the setInterval does an action continuously.  To try this, please copy paste the above examples into your favorite text editor and run the code.
 <h2>Conclusion</h2>
 This concludes our introduction to JavaScript. Quick shout out to the w3schools JavaScript tutorial, which heavily influenced this post. For more help with JavaScript and web development check out the great tutorials at: <a href="https://developer.mozilla.org/en-US/">MDN</a>.

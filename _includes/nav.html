@@ -1,4 +1,4 @@
-<nav class="navbar navbar-fixed-top {% for c in page.nav_class %}{{ c }} {% endfor %}" style="{% if page.transparent_header %} background-color: #{{page.bg_color}} {% endif %}">
+<nav class="navbar navbar-fixed-top {% for c in page.nav_class %}{{ c }} {% endfor %}" style="{% if page.transparent_header %} background-color: {{page.bg_color}} {% endif %}">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="true" aria-controls="navbar">
@@ -18,10 +18,12 @@
 
     <div class="collapse navbar-collapse" id="navbar-collapse-1" aria-expanded="false">
       <ul class="nav navbar-nav">
-        <li><a href="/get-started">Get Started</a></li>
-        <li><a href="/features">Features</a></li>
+        <li><a href="/get-started">Start Building</a></li>
+        <li><a href="/features">Why Syncano</a></li>
+        <li><a href="/features">Support</a></li>
         <li><a href="http://docs.syncano.com/">Docs</a></li>
         <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/blog">Blog</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="https://login.syncano.com/login" class="btn btn-primary">Login</a></li>

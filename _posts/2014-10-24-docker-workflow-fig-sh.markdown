@@ -4,7 +4,7 @@ title: Make Your Docker Workflow Awesome With Fig.sh
 date: 2014-10-24 11:21:29
 author: justyna
 categories: ['Docker', 'Fig.sh', 'How Tos']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/10/figsh-y.png
+share_image: /public/figsh-y.png
 summary: "Fig is a python application that helps you run groups of docker containers. The docker command line interface is awesome, but if you start working with many containers at once and link them in the development environment, typing the commands into the command line gets burdensome."
 ---
 <h2>What is fig?</h2>
@@ -13,9 +13,9 @@ summary: "Fig is a python application that helps you run groups of docker contai
 
 The most pragmatic approach to this problem is creating a bash script:</p>
 
-<p><code class="bash">run_docker_containers.sh</code></>
+{% highlight javascript linenos %}run_docker_containers.sh{% endhighlight %}
 
-<pre><code class="bash">#!/bin/bash
+{% highlight javascript linenos %}>#!/bin/bash
 # Usage:
 # `./run_docker_containers.sh`
 # or
@@ -24,7 +24,7 @@ The most pragmatic approach to this problem is creating a bash script:</p>
 # Postgres container
 docker run -d -v /var/docker/postgresql:/data --name=postgres -e USER='root' \ 
     -e PASS='amazing_pass' -e DB='my_db' paintedfox/postgresql
-&nbsp; 
+&nbsp;
 # Redis container
 docker run -d -v /var/docker/redis:/data -p 0.0.0.0:6379:6379 \
     --name=redis dockerfile/redis
@@ -43,7 +43,7 @@ docker run -i -t -e INSTANCE_TYPE="worker" --name='my-worker' \
 docker run -i -t -e INSTANCE_TYPE="web-server" --name='my-web' -p 0.0.0.0:8000:8000 \
     -v /home/my/app:/home/my/app
     --link=postgres:postgres --link=redis:redis --link=rabbitmq:rabbit my_docker_image "$@"
-</code></pre>
+{% endhighlight %}
 
 <p>Woah, it's super complicated and ugly – and that's only for running containers. What about inspecting containers, stopping them, or rebuilding them? You need more scripts for that. Managing docker this way can easily become a nightmare. Luckily, you can use <a href="http://www.fig.sh/">fig.sh</a> instead.</p>
 
@@ -64,8 +64,8 @@ docker run -i -t -e INSTANCE_TYPE="web-server" --name='my-web' -p 0.0.0.0:8000:8
 
 <p>Fig is available in pip, so all you have to do is type this into your command line:</p>
 
-<pre><code class="terminal">$ sudo pip install fig
-</code></pre>
+{% highlight javascript linenos %}$ sudo pip install fig
+{% endhighlight %}
 
 <p>You can more information about installing fig.sh on the <a href="http://www.fig.sh/install.html">official website</a>.</p>
 
@@ -75,17 +75,17 @@ docker run -i -t -e INSTANCE_TYPE="web-server" --name='my-web' -p 0.0.0.0:8000:8
 
 <p>Fig helps you manage docker containers, so its options are similar to those of the docker run command. In <em>fig.yml</em>, you'll start by entering the name of the container. Then, choose <em>build</em> or <em>image</em> to either run <em>docker build</em> or start a container based on the <em>image</em> you specified, respectively. You can specify many containers this way. Here's a simple example:</p>
 
-<pre><code class="yaml">my_app:
+{% highlight javascript linenos %}my_app:
   build: . # will run docker build in local directory
 redis:
   image: redis
-</code></pre>
+{% endhighlight %}
 
 <p>Of course you can do more things, like forwarding ports by choosing the <em>ports</em> field , mounting directories using the <em>volumes</em> field, and linking containers with <em>links</em>. It's really intuitive! You can read more about configuration options in the <a href="http://www.fig.sh/yml.html">fig.yml reference</a>.</p>
 
 <p>Now for a less-simple example. Here's how you can migrate your first nightmarish bash script to fig.yml.</p>
 
-<pre><code class="yaml">postgres:
+{% highlight javascript linenos %}postgres:
     image: paintedfox/postgresql
     environment:
         - USER=root
@@ -132,16 +132,16 @@ worker:
         - .:/home/my/app
     environment:
         - INSTANCE_TYPE=worker
-</code></pre>
+{% endhighlight %}
 
 <p>To run containers, now use:</p>
 
-<pre><code class="terminal">$ fig up
-</code></pre>
+{% highlight javascript linenos %}$ fig up
+{% endhighlight %}
 
 <p>In another terminal window, you can inspect all of your containers with:</p>
 
-<pre><code class="terminal">$ fig ps
+{% highlight javascript linenos %}$ fig ps
 &nbsp; 
 Name                         Command               State                 Ports               
 -------------------------------------------------------------------------------------------------------
@@ -150,7 +150,7 @@ app_postgres_1   /sbin/my_init                    Up      49418-&gt;5432/tcp
 app_rabbit_1     /run.sh                          Up      49419-&gt;15672/tcp, 49420-&gt;5672/tcp 
 app_worker_1     /sbin/my_init                    Up      8000/tcp, 2023-&gt;22/tcp            
 app_web_1        /sbin/my_init                    Up      8000-&gt;8000/tcp, 2022-&gt;22/tcp 
-</code></pre>
+{% endhighlight %}
 
 <p>That's it! Pretty easy, right?</p>
 
@@ -162,13 +162,13 @@ app_web_1        /sbin/my_init                    Up      8000-&gt;8000/tcp, 202
 
 <p>This is how I configured my <em>INSTANCE_TYPE</em> variable:</p>
 
-<pre><code class="yaml">environment:
+{% highlight javascript linenos %}environment:
     - INSTANCE_TYPE="web-server"
-</code></pre>
+{% endhighlight %}
 
 <p>During debugging I noticed that fig leaves double quotes in actual variable value:</p>
 
-<pre><code class="terminal">$ fig run web printenv
+{% highlight javascript linenos %}$ fig run web printenv
 &nbsp; 
 ...
 POSTGRES_1_ENV_USER=root
@@ -176,7 +176,7 @@ POSTGRES_1_ENV_PASS=amazing_pass
 INSTANCE_TYPE="web-server"
 HOME=/root
 ...
-</code></pre>
+{% endhighlight %}
 
 <p>So, my advice is to strip quotes in environment specification.</p>
 
@@ -184,10 +184,10 @@ HOME=/root
 
 <p>I also noticed fig occasionally doesn't notice when a <em>Dockerfile</em> changes and its image needs to be rebuilt. When that happens, you'll just need to enter this into the command line:</p>
 
-<pre><code class="terminal">$ fig rm  # removes containers
+{% highlight javascript linenos %}$ fig rm  # removes containers
 $ fig build  # rebuild images
 $ fig up  # run whole setup again
-</code></pre>
+{% endhighlight %}
 
 <h2>Summary</h2>
 

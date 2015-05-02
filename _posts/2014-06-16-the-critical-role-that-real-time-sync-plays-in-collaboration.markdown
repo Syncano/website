@@ -4,7 +4,7 @@ title: The Critical Role That Real-Time Sync Plays in Collaboration
 date: 2014-06-16 11:21:29
 author: resham
 categories: ['Real-Time Sync']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/06/Oblong-Mezzanine-Bring-Your-Own-Device.jpg
+share_image: /public/Oblong-Mezzanine-Bring-Your-Own-Device.jpg
 summary: "To get the most out of collaboration, there has to be a little magic—and that’s what real-time collaboration technology offers. The power to work together synchronously plays a crucial role in a world with dispersed teams and constant travel. Here’s a look at how real-time sync enables collaboration in today’s workplace."
 ---
 To get the most out of collaboration, there has to be a little magic—and that’s what real-time collaboration technology offers. The power to work together synchronously plays a crucial role in a world with dispersed teams and constant travel. Here’s a look at how real-time sync enables collaboration in today’s workplace.<!--more-->

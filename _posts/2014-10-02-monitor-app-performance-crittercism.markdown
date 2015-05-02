@@ -4,7 +4,7 @@ title: How to Monitor Your App's Performance
 date: 2014-10-02 11:21:29
 author: mariusz
 categories: ['How Tos', 'Info']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/08/crittercism-syncano2.png
+share_image: /public/crittercism-syncano2.png
 summary: "After building a successful real-time app with Syncano with out last tutorial, it’s time to make sure your app’s performance remains on top of its game. We recommend using Crittercism, which allows you to monitor your app performance and do things like prioritize issues, troubleshoot, and view performance trends."
 ---
 <a href="http://www.syncano.com/get-instant-notifications-syncano-ios/">After building a successful real-time app with Syncano with out last tutorial</a>, it’s time to make sure your app’s performance remains on top of its game. We recommend using <a href="http://www.crittercism.com/solution-overview/">Crittercism</a>, which allows you to monitor your app performance and do things like prioritize issues, troubleshoot, and view performance trends.<!--more-->

@@ -4,7 +4,7 @@ title: 5 Signs You Should Invest in a Backend as a Service
 date: 2014-05-05 11:21:29
 author: resham
 categories: ['Backend as a Service']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/06/blogger-336371_1280.jpg
+share_image: /public/blogger-336371_1280.jpg
 summary: "When you’re trying to build applications quickly and efficiently, your team needs to focus on things like growth, innovation, and rapid development. Using a Backend as a Service (BaaS) can give your team the flexibility to focus on what’s most important and create powerful applications, faster. Here are five signs you would benefit from a BaaS."
 ---
 When you’re trying to build applications quickly and efficiently, your team needs to focus on things like growth, innovation, and rapid development. Using a Backend as a Service (BaaS) can give your team the flexibility to focus on what's most important and create powerful applications, faster. Here are five signs you would benefit from a BaaS.<!--more-->

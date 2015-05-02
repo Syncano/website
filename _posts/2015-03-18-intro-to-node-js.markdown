@@ -5,7 +5,7 @@ date: 2015-03-18 11:21:29
 author: eric_schles
 summary: "Node.js is an engine for running javascript locally and it is a library for doing server-side web development. In short, it is a development platform for JS on the server."
 categories: ['javascript', 'Tutorial']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2015/03/intro-node-js.png
+share_image: /public/intro-node-js.png
 ---
 <p>Node.js is an engine for running javascript locally and it is a library for doing server-side web development.  In short, it is a development platform for JS on the server.<!--more--></p>
 
@@ -19,8 +19,8 @@ image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/upload
 
 <h3>On Ubuntu</h3>
 
-<pre><code>sudo apt-get install nodejs #installing node</code></pre>
-<pre><code>sudo apt-get install npm #installing node package manager</code></pre>
+{% highlight javascript linenos %}sudo apt-get install nodejs #installing node{% endhighlight %}
+{% highlight javascript linenos %}sudo apt-get install npm #installing node package manager{% endhighlight %}
 
 <p>Then you'll need to do the following on the command line:</p>
 
@@ -50,7 +50,7 @@ image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/upload
 
 <p>Open up your favorite text editor for writing code - for JS I really like vim - And type in the following:</p>
 
-<pre><code>
+{% highlight javascript linenos %}
 var http = require("http");
 
 http.createServer(function(request, response) {
@@ -60,7 +60,7 @@ http.createServer(function(request, response) {
 }).listen(5000);
 
 console.log("Server running on http://localhost:5000");
-</code></pre>
+{% endhighlight %}
 
 <p>For those of you not used to writing your own servers, this may all seem a bit foreign.  So let's go line by line.</p>
 
@@ -72,7 +72,7 @@ console.log("Server running on http://localhost:5000");
 
 <p>Here's another way we have written the same code:</p>
 
-<pre><code>
+{% highlight javascript linenos %}
 var http = require("http");
 
 var f = function(request, response) {
@@ -87,7 +87,7 @@ server.listen(5000);
 
 console.log("Server running on http://localhost:5000");
 
-</code></pre>
+{% endhighlight %}
 
 <p>If you run both pieces of code, you should see the same thing.  </p>
 
@@ -101,7 +101,7 @@ console.log("Server running on http://localhost:5000");
 
 <strong>server.js:</strong>
 
-<pre><code>
+{% highlight javascript linenos %}
 var http = require('http');
 var fs = require('fs');
 
@@ -113,17 +113,17 @@ http.createServer(function(req, res){
     });
 }).listen(5000);
 
-</code></pre>
+{% endhighlight %}
 
 <strong>test.html:</strong>
 
-<pre><code>&lt;!doctype html&gt;
+{% highlight javascript linenos %}&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;body&gt;
 &lt;p&gt;Hello world! For real!&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
+{% endhighlight %}
 
 <p>We haven't done too much different here.  The biggest jump is that we are reading  from a file instead of passing in a string to be interpreted by the browser.</p>
 
@@ -137,13 +137,13 @@ http.createServer(function(req, res){
 
 <p>For most compilers and interpreters, code is executed in order, line by line.  Examples of this include the Java compiler, the Python interpreter, the Ruby interpreter, the C compiler, and the C++ compiler.  What makes the Node.js run time different is this:</p>
 
-<pre><code>
+{% highlight javascript linenos %}
     var solution = solve_boolean_satisfiability_problem(data, function(err,data){
         var result = data;
     }); 
     console.log("Hello there");
 
-</code></pre>
+{% endhighlight %}
 
 <p>The first line is a function that solves the boolean satisfiability problem, which is NP-Complete - meaning it takes a long time for a computer to solve such a problem.  The point is - that first line is going to take a VERY long time to run.  The second line on the other hand simply prints out "Hello there" to the console and should complete very, very fast.  </p>
 
@@ -159,7 +159,7 @@ http.createServer(function(req, res){
 
 <strong>file name - server.js</strong>
 
-<pre><code>var http = require("http");
+{% highlight javascript linenos %}var http = require("http");
 
 function start() {
   http.createServer(function(req,res){
@@ -172,16 +172,16 @@ function start() {
 }
 
 exports.start = start;
-</code></pre>
+{% endhighlight %}
 
 <p>The only thing new here is that we wrapped all our previous work in a function that we can use in other files.  All we need to do is require the code in another file.  Here is an example of how we might use the above file:</p>
 
 <strong>filename - run.js</strong>
 
-<pre><code>var server = require("./server");
+{% highlight javascript linenos %}var server = require("./server");
 
 server.start();
 
-</code></pre>
+{% endhighlight %}
 
 <p>That's all for now.  Thanks for checking out this simple tutorial!</p>

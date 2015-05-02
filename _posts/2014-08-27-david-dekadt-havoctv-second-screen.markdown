@@ -4,7 +4,7 @@ title: David deKadt, Co-founder of HavocTV Talks Second Screen
 date: 2014-08-27 11:21:29
 author: resham
 categories: ['Second Screen']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/08/Screen-Shot-2014-08-15-at-10.05.01-AM-e1411727785497.png
+share_image: /public/Screen-Shot-2014-08-15-at-10.05.01-AM-e1411727785497.png
 summary: "This week, we sat down with David DeKadt from HavocTV about the newly released Havoc+ app – now in the App Store and Play Store. Below is our exclusive first look and interview."
 ---
 This week, we sat down with David DeKadt from <a href="http://havoc.tv/">HavocTV</a> about the newly released Havoc+ app - now in the App Store and Play Store. Below is our exclusive first look and interview.<!--more-->

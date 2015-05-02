@@ -4,7 +4,7 @@ title: Why We Love Real-Time Sync (And You Should, Too)
 date: 2014-08-06 11:21:29
 author: maciej
 categories: ['Real-Time Apps', 'Real-Time Sync']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/05/gamecat.png
+share_image: /public/gamecat.png
 summary: "Syncing data across devices and servers in real-time not only makes it easier for you to bridge, build, scale and manage your apps effectively; it makes virtual engagements feel more real. Whether you are developing cool apps solely for the enjoyment of your fellow man or are creating experiences that you, too, want to embrace, here’s some reasons we know you’ll love real-time sync"
 ---
 Syncing data across devices and servers in real-time not only makes it easier for you to bridge, build, scale and manage your apps effectively; it makes virtual engagements feel more real. Whether you are developing cool apps solely for the enjoyment of your fellow man or are creating experiences that you, too, want to embrace, here’s some reasons we know you’ll love real-time sync:<!--more-->

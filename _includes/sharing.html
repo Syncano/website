@@ -13,9 +13,9 @@
   </div>
 
   <div id="subscribe">
-  	<form class="form-inline">
+  	<form class="form-inline" onsubmit="shareSubscribe();">
   		<div class="form-group">
-    		<input type="email" class="form-control" id="exampleInputEmail2" placeholder="you@example.com">
+    		<input type="email" class="form-control" id="subscribeEmail" placeholder="you@example.com">
   		</div>
   		<button type="submit" class="btn btn-default">Subscribe</button>
 	</form>
@@ -23,3 +23,11 @@
 
   <div style="clear: both;"></div>
 </div>
+<script>
+function shareSubscribe() {
+  var subscribeEmail = document.getElementById('subscribeEmail').value;
+  analytics.alias(subscribeEmail);
+  analytics.identify(subscribeEmail, {'email':subscribeEmail, 'Lifecycle stage':'lead', 'source':'Newsletter'});
+  analytics.track('Subscribed to newsletter via share');
+}
+</script>

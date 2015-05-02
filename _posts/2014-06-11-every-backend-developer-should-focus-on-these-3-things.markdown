@@ -4,7 +4,7 @@ title: Every Backend Developer Should Focus on These 3 Things
 date: 2014-06-11 11:21:29
 author: mariusz
 categories: ['Backend as a Service', 'Real-Time Sync']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/06/13538109954_e64852ea70_b.jpg
+share_image: /public/13538109954_e64852ea70_b.jpg
 summary: "<p>Patience is indeed a virtue, but when it comes to using apps and technology, patience is quickly becoming a thing of the past. We live in the 'I want it now' era where people are increasingly demanding access to the things they want in seconds. And, as the “Internet of things” begins to become a reality, people simply expect their information to be immediately and securely available on any and all of their devices at any time, without waiting. For app developers this means putting the highest priority on real-time sync and other innovations that enable information to be instantly shared safely across all devices.</p><p>To stay relevant in the 'I want it now' era, there are three things every backend developer should be focusing on to stay ahead.</p>"
 ---
 Patience is indeed a virtue, but when it comes to using apps and technology, patience is quickly becoming a thing of the past. We live in the “I want it now” era where people are increasingly demanding access to the things they want in seconds. And, as the “Internet of things” begins to become a reality, people simply expect their information to be immediately and securely available on any and all of their devices at any time, without waiting. For app developers this means putting the highest priority on real-time sync and other innovations that enable information to be instantly shared safely across all devices.

@@ -5,7 +5,7 @@ date: 2015-03-13 11:21:29
 author: eric_schles
 summary: "Express.js is a web framework for the middleware of your Node.js application. It’s responsible for passing data from the backend to the front-end and vice versa. For those of you coming from Ruby, express is similar to Sinatra; for those of you coming from Python, it is similar to Flask."
 categories: ['javascript', 'Tutorial']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2015/03/intro-express-js-node-js.png
+share_image: /public/intro-express-js-node-js.png
 ---
 
 Express.js is a web framework for the middleware of your Node.js application. It's responsible for passing data from the backend to the front-end and vice versa. For those of you coming from Ruby, express is similar to <a href="http://www.sinatrarb.com/">Sinatra</a>; for those of you coming from Python, it is similar to <a href="http://flask.pocoo.org/">Flask</a>.
@@ -33,12 +33,12 @@ Do this by opening a terminal window and typing:
 This opens up the Node REPL, which allows you to type in small pieces of code (typically one-liners) to verify your code is correct. It's great for testing small pieces of code and allows your code to be more bug free.
 
 Once you've done the above, type:
-<pre><code>var express = require("express");
-</code></pre>
+{% highlight javascript linenos %}var express = require("express");
+{% endhighlight %}
 If this returns undefined it means you have installed express correctly and are ready to move on!
 <h2>Hello World</h2>
 Now that you know Express.js is installed correctly, enter the following into a file called <em>app.js</em> (this is by convention - you can call it whatever you like).
-<pre><code>
+{% highlight javascript linenos %}
 var express = require("express");
 
 var app = express(); //starts up your app
@@ -64,10 +64,10 @@ app.get("/Hi", function(req,res){
 app.listen(5000);
 
 console.log("Server started on http://localhost:5000");
-</code></pre>
+{% endhighlight %}
 You can run this by going to the directory you saved this file in and typing out the following:
-<pre><code>node app.js
-</code></pre>
+{% highlight javascript linenos %}node app.js
+{% endhighlight %}
 This will start the web server. Then you can head over to http://localhost:5000 in your favorite web browser, and the words "Hello world" should be displayed to you.
 
 So let's break down what happened here:
@@ -83,7 +83,7 @@ The final piece of the above code is <em>app.listen(5000);</em> which tells the 
 Technically, everything you can do with Express you can do with Node, however compare the following pieces of code, one written with Express and the other with Node. Note: they do the same thing.
 
 Written with Node.js alone:
-<pre><code>
+{% highlight javascript linenos %}
 
 
 var http = require("http");
@@ -103,9 +103,9 @@ http.createServer(function(request, response) {
 
 
 console.log("Server running on http://localhost:5000");
-</code></pre>
+{% endhighlight %}
 Written with Express.js and Node.js:
-<pre><code>
+{% highlight javascript linenos %}
 var express = require("express");
 
 var app = express(); //starts up your app
@@ -123,12 +123,12 @@ app.get("/",function(req,res){
 app.listen(5000);
 
 console.log("Server started on http://localhost:5000");
-</code></pre>
+{% endhighlight %}
 Notice how much less code you need to write when you use both Node and Express. The routing information isn't even clear in the Node-only code! Clearly, using Express and Node together is superior in terms of readability and functionality.
 <h2>A Real example</h2>
 Now that we understand how easy it is to get up and running, let's start working with our front-end and make it dynamic. For that, we'll need hbs.
 <h4>Verifying installation</h4>
-<pre><code>
+{% highlight javascript linenos %}
 var express = require("express");
 
 var app = express();
@@ -156,17 +156,17 @@ app.listen(5000);
 
 
 console.log("Server started on http://localhost:5000")
-</code></pre>
+{% endhighlight %}
 This piece of code isn't dynamic. I include it mostly to go over the basics of hbs. Notice there is a bit more set up required:
-<pre><code>app.set("view engine", "html");
-</code></pre>
+{% highlight javascript linenos %}app.set("view engine", "html");
+{% endhighlight %}
 This sets up what hbs will render, in our case HTML
-<pre><code>app.engine("html", hbs.__express);
-</code></pre>
+{% highlight javascript linenos %}app.engine("html", hbs.__express);
+{% endhighlight %}
 This tells the hbs we'll be making use of HTML and Express.
 
 The second thing to notice is <em>res.render</em>. This assumes that there exists a document called <em>index.html</em> in a folder called <em>views</em>. So the file structure of the app should now be:
-<pre><code>
+{% highlight javascript linenos %}
 root_dir/
 
  app.js
@@ -174,11 +174,11 @@ root_dir/
  views/
 
     index.html
-</code></pre>
+{% endhighlight %}
 In general, <em>res.render([file name])</em> looks for <em>views/[file name].html</em>
 <h4>A Real example:</h4>
 app.js
-<pre><code>
+{% highlight javascript linenos %}
 var express = require("express");
 
 var app = express();
@@ -210,10 +210,10 @@ app.listen(5000);
 
 
 console.log("Server started on http://localhost:5000")
-</code></pre>
+{% endhighlight %}
 views/index.html:
 
-<pre><code>
+{% highlight javascript linenos %}
 
 &lt;!doctype html&gt;
 &lt;html&gt;
@@ -226,16 +226,16 @@ views/index.html:
 &lt;/body&gt;
 &lt;/html&gt;
 
-</code></pre>
+{% endhighlight %}
 
 
 Notice that we added a little more boilerplate:  
 
-<pre><code>
+{% highlight javascript linenos %}
 
 app.use(bodyParser.urlencoded());
 
-</code></pre>
+{% endhighlight %}
 
 This will be used to parse the HTML code that is passed to the render function in our routing method.
 

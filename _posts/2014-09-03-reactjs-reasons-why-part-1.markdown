@@ -4,7 +4,7 @@ title: 6 Reasons Why We Love React.js
 date: 2014-09-03 11:21:29
 author: marek
 categories: ['News', 'ReactJS']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/09/react-gui-e1411727492248.png
+share_image: /public/react-gui-e1411727492248.png
 summary: "<p>Our front-end team loves trying new things. New frameworks, new build tools… anything that makes our work more efficient deserves my attention. While some of tools have proved to be useful, a handful completely revolutionized my workflow (like switching to Sass – one of the best decisions I’ve ever made).</p><p>But with the front-end world changing on a daily basis, it’s hard hard to devote time to learning a new framework – especially when that framework could ultimately become a dead end. So if you’re looking for the next best thing but you’re feeling a little bit lost in the framework jungle, I suggest checking out React.js.</p><p>Here’s why we’re re-building our GUI in React.js, and why you might want to consider it as the basis of your next project</p>"
 ---
 Our front-end team loves trying new things. New frameworks, new build tools... anything that makes our work more efficient deserves my attention. While some of tools have proved to be useful, a handful completely revolutionized my workflow (like switching to Sass – one of the best decisions I've ever made).

@@ -4,7 +4,7 @@ title: "Startup Lessons: 5 Things I've Learned"
 date: 2014-06-26 11:21:29
 author: nikolai
 categories: ['Building Syncano', 'Culture', 'Startup Lessons']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/06/8290528771_4ab84a0303_h.jpg
+share_image: /public/8290528771_4ab84a0303_h.jpg
 summary: "Creating a tech startup is the adventure of a lifetime, and entrepreneurship is the best teacher you’ll ever have. While I believe in doing, learning, failing, and succeeding, knowledge from others will help you do these things with a little more wisdom. Here are the 5 most important things I learned by creating Syncano."
 ---
 Creating a tech startup is the adventure of a lifetime, and entrepreneurship is the best teacher you’ll ever have. While I believe in doing, learning, failing, and succeeding, knowledge from others will help you do these things with a little more wisdom. Here are the 5 most important things I learned by creating Syncano.<!--more-->

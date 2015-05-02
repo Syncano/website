@@ -4,7 +4,7 @@ title: How APIs Will Change the Future of the Internet of Things
 date: 2014-08-08 11:21:29
 author: thomas_hagner
 categories: ['API', 'Internet of Things', 'Real-Time Sync']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/08/Screen-Shot-2014-08-08-at-12.07.48-PM.png
+share_image: /public/Screen-Shot-2014-08-08-at-12.07.48-PM.png
 summary: "The dawn of the Application Programming Interface (API) has been an exciting time for developers who are passionate about the coming world of connectivity. There are currently over 11,000 APIs listed on programmableweb.com. With an increase in demand and requirements for Internet of Things apps, more and more APIs will emerge to support fast growth in three major ways"
 ---
 The dawn of the Application Programming Interface (API) has been an exciting time for developers who are passionate about the coming world of connectivity. There are currently over 11,000 APIs listed on <a href="http://programmableweb.com">programmableweb.com</a>. With an increase in demand and requirements for Internet of Things apps, more and more APIs will emerge to support fast growth in three major ways:<!--more-->

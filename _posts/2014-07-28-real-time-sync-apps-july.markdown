@@ -4,7 +4,7 @@ title: 'Real-Time Sync Apps of the Month: July Edition'
 date: 2014-07-28 11:21:29
 author: madeleine
 categories: ['Real-Time Apps', 'Real-Time Sync']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/07/apps-of-mont-july-14.png
+share_image: /public/apps-of-mont-july-14.png
 summary: "Every month, we see some incredible real-time apps launch in the app store. Here are some that caught our eye this past July."
 ---
 Every month, we see some incredible real-time apps launch in the app store. Here are some that caught our eye this past July.<!--more-->

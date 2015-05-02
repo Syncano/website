@@ -4,7 +4,7 @@ title: 4 Common Misconceptions About Backend As A Service
 date: 2014-06-02 11:21:29
 author: maciej
 categories: ['Backend as a Service']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/06/11189692736_5ef65679be_b.jpg
+share_image: /public/11189692736_5ef65679be_b.jpg
 summary: "Backend as a Service (BaaS) allows developers to focus on what really matters: innovation, user experience, and user acquisition. Yet despite the advantages BaaS has to offer, there are still some common misconceptions about the industry left over from the earliest days of its inception. Here’s a closer look at the top four."
 ---
 <p class="MsoNormal" style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto;">Backend as a Service (BaaS) allows developers to focus on what really matters: innovation, user experience, and user acquisition. Yet despite the advantages BaaS has to offer, there are still some common misconceptions about the industry left over from the earliest days of its inception. Here’s a closer look at the top four.<!--more--></p>

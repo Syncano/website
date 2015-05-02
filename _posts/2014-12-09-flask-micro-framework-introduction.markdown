@@ -4,7 +4,7 @@ title: Introduction to Flask as a Micro-framework
 date: 2014-12-09 11:21:29
 author: eric_schles
 categories: ['Flask', 'How Tos', 'Python', Tutorial]
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/12/intro-to-flask-pt-1.jpg
+share_image: /public/intro-to-flask-pt-1.jpg
 summary: "For those of you who are not familar with it, Flask is a web development framework written in Python. To understand how to use Flask, let’s first consider the definition of a framework."
 ---
 For those of you who are not familar with it, Flask is a web development framework written in Python. To understand how to use Flask, let's first consider the definition of a framework. <!--more-->
@@ -18,7 +18,7 @@ Flask's mindset is "web development: one drop at a time." The name is intended t
 Enough talk, let's see what working with Flask really looks like!
 <h2>Example 1: Hello World (hello.py)</h2>
 The true power of Flask is how little you need to make a running application. Here is a complete (albeit minimal) app in 6 lines (of actual code):
-<pre><code>from flask import Flask
+{% highlight javascript linenos %}from flask import Flask
 
 app = Flask(__name__)`
 
@@ -27,30 +27,30 @@ def hello():
     return "Hello World!"
 
 app.run(debug=True)
-</code></pre>
+{% endhighlight %}
 The sections of the code are as follows:
 <h3>Configuration:</h3>
-<pre><code>from flask import Flask
+{% highlight javascript linenos %}from flask import Flask
 
 app = Flask(__name__)
-</code></pre>
+{% endhighlight %}
 The configuration section of the app is where setup is done. In larger applications, this is often done in <code>__init__.py</code>.
 <h3>View:</h3>
-<pre><code>@app.route("/")
+{% highlight javascript linenos %}@app.route("/")
 def hello():
     return "Hello World"
-</code></pre>
+{% endhighlight %}
 The view section of the app is largely the meat and potatoes of any Flask app. It's where the routing for urls are done, where rules around how to generate html templates are written, and it's also where other methods for processing user input are stored.
 <h3>Run Server:</h3>
-<pre><code>app.run(debug=True)
-</code></pre>
+{% highlight javascript linenos %}app.run(debug=True)
+{% endhighlight %}
 The run section of the app is typically where anything related to the server is stored. The server is the part of the code that actually executes the website. For those of you familar with C++ or Java, this can be thought of as the main part of the program.
 
 Now that we've seen how easy it is to write a very simple website in Flask, let's get a little more complex.
 <h2>Example 2: A more complete application</h2>
 While you can just send Python strings to the front-end, it's probably a good idea to send actual html. To see how to do this, you will write a slightly more complex Flask app. This project lives <a href="https://github.com/EricSchles/example2-intro-to-flask">on github</a>
 <h3>with_templates.py:</h3>
-<pre><code>from flask import Flask, render_template
+{% highlight javascript linenos %}from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -60,9 +60,9 @@ def index(name=''):
     return render_template("index.html",name=name)
 
 app.run(debug=True)
-</code></pre>
+{% endhighlight %}
 <h3>index.html:</h3>
-<pre><code>&lt;!doctype html&gt;
+{% highlight javascript linenos %}&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;/head&gt;
@@ -74,7 +74,7 @@ app.run(debug=True)
 &#123;% endif %&#125;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
+{% endhighlight %}
 As you can see, you can send code to the frontend AND use simple flow of control primitives afterward to decide what kind of html is shown to the user. This is one of the reasons having a templating engine like jinga (which comes with Flask) is so powerful. Notice the difference between normal html and the templated piece: the use of openning<em> &#123;% </em> and closing<em> %&#125; </em> as well as the starting and closing of if/then statements:
 
 <code>&#123;%if [boolean statement] %&#125; ...[code goes here] ... &#123;% endif %&#125;</code>
@@ -95,7 +95,7 @@ The next thing to do is look at an app that let's you call view methods to accom
 <h2>Example 3: An app with view method calls:</h2>
 Full project lives [on github]https://github.com/EricSchles/example3-intro-to-flask
 <h3>with_methods.py:</h3>
-<pre><code>from flask import render_template, request, jsonify, flash
+{% highlight javascript linenos %}from flask import render_template, request, jsonify, flash
 from app import app
 
 @app.route("/", methods=["GET","POST"])
@@ -123,10 +123,10 @@ def send_data():
           "friends":"everyone"
           }
     return jsonify(data)
-</code></pre>
+{% endhighlight %}
 <h3>layout.html:</h3>
 
-<pre><code>
+{% highlight javascript linenos %}
 
 &lt;html&gt;
   &lt;head&gt;
@@ -160,10 +160,10 @@ def send_data():
   &lt;/body&gt;
 &lt;/html&gt;
 
-</code></pre>
+{% endhighlight %}
 
 <h3>index.html:</h3>
-<pre><code>
+{% highlight javascript linenos %}
 
 &lt;!-- extend base layout --&gt;
 &#123;% extends &quot;layout.html&quot; %&#125;
@@ -191,18 +191,18 @@ def send_data():
 &lt;/div&gt;
 &#123;% endblock %&#125;
 
-</code></pre>
+{% endhighlight %}
 This app does a whole bunch of things so let's break it down.
-<pre><code>@app.route("/", methods=["GET","POST"])
+{% highlight javascript linenos %}@app.route("/", methods=["GET","POST"])
 @app.route("/index", methods=["GET","POST"])
 def index():
     return render_template("index.html")
-</code></pre>
+{% endhighlight %}
 The '@app.route' now has 'GET' and 'POST' methods. These are methods of the HTTP protocol and are used for posting data to the server and getting data from the server. So if you need to be able to send data from the user to the server, use the 'POST' method. If you need to be able to display data the user receives from the server, than you would include the 'GET' method.
 
 Also notice that you can have multiple routes for the same method. So right now, both http://localhost:5000/ and http://localhost:5000/index point to the same html file: index.html.
 <h3>Next you have:</h3>
-<pre><code>@app.route("/add/&lt;int:first&gt;/&lt;int:second&gt;",methods=["GET","POST"])
+{% highlight javascript linenos %}@app.route("/add/&lt;int:first&gt;/&lt;int:second&gt;",methods=["GET","POST"])
 @app.route("/add", methods=["GET","POST"])
 def add(first='',second=''):
     if first == '':
@@ -211,7 +211,7 @@ def add(first='',second=''):
         second = int(request.get("second"))
     result = first + second
     return render_template("index.html",result=result)
-</code></pre>
+{% endhighlight %}
 Which takes in parameters from the user. With this method, there are two ways to get user input: by passing it into the url or by filling in a form.
 
 Notice the first route:
@@ -223,7 +223,7 @@ specifically:
 <code>"/add/&lt;int:first&gt;/&lt;int:second&gt;"</code>
 
 This design pattern can be useful when creating an API and is good practice for how an API should be used by developers. Then all you need is to have curl installed – no programming language specifics needed. Also notice the use of <em>first=""</em> and <em>second=""</em>. This lets us get information from the user via a form found in index.html:
-<pre><code>
+{% highlight javascript linenos %}
 
 &lt;form method=&quot;post&quot; action=&quot;{{ url_for(&#39;add&#39;) }}&quot;&gt;
 &lt;ul&gt;
@@ -235,13 +235,13 @@ This design pattern can be useful when creating an API and is good practice for 
 &lt;/form&gt;
 &lt;p&gt;{{ result }}&lt;/p&gt;
 
-</code></pre>
+{% endhighlight %}
 
 Notice here a few things. First, you use <code>url_for</code> and <code>{{ }}</code> to call the method in the with_methods.py file. This is the way to reference functions from your 'views' file in html. Also, notice the use of 'name' in form. It's the same names as the parameters that you "get" using <code>request.form.get</code> – this is no accident. It's in fact, how you get data from the user for forms.
 
 This illustrates the two ways you can get data form the user. As a final point, notice <code>{{result}}</code> in index.html: This is the same as the name of the value returned by add. This is also no accident. It's what allows flask to display the result to the user.
 <h3>Next, you have:</h3>
-<pre><code>
+{% highlight javascript linenos %}
 @app.route("/send_data", methods=["GET","POST"])
 def send_data():
 data={"Eric Schles":"eric.schles@syncano.com",
@@ -252,7 +252,7 @@ data={"Eric Schles":"eric.schles@syncano.com",
 "friends":"everyone"
 }
 return jsonify(data)
-</code></pre>
+{% endhighlight %}
 
 This is the typical API way to pass data back to the user. Granted I prepopulated the data to be the same every time, which would make for a very bad API. Typically you'll want to query a database for the results of a given SPI call. Don't worry though, the next application will show you how to do this and display information back to the user.
 

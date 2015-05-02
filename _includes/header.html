@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-	<title>{{page.title}}</title>
+	<title>{{site.title}} | {{page.title}}</title>
 
 	{% if page.id %} 
 		{% include post-seo.html %}
@@ -12,9 +12,11 @@
 	{% endif %}
 
 
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/assets/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/assets/bootstrap/dist/css/bootstrap-theme.min.css">
+
+	<link rel="shortcut icon" href="/assets/images/favicon.ico" />
 </head>
 <body class="{% for c in page.body_class %}{{ c }}{% endfor %}">
 

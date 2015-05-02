@@ -4,7 +4,7 @@ title: 'Real-Time Sync Apps of the Month: August Edition'
 date: 2014-08-21 11:21:29
 author: madeline
 categories: ['Real-Time Apps']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/08/featured-apps-for-tablets.png
+share_image: /public/featured-apps-for-tablets.png
 summary: "Every month, we see some incredible real-time apps launch in the app store. Here are some that caught our eye this past August."
 ---
 This week, we sat down with David DeKadt from <a href="http://havoc.tv/">HavocTV</a> about the newly released Havoc+ app - now in the App Store and Play Store. Below is our exclusive first look and interview.<!--more-->

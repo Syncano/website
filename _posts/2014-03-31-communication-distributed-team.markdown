@@ -4,7 +4,7 @@ title: Bootstrapping Communication for a Distributed Team
 date: 2014-03-31 11:21:29
 author: resham
 categories: ['Culture']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/03/NYC-Oslo-Warsaw3.png
+share_image: /public/NYC-Oslo-Warsaw3.png
 summary: "Our team at Syncano is distributed across three international cities – New York, Oslo, and Warsaw – so we’re always looking for the best tools to stay connected and productive. Though we’re still experimenting with new and improved channels for communication, here are three apps we’re loving."
 ---
 Our team at Syncano is distributed across three international cities – New York, Oslo, and Warsaw – so we’re always looking for the best tools to stay connected and productive. Though we’re still experimenting with new and improved channels for communication, here are three apps we're loving.<!--more-->

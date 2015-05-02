@@ -4,7 +4,7 @@ email:       your_email@example.com
 author:      Syncano
 description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
 baseurl:     ""
-url:         "http://syncano.com"
+url:         "http://new-syncano.divshot.io"
 permalink:    /:title
 paginate:     6
 paginate_path: "blog/page:num/"

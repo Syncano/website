@@ -4,7 +4,7 @@ title: Is Your Data Secure? Questions to Ask Any Data Storage Provider
 date: 2014-06-23 11:21:29
 author: maciej
 categories: ['Backend as a Service']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/06/Data_Security.png
+share_image: /public/Data_Security.png
 summary: "When looking at data storage providers, you want speed and scalability to power your applications. You also need security—and not all data security methods are equal. Here are questions you should be asking your data storage provider to gauge the effectiveness and reliability of physical and virtual security for your data."
 ---
 When looking at data storage providers, you want speed and scalability to power your applications. You also need security—and not all data security methods are equal. Here are questions you should be asking your data storage provider to gauge the effectiveness and reliability of physical and virtual security for your data.<!--more-->

@@ -4,7 +4,7 @@ title: Advanced Concepts in Flask
 date: 2015-01-19 11:21:29
 author: eric_schles
 categories: ['Flask', 'Python']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2015/01/advanced-flask-concepts1.png
+share_image: /public/advanced-flask-concepts1.png
 summary: "A lot of the concepts we mention in this article can be found in Armin Ronacher’s presentation on advanced Flask patterns. Mr.Ronacher did great job enumerating the concepts, so I want to make sure he’s given due credit."
 ---
 <p>A lot of the concepts we mention in this article can be found in <a href="https://speakerdeck.com/mitsuhiko/advanced-flask-patterns">Armin Ronacher's presentation</a> on advanced Flask patterns. Mr.Ronacher did great job enumerating the concepts, so I want to make sure he's given due credit.<!--more--></p>

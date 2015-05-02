@@ -4,7 +4,7 @@ title: How We Use Docker (And Why We Can’t Live Without It)
 date: 2014-11-11 11:21:29
 author: justyna
 categories: ['Docker']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/11/y-heart-docker.png
+share_image: /public/y-heart-docker.png
 summary: "A few months ago, we started using Docker with Syncano and pretty much fell in love. The first blog posts we wrote (Reasons Why We Use Docker, Getting Started with Docker and Make Your Docker Workflow Awesome With Fig.sh) gave you some reasons and tools to get started with Docker – now we’re going to share how we use Docker ourselves (and why we can’t live without it)."
 ---
 <p>A few months ago, we started using Docker with Syncano and pretty much fell in love. The first blog posts we wrote (<a href="http://www.syncano.com/reasons-use-docker/">Reasons Why We Use Docker</a>, <a href="http://www.syncano.com/getting-started-docker/">Getting Started with Docker</a> and <a href="http://www.syncano.com/docker-workflow-fig-sh/">Make Your Docker Workflow Awesome With Fig.sh</a>) gave you some reasons and tools to get started with Docker - now we're going to share how we use Docker ourselves (and why we can't live without it).</p><!--more-->
@@ -16,7 +16,7 @@ summary: "A few months ago, we started using Docker with Syncano and pretty much
 <li>Install Docker</li>
 <li>Install <a href="http://fig.sh">fig</a></li>
 <li>Clone our syncano-platform repo</li>
-<li>Type into shell: <pre><code class="terminal">$ fig up</code></pre></li>
+<li>Type into shell: {% highlight javascript linenos %}$ fig up{% endhighlight %}</li>
 </ul>
 
 <p>Our stack is quite big and consists of five main components. Every component is run in a separate container, and containers are connected over the network and environment variables using Docker <em>links</em>.</p>
@@ -39,8 +39,8 @@ summary: "A few months ago, we started using Docker with Syncano and pretty much
 
 <p>The first two steps are executed with help of fig:</p>
 
-<pre><code class="terminal">$ fig run web ./run_tests.sh
-</code></pre>
+{% highlight javascript linenos %}$ fig run web ./run_tests.sh
+{% endhighlight %}
 
 <p>You can read more about <a href="link">using Fig here</a> or setting up Docker with CircleCi on their <a href="https://circleci.com/docs/docker">documentation page</a>. It's very easy!</p>
 

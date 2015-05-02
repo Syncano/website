@@ -4,7 +4,7 @@ title: Our Top Takeaways from Twilio's Roadshow
 date: 2014-06-28 11:21:29
 author: sara_cowie
 categories: ['API', 'Backend as a Service', 'Startup Lessons']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/06/Twilio_Blog_Roadshow-640x265.jpg
+share_image: /public/Twilio_Blog_Roadshow-640x265.jpg
 summary: "This month, we joined Twilio’s 'Engineering the Customer Experience' Roadshow – an event designed to help developers and companies engineer great customer experiences in our new software-defined world. With a room full of forward-thinking engineers and decision-makers, John Rymer, VP and Principal Analyst at Forrester, imparted these need-to-know tips to New York City’s tech leaders."
 ---
 <p dir="ltr">This month, we joined <a href="http://roadshow.twilio.com/">Twilio’s “Engineering the Customer Experience” Roadshow</a> - an event designed to help developers and companies engineer great customer experiences in our new software-defined world. With a room full of forward-thinking engineers and decision-makers, John Rymer, VP and Principal Analyst at Forrester, imparted these need-to-know tips to New York City's tech leaders.<!--more--></p>

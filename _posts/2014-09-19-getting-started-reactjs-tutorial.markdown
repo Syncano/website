@@ -4,7 +4,7 @@ title: 'Getting Started with React.js: Creating Material Design Components'
 date: 2014-09-19 11:21:29
 author: marek
 categories: ['How Tos', 'ReactJS']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/09/getting-started-with-ReactJS-e1411727250765.png
+share_image: /public/getting-started-with-ReactJS-e1411727250765.png
 summary: "In our previous post, we looked at some of the best features of React.js – a new generation framework from Facebook. Today, we’ll build something useful with it. Once you get the hang of it, I think you’ll be amazed at how easy it is to build components."
 ---
 In <a href="http://www.syncano.com/?p=7544">our previous post</a>, we looked at some of the best features of React.js – a new generation framework from Facebook. Today, we'll build something useful with it. Once you get the hang of it, I think you'll be amazed at how easy it is to build components.<!--more-->
@@ -16,7 +16,7 @@ Let’s recreate the animated dropdown menu from the newest version of Chrome fo
 <h2>Step 1: Prepare the Groundwork.</h2> 
 Create a new folder and a new index.html file. Inside index.html, paste the following:
 
-<pre><code class="html">
+{% highlight javascript linenos %}
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -37,14 +37,14 @@ Create a new folder and a new index.html file. Inside index.html, paste the foll
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
+{% endhighlight %}
 
 There's nothing too exciting here. We’re importing a custom font from Google and including a few libraries: jQuery, Velocity.js, and React.js. The first two are not required, but we're using them to speed up our work a bit. One thing you might be wondering about is the  JSXTransformer. It is necessary to interpret the JSX syntax, but we'll use it only for the purposes of this tutorial - normally you wouldn't include it in production and instead you'd precompile the JSX files.
 
 <h2>Step 2: Add the CSS.</h2> 
 You can drop the below css between the <head> tags or in a separate stylesheet – it's up to you.
 
-<pre><code class="html">
+{% highlight javascript linenos %}
 &lt;style type=&quot;text/css&quot;&gt;
 
   * {
@@ -180,12 +180,12 @@ You can drop the below css between the <head> tags or in a separate stylesheet �
   }
 
 &lt;/style&gt;
-</code></pre>
+{% endhighlight %}
 
 <h2>Step 3: Create your Components.</h2>
 To create your first component, paste the following code below the libraries:
 
-<pre><code class="html">
+{% highlight javascript linenos %}
 &lt;script type=&quot;text/jsx&quot;&gt;
   /** @jsx React.DOM */
   var App = React.createClass({
@@ -202,13 +202,13 @@ To create your first component, paste the following code below the libraries:
   React.renderComponent(&lt;App /&gt;,  document.body);
 
 &lt;/script&gt; 
-</code></pre>
+{% endhighlight %}
 
 You may have noticed that the script tag requires a special type "text/jsx" and a strange little comment at the beginning of the code sample - it's just a quirky React requirement. Don't worry about it too much, but don't forget to include it in every JSX file. 
 
 In the above code, we’re creating an App component, rendering it, and appending it to the body. Notice that we're using plain HTML syntax within the render function - you may need to get used to this at first, but once you do, it’s extremely helpful. This code doesn't do much, so let's add more components.
 
-<pre><code class="html">
+{% highlight javascript linenos %}
 var DropdownItem = React.createClass({
 
   render: function() {
@@ -237,14 +237,14 @@ var DropdownItems = React.createClass({
     );
   }
 });
-</code></pre>
+{% endhighlight %}
 
 Here, we’re adding two additional components. DropdownItem is the single menu element, and DropdownItems encapsulates all of the menu items. Within the render function of the latter, we iterate through the array of menu items and we create an array of React components. Now, each component in React can have its own properties and a state. There's a subtle but very important difference between the two. If a component has some attributes that don't change over time, you’ll use properties for that. On the other hand, if you want to change some attributes during the lifecycle of a component, you'll use a state. In our example, we keep the menu items as properties - they are not likely to change. But since the visibility of the dropdown menu is something that will change dynamically (the menu can be visible or hidden), we'll store visibility information as a state.
 
 <h2>Step 4: Add icons.</h2>
 Add icons with the below code:
 
-<pre><code class="html">
+{% highlight javascript linenos %}
 var Icon = React.createClass({
 
   getDefaultProps: function() {
@@ -311,14 +311,14 @@ var DropdownIcons = React.createClass({
     );
   }
 });
-</code></pre>
+{% endhighlight %}
 
 One of the best things about React is that you can easily keep SVG icons as components. This gives you the flexibility of React and the awesomeness of SVG. Our icon component expects a "type" property and an optional "fill" property. Notice that you can set default properties by using the "getDefaultProps" method.
 
 <h2>Step 5: Implement your Dropdown Component.</h2>
 Add the below code to implement the dropdown component from step 3:
 
-<pre><code class="html">
+{% highlight javascript linenos %}
 $.Velocity.RegisterUI(&quot;slideFadeIn&quot;, {
     defaultDuration: 100,
     calls: [[{
@@ -379,14 +379,14 @@ var DropdownMenu = React.createClass({
     );
   }
 });
-</code></pre>
+{% endhighlight %}
 
 Notice that in the render function, we're including components that we've defined earlier – just like standard HTML tags. How awesome is that? Also, notice that the "componentWillUpdate" function is responsible for triggering animation (we're using velocity.js for simplicity here, and also because it's an extremely efficient framework).
 
 <h2>Step 6: Update your App Component.</h2>
 Add this final bit of code to update your app component:
 
-<pre><code class="html">
+{% highlight javascript linenos %}
 var App = React.createClass({
 
   getInitialState: function() {
@@ -414,7 +414,7 @@ var App = React.createClass({
     );
   }
 });
-</code></pre>
+{% endhighlight %}
 
 As you can see, this code contains the whole layout of the application as well as the state of the dropdown (visible/ hidden). When the state changes, we pass that information as a property to the dropdown menu component. We also pass the "dropdownToggle" function as a callback to the options icon component, as well as the dropdown menu itself (which also contains an options icon). This means the "dropdownToggle" function fires and changes the state of the dropdown whenever the options icon is clicked.
 

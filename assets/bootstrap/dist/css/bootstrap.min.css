@@ -4203,7 +4203,7 @@ body.transparent_nav {
   .navbar-nav {
     float: left;
     margin: 0;
-    margin-left: 20%;
+    margin-left: 11%;
   }
   .navbar-nav > li {
     float: left;
@@ -6057,7 +6057,7 @@ button.close {
 }
 @media screen and (max-width: 1000px) {
   .pricing .pricing-calculator-new .pricing-table-wrapper .table-col.col-unit {
-    width: calc(67%);
+    width: 40%;
   }
 }
 @media screen and (max-width: 690px) {

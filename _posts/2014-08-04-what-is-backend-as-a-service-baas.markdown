@@ -4,7 +4,7 @@ title: What is "Backend as a Service?"
 date: 2014-08-04 11:21:29
 author: sara_cowie
 categories: ['Backend as a Service']
-image: http://2md7l11skw9mw6wot2ppaln6.wpengine.netdna-cdn.com/wp-content/uploads/2014/02/sync.png
+share_image: /public/sync.png
 summary: "Applications make up a vast, diverse, and growing market – but in some ways, applications are all very much alike. Certain features show up again and again: cloud storage, integration with social networks such as Twitter, Facebook, and Google Plus, push notifications from central servers, real-time sync, user management, etc. Any company that designs multiple apps will soon realize that much of their backend requires re-inventing the wheel with one integration after another. Backend as a Service (BaaS) eliminates that redundancy."
 ---
 Applications make up a vast, diverse, and growing market – but in some ways, applications are all very much alike. Certain features show up again and again: cloud storage, integration with social networks such as Twitter, Facebook, and Google Plus, push notifications from central servers, real-time sync, user management, etc. Any company that designs multiple apps will soon realize that much of their backend requires re-inventing the wheel with one integration after another. Backend as a Service (BaaS) eliminates that redundancy.<!--more-->
