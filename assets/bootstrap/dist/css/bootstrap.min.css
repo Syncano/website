@@ -2486,8 +2486,6 @@ output {
   background-image: none;
   border: 1px solid #cccccc;
   border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
@@ -4025,7 +4023,7 @@ body.transparent_nav {
 .navbar.dark .navbar-nav > li > a {
   color: white;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1022px) {
   .navbar-header {
     float: left;
   }
@@ -4041,7 +4039,7 @@ body.transparent_nav {
 .navbar-collapse.in {
   overflow-y: auto;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1022px) {
   .navbar-collapse {
     width: auto;
     border-top: 0;
@@ -4165,7 +4163,7 @@ body.transparent_nav {
 .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 4px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1022px) {
   .navbar-toggle {
     display: none;
   }
@@ -4199,7 +4197,7 @@ body.transparent_nav {
     background-image: none;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1022px) {
   .navbar-nav {
     float: left;
     margin: 0;
@@ -4213,7 +4211,7 @@ body.transparent_nav {
     padding-bottom: 6.5px;
   }
 }
-@media (min-width: 1024px) and (max-width: 1160px) {
+@media (min-width: 1022px) and (max-width: 1160px) {
   .navbar-nav {
     margin-left: 4%;
   }
@@ -4334,7 +4332,7 @@ body.transparent_nav {
     margin-right: 15px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1022px) {
   .navbar-left {
     float: left !important;
   }

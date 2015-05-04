@@ -289,7 +289,7 @@ form {
     padding: 100px 0;
     //weird breakpoint fix
     .hidden-md {
-      @media (min-width: 1024px) and (max-width: 1199px) {
+      @media (min-width: 1025px) and (max-width: 1199px) {
         display: block!important;
       }
     }
@@ -323,6 +323,7 @@ form {
   .hero {
     background-size: cover;
     min-height: 450px;
+    background-position: 50% 50%;
     .info {
       position: absolute;
       top: 14%;
@@ -335,23 +336,27 @@ form {
         font-family: @font-bold;
         font-weight: 500;
         color: #ffffff;
-        margin-bottom: 35px;
+        margin-bottom: 40px;
         margin-top: 0;
         letter-spacing: -0.5px;
         -webkit-font-smoothing: antialiased;
       }
       h2 { 
         font-family: @font-light;
-        font-size: 29px;
+        font-size: 25px;
         line-height: 36px;
         font-weight: normal;
         color: #ffffff;
         -webkit-font-smoothing: antialiased;
-        margin-bottom: 50px;
+        margin-bottom: 10px;
         margin-top: 0;
         > strong {
           font-family: @font-semi-bold;
         }
+      }
+      h3 {
+        font-size: 25px;
+        margin: 0;
       }
       a.btn {
         font-size: 13px;
@@ -432,10 +437,10 @@ form {
     font-size: 20px;
   }
   .hero {
-    background-image: url('/assets/images/hally.png');
+    background-image: url('/assets/images/hally.jpg');
     background-color: @gray-darker;
     min-height: 600px;
-    background-position: 0 75%;
+    background-position: 0 0;
     h2 {
       font-weight: bold;
     }
@@ -449,7 +454,7 @@ form {
       margin: 0;
     }
     .btn {
-      margin-bottom: 55px;
+      margin-top: 80px;
     }
     .info {
       top: 140px;
@@ -467,12 +472,20 @@ form {
 
   .highlights {
     @media (min-width: @grid-float-breakpoint) {
-      padding: 75px 0;
+      padding: 100px 0;
+    }
+    h2 {
+      font-family: @font-semi-bold;
+      font-size: 30px;
+      color: @brand-primary;
+      -webkit-font-smoothing: antialiased;
+      margin-bottom: 40px;
+      margin-top: 0;
     }
     h3 {
-      margin-bottom: 25px;
-      margin-top: 35px;
-      font-size: 25px;
+      margin-bottom: 20px;
+      margin-top: 0;
+      font-size: 23px;
       font-family: @font-light;
       color: #363636;
       font-weight: normal;
@@ -844,6 +857,8 @@ form {
     background: #ececec;
     height: 250px;
     margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 50px 25px;
     text-align: center;
     max-width: 515px;
@@ -1201,6 +1216,7 @@ form {
       height: 72px;
       width: 72px;
       border-radius: 10em;
+      margin-bottom: 35px;
     }
     blockquote {
       font-style: italic;
@@ -1216,6 +1232,7 @@ form {
         font-size: 15px;
         font-family: @font-semi-bold;
         -webkit-font-smoothing: antialiased;
+        margin-top: 20px;
         > strong {
           font-family: @font-semi-bold;
           -webkit-font-smoothing: antialiased;
@@ -1437,7 +1454,7 @@ footer.columns {
 
 }
 //navbar break point
-@media (min-width: 320px) and (max-width: 1024px) {
+@media (min-width: 320px) and (max-width: 1022px) {
 .navbar {
   > .container {
     padding-top: 0;
@@ -1496,6 +1513,7 @@ footer.columns {
       }
       a.btn {
         width: 90%;
+        max-width: 320px;
         margin-bottom: 20px;
       }
     }
@@ -1638,6 +1656,17 @@ footer.columns {
         padding-right: 40px;
         margin-left: 10px;
       }
+    }
+  }
+}
+.posts {
+  a.permalink {
+    padding: 25px;
+  }
+  .post-content {
+    h1.title {
+      font-size: 28px;
+      line-height: 30px;
     }
   }
 }
