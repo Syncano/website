@@ -287,6 +287,12 @@ form {
   .platforms {
     background-color: #F6F6F6;
     padding: 100px 0;
+    //weird breakpoint fix
+    .hidden-md {
+      @media (min-width: 1024px) and (max-width: 1199px) {
+        display: block!important;
+      }
+    }
     h2 {
       color: #363636;
       font-weight: bold;
@@ -430,12 +436,23 @@ form {
     background-color: @gray-darker;
     min-height: 600px;
     background-position: 0 75%;
-    margin-top: -63px;
+    h2 {
+      font-weight: bold;
+    }
+    h3 {
+      font-family: @font-light;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 28px;
+      -webkit-font-smoothing: antialiased;
+      color: white;
+      margin: 0;
+    }
     .btn {
-      margin-bottom: 60px;
+      margin-bottom: 55px;
     }
     .info {
-      top: 25%;
+      top: 140px;
     }
   }
 
@@ -456,7 +473,6 @@ form {
       margin-bottom: 25px;
       margin-top: 35px;
       font-size: 25px;
-      line-height: 20px;
       font-family: @font-light;
       color: #363636;
       font-weight: normal;
@@ -467,47 +483,6 @@ form {
       margin: 0;
       font-size: 16px;
       line-height: 20px;
-    }
-  }
-  .testimonials {
-    padding: 120px 0 100px;
-    .col-md-offset-3 {
-      margin-top: 110px;
-    }
-    .testimonial {
-      .col-md-3 {
-        @media (min-width: @grid-float-breakpoint) {
-          padding-right: 0;
-          padding-left: 0;
-          width: 22%;
-        }
-      }
-      .col-md-9 {
-        @media (min-width: @grid-float-breakpoint) {
-          width: 78%;
-        }
-      }
-      blockquote {
-        font-style: italic;
-        margin: 0;
-        font-size: 25px;
-        font-family: @font-light;
-        -webkit-font-smoothing: antialiased;
-        line-height: 34px;
-        cite {
-          display: block;
-          font-style: normal;
-          color: #676767;
-          font-size: 15px;
-          font-family: @font-semi-bold;
-          -webkit-font-smoothing: antialiased;
-          > strong {
-            font-family: @font-semi-bold;
-            -webkit-font-smoothing: antialiased;
-            font-weight: normal;
-          }
-        }
-      }
     }
   }
 }
@@ -879,10 +854,11 @@ form {
       background: black;
       .background-image{
         display: block;
-        opacity: .7;
+        opacity: .9;
       }
       .categories, .title, .author {
         color: white;
+        display: none;
       }
     }
     .background-image{
@@ -1212,6 +1188,45 @@ form {
 }
 
 //
+// Testimonials
+// --------------------------------------------------
+
+.testimonials {
+  padding: 120px 0 100px;
+  .col-md-offset-3 {
+    margin-top: 110px;
+  }
+  .testimonial {
+    img {
+      height: 72px;
+      width: 72px;
+      border-radius: 10em;
+    }
+    blockquote {
+      font-style: italic;
+      margin: 0;
+      font-size: 16px;
+      font-family: @font-light;
+      -webkit-font-smoothing: antialiased;
+      line-height: 20px;
+      cite {
+        display: block;
+        font-style: normal;
+        color: #676767;
+        font-size: 15px;
+        font-family: @font-semi-bold;
+        -webkit-font-smoothing: antialiased;
+        > strong {
+          font-family: @font-semi-bold;
+          -webkit-font-smoothing: antialiased;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}
+
+//
 // Terms Pages
 // --------------------------------------------------
 
@@ -1364,9 +1379,6 @@ footer {
 }
 .home {
   .hero {
-    br {
-      display: none;
-    }
     h2 {
       padding: 0 16px;
     }
@@ -1424,11 +1436,8 @@ footer.columns {
 }
 
 }
-
-//
-// Responsive -- Mobile
-// --------------------------------------------------
-@media (min-width: 320px) and (max-width: 767px) {
+//navbar break point
+@media (min-width: 320px) and (max-width: 1024px) {
 .navbar {
   > .container {
     padding-top: 0;
@@ -1462,56 +1471,75 @@ footer.columns {
     }
   }
 }
+}
+
+//
+// Responsive -- Mobile
+// --------------------------------------------------
+@media (min-width: 320px) and (max-width: 767px) {
 .home {
   .hero {
-    min-height: 440px;
+    min-height: 500px;
     margin-bottom: 60px;
+    background-position: 50% 50%;
     .info {
+      top: 75px;
       h1 {
         font-size: 36px;
         line-height: 40px;
+        margin-bottom: 20px;
       }
       h2 {
         font-size: 24px;
         padding: 0 12px;
+        margin-bottom: 25px;
       }
       a.btn {
         width: 90%;
+        margin-bottom: 20px;
       }
     }
   }
+  .collision {
+    padding-top: 0;
+  }
   .highlights {
     padding-bottom: 35px;
+    padding-top: 35px;
+    h3 {
+      margin-bottom: 15px;
+      margin-top: 5px;
+    }
     p {
       margin-bottom: 25px;
     }
   }
 }
-  .platforms {
-    padding: 60px 0 40px;
-    h2 {
-      padding: 0 12px;
-    }
-    h5 {
-      font-size: 16px;
-      line-height: 24px;
-      padding: 0 12px;
-    }
-    .col-xs-3 {
-      padding-left: 0;
-      padding-right: 0;
-      margin-bottom: 20px
+.platforms {
+  padding: 60px 0 40px;
+  h2 {
+    padding: 0 12px;
+  }
+  h5 {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 12px;
+  }
+  .col-xs-3 {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 20px
+  }
+}
+.testimonials {
+  padding: 60px 0 20px;
+  .testimonial {
+    margin-bottom: 40px;
+    &.col-md-offset-3 {
+      margin-top: 0;
     }
   }
-  .testimonials {
-    padding: 60px 0 20px;
-    .testimonial {
-      margin-bottom: 40px;
-      .col-md-3 {
-        margin-bottom: 10px;
-      }
-    }
-  }
+}
 
 .text-hero {
   h1 {
