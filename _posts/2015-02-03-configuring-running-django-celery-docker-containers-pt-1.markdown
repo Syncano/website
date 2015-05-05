@@ -426,8 +426,8 @@ def power(n):
 def fib(n):
     """Return the n'th Fibonacci number.
     """
-    if n &lt; 0:
-        raise ValueError("Fibonacci numbers are only defined for n &gt;= 0.")
+    if n < 0:
+        raise ValueError("Fibonacci numbers are only defined for n >= 0.")
     return _fib(n)
  
  
@@ -597,9 +597,9 @@ Currently we have only one instance of each container. We can get information ab
             Name                           Command               State                        Ports                       
 -------------------------------------------------------------------------------------------------------------------------
 dockerdjangocelery_db_1         /docker-entrypoint.sh postgres   Up      5432/tcp                                         
-dockerdjangocelery_rabbitmq_1   /run.sh                          Up      0.0.0.0:15672-&gt;15672/tcp, 0.0.0.0:5672-&gt;5672/tcp 
+dockerdjangocelery_rabbitmq_1   /run.sh                          Up      0.0.0.0:15672->15672/tcp, 0.0.0.0:5672->5672/tcp 
 dockerdjangocelery_redis_1      /entrypoint.sh redis-server      Up      6379/tcp                                         
-dockerdjangocelery_web_1        ./run_web.sh                     Up      0.0.0.0:8000-&gt;8000/tcp                           
+dockerdjangocelery_web_1        ./run_web.sh                     Up      0.0.0.0:8000->8000/tcp                           
 dockerdjangocelery_web_run_5    bash                             Up      8000/tcp                                         
 dockerdjangocelery_worker_1     ./run_Celery.sh                  Up       
 
@@ -623,9 +623,9 @@ Output says that Fig just created an additional four worker containers for us. W
             Name                           Command               State                        Ports                       
 -------------------------------------------------------------------------------------------------------------------------
 dockerdjangocelery_db_1         /docker-entrypoint.sh postgres   Up      5432/tcp                                       
-dockerdjangocelery_rabbitmq_1   /run.sh                          Up      0.0.0.0:15672-&gt;15672/tcp, 0.0.0.0:5672-&gt;5672/tcp
+dockerdjangocelery_rabbitmq_1   /run.sh                          Up      0.0.0.0:15672->15672/tcp, 0.0.0.0:5672->5672/tcp
 dockerdjangocelery_redis_1      /entrypoint.sh redis-server      Up      6379/tcp                                       
-dockerdjangocelery_web_1        ./run_web.sh                     Up      0.0.0.0:8000-&gt;8000/tcp                         
+dockerdjangocelery_web_1        ./run_web.sh                     Up      0.0.0.0:8000->8000/tcp                         
 dockerdjangocelery_web_run_5    bash                             Up      8000/tcp                                       
 dockerdjangocelery_worker_1     ./run_celery.sh                  Up                                                     
 dockerdjangocelery_worker_2     ./run_celery.sh                  Up                                                     

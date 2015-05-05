@@ -215,16 +215,16 @@ views/index.html:
 
 {% highlight javascript linenos %}
 
-&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;&lt;/head&gt;
-&lt;body&gt;
+<!doctype html>
+<html>
+<head></head>
+<body>
 
-&lt;p&gt;{{{greeting}}},&lt;/p&gt;
-&lt;p&gt;{{{name}}}&lt;/p&gt;
+<p>{{{greeting}}},</p>
+<p>{{{name}}}</p>
 
-&lt;/body&gt;
-&lt;/html&gt;
+</body>
+</html>
 
 {% endhighlight %}
 

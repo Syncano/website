@@ -26,25 +26,25 @@ Because its imperative that backwards compatibility to older sites isn't broken,
 <h2>JavaScript and HTML</h2>
 Like CSS, JavaScript can live in the same file or a separate file from your HTML. In the interest of clarity, we'll show it in the same file as the HTML:
 {% highlight javascript linenos %}
-&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;body&gt;
+<!doctype html>
+<html>
+<body>
 
-&lt;h1&gt;My first JavaScript program&lt;/h1&gt;
-&lt;p&gt;Click the button to display the date.&lt;/p&gt;
-&lt;p id="demo"&gt;&lt;/p&gt;
+<h1>My first JavaScript program</h1>
+<p>Click the button to display the date.</p>
+<p id="demo"></p>
 
-&lt;button type="button" onclick="myFunction()"&gt;Try it&lt;/button&gt;
+<button type="button" onclick="myFunction()">Try it</button>
 
-&lt;script&gt;
+<script>
 function myFunction()
 {
 	document.getElementById("demo").innerHTML = Date();
 }
-&lt;/script&gt;
+</script>
 
-&lt;/body&gt;
-&lt;/html&gt;
+</body>
+</html>
 
 {% endhighlight %}
 There are a bunch of things going on in this example. To run it, save it as a .html file and then open it with your favorite browser. There are some standard HTML elements, like tags. But there is also a script tag where the JavaScript is written. JavaScript can appear in either head or body tags. It's typically good practice to include all JavaScript in between the head tags. We include it here in the body for demonstrative purposes. Notice how well the HTML and the JavaScript integrate: We are including a JavaScript function inside an HTML tag! There are plenty of other languages that integrate with the web, but none of them do it as obviously as JavaScript.
@@ -53,22 +53,22 @@ Now onto the actual JavaScript. First we call document.getElementById("demo").in
 
 In the next few examples, you will write pure JavaScript and learn the language. Here is a skeleton to run your JavaScript:
 {% highlight javascript linenos %}
-&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;body&gt;
+<!doctype html>
+<html>
+<body>
 
-&lt;button type="button" onclick="main()"&gt;Execute&lt;/button&gt;
-&lt;script&gt;
+<button type="button" onclick="main()">Execute</button>
+<script>
 
 function main(){
 //all JavaScript goes here.
 
 }
 
-&lt;/script&gt;
+</script>
 
-&lt;/body&gt;
-&lt;/html&gt;
+</body>
+</html>
 
 {% endhighlight %}
 <h2>JavaScript and the DOM</h2>
@@ -91,30 +91,30 @@ And here's what this looks like executed as an HTML tree:
 <img src="http://www.w3schools.com/js/pic_htmltree.gif" alt="" />
 {% highlight javascript linenos %}
 
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;My title&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;a href="http://www.syncano.com"&gt;My link&lt;/a&gt;
-&lt;h1&gt;My header&lt;/h1&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+<html>
+<head>
+<title>My title</title>
+</head>
+<body>
+<a href="http://www.syncano.com">My link</a>
+<h1>My header</h1>
+</body>
+</html>
 
 {% endhighlight %}
 Notice that the DOM only shows the openning tags, because it is assumed that any openned tags will be closed.
 <h2>Example #1: Hello World!</h2>
 {% highlight javascript linenos %}
 
-&lt;html&gt;
-&lt;body&gt;
-&lt;p id="first"&gt;Hello World!&lt;/p&gt;
-&lt;script&gt;
+<html>
+<body>
+<p id="first">Hello World!</p>
+<script>
 var txt = document.getElementById("first").innerHTML;
 document.write(txt);
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+</script>
+</body>
+</html>
 
 {% endhighlight %}
 This first example follows traditions of the <a title="K&amp;R Book (introduction to C)" href="http://www.amazon.com/The-Programming-Language-2nd-Edition/dp/0131103628">K&amp;R book (introduction to C) </a>- a must have for any serious programmer. The document object is how JavaScript interacts with the DOM in general. Here we make use of two methods:
@@ -128,11 +128,11 @@ Notice that JavaScript is very heavy on object oriented programming. The way you
 For those of you unfamiliar with object oriented programming, you can find a good intro <a href="http://cs.nyu.edu/courses/spring13/CSCI-UA.0101-006/Notes.pdf">here.</a>
 {% highlight javascript linenos %}
 
-&lt;HTML&gt;
-      &lt;HEAD&gt;
-        &lt;TITLE&gt;Greeting&lt;/TITLE&gt;
+<HTML>
+      <HEAD>
+        <TITLE>Greeting</TITLE>
 
-        &lt;script&gt;
+        <script>
           function writeName()
           {
              var name1 = document.myform.name.value;
@@ -141,20 +141,20 @@ For those of you unfamiliar with object oriented programming, you can find a goo
            
 	     document.write(greeting);
           }
-        &lt;/script&gt;
-      &lt;/HEAD&gt;
+        </script>
+      </HEAD>
 
-      &lt;BODY&gt;
-	    &lt;p&gt;Please input your name to receive a greeting:&lt;/p&gt;
-        &lt;FORM NAME="myform"&gt;
-          Name?&lt;INPUT TYPE="text" NAME="name" VALUE=""&gt; &lt;br /&gt; 
+      <BODY>
+	    <p>Please input your name to receive a greeting:</p>
+        <FORM NAME="myform">
+          Name?<INPUT TYPE="text" NAME="name" VALUE=""> <br /> 
           
-          &lt;INPUT TYPE="button" NAME="button" Value="submit" onClick="writeName()"&gt;&lt;br /&gt;
+          <INPUT TYPE="button" NAME="button" Value="submit" onClick="writeName()"><br />
           
-        &lt;/FORM&gt;
+        </FORM>
 
-      &lt;/BODY&gt;
-&lt;/HTML&gt;
+      </BODY>
+</HTML>
 
 {% endhighlight %}
 There is a ton of stuff going on here. First, we use a form to grab the input from the user. Then, we write a personalized greeting to the screen for the person.
@@ -180,26 +180,26 @@ Write a few web forms. Get different kinds of information from the user. Return 
 For a reference to a list of common ways to interact with the DOM see: <a href="http://www.w3schools.com/js/js_htmldom_document.asp">JavaScript DOM reference</a>
 
 Next, we'll change a picture on click:
-{% highlight javascript linenos %}&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;body&gt;
+{% highlight javascript linenos %}<!doctype html>
+<html>
+<body>
 
-&lt;img id="image" src="http://blogdottawkifydotcom.files.wordpress.com/2012/06/man-smiling-in-black-shirt.jpeg" height="300px" width="300px"&gt;
+<img id="image" src="http://blogdottawkifydotcom.files.wordpress.com/2012/06/man-smiling-in-black-shirt.jpeg" height="300px" width="300px">
 
-&lt;p id="description"&gt;The face is happy!&lt;/p&gt;
+<p id="description">The face is happy!</p>
 
-&lt;button onclick="makeSad()"&gt;Submit&lt;/button&gt;
+<button onclick="makeSad()">Submit</button>
 
-&lt;script&gt;
+<script>
 function makeSad(){
 
 document.getElementById("image").src="http://static3.businessinsider.com/image/51c9cca7ecad048f41000003-480/samuel-alito-frowning.jpg";
 document.getElementById("description").innerHTML = "The face is sad!";
 }
-&lt;/script&gt;
+</script>
 
-&lt;/body&gt;
-&lt;/html&gt;
+</body>
+</html>
 
 {% endhighlight %}
 Notice there isn't too much no information here.  The big difference is the type of data we are working with.  So, first off, you should copy the above code into your favorite text editor and give it a try!  In case you are lazy, here's what it does:
@@ -218,18 +218,18 @@ We do the same thing with the text displayed by the html as follows:
 
 Notice the pattern for interacting with images and text is almost the same, the difference being the specific attribute being referenced.
 {% highlight javascript linenos %}
-&lt;html&gt;
-&lt;body&gt;
+<html>
+<body>
 
-&lt;p id="changeable_text"&gt;Hello world!&lt;/p&gt;
-&lt;p&gt;Hello world!&lt;/p&gt;
-&lt;script&gt;
+<p id="changeable_text">Hello world!</p>
+<p>Hello world!</p>
+<script>
 
 document.getElementById("changeable_text").style.color="blue"; 
 
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+</script>
+</body>
+</html>
 
 {% endhighlight %}
 Here we've made some CSS happen on the fly! Typically when dealing with Javascript you'll want it to be caused by some user interaction like an onclick event or on hover event or something, however, I think it's also important to understand that this need not be the case.  Here we show that the Javascript does execute on load of the page.  Notice that we included the same text twice, once with the id="changeable_text" and once with it.  As you can see, since I reference the element by id, only the p tag with id="changeable_text" is affected.  To experiment with this, copy and paste the above code into your favorite text editor.  
@@ -265,11 +265,11 @@ Here's a list of some common HTML 'events':
 	<li>When a user strokes a key.</li>
 </ul>
 We've already seen examples of on-click events. Let's look at one more onclick now that we understand that the javascript is being used to handle some event.
-{% highlight javascript linenos %}&lt;HTML&gt;
- &lt;HEAD&gt;
- &lt;TITLE&gt;Greeting&lt;/TITLE&gt;
+{% highlight javascript linenos %}<HTML>
+ <HEAD>
+ <TITLE>Greeting</TITLE>
 
- &lt;script&gt;
+ <script>
  function Hello(){
  
  alert("Hello, user");
@@ -280,19 +280,19 @@ We've already seen examples of on-click events. Let's look at one more onclick n
  function makeOriginal(){
   document.getElementById("changeable").innerHTML = "This is the original text";
  }
- &lt;/script&gt;
- &lt;/HEAD&gt;
+ </script>
+ </HEAD>
 
- &lt;BODY&gt;
- &lt;ol&gt;
- &lt;li&gt;&lt;button id="Hello" onclick="Hello();"&gt;Say hello, browser&lt;/button&gt;&lt;/li&gt; 
- &lt;li&gt;&lt;button id="change_text" onclick="textChange();"&gt;Let's change some text&lt;/button&gt;
- &lt;p id="changeable"&gt;This is the original text&lt;/p&gt;&lt;/li&gt;
- &lt;li&gt;&lt;button id="change_back" onclick="makeOriginal();"&gt;Let's revert to the original state&lt;/button&gt;&lt;/li&gt;
- &lt;/ol&gt;
+ <BODY>
+ <ol>
+ <li><button id="Hello" onclick="Hello();">Say hello, browser</button></li> 
+ <li><button id="change_text" onclick="textChange();">Let's change some text</button>
+ <p id="changeable">This is the original text</p></li>
+ <li><button id="change_back" onclick="makeOriginal();">Let's revert to the original state</button></li>
+ </ol>
  
- &lt;/BODY&gt;
-&lt;/HTML&gt;{% endhighlight %}
+ </BODY>
+</HTML>{% endhighlight %}
 Here, the new stuff is
 
 1. Making use of JavaScript's built-in alert function
@@ -302,11 +302,11 @@ This covers two very big cases for onclick - manipulating something on the page 
 
 Now that we have a strong grasp of onclick events and some of their uses lets look at another type of event in Javascript land, onload.
 {% highlight javascript linenos %}
-&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;body onload="checkCookies()"&gt;
+<!doctype html>
+<html>
+<body onload="checkCookies()">
 
-&lt;script&gt;
+<script>
 function checkCookies()
 {
 if (navigator.cookieEnabled==true)
@@ -318,11 +318,11 @@ else
 		alert("Cookies are not enabled");
 	}
 }
-&lt;/script&gt;
+</script>
 
-&lt;p&gt;An alert box should tell you if your browser has enabled cookies or not.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+<p>An alert box should tell you if your browser has enabled cookies or not.</p>
+</body>
+</html>
 {% endhighlight %}
 This code tells you whether or not cookies are enabled in your browser.  Notice the onload attribute in the body tag.  This ensures the Javascript is loaded first by the browser and is good practice.  The navigator class has a few useful functions, but the most useful is the cookiesEnabled method.  This let's us know if the user will be able to view the page in a stateful manner or not.  This allows us to program for both cases - when the cookies are enabled and when they are not.  If the idea of state doesn't make sense, don't worry, I'm going to get into cookies generally below.
 
@@ -375,17 +375,17 @@ In the above example we told the user whether or not cookies were enabled.  Now
 Cookies are data, stored in small text files on your computer. They are usually saved in name-value pairs like: username=Eric Schles or Syncano=awesome. When a browser requests a web page from the server, cookies belonging to the page are added to the request. This way, the server gets the necessary data to "remember" information about users. JavaScript can create cookies, read cookies, and delete cookies with the property document.cookie. Note cookies need to be enabled in order for us to create, read, or use cookies, which we get from the navigator class. So any functionality relating to cookies should be wrapped in an "if" statement that checks if cookies are enabled.
 <h2>Creating cookies</h2>
 {% highlight javascript linenos %}
-&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;body&gt;
+<!doctype html>
+<html>
+<body>
 
-&lt;button type="button" onclick="displayCookies();"&gt;Display all cookies&lt;/button&gt;
-&lt;button type="button" onclick="document.cookie='firstname=Eric'"&gt;Create a cookie with firstname&lt;/button&gt;
-&lt;button type="button" onclick="document.cookie='lastname=Schles'"&gt;Create a cookie with lastname&lt;/button&gt;
-&lt;button type="button" onclick="document.cookie='firstname=Eric;expires=-1'"&gt;Delete firstname cookie&lt;/button&gt;
-&lt;button type="button" onclick="document.cookie='lastname=Schles;expires=-1'"&gt;Delete lastname cookie&lt;/button&gt;
+<button type="button" onclick="displayCookies();">Display all cookies</button>
+<button type="button" onclick="document.cookie='firstname=Eric'">Create a cookie with firstname</button>
+<button type="button" onclick="document.cookie='lastname=Schles'">Create a cookie with lastname</button>
+<button type="button" onclick="document.cookie='firstname=Eric;expires=-1'">Delete firstname cookie</button>
+<button type="button" onclick="document.cookie='lastname=Schles;expires=-1'">Delete lastname cookie</button>
 
-&lt;script&gt;
+<script>
 function displayCookies()
 {
  var fname=getCookie("firstname");
@@ -396,16 +396,16 @@ function displayCookies()
  if(lname!=""){lname="; lastname="lname;}
  alert(fname lname);
 }
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+</script>
+</body>
+</html>
 
 {% endhighlight %}
 The above code should create five buttons. One that creates the firstname cookie, one that creates the lastname cookie, one that deletes the firstname cookie, one that deletes the lastname cookie, and one that displays all the cookies. Note this is a toy example and doesn't show you how people typically use cookies. A better example that does almost the same thing, but with far greater complexity is:
 {% highlight javascript linenos %}
-&lt;html&gt;
-&lt;head&gt;
-&lt;script&gt;
+<html>
+<head>
+<script>
 function setCookie(cname,cvalue,exdays)
 {
 var d = new Date();
@@ -418,7 +418,7 @@ function getCookie(cname)
 {
 var name = cname   "=";
 var ca = document.cookie.split(';');
-for(var i=0; i&lt;ca.length; i  ) 
+for(var i=0; i<ca.length; i  ) 
   {
   var c = ca[i].trim();
   if (c.indexOf(name)==0) return c.substring(name.length,c.length);
@@ -442,11 +442,11 @@ else
     }
   }
 }
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body onload="checkCookie()"&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+</script>
+</head>
+<body onload="checkCookie()">
+</body>
+</html>
 {% endhighlight %}
 If you don't completely understand this example don't worry. I include it more so that you are aware of how cookies are used in practice.
 <h2>Exercise:</h2>
@@ -462,26 +462,26 @@ Up until now we've only been manipulating attributes of our tags - creating some
 <h3>Definition: Node</h3>
 To add a new element to the HTML DOM, you must create the element (element node) first, and then append it to an existing element
 {% highlight javascript linenos %}
-&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;body&gt;
+<!doctype html>
+<html>
+<body>
 
-&lt;div id="div1"&gt;
-&lt;p id="p1"&gt;This is a paragraph.&lt;/p&gt;
-&lt;p id="p2"&gt;This is another paragraph.&lt;/p&gt;
-&lt;/div&gt;
+<div id="div1">
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is another paragraph.</p>
+</div>
 
-&lt;script&gt;
+<script>
 var para=document.createElement("p");
 var node=document.createTextNode("This is new.");
 para.appendChild(node);
 
 var element=document.getElementById("div1");
 element.appendChild(para);
-&lt;/script&gt;
+</script>
 
-&lt;/body&gt;
-&lt;/html&gt;
+</body>
+</html>
 
 {% endhighlight %}
 The createElement method creates the new tag. To write to this element, you have to create the text node using createTextNode. Append the text to newly created tag, and then simply append the newly created node to the DOM at the appropriate place. In this case, we are appending to the div tag. Therefore the new tag will appear inside the div.
@@ -505,43 +505,43 @@ There are two key methods:
 </ul>
 Let's check out an example of setInterval
 {% highlight javascript linenos %}
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;body&gt;
+<!DOCTYPE html>
+<html>
+<body>
 
-&lt;p&gt;Click the button to wait 3 seconds, then alert "Hello".&lt;/p&gt;
-&lt;p&gt;After clicking away the alert box, an new alert box will appear in 3 seconds. This goes on forever...&lt;/p&gt;
-&lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;
+<p>Click the button to wait 3 seconds, then alert "Hello".</p>
+<p>After clicking away the alert box, an new alert box will appear in 3 seconds. This goes on forever...</p>
+<button onclick="myFunction()">Try it</button>
 
-&lt;script&gt;
+<script>
 function myFunction()
 {
 setInterval(function(){alert("Hello")},3000);
 }
-&lt;/script&gt;
+</script>
 
-&lt;/body&gt;
-&lt;/html&gt;
+</body>
+</html>
 
 {% endhighlight %}
 Now we'll look at setTimeout
 {% highlight javascript linenos %}
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;body&gt;
+<!DOCTYPE html>
+<html>
+<body>
 
-&lt;p&gt;Click the button to wait 3 seconds, then alert "Hello".&lt;/p&gt;
-&lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;
+<p>Click the button to wait 3 seconds, then alert "Hello".</p>
+<button onclick="myFunction()">Try it</button>
 
-&lt;script&gt;
+<script>
 function myFunction()
 {
 setTimeout(function(){alert("Hello")},3000);
 }
-&lt;/script&gt;
+</script>
 
-&lt;/body&gt;
-&lt;/html&gt;
+</body>
+</html>
 
 {% endhighlight %}
 Looking at both of these examples it should be obvious the difference between setTimeout and setInterval.  The setTimeout does an action once and the setInterval does an action continuously.  To try this, please copy paste the above examples into your favorite text editor and run the code.

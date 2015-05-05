@@ -145,11 +145,11 @@ worker:
 &nbsp; 
 Name                         Command               State                 Ports               
 -------------------------------------------------------------------------------------------------------
-app_redis_1      redis-server /etc/redis/re ...   Up      49417-&gt;6379/tcp                   
-app_postgres_1   /sbin/my_init                    Up      49418-&gt;5432/tcp                   
-app_rabbit_1     /run.sh                          Up      49419-&gt;15672/tcp, 49420-&gt;5672/tcp 
-app_worker_1     /sbin/my_init                    Up      8000/tcp, 2023-&gt;22/tcp            
-app_web_1        /sbin/my_init                    Up      8000-&gt;8000/tcp, 2022-&gt;22/tcp 
+app_redis_1      redis-server /etc/redis/re ...   Up      49417->6379/tcp                   
+app_postgres_1   /sbin/my_init                    Up      49418->5432/tcp                   
+app_rabbit_1     /run.sh                          Up      49419->15672/tcp, 49420->5672/tcp 
+app_worker_1     /sbin/my_init                    Up      8000/tcp, 2023->22/tcp            
+app_web_1        /sbin/my_init                    Up      8000->8000/tcp, 2022->22/tcp 
 {% endhighlight %}
 
 <p>That's it! Pretty easy, right?</p>

@@ -93,13 +93,13 @@ Before you use the Crittercism framework, you'll need to expand your existing ap
 
 6. Select the newly created app <strong>syncserver-ios-test-crittercism</strong>.
 
-7. On the left menu, go into <strong>Settings</strong> -&gt; <strong>App Settings</strong>.
+7. On the left menu, go into <strong>Settings</strong> -> <strong>App Settings</strong>.
 
 8. Copy your Crittercism App ID (will look similar to this: 531f7f9d0ee9483d3d000001). You will need it to initialize the framework.
 
 <h2>Initialize Crittercism</h2>
 1. Open app delegate <b>SYNAppDelegate.m</b> and add an import header at the top:
-<pre>    <code class="objectivec">#import &lt;Crittercism.h&gt; </code></pre>
+<pre>    <code class="objectivec">#import <Crittercism.h> </code></pre>
 2. Enable Crittercism in the <b>application:didFinishLaunchingWithOptions:</b> method:
 <pre>    <code class="objectivec">- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	// Override point for customization after application launch.
@@ -135,6 +135,6 @@ Before you use the Crittercism framework, you'll need to expand your existing ap
 
 1. Generate a report: Launch the app. Go to <strong>Second Screen</strong> and press the crash button. Re-launch the app once more.
 
-2. View the report: Login to your Crittercism account, go to https://app.crittercism.com/developers, choose <strong>syncserver-ios-test-crittercism</strong> app, and select <strong>Troubleshoot</strong> -&gt; <strong>Crash Reports</strong> on the left menu.
+2. View the report: Login to your Crittercism account, go to https://app.crittercism.com/developers, choose <strong>syncserver-ios-test-crittercism</strong> app, and select <strong>Troubleshoot</strong> -> <strong>Crash Reports</strong> on the left menu.
 
 <em>Note: remember to disconnect the XCode debugger if you’re testing with the simulator, as it will prevent Crittercism from capturing the crash.

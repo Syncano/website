@@ -77,9 +77,15 @@ analytics.load("l5vr4iwmee");
 <!-- SEGMENT.IO TRACKING EVENTS -->
 <script>
 analytics.ready(function () {if (window.analytics.user().id()) {window.analytics.identify();}});
+{% if page.id %}
+analytics.page('Blog Post', {
+	Post: "{{page.title}}",
+});
+{% else %}
 analytics.page('WordPress', {
 	Page: "{{page.title}}",
 });
+{% endif %}
 </script>
 <!-- END SEGMENT.IO TRACKING EVENTS -->
 

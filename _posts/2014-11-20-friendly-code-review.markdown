@@ -38,7 +38,7 @@ Instead of improving the product and solving a problem, feedback that is purely 
 Giving good feedback isn't an intuitive skill for a lot of us - but that doesn't mean we can't learn. To make sure team members don't get offended and criticism remains constructive, make a conscious effort to be friendly in your feedback. Here's what we mean:
 <h3>Making it Friendly</h3>
 Be specific with your suggestions for improvement and include positive feedback to acknowledge progress and reinforce good work:
-<code>Really nice function! I liked how you do &gt;this&lt; here.</code>
+<code>Really nice function! I liked how you do >this< here.</code>
 <code>I like it! +1</code>
 <code>I've learned something new. Awesome!</code>
 

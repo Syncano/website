@@ -98,7 +98,7 @@ The power of SQLAlchemy is many-fold, but I'll touch on just a few of a few feat
 
 
 
-    @app.route("/directory/&lt;username&gt;")
+    @app.route("/directory/<username>")
 
     def directory(username):
 
@@ -166,7 +166,7 @@ The power of SQLAlchemy is many-fold, but I'll touch on just a few of a few feat
 
         def __repr__(self):
 
-            return '&lt;AccountHolder %r&gt;' % self.username
+            return '<AccountHolder %r>' % self.username
 {% endhighlight %}
 
 <p>First, we create our DB object by instantiating a SQLAlchemy object from our '<em>app</em>'. Then we make use of the premade Model class that SQLAlchemy comes with. Within our AccountHolder class we just do some initialization and that's it. As a cannonical example, lets look at the following code:</p>
@@ -263,7 +263,7 @@ The power of SQLAlchemy is many-fold, but I'll touch on just a few of a few feat
 {% highlight javascript linenos %}
     import models
 
-    @app.route("/directory/&lt;username&gt;")
+    @app.route("/directory/<username>")
 
     def directory(username):
 

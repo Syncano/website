@@ -14,7 +14,7 @@ share_image: /public/create-ios-chat-app.png
 
 <p>First, you'll need to create new XCode project by opening XCode and choosing</p>
 
-<code>File -&gt; New -&gt; Project
+<code>File -> New -> Project
 </code>
 
 <p>from the top menu. When asked about the application type, choose <em> Single View Application</em> and click <em>Next</em>.</p>
@@ -79,7 +79,7 @@ end
 
 <p>To use libraries written in Obj-C with Swift, you'll need to add a bridging header. Fortunately, it's not very complicated. Just go into</p>
 
-<code>File -&gt; New -&gt; File
+<code>File -> New -> File
 </code>
 
 <p>Choose <em>Cocoa Class</em>, click <em>Next</em>, type whatever class name (we will not be using it again later), e.g. <em>Test</em>, switch the language to <em>Objective-C</em> and click next.</p>
@@ -92,9 +92,9 @@ end
 
 <p>Notice that next to the temporary class, XCode also created a bridging header named <em>SyncanoChat-Bridging-Header.h</em>. Open this file and add this inside it:</p>
 
-{% highlight javascript linenos %}#import &lt;Syncano/Syncano.h&gt;
-#import &lt;Syncano/SyncanoSyncServer.h&gt;
-#import &lt;JSQMessagesViewController/JSQMessages.h&gt;
+{% highlight javascript linenos %}#import <Syncano/Syncano.h>
+#import <Syncano/SyncanoSyncServer.h>
+#import <JSQMessagesViewController/JSQMessages.h>
 {% endhighlight %}
 
 <p>Save the file and build the project again to see if compiles properly.</p>
@@ -168,20 +168,20 @@ class ViewController: JSQMessagesViewController {
 
 <p>Add the following code before the end of your class:</p>
 
-{% highlight javascript linenos %}func senderDisplayName() -&gt; String! {
+{% highlight javascript linenos %}func senderDisplayName() -> String! {
     return self.userName
 }
 
-func senderId() -&gt; String! {
+func senderId() -> String! {
     return self.userName
 }
 
-override func collectionView(collectionView: JSQMessagesCollectionView!, messageDataForItemAtIndexPath indexPath: NSIndexPath!) -&gt; JSQMessageData! {
+override func collectionView(collectionView: JSQMessagesCollectionView!, messageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageData! {
     var data = self.messages[indexPath.row]
     return data
 }
 
-override func collectionView(collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAtIndexPath indexPath: NSIndexPath!) -&gt; JSQMessageBubbleImageDataSource! {
+override func collectionView(collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageBubbleImageDataSource! {
     var data = self.messages[indexPath.row]
     if (data.senderId == self.senderId) {
         return self.outgoingBubble
@@ -190,11 +190,11 @@ override func collectionView(collectionView: JSQMessagesCollectionView!, message
     }
 }
 
-override func collectionView(collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAtIndexPath indexPath: NSIndexPath!) -&gt; JSQMessageAvatarImageDataSource! {
+override func collectionView(collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageAvatarImageDataSource! {
     return nil
 }
 
-override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -&gt; Int {
+override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return self.messages.count;
 }
 {% endhighlight %}

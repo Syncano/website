@@ -16,7 +16,7 @@ summary: "<p>As Apple announced during their latest event, you can now write Swi
 
 <p>Before you start working in a playground, make sure you've downloaded version 6 of XCode (available on the <a href="https://itunes.apple.com/us/app/xcode/id497799835">AppStore</a>).</p>
 
-<p>Once you have it installed (it may take some time), don't start a  new project. Instead, hit <em>File -&gt; New -&gt; Playground</em>.</p>
+<p>Once you have it installed (it may take some time), don't start a  new project. Instead, hit <em>File -> New -> Playground</em>.</p>
 
 <p>When you create a new playground file, it will be filled with this content by default:</p>
 
@@ -35,7 +35,7 @@ var str = "Hello, playground"
 
 <p>Let's add a function to the playground to see if it works properly. Start by calculating the sum of 3 + 7:</p>
 
-{% highlight javascript linenos %}func sumOfTwoNumbers(firstNumber: Int, secondNumber: Int) -&gt; Int {
+{% highlight javascript linenos %}func sumOfTwoNumbers(firstNumber: Int, secondNumber: Int) -> Int {
 &nbpsp; return firstNumber + secondNumber
 }
 
@@ -73,8 +73,8 @@ sumOfTwoNumbers(3, 7)
 
 <p><em>Notice what happens if we change our code to multiply both numbers when the first number is greater than 5:</em></p>
 
-{% highlight javascript linenos %}func sumOfTwoNumbers(firstNumber: Int, secondNumber: Int) -&gt; Int {
- &npsp; if (firstNumber &gt; 5) {
+{% highlight javascript linenos %}func sumOfTwoNumbers(firstNumber: Int, secondNumber: Int) -> Int {
+ &npsp; if (firstNumber > 5) {
  &npsp; &npsp; return firstNumber * secondNumber
 &npsp; }
  &npsp; return firstNumber + secondNumber
@@ -102,7 +102,7 @@ label.text = "Swift Playground"
 
 <p>You can also see how the label would look with varying gray backgrounds.  Add this loop to change it to different UIColor instances:</p>
 
-{% highlight javascript linenos %}for var grayColor : CGFloat = 0.9; grayColor &gt; 0.0; grayColor -= 0.1 {
+{% highlight javascript linenos %}for var grayColor : CGFloat = 0.9; grayColor > 0.0; grayColor -= 0.1 {
 &nbsp; label.backgroundColor = UIColor(white: grayColor, alpha: 1.0)
 }
 {% endhighlight %}
@@ -122,11 +122,11 @@ label.text = "Swift Playground"
 <p>To create a custom header view, use the same code you used to create a label with one of the background colors we used earlier:</p>
 
 {% highlight javascript linenos %}class Delegate : NSObject, UITableViewDelegate {
-&nbsp; func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -&gt; CGFloat {
+&nbsp; func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
 &nbsp; &nbsp; return 44
 &nbsp; }
 
-&nbsp; func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -&gt; UIView? {
+&nbsp; func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 &nbsp; &nbsp;  let label = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 50))
 &nbsp; &nbsp; label.textAlignment = NSTextAlignment.Center
 &nbsp; &nbsp; label.font = UIFont.italicSystemFontOfSize(20)
@@ -149,15 +149,15 @@ label.text = "Swift Playground"
 <p>Next, add a DataSource class. Implement obligatory functions returning the number of rows in a section, a cell for index path, and as an extra - the number of sections in a table view to see how creating the header view in Delegate works:</p>
 
 {% highlight javascript linenos %}class DataSource : NSObject, UITableViewDataSource {
-&nbsp; func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
+&nbsp; func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 &nbsp; &nbsp; return 2
 &nbsp; }
 
-&nbsp; func numberOfSectionsInTableView(tableView: UITableView) -&gt; Int {
+&nbsp; func numberOfSectionsInTableView(tableView: UITableView) -> Int {
 &nbsp; &nbsp; return 4
 &nbsp; }
 
-&nbsp; func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -&gt; UITableViewCell {
+&nbsp; func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 &nbsp; &nbsp; var identifier = "Identifier"
 &nbsp; &nbsp; var cell : UITableViewCell? = nil
 &nbsp; &nbsp; cell = tableView.dequeueReusableCellWithIdentifier(identifier) as UITableViewCell?
@@ -189,7 +189,7 @@ tableView.reloadData()
 
 <p>In the Delegate class, change the function creating header view to:</p>
 
-{% highlight javascript linenos %}func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -&gt; UIView? {
+{% highlight javascript linenos %}func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 &nbsp; &nbsp; let label = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 50))
 &nbsp; &nbsp; label.textAlignment = NSTextAlignment.Center
 &nbsp; &nbsp; label.font = UIFont.italicSystemFontOfSize(20)
@@ -202,7 +202,7 @@ tableView.reloadData()
 
 <p>And then update the function creating a cell in the Data Source:</p>
 
-{% highlight javascript linenos %}func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -&gt; UITableViewCell {
+{% highlight javascript linenos %}func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 &nbsp; &nbsp; var identifier = "Identifier"
 &nbsp; &nbsp; var cell : UITableViewCell? = nil
 &nbsp; &nbsp; cell = tableView.dequeueReusableCellWithIdentifier(identifier) as UITableViewCell?

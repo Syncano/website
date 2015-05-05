@@ -162,7 +162,7 @@ $ docker run -d -v /var/docker/redis:/data dockerfile/redis
 
 <p>That's a lot's of information! But wait, there's more. Let's spy a bit on our container with the <em>inspect</em> command.</p>
 
-{% highlight javascript linenos %}$ docker inspect &lt;docker_container_id or name&gt;
+{% highlight javascript linenos %}$ docker inspect <docker_container_id or name>
 {% endhighlight %}
 
 <p>If you run a Redis container with the <em>--name</em> flag, you can inspect it with the below command:</p>

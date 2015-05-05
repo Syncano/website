@@ -64,8 +64,8 @@ When the command is finished, make sure you open (and from now on only use) the 
 
 For this example, we'll assume you will be adding the Syncano Sync Server file to an instance of UIViewController. If you want to add it somewhere else, use the below as a guide - you will be taking the same essential steps.
 
-Include Syncano's header files by adding them at the top of your implementation (<em>.m</em>) file:{% highlight javascript linenos %}#import &lt;Syncano.h&gt;
-#import &lt;SyncanoSyncServer.h&gt;{% endhighlight %}
+Include Syncano's header files by adding them at the top of your implementation (<em>.m</em>) file:{% highlight javascript linenos %}#import <Syncano.h>
+#import <SyncanoSyncServer.h>{% endhighlight %}
 
 In the interface of your class, add the following property:{% highlight javascript linenos %}@property (strong, nonatomic) SyncanoSyncServer *syncServer;{% endhighlight %}
 
@@ -82,7 +82,7 @@ NSLog(@"Subscription response: %@",response);
 }];{% endhighlight %}
 
 Add information about implementing <em>SyncanoSyncServerDelegate</em>:{% highlight javascript linenos %}@protocol SyncanoSyncServerDelegate;
-@interface MyViewController : UIViewController &lt;SyncanoSyncServerDelegate&gt;{% endhighlight %}
+@interface MyViewController : UIViewController <SyncanoSyncServerDelegate>{% endhighlight %}
 
 Implement <em>SyncanoSyncServerDelegate</em> required methods by adding this to your implementation file:
 

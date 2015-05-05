@@ -88,7 +88,7 @@ An ORM makes writing SQL statements easier and higher level. It also works acros
 
 <h3>Now that we understand our schema, let's create our database:</h3>
 
-{% highlight javascript linenos %}sqlite3 database.db &lt; schema.sql
+{% highlight javascript linenos %}sqlite3 database.db < schema.sql
 {% endhighlight %}
 
 <p>Now let's look at some CRUD operations. These will be stored in <em>models.py</em>.</p>
@@ -296,7 +296,7 @@ An ORM makes writing SQL statements easier and higher level. It also works acros
     def login():
         return render_template("login.html")
 
-    @app.route("/directory/&lt;username&gt;")
+    @app.route("/directory/<username>")
     def directory(username):
         contacts = select_by_username_contact(username)
         return render_template("directory.html",username=username,contacts=contacts)
@@ -323,7 +323,7 @@ An ORM makes writing SQL statements easier and higher level. It also works acros
 <p>Now let's look at querying the database for information:</p>
 
 {% highlight javascript linenos %}
-    @app.route("/directory/&lt;username&gt;")
+    @app.route("/directory/<username>")
     def directory(username):
         contacts = select_by_username_contact(username)
         return render_template("directory.html",username=username,contacts=contacts)
@@ -352,7 +352,7 @@ An ORM makes writing SQL statements easier and higher level. It also works acros
 
 <h3>how to make the database:</h3>
 
-<p>{% highlight javascript linenos %}sqlite3 database.db &lt; schema.sql{% endhighlight %}</p>
+<p>{% highlight javascript linenos %}sqlite3 database.db < schema.sql{% endhighlight %}</p>
 
 <p>This concludes our basic introduction into SQL in Flask. But what happens when you want to send a new type of data to the database?  Or when you want to query for a new type of information?  When working with SQL, you'll either need to write a new method to do this - or you'll have to insert straight SQL into your code.  Either way, it's likely you'll be writing something that requires a lot of testing <em>and</em> won't be nearly as efficient as code someone else spent more time on. It's not a pretty solution.</p>
 

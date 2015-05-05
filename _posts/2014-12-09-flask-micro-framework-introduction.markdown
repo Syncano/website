@@ -54,7 +54,7 @@ While you can just send Python strings to the front-end, it's probably a good id
 
 app = Flask(__name__)
 
-@app.route("/&lt;name&gt;")
+@app.route("/<name>")
 @app.route("/")
 def index(name=''):
     return render_template("index.html",name=name)
@@ -62,18 +62,18 @@ def index(name=''):
 app.run(debug=True)
 {% endhighlight %}
 <h3>index.html:</h3>
-{% highlight javascript linenos %}&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;/head&gt;
-&lt;body&gt;
+{% highlight javascript linenos %}<!doctype html>
+<html>
+<head>
+</head>
+<body>
 &#123;% if name != '' %&#125;
-  &lt;p&gt;Hello there, {{name}}&lt;/p&gt;
+  <p>Hello there, {{name}}</p>
 &#123;% else %&#125;
-  &lt;p&gt; Hello there &lt;/p&gt;
+  <p> Hello there </p>
 &#123;% endif %&#125;
-&lt;/body&gt;
-&lt;/html&gt;
+</body>
+</html>
 {% endhighlight %}
 As you can see, you can send code to the frontend AND use simple flow of control primitives afterward to decide what kind of html is shown to the user. This is one of the reasons having a templating engine like jinga (which comes with Flask) is so powerful. Notice the difference between normal html and the templated piece: the use of openning<em> &#123;% </em> and closing<em> %&#125; </em> as well as the starting and closing of if/then statements:
 
@@ -103,7 +103,7 @@ from app import app
 def index():
     return render_template("index.html")
 
-@app.route("/add/&lt;int:first&gt;/&lt;int:second&gt;")
+@app.route("/add/<int:first>/<int:second>")
 @app.route("/add")
 def add(first='',second=''):
     if first == '':
@@ -128,67 +128,67 @@ def send_data():
 
 {% highlight javascript linenos %}
 
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Syncano is awesome&lt;/title&gt;
- &lt;style&gt;
+<html>
+  <head>
+    <title>Syncano is awesome</title>
+ <style>
  ul{
   list-style-type: none;
  };
-&lt;/style&gt;
- &lt;/head&gt;
-  &lt;body&gt;
-    &lt;hr&gt;
+</style>
+ </head>
+  <body>
+    <hr>
     &#123;% with messages = get_flashed_messages() %&#125;
     &#123;% if messages %&#125;
-    &lt;ul&gt;
+    <ul>
     &#123;% for message in messages %&#125;
-        &lt;li&gt;{{ message }} &lt;/li&gt;
+        <li>{{ message }} </li>
     &#123;% endfor %&#125;
-    &lt;/ul&gt;
+    </ul>
     &#123;% endif %&#125;
     &#123;% endwith %&#125;
     &#123;% block content %&#125;&#123;% endblock %&#125;
-&lt;div class=&quot;footer&quot;&gt;
-&lt;p align=&quot;center&quot;&gt;
-&lt;/p&gt;  
-&lt;br /&gt;
-&lt;br /&gt;
-    &lt;div align=&quot;center&quot;&gt;Copyrights &amp;copy;  All rights are reserved&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
+<div class="footer">
+<p align="center">
+</p>  
+<br />
+<br />
+    <div align="center">Copyrights &amp;copy;  All rights are reserved</div>
+</div>
+</div>
+  </body>
+</html>
 
 {% endhighlight %}
 
 <h3>index.html:</h3>
 {% highlight javascript linenos %}
 
-&lt;!-- extend base layout --&gt;
-&#123;% extends &quot;layout.html&quot; %&#125;
+<!-- extend base layout -->
+&#123;% extends "layout.html" %&#125;
 &#123;% block content %&#125;`
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;div align=&quot;center&quot;&gt;
-&lt;form method=&quot;post&quot; action=&quot;{{ url_for(&#39;add&#39;) }}&quot;&gt;
- &lt;ul&gt;
-  &lt;li&gt;First:&lt;input type=&quot;text&quot; name=&quot;first&quot; required&gt;&lt;/li&gt;
-  &lt;li&gt;Second:&lt;input type=&quot;text&quot; name=&quot;second&quot; required&gt;&lt;/li&gt;
-  &lt;br /&gt;
- &lt;button type=&quot;submit&quot;&gt;add numbers&lt;/button&gt;`
- &lt;/ul&gt;
-&lt;/form&gt;
-&lt;p&gt;{{ result }}&lt;/p&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;form method=&quot;post&quot; action=&quot;{{ url_for(&#39;send_data&#39;) }}&quot;&gt;
- &lt;button type=&quot;submit&quot;&gt;hit an api&lt;/button&gt;
-&lt;/form&gt;
-&lt;/div&gt;
+<br />
+<br />
+<br />
+<br />
+<br />
+<div align="center">
+<form method="post" action="{{ url_for(&#39;add&#39;) }}">
+ <ul>
+  <li>First:<input type="text" name="first" required></li>
+  <li>Second:<input type="text" name="second" required></li>
+  <br />
+ <button type="submit">add numbers</button>`
+ </ul>
+</form>
+<p>{{ result }}</p>
+<br />
+<br />
+<form method="post" action="{{ url_for(&#39;send_data&#39;) }}">
+ <button type="submit">hit an api</button>
+</form>
+</div>
 &#123;% endblock %&#125;
 
 {% endhighlight %}
@@ -202,7 +202,7 @@ The '@app.route' now has 'GET' and 'POST' methods. These are methods of the HTTP
 
 Also notice that you can have multiple routes for the same method. So right now, both http://localhost:5000/ and http://localhost:5000/index point to the same html file: index.html.
 <h3>Next you have:</h3>
-{% highlight javascript linenos %}@app.route("/add/&lt;int:first&gt;/&lt;int:second&gt;",methods=["GET","POST"])
+{% highlight javascript linenos %}@app.route("/add/<int:first>/<int:second>",methods=["GET","POST"])
 @app.route("/add", methods=["GET","POST"])
 def add(first='',second=''):
     if first == '':
@@ -216,24 +216,24 @@ Which takes in parameters from the user. With this method, there are two ways to
 
 Notice the first route:
 
-<code>@app.route("/add/&lt;int:first&gt;/&lt;int:second&gt;",methods=["GET","POST"])</code>
+<code>@app.route("/add/<int:first>/<int:second>",methods=["GET","POST"])</code>
 
 specifically:
 
-<code>"/add/&lt;int:first&gt;/&lt;int:second&gt;"</code>
+<code>"/add/<int:first>/<int:second>"</code>
 
 This design pattern can be useful when creating an API and is good practice for how an API should be used by developers. Then all you need is to have curl installed – no programming language specifics needed. Also notice the use of <em>first=""</em> and <em>second=""</em>. This lets us get information from the user via a form found in index.html:
 {% highlight javascript linenos %}
 
-&lt;form method=&quot;post&quot; action=&quot;{{ url_for(&#39;add&#39;) }}&quot;&gt;
-&lt;ul&gt;
-  &lt;li&gt;First:&lt;input type=&quot;text&quot; name=&quot;first&quot; required&gt;&lt;/li&gt;
-  &lt;li&gt;Second:&lt;input type=&quot;text&quot; name=&quot;second&quot; required&gt;&lt;/li&gt;
-  &lt;br /&gt;
- &lt;button type=&quot;submit&quot;&gt;add numbers&lt;/button&gt;
- &lt;/ul&gt;
-&lt;/form&gt;
-&lt;p&gt;{{ result }}&lt;/p&gt;
+<form method="post" action="{{ url_for(&#39;add&#39;) }}">
+<ul>
+  <li>First:<input type="text" name="first" required></li>
+  <li>Second:<input type="text" name="second" required></li>
+  <br />
+ <button type="submit">add numbers</button>
+ </ul>
+</form>
+<p>{{ result }}</p>
 
 {% endhighlight %}
 

@@ -28,7 +28,7 @@ summary: "Although written in Objective-C, the Syncano iOS library is perfectly 
 
 <ol>
 <li>Launch XCode.</li>
-<li>Using the XCode menu, choose <strong>File -&gt; New -&gt; Project</strong>.</li>
+<li>Using the XCode menu, choose <strong>File -> New -> Project</strong>.</li>
 <li>Choose the <strong>Single View Application</strong> template.</li>
 <li>Pick a name for your project, or name it <strong>SyncanoProject</strong>.</li>
 <li>In the prefix field enter <strong>SYN</strong> (you can keep devices in the <strong>Universal</strong> state or change it to either <strong>iPhone</strong> or <strong>iPad</strong>).</li>
@@ -91,7 +91,7 @@ end
 <p>Because the Syncano iOS library is written in Objective-C, you will need a bridging header. You can add it manually, but the easiest way is to add it with XCode:</p>
 
 <ol>
-<li>Add a new <strong>.m</strong> file to your project by choosing <strong>File -&gt; New -&gt; File -&gt; “Objective-C File”</strong> (select the option with the <strong>.m</strong> icon).</li>
+<li>Add a new <strong>.m</strong> file to your project by choosing <strong>File -> New -> File -> “Objective-C File”</strong> (select the option with the <strong>.m</strong> icon).</li>
 <li>Give it a random name e.g. <strong>SyncanoSwift</strong> (the name is not important because we won't be using the file again).</li>
 <li>Leave the file type as <strong>Empty File</strong> and click <strong>Next</strong>.</li>
 <li>Save the file anywhere in the project by choosing a directory and clicking <strong>Create</strong>.</li>
@@ -102,8 +102,8 @@ end
 </ol>
 
 
-{% highlight javascript linenos %}#import &lt;Syncano/Syncano.h&gt;
-#import &lt;Syncano/SyncanoSyncServer.h&gt;
+{% highlight javascript linenos %}#import <Syncano/Syncano.h>
+#import <Syncano/SyncanoSyncServer.h>
 {% endhighlight %}
 
 <p>Because you already have library files included in the bridging header, there’s no need to import anything else in your <strong>.swift</strong> files.</p>
@@ -184,7 +184,7 @@ end
     //We know we asked for only one object,
     //so there will be only one in response
     // but we check if Syncano returned anything in case of error
-    if (response.data.count &gt; 0) {
+    if (response.data.count > 0) {
       let data = response.data[0] as SyncanoData
       //Use newly created object
       println("ID: \(data.uid), Title: \(data.title), description: \(data.text)")

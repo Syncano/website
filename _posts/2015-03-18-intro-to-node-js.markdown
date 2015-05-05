@@ -117,12 +117,12 @@ http.createServer(function(req, res){
 
 <strong>test.html:</strong>
 
-{% highlight javascript linenos %}&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;body&gt;
-&lt;p&gt;Hello world! For real!&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+{% highlight javascript linenos %}<!doctype html>
+<html>
+<body>
+<p>Hello world! For real!</p>
+</body>
+</html>
 {% endhighlight %}
 
 <p>We haven't done too much different here.  The biggest jump is that we are reading  from a file instead of passing in a string to be interpreted by the browser.</p>

@@ -17,26 +17,26 @@ Let’s recreate the animated dropdown menu from the newest version of Chrome fo
 Create a new folder and a new index.html file. Inside index.html, paste the following:
 
 {% highlight javascript linenos %}
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;title&gt;&lt;/title&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
-  &lt;link href=&#39;http://fonts.googleapis.com/css?family=Roboto:400&#39; rel=&#39;stylesheet&#39; type=&#39;text/css&#39;&gt;
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width">
+  <link href=&#39;http://fonts.googleapis.com/css?family=Roboto:400&#39; rel=&#39;stylesheet&#39; type=&#39;text/css&#39;>
 
-&lt;/head&gt;
+</head>
 
-&lt;body&gt;
+<body>
 
-&lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;jquery.velocity.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;velocity.ui.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;react.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;JSXTransformer.js&quot;&gt;&lt;/script&gt;
+<script src="jquery.min.js"></script>
+<script src="jquery.velocity.min.js"></script>
+<script src="velocity.ui.min.js"></script>
+<script src="react.js"></script>
+<script src="JSXTransformer.js"></script>
 
-&lt;/body&gt;
-&lt;/html&gt;
+</body>
+</html>
 {% endhighlight %}
 
 There's nothing too exciting here. We’re importing a custom font from Google and including a few libraries: jQuery, Velocity.js, and React.js. The first two are not required, but we're using them to speed up our work a bit. One thing you might be wondering about is the  JSXTransformer. It is necessary to interpret the JSX syntax, but we'll use it only for the purposes of this tutorial - normally you wouldn't include it in production and instead you'd precompile the JSX files.
@@ -45,7 +45,7 @@ There's nothing too exciting here. We’re importing a custom font from Google a
 You can drop the below css between the <head> tags or in a separate stylesheet – it's up to you.
 
 {% highlight javascript linenos %}
-&lt;style type=&quot;text/css&quot;&gt;
+<style type="text/css">
 
   * {
     margin: 0;
@@ -179,29 +179,29 @@ You can drop the below css between the <head> tags or in a separate stylesheet �
     box-shadow: 0 3px 6px 2px rgba(0, 0, 0, 0.20);
   }
 
-&lt;/style&gt;
+</style>
 {% endhighlight %}
 
 <h2>Step 3: Create your Components.</h2>
 To create your first component, paste the following code below the libraries:
 
 {% highlight javascript linenos %}
-&lt;script type=&quot;text/jsx&quot;&gt;
+<script type="text/jsx">
   /** @jsx React.DOM */
   var App = React.createClass({
 
     render: function() {
       return (
-        &lt;div className=&quot;main-wrapper&quot;&gt;
-          &lt;div className=&quot;btn&quot;&gt;Click me&lt;/div&gt;
-        &lt;/div&gt;
+        <div className="main-wrapper">
+          <div className="btn">Click me</div>
+        </div>
       );
     }
   });
 
-  React.renderComponent(&lt;App /&gt;,  document.body);
+  React.renderComponent(<App />,  document.body);
 
-&lt;/script&gt; 
+</script> 
 {% endhighlight %}
 
 You may have noticed that the script tag requires a special type "text/jsx" and a strange little comment at the beginning of the code sample - it's just a quirky React requirement. Don't worry about it too much, but don't forget to include it in every JSX file. 
@@ -213,7 +213,7 @@ var DropdownItem = React.createClass({
 
   render: function() {
     return (
-      &lt;li className=&quot;dropdown-item&quot;&gt;{this.props.name}&lt;/li&gt;
+      <li className="dropdown-item">{this.props.name}</li>
     );
   }
 });
@@ -228,12 +228,12 @@ var DropdownItems = React.createClass({
 
   render: function() {
     var items = this.props.items.map(function(item, i) {
-      return (&lt;DropdownItem name={item} key={i} /&gt;);
+      return (<DropdownItem name={item} key={i} />);
     }.bind(this))
     return (
-      &lt;ul className=&quot;dropdown-items&quot;&gt;
+      <ul className="dropdown-items">
         {items}
-      &lt;/ul&gt;
+      </ul>
     );
   }
 });
@@ -254,39 +254,39 @@ var Icon = React.createClass({
   },
 
   render: function() {
-    if (this.props.type === &quot;star&quot;) {
+    if (this.props.type === "star") {
       return (
-        &lt;div className=&quot;icon icon-star&quot;&gt;
-          &lt;svg viewBox=&quot;0 0 32 32&quot;&gt;
-            &lt;path d=&quot;M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798zM16 23.547l-6.983 3.671 1.334-7.776-5.65-5.507 7.808-1.134 3.492-7.075 3.492 7.075 7.807 1.134-5.65 5.507 1.334 7.776-6.983-3.671z&quot; fill={this.props.fill}&gt;&lt;/path&gt;
-          &lt;/svg&gt;
-        &lt;/div&gt;
+        <div className="icon icon-star">
+          <svg viewBox="0 0 32 32">
+            <path d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798zM16 23.547l-6.983 3.671 1.334-7.776-5.65-5.507 7.808-1.134 3.492-7.075 3.492 7.075 7.807 1.134-5.65 5.507 1.334 7.776-6.983-3.671z" fill={this.props.fill}></path>
+          </svg>
+        </div>
       );
-    } else if (this.props.type === &quot;reload&quot;) {
+    } else if (this.props.type === "reload") {
       return (
-        &lt;div className=&quot;icon icon-reload&quot;&gt;
-          &lt;svg viewBox=&quot;0 0 32 32&quot;&gt;
-            &lt;path d=&quot;M32 12h-12l4.485-4.485c-2.267-2.266-5.28-3.515-8.485-3.515s-6.219 1.248-8.485 3.515c-2.266 2.267-3.515 5.28-3.515 8.485s1.248 6.219 3.515 8.485c2.267 2.266 5.28 3.515 8.485 3.515s6.219-1.248 8.485-3.515c0.189-0.189 0.371-0.384 0.546-0.583l3.010 2.634c-2.933 3.349-7.239 5.464-12.041 5.464-8.837 0-16-7.163-16-16s7.163-16 16-16c4.418 0 8.418 1.791 11.313 4.687l4.687-4.687v12z&quot; fill={this.props.fill}&gt;&lt;/path&gt;
-          &lt;/svg&gt;
-        &lt;/div&gt;  
+        <div className="icon icon-reload">
+          <svg viewBox="0 0 32 32">
+            <path d="M32 12h-12l4.485-4.485c-2.267-2.266-5.28-3.515-8.485-3.515s-6.219 1.248-8.485 3.515c-2.266 2.267-3.515 5.28-3.515 8.485s1.248 6.219 3.515 8.485c2.267 2.266 5.28 3.515 8.485 3.515s6.219-1.248 8.485-3.515c0.189-0.189 0.371-0.384 0.546-0.583l3.010 2.634c-2.933 3.349-7.239 5.464-12.041 5.464-8.837 0-16-7.163-16-16s7.163-16 16-16c4.418 0 8.418 1.791 11.313 4.687l4.687-4.687v12z" fill={this.props.fill}></path>
+          </svg>
+        </div>  
       );
-    } else if (this.props.type === &quot;options&quot;) {
+    } else if (this.props.type === "options") {
       return (
-        &lt;div className=&quot;icon icon-options&quot; onClick={this.props.handleClick}&gt;
-          &lt;svg viewBox=&quot;0 0 24 24&quot; height=&quot;100%&quot; width=&quot;100%&quot;&gt;
-            &lt;g&gt;
-              &lt;path d=&quot;M12,8c1.1,0,2-0.9,2-2s-0.9-2-2-2c-1.1,0-2,0.9-2,2S10.9,8,12,8z M12,10c-1.1,0-2,0.9-2,2s0.9,2,2,2c1.1,0,2-0.9,2-2S13.1,10,12,10z M12,16c-1.1,0-2,0.9-2,2s0.9,2,2,2c1.1,0,2-0.9,2-2S13.1,16,12,16z&quot; fill={this.props.fill}&gt;&lt;/path&gt;
-            &lt;/g&gt;
-          &lt;/svg&gt;
-        &lt;/div&gt;
+        <div className="icon icon-options" onClick={this.props.handleClick}>
+          <svg viewBox="0 0 24 24" height="100%" width="100%">
+            <g>
+              <path d="M12,8c1.1,0,2-0.9,2-2s-0.9-2-2-2c-1.1,0-2,0.9-2,2S10.9,8,12,8z M12,10c-1.1,0-2,0.9-2,2s0.9,2,2,2c1.1,0,2-0.9,2-2S13.1,10,12,10z M12,16c-1.1,0-2,0.9-2,2s0.9,2,2,2c1.1,0,2-0.9,2-2S13.1,16,12,16z" fill={this.props.fill}></path>
+            </g>
+          </svg>
+        </div>
       );
-    } else if (this.props.type === &quot;arrow&quot;) {
+    } else if (this.props.type === "arrow") {
       return (
-        &lt;div className=&quot;icon icon-arrow&quot;&gt;
-          &lt;svg viewBox=&quot;0 0 32 32&quot;&gt;
-            &lt;path d=&quot;M19.414 27.414l10-10c0.781-0.781 0.781-2.047 0-2.828l-10-10c-0.781-0.781-2.047-0.781-2.828 0s-0.781 2.047 0 2.828l6.586 6.586h-19.172c-1.105 0-2 0.895-2 2s0.895 2 2 2h19.172l-6.586 6.586c-0.39 0.39-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414c0.781 0.781 2.047 0.781 2.828 0z&quot; fill={this.props.fill}&gt;&lt;/path&gt;
-          &lt;/svg&gt;
-        &lt;/div&gt;
+        <div className="icon icon-arrow">
+          <svg viewBox="0 0 32 32">
+            <path d="M19.414 27.414l10-10c0.781-0.781 0.781-2.047 0-2.828l-10-10c-0.781-0.781-2.047-0.781-2.828 0s-0.781 2.047 0 2.828l6.586 6.586h-19.172c-1.105 0-2 0.895-2 2s0.895 2 2 2h19.172l-6.586 6.586c-0.39 0.39-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414c0.781 0.781 2.047 0.781 2.828 0z" fill={this.props.fill}></path>
+          </svg>
+        </div>
       );
     }
   }
@@ -302,12 +302,12 @@ var DropdownIcons = React.createClass({
 
   render: function() {
     var items = this.props.items.map(function(item, i) {
-      return (&lt;li&gt;&lt;Icon type={item} key={i} /&gt;&lt;/li&gt;);
+      return (<li><Icon type={item} key={i} /></li>);
     }.bind(this))
     return (
-      &lt;ul className=&quot;dropdown-icons&quot;&gt;
+      <ul className="dropdown-icons">
         {items}
-      &lt;/ul&gt;
+      </ul>
     );
   }
 });
@@ -319,7 +319,7 @@ One of the best things about React is that you can easily keep SVG icons as comp
 Add the below code to implement the dropdown component from step 3:
 
 {% highlight javascript linenos %}
-$.Velocity.RegisterUI(&quot;slideFadeIn&quot;, {
+$.Velocity.RegisterUI("slideFadeIn", {
     defaultDuration: 100,
     calls: [[{
       opacity: [1, 0],
@@ -328,7 +328,7 @@ $.Velocity.RegisterUI(&quot;slideFadeIn&quot;, {
     }]]
 });
 
-$.Velocity.RegisterUI(&quot;slideInTop&quot;, {
+$.Velocity.RegisterUI("slideInTop", {
     defaultDuration: 100,
     calls: [[{
       opacity: [1, 0],
@@ -336,7 +336,7 @@ $.Velocity.RegisterUI(&quot;slideInTop&quot;, {
     }]]
 });
 
-$.Velocity.RegisterUI(&quot;slideInLeft&quot;, {
+$.Velocity.RegisterUI("slideInLeft", {
     defaultDuration: 100,
     calls: [[{
       opacity: [1, 0],
@@ -348,34 +348,34 @@ var DropdownMenu = React.createClass({
 
   componentWillUpdate: function(nextProps, nextState) {
     if (nextProps.visibility) {
-      $(&#39;.dropdown-menu&#39;).velocity(&quot;slideFadeIn&quot;, {easing: &#39;ease-in&#39;, duration: 75});
-      $(&#39;.dropdown-menu .dropdown-icons li&#39;).velocity(&quot;slideInLeft&quot;, {
+      $(&#39;.dropdown-menu&#39;).velocity("slideFadeIn", {easing: &#39;ease-in&#39;, duration: 75});
+      $(&#39;.dropdown-menu .dropdown-icons li&#39;).velocity("slideInLeft", {
         stagger: 40,
         duration: 350,
         easing: [0.610, 0.870, 0.710, 1.000],
       });
-      $(&#39;.dropdown-menu .dropdown-item&#39;).velocity(&quot;slideInTop&quot;, {
+      $(&#39;.dropdown-menu .dropdown-item&#39;).velocity("slideInTop", {
         stagger: 30,
         duration: 250,
         easing: [0.610, 0.870, 0.710, 1.000],
       });
     } else {
-      $(&#39;.dropdown-menu&#39;).velocity(&quot;reverse&quot;, {display: &#39;none&#39;});
-      $(&#39;.dropdown-menu .dropdown-item&#39;).velocity(&quot;reverse&quot;);
+      $(&#39;.dropdown-menu&#39;).velocity("reverse", {display: &#39;none&#39;});
+      $(&#39;.dropdown-menu .dropdown-item&#39;).velocity("reverse");
     }
   },
 
   render: function() {
     return (
-      &lt;div className=&quot;dropdown-menu&quot;&gt;
-        &lt;div className=&quot;dropdown-header&quot;&gt;
-          &lt;DropdownIcons /&gt;
-          &lt;div className=&quot;dropdown-toggle&quot;&gt;
-            &lt;Icon type=&quot;options&quot; handleClick={this.props.handleOptionsClick} fill=&quot;#0091EA&quot;/&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;DropdownItems /&gt;
-      &lt;/div&gt;
+      <div className="dropdown-menu">
+        <div className="dropdown-header">
+          <DropdownIcons />
+          <div className="dropdown-toggle">
+            <Icon type="options" handleClick={this.props.handleOptionsClick} fill="#0091EA"/>
+          </div>
+        </div>
+        <DropdownItems />
+      </div>
     );
   }
 });
@@ -403,14 +403,14 @@ var App = React.createClass({
 
   render: function() {
     return (
-      &lt;div className=&quot;main-wrapper&quot;&gt;
-        &lt;div className=&quot;header&quot;&gt;
-          &lt;div className=&quot;header-inner&quot;&gt;
-            &lt;Icon type=&quot;options&quot; fill=&quot;#ffffff&quot; handleClick={this.dropdownToggle}/&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;DropdownMenu visibility={this.state.dropdownVisible} handleOptionsClick={this.dropdownToggle} /&gt;
-      &lt;/div&gt;
+      <div className="main-wrapper">
+        <div className="header">
+          <div className="header-inner">
+            <Icon type="options" fill="#ffffff" handleClick={this.dropdownToggle}/>
+          </div>
+        </div>
+        <DropdownMenu visibility={this.state.dropdownVisible} handleOptionsClick={this.dropdownToggle} />
+      </div>
     );
   }
 });

@@ -83,7 +83,7 @@ def thing(*x): print x
     ngrams_two = [ngram(doc_two,elem) for elem in xrange(1,4)]
 
     #longer body of text should be looped through
-    if len(ngrams_one) &lt; len(ngrams_two):
+    if len(ngrams_one) < len(ngrams_two):
         ngrams_one,ngrams_two = ngrams_two, ngrams_one
     word_choice_count = 0 
     phrase_choice_count = 0

@@ -105,9 +105,9 @@ LinkedList.prototype.getHead = function(data){
     return this.head;
 }
 LinkedList.prototype.get = function(offset){
-    if(offset &lt; this.length) {
+    if(offset < this.length) {
         var cur = this.head;
-        for(var i = 0; i &lt; offset;i++){
+        for(var i = 0; i < offset;i++){
             cur = cur.next;
         }
         return cur;
@@ -127,8 +127,8 @@ LinkedList.prototype.remove = function(data){
         var prev = this.head;
         var counter = 0;
         while(cur.data != data){
-            if(counter &lt; this.length){
-                if(counter &gt; 0){
+            if(counter < this.length){
+                if(counter > 0){
                     prev = prev.next;
                 }
                 cur = cur.next;
@@ -180,9 +180,9 @@ This small bit of code is the foundation of understanding how references work. I
 If we look above to our get method, we see the true power and difficulty of working with references:
 {% highlight javascript linenos %}
 LinkedList.prototype.get = function(offset){
-    if(offset &lt; this.length) {
+    if(offset < this.length) {
         var cur = this.head;
-        for(var i = 0; i &lt; offset;i++){
+        for(var i = 0; i < offset;i++){
             cur = cur.next;
         }
         return cur;
@@ -196,7 +196,7 @@ It is here in the for-loop: <em>cur = cur.next;</em> What could that bizzare loo
 We may think of this statement as similar to updating a counter in a while loop:
 {% highlight javascript linenos %}
 var counter = 0;
-while(counter &lt; 7){
+while(counter < 7){
  i = i + 1;
  console.log(i);
 }
@@ -204,7 +204,7 @@ while(counter &lt; 7){
 Although you may be more familiar with this short hand:
 {% highlight javascript linenos %}
 var counter = 0;
-while(counter &lt; 7){
+while(counter < 7){
  i++;
  console.log(i);
 }
@@ -243,7 +243,7 @@ var prettyPrint = function(cur){
 }
 
 var append = function(cur,data){
-    if(data &lt;= cur.data ){
+    if(data <= cur.data ){
         if(cur.left == null){
             cur.left = new Node(data,null,null);
         } else{
@@ -420,7 +420,7 @@ Graph.prototype.addEdge = function(start,end){
 }
 
 Graph.prototype.printNodes = function(){
-    for(var i = 0;i &lt; this.node_list.length;i++){
+    for(var i = 0;i < this.node_list.length;i++){
         console.log(this.node_list[i].name +":");
         console.log(this.node_list[i].edge_list);
     }

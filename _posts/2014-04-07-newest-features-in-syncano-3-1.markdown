@@ -10,13 +10,13 @@ summary: "We’re excited to open Syncano to the public for the first time with 
 <p dir="ltr">We’re excited to open Syncano to the public for the first time with version 3.1! While we’re still in beta, we feel this new version is a huge accomplishment equipped with a simplified sign up process, completely re-invented admin GUI, new API functionality, and easier access to support. Here are some of our key new features:<!--more--></p>
 
 <h2 dir="ltr">Simplified Login and Social Media Authentication</h2>
-<p dir="ltr">You no longer need a code to sign up, and we've added social media authentication so you can quickly register and log in with Github, Google, Amazon, Bitbucket and Twitter. (You can manage all of your social media connections by going to <em>Account</em> &gt; <em>Authentication</em> in your admin GUI.)</p>
+<p dir="ltr">You no longer need a code to sign up, and we've added social media authentication so you can quickly register and log in with Github, Google, Amazon, Bitbucket and Twitter. (You can manage all of your social media connections by going to <em>Account</em> > <em>Authentication</em> in your admin GUI.)</p>
 <p dir="ltr"><a href="http://www.syncano.com/wp-content/uploads/2014/04/Screen-shot-2014-04-06-at-9.43.59-PM.png"><img class="alignnone size-large wp-image-2226" src="http://www.syncano.com/wp-content/uploads/2014/04/Screen-shot-2014-04-06-at-9.43.59-PM-1024x619.png" alt="Login Page 3-1" width="800" /></a></p>
 
 <h2 dir="ltr">Redesigned and Improved Admin GUI Panel</h2>
 <p dir="ltr">We’ve completely recreated the Admin GUI from the ground up to make it simpler, easier to use, and up to 30 times faster. In addition to a new look and feel, we’ve added a settings tab, the ability to create and manage multiple instances, a drag and drop photo uploader, and a simple way to add parent-child relationships to data objects.</p>
 <p dir="ltr"><a href="http://www.syncano.com/wp-content/uploads/2014/04/data-object.png"><img class="alignnone size-full wp-image-2227" src="http://www.syncano.com/wp-content/uploads/2014/04/data-object.png" alt="Set Child or Parent" width="800" /></a></p>
-<p dir="ltr">Through the "Settings" tab, you can manage the administrators of your instance and generate API keys for your applications. Additionally, you can now create up to 10 instances per user by going to <em>Account &gt; My Instances</em> and clicking "Create new instance."</p>
+<p dir="ltr">Through the "Settings" tab, you can manage the administrators of your instance and generate API keys for your applications. Additionally, you can now create up to 10 instances per user by going to <em>Account > My Instances</em> and clicking "Create new instance."</p>
 <p dir="ltr"><a href="http://www.syncano.com/wp-content/uploads/2014/04/Instances.png"><img class="alignnone size-full wp-image-2267" src="http://www.syncano.com/wp-content/uploads/2014/04/Instances.png" alt="Instances" width="785" height="339" /></a></p>
 
 <h2 dir="ltr">Faster Notifications and Improved Data Subscriptions</h2>

@@ -280,7 +280,7 @@ class Log(db.Model):
         self.ip_addr = ip_addr
 
     def __repr__(self):
-        return '&lt;ip_address %r&gt;' % self.ip_addr
+        return '<ip_address %r>' % self.ip_addr
 
 @app.route("/",methods=["GET","POST"])
 def index():

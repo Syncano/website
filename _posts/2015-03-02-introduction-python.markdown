@@ -43,12 +43,12 @@ This simple one line program encapsulates everything about Python. For a point o
         }
     }{% endhighlight %}
 And in C++
-{% highlight javascript linenos %}#include &lt;iostream&gt;
+{% highlight javascript linenos %}#include <iostream>
 using namespace std;
 
 int main(void){
 
-    cout &lt;&lt; "Hello there, my name is Eric and I like warm hugs" &lt;&lt; endl; 
+    cout << "Hello there, my name is Eric and I like warm hugs" << endl; 
     return 0;
 }{% endhighlight %}
 As you can see, it requires significantly more work to do simple things in older languages like Java and C++ than it does in newer languages like Python.
@@ -79,7 +79,7 @@ The next functions to understand are <em>raw_input</em> and <em>str</em>. But be
 <h3 id="toc_5">Math versus CS - functions</h3>
 As you might recall from elementary school:
 
-f(x) -&gt; y can be thought of as: y = f(x)
+f(x) -> y can be thought of as: y = f(x)
 
 Where x is the input of the function f, and y is the output of f. In this way we can say, f is a function that 'maps' x to y. Thus it is fair to say that f(x) is equal to y, hence y = f(x).
 
@@ -198,7 +198,7 @@ Now that we can make some simple mathematical functions, let's get a little more
 <h3 id="toc_9">Boolean Values</h3>
 A boolean is a statement that evaluates to true or false. The boolean was named after George Boole - its creator. They have proven to be extremely valuable for mathematics, computer science, and a number of other fields.
 
-Boolean statements typically involve one or more of the boolean operators. In Python these are <em>and</em>, <em>or</em>, <em>not</em>, <em>&lt;</em>,<em>&gt;</em>,<em>==</em>,<em>&lt;=</em>,<em>&gt;=</em>.
+Boolean statements typically involve one or more of the boolean operators. In Python these are <em>and</em>, <em>or</em>, <em>not</em>, <em><</em>,<em>></em>,<em>==</em>,<em><=</em>,<em>>=</em>.
 
 Here are some examples of boolean statements in Python:
 
@@ -206,10 +206,10 @@ Here are some examples of boolean statements in Python:
 
 print 5 == '5'
 print "this" == "this"
-print 4&lt;7
+print 4<7
 print 4 == 7
-print 4 &lt; 7 and 7 &lt; 4
-print 4 &lt; 7 or 7 &lt; 4
+print 4 < 7 and 7 < 4
+print 4 < 7 or 7 < 4
 print not "everything" == "anything"
 
 {% endhighlight %}
@@ -233,7 +233,7 @@ Here's a concrete example:
 {% highlight javascript linenos %}
 
 x = 4
-if x &lt; 5:
+if x < 5:
     print x
 
 {% endhighlight %}
@@ -264,7 +264,7 @@ A concrete example:
 
 x = 5
 y = 7
-if x &lt; y:
+if x < y:
     print "x is less than y"
 else:
     print "x is greater than or equal to y"
@@ -326,8 +326,8 @@ The number of libraries available for import is one reason the Python language i
 <h2 id="toc_13">Basic Data Structures</h2>
 A data structure in Python is kind of like a variable, except it holds more values or it treats values in a particular way. The two most used data structures in Python are:
 <ol>
-  <li>lists - &gt; [ ]</li>
-  <li>dictionaries -&gt; { }</li>
+  <li>lists - > [ ]</li>
+  <li>dictionaries -> { }</li>
 </ol>
 lists hold elements like this:
 
@@ -433,7 +433,7 @@ A big problem in mathematics is optimization. By making use of a for loop, we ca
 def find_max(input):
     max = input[0]
     for elem in input:
-        if elem &gt; max:
+        if elem > max:
             max = elem
     return max
     
