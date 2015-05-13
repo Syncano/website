@@ -157,6 +157,8 @@ class ViewController: JSQMessagesViewController {
         self.messages += [message]
     }
     self.collectionView.reloadData()
+    self.senderDisplayName = self.userName
+    self.senderId = self.userName
 }
 {% endhighlight %}
 
@@ -168,14 +170,7 @@ class ViewController: JSQMessagesViewController {
 
 <p>Add the following code before the end of your class:</p>
 
-{% highlight javascript linenos %}func senderDisplayName() -> String! {
-    return self.userName
-}
-
-func senderId() -> String! {
-    return self.userName
-}
-
+{% highlight javascript linenos %}
 override func collectionView(collectionView: JSQMessagesCollectionView!, messageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageData! {
     var data = self.messages[indexPath.row]
     return data
@@ -225,10 +220,11 @@ override func didPressAccessoryButton(sender: UIButton!) {
 
 <p>For the chat app, we will need both Syncano and SyncServer objects. Lets define them at the beginning of our <em>ViewController</em> class.</p>
 
-{% highlight javascript linenos %}let syncano = Syncano(domain: "INSTANCE_NAME", apiKey: "API_KEY001122334455")
-    let syncServer = SyncanoSyncServer(domain: "INSTANCE_NAME", apiKey: "API_KEY001122334455")
-    let projectId = "1234"
-    let collectionId = "56789"
+{% highlight javascript linenos %}
+let syncano = Syncano(domain: "INSTANCE_NAME", apiKey: "API_KEY001122334455")
+let syncServer = SyncanoSyncServer(domain: "INSTANCE_NAME", apiKey: "API_KEY001122334455")
+let projectId = "1234"
+let collectionId = "56789"
 {% endhighlight %}
 
 <p>Replace data above with your actual API Key, instance name, and project/collection IDs.</p>
@@ -243,21 +239,25 @@ override func didPressAccessoryButton(sender: UIButton!) {
 
 <p>Now, instead of showing test messages, you'll want to show actual messages coming from Syncano. We'll do this by downloading the latest messages when the app starts in the <em>viewDidLoad</em> function. Notice we removed the code from before that added test messages:</p>
 
-{% highlight javascript linenos %}override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
-    self.userName = "iPhone"
-
-    let params = SyncanoParameters_DataObjects_Get(projectId: projectId, collectionId: self.collectionId)
-    self.syncano .dataGet(params, callback: { response in
-        for object in response.data as [SyncanoData] {
-            if let senderId = object.additional?["senderId"] as String? {
-                let message = JSQMessage(senderId: senderId, displayName: senderId, text: object.text)
-                self.messages += [message]
-            }
-        }
-        self.collectionView.reloadData()
-    })
+{% highlight javascript linenos %}
+override func viewDidLoad() {
+   super.viewDidLoad()
+   self.userName = "iPhone"
+   let params = SyncanoParameters_DataObjects_Get(projectId: projectId, collectionId: self.collectionId)
+   self.syncano .dataGet(params, callback: { response in
+      if let messages = response.data {
+         for object in messages {
+            let object = object as? SyncanoData
+            if let senderId = object?.additional?["senderId"] as? String {
+               let message = JSQMessage(senderId: senderId, displayName: senderId, text: object?.text)
+               self.messages += [message]
+         }
+      }
+   }
+   self.finishReceivingMessage()
+   })
+   self.syncServer.delegate = self
+   self.syncServer.connect(nil);
 }
 {% endhighlight %}
 
@@ -271,10 +271,11 @@ override func didPressAccessoryButton(sender: UIButton!) {
 
 <p>Replace the <em>didPressSendButton</em> function with:</p>
 
-{% highlight javascript linenos %}override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
-    let newMessage = JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text);
-    self.sendMessageToSyncano(newMessage);
-    }
+{% highlight javascript linenos %}
+override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
+   let newMessage = JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text);
+   self.sendMessageToSyncano(newMessage);
+}
 {% endhighlight %}
 
 <p>and add the following function at the end of your class implementation:</p>
@@ -323,11 +324,11 @@ func syncServer(syncServer: SyncanoSyncServer!, connectionClosedWithError error:
 }
 
 func syncServer(syncServer: SyncanoSyncServer!, notificationAdded addedData: SyncanoData!, channel: SyncanoChannel!) {
-    if let senderId = addedData.additional?["senderId"] as String? {
-        let message = JSQMessage(senderId: senderId, displayName: senderId, text: addedData.text)
-        self.messages += [message]
-    }
-    self.finishReceivingMessage()
+   if let senderId = addedData.additional?["senderId"] as? String {
+      let message = JSQMessage(senderId: senderId, displayName: senderId, text: addedData.text)
+      self.messages += [message]
+   }
+   self.finishReceivingMessage()
 }
 {% endhighlight %}
 
@@ -357,15 +358,16 @@ func syncServer(syncServer: SyncanoSyncServer!, notificationAdded addedData: Syn
 
 <p>Let's fix that by changing the <em>syncServer(syncServer: notificationAdded: channel:)</em> function so that it adds messages to our list only if the message wasn't sent by our user.</p>
 
-{% highlight javascript linenos %}func syncServer(syncServer: SyncanoSyncServer!, notificationAdded addedData: SyncanoData!, channel: SyncanoChannel!) {
-    if let senderId = addedData.additional?["senderId"] as String? {
-        if senderId == self.senderId {
-            return;
-        }
-        let message = JSQMessage(senderId: senderId, displayName: senderId, text: addedData.text)
-        self.messages += [message]
-    }
-    self.finishReceivingMessage()
+{% highlight javascript linenos %}
+func syncServer(syncServer: SyncanoSyncServer!, notificationAdded addedData: SyncanoData!, channel: SyncanoChannel!) {
+   if let senderId = addedData.additional?["senderId"] as? String {
+      if senderId == self.senderId {
+         return;
+      }
+      let message = JSQMessage(senderId: senderId, displayName: senderId, text: addedData.text)
+      self.messages += [message]
+   }
+   self.finishReceivingMessage()
 }
 {% endhighlight %}
 
@@ -394,6 +396,8 @@ func syncServer(syncServer: SyncanoSyncServer!, notificationAdded addedData: Syn
 <p>The above code first checks if there's any user name saved on our disk. If there's none, it generates a random number and combines it with the word <em>user</em>, so everyone ends with user name like <em>user1234566789</em>.</p>
 
 <p>It's not the most elegant solution - we'd like our users to able to change their user names, have their own avatars and be able to upload images as well! So, in Part 2, we'll go over just how to add those functions with Syncano, plus do some UI tweaking.</p>
+
+<p>First part of our demo you can find on <a href="https://github.com/lifcio/SyncanoChat">GitHub</a>.</p>
 
 <p>As always, if you have any troubles implementing the app, don't hesitate to leave a comment or ask for help at <a href="mailto:support@syncano.com">support@syncano.com</a>.</p>
 
