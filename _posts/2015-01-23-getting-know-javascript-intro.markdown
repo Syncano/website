@@ -25,7 +25,7 @@ That being said, browser security is continually improving. It's a slow process 
 Because its imperative that backwards compatibility to older sites isn't broken, security issues won't be going away any time soon. It's an important danger to consider, but it shouldn't stop you from using this wonderful flexible language. Just know about the traps out there so you are mindful to not fall into them.
 <h2>JavaScript and HTML</h2>
 Like CSS, JavaScript can live in the same file or a separate file from your HTML. In the interest of clarity, we'll show it in the same file as the HTML:
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 <!doctype html>
 <html>
 <body>
@@ -52,7 +52,7 @@ There are a bunch of things going on in this example. To run it, save it as a .h
 Now onto the actual JavaScript. First we call document.getElementById("demo").innerHTML and set it equal to the built in Date() function. This is an example of HTML and Javascript interacting with the DOM. The getElementById part of the of code references the "demo" id which we define in the p tag. Don't worry about the .innerHTML right now. When I explain the DOM in detail, it will become clear how it fits in. The next thing to notice is the onclick event in the button tag. This tells the browser when to execute the JavaScript. The major ways that JavaScript can be executed is on click, on hover, and on load. 
 
 In the next few examples, you will write pure JavaScript and learn the language. Here is a skeleton to run your JavaScript:
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 <!doctype html>
 <html>
 <body>
@@ -89,7 +89,7 @@ In computer science, a tree data structure is any data that is organized in a hi
 And here's what this looks like executed as an HTML tree:
 
 <img src="http://www.w3schools.com/js/pic_htmltree.gif" alt="" />
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 <html>
 <head>
@@ -104,7 +104,7 @@ And here's what this looks like executed as an HTML tree:
 {% endhighlight %}
 Notice that the DOM only shows the openning tags, because it is assumed that any openned tags will be closed.
 <h2>Example #1: Hello World!</h2>
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 <html>
 <body>
@@ -126,7 +126,7 @@ This first example follows traditions of the <a title="K&amp;R Book (introductio
 Notice that JavaScript is very heavy on object oriented programming. The way you interact with, access, and write data is through objects.
 
 For those of you unfamiliar with object oriented programming, you can find a good intro <a href="http://cs.nyu.edu/courses/spring13/CSCI-UA.0101-006/Notes.pdf">here.</a>
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 <HTML>
       <HEAD>
@@ -180,7 +180,7 @@ Write a few web forms. Get different kinds of information from the user. Return 
 For a reference to a list of common ways to interact with the DOM see: <a href="http://www.w3schools.com/js/js_htmldom_document.asp">JavaScript DOM reference</a>
 
 Next, we'll change a picture on click:
-{% highlight javascript linenos %}<!doctype html>
+{% highlight javascript linenos=table %}<!doctype html>
 <html>
 <body>
 
@@ -209,15 +209,15 @@ The code displays a picture of a many with a happy face and the text:  "The fac
 Then if you click the submit button the text and picture change from the smiling face to a very serious looking man with the text "The face is sad!"
 
 As we did in the first example, we made use of document.getElementById and then referenced two specific attributes, in this case src and innerHTML.  The src attribute of an img tag will change the image that is displayed.  We manipulate this with:
-{% highlight javascript linenos %}document.getElementById([name of tag]).src = [new image source]{% endhighlight %}
+{% highlight javascript linenos=table %}document.getElementById([name of tag]).src = [new image source]{% endhighlight %}
 &nbsp;
 
 We do the same thing with the text displayed by the html as follows:
-{% highlight javascript linenos %}document.getElementById([name of tag]).innerHTML = [new text]{% endhighlight %}
+{% highlight javascript linenos=table %}document.getElementById([name of tag]).innerHTML = [new text]{% endhighlight %}
 &nbsp;
 
 Notice the pattern for interacting with images and text is almost the same, the difference being the specific attribute being referenced.
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 <html>
 <body>
 
@@ -235,15 +235,15 @@ document.getElementById("changeable_text").style.color="blue";
 Here we've made some CSS happen on the fly! Typically when dealing with Javascript you'll want it to be caused by some user interaction like an onclick event or on hover event or something, however, I think it's also important to understand that this need not be the case.  Here we show that the Javascript does execute on load of the page.  Notice that we included the same text twice, once with the id="changeable_text" and once with it.  As you can see, since I reference the element by id, only the p tag with id="changeable_text" is affected.  To experiment with this, copy and paste the above code into your favorite text editor.  
 
 Try commenting out the
-{% highlight javascript linenos %}document.getElementById("changeable_text").style.color="blue";{% endhighlight %}
+{% highlight javascript linenos=table %}document.getElementById("changeable_text").style.color="blue";{% endhighlight %}
 
 By doing this:
 
-{% highlight javascript linenos %}//document.getElementById("changeable_text").style.color="blue";{% endhighlight %}
+{% highlight javascript linenos=table %}//document.getElementById("changeable_text").style.color="blue";{% endhighlight %}
 &nbsp;
 
 You should also try playing with the color of the text. Here's an example of another color you could set:
-{% highlight javascript linenos %}document.getElementById("changeable_text").style.color="green";{% endhighlight %}
+{% highlight javascript linenos=table %}document.getElementById("changeable_text").style.color="green";{% endhighlight %}
 &nbsp;
 
 All the major colors will work, give it a whirl!
@@ -265,7 +265,7 @@ Here's a list of some common HTML 'events':
 	<li>When a user strokes a key.</li>
 </ul>
 We've already seen examples of on-click events. Let's look at one more onclick now that we understand that the javascript is being used to handle some event.
-{% highlight javascript linenos %}<HTML>
+{% highlight javascript linenos=table %}<HTML>
  <HEAD>
  <TITLE>Greeting</TITLE>
 
@@ -301,7 +301,7 @@ Here, the new stuff is
 This covers two very big cases for onclick - manipulating something on the page and sending messages to the user. The alert pattern isn't used much in websites anymore, except when the user does something they really aren't supposed to. I personally enjoy the alert function for quick debugging. If you have a larger set of issues, you should always make use of developer tools for this! This can be accessed by right-clicking (two finger click on Mac) and going to inspect element. Then click on the console tab. This gives you a command line environment in your browser! If those steps were unclear, check out <a title="this video" href="https://www.youtube.com/watch?v=nOEw9iiopwI">this video</a> explaining how to do it, by showing you.
 
 Now that we have a strong grasp of onclick events and some of their uses lets look at another type of event in Javascript land, onload.
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 <!doctype html>
 <html>
 <body onload="checkCookies()">
@@ -327,7 +327,7 @@ else
 This code tells you whether or not cookies are enabled in your browser.  Notice the onload attribute in the body tag.  This ensures the Javascript is loaded first by the browser and is good practice.  The navigator class has a few useful functions, but the most useful is the cookiesEnabled method.  This let's us know if the user will be able to view the page in a stateful manner or not.  This allows us to program for both cases - when the cookies are enabled and when they are not.  If the idea of state doesn't make sense, don't worry, I'm going to get into cookies generally below.
 
 The another thing to understand here is the use of flow - namely through if/else statements.  An if statement is a way of ensuring code only executes under certain conditions.  The condition is listed in the parenthesis after the if keyword as follows:
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 if ( [boolean statement] ) {
 
 ... code goes here
@@ -335,7 +335,7 @@ if ( [boolean statement] ) {
 }
 {% endhighlight %}
 If the boolean statement evaluates to true then the code inside the curly braces will be executed.  If the boolean fails one can include another case like we did above:
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 if ([ boolean statement] {
 
 ..code goes here...
@@ -374,7 +374,7 @@ In the above example we told the user whether or not cookies were enabled.  Now
 <h2>How cookies work</h2>
 Cookies are data, stored in small text files on your computer. They are usually saved in name-value pairs like: username=Eric Schles or Syncano=awesome. When a browser requests a web page from the server, cookies belonging to the page are added to the request. This way, the server gets the necessary data to "remember" information about users. JavaScript can create cookies, read cookies, and delete cookies with the property document.cookie. Note cookies need to be enabled in order for us to create, read, or use cookies, which we get from the navigator class. So any functionality relating to cookies should be wrapped in an "if" statement that checks if cookies are enabled.
 <h2>Creating cookies</h2>
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 <!doctype html>
 <html>
 <body>
@@ -402,7 +402,7 @@ function displayCookies()
 
 {% endhighlight %}
 The above code should create five buttons. One that creates the firstname cookie, one that creates the lastname cookie, one that deletes the firstname cookie, one that deletes the lastname cookie, and one that displays all the cookies. Note this is a toy example and doesn't show you how people typically use cookies. A better example that does almost the same thing, but with far greater complexity is:
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 <html>
 <head>
 <script>
@@ -461,7 +461,7 @@ Now that we've learned some javascript, let's make use of it.  Lets make sure w
 Up until now we've only been manipulating attributes of our tags - creating some small sense of dynamics within our webpage.  Here we will learn how to create and remove html tags.  How to truly manipulate the DOM.  Thus allowing us to dynamically alter the overall structure of our webpages, creating a richer fuller user experience.
 <h3>Definition: Node</h3>
 To add a new element to the HTML DOM, you must create the element (element node) first, and then append it to an existing element
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 <!doctype html>
 <html>
 <body>
@@ -504,7 +504,7 @@ There are two key methods:
 </ul>
 </ul>
 Let's check out an example of setInterval
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 <!DOCTYPE html>
 <html>
 <body>
@@ -525,7 +525,7 @@ setInterval(function(){alert("Hello")},3000);
 
 {% endhighlight %}
 Now we'll look at setTimeout
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 <!DOCTYPE html>
 <html>
 <body>

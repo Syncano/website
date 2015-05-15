@@ -59,7 +59,7 @@ Sooner or later, you will end up with a pretty complex distributed system - and 
 With Docker, it's much easier to test solutions on a system level - by prototyping different task designs and the interactions between them.
 <h2>Your setup</h2>
 Start with the standard Django project structure. It can be created with django-admin, if you have it installed.
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 $ tree -I *.pyc
 .
@@ -87,7 +87,7 @@ $ tree -I *.pyc
 Since we are working with Docker, we need a proper Dockerfile to specify how our image will be built.
 <h3>Custom container</h3>
 <strong>Dockerfile</strong>
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
  
 # use base python image with python 2.7
 FROM python:2.7
@@ -107,7 +107,7 @@ RUN adduser --disabled-password --gecos '' myuser
 {% endhighlight %}
 Our dependencies are:
 <strong>requirements.txt</strong>
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 django==1.7.2
 celery==3.1.17
@@ -130,7 +130,7 @@ Here are the images I tested and selected for this project:
 Now you'll use <a href="http://www.fig.sh/">fig.sh</a> to combine your own containers with the ones we chose in the last section. If you're not familiar with Fig.sh, check out my post on <a href="http://www.syncano.com/docker-workflow-fig-sh/">making your Docker workflow awesome with fig</a>.
 
 <strong>fig.yml</strong>
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 # database container
 db:
@@ -177,7 +177,7 @@ worker:
 You've probably noticed that both the worker and web server run some starting scripts. Here they are:
 
 <strong>run_web.sh</strong>
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 #!/bin/sh
  
@@ -189,7 +189,7 @@ su -m myuser -c "python manage.py runserver 0.0.0.0:8000"
 
 {% endhighlight %}
 <strong>run_celery.sh</strong>
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 #!/bin/sh
  
@@ -206,7 +206,7 @@ At this stage, these scripts won't work as we'd like them to because we haven't 
 But before we get to that, there are some useful Celery settings that will make your system perform better. Below are complete settings of this django app.
 
 <strong>myproject/settings.py</strong>
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 import os
  
@@ -339,7 +339,7 @@ Those settings will configure django app so that it will discover PostgreSQL dat
 Now, it's time to connect Celery to the app. Create file <em>celeryconf.py</em> and paste in this code:
 
 <strong>myproject/celeryconf.py</strong>
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 import os
  
@@ -361,7 +361,7 @@ That should be enough to connect Celery to our app so the run_X scripts will wor
 Celery looks for tasks inside the <em>tasks.py</em> file in each Django app. Usually, tasks are created either with decorator or by inheriting after the Celery Task class.
 
 Here's how you can create a task using decorator:
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 @app.task
 def power(n):
@@ -370,7 +370,7 @@ def power(n):
 
 {% endhighlight %}
 And here's how you can create a task by inheriting after the Celery Task class:
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 class PowerTask(app.Task):
     def run(self, n):
@@ -381,7 +381,7 @@ class PowerTask(app.Task):
 Both are fine and good for slightly different use cases.
 
 <strong>myproject/tasks.py</strong>
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 from functools import wraps
  
@@ -451,7 +451,7 @@ If you have tasks in your system, how do you run them? In this section, you'll c
 To make it as simple as possible, your app will have one model and only one ViewSet (endpoint with many HTTP methods).
 
 Create your model, called <em>Job</em>, in <strong>myproject/models.py</strong>.
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 from django.db import models
  
@@ -493,7 +493,7 @@ class Job(models.Model):
 Then create a <em>serializer</em>, <em>view</em> and url configuration to access it.
 
 <strong>myproject/serializers.py</strong>
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 from rest_framework import serializers
  
@@ -506,7 +506,7 @@ class JobSerializer(serializers.HyperlinkedModelSerializer):
 
 {% endhighlight %}
 <strong>myproject/views.py</strong>
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 from rest_framework import mixins, viewsets
  
@@ -526,7 +526,7 @@ class JobViewSet(mixins.CreateModelMixin,
 
 {% endhighlight %}
 <strong>myproject/urls.py</strong>
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 from django.conf.urls import url, include
 from rest_framework import routers
@@ -547,7 +547,7 @@ urlpatterns = [
 
 {% endhighlight %}
 For completeness, there is also <strong>myproject/wsgi.py</strong> defining wsgi config for the project:
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 import os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "myproject.settings")
@@ -557,7 +557,7 @@ application = get_wsgi_application()
 
 {% endhighlight %}
 and <strong>manage.py</strong>
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 #!/usr/bin/env python
 import os
@@ -576,7 +576,7 @@ if __name__ == "__main__":
 That's all. Uh... lots of code. Luckily everything is on <a href="https://github.com/atteroTheGreatest/docker-Django-Celery">github</a>, so you can just fork it.
 <h2>Running the setup</h2>
 Since everything is run from Fig, make sure you have both Docker and Fig installed before you try to start the app:
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 $ cd /path/to/myproject/where/is/fig.yml
 $ fig build
@@ -590,7 +590,7 @@ Navigate in your browser to 127.0.0.1:8000 to browse your API and schedule some 
 Put this <strong>demo gif</strong> in the queue.
 <h2>Scale things out</h2>
 Currently we have only one instance of each container. We can get information about our group of containers with the <em>fig ps</em> command.
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 ✗ fig ps
   
@@ -605,7 +605,7 @@ dockerdjangocelery_worker_1     ./run_Celery.sh                  Up
 
 {% endhighlight %}
 Scaling out a container with Fig is extremely easy. Just use the <em>fig scale</em> command with the container name and amount:
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 ✗ fig scale worker=5
   
@@ -616,7 +616,7 @@ Starting dockerdjangocelery_worker_5...
 
 {% endhighlight %}
 Output says that Fig just created an additional four worker containers for us. We can double check it with the <em>fig ps</em> command again:
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 ➜  docker-django-celery git:(master) ✗ fig ps
   

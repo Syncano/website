@@ -23,7 +23,7 @@ The power of SQLAlchemy is many-fold, but I'll touch on just a few of a few feat
 
 <h3>from views.py:</h3>
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 
     @app.route("/signup", methods=["GET","POST"])
@@ -118,10 +118,10 @@ The power of SQLAlchemy is many-fold, but I'll touch on just a few of a few feat
 <p>Take a look at the '<em>signedup</em>' function which accomplishes four things:</p>
 
 <ol>
-<li><p>Create the database:{% highlight javascript linenos %}models.db.create_all(){% endhighlight %}</p></li>
-<li><p>Add data in memory from the program – {% highlight javascript linenos %}new_user = models.AccountHolder(username,password, email, phone){% endhighlight %}</p></li>
-<li><p>Add it to a temporary storage area – {% highlight javascript linenos %}models.db.session.add(new_user){% endhighlight %}</p></li>
-<li><p>Flush to the database – {% highlight javascript linenos %}models.db.session.commit(){% endhighlight %}</p></li>
+<li><p>Create the database:{% highlight javascript linenos=table %}models.db.create_all(){% endhighlight %}</p></li>
+<li><p>Add data in memory from the program – {% highlight javascript linenos=table %}new_user = models.AccountHolder(username,password, email, phone){% endhighlight %}</p></li>
+<li><p>Add it to a temporary storage area – {% highlight javascript linenos=table %}models.db.session.add(new_user){% endhighlight %}</p></li>
+<li><p>Flush to the database – {% highlight javascript linenos=table %}models.db.session.commit(){% endhighlight %}</p></li>
 </ol>
 
 
@@ -129,7 +129,7 @@ The power of SQLAlchemy is many-fold, but I'll touch on just a few of a few feat
 
 <h3>from models.py:</h3>
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
     from flask.ext.sqlalchemy import SQLAlchemy
 
     from app import app
@@ -171,7 +171,7 @@ The power of SQLAlchemy is many-fold, but I'll touch on just a few of a few feat
 
 <p>First, we create our DB object by instantiating a SQLAlchemy object from our '<em>app</em>'. Then we make use of the premade Model class that SQLAlchemy comes with. Within our AccountHolder class we just do some initialization and that's it. As a cannonical example, lets look at the following code:</p>
 
-{% highlight javascript linenos %}email = db.Column(db.String(120))
+{% highlight javascript linenos=table %}email = db.Column(db.String(120))
 {% endhighlight %}
 
 <p>'<em>db</em>' has a Column object and a number of associated database primitive datatype objects – in this example, a String class.</p>
@@ -180,24 +180,24 @@ The power of SQLAlchemy is many-fold, but I'll touch on just a few of a few feat
 
 <p>This is similar to having to do some static typing and should be familiar to folks coming from Java or C++. For those of you who only know dynamically typed languages, the computer operates on a set of primitive datatypes – namely, characters and numbers. In python, for instance, when we write the following line of code:</p>
 
-{% highlight javascript linenos %}x = "Hello"
+{% highlight javascript linenos=table %}x = "Hello"
 {% endhighlight %}
 
 <p>We are really doing:</p>
 
-{% highlight javascript linenos %}String x = String("Hello")
+{% highlight javascript linenos=table %}String x = String("Hello")
 {% endhighlight %}
 
 <p>These String keywords are implicit in any dynamically typed language. Which is pretty awesome – but comes with a cost. If you know the primitive types you're supposed to be working with, the computer can apply different optimizations to make your code run much faster.</p>
 
 <p>We could do the same thing for integers as follows:</p>
 
-{% highlight javascript linenos %}x = 0
+{% highlight javascript linenos=table %}x = 0
 {% endhighlight %}
 
 <p>is really:</p>
 
-{% highlight javascript linenos %}Integer x = Integer(0)
+{% highlight javascript linenos=table %}Integer x = Integer(0)
 {% endhighlight %}
 
 <p>And so on.</p>
@@ -206,7 +206,7 @@ The power of SQLAlchemy is many-fold, but I'll touch on just a few of a few feat
 
 <p>The '<em>__init__</em>' function is a general idea from object oriented programming in Python.  It stands for "initialize" and is used to initialize a class with specific values.  You need not have passed in the values as we did above.  If you wanted to, you could write a class as so:</p>
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 
     #A very simple class:
@@ -246,12 +246,12 @@ The power of SQLAlchemy is many-fold, but I'll touch on just a few of a few feat
 
 <p>Before we on, I want to give a quick note on the import statement, which might look a little weird to you:</p>
 
-{% highlight javascript linenos %}from app import app
+{% highlight javascript linenos=table %}from app import app
 {% endhighlight %}
 
 <p>Basically, I named the application '<em>app</em>' – which is a convention in Flask. I also happened to name the directory that the app lives in – '<em>app</em>'. If I decided to name the directory that the application lives in something else, like for instance '<em>anything</em>', the import statement would look like:</p>
 
-{% highlight javascript linenos %}from anything import app
+{% highlight javascript linenos=table %}from anything import app
 {% endhighlight %}
 
 <p>So back to our database stuff -</p>
@@ -260,7 +260,7 @@ The power of SQLAlchemy is many-fold, but I'll touch on just a few of a few feat
 
 <h3>querying for information:</h3>
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
     import models
 
     @app.route("/directory/<username>")
@@ -274,7 +274,7 @@ The power of SQLAlchemy is many-fold, but I'll touch on just a few of a few feat
 
 <p>Here, everything should already be clear except for the following line:</p>
 
-{% highlight javascript linenos %}    models.Contact.query.filter(models.Contact.username==username)
+{% highlight javascript linenos=table %}    models.Contact.query.filter(models.Contact.username==username)
 {% endhighlight %}
 
 <p>The Contact model comes with a bunch of built in functions. Here we make use of '<em>query</em>' and '<em>filter</em>' to look for all contacts associated with a specific username. Remember - the username is the username of the user who has the associated contact and not the username of the contact.  This is what allows us to make use of the above statement as is.</p>

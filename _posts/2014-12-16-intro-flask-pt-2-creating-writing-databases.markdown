@@ -21,7 +21,7 @@ An ORM makes writing SQL statements easier and higher level. It also works acros
 
 <h3>schema.sql:</h3>
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
     drop table if exists account_holder;
     create table account_holder (
     id integer primary key autoincrement,
@@ -32,7 +32,7 @@ An ORM makes writing SQL statements easier and higher level. It also works acros
 );
 {% endhighlight %}
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
     drop table if exists contact;
     create table contact (
     id integer primary key autoincrement,
@@ -47,7 +47,7 @@ An ORM makes writing SQL statements easier and higher level. It also works acros
 
 <h3>Let's explore the first statement:</h3>
 
-{% highlight javascript linenos %}drop table if exists account_holder;
+{% highlight javascript linenos=table %}drop table if exists account_holder;
 {% endhighlight %}
 
 <p>To understand this statement, we must first understand how databases are organized: by tables and columns. Tables are like the data structures of the database, and a table's columns are like the individual values of the data structure. Everything in a database also has a name.</p>
@@ -58,7 +58,7 @@ An ORM makes writing SQL statements easier and higher level. It also works acros
 
 <h3>Next we have:</h3>
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
     create table account_holder (
 
     id integer primary key autoincrement,
@@ -88,14 +88,14 @@ An ORM makes writing SQL statements easier and higher level. It also works acros
 
 <h3>Now that we understand our schema, let's create our database:</h3>
 
-{% highlight javascript linenos %}sqlite3 database.db < schema.sql
+{% highlight javascript linenos=table %}sqlite3 database.db < schema.sql
 {% endhighlight %}
 
 <p>Now let's look at some CRUD operations. These will be stored in <em>models.py</em>.</p>
 
 <h3>models.py:</h3>
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
     import sqlite3 as sql
 
     def insert_account_holder(email,username,phone,password):
@@ -147,7 +147,7 @@ An ORM makes writing SQL statements easier and higher level. It also works acros
 
 <h3>A closer look at the '<em>insert_account_holder</em>' function:</h3>
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
     def insert_account_holder(email,username,phone,password):    
         con = sql.connect("database.db")
         cur = con.cursor()
@@ -160,27 +160,27 @@ An ORM makes writing SQL statements easier and higher level. It also works acros
 
 <h3>Setup the connection to the database</h3>
 
-{% highlight javascript linenos %}con = sql.connect("database.db")
+{% highlight javascript linenos=table %}con = sql.connect("database.db")
 {% endhighlight %}
 
 <h3>Create a cursor object</h3>
 
-{% highlight javascript linenos %}cur = con.cursor()
+{% highlight javascript linenos=table %}cur = con.cursor()
 {% endhighlight %}
 
 <h3>Execute an SQL statement to send to the database:</h3>
 
-{% highlight javascript linenos %}cur.execute("INSERT INTO account_holder (email,username,phone,password) VALUES (?,?,?,?)", (email,username,phone,password))
+{% highlight javascript linenos=table %}cur.execute("INSERT INTO account_holder (email,username,phone,password) VALUES (?,?,?,?)", (email,username,phone,password))
 {% endhighlight %}
 
 <h3>If we are sending data to the database, then commit any changes:</h3>
 
-{% highlight javascript linenos %}con.commit()
+{% highlight javascript linenos=table %}con.commit()
 {% endhighlight %}
 
 <h3>And finally close out the connection:</h3>
 
-{% highlight javascript linenos %}con.close()
+{% highlight javascript linenos=table %}con.close()
 {% endhighlight %}
 
 <p>Now that we have a feel for what these steps mean in English, let's dive a little deeper.</p>
@@ -199,32 +199,32 @@ An ORM makes writing SQL statements easier and higher level. It also works acros
 <h3>Open the 'stream':</h3>
 
 <p>for a file:
-{% highlight javascript linenos %}f = open("file.txt.","w"){% endhighlight %}</p>
+{% highlight javascript linenos=table %}f = open("file.txt.","w"){% endhighlight %}</p>
 
 <p>for a database:
-{% highlight javascript linenos %}con = sql.connect("database.db"){% endhighlight %}</p>
+{% highlight javascript linenos=table %}con = sql.connect("database.db"){% endhighlight %}</p>
 
 <h3>write to the 'stream':</h3>
 
 <p>for a file:
-{% highlight javascript linenos %}f.write(stuff){% endhighlight %}</p>
+{% highlight javascript linenos=table %}f.write(stuff){% endhighlight %}</p>
 
 <p>for a database:
-{% highlight javascript linenos %}con.commit(){% endhighlight %}</p>
+{% highlight javascript linenos=table %}con.commit(){% endhighlight %}</p>
 
 <h3>close the 'stream':</h3>
 
 <p>for a file:
-{% highlight javascript linenos %}f.close(){% endhighlight %}</p>
+{% highlight javascript linenos=table %}f.close(){% endhighlight %}</p>
 
 <p>for a database:
-{% highlight javascript linenos %}con.close(){% endhighlight %}</p>
+{% highlight javascript linenos=table %}con.close(){% endhighlight %}</p>
 
 <p>One very nice keyword in Python is the "with" statement, which is the best way to keep your files secure. It has a lot of other uses, but we'll cover security (my favorite) in this post.</p>
 
 <h3>For files we can use "with" like this:</h3>
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
     with open("file.txt","w") as f:
         f.write("I am going to write a single line here:\
          Syncano is awesome, and so are you :)")
@@ -232,7 +232,7 @@ An ORM makes writing SQL statements easier and higher level. It also works acros
 
 <h3>For databases we can use "with" like this:</h3>
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
     with sqlite3.connect("database.db") as con:
         cur = con.cursor()
         cur.execute("INSERT INTO made_up_table (some_text) VALUES (?)" ,\
@@ -250,7 +250,7 @@ An ORM makes writing SQL statements easier and higher level. It also works acros
 
 <h3>Now we can safely re-write our functions to be more security centric:</h3>
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
     import sqlite3 as sql
 
     def insert_account_holder(email,username,phone,password):
@@ -266,7 +266,7 @@ An ORM makes writing SQL statements easier and higher level. It also works acros
 
 <h3>views.py:</h3>
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
     from app import app
     from flask import render_template,redirect, request, flash,g,session,url_for
     from models import *
@@ -304,7 +304,7 @@ An ORM makes writing SQL statements easier and higher level. It also works acros
 
 <p>There is a lot to digest here, unless you read <a href="http://www.syncano.com/flask-micro-framework-introduction/">my last post</a>. But, since I'll assume all of you are now familar enough with Flask OR you read my last post, I'm going to just going to explain the function calls that have to do with the database.</p>
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
     @app.route("/signedup", methods=["GET","POST"])
     def signedup():
 
@@ -322,7 +322,7 @@ An ORM makes writing SQL statements easier and higher level. It also works acros
 
 <p>Now let's look at querying the database for information:</p>
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
     @app.route("/directory/<username>")
     def directory(username):
         contacts = select_by_username_contact(username)
@@ -333,7 +333,7 @@ An ORM makes writing SQL statements easier and higher level. It also works acros
 
 <h3>schema.sql:</h3>
 
-{% highlight javascript linenos %}    drop table if exists account_holder;
+{% highlight javascript linenos=table %}    drop table if exists account_holder;
     create table account_holder (
         email text not null,
         username text primary key not null,
@@ -352,7 +352,7 @@ An ORM makes writing SQL statements easier and higher level. It also works acros
 
 <h3>how to make the database:</h3>
 
-<p>{% highlight javascript linenos %}sqlite3 database.db < schema.sql{% endhighlight %}</p>
+<p>{% highlight javascript linenos=table %}sqlite3 database.db < schema.sql{% endhighlight %}</p>
 
 <p>This concludes our basic introduction into SQL in Flask. But what happens when you want to send a new type of data to the database?  Or when you want to query for a new type of information?  When working with SQL, you'll either need to write a new method to do this - or you'll have to insert straight SQL into your code.  Either way, it's likely you'll be writing something that requires a lot of testing <em>and</em> won't be nearly as efficient as code someone else spent more time on. It's not a pretty solution.</p>
 

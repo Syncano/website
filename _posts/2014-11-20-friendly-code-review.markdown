@@ -48,7 +48,7 @@ Give people the benefit of the doubt. Ie., a docstring <em>'sfaldfja'</em> isn't
 Yeah, code reviews can be fun.
 <h4>Exhibit A</h4>
 If you see something like this in the code:
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 some_value = 300
 {% endhighlight %}
 Instead of commenting:
@@ -58,7 +58,7 @@ Try something like:
 
 <h4>Exhibit B</h4>
 For something like:
-{% highlight javascript linenos %}try:
+{% highlight javascript linenos=table %}try:
     do_something()
 except:
     pass

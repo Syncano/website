@@ -19,8 +19,8 @@ share_image: /public/intro-node-js.png
 
 <h3>On Ubuntu</h3>
 
-{% highlight javascript linenos %}sudo apt-get install nodejs #installing node{% endhighlight %}
-{% highlight javascript linenos %}sudo apt-get install npm #installing node package manager{% endhighlight %}
+{% highlight javascript linenos=table %}sudo apt-get install nodejs #installing node{% endhighlight %}
+{% highlight javascript linenos=table %}sudo apt-get install npm #installing node package manager{% endhighlight %}
 
 <p>Then you'll need to do the following on the command line:</p>
 
@@ -50,7 +50,7 @@ share_image: /public/intro-node-js.png
 
 <p>Open up your favorite text editor for writing code - for JS I really like vim - And type in the following:</p>
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 var http = require("http");
 
 http.createServer(function(request, response) {
@@ -72,7 +72,7 @@ console.log("Server running on http://localhost:5000");
 
 <p>Here's another way we have written the same code:</p>
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 var http = require("http");
 
 var f = function(request, response) {
@@ -101,7 +101,7 @@ console.log("Server running on http://localhost:5000");
 
 <strong>server.js:</strong>
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 var http = require('http');
 var fs = require('fs');
 
@@ -117,7 +117,7 @@ http.createServer(function(req, res){
 
 <strong>test.html:</strong>
 
-{% highlight javascript linenos %}<!doctype html>
+{% highlight javascript linenos=table %}<!doctype html>
 <html>
 <body>
 <p>Hello world! For real!</p>
@@ -137,7 +137,7 @@ http.createServer(function(req, res){
 
 <p>For most compilers and interpreters, code is executed in order, line by line.  Examples of this include the Java compiler, the Python interpreter, the Ruby interpreter, the C compiler, and the C++ compiler.  What makes the Node.js run time different is this:</p>
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
     var solution = solve_boolean_satisfiability_problem(data, function(err,data){
         var result = data;
     }); 
@@ -159,7 +159,7 @@ http.createServer(function(req, res){
 
 <strong>file name - server.js</strong>
 
-{% highlight javascript linenos %}var http = require("http");
+{% highlight javascript linenos=table %}var http = require("http");
 
 function start() {
   http.createServer(function(req,res){
@@ -178,7 +178,7 @@ exports.start = start;
 
 <strong>filename - run.js</strong>
 
-{% highlight javascript linenos %}var server = require("./server");
+{% highlight javascript linenos=table %}var server = require("./server");
 
 server.start();
 

@@ -489,6 +489,9 @@ form {
       font-family: @font-light;
       color: #363636;
       font-weight: normal;
+      strong {
+        font-family: @font-semi-bold;
+      }
     }
     p {
       color: #3d3d3d;
@@ -561,8 +564,9 @@ form {
     padding: 5px 0;
     background-color: #23241f;
     color: #f8f8f2;
+    font-family: 'Courier New', 'Courier';
     code {
-      font-family: 'Courier New', 'Courier';
+      font-family: inherit;
       line-height: 17px;
     }
     .lineno {
@@ -581,6 +585,42 @@ form {
     span.s2 {
       color: #E6DB74;
     }
+  }
+}
+
+.highlighttable {
+  width: 100%;
+  td.linenos {
+    width: 4%;
+    pre {
+      padding: 5px 10px;
+      text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+      background-color: #353631;
+      color: #839496;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-color: #23241f;
+    }
+  }
+  td.code {
+    pre {
+      padding-left: 10px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-color: #23241f;
+      display: block;
+      max-width: 720px;
+      overflow-x: scroll;
+      @media(min-width: 320px) and (max-width: 720px) {
+        padding-right: 500px;
+      }
+    }
+  }
+}
+
+.single-post {
+  .post-content {
+    overflow: hidden;
   }
 }
 
@@ -984,6 +1024,7 @@ form {
   background-color: @brand-primary;
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
   h1 {
     margin: 0 auto 90px;
     font-size: 73px;

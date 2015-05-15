@@ -19,7 +19,7 @@ There are many ways to to write classes in JavaScript. However, good taste and c
 Classes are a blueprint for a piece of code, and below we define our first class. It is similar to past examples you may have seen in that variables and functions exist, except they are bound together, creating a union of "nouns" and "verbs". The reason for this is to set up conventions around functionality. It tells future programmers where to put what functionality and gives hints on your notion of good design. Classes are technically unnecessary constructs for most code, but then again, so is using human language or comments. Everything we write below could be written in brainfuck or binary, but it isn't - because that would be a terrible idea. The same holds here with objects, which is why they are organized with classes.
 <h3>A First Example</h3>
 filename: classes.js
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 var Person = function(firstName){
     this.firstName = firstName;
 }
@@ -38,7 +38,7 @@ If you've been following our series on node.js, you'll be aware of the node comp
 <code>node classes.js \\ prints 'i am walking' to the screen</code>
 <h3>The node class</h3>
 Now that we understand what a class is, let's write a node.
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 var Node = function(data,next){
     this.data = data;
     this.next = next;
@@ -54,7 +54,7 @@ node.getData();
 {% endhighlight %}
 <h2>A First Data Structure - linked list</h2>
 Now that we have all the terminology out of the way, we are ready to create our first data structure: the linked list.
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 var Node = function(data,next){
     this.data = data;
     this.next = next;
@@ -166,7 +166,7 @@ There is a ton of stuff going on here, but the most important thing to understan
 Working with references is easy, once you understand it. There is, in fact, an arithemetic to the whole thing. But first let's see the syntax and let the mathematics come later.
 
 Say we have a Node class (as we do above). Now all we need to do to jump from one element to the next in a linked list is the following:
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 var head = Node(5,null); // recall that nodes have data and a variable next.
 console.log(head.data); //prints 5
 var node = Node(7,null);
@@ -178,7 +178,7 @@ So what's the big deal? Simple: we using data in one variable for another variab
 This small bit of code is the foundation of understanding how references work. It may seem quite obvious here, however it becomes less so within a linked list. In a linked list, we must concern ourselves with many, many variables, all linked by referneces.
 
 If we look above to our get method, we see the true power and difficulty of working with references:
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 LinkedList.prototype.get = function(offset){
     if(offset < this.length) {
         var cur = this.head;
@@ -194,7 +194,7 @@ LinkedList.prototype.get = function(offset){
 It is here in the for-loop: <em>cur = cur.next;</em> What could that bizzare looking statement mean? In fact it means take the value of cur's next and set it equal to cur. Recall that the assignment statement works from right to left, assigning the value what is to the right of the equals sign to what is to the left of the equals sign. And since we are dealing with objects, our reference to object becomes our object. Truly it is an odd circumstance we find ourselves in, but it is powerful.
 
 We may think of this statement as similar to updating a counter in a while loop:
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 var counter = 0;
 while(counter < 7){
  i = i + 1;
@@ -202,7 +202,7 @@ while(counter < 7){
 }
 {% endhighlight %}
 Although you may be more familiar with this short hand:
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 var counter = 0;
 while(counter < 7){
  i++;
@@ -216,7 +216,7 @@ Now that we understand linear data structures - data structures that can only be
 Tree's are exactly such a data structure.
 <h3>Definition</h3>
 A tree data structure is like a linked list, in that it is connected by a series of references and has a root node. However, a tree is quite different from a linked list in one very important way. Let's look at the node definition of a binary tree to understand this:
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 var Node = function(data,left,right){
     this.data = data;
     this.left = left;
@@ -231,7 +231,7 @@ A binary tree is aptly named. It can have at most two leaves for any of it's nod
 
 Rather than showing you everything, in this post, we'll simply cover binary trees - those with only two possible branches at each node. It's important to be aware however that your trees can have as many forks as you like. The qualification that a data structure is a tree is that it has a root node and terminal nodes. And that traversal is done from the root to the leaves (nodes that only reference null at left or right).
 <h3>How to traverse and append:</h3>
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 var prettyPrint = function(cur){
     if(cur.left != null){
         prettyPrint(cur.left);
@@ -296,7 +296,7 @@ If a recursive function should fail to terminate, such a function will continue 
 Understanding the idea behind recursion requires us to think visually for a moment. The best way to understand what is happening inside of a recursive function is to consider <a href="http://www.stsci.edu/~lbradley/seminar/fractals.html">fractal pictures</a> or a <a href="https://www.youtube.com/watch?v=G_GBwuYuOOs">factal video</a>
 
 Here is an example of a very simple recursive function:
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 var fib = function(n){
     if(n == 0)
         return 0;
@@ -311,7 +311,7 @@ var fib = function(n){
 Here the function fib is called inside itself with ever decreasing values being passed in. Notice that the function returns the result of the two function calls. This begins the recursive process and will continue until n is equal to 0,1, or 2. Once those conditions are met, the internal functions will move up the recursive chain returning all intermediate values and completing all calculations. The final result will then be returned once all calculations are completed.
 
 The same holds for the traversal in the binary tree definition above.
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 BinaryTree.prototype.prettyPrint = function(){
     var cur = this.head;
     prettyPrint(cur);
@@ -334,7 +334,7 @@ This method will print the tree in order - starting with the smallest element an
 The traversal starts by checking if the left node exists and then calling pretty print on it, assuming it does. Then it prints out the value of the current node, and finally the right.
 
 Thus if we append elements to the tree as follows:
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 var tree = new BinaryTree();
 tree.append(2);
 tree.append(1);
@@ -354,7 +354,7 @@ There aren't any new programming concepts in a graph, at least not for the graph
 
 Examples of uses of graph based analysis include social network analysis, computer networking, entropy of a system, and more.
 <h3>A graph data structure:</h3>
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 //rolling our own contains method
 //from: http://stackoverflow.com/questions/237104/array-containsobj-in-javascript
 
@@ -445,14 +445,14 @@ Mori is extremely powerful - it gives you access to lists, sequences, hash maps,
 
 Here are some examples:
 <h4>enumerate:</h4>
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 var xs = mori.range(10);
 mori.each(xs, function(n) {
 console.log(n);
 });
 {% endhighlight %}
 <h4>store:</h4>
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 //in a vector
 var vec = mori.vector(1,2,3);
 mori.nth(vec,1);

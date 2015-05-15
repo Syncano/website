@@ -20,7 +20,7 @@ Before you can get started, you'll need to download Python and Emacs, a text edi
 
 <strong>Emacs for Ubuntu and Mac OS X:</strong>
 
-Install Ubuntu: {% highlight javascript linenos %}sudo apt-get install emacs{% endhighlight %}
+Install Ubuntu: {% highlight javascript linenos=table %}sudo apt-get install emacs{% endhighlight %}
 
 Install Mac OS X: <a href="http://emacsformacosx.com/">Emacs for mac - installer</a>
 
@@ -34,16 +34,16 @@ After installing, extract the folder (typically you should extract to C:\Program
 
 To use Emacs, navigate to <em>[path-to-emacs-root-folder]\emacs-24.3\bin\emacs</em>. If you decided to install emacs in <em>C:\Program Files</em> this becomes: <em>C:\Program Files\emacs-24.3\bin\emacs</em>. Then double click <em>emacs.exe</em>
 <h2 id="toc_2">Python - elegance above all</h2>
-{% highlight javascript linenos %}print "Hello there, my name is Eric and I like warm hugs"{% endhighlight %}
+{% highlight javascript linenos=table %}print "Hello there, my name is Eric and I like warm hugs"{% endhighlight %}
 
 This simple one line program encapsulates everything about Python. For a point of reference, let's look at the equivalent program in Java:
-{% highlight javascript linenos %}public class Hello{
+{% highlight javascript linenos=table %}public class Hello{
     public static void main(String[] args){
         System.out.println("Hello there, my name is Eric and I like warm hugs");
         }
     }{% endhighlight %}
 And in C++
-{% highlight javascript linenos %}#include <iostream>
+{% highlight javascript linenos=table %}#include <iostream>
 using namespace std;
 
 int main(void){
@@ -54,7 +54,7 @@ int main(void){
 As you can see, it requires significantly more work to do simple things in older languages like Java and C++ than it does in newer languages like Python.
 <h2 id="toc_3">Running Python code</h2>
 Let's start by teaching the computer some manners. We'll do this by writing a simple program that asks you for your name and then greets you.
-{% highlight javascript linenos %}print "Hello there"
+{% highlight javascript linenos=table %}print "Hello there"
 name = str(raw_input("What's your name?")) #get's input from the user
 print "Hello,"+name
 print "How are you today?"{% endhighlight %}
@@ -67,7 +67,7 @@ To run this program (and the previous one) check out this quick video that shows
 Now that we know how to run Python programs, type the above code into Emacs, save it as greeting.py.
 
 You should see:
-{% highlight javascript linenos %}$ python greeting.py # type this into the terminal (make sure you are in the right folder)
+{% highlight javascript linenos=table %}$ python greeting.py # type this into the terminal (make sure you are in the right folder)
 Hello there
 What's your name? Eric
 Hello, Eric
@@ -87,7 +87,7 @@ In computer science, you can say the same thing: y = f(x) for function f, input 
 <h3 id="toc_6">Back to our examples</h3>
 Now that we understand that functions take in input and send back output, let's go back to the <em>raw_input</em> and <em>str</em> functions. The <raw_input function works like this:
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 raw_input("Some text goes in here")
 
@@ -97,7 +97,7 @@ Whatever is placed between the quotes is printed to the user. Then, the program 
 
 When we combine the raw_input function with the str function like this:
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 name = str(raw_input("What's your name?"))
 
@@ -107,18 +107,18 @@ What's really happening is:
 
 <em>"What's your name?"</em> is the input of the function <em>raw_input</em>, and the output is then passed as input to the <em>str</em> function. The result is saved in the variable <em>name</em>. Notice that we don't need to name the output of raw_input. So,
 
-{% highlight javascript linenos %}name = str(raw_input("What's your name?")){% endhighlight %}
+{% highlight javascript linenos=table %}name = str(raw_input("What's your name?")){% endhighlight %}
 
 is the same as,
 
-{% highlight javascript linenos %}tmp = raw_input("What's your name?"){% endhighlight %}
+{% highlight javascript linenos=table %}tmp = raw_input("What's your name?"){% endhighlight %}
 
-{% highlight javascript linenos %}name = str(tmp){% endhighlight %}
+{% highlight javascript linenos=table %}name = str(tmp){% endhighlight %}
 
 except explicitly assigned the returned result to a variable <em>tmp</em>.
 <h2 id="toc_7">Functions - Write your own!</h2>
 Now that you understand what a function is, it's time to make your own. In Python, there are a number of keywords - think of these words and phrases like power words - and everytime you learn one, you can do so much more with your program. Use the <em>def</em> keyword and the following structure to define your own function:
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 def [name of function]([any input variables, ]):
     .. starts block of code
@@ -126,7 +126,7 @@ def [name of function]([any input variables, ]):
     [optional return statement] [return value]
 {% endhighlight %}
 Making the structure concrete:
-{% highlight javascript linenos %}def f(x): 
+{% highlight javascript linenos=table %}def f(x): 
     return x
 
 #calling this function:
@@ -139,7 +139,7 @@ If you try running this code, you'll see that "Hello there" is printed to the sc
 
 Let's make our function do something more fun:
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 def f(name):
     return "Hello,"+name
@@ -152,7 +152,7 @@ If you run this code, you'll see it takes in a name (mine in this case) and retu
 
 Now, let's go nuts!
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 def g(name,greeting):
     return greeting + name
@@ -165,7 +165,7 @@ In this function we have two inputs, name and greeting. Since we are passing in 
 
 Now let's write a function that does something before returning.
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 def my_age_in_n_years(current_age,current_year,years_in_the_future):
     future_age = current_age + years_in_the_future
@@ -180,7 +180,7 @@ Try running this code!
 
 The final interesting point about functions in Python is that you can pass them as inputs in other functions.
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 def f(g,x):
     return g(x)
@@ -202,7 +202,7 @@ Boolean statements typically involve one or more of the boolean operators. In Py
 
 Here are some examples of boolean statements in Python:
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 print 5 == '5'
 print "this" == "this"
@@ -217,7 +217,7 @@ print not "everything" == "anything"
 If you run the above code, you will get back the boolean values true or false for each statement. As an exercise, try figuring out what each statement should return before running it.
 <h3 id="toc_10">If Statements</h3>
 The simplest piece of logic in Python is the if statement:
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 if [boolean statement]:
     code block starts ..
@@ -230,7 +230,7 @@ If the boolean statement evaluates to true, the code inside the tabbed area will
 
 Here's a concrete example:
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 x = 4
 if x < 5:
@@ -245,7 +245,7 @@ Now we know how to check if something is true before executing, which is great! 
 
 In general:
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 if [boolean statement]:
     code block starts ...
@@ -260,7 +260,7 @@ some other code happens here possibly...
 
 A concrete example:
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 x = 5
 y = 7
@@ -279,7 +279,7 @@ Stepping back a bit, logically we can think of an if statement as saying, "if th
 <h3 id="toc_12">A real example of when to use if statements</h3>
 Remember this code?:
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 def f(g,x):
     return g(x)
@@ -293,7 +293,7 @@ print f(thing,7)
 
 Our function f wasn't all that great - mostly because we don't account for the case when someone else (possibly ourselves in the future) calls f without passing the first input as a function. In this case, the above code doesn't work and will crash any programs we write. Clearly this is not good. But not to worry! With the help of the if statement and a little bit of Python magic, we'll be able to fix it:
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 import types
 def f(g,x):
@@ -311,7 +311,7 @@ print f(4,5)
 
 Try running the above code - what happens? It should print:
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 11
 g needs to be a function!
@@ -331,7 +331,7 @@ A data structure in Python is kind of like a variable, except it holds more valu
 </ol>
 lists hold elements like this:
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
     x = [1,2,3] 
     # or
@@ -343,7 +343,7 @@ lists hold elements like this:
 
 Where as dictionaries hold values like this:
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
     x = {"a":5,"b":7}
     #or 
@@ -355,7 +355,7 @@ Where as dictionaries hold values like this:
 
 To access the values in lists, do the following:
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
     x = [1,2,3]
     print x[0]
@@ -376,7 +376,7 @@ The numbers passed into the brackets are called the index of the value. The inde
 
 To access the values in dictionaries, do the following:
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
     x = {"a":5,"b":7}
     print x["a"]
@@ -403,7 +403,7 @@ Looping is possibly the most importand and powerful thing a program can do. With
 
 Possibly the easiest way to see this is with the following:
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 for i in xrange(100000):
     print i
@@ -414,7 +414,7 @@ If you run the above code, you'll see that all the numbers are printed out. The 
 
 Generally speaking, a for loop has the following syntax:
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 for [iterator] in [list of values]:
     code block start ..
@@ -428,7 +428,7 @@ Now that we understand how one might use a for loop, let's actually use it to do
 
 A big problem in mathematics is optimization. By making use of a for loop, we can do discrete optimization easily and quickly:
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 def find_max(input):
     max = input[0]
@@ -445,7 +445,7 @@ This code will work on any example where all the elements are integers or floats
 <h2 id="toc_16">Object Oriented Programming</h2>
 The final topic of the day is that of object oriented programming. This style of programming is used throughout the industry and is full of useful features to make a programmer's life easier. Here, we will merely introduce you to objects and their power.
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 class Node:
     def __init__(self,val,next=None):
@@ -468,7 +468,7 @@ Now onto understanding what the above code means. There's a ton of new syntax he
 
 <em>class</em> - the class keyword is used to state the name of the class. The general syntax is:
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 class [name of class]([optionally any base classes]):
 
@@ -476,7 +476,7 @@ class [name of class]([optionally any base classes]):
 
 Let's look at an even simpler example:
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 class Greeter: 
     def hello(name):
@@ -491,7 +491,7 @@ Before continuing, it is important to note that when a function is defined insid
 
 The class Greeter only has the single method called hello which takes name as input and then returns Hello + [name passed in]. Notice that to create a Greeter object you need to type it in with <em>()</em> and set it equal to a variable. This is known as instantiation.
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 def __init__(self,[optional inputs go here])
 
@@ -499,7 +499,7 @@ def __init__(self,[optional inputs go here])
 
 ^Most classes have a <em>__init__</em> method which takes in any input to the class. Recall from the above example:
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 x = Node(5)
 y = Node(6)
@@ -510,7 +510,7 @@ We can create as many nodes as we like and give them whatever initial values we 
 
 <em>self</em> - the self input is given to every single method of the class. The self keyword is used to reference any variables at runtime. You can think of the self keyword as a placeholder for the variable used for the class. Let's look at a simple example to understand this further:
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 class Hello:
     def __init__(self,name):
@@ -533,7 +533,7 @@ Although you shouldn't call them, you can. To see what special methods a given o
 
 Here's an example:
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 import os
 print dir(os)
@@ -544,7 +544,7 @@ As you'll see, there are a ton of methods and objects in the OS library and some
 
 So here's an example of this:
 
-{% highlight javascript linenos %}
+{% highlight javascript linenos=table %}
 
 def f(x):
     return x+2
