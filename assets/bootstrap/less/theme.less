@@ -293,6 +293,11 @@ form {
         display: block!important;
       }
     }
+    .col-md-1 {
+      @media(min-width: 992px) {
+        padding: 0;
+      }
+    }
     h2 {
       color: #363636;
       font-weight: bold;
@@ -499,6 +504,15 @@ form {
       margin: 0;
       font-size: 16px;
       line-height: 20px;
+    }
+  }
+  .footer-cta {
+    border-top: 2px solid @gray-light;
+    h2 {
+      margin-bottom: 25px;
+    }
+    a.btn {
+      padding: 15px 35px;
     }
   }
 }
@@ -1540,14 +1554,49 @@ footer.columns {
 //
 // Responsive -- Mobile
 // --------------------------------------------------
+@media (min-width: 320px) and (max-width: 520px) {
+.home {
+  .hero {
+    h1 {
+      br {
+        display: none;
+      }
+    }
+  }
+}
+}
+
+@media (min-width: 520px) and (max-width: 767px) {
+
+  footer.columns {
+    padding-top: 45px;
+    .row {
+      >.col-md-2 {
+        width: 24%;
+        float: left;
+        &.contact {
+          width: 30%;
+        }
+        &.company {
+          width: 22%;
+        }
+      }
+      >.col-md-4 {
+        clear: both;
+      }
+    }
+  }
+
+}
+
 @media (min-width: 320px) and (max-width: 767px) {
 .home {
   .hero {
     min-height: 500px;
-    margin-bottom: 60px;
     background-position: 50% 50%;
     .info {
-      top: 75px;
+      top: 100px;
+      padding: 0 15px;
       h1 {
         font-size: 36px;
         line-height: 40px;
@@ -1565,6 +1614,7 @@ footer.columns {
         width: 90%;
         max-width: 320px;
         margin-bottom: 20px;
+        margin-top: 30px;
       }
     }
   }
@@ -1589,6 +1639,7 @@ footer.columns {
   padding: 60px 0 40px;
   h2 {
     padding: 0 12px;
+    font-size: 32px;
   }
   h5 {
     font-size: 16px;
@@ -1601,7 +1652,7 @@ footer.columns {
   .col-xs-3 {
     padding-left: 0;
     padding-right: 0;
-    margin-bottom: 20px
+    margin-bottom: 20px;
   }
 }
 .testimonials {

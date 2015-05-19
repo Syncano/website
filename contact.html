@@ -11,13 +11,13 @@ images: ['/public/new_york_office_hydra_420px.jpg']
 <div class="container">
 	<div class="col-md-6 col-sm-8">
 		<h1>We Would Love to Hear from You!</h1>
-		<form action="//formspree.io/hello@syncano.com" method="POST">
+		<form action="//formspree.io/hello@syncano.com" method="POST" name="contact">
 			<input type="hidden" name="_subject" value="Contact Form Submission from syncano.com" />
 			<input type="text" name="_gotcha" style="display:none" />
 			<input type="hidden" name="_next" value="//syncano.com/thank-contacting-us" />
-			<div class="form-group">
-    			<label for="fname">First Name</label>
-    			<input class="form-control" type="text" name="fname">
+			<div class="form-group" id="firstName">
+    			<label for="fname">First Name*</label>
+    			<input class="form-control" type="text" name="fname" required>
   			</div>
 
   			<div class="form-group">
@@ -25,9 +25,9 @@ images: ['/public/new_york_office_hydra_420px.jpg']
     			<input class="form-control" type="text" name="lname">
   			</div>
 
-  			<div class="form-group">
-    			<label for="_replyto">Email</label>
-    			<input class="form-control" type="email" name="_replyto">
+  			<div class="form-group" id="email">
+    			<label for="_replyto">Email*</label>
+    			<input class="form-control" type="email" name="_replyto" required>
   			</div>
 
   			<div class="form-group">
@@ -47,3 +47,28 @@ images: ['/public/new_york_office_hydra_420px.jpg']
 		<img src="/public/new_york_office_hydra_420px.jpg" alt="New York City" />
 	</div>
 </div><!-- END container -->
+
+
+<script>
+var forms = document.getElementsByTagName('form');
+var firstNameContainer = document.getElementById("firstName");
+var emailContainer = document.getElementById("email");
+for (var i = 0; i < forms.length; i++) {
+    forms[i].noValidate = true;
+
+    forms[i].addEventListener('submit', function(event) {
+        //Prevent submission if checkValidity on the form returns false.
+        var firstNameVal = document.forms['contact']['fname'].value;
+        var emailVal = document.forms['contact']['_replyto'].value;
+        if (!event.target.checkValidity()) {
+            event.preventDefault();
+            if (firstNameVal == null || firstNameVal == '') {
+              firstNameContainer.setAttribute( 'class', 'form-group has-error' );
+            }
+            if (emailVal == null || emailVal == '') {
+              emailContainer.setAttribute( 'class', 'form-group has-error' );
+            }
+        }
+    }, false);
+}
+</script>
