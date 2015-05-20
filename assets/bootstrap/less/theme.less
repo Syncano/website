@@ -329,12 +329,16 @@ form {
     background-size: cover;
     min-height: 450px;
     background-position: 50% 50%;
+    background-color: @brand-primary;
     .info {
       position: absolute;
       top: 14%;
       left: 0;
       right: 0;
       text-align: center;
+      &.post {
+        top: 160px;
+      }
       h1 {
         font-size: 50px;
         line-height: 60px;
@@ -635,6 +639,7 @@ form {
 .single-post {
   .post-content {
     overflow: hidden;
+    padding-top: 40px;
   }
 }
 
@@ -988,7 +993,6 @@ form {
     font-family: @font-semi-bold;
     -webkit-font-smoothing: antialiased;
     color: white;
-    text-transform: uppercase;
   }
   h4 {
     font-family: @font-light;
@@ -1044,7 +1048,7 @@ form {
   h2 {
     font-size: 35px;
     line-height: 40px;
-    margin: 0 0 30px 0;
+    margin: 30px 0 20px 0;
     font-weight: 300;
     letter-spacing: -0.5px;
     color: #282828;
@@ -1706,6 +1710,20 @@ footer.columns {
     }
   }
 }
+
+.blog {
+  .hero {
+    h1 {
+      margin-bottom: 60px;
+    }
+    .info {
+      &.post {
+        top: 100px;
+      }
+    }
+  }
+}
+
 .posts {
   a.permalink {
     padding: 25px;

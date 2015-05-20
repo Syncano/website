@@ -3,6 +3,7 @@ layout: post
 title: Intro to Angular.js
 date: 2015-04-14 11:21:29
 author: eric_schles
+share_image: /public/intro-to-angular.png
 image: /public/intro-to-angular.png
 image_height: 605px
 summary: "Angular is a web framework for the front-end of your application. It’s responsible for accepting data from the middleware of your application and vice versa. Angular.js is similar to other templating engines. For those of you coming from Python, Angular is similar to jinja2. For those of you coming from Ruby, this is similar to HAML."
