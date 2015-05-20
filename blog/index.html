@@ -39,27 +39,30 @@ seo_description: "The Syncano blog covers all news and tips related to real-time
     {% assign counter=0 %}
     {% for post in site.posts %}
       {% assign counter=counter | plus:1 %}
-      {% if counter > 2 %}
+      {% assign loopindex = forloop.index | modulo: 2 %}
+      {% if counter > 1 %}
+      {% if loopindex == 0 or counter == 0 %}
+      <div class="row">
+      {% endif %}
         <div class="col-md-6 post-content">
-        <a href="{{ post.url }}" class="permalink">
-          <div class="background-image"><img src="{{post.share_image}}" /></div>
-          <div class="post-meta">
-            <span class="categories">
-            {% for pc in post.categories %}
-              {{ pc }}<span class="sep">, </span>
-            {% endfor %}
-            </span><!-- END categories -->
-            <h1 class="title">{{ post.title }}</h1>
-            {% assign author = site.data.authors[post.author] %}
-            {% if author %}
+          {% if post.share_image %}
+          <a href="{{post.url}}"><img src="{{post.share_image}}" /></a>
+          {% else %}
+          <a href="{{post.url}}" class="syncano-blue"></a>
+          {% endif %}
+          <h2 class="title"><a href="{{post.url}}">{{ post.title }}</a></h2>
+          <p class="summary">{{post.summary}}</p>
+          {% assign author = site.data.authors[post.author] %}
+          {% if author %}
             <span class="author">By {{ author.name }}</span>
-            {% endif %}
-          </div><!-- END post-meta -->
-        </a>
+          {% endif %}
         </div><!-- END col-md-6 -->
+        {% if loopindex == 1 or forloop.last %}
+        </div><!-- END row -->
+        {% endif %}
       {% endif %}
     {% endfor %}
-  </div>
-</div>
+  </div><!-- END posts -->
+</div><!-- END container -->
 
 {% include sharing.html %}
