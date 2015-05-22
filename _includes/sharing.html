@@ -28,6 +28,6 @@ function shareSubscribe() {
   var subscribeEmail = document.getElementById('subscribeEmail').value;
   analytics.alias(subscribeEmail);
   analytics.identify(subscribeEmail, {'email':subscribeEmail, 'Lifecycle stage':'lead', 'source':'Newsletter'});
-  analytics.track('Subscribed to newsletter via share');
+  analytics.track('Subscribed to newsletter');
 }
 </script>
