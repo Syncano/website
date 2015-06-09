@@ -2,9 +2,10 @@
 layout: default
 title: Blog
 body_class: ['blog ', 'archive']
+bg_color: "#2278CF"
 transparent_header: true
+category_nav: true
 nav_class: 'dark'
-bg_color: "#2f353e"
 seo_description: "The Syncano blog covers all news and tips related to real-time syncing and scaling data on the cloud."
 ---
     
@@ -13,8 +14,8 @@ seo_description: "The Syncano blog covers all news and tips related to real-time
   {% assign counter=counter | plus:1 %}
     {% if counter < 2 %}
     <a href="{{post.url}}">
-      <div class="hero" style="background-image: url('{{post.image}}'); min-height: {{post.image_height}};">
-        <div class="container">
+      <div class="container">
+        <div class="hero" style="background-image: url('{{post.image}}'); min-height: {{post.image_height}};">
           <div class="post info">
             <span class="categories">
             {% for pc in post.categories %}
@@ -36,15 +37,12 @@ seo_description: "The Syncano blog covers all news and tips related to real-time
 
 <div class="container blog">
   <div class="posts">
-    {% assign counter=0 %}
     {% for post in site.posts %}
       {% assign counter=counter | plus:1 %}
       {% assign loopindex = forloop.index | modulo: 2 %}
       {% if counter > 1 %}
-      {% if loopindex == 0 or counter == 0 %}
       <div class="row">
-      {% endif %}
-        <div class="col-md-6 post-content">
+        <div class="col-md-6 post-content col-md-offset-3">
           {% if post.share_image %}
           <a href="{{post.url}}"><img src="{{post.share_image}}" /></a>
           {% else %}
@@ -57,9 +55,7 @@ seo_description: "The Syncano blog covers all news and tips related to real-time
             <span class="author">By {{ author.name }}</span>
           {% endif %}
         </div><!-- END col-md-6 -->
-        {% if loopindex == 1 or forloop.last %}
-        </div><!-- END row -->
-        {% endif %}
+      </div>
       {% endif %}
     {% endfor %}
   </div><!-- END posts -->

@@ -284,98 +284,121 @@ form {
 // Reused Styles
 // --------------------------------------------------
 
-  .platforms {
-    background-color: #F6F6F6;
-    padding: 100px 0;
-    //weird breakpoint fix
-    .hidden-md {
-      @media (min-width: 1025px) and (max-width: 1199px) {
-        display: block!important;
-      }
+.btn-white {
+  background-color: white;
+  color: #3E3E3E;
+}
+
+.btn-blue {
+  background-color: #4A90E2;
+  color: white;
+}
+
+.platforms {
+  background-color: #F6F6F6;
+  padding: 100px 0;
+  //weird breakpoint fix
+  .hidden-md {
+    @media (min-width: 1025px) and (max-width: 1199px) {
+      display: block!important;
     }
-    .col-md-1 {
-      @media(min-width: 992px) {
-        padding: 0;
-      }
+  }
+  .col-md-1 {
+    @media(min-width: 992px) {
+      padding: 0;
+    }
+  }
+  h2 {
+    color: #363636;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 25px;
+    margin-top: 0;
+    font-family: OpenSansLight;
+    -webkit-font-smoothing: antialiased;
+  }
+  h5 {
+    color: #3d3d3d;
+    font-size: 15px;
+    line-height: 34px;
+    font-weight: normal;
+    font-family: @font-semi-bold;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.5px;
+    margin-bottom: 55px;
+  }
+  .microsoft {
+    @media (min-width: @grid-float-breakpoint) {
+      width: 12.67%;
+    }
+  }
+  img {
+    height: 60px;
+  }
+}
+
+.hero {
+  background-size: cover;
+  min-height: 450px;
+  background-position: 50% 50%;
+  background-color: #288AE2;
+  .info {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    &.post {
+      top: 160px;
+    }
+    h1 {
+      font-size: 50px;
+      line-height: 60px;
+      font-family: @font-bold;
+      font-weight: 500;
+      color: #ffffff;
+      margin-bottom: 40px;
+      margin-top: 0;
+      letter-spacing: -0.5px;
+      -webkit-font-smoothing: antialiased;
     }
     h2 {
-      color: #363636;
-      font-weight: bold;
-      font-size: 40px;
-      margin-bottom: 25px;
-      margin-top: 0;
-    }
-    h5 {
-      color: #3d3d3d;
-      font-size: 15px;
-      line-height: 34px;
+      font-family: @font-light;
+      font-size: 25px;
+      line-height: 36px;
       font-weight: normal;
-      font-family: @font-semi-bold;
+      color: #ffffff;
       -webkit-font-smoothing: antialiased;
-      letter-spacing: -0.5px;
-      margin-bottom: 55px;
-    }
-    .microsoft {
-      @media (min-width: @grid-float-breakpoint) {
-        width: 12.67%;
+      margin-bottom: 10px;
+      margin-top: 0;
+      > strong {
+        font-family: @font-semi-bold;
       }
     }
-    img {
-      height: 60px;
+    h3 {
+      font-family: @font-light;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 28px;
+      -webkit-font-smoothing: antialiased;
+      color: white;
+      margin: 0;
+    }
+  .btn {
+    margin-top: 80px;
+  }
+  .info {
+    top: 140px;
+  }
+    a.btn {
+      font-size: 13px;
+      padding: 15px 22px;
+      letter-spacing: 2px;
+      font-family: @font-bold;
+      -webkit-font-smoothing: antialiased;
     }
   }
-
-  .hero {
-    background-size: cover;
-    min-height: 450px;
-    background-position: 50% 50%;
-    background-color: @brand-primary;
-    .info {
-      position: absolute;
-      top: 14%;
-      left: 0;
-      right: 0;
-      text-align: center;
-      &.post {
-        top: 160px;
-      }
-      h1 {
-        font-size: 50px;
-        line-height: 60px;
-        font-family: @font-bold;
-        font-weight: 500;
-        color: #ffffff;
-        margin-bottom: 40px;
-        margin-top: 0;
-        letter-spacing: -0.5px;
-        -webkit-font-smoothing: antialiased;
-      }
-      h2 { 
-        font-family: @font-light;
-        font-size: 25px;
-        line-height: 36px;
-        font-weight: normal;
-        color: #ffffff;
-        -webkit-font-smoothing: antialiased;
-        margin-bottom: 10px;
-        margin-top: 0;
-        > strong {
-          font-family: @font-semi-bold;
-        }
-      }
-      h3 {
-        font-size: 25px;
-        margin: 0;
-      }
-      a.btn {
-        font-size: 13px;
-        padding: 15px 22px;
-        letter-spacing: 2px;
-        font-family: @font-bold;
-        -webkit-font-smoothing: antialiased;
-      }
-    }
-  }
+}
 
 .text-hero {
   h1 {
@@ -446,8 +469,7 @@ form {
     font-size: 20px;
   }
   .hero {
-    background-image: url('/assets/images/hally.jpg');
-    background-color: @gray-darker;
+    background-color: #288AE2;
     min-height: 600px;
     background-position: 0 0;
     h2 {
@@ -886,6 +908,7 @@ form {
 // --------------------------------------------------
 
 .blog {
+  background-color: @gray-light;
   .hero {
     > a {
       display: block;
@@ -916,17 +939,22 @@ form {
     margin-bottom: 50px;
   }
   .post-content {
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 0;
     &.clear {
       clear: both;
     }
     img {
-      border: 1px solid @gray-light;
+      width: 100%;
+      border-bottom: 1px solid @gray-light;
       @media (min-width: 992px){
         height: 270px;
       }
     }
     h2.title {
       margin-bottom: 0;
+      padding: 0 15px;
     }
     h2.title a {
       font-size: 25px;
@@ -946,6 +974,7 @@ form {
     p.summary {
       font-size: 15px;
       margin-bottom: 15px;
+      padding: 0 15px;
     }
     span.author {
       font-size: 14px;
@@ -1211,15 +1240,68 @@ form {
 
 .testimonials {
   padding: 120px 0 100px;
+  position: relative;
   .col-md-offset-3 {
     margin-top: 110px;
   }
   .testimonial {
+    position: static;
+    padding-top: 40px;
+    &:first-child {
+      opacity: 1;
+      img {
+        float: right;
+      }
+      .source {
+        left: 33%;
+      }
+    }
+    &:last-child {
+      img {
+        float: left;
+      }
+      .source {
+        left: 60%;
+      }
+    }
+    &:hover {
+      .quote,
+      .source {
+        opacity: 1;
+      }
+      img {
+        height: 150px;
+        width: 150px;
+        margin-top: -25px;
+      }
+    }
     img {
-      height: 72px;
-      width: 72px;
+      height: 100px;
+      width: 100px;
       border-radius: 10em;
       margin-bottom: 35px;
+      opacity: 1;
+      display: inline-block;
+    }
+    .quote,
+    .source {
+      opacity: 0;
+      transition: opacity .2s;
+      position: absolute;
+      top: 20px;
+      left: 15%;
+    }
+    .quote {
+      color: #555454;
+      font-size: 25px;
+      font-family: @font-light;
+      -webkit-font-smoothing: antialiased;
+      font-style: italic;
+      width: 910px;
+    }
+    .source {
+      top: 295px;
+      left: 46.5%;
     }
     blockquote {
       font-style: italic;
@@ -1342,7 +1424,7 @@ footer {
       }
     }
   }
-  background-color: @gray-darker;
+  background-color: @brand-primary;
   padding: 20px 0;
 
   p.copyright {
