@@ -13,7 +13,7 @@ seo_description: "The Syncano blog covers all news and tips related to real-time
   {% for post in site.posts %}
   {% assign counter=counter | plus:1 %}
     {% if counter < 2 %}
-    <a href="{{post.url}}">
+    <a href="{{post.url}}" class="permalink">
       <div class="container">
         <div class="hero" style="background-image: url('{{post.image}}'); min-height: {{post.image_height}};">
           <div class="post info">
@@ -42,23 +42,46 @@ seo_description: "The Syncano blog covers all news and tips related to real-time
       {% assign loopindex = forloop.index | modulo: 2 %}
       {% if counter > 1 %}
       <div class="row">
-        <div class="col-md-6 post-content col-md-offset-3">
-          {% if post.share_image %}
-          <a href="{{post.url}}"><img src="{{post.share_image}}" /></a>
-          {% else %}
-          <a href="{{post.url}}" class="syncano-blue"></a>
-          {% endif %}
-          <h2 class="title"><a href="{{post.url}}">{{ post.title }}</a></h2>
-          <p class="summary">{{post.summary}}</p>
+        <div class="post-content">
+          <a href="{{post.url}}" class="permalink">
           {% assign author = site.data.authors[post.author] %}
           {% if author %}
-            <span class="author">By {{ author.name }}</span>
+            <span class="author"><img src="{{ author.image }}" alt="{{ author.name }}" /></span>
           {% endif %}
+          {% if post.share_image %}
+          <img src="{{post.share_image}}" />
+          {% else %}
+          <a href="{{post.url}}" class="syncano-blue">
+          {% endif %}
+          </a>
+          <header>
+            <h2 class="title"><a href="{{post.url}}">{{ post.title }}</a></h2>
+            <div class="meta">
+              <span class="date">24 January, 2015</span>
+              <span class="categories">{% for pc in page.categories %}{{ pc }}<span class="sep">, </span>{% endfor %}</span>
+          </header>
+          <p class="summary">{{post.summary}}</p>
+          <footer>
+            <div>
+              <div class="pull-left"><a href="{{post.url}}">MORE</a></div>
+              <div class="pull-right">
+                <div class="share-links">
+                  <span>Share</span>
+                  <div class="links social-share">
+                    <div class="arrow-down"></div>
+                    <a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{site.url}}{{page.url}}" target="_blank"></a>
+                    <a class="fa fa-twitter" href="https://twitter.com/intent/tweet?text={{page.title}}&url={{site.url}}{{page.url}}" target="_blank"></a>
+                    <a class="fa fa-google" href="https://plus.google.com/share?url={{site.url}}{{page.url}}" target="_blank"></a>
+                    <a class="fa fa-pinterest" href="http://pinterest.com/pin/create/button/?url={{site.url}}{{page.url}}&description={{page.title}}&media={{page.image}}" target="_blank"></a>
+                  </div>
+                </div>
+              </div>
+              <div style="clear: both;"></div>
+            </div>
+          </footer>
         </div><!-- END col-md-6 -->
       </div>
       {% endif %}
     {% endfor %}
   </div><!-- END posts -->
 </div><!-- END container -->
-
-{% include sharing.html %}

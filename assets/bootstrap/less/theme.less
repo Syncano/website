@@ -284,6 +284,14 @@ form {
 // Reused Styles
 // --------------------------------------------------
 
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent; 
+  border-top: 10px solid #eee;
+}
+
 .btn-white {
   background-color: white;
   color: #3E3E3E;
@@ -939,9 +947,10 @@ form {
     margin-bottom: 50px;
   }
   .post-content {
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
     background-color: white;
     padding: 0;
+    max-width: 490px;
     &.clear {
       clear: both;
     }
@@ -952,6 +961,10 @@ form {
         height: 270px;
       }
     }
+    .meta {
+      padding: 0 15px;
+    }
+
     h2.title {
       margin-bottom: 0;
       padding: 0 15px;
@@ -976,12 +989,21 @@ form {
       margin-bottom: 15px;
       padding: 0 15px;
     }
+    a {
+      position: relative;
+      &.permalink {
+        display: block;
+      }
+    }
     span.author {
-      font-size: 14px;
-      font-family: @font-semi-bold;
-      -webkit-font-smoothing: antialiased;
-      display: inline-block;
-      margin-bottom: 40px;
+      img {
+        height: 50px;
+        width: 50px;
+        border-bottom: none;
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+      }
     }
     .syncano-blue {
       background-color: @brand-primary;
@@ -1001,6 +1023,47 @@ form {
       transition: background-color 0.2s linear 0s;
       &:hover {
         background-color: @brand-primary;
+      }
+    }
+    footer {
+      background-color: white;
+      border-top: 1px solid @gray-light;
+      .share-links {
+        position: relative;
+        .links {
+          opacity: 0;
+          display: none;
+          transition: opacity .2s;
+          border: none;
+          border-radius: 4px;
+          position: absolute;
+          top: -55px;
+          left: -80px;
+          width: 210px;
+          background-color: #eee;
+          padding: 10px;
+          font-size: 20px;
+          .arrow-down {
+            position: absolute;
+            bottom: -10px;
+            left: 95px;
+          }
+          a:hover {
+            text-decoration: none;
+          }
+        }
+        &:hover {
+          .links {
+            opacity: 1;
+            display: block;
+          }
+        }
+      }
+      > div {
+        padding: 0 15px;
+      }
+      a {
+        font-weight: bold;
       }
     }
   }
@@ -1366,6 +1429,19 @@ form {
     font-family: @font-normal;
     line-height: 27px;
     font-size: 15px;
+  }
+}
+
+//
+// 404
+// --------------------------------------------------
+.error {
+  background-color: @brand-primary;
+  canvas {
+    border: 2px solid white;
+  }
+  h1, p {
+    color: white;
   }
 }
 
