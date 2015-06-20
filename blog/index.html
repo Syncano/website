@@ -2,13 +2,10 @@
 layout: default
 title: Blog
 body_class: ['blog ', 'archive']
-bg_color: "#2278CF"
-transparent_header: true
 category_nav: true
-nav_class: 'dark'
 seo_description: "The Syncano blog covers all news and tips related to real-time syncing and scaling data on the cloud."
 ---
-    
+
 {% assign counter=0 %}
   {% for post in site.posts %}
   {% assign counter=counter | plus:1 %}
@@ -37,10 +34,19 @@ seo_description: "The Syncano blog covers all news and tips related to real-time
 
 <div class="container blog">
   <div class="posts">
+  {% assign counter=0 %}
     {% for post in site.posts %}
       {% assign counter=counter | plus:1 %}
-      {% assign loopindex = forloop.index | modulo: 2 %}
+      {% assign loopindex = forloop.index | modulo: 4 %}
       {% if counter > 1 %}
+      {% if counter == 4 %}
+        {% include subscribe.html %}
+      {% endif %}
+      {% if counter > 8 %}
+        {% if loopindex == 0 %}
+          {% include subscribe.html %}
+        {% endif %}
+      {% endif %}
       <div class="row">
         <div class="post-content">
           <a href="{{post.url}}" class="permalink">
@@ -57,16 +63,21 @@ seo_description: "The Syncano blog covers all news and tips related to real-time
           <header>
             <h2 class="title"><a href="{{post.url}}">{{ post.title }}</a></h2>
             <div class="meta">
-              <span class="date">24 January, 2015</span>
-              <span class="categories">{% for pc in page.categories %}{{ pc }}<span class="sep">, </span>{% endfor %}</span>
+              <span class="date">{{ post.date | date: '%d. %B %Y' }}</span>
+              &middot;
+              <span class="categories">
+              {% for cat in post.categories %}
+              <a href="/category/{{ cat | replace:' ','-' }}" name="{{ cat }}">{{ cat }}</a><span class="sep">,</span> 
+              {% endfor %}
+              </span>
           </header>
-          <p class="summary">{{post.summary}}</p>
+          <div class="summary">{{post.summary}}</div>
           <footer>
             <div>
               <div class="pull-left"><a href="{{post.url}}">MORE</a></div>
               <div class="pull-right">
                 <div class="share-links">
-                  <span>Share</span>
+                  <span><i class="fa fa-share-alt" style="font-size: 16px;"></i></span>
                   <div class="links social-share">
                     <div class="arrow-down"></div>
                     <a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{site.url}}{{page.url}}" target="_blank"></a>

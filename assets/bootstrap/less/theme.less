@@ -148,6 +148,10 @@
 .navbar-fixed-top,
 .navbar-fixed-bottom {
   border-radius: 0;
+  background-color: #244273;
+  &.categories {
+    background-color: white;
+  }
 }
 
 // Fix active state of dropdown items in collapsed mode
@@ -298,8 +302,15 @@ form {
 }
 
 .btn-blue {
-  background-color: #4A90E2;
+  background-color: rgba(13, 119, 184, .48);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .5);
   color: white;
+}
+
+.btn-dark-blue {
+  background-color: #1776D2;
+  color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .5);
 }
 
 .platforms {
@@ -357,7 +368,7 @@ form {
     right: 0;
     text-align: center;
     &.post {
-      top: 160px;
+      top: 250px;
     }
     h1 {
       font-size: 50px;
@@ -425,6 +436,41 @@ form {
     font-family: @font-light;
     -webkit-font-smoothing: antialiased;
     margin: 0;
+  }
+}
+
+#blog-subscribe {
+  background-color: white;
+  box-shadow: 0 1px 1px rgba(0,0,0,.5);
+  width: 660px;
+  margin: 20px auto 40px;
+  padding: 10px 20px 20px;
+  text-align: center;
+  h2 {
+    font-size: 36px;
+    font-family: @font-light;
+    -webkit-font-smoothing: antialiased;
+    color: #525252;
+    margin-bottom: 0;
+  }
+  h3 {
+    font-size: 28px;
+    font-family: @font-light;
+    -webkit-font-smoothing: antialiased;
+    color: #525252;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+  input {
+    border-radius: 0;
+  }
+  button {
+    background-color: @brand-primary;
+    border: 0;
+    box-shadow: none;
+    padding: 7px 25px;
+    color: white;
+    border-radius: 0;
   }
 }
 
@@ -951,6 +997,7 @@ form {
     background-color: white;
     padding: 0;
     max-width: 490px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.5);
     &.clear {
       clear: both;
     }
@@ -962,21 +1009,28 @@ form {
       }
     }
     .meta {
-      padding: 0 15px;
+      padding: 0 30px;
+      margin-bottom: 15px;
+      color: #A7A7A7;
+      .categories {
+        .sep:last-child {
+          display: none;
+        }
+      }
     }
 
     h2.title {
       margin-bottom: 0;
-      padding: 0 15px;
+      padding: 0 30px;
     }
     h2.title a {
-      font-size: 25px;
+      font-size: 36px;
       line-height: 40px;
       margin-top: 25px;
       margin-bottom: 15px;
-      font-family: @font-semi-bold;
+      font-family: @font-light;
       -webkit-font-smoothing: antialiased;
-      color: #3d3d3d;
+      color: #525252;
       display: block;
       transition: color .2s;
       &:hover {
@@ -984,10 +1038,14 @@ form {
         color: @brand-primary;
       }
     }
-    p.summary {
+    .summary {
       font-size: 15px;
+      line-height: 24px;
       margin-bottom: 15px;
-      padding: 0 15px;
+      padding: 0 30px;
+      p {
+        padding: 0;
+      }
     }
     a {
       position: relative;
@@ -1038,7 +1096,7 @@ form {
           border-radius: 4px;
           position: absolute;
           top: -55px;
-          left: -80px;
+          left: -100px;
           width: 210px;
           background-color: #eee;
           padding: 10px;
@@ -1060,7 +1118,7 @@ form {
         }
       }
       > div {
-        padding: 0 15px;
+        padding: 0 30px;
       }
       a {
         font-weight: bold;

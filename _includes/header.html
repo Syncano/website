@@ -18,7 +18,7 @@
 
 	<link rel="shortcut icon" href="/assets/images/favicon.ico" />
 </head>
-<body class="{% for c in page.body_class %}{{ c }}{% endfor %} {% if page.id %} single-post {% endif %}">
+<body class="{% for c in page.body_class %}{{ c }}{% endfor %} {% if page.id %} single-post {% endif %} {% if page.category_nav %} category_nav {% endif %}">
 
 
 	{% include nav.html %}

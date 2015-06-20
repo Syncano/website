@@ -1,4 +1,4 @@
-<nav class="navbar navbar-fixed-top {% for c in page.nav_class %}{{ c }} {% endfor %}" style="{% if page.transparent_header %} background-color: {{page.bg_color}} {% endif %}">
+<nav class="navbar navbar-fixed-top dark">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="true" aria-controls="navbar">
@@ -8,15 +8,11 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="/">
-        {% if page.nav_class == 'dark' %}
         <img class="light-version" src="/assets/images/syncano-white.png" alt="Syncano Logo white"/>
-        {% else %}
-        <img class="dark-version" src="/assets/images/syncano-logo.png" alt="Syncano Logo dark"/>
-        {% endif %}
       </a>
     </div>
 
-    <div class="collapse navbar-collapse" id="navbar-collapse-1" aria-expanded="false" style="{% if page.transparent_header %} background-color: {{page.bg_color}} {% endif %}">
+    <div class="collapse navbar-collapse" id="navbar-collapse-1" aria-expanded="false">
       <ul class="nav navbar-nav">
         <li><a href="/features">Why Syncano</a></li>
         <li><a href="/use-cases">Use Cases</a></li>
@@ -26,41 +22,34 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="https://login.syncano.com/login" class="btn btn-blue">Login</a></li>
-        <li><a href="https://login.syncano.com/sign_up" class="btn btn-success">Sign Up</a></li>
+        <li><a href="https://login.syncano.com/sign_up" class="btn btn-dark-blue">Sign Up</a></li>
       </ul>
     </div>
   </div>
 </nav>
 {% if page.category_nav %}
-<nav class="navbar navbar-fixed-top {% for c in page.nav_class %}{{ c }} {% endfor %}" style="{% if page.transparent_header %} background-color: {{page.bg_color}} {% endif %}">
+<nav class="categories navbar">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="true" aria-controls="navbar">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-2" aria-expanded="true" aria-controls="navbar">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">
-        {% if page.nav_class == 'dark' %}
-        <img class="light-version" src="/assets/images/syncano-white.png" alt="Syncano Logo white"/>
-        {% else %}
-        <img class="dark-version" src="/assets/images/syncano-logo.png" alt="Syncano Logo dark"/>
-        {% endif %}
-      </a>
     </div>
 
-    <div class="collapse navbar-collapse" id="navbar-collapse-1" aria-expanded="false" style="{% if page.transparent_header %} background-color: {{page.bg_color}} {% endif %}">
+    <div class="collapse navbar-collapse" id="navbar-collapse-2" aria-expanded="false" style="{% if page.transparent_header %} background-color: {{page.bg_color}} {% endif %}">
       <ul class="nav navbar-nav">
-        <li><a href="/features">Why Syncano</a></li>
-        <li><a href="/use-cases">Use Cases</a></li>
-        <li><a href="http://docs.syncano.com/v3.2.1/discuss">Support</a></li>
-        <li><a href="/pricing">Pricing</a></li>
-        <li><a href="/blog">Blog</a></li>
+        <li><a class="active" href="/blog">All</a></li>
+        <li><a href="/category/how-tos">Tutorials</a></li>
+        <li><a href="/category/how-tos">Events</a></li>
+        <li><a href="/category/how-tos">New Features</a></li>
+        <li><a href="/category/how-tos">Developer Profile</a></li>
+        <li><a href="#">More</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="https://login.syncano.com/login" class="btn btn-blue">Login</a></li>
-        <li><a href="https://login.syncano.com/sign_up" class="btn btn-success">Sign Up</a></li>
+        <li><a class="fa fa-search"></a></li>
       </ul>
     </div>
   </div>

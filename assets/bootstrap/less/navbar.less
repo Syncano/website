@@ -10,6 +10,8 @@
 //for fixed header
 body {
   padding-top: 77px;
+  &.category_nav {
+  }
   &.transparent_nav {
     padding-top: 0;
   }
@@ -309,6 +311,28 @@ body {
   }
   @media (min-width: 1022px) and (max-width: 1160px) {
     margin-left: 4%;
+  }
+}
+
+.categories {
+  margin-bottom: 30px;
+  .container {
+    padding: 0;
+  }
+  .navbar-nav {
+    margin-left: 0;
+    li >
+    a {
+      line-height: 57px;
+      padding: 20px 0 0 0;
+      margin-right: 28px;
+      &:first-child {
+        margin-left: 15px;
+      }
+      &.active {
+        border-bottom: 2px solid #1776D2;
+      }
+    }
   }
 }
 

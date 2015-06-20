@@ -1,0 +1,20 @@
+<div id="blog-subscribe">
+<h2>Hello.</h2>
+<h3>Want our posts direct to your inbox?</h3>
+  <form class="form-inline" onsubmit="shareSubscribe();">
+  	<div class="form-group">
+    	<input type="email" class="form-control" id="subscribeEmail" placeholder="you@example.com">
+  	</div>
+  	<button type="submit" class="btn btn-default">Yes</button>
+  </form>
+</div>
+
+
+<script>
+function shareSubscribe() {
+  var subscribeEmail = document.getElementById('subscribeEmail').value;
+  analytics.alias(subscribeEmail);
+  analytics.identify(subscribeEmail, {'email':subscribeEmail, 'Lifecycle stage':'lead', 'source':'Newsletter'});
+  analytics.track('Subscribed to newsletter', {'email':subscribeEmail});
+}
+</script>
