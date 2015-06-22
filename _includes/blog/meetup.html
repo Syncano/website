@@ -1,0 +1,39 @@
+<div class="map">
+  {% if post.map %}
+    {{ post.map }}
+  {% else %}
+    <span class="syncano-blue"></span>
+  {% endif %}
+  <div class="meta">
+    <i class="fa fa-calendar"></i> MEETUP
+    <div class="date">
+      {% if post.day %}
+        <span class="day">{{post.day}}<br/></span>
+      {% endif %}
+      {% if post.month %}
+        <span class="month">{{post.month}}</span>
+      {% endif %}
+    </div>
+    {% if post.time %}
+      <div class="time">{{post.time}}</div>
+    {% endif %}
+    {% if post.location %}
+      <div class="location">{{post.location}}</div>
+    {% endif %}
+  </div><!-- END meta -->
+</div><!-- END map -->
+
+<header>
+  <h2 class="title">
+    {% if post.meetup_url %} 
+      <a href="{{meetup.url}}" target="_blank">
+    {% else %} 
+      <a href="{{post.url}}"> 
+    {% endif %}
+      {{ post.title }}
+    </a>
+  </h2>
+</header>
+<div class="summary">{{post.summary}}</div>
+
+{% include blog/meetup-footer.html %}

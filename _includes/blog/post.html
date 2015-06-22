@@ -1,0 +1,30 @@
+<a href="{{post.url}}" class="permalink">
+  {% assign author = site.data.authors[post.author] %}
+  {% if author %}
+    <span class="author"><img src="{{ author.image }}" alt="{{ author.name }}" /></span>
+  {% endif %}
+  {% if post.share_image %}
+    <img src="{{post.share_image}}" alt="{{post.title}}" name="{{post.title}}"/>
+  {% elsif post.image %}
+    <img src="{{post.image}}" alt="{{post.title}}" name="{{post.title}}"/>
+  {% else %}
+    <span class="syncano-blue"></span>
+  {% endif %}
+</a>
+
+<header>
+  <h2 class="title"><a href="{{post.url}}">{{ post.title }}</a></h2>
+  <div class="meta">
+    <span class="date">{{ post.date | date: '%d. %B %Y' }}</span>
+    &middot;
+    <span class="categories">
+      {% for cat in post.categories %}
+        <a href="/category/{{ cat | replace:' ','-' }}" name="{{ cat }}">{{ cat }}</a>
+        <span class="sep">,</span> 
+      {% endfor %}
+    </span><!-- END categories -->
+  </div><!-- END meta -->
+</header>
+<div class="summary">{{post.summary}}</div>
+
+{% include blog/footer.html %}

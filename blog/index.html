@@ -6,92 +6,38 @@ category_nav: true
 seo_description: "The Syncano blog covers all news and tips related to real-time syncing and scaling data on the cloud."
 ---
 
-{% assign counter=0 %}
-  {% for post in site.posts %}
-  {% assign counter=counter | plus:1 %}
-    {% if counter < 2 %}
-    <a href="{{post.url}}" class="permalink">
-      <div class="container">
-        <div class="hero" style="background-image: url('{{post.image}}'); min-height: {{post.image_height}};">
-          <div class="post info">
-            <span class="categories">
-            {% for pc in post.categories %}
-              {{ pc }}<span class="sep">, </span>
-            {% endfor %}
-            </span><!-- END categories -->
-            <h1>{{post.title}}</h1>
-            {% assign author = site.data.authors[post.author] %}
-            {% if author %}
-            <div><img src="{{author.image}}" alt="{{author.name}}" height="50" width="50"/></div>
-            <span class="author"><em>By</em> <strong>{{ author.name }}</strong></span>
-            {% endif %}
-          </div>
-        </div>
-      </div>
-    </a>
-    {% endif %}
-  {% endfor %}
+{% for post in site.posts limit:1 %}
+  {% if post.categories contains 'meetup' %}
+    {% include blog/meetup-hero.html %}
+  {% else %}
+    {% include blog/hero.html %}
+  {% endif %}
+{% endfor %}
 
 <div class="container blog">
   <div class="posts">
-  {% assign counter=0 %}
-    {% for post in site.posts %}
+    {% assign counter = 0 %}
+    {% for post in site.posts limit:15 %}
       {% assign counter=counter | plus:1 %}
       {% assign loopindex = forloop.index | modulo: 4 %}
       {% if counter > 1 %}
       {% if counter == 4 %}
-        {% include subscribe.html %}
+        {% include blog/subscribe.html %}
       {% endif %}
       {% if counter > 8 %}
         {% if loopindex == 0 %}
-          {% include subscribe.html %}
+          {% include blog/subscribe.html %}
         {% endif %}
       {% endif %}
       <div class="row">
         <div class="post-content">
-          <a href="{{post.url}}" class="permalink">
-          {% assign author = site.data.authors[post.author] %}
-          {% if author %}
-            <span class="author"><img src="{{ author.image }}" alt="{{ author.name }}" /></span>
-          {% endif %}
-          {% if post.share_image %}
-          <img src="{{post.share_image}}" />
+          {% if post.categories contains 'meetup' %}
+            {% include blog/meetup.html %}
           {% else %}
-          <a href="{{post.url}}" class="syncano-blue">
+            {% include blog/post.html %}
           {% endif %}
-          </a>
-          <header>
-            <h2 class="title"><a href="{{post.url}}">{{ post.title }}</a></h2>
-            <div class="meta">
-              <span class="date">{{ post.date | date: '%d. %B %Y' }}</span>
-              &middot;
-              <span class="categories">
-              {% for cat in post.categories %}
-              <a href="/category/{{ cat | replace:' ','-' }}" name="{{ cat }}">{{ cat }}</a><span class="sep">,</span> 
-              {% endfor %}
-              </span>
-          </header>
-          <div class="summary">{{post.summary}}</div>
-          <footer>
-            <div>
-              <div class="pull-left"><a href="{{post.url}}">MORE</a></div>
-              <div class="pull-right">
-                <div class="share-links">
-                  <span><i class="fa fa-share-alt" style="font-size: 16px;"></i></span>
-                  <div class="links social-share">
-                    <div class="arrow-down"></div>
-                    <a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{site.url}}{{page.url}}" target="_blank"></a>
-                    <a class="fa fa-twitter" href="https://twitter.com/intent/tweet?text={{page.title}}&url={{site.url}}{{page.url}}" target="_blank"></a>
-                    <a class="fa fa-google" href="https://plus.google.com/share?url={{site.url}}{{page.url}}" target="_blank"></a>
-                    <a class="fa fa-pinterest" href="http://pinterest.com/pin/create/button/?url={{site.url}}{{page.url}}&description={{page.title}}&media={{page.image}}" target="_blank"></a>
-                  </div>
-                </div>
-              </div>
-              <div style="clear: both;"></div>
-            </div>
-          </footer>
-        </div><!-- END col-md-6 -->
-      </div>
+        </div><!-- END post content -->
+      </div><!-- END row -->
       {% endif %}
     {% endfor %}
   </div><!-- END posts -->
