@@ -2,51 +2,45 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-2 col-sm-2 contact">
-			<h4>Contact Us</h4>
-			<p>120 East 23rd St.<br/>
-			5th Floor<br/>
-			New York, NY 10010</p>
-			<p><a href="tel:6468834189">646.883.4189</a></p>
-			<p><a href="mailto:build@syncano.com">build@syncano.com</a></p>
-			<iframe id="twitter-widget-0" src="http://platform.twitter.com/widgets/follow_button.3afdf1fe9dd484034da3e37c7d9e99ed.en.html#_=1427235012460&amp;dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=syncano&amp;show_count=false&amp;show_screen_name=true&amp;size=m" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 115px; height: 20px; opacity: 1;"></iframe>
+			<img src="/assets/images/syncano-oval.png" alt="syncano logo small"/>
 		</div>
-		<div class="col-md-2 col-sm-2 company">
+		<div class="col-md-2 col-sm-2 contact">
 			<h4>Company</h4>
 			<ul>
-				<li><a href="/blog">Our Blog</a></li>
-				<li><a href="/about">About Us</a></li>
-				<li><a href="/about#team">The Team</a></li>
-				<li><a href="/about#jobs">Jobs</a></li>
+				<li><a href="#">About and The Team</a></li>
+				<li><a href="#">Superstar Jobs</a></li>
+				<li><a href="#">Brand Resources</a></li>
+				<li><a href="#">Contact Us</a></li>
+				<li><a href="#">Terms and Legal</a></li>
 			</ul>
 		</div>
-
-		<div class="col-md-2 col-sm-2">
-			<h4>Help, Support</h4>
-			<ul>
-				<li><a href="http://docs.syncano.com/v3.2.1/discuss">Get Support</a></li>
-				<li><a href="http://syncano.statuspage.io/">API Status</a></li>
-				<li><a href="/terms-of-service/">Legal</a></li>
-				<li><a href="/contact/">Contact Us</a></li>
-			</ul>
-		</div>
-
-		<div class="col-md-2 col-sm-2">
+		<div class="col-md-2 col-sm-2 company">
 			<h4>Resources</h4>
 			<ul>
-				<li><a href="http://docs.syncano.com/">Documentation</a></li>
-				<li><a href="/category/how-tos">Tutorials</a></li>
-				<li><a href="https://login.syncano.com/docs/rest/">API</a></li>
-				<li><a href="http://docs.syncano.com/v3.2.1/docs/syncano-libraries">Client Libraries</a></li>
+				<li><a href="/blog">Blog</a></li>
+				<li><a href="/about">Docs</a></li>
+				<li><a href="/about#team">Pricing</a></li>
+				<li><a href="/about#jobs">Solutions</a></li>
 			</ul>
 		</div>
 
-		<div class="col-md-4 cta col-sm-4">
-			<h3>Real-Time Apps, Simplified.</h3>
-			<a href="https://login.syncano.com/sign_up" class="btn btn-blue">START BUILDING NOW</a>
-			<p>Real-Time Sync, Data Storage,<br/>
-			Complex Modeling<br/>
-			and Access Management<br/>
-			</p>
+		<div class="col-md-2 col-sm-2">
+			<ul>
+				<li><a href="http://docs.syncano.com/v3.2.1/discuss">Meetups</a></li>
+				<li><a href="http://syncano.statuspage.io/">Support</a></li>
+				<li><a href="/terms-of-service/">Tutorials</a></li>
+				<li><a href="/contact/">Libraries</a></li>
+			</ul>
+		</div>
+
+		<div class="col-md-3 col-sm-3">
+			<h4>Latest Blog Post</h4>
+			<ul>
+				{% for post in site.posts limit:2 %}
+					<li><a href="{{post.url}}">{{post.title}}</a></li>
+  				{% endfor %}
+			</ul>
+			<h4>Join Our Newsletter</h4>
 		</div>
 	</div><!-- END row -->
 </div>

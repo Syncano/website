@@ -2,48 +2,9 @@
 @import "variables.less";
 @import "mixins.less";
 
-@font-face {
-    font-family: 'OpenSansLight';
-    src: url('../fonts/OpenSans-Light-webfont.eot');
-    src: url('../fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/OpenSans-Light-webfont.woff') format('woff'),
-         url('../fonts/OpenSans-Light-webfont.ttf') format('truetype'),
-         url('../fonts/OpenSans-Light-webfont.svg#OpenSansLight') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('../fonts/OpenSans-Regular-webfont.eot');
-    src: url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/OpenSans-Regular-webfont.woff') format('woff'),
-         url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
-         url('../fonts/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'OpenSansSemibold';
-    src: url('../fonts/OpenSans-Semibold-webfont.eot');
-    src: url('../fonts/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/OpenSans-Semibold-webfont.woff') format('woff'),
-         url('../fonts/OpenSans-Semibold-webfont.ttf') format('truetype'),
-         url('../fonts/OpenSans-Semibold-webfont.svg#OpenSansSemibold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'OpenSansBold';
-    src: url('../fonts/OpenSansBold-webfont.eot');
-    src: url('../fonts/OpenSansBold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/OpenSansBold-webfont.woff') format('woff'),
-         url('../fonts/OpenSansBold-webfont.ttf') format('truetype'),
-         url('../fonts/OpenSansBold-webfont.svg#OpenSansBold') format('svg');
-    font-weight: normal;
-    font-style: normal;
+// Reset 
+body, p, h1, h2, h3, h4, h5, h6, div, span, a, ul, li {
+  font-family: @font;
 }
 
 // Mixin for generating new styles
@@ -136,7 +97,6 @@
     font-size: @font-size-small;
     margin-left: 10px;
     text-transform: uppercase;
-    font-family: @font-light;
     border-radius: @border-radius-large;
     min-width: 80px;
   }
@@ -293,8 +253,6 @@ form {
   input {
     border-radius: 2px;
     border: 1px solid @gray-light;
-    font-family: @font-light;
-    -webkit-font-smoothing: antialiased;
     &:focus {
       border: 1px solid @brand-primary;
     }
@@ -373,16 +331,12 @@ form {
     font-size: 40px;
     margin-bottom: 25px;
     margin-top: 0;
-    font-family: OpenSansLight;
-    -webkit-font-smoothing: antialiased;
   }
   h5 {
     color: #3d3d3d;
     font-size: 15px;
     line-height: 34px;
     font-weight: normal;
-    font-family: @font-semi-bold;
-    -webkit-font-smoothing: antialiased;
     letter-spacing: -0.5px;
     margin-bottom: 55px;
   }
@@ -400,7 +354,7 @@ form {
   background-size: cover;
   min-height: 450px;
   background-position: 50% 50%;
-  background-color: #288AE2;
+  background-color: @brand-primary;
   .info {
     position: absolute;
     top: 25%;
@@ -411,37 +365,33 @@ form {
       top: 250px;
     }
     h1 {
-      font-size: 50px;
+      font-size: 61px;
       line-height: 60px;
-      font-family: @font-bold;
       font-weight: 500;
       color: #ffffff;
       margin-bottom: 40px;
       margin-top: 0;
       letter-spacing: -0.5px;
-      -webkit-font-smoothing: antialiased;
     }
     h2 {
-      font-family: @font-light;
       font-size: 25px;
       line-height: 36px;
       font-weight: normal;
       color: #ffffff;
-      -webkit-font-smoothing: antialiased;
       margin-bottom: 10px;
       margin-top: 0;
-      > strong {
-        font-family: @font-semi-bold;
-      }
     }
     h3 {
-      font-family: @font-light;
       font-weight: normal;
       font-size: 20px;
       line-height: 28px;
-      -webkit-font-smoothing: antialiased;
       color: white;
       margin: 0;
+    }
+    h5 {
+      color: #ffffff;
+      font-size: 18px;
+      margin-top: 30px;
     }
   .btn {
     margin-top: 80px;
@@ -453,8 +403,6 @@ form {
       font-size: 13px;
       padding: 15px 22px;
       letter-spacing: 2px;
-      font-family: @font-bold;
-      -webkit-font-smoothing: antialiased;
     }
   }
 }
@@ -462,8 +410,6 @@ form {
 .text-hero {
   h1 {
     color: inherit;
-    font-family: @font-semi-bold;
-    -webkit-font-smoothing: antialiased;
     font-size: 44px;
     line-height: 44px;
     margin-bottom: 8px;
@@ -473,8 +419,6 @@ form {
     font-size: 28px;
     line-height: 28px;
     color: inherit;
-    font-family: @font-light;
-    -webkit-font-smoothing: antialiased;
     margin: 0;
   }
 }
@@ -488,15 +432,11 @@ form {
   text-align: center;
   h2 {
     font-size: 36px;
-    font-family: @font-light;
-    -webkit-font-smoothing: antialiased;
     color: #525252;
     margin-bottom: 0;
   }
   h3 {
     font-size: 28px;
-    font-family: @font-light;
-    -webkit-font-smoothing: antialiased;
     color: #525252;
     margin-top: 5px;
     margin-bottom: 20px;
@@ -521,17 +461,13 @@ form {
     font-weight: bold;
     font-size: 40px;
     margin-bottom: 25px;
-    -webkit-font-smoothing: antialiased;
     letter-spacing: -0.5px;
-    font-family: @font-normal;
   }
   a.btn {
     padding: 15px 60px;
     font-size: 13px;
-    font-family: @font-bold;
     letter-spacing: 2px;
     margin-bottom: 10px;
-    -webkit-font-smoothing: antialiased;
   }
   p {
     margin-bottom: 0;
@@ -554,27 +490,24 @@ form {
 
 .home {
   h2 {
-    font-family: @font-light;
     font-size: 40px;
     margin: 0;
   }
   h5 {
-    font-family: @font-light;
     font-size: 20px;
   }
   .hero {
-    background-color: #288AE2;
-    min-height: 600px;
+    background-color: @brand-dark;
+    background-image: url('/assets/images/home-bg.png');
+    background-repeat: no-repeat;
     background-position: 0 0;
     h2 {
-      font-weight: bold;
+      font-weight: 400;
     }
     h3 {
-      font-family: @font-light;
       font-weight: normal;
       font-size: 20px;
       line-height: 28px;
-      -webkit-font-smoothing: antialiased;
       color: white;
       margin: 0;
     }
@@ -600,10 +533,8 @@ form {
       padding: 100px 0;
     }
     h2 {
-      font-family: @font-semi-bold;
       font-size: 30px;
       color: @brand-primary;
-      -webkit-font-smoothing: antialiased;
       margin-bottom: 40px;
       margin-top: 0;
     }
@@ -611,12 +542,8 @@ form {
       margin-bottom: 20px;
       margin-top: 0;
       font-size: 24px;
-      font-family: @font-light;
       color: #363636;
       font-weight: normal;
-      strong {
-        font-family: @font-semi-bold;
-      }
     }
     p {
       color: #3d3d3d;
@@ -634,6 +561,44 @@ form {
     a.btn {
       padding: 15px 35px;
     }
+  }
+
+  .build {
+    padding: 35px 0;
+    background-color: white;
+    h2 {
+      font-size: 36px;
+      line-height: 42px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      color: #454545;
+    }
+  }
+
+  .data {
+    padding: 35px 0;
+    background-color: #FAFAFA;
+  }
+
+  .bugs {
+    padding: 35px 0;
+    background-color: white;
+  }
+
+  .middleware {
+    padding: 35px 0 0;
+    background-color: @brand-dark;
+    color: white;
+  }
+
+  .showcase {
+    padding: 35px 0;
+  }
+
+  .support {
+    padding: 35px 0;
   }
 }
 
@@ -779,8 +744,6 @@ form {
       color: #444;
       letter-spacing: -0.5px;
       font-weight: normal;
-      -webkit-font-smoothing: antialiased;
-      font-family: @font-semi-bold;
       font-size: 30px;
       line-height: 42px;
       margin-bottom: 7px;
@@ -788,8 +751,6 @@ form {
     }
     h3 {
       font-weight: 300;
-      font-family: @font-light;
-      -webkit-font-smoothing: antialiased;
       color: #444;
       letter-spacing: -0.5px;
       font-size: 22px;
@@ -802,8 +763,6 @@ form {
       color: #676767;
       font-size: 15px;
       line-height: 27px;
-      font-family: @font-normal;
-      -webkit-font-smoothing: antialiased;
     }
     ul {
       padding-left: 0;
@@ -813,8 +772,6 @@ form {
         list-style-position: outside;
         font-size: 15px;
         line-height: 27px;
-        font-family: @font-normal;
-        -webkit-font-smoothing: antialiased;
         color: #676767;
       }
     }
@@ -849,9 +806,7 @@ form {
   h3 {
     color: #444;
     letter-spacing: -0.5px;
-    -webkit-font-smoothing: antialiased;
     font-weight: 300;
-    font-family: @font-light;
     margin-bottom: 0;
     margin-top: 0;
   }
@@ -900,8 +855,6 @@ form {
       font-size: 25px;
       line-height: 25px;
       font-weight: normal;
-      font-family: @font-semi-bold;
-      -webkit-font-smoothing: antialiased;
       letter-spacing: -0.5px;
       margin: 10px 0;
     }
@@ -911,8 +864,6 @@ form {
         font-size: 40px;
         margin-bottom: 50px;
         margin-top: 0;
-        font-family: @font-light;
-        -webkit-font-smoothing: antialiased;
       }
     }
     h3 {
@@ -921,8 +872,6 @@ form {
       color: #3d3d3d;
       letter-spacing: -0.5px;
       font-weight: normal;
-      -webkit-font-smoothing: antialiased;
-      font-family: @font-semi-bold;
       margin: 0;
     }
     > .row {
@@ -944,8 +893,6 @@ form {
       font-size: 40px;
       line-height: 40px;
       color: #494949;
-      -webkit-font-smoothing: antialiased;
-      font-family: @font-light;
       font-weight: 300;
       margin-bottom: 10px;
       margin-top: 0;
@@ -965,8 +912,6 @@ form {
       font-size: 40px;
       color: #494949;
       margin-bottom: 62px;
-      -webkit-font-smoothing: antialiased;
-      font-family: @font-light;
       font-weight: normal;
       letter-spacing: -0.5px;
       margin-top: 0;
@@ -989,10 +934,6 @@ form {
             }
           }
         }
-        span.location {
-          font-family: @font-normal;
-          -webkit-font-smoothing: antialiased;
-        }
       }
     }
   }
@@ -1013,7 +954,6 @@ form {
     }
     .categories {
       color: white;
-      font-family: @font-light;
       font-size: 30px;
       span:last-child {
         display: none;
@@ -1055,8 +995,6 @@ form {
       margin-top: 0;
       a {
         color: #939393;
-        font-family: @font-light;
-        -webkit-font-smoothing: antialiased;
         &:hover {
           text-decoration: none;
         }
@@ -1132,8 +1070,6 @@ form {
       line-height: 40px;
       margin-top: 25px;
       margin-bottom: 15px;
-      font-family: @font-light;
-      -webkit-font-smoothing: antialiased;
       color: #525252;
       display: block;
       transition: color .2s;
@@ -1179,8 +1115,6 @@ form {
       border-radius: 2px;
       font-size: 11px;
       padding: 6px 10px;
-      font-family: @font-light;
-      -webkit-font-smoothing: antialiased;
       display: inline-block;
       margin-top: 0;
       transition: background-color 0.2s linear 0s;
@@ -1248,14 +1182,10 @@ form {
     font-size: 73px;
     line-height: 100px;
     letter-spacing: -1px;
-    font-family: @font-semi-bold;
-    -webkit-font-smoothing: antialiased;
     color: white;
   }
   h4 {
-    font-family: @font-light;
     font-size: 30px;
-    -webkit-font-smoothing: antialiased;
     color: white;
     margin-top: 115px;
     margin-bottom: 40px;
@@ -1290,8 +1220,6 @@ form {
       }
     }
     .author h3 {
-      font-family: @font-light;
-      -webkit-font-smoothing: antialiased;
       font-size: 15px;
       color: white;
       margin-top: 15px;
@@ -1302,7 +1230,6 @@ form {
 
 .post-content {
   color: #676767;
-  font-family: @font-light;
   h2 {
     font-size: 35px;
     line-height: 40px;
@@ -1310,16 +1237,12 @@ form {
     font-weight: 300;
     letter-spacing: -0.5px;
     color: #282828;
-    font-family: @font-semi-bold;
-    -webkit-font-smoothing: antialiased;
   }
   h3 {
     font-size: 19px;
     line-height: 34px;
-    font-family: @font-bold;
     font-weight: normal;
     letter-spacing: -0.5px;
-    -webkit-font-smoothing: antialiased;
   }
   p {
     margin-bottom: 27px;
@@ -1340,19 +1263,16 @@ form {
   h2 {
     margin: 0;
     color: white;
-    font-family: @font-light;
     font-size: 26px;
     line-height: 30px;
     font-weight: normal;
     margin-bottom: 5px;
-    -webkit-font-smoothing: antialiased;
   }
   p {
     color: @gray;
     font-size: 15px;
     line-height: 30px;
     margin-bottom: 20px;
-    -webkit-font-smoothing: antialiased;
   }
   .form-control {
     height: 40px;
@@ -1369,9 +1289,7 @@ form {
     padding: 0 10px;
     text-align: center;
     border-radius: 2px;
-    font-family: @font-light;
     letter-spacing: 1px;
-    -webkit-font-smoothing: antialiased;
     transition: background-color 0.2s linear 0s;
     &:hover {
       background-color: transparent;
@@ -1430,16 +1348,12 @@ form {
     top: 10px;
   }
   .form-control {
-    font-family: @font-light;
-    -webkit-font-smoothing: antialiased;
     box-shadow: none;
   }
   button.btn {
     border: 1px solid @brand-primary;
     font-weight: bold;
     color: @brand-primary;
-    font-family: @font-light;
-    -webkit-font-smoothing: antialiased;
   }
 }
 
@@ -1465,91 +1379,18 @@ form {
 // --------------------------------------------------
 
 .testimonials {
-  padding: 120px 0 100px;
-  position: relative;
-  .col-md-offset-3 {
-    margin-top: 110px;
+  background-color: #FAFAFA;
+  .row {
+    margin-left: 0;
+    margin-right: 0;
   }
-  .testimonial {
-    position: static;
-    padding-top: 40px;
-    &:first-child {
-      opacity: 1;
-      img {
-        float: right;
-      }
-      .source {
-        left: 33%;
-      }
-    }
-    &:last-child {
-      img {
-        float: left;
-      }
-      .source {
-        left: 60%;
-      }
-    }
-    &:hover {
-      .quote,
-      .source {
-        opacity: 1;
-      }
-      img {
-        height: 150px;
-        width: 150px;
-        margin-top: -25px;
-      }
-    }
-    img {
-      height: 100px;
-      width: 100px;
-      border-radius: 10em;
-      margin-bottom: 35px;
-      opacity: 1;
-      display: inline-block;
-    }
-    .quote,
-    .source {
-      opacity: 0;
-      transition: opacity .2s;
-      position: absolute;
-      top: 20px;
-      left: 15%;
-    }
-    .quote {
-      color: #555454;
-      font-size: 25px;
-      font-family: @font-light;
-      -webkit-font-smoothing: antialiased;
-      font-style: italic;
-      width: 910px;
-    }
-    .source {
-      top: 295px;
-      left: 46.5%;
-    }
-    blockquote {
-      font-style: italic;
-      margin: 0;
-      font-size: 16px;
-      font-family: @font-light;
-      -webkit-font-smoothing: antialiased;
-      line-height: 20px;
-      cite {
-        display: block;
-        font-style: normal;
-        color: #676767;
-        font-size: 15px;
-        font-family: @font-semi-bold;
-        -webkit-font-smoothing: antialiased;
-        margin-top: 20px;
-        > strong {
-          font-family: @font-semi-bold;
-          -webkit-font-smoothing: antialiased;
-          font-weight: normal;
-        }
-      }
+  .quote {
+    font-size: 25px;
+    font-style: italic;
+    color: #555454;
+    font-weight: 100;
+    strong {
+      font-weight: 400;
     }
   }
 }
@@ -1565,15 +1406,12 @@ form {
     color: #444;
     letter-spacing: -0.5px;
     font-weight: normal;
-    -webkit-font-smoothing: antialiased;
-    font-family: @font-semi-bold;
     font-size: 30px;
     line-height: 42px;
   }
   nav {
     h2 {
       color: #999;
-      font-family: @font-bold;
       font-size: 12px;
       letter-spacing: 2px;
       margin-bottom: 15px;
@@ -1589,7 +1427,6 @@ form {
     margin-bottom: 27px;
     padding-bottom: 0;
     color: #676767;
-    font-family: @font-normal;
     line-height: 27px;
     font-size: 15px;
   }
@@ -1616,7 +1453,7 @@ footer {
   position: relative;
   z-index: 10;
   &.columns {
-    background-color: @gray-light;
+    background-color: #F2F2F2;
     padding: 80px 0 50px;
     margin-top: 40px;
     iframe {
@@ -1625,12 +1462,11 @@ footer {
     .row > div {
       h4 {
         margin-top: 0;
-        font-size: @font-size-small;
-        line-height: @font-size-small;
+        font-size: 14px;
+        line-height: 14px;
         text-transform: uppercase;
-        margin-bottom: 30px;
-        color: @gray-dark;
-        font-family: @font-bold;
+        margin-bottom: 20px;
+        color: #717171;
       }
       p {
         color: @gray-dark;
@@ -1638,38 +1474,27 @@ footer {
         line-height: 21px;
         margin-bottom: 20px;
       }
-      &.cta {
-        background-color: @gray-lighter;
-        margin-top: -@grid-gutter-width;
-        padding: 40px 0 30px;
-        text-align: center;
-        h3 {
-          margin-top: 0;
-          font-size: 20px;
-          font-weight: bold;
-          color: #4f4f4f;
+      ul {
+        li {
+          list-style: none;
+          margin: 0;
+          padding: 0;
         }
-        .btn {
-          margin: 25px 0;
-          display: inline-block;
-          font-size: 13px;
-          padding: 15px 20px;
-          letter-spacing: 2px;
-        }
-        p {
-          margin-bottom: 0;
-          font-family: @font-light;
-        }
+      }
+      a {
+        font-size: 14px;
+        color: @brand-primary;
+        line-height: 25px;
+        margin-bottom: 0;
       }
     }
   }
-  background-color: @brand-primary;
+  background-color: white;
   padding: 20px 0;
 
   p.copyright {
-    color: white;
+    color: #717171;
     font-size: @font-size-small;
-    font-family: @font-light;
     margin-bottom: 0;
     line-height: @font-size-small * 2;
   }
@@ -1694,12 +1519,18 @@ footer {
     text-align: right;
     a {
       color: white;
-      font-size: 24px;
-      line-height: 22px;
+      background-color: @brand-primary;
+      font-size: 18px;
+      line-height: 25px;
+      height: 25px;
+      width: 25px;
+      border-radius: 10em;
+      text-align: center;
       display: inline-block;
-      margin-left: 20px;
+      margin-left: 10px;
       &:hover {
         color: @brand-primary;
+        background-color: white;
       }
     }
   }
