@@ -325,13 +325,6 @@ form {
       padding: 0;
     }
   }
-  h2 {
-    color: #363636;
-    font-weight: bold;
-    font-size: 40px;
-    margin-bottom: 25px;
-    margin-top: 0;
-  }
   h5 {
     color: #3d3d3d;
     font-size: 15px;
@@ -490,11 +483,17 @@ form {
 
 .home {
   h2 {
-    font-size: 40px;
-    margin: 0;
+    font-size: 36px;
+    line-height: 42px;
+    margin: 0 0 20px 0;
+    font-weight: normal;
+    color: #525252;
   }
-  h5 {
+  h3 {
     font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    margin: 0;
   }
   .hero {
     background-color: @brand-dark;
@@ -505,11 +504,7 @@ form {
       font-weight: 400;
     }
     h3 {
-      font-weight: normal;
-      font-size: 20px;
-      line-height: 28px;
       color: white;
-      margin: 0;
     }
     .btn {
       margin-top: 80px;
@@ -529,6 +524,7 @@ form {
   }
 
   .highlights {
+    background-color: #FAFAFA;
     @media (min-width: @grid-float-breakpoint) {
       padding: 100px 0;
     }
@@ -553,27 +549,41 @@ form {
       line-height: 20px;
     }
   }
-  .footer-cta {
+  .cta {
+    padding: 75px 0;
     border-top: 2px solid @gray-light;
-    h2 {
-      margin-bottom: 25px;
-    }
     a.btn {
       padding: 15px 35px;
     }
   }
 
   .build {
-    padding: 35px 0;
+    padding: 75px 0;
     background-color: white;
-    h2 {
-      font-size: 36px;
-      line-height: 42px;
-      margin-bottom: 20px;
-    }
     p {
       font-size: 18px;
       color: #454545;
+    }
+  }
+
+  .section {
+    padding: 35px 0;
+  }
+
+  .slider {
+    background: -webkit-linear-gradient(#254376, #1E1E21);
+    background: -o-linear-gradient(#254376, #1E1E21);
+    background: -moz-linear-gradient(#254376, #1E1E21);
+    background: linear-gradient(#254376, #1E1E21);
+    #slider {
+      width:960px;
+      height:420px; 
+      margin: 0 auto; 
+      position: relative;
+    }
+    div.navBulletsWrapper { 
+      top:320px; 
+      left:280px;
     }
   }
 
@@ -591,14 +601,40 @@ form {
     padding: 35px 0 0;
     background-color: @brand-dark;
     color: white;
+    position: relative;
+    .shadow {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 30px;
+      background: -webkit-linear-gradient(rgba(0,0,0,.0), rgba(100,100,100,.1));
+      background: -o-linear-gradient(rgba(0,0,0,.0), rgba(100,100,100,.1));
+      background: -moz-linear-gradient(rgba(0,0,0,.0), rgba(100,100,100,.1));
+      background: linear-gradient(rgba(0,0,0,.0), rgba(100,100,100,.1));
+    }
+    h2 {
+      color: white;
+    }
+    p {
+      margin-bottom: 40px;
+    }
   }
 
   .showcase {
-    padding: 35px 0;
+    padding: 75px 0 35px;
   }
 
   .support {
-    padding: 35px 0;
+    padding: 75px 0;
+  }
+
+  .platforms {
+    background-color: white;
+  }
+
+  .testimonials {
+    background-color: #fafafa;
   }
 }
 
@@ -1379,19 +1415,30 @@ form {
 // --------------------------------------------------
 
 .testimonials {
-  background-color: #FAFAFA;
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .row {
     margin-left: 0;
     margin-right: 0;
+  }
+  .image {
+    padding-left: 0;
   }
   .quote {
     font-size: 25px;
     font-style: italic;
     color: #555454;
     font-weight: 100;
+    margin: 15% 0 20px 0;
     strong {
-      font-weight: 400;
+      font-weight: 800;
     }
+  }
+  .source {
+    font-size: 20px;
+    color: #545454;
   }
 }
 
@@ -1460,6 +1507,9 @@ footer {
       border: none;
     }
     .row > div {
+      &.no-header {
+        padding-top: 34px;
+      }
       h4 {
         margin-top: 0;
         font-size: 14px;
@@ -1588,25 +1638,6 @@ footer {
   }
 }
 
-footer.columns {
-  .row {
-    .col-sm-2 {
-      padding-left: 0;
-      &.contact {
-        width: 20%;
-      }
-      &.company {
-        width: 13%
-      }
-      p {
-        margin-bottom: 0;
-      }
-    }
-    .cta {
-    }
-  }
-}
-
 }
 //navbar break point
 @media (min-width: 320px) and (max-width: 1022px) {
@@ -1667,25 +1698,6 @@ footer.columns {
 }
 
 @media (min-width: 520px) and (max-width: 767px) {
-
-  footer.columns {
-    padding-top: 45px;
-    .row {
-      >.col-md-2 {
-        width: 24%;
-        float: left;
-        &.contact {
-          width: 30%;
-        }
-        &.company {
-          width: 22%;
-        }
-      }
-      >.col-md-4 {
-        clear: both;
-      }
-    }
-  }
 
 }
 
