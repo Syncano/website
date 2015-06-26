@@ -29,7 +29,7 @@ var str = "Hello, playground"
 
 <p>The code will fill whole left side of the file, and on the right you can see its corresponding results:</p>
 
-<p><img src="http://www.syncano.com/wp-content/uploads/2014/10/SwiftPlayground_01.png" alt="SwiftPlayground_01" width="201" height="30" class="aligncenter size-full wp-image-10107" /></p>
+<p><img src="http://www.syncano.com/public/uploads/2014/10/SwiftPlayground_01.png" alt="SwiftPlayground_01" width="201" height="30" class="aligncenter size-full wp-image-10107" /></p>
 
 <h2>Adding a function</h2>
 
@@ -42,7 +42,7 @@ var str = "Hello, playground"
 sumOfTwoNumbers(3, 7)
 {% endhighlight %}
 
-<p><img src="http://www.syncano.com/wp-content/uploads/2014/10/SwiftPlayground_02.png" alt="SwiftPlayground_02" width="581" height="78" class="aligncenter size-full wp-image-10106" /></p>
+<p><img src="http://www.syncano.com/public/uploads/2014/10/SwiftPlayground_02.png" alt="SwiftPlayground_02" width="581" height="78" class="aligncenter size-full wp-image-10106" /></p>
 
 <p>As you can see on the right, the result is 10 – meaning the playground is working as expected.</p>
 
@@ -57,17 +57,17 @@ sumOfTwoNumbers(3, 7)
 }
 {% endhighlight %}
 
-<p><a href="http://www.syncano.com/wp-content/uploads/2014/10/SwiftPlayground_03.png"><img src="http://www.syncano.com/wp-content/uploads/2014/10/SwiftPlayground_03.png" alt="SwiftPlayground_03" width="416" height="48" class="aligncenter size-full wp-image-10105" /></a></p>
+<p><img src="http://www.syncano.com/public/uploads/2014/10/SwiftPlayground_03.png" alt="SwiftPlayground_03" width="416" height="48" class="aligncenter size-full wp-image-10105" /></p>
 
 <p>Notice how the result indicates the code ran 11 times - as it actually did. Next to that result, there is an eye icon and a circle icon.</p>
 
-<p><a href="http://www.syncano.com/wp-content/uploads/2014/10/SwiftPlayground_10.png"><img src="http://www.syncano.com/wp-content/uploads/2014/10/SwiftPlayground_10.png" alt="SwiftPlayground_10" width="133" height="72" class="aligncenter size-full wp-image-10098" /></a></p>
+<p><img src="http://www.syncano.com/public/uploads/2014/10/SwiftPlayground_10.png" alt="SwiftPlayground_10" width="133" height="72" class="aligncenter size-full wp-image-10098" /></p>
 
 <p>Click on the circle icon to see the <em>Value History</em>: a chart that shows how your values changed overtime.</p>
 
 <p>There are 11 discreet points on this graph. Click on one to see it's value. For example, when you click on the sum of 5 and 5, you'll get it's sum: 10.</p>
 
-<p><a href="http://www.syncano.com/wp-content/uploads/2014/10/SwiftPlayground_04.png"><img src="http://www.syncano.com/wp-content/uploads/2014/10/SwiftPlayground_04.png" alt="SwiftPlayground_04" width="490" height="294" class="aligncenter size-full wp-image-10104" /></a></p>
+<p><img src="http://www.syncano.com/public/uploads/2014/10/SwiftPlayground_04.png" alt="SwiftPlayground_04" width="490" height="294" class="aligncenter size-full wp-image-10104" /></p>
 
 <p><em>This graph also helps with more advanced calculations, because you can quickly see if something is wrong (e.g. when larger or negative numbers are taken as inputs).</em></p>
 
@@ -83,7 +83,7 @@ sumOfTwoNumbers(3, 7)
 
 <p>the chart would now look like this:</p>
 
-<p><a href="http://www.syncano.com/wp-content/uploads/2014/10/SwiftPlayground_05.png"><img src="http://www.syncano.com/wp-content/uploads/2014/10/SwiftPlayground_05.png" alt="SwiftPlayground_05" width="493" height="305" class="aligncenter size-full wp-image-10103" /></a></p>
+<p><img src="http://www.syncano.com/public/uploads/2014/10/SwiftPlayground_05.png" alt="SwiftPlayground_05" width="493" height="305" class="aligncenter size-full wp-image-10103" /></p>
 
 <h2>Testing UI and the Quick Look Feature</h2>
 
@@ -98,7 +98,7 @@ label.text = "Swift Playground"
 
 <p>Now, click the <em>Quick Look</em> icon (the eye icon) next to the last line of your code to see how the label looks.</p>
 
-<p><a href="http://www.syncano.com/wp-content/uploads/2014/10/SwiftPlayground_06.png"><img src="http://www.syncano.com/wp-content/uploads/2014/10/SwiftPlayground_06.png" alt="SwiftPlayground_06" width="271" height="64" class="aligncenter size-full wp-image-10102" /></a></p>
+<p><img src="http://www.syncano.com/public/uploads/2014/10/SwiftPlayground_06.png" alt="SwiftPlayground_06" width="271" height="64" class="aligncenter size-full wp-image-10102" /></p>
 
 <p>You can also see how the label would look with varying gray backgrounds.  Add this loop to change it to different UIColor instances:</p>
 
@@ -109,7 +109,7 @@ label.text = "Swift Playground"
 
 <p>To see the history of how the background changed, click the <em>Value History</em> icon (plus sign icon), next to the line where we set the background color.</p>
 
-<p><a href="http://www.syncano.com/wp-content/uploads/2014/10/SwiftPlayground_07.png"><img src="http://www.syncano.com/wp-content/uploads/2014/10/SwiftPlayground_07.png" alt="SwiftPlayground_07" width="489" height="442" class="aligncenter size-full wp-image-10101" /></a></p>
+<p><img src="http://www.syncano.com/public/uploads/2014/10/SwiftPlayground_07.png" alt="SwiftPlayground_07" width="489" height="442" class="aligncenter size-full wp-image-10101" /></p>
 
 <h2>More advanced UI testing - UITableView</h2>
 
@@ -183,7 +183,7 @@ tableView.reloadData()
 
 <p>Now on the last line (the one with <em>reloadData()</em>), you can use either <em>Quick Look</em> or <em>Value History</em> to see how your tableView looks. For this example, click on the latter to see how it changes while we change the code.</p>
 
-<p><a href="http://www.syncano.com/wp-content/uploads/2014/10/SwiftPlayground_08.png"><img src="http://www.syncano.com/wp-content/uploads/2014/10/SwiftPlayground_08.png" alt="SwiftPlayground_08" width="490" height="353" class="aligncenter size-full wp-image-10100" /></a></p>
+<p><img src="http://www.syncano.com/public/uploads/2014/10/SwiftPlayground_08.png" alt="SwiftPlayground_08" width="490" height="353" class="aligncenter size-full wp-image-10100" /></p>
 
 <p>Now add some more info to your cells and change its background color as well as your header view look.</p>
 
@@ -218,7 +218,7 @@ tableView.reloadData()
 
 <p>After a short while, Timeline will refresh, and your Table View will change:</p>
 
-<p><a href="http://www.syncano.com/wp-content/uploads/2014/10/SwiftPlayground_09.png"><img src="http://www.syncano.com/wp-content/uploads/2014/10/SwiftPlayground_09.png" alt="SwiftPlayground_09" width="491" height="355" class="aligncenter size-full wp-image-10099" /></a></p>
+<p><img src="http://www.syncano.com/public/uploads/2014/10/SwiftPlayground_09.png" alt="SwiftPlayground_09" width="491" height="355" class="aligncenter size-full wp-image-10099" /></p>
 
 <h2>Final words</h2>
 

@@ -1,0 +1,56 @@
+<footer class="columns">
+<div class="container">
+	<div class="row">
+		<div class="col-md-2 col-sm-2">
+			<img src="/assets/images/syncano-oval.png" alt="syncano logo small"/>
+		</div>
+		<div class="col-md-2 col-sm-2">
+			<h4>Company</h4>
+			<ul>
+				<li><a href="#">About and The Team</a></li>
+				<li><a href="#">Superstar Jobs</a></li>
+				<li><a href="#">Brand Resources</a></li>
+				<li><a href="#">Contact Us</a></li>
+				<li><a href="#">Terms and Legal</a></li>
+			</ul>
+		</div>
+		<div class="col-md-2 col-sm-2">
+			<h4>Resources</h4>
+			<ul>
+				<li><a href="/blog">Blog</a></li>
+				<li><a href="/about">Docs</a></li>
+				<li><a href="/about#team">Pricing</a></li>
+				<li><a href="/about#jobs">Solutions</a></li>
+			</ul>
+		</div>
+
+		<div class="col-md-2 col-sm-2 no-header">
+			<ul>
+				<li><a href="http://docs.syncano.com/v3.2.1/discuss">Meetups</a></li>
+				<li><a href="http://syncano.statuspage.io/">Support</a></li>
+				<li><a href="/terms-of-service/">Tutorials</a></li>
+				<li><a href="/contact/">Libraries</a></li>
+			</ul>
+		</div>
+
+		<div class="col-md-3 col-sm-3">
+			<h4>Latest Blog Post</h4>
+			<ul>
+				{% for post in site.posts limit:2 %}
+					<li><a href="{{post.url}}">{{post.title}}</a></li>
+  				{% endfor %}
+			</ul>
+			<div class="newsletter">
+				<h4>Join Our Newsletter</h4>
+				<form class="form-inline" onsubmit="newsletterSubscribe();">
+  					<div class="form-group">
+    					<input type="email" class="form-control" id="subscribeEmail" placeholder="you@example.com">
+    					<button type="submit" class="btn btn-default">Go</button>
+  					</div>
+				</form>
+			</div><!-- END newsletter -->
+		</div>
+	</div><!-- END row -->
+</div>
+
+</footer>

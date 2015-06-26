@@ -727,115 +727,32 @@ form {
 //
 // About
 // --------------------------------------------------
-.about {
-  .text-hero {
-    padding: 89px 0;
-    background-color: @gray-darker;
-    color: white;
+.team {
+  .container > h2 {
+    font-size: 36px;
+    margin: 20px 0;
+    color: #525252;
   }
-  .inner-nav {
-    padding: 60px 0;
-    border-bottom: 1px solid #f0f0f0;
-    a {
-      display: inline-block;
-      font-size: 20px;
-      text-transform: uppercase;
-      margin-right: 40px;
-      &:hover {
-        text-decoration: none;
-      }
-      &:last-child {
-        margin-right: 0;
-      }
-    }
+  img {
+    height: 220px;
+    width: 200px;
   }
-  #team {
-    h2 {
-      color: #3d3d3d;
-      font-size: 25px;
-      line-height: 25px;
-      font-weight: normal;
-      letter-spacing: -0.5px;
-      margin: 10px 0;
-    }
-    .header {
-      h2 {
-        color: #494949;
-        font-size: 40px;
-        margin-bottom: 50px;
-        margin-top: 0;
-      }
-    }
-    h3 {
-      font-size: 12px;
-      line-height: 12px;
-      color: #3d3d3d;
-      letter-spacing: -0.5px;
-      font-weight: normal;
-      margin: 0;
-    }
-    > .row {
-      margin-bottom: 35px;
-      &:not(.header){
-        padding-bottom: 65px;
-      }
-    }
-    .header:first-child {
-      padding-top: 100px;
-    }
+  h2, h3 {
+    color: #454545;
+    line-height: 25px;
+    font-weight: normal;
+    letter-spacing: -0.5px;
+    margin: 0;
   }
-  .map {
-    padding-bottom: 50px;
+  h2 {
+    font-size: 20px;
+    margin: 10px 0 0;
   }
-  #our-story {
-    padding: 92px 0 65px;
-    h2 {
-      font-size: 40px;
-      line-height: 40px;
-      color: #494949;
-      font-weight: 300;
-      margin-bottom: 10px;
-      margin-top: 0;
-      letter-spacing: -0.5px;
-    }
-    p {
-      font-size: 15px;
-      line-height: 27px;
-      margin: 0;
-      padding: 0;
-      color: #676767;
-    }
+  h3 {
+    font-size: 15px;
   }
-  #jobs {
-    padding: 110px 0 120px;
-    h2 {
-      font-size: 40px;
-      color: #494949;
-      margin-bottom: 62px;
-      font-weight: normal;
-      letter-spacing: -0.5px;
-      margin-top: 0;
-    }
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-      li {
-        margin-bottom: 25px;
-        line-height: 27px;
-        span.title {
-          margin-bottom: 10px;
-          font-size: 30px;
-          line-height: 30px;
-          display: block;
-          a {
-            color: #2E9BC2;
-            &:hover {
-              text-decoration: none;
-            }
-          }
-        }
-      }
-    }
+  .row {
+    padding-bottom: 65px;
   }
 }
 //
@@ -1400,6 +1317,25 @@ footer {
         color: @brand-primary;
         line-height: 25px;
         margin-bottom: 0;
+      }
+      .newsletter {
+        h4 {
+          margin-top: 24px;
+          margin-bottom: 10px; 
+        }
+        input,
+        button {
+          border: 1px solid #E9E9E9;
+          border-radius: 0!important;
+        }
+        input:focus {
+          border: 1px solid @brand-primary;
+          box-shadow: none;
+        }
+        button {
+          margin-left: -4px;
+          border-left: 0;
+        }
       }
     }
   }

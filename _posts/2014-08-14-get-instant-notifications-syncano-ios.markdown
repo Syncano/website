@@ -7,7 +7,7 @@ categories: ['API', 'How Tos', 'iOS', 'Real-Time Sync']
 share_image: /public/data.png
 summary: "Within minutes, you can create dynamic iOS apps on Syncano that instantly reflect changes in data by 'subscribing' to changes on Syncano’s Sync Server. Here’s a demo app and a quick guide so you can get started."
 ---
-[vc_row][vc_column][vc_column_text]Within minutes, you can create dynamic iOS apps on Syncano that instantly reflect changes in data by “subscribing” to changes on Syncano’s Sync Server. Here’s a demo app and a quick guide so you can get started.<!--more-->
+Within minutes, you can create dynamic iOS apps on Syncano that instantly reflect changes in data by “subscribing” to changes on Syncano’s Sync Server. Here’s a demo app and a quick guide so you can get started.<!--more-->
 
 <h2>Introduction to Syncano</h2>
 Syncano offers many <a href="http://www.syncano.com/features/">features</a> such as data modeling, an Admin GUI, a real-time sync API, data storage, and more. In this example, we'll focus on the latter two features - storing and syncing data.
@@ -21,11 +21,11 @@ You can also add an image to the object, and Syncano will automatically make a t
 
 There are also special fields (<em>Data1</em>, <em>Data2</em> and <em>Data3</em>) which can hold integer values - you can filter and sort your data with these fields. You can also sort your data by its creation date and the date of its last update, and you can filter it by the folder it's in.
 
-<a href="http://www.syncano.com/wp-content/uploads/2014/08/DataObject_01.png"><img src="http://www.syncano.com/wp-content/uploads/2014/08/DataObject_01.png" alt="DataObject_01" width="709" height="541" class="aligncenter size-full wp-image-9929" /></a>
+<img src="http://www.syncano.com/public/uploads/2014/08/DataObject_01.png" alt="DataObject_01" width="709" height="541" class="aligncenter size-full wp-image-9929" />
 
 You can also add a number of additional fields if the default ones don't meet your needs. If you're adding data on the Admin GUI, press the <em>Add more data</em> button and additional fields will appear.
 
-<a href="http://www.syncano.com/wp-content/uploads/2014/08/DataObject_02.png"><img src="http://www.syncano.com/wp-content/uploads/2014/08/DataObject_02.png" alt="DataObject_02" width="342" height="168" class="aligncenter size-full wp-image-9930" /></a>
+<img src="http://www.syncano.com/public/uploads/2014/08/DataObject_02.png" alt="DataObject_02" width="342" height="168" class="aligncenter size-full wp-image-9930" />
 
 <h2>Real-time sync</h2>
 Storing data is one thing, but you might also want to sync it across multiple apps and devices. Real-time communication on Syncano comes in two flavors (what we call notification/subscription processing):
@@ -129,23 +129,21 @@ Open the <a href="http://login.syncano.com">Syncano admin GUI</a> in your browse
 
 Choose the project and collection you entered in XCode.
 
-<a href="http://www.syncano.com/wp-content/uploads/2014/08/ProjectsCollections_01.png"><img src="http://www.syncano.com/wp-content/uploads/2014/08/ProjectsCollections_01.png" alt="ProjectsCollections_01" width="419" height="252" class="aligncenter size-full wp-image-9931" /></a>
+<img src="http://www.syncano.com/public/uploads/2014/08/ProjectsCollections_01.png" alt="ProjectsCollections_01" width="419" height="252" class="aligncenter size-full wp-image-9931" />
 
 Within the collection, choose the folder you want to add Data Objects to. Since we subscribed to changes in the whole collection, it doesn't matter which folder we will choose - we'll receive notifications either way.
 
-<a href="http://www.syncano.com/wp-content/uploads/2014/08/Folders_01.png"><img src="http://www.syncano.com/wp-content/uploads/2014/08/Folders_01.png" alt="Folders_01" width="213" height="194" class="aligncenter size-full wp-image-9932" /></a>
+<img src="http://www.syncano.com/public/uploads/2014/08/Folders_01.png" alt="Folders_01" width="213" height="194" class="aligncenter size-full wp-image-9932" />
 
 Within the project and collection you entered in Xcode, add a new Data Object.
 
-<a href="http://www.syncano.com/wp-content/uploads/2014/08/Folders_02.png"><img src="http://www.syncano.com/wp-content/uploads/2014/08/Folders_02.png" alt="Folders_02" width="653" height="284" class="aligncenter size-full wp-image-9933" /></a>
+<img src="http://www.syncano.com/public/uploads/2014/08/Folders_02.png" alt="Folders_02" width="653" height="284" class="aligncenter size-full wp-image-9933" />
 
 In the Title field, type “Hello world!” and hit <em>Save</em>.
 
-<a href="http://www.syncano.com/wp-content/uploads/2014/08/DataObject_03.png"><img src="http://www.syncano.com/wp-content/uploads/2014/08/DataObject_03.png" alt="DataObject_03" width="707" height="543" class="aligncenter size-full wp-image-9934" /></a>
+<img src="http://www.syncano.com/public/uploads/2014/08/DataObject_03.png" alt="DataObject_03" width="707" height="543" class="aligncenter size-full wp-image-9934" />
 
 The title of the new object should now instantly show in your app.
 
 <H2>Monitoring your App</H2>
 Now that you've created a successful real-time application, how do you monitor it's performance? For the answer, check out our next tutorial in this series, <a href="http://www.syncano.com/monitor-app-performance-crittercism/">"How to Monitor Your App's Performance."</a>
-
-[/vc_column_text][/vc_column][/vc_row]

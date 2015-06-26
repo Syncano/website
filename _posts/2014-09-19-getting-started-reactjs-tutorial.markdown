@@ -11,7 +11,7 @@ In <a href="http://www.syncano.com/?p=7544">our previous post</a>, we looked at 
 
 Let’s recreate the animated dropdown menu from the newest version of Chrome for Android. Here's how it looks on mobile devices:
 
-<div align=center><img src="http://cdn.androidpolice.com/wp-content/uploads/2014/08/nexusae0_flyout.gif"></div>
+<div align=center><img src="http://cdn.androidpolice.com/public/uploads/2014/08/nexusae0_flyout.gif"></div>
 
 <h2>Step 1: Prepare the Groundwork.</h2> 
 Create a new folder and a new index.html file. Inside index.html, paste the following:
