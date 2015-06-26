@@ -7,53 +7,6 @@ body, p, h1, h2, h3, h4, h5, h6, div, span, a, ul, li {
   font-family: @font;
 }
 
-// Mixin for generating new styles
-.btn-styles(@btn-color: #555) {
-  #gradient > .vertical(@start-color: @btn-color; @end-color: darken(@btn-color, 12%));
-  .reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners; see https://github.com/twbs/bootstrap/issues/10620
-  background-repeat: repeat-x;
-  border-color: darken(@btn-color, 14%);
-
-  &:hover,
-  &:focus  {
-    background-color: darken(@btn-color, 12%);
-    background-position: 0 -15px;
-  }
-
-  &:active,
-  &.active {
-    background-color: darken(@btn-color, 12%);
-    border-color: darken(@btn-color, 14%);
-  }
-
-  &.disabled,
-  &:disabled,
-  &[disabled] {
-    background-color: darken(@btn-color, 12%);
-    background-image: none;
-  }
-}
-
-// Common styles
-.btn {
-  // Remove the gradient for the pressed/active state
-  &:active,
-  &.active {
-    background-image: none;
-  }
-}
-
-
-//
-// Images
-// --------------------------------------------------
-
-.thumbnail,
-.img-thumbnail {
-  .box-shadow(0 1px 2px rgba(0,0,0,.075));
-}
-
-
 //
 // Dropdowns
 // --------------------------------------------------
@@ -97,7 +50,7 @@ body, p, h1, h2, h3, h4, h5, h6, div, span, a, ul, li {
     font-size: @font-size-small;
     margin-left: 10px;
     text-transform: uppercase;
-    border-radius: @border-radius-large;
+    border-radius: 4px;
     min-width: 80px;
   }
 }
@@ -126,114 +79,6 @@ body, p, h1, h2, h3, h4, h5, h6, div, span, a, ul, li {
   }
 }
 
-
-//
-// Alerts
-// --------------------------------------------------
-
-// Common styles
-.alert {
-  text-shadow: 0 1px 0 rgba(255,255,255,.2);
-  @shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 1px 2px rgba(0,0,0,.05);
-  .box-shadow(@shadow);
-}
-
-// Mixin for generating new styles
-.alert-styles(@color) {
-  #gradient > .vertical(@start-color: @color; @end-color: darken(@color, 7.5%));
-  border-color: darken(@color, 15%);
-}
-
-// Apply the mixin to the alerts
-.alert-success    { .alert-styles(@alert-success-bg); }
-.alert-info       { .alert-styles(@alert-info-bg); }
-.alert-warning    { .alert-styles(@alert-warning-bg); }
-.alert-danger     { .alert-styles(@alert-danger-bg); }
-
-
-//
-// Progress bars
-// --------------------------------------------------
-
-// Give the progress background some depth
-.progress {
-  #gradient > .vertical(@start-color: darken(@progress-bg, 4%); @end-color: @progress-bg)
-}
-
-// Mixin for generating new styles
-.progress-bar-styles(@color) {
-  #gradient > .vertical(@start-color: @color; @end-color: darken(@color, 10%));
-}
-
-// Apply the mixin to the progress bars
-.progress-bar            { .progress-bar-styles(@progress-bar-bg); }
-.progress-bar-success    { .progress-bar-styles(@progress-bar-success-bg); }
-.progress-bar-info       { .progress-bar-styles(@progress-bar-info-bg); }
-.progress-bar-warning    { .progress-bar-styles(@progress-bar-warning-bg); }
-.progress-bar-danger     { .progress-bar-styles(@progress-bar-danger-bg); }
-
-// Reset the striped class because our mixins don't do multiple gradients and
-// the above custom styles override the new `.progress-bar-striped` in v3.2.0.
-.progress-bar-striped {
-  #gradient > .striped();
-}
-
-
-//
-// List groups
-// --------------------------------------------------
-
-.list-group {
-  border-radius: @border-radius-base;
-  .box-shadow(0 1px 2px rgba(0,0,0,.075));
-}
-.list-group-item.active,
-.list-group-item.active:hover,
-.list-group-item.active:focus {
-  text-shadow: 0 -1px 0 darken(@list-group-active-bg, 10%);
-  #gradient > .vertical(@start-color: @list-group-active-bg; @end-color: darken(@list-group-active-bg, 7.5%));
-  border-color: darken(@list-group-active-border, 7.5%);
-
-  .badge {
-    text-shadow: none;
-  }
-}
-
-
-//
-// Panels
-// --------------------------------------------------
-
-// Common styles
-.panel {
-  .box-shadow(0 1px 2px rgba(0,0,0,.05));
-}
-
-// Mixin for generating new styles
-.panel-heading-styles(@color) {
-  #gradient > .vertical(@start-color: @color; @end-color: darken(@color, 5%));
-}
-
-// Apply the mixin to the panel headings only
-.panel-default > .panel-heading   { .panel-heading-styles(@panel-default-heading-bg); }
-.panel-primary > .panel-heading   { .panel-heading-styles(@panel-primary-heading-bg); }
-.panel-success > .panel-heading   { .panel-heading-styles(@panel-success-heading-bg); }
-.panel-info > .panel-heading      { .panel-heading-styles(@panel-info-heading-bg); }
-.panel-warning > .panel-heading   { .panel-heading-styles(@panel-warning-heading-bg); }
-.panel-danger > .panel-heading    { .panel-heading-styles(@panel-danger-heading-bg); }
-
-
-//
-// Wells
-// --------------------------------------------------
-
-.well {
-  #gradient > .vertical(@start-color: darken(@well-bg, 5%); @end-color: @well-bg);
-  border-color: darken(@well-bg, 10%);
-  @shadow: inset 0 1px 3px rgba(0,0,0,.05), 0 1px 0 rgba(255,255,255,.1);
-  .box-shadow(@shadow);
-}
-
 //
 // Custom Styles
 // --------------------------------------------------
@@ -247,6 +92,14 @@ form {
 //
 // Reused Styles
 // --------------------------------------------------
+
+.cta {
+  padding: 75px 0;
+  border-top: 2px solid @gray-light;
+  a.btn {
+    padding: 15px 35px;
+  }
+}
 
 #search-container {
   margin-top: 38px;
@@ -301,14 +154,12 @@ form {
 
 .btn-blue {
   background-color: rgba(13, 119, 184, .48);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, .5);
   color: white;
 }
 
 .btn-dark-blue {
   background-color: #1776D2;
   color: white;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, .5);
 }
 
 .platforms {
@@ -328,7 +179,7 @@ form {
   h5 {
     color: #3d3d3d;
     font-size: 15px;
-    line-height: 34px;
+    line-height: 24px;
     font-weight: normal;
     letter-spacing: -0.5px;
     margin-bottom: 55px;
@@ -345,23 +196,20 @@ form {
 
 .hero {
   background-size: cover;
-  min-height: 450px;
+  background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-color: @brand-primary;
+  background-color: @brand-dark;
+  color: white;
+  padding: 75px 0;
   .info {
-    position: absolute;
-    top: 25%;
-    left: 0;
-    right: 0;
     text-align: center;
     &.post {
       top: 250px;
     }
     h1 {
       font-size: 61px;
-      line-height: 60px;
+      line-height: 71px;
       font-weight: 500;
-      color: #ffffff;
       margin-bottom: 40px;
       margin-top: 0;
       letter-spacing: -0.5px;
@@ -370,32 +218,30 @@ form {
       font-size: 25px;
       line-height: 36px;
       font-weight: normal;
-      color: #ffffff;
       margin-bottom: 10px;
       margin-top: 0;
+      color: white;
     }
     h3 {
       font-weight: normal;
       font-size: 20px;
       line-height: 28px;
-      color: white;
       margin: 0;
     }
     h5 {
-      color: #ffffff;
       font-size: 18px;
       margin-top: 30px;
     }
-  .btn {
-    margin-top: 80px;
-  }
-  .info {
-    top: 140px;
-  }
+    p {
+      font-size: 18px;
+      line-height: 25px;
+      margin-bottom: 25px;
+    }
     a.btn {
       font-size: 13px;
       padding: 15px 22px;
       letter-spacing: 2px;
+      margin-top: 80px;
     }
   }
 }
@@ -496,22 +342,7 @@ form {
     margin: 0;
   }
   .hero {
-    background-color: @brand-dark;
     background-image: url('/assets/images/home-bg.png');
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    h2 {
-      font-weight: 400;
-    }
-    h3 {
-      color: white;
-    }
-    .btn {
-      margin-top: 80px;
-    }
-    .info {
-      top: 140px;
-    }
   }
 
   .collision {
@@ -549,13 +380,6 @@ form {
       line-height: 20px;
     }
   }
-  .cta {
-    padding: 75px 0;
-    border-top: 2px solid @gray-light;
-    a.btn {
-      padding: 15px 35px;
-    }
-  }
 
   .build {
     padding: 75px 0;
@@ -578,22 +402,40 @@ form {
     #slider {
       width:960px;
       height:420px; 
-      margin: 0 auto; 
+      margin: -40px auto 0; 
       position: relative;
+      div {
+        max-width: 100%;
+      }
     }
     div.navBulletsWrapper { 
-      top:320px; 
-      left:280px;
+      position: absolute;
+      bottom:-50px; 
+      left: 0px;
+      right: 0;
+      text-align: center;
+      div {
+        border-radius: 10em;
+        background-color: @gray;
+        color: transparent;
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+        margin-right: 10px;
+        &.active {
+          background-color: @brand-primary;
+        }
+      }
     }
   }
 
   .data {
-    padding: 35px 0;
+    padding: 50px 0;
     background-color: #FAFAFA;
   }
 
   .bugs {
-    padding: 35px 0;
+    padding: 50px 0;
     background-color: white;
   }
 
@@ -630,6 +472,7 @@ form {
   }
 
   .platforms {
+    padding-top: 120px;
     background-color: white;
   }
 
@@ -815,13 +658,35 @@ form {
 }
 
 //
-// Pricing, Vision
+// Pricing
 // --------------------------------------------------
 .pricing {
-  .text-hero {
-    background-color: @gray-darker;
+  .hero {
+    background-image: url('/assets/images/pricing-bg.png');
+    .row {
+      margin: 0;
+    }
+    .toggle {
+      background-color: white;
+      border: 3px solid #C0DDF6;
+      height: 55px;
+      width: 250px;
+      border-radius: 10em;
+      padding: 3px;
+      margin: 0 auto;
+      .switch {
+        border-radius: 10em;
+        background-color: #4A90E2;
+        height: 44px;
+        width: 44px;
+      }
+    }
   }
 }
+
+//
+// Vision
+// --------------------------------------------------
 
 .vision {
   .text-hero {
@@ -829,7 +694,6 @@ form {
   }
 }
 
-.pricing,
 .vision {
   .text-hero {
     padding: 89px 0;
@@ -1652,7 +1516,7 @@ footer {
     }
   }
   .navbar-collapse {
-    background-color: @brand-primary;
+    background-color: @brand-dark;
     padding-left: 30px;
     padding-right: 30px;
     margin-left: -30px;
@@ -1686,6 +1550,9 @@ footer {
 // Responsive -- Mobile
 // --------------------------------------------------
 @media (min-width: 320px) and (max-width: 520px) {
+br {
+  display: none;
+}
 .home {
   .hero {
     h1 {

@@ -3,99 +3,12 @@ layout: default
 title: Pricing
 permalink: /pricing/
 body_class: ['pricing']
-nav_class: 'dark'
-bg_color: "#2f353e"
-transparent_header: true
 seo_description: "Syncano's a pay-as-you go pricing model supports up to 1,500 simultaneous connections. Contact us if you need further support."
 keywords: "syncano, syncano pricing, syncano cost, real-time sync cost, real-time sync pricing"
 ---
 
-<div class="text-hero">
-	<div class="container">
-		<h1>Build What You Want For Free - For 30 Days</h1>
-		<h2>Our pay as you go model is geared to help you get from alpha to gold.</h2>
-	</div>
-</div>
-
-<div class="container">
-	<div class="pricing-calculator-new clearfix">
-    <div class="pricing-calculator-table pricing-calculator-storage">
-      <div class="pricing-table-wrapper pricing-table-wrapper-info clearfix">
-        <div class="table-col col-image">
-          <div class="table-row row-first">
-            <div class="table-cell">&nbsp;</div>
-          </div>
-          <img src="/public/pricing-storage.png" alt="storage icon" />
-        </div>
-        <div class="table-col col-name">
-          <div class="table-row row-first">
-            <div class="table-cell">&nbsp;</div>
-          </div>
-          <div class="table-row">
-            <div class="table-cell">Data Object Storage</div>
-          </div>
-          <div class="table-row row-last">
-            <div class="table-cell">Data Storage</div>
-          </div>
-        </div>
-        <div class="table-col col-pricing">
-          <div class="table-row row-first">
-            <div class="table-cell">Price USD</div>
-          </div>
-          <div class="table-row">
-            <div class="table-cell">5</div>
-          </div>
-          <div class="table-row row-last">
-            <div class="table-cell">0.55</div>
-          </div>
-        </div>
-        <div class="table-col col-unit">
-          <div class="table-row row-first">
-            <div class="table-cell">Unit</div>
-          </div>
-          <div class="table-row">
-            <div class="table-cell">per 1000 Objects per month</div>
-          </div> 
-          <div class="table-row row-last">
-            <div class="table-cell">per GB per month</div>
-          </div><!-- END table row -->
-        </div><!-- END table col -->
-      </div><!-- END pricing table wrapper -->
-			<div class="pricing-calculator-table pricing-calculator-sync">
-			  <div class="pricing-table-wrapper pricing-table-wrapper-info clearfix">
-          <div class="table-col col-image">
-            <img src="/public/pricing-sync.png" alt="pricing icon" />
-          </div>
-          <div class="table-col col-name">
-            <div class="table-row">
-              <div class="table-cell">API Requests</div>
-            </div>
-            <div class="table-row row-last">
-              <div class="table-cell">Data Outbound</div>
-            </div>
-          </div>
-          <div class="table-col col-pricing">
-            <div class="table-row">
-              <div class="table-cell">0.45</div>
-            </div>
-            <div class="table-row row-last">
-              <div class="table-cell">0.65</div>
-            </div>
-          </div><!-- END table col -->
-          <div class="table-col col-unit">
-            <div class="table-row">
-              <div class="table-cell">per 1000 Requests a month</div>
-            </div> 
-            <div class="table-row row-last">
-              <div class="table-cell">per GB a month</div>
-            </div><!-- END table row -->
-          </div><!-- END table col -->
-        </div><!-- END pricing table wrapper -->
-      </div><!-- END pricing calculator table -->
-    </div><!-- END pricing-calculator-table -->
-  </div><!-- END pricing-calculator-new -->
-</div><!-- END container -->
-
-<div class="container">
-<h3>Syncano automatically supports up to 1,500 simultaneous connections. <a href="/contact/">Contact us</a> for further support.</h3>
-</div>
+{% include pricing/hero.html %}
+{% include pricing/explanation.html %}
+{% include pricing/example.html %}
+{% include pricing/faq.html %}
+{% include cta.html %}
