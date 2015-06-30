@@ -1,0 +1,166 @@
+
+//
+// Blog Posts
+// --------------------------------------------------
+
+.blog {
+  background-color: @gray-light;
+  .hero {
+    > a {
+      display: block;
+    }
+    h1 {
+      margin-top: 30px;
+      margin-bottom: 90px;
+    }
+    .categories {
+      color: white;
+      font-size: 30px;
+      span:last-child {
+        display: none;
+      }
+    }
+    .author {
+      color: white;
+      display: inline-block;
+      margin-top: 15px;
+    }
+  }
+}
+
+.posts {
+  padding-top: 40px;
+  > .post {
+    margin-bottom: 50px;
+  }
+  .post-content {
+    margin: 0 auto 20px;
+    background-color: white;
+    padding: 0;
+    max-width: 490px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.5);
+    &.clear {
+      clear: both;
+    }
+    img {
+      width: 100%;
+      border-bottom: 1px solid @gray-light;
+      @media (min-width: 992px){
+        height: 270px;
+      }
+    }
+    header .meta {
+      padding: 0 30px;
+      margin-bottom: 15px;
+      color: #A7A7A7;
+      .categories {
+        .sep:last-child {
+          display: none;
+        }
+      }
+    }
+
+    h2.title {
+      margin-bottom: 0;
+      padding: 0 30px;
+    }
+    h2.title a {
+      font-size: 36px;
+      line-height: 40px;
+      margin-top: 25px;
+      margin-bottom: 15px;
+      color: #525252;
+      display: block;
+      transition: color .2s;
+      &:hover {
+        text-decoration: none;
+        color: @brand-primary;
+      }
+    }
+    .summary {
+      font-size: 15px;
+      line-height: 24px;
+      margin-bottom: 15px;
+      padding: 0 30px;
+      p {
+        padding: 0;
+      }
+    }
+    a {
+      position: relative;
+      &.permalink {
+        display: block;
+      }
+    }
+    span.author {
+      img {
+        height: 50px;
+        width: 50px;
+        border-bottom: none;
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+      }
+    }
+    .syncano-blue {
+      background-color: @brand-primary;
+      width: 100%;
+      min-height: 250px;
+      display: block;
+    }
+    .read-more {
+      background-color: #333;
+      color: white;
+      border-radius: 2px;
+      font-size: 11px;
+      padding: 6px 10px;
+      display: inline-block;
+      margin-top: 0;
+      transition: background-color 0.2s linear 0s;
+      &:hover {
+        background-color: @brand-primary;
+      }
+    }
+    footer {
+      background-color: white;
+      border-top: 1px solid @gray-light;
+      .share-links {
+        position: relative;
+        .links {
+          opacity: 0;
+          display: none;
+          transition: opacity .2s;
+          border: none;
+          border-radius: 4px;
+          position: absolute;
+          top: -55px;
+          left: -100px;
+          width: 210px;
+          background-color: #eee;
+          padding: 10px;
+          font-size: 20px;
+          .arrow-down {
+            position: absolute;
+            bottom: -10px;
+            left: 95px;
+          }
+          a:hover {
+            text-decoration: none;
+          }
+        }
+        &:hover {
+          .links {
+            opacity: 1;
+            display: block;
+          }
+        }
+      }
+      > div {
+        padding: 0 30px;
+      }
+      a {
+        font-weight: bold;
+      }
+    }
+  }
+}

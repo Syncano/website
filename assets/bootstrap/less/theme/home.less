@@ -1,0 +1,159 @@
+
+//
+// Homepage
+// --------------------------------------------------
+
+.home {
+  h2 {
+    font-size: 36px;
+    line-height: 42px;
+    margin: 0 0 20px 0;
+    font-weight: normal;
+    color: #525252;
+  }
+  h3 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    margin: 0;
+  }
+  .hero {
+    background-image: url('/assets/images/home-bg.png');
+  }
+
+  .collision {
+    padding: 100px 0 60px;
+  }
+
+  .apps {
+    background-color: #f6f6f6;
+    padding: 85px 0 100px;
+  }
+
+  .highlights {
+    background-color: #FAFAFA;
+    @media (min-width: @grid-float-breakpoint) {
+      padding: 100px 0;
+    }
+    h2 {
+      font-size: 30px;
+      color: @brand-primary;
+      margin-bottom: 40px;
+      margin-top: 0;
+    }
+    h3 {
+      margin-bottom: 20px;
+      margin-top: 0;
+      font-size: 24px;
+      color: #363636;
+      font-weight: normal;
+    }
+    p {
+      color: #3d3d3d;
+      padding: 0;
+      margin: 0;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  .build {
+    padding: 75px 0;
+    background-color: white;
+    p {
+      font-size: 18px;
+      color: #454545;
+    }
+  }
+
+  .section {
+    padding: 35px 0;
+  }
+
+  .slider {
+    background: -webkit-linear-gradient(#254376, #1E1E21);
+    background: -o-linear-gradient(#254376, #1E1E21);
+    background: -moz-linear-gradient(#254376, #1E1E21);
+    background: linear-gradient(#254376, #1E1E21);
+    #slider {
+      width:960px;
+      height:420px; 
+      margin: -40px auto 0; 
+      position: relative;
+      max-width: 100%;
+      div {
+        max-width: 100%;
+      }
+    }
+    div.navBulletsWrapper { 
+      position: absolute;
+      bottom:-50px; 
+      left: 0px;
+      right: 0;
+      text-align: center;
+      div {
+        border-radius: 10em;
+        background-color: @gray;
+        color: transparent;
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+        margin-right: 10px;
+        &.active {
+          background-color: @brand-primary;
+        }
+      }
+    }
+  }
+
+  .data {
+    padding: 50px 0;
+    background-color: #FAFAFA;
+  }
+
+  .bugs {
+    padding: 50px 0;
+    background-color: white;
+  }
+
+  .middleware {
+    padding: 35px 0 0;
+    background-color: @brand-dark;
+    color: white;
+    position: relative;
+    .shadow {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 30px;
+      background: -webkit-linear-gradient(rgba(0,0,0,.0), rgba(100,100,100,.1));
+      background: -o-linear-gradient(rgba(0,0,0,.0), rgba(100,100,100,.1));
+      background: -moz-linear-gradient(rgba(0,0,0,.0), rgba(100,100,100,.1));
+      background: linear-gradient(rgba(0,0,0,.0), rgba(100,100,100,.1));
+    }
+    h2 {
+      color: white;
+    }
+    p {
+      margin-bottom: 40px;
+    }
+  }
+
+  .showcase {
+    padding: 75px 0 35px;
+  }
+
+  .support {
+    padding: 75px 0;
+  }
+
+  .platforms {
+    padding-top: 120px;
+    background-color: white;
+  }
+
+  .testimonials {
+    background-color: #fafafa;
+  }
+}

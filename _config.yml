@@ -1,8 +1,8 @@
 # Site settings
 title:       Syncano
-email:       your_email@example.com
+email:       keganquimby@gmail.com
 author:      Syncano
-description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
+description: "A simple, beautiful theme for syncano.com."
 baseurl:     ""
 url:         "http://www.syncano.com"
 permalink:    /:title

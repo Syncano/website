@@ -9,7 +9,7 @@
 // other navbar variations.
 //for fixed header
 body {
-  padding-top: 77px;
+  padding-top: 60px;
   &.category_nav {
   }
   &.transparent_nav {
@@ -193,11 +193,12 @@ body {
 // Brand/project name
 
 .navbar-brand {
-  float: left;
   padding: 0;
   font-size: @font-size-large;
   line-height: 30px;
   height: 25px;
+  text-align: center;
+  display: block;
 
   &:hover,
   &:focus {
@@ -225,7 +226,7 @@ body {
 
 .navbar-toggle {
   position: relative;
-  float: right;
+  float: left;
   padding: 9px 10px;
   .navbar-vertical-align(34px);
   background-color: transparent;
@@ -245,7 +246,7 @@ body {
     width: 22px;
     height: 2px;
     border-radius: 1px;
-    background-color: #a9a9a9;
+    background-color: white;
   }
   .icon-bar + .icon-bar {
     margin-top: 4px;
@@ -300,7 +301,7 @@ body {
   @media (min-width: 1022px) {
     float: left;
     margin: 0;
-    margin-left: 16%;
+    margin-left: 25%;
     > li {
       float: left;
       > a {

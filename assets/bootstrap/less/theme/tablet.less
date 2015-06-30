@@ -1,0 +1,53 @@
+//
+// Responsive -- Tablet
+// --------------------------------------------------
+@media (min-width: @grid-float-breakpoint) and (max-width: 1024px){
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.navbar {
+  .navbar-nav {
+    margin-left: 1.2%;
+  }
+}
+.home {
+  .hero {
+    h2 {
+      padding: 0 16px;
+    }
+  }
+  .highlights {
+    padding-bottom: 35px;
+    p {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.platforms {
+  .col-xs-3 {
+    width: 12%;
+    padding-left: 0;
+    padding-right: 0;
+    &.microsoft {
+      width: 16%;
+    }
+  }
+  .col-md-1 {
+  }
+}
+
+.testimonials {
+  .testimonial {
+    &.col-sm-4 {
+      padding-left: 0;
+      .col-md-9 {
+        padding-left: 0;
+        width: auto;
+      }
+    }
+  }
+}
+
+}

@@ -1,0 +1,59 @@
+//
+// Map
+// --------------------------------------------------
+
+.map {
+  position: relative;
+  iframe {
+    max-width: 100%;
+    max-height: 400px;
+  }
+  &.hero {
+    margin-top: -30px;
+    padding: 0!important;
+    iframe {
+      width: 100%;
+      height: 450px;
+    }
+    h1 {
+      position: absolute; 
+      left: 0;
+      right: 0;
+      bottom: 0;
+      text-align: center; 
+      padding: 10px; 
+      background-color: white;
+      margin-bottom: 0!important;
+      margin-top: 0!important;
+      a {
+        color: #939393;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .meta {
+    padding: 20px;
+    background-color: white;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+    color: #939393;
+    >div {
+      &.date {
+        margin: 10px 0 15px;
+        font-weight: bold;
+        .day {
+          font-size: 70px;
+          line-height: 70px;
+        }
+        .month {
+          font-size: 25px;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}
