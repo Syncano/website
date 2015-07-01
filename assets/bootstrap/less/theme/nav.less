@@ -88,6 +88,14 @@
         margin-left: -30px;
       }
     }
+    &.categories {
+      > .container {
+        > .navbar-header {
+          margin-right: 0;
+          margin-left: 0;
+        }
+      }
+    }
     .navbar-collapse {
       background-color: @brand-dark;
       padding-left: 30px;
@@ -96,16 +104,19 @@
       margin-right: -30px;
     }
     .navbar-nav {
+      text-align: center;
       > li {
+        float: none;
+        display: inline-block;
         > a {
           color: white;
-          padding: 15px 0;
+          padding: 15px 8px;
           border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
           &.btn {
-            margin-top: 10px;
-            margin-bottom: 10px;
-            padding: 12px;
-            margin-left: 0;
+            margin: 10px 0;
+            padding: 8px;
+            width: 119px;
+            display: block;
           }
         }
       }

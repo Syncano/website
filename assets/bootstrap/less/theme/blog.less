@@ -28,6 +28,38 @@
   }
 }
 
+#blog-subscribe {
+  background-color: white;
+  box-shadow: 0 1px 1px rgba(0,0,0,.5);
+  width: 660px;
+  max-width: 100%;
+  margin: 20px auto 40px;
+  padding: 10px 20px 20px;
+  text-align: center;
+  h2 {
+    font-size: 36px;
+    color: #525252;
+    margin-bottom: 0;
+  }
+  h3 {
+    font-size: 28px;
+    color: #525252;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+  input {
+    border-radius: 0;
+  }
+  button {
+    background-color: @brand-primary;
+    border: 0;
+    box-shadow: none;
+    padding: 7px 25px;
+    color: white;
+    border-radius: 0;
+  }
+}
+
 .posts {
   padding-top: 40px;
   > .post {
@@ -63,6 +95,7 @@
     h2.title {
       margin-bottom: 0;
       padding: 0 30px;
+      overflow: hidden;
     }
     h2.title a {
       font-size: 36px;
@@ -139,10 +172,17 @@
           background-color: #eee;
           padding: 10px;
           font-size: 20px;
+          @media (min-width: 320px) and (max-width: 767px) {
+            left: -166px;
+          }
           .arrow-down {
             position: absolute;
-            bottom: -10px;
+            bottom: -8px;
             left: 95px;
+            @media (min-width: 320px) and (max-width: 767px) {
+              left: auto;
+              right: 25px;
+            }
           }
           a:hover {
             text-decoration: none;
