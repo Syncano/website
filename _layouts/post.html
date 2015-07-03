@@ -1,40 +1,4 @@
 {% include header.html %}
-
-{% if page.image %}
-<div class="post-header image" style="background-image: url('{{page.image}}'); ">
-{% else %}
-<div class="post-header">
-{% endif %}
-
-  <div class="container post-meta">
-    <h4 class="categories">{% for pc in page.categories %}{{ pc }}<span class="sep">, </span>{% endfor %}</h4>
-    <h1>{{ page.title }}</h1>
-    
-    <div class="author">
-      {% assign author = site.data.authors[page.author] %}
-      
-      {% if author.image %}
-        <img src="{{author.image}}" alt="{{author.name}}" height="60" width="60" />
-      {% endif %}
-      
-      {% if author %}
-      <h3><em>By</em> <strong>{{ author.name }}</strong>
-       {% include date.html %}
-      </h3>
-      {% endif %}
-    </div><!-- END author -->
-  </div><!-- END post meta -->
-</div><!-- END post header -->
-
-<div class="container">
-  <article class="post-content">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-      {{ content }}
-      </div>
-    </div>
-  </article>
-</div>
-{% include blog-cta.html %}
-{% include sharing.html %}
+{% include post/header.html %}
+{% include post/content.html %}
 {% include footer.html %}

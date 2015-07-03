@@ -2,66 +2,89 @@
 // Posts
 // --------------------------------------------------
 
+body.single-post {
+  padding-top: 77px;
+}
+
 .post-header {
-  text-align: center;
   z-index: 10;
   background-color: @brand-primary;
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
+  color: white;
+  min-height: 200px;
+  padding: 80px 0;
   h1 {
-    margin: 0 auto 90px;
-    font-size: 73px;
-    line-height: 100px;
-    letter-spacing: -1px;
-    color: white;
+    font-size: 50px;
+    line-height: 50px;
+    padding-left: 0;
   }
   h4 {
     font-size: 30px;
-    color: white;
-    margin-top: 115px;
-    margin-bottom: 40px;
   }
-  &.hero {
-    padding-bottom: 35px;
-    margin-bottom: 35px;
-    text-align: center;
-    position: relative;
-    h1 {
-      margin: 0;
-      color: white;
-      text-transform: uppercase;
-      font-size: 50px;
-      line-height: 66px;
-      letter-spacing: .05em;
-      font-weight: bold;
-      -webkit-font-smoothing: antialiased;
-    }
-    .post-meta {
-      position: relative;
-      top: 33%;
-      color: white;
+  .categories {
+    span.sep:last-child {
+      display: none;
     }
   }
-  .post-meta {
-    margin-bottom: 30px;
+  .author {
+    clear: both;
+    padding-top: 20px;
+    h5 {
+      margin: 10px 0 0;
+    }
+    a {
+      color: white;
+    }
+    img {
+      margin-right: 10px;
+    }
+  }
+}
+
+.share {
+  position: relative;
+  .icon {
+    height: 70px;
+    width: 70px;
+    background: #7FBA00 url('/assets/images/white-share.png') 45% 50% no-repeat;
+    border-radius: 10em;
+    margin-top: -35px;
+    display: block;
+    float: right;
+  }
+  .social-share{
+    opacity: 0;
+    display: none;
+    background-color: #eee;
+    width: 70px;
     padding: 10px;
-    .categories {
-      span.sep:last-child {
-        display: none;
-      }
+    position: absolute;
+    top: 35px;
+    border-radius: 4px;
+    .arrow-up {
+      position: absolute;
+      top: -10px;
+      left: 23px;
     }
-    .author h3 {
-      font-size: 15px;
-      color: white;
-      margin-top: 15px;
-      margin-bottom: 40px;
+    a {
+      display: block;
+      margin-bottom: 5px;
+      padding: 5px;
+    }
+  }
+  &:hover {
+    .social-share{
+      opacity: 1;
+      display: block;
     }
   }
 }
 
 .post-content {
   color: #676767;
+  padding-top: 40px;
   h2 {
     font-size: 35px;
     line-height: 40px;
@@ -85,7 +108,7 @@
 
 .highlight {
   pre {
-    padding: 5px 0;
+    padding: 4px 0 3px;
     background-color: #23241f;
     color: #f8f8f2;
     font-family: 'Courier New', 'Courier';
@@ -139,124 +162,5 @@
         padding-right: 500px;
       }
     }
-  }
-}
-
-.single-post {
-  .post-content {
-    overflow: hidden;
-    padding-top: 40px;
-  }
-}
-
-.post-cta {
-  background-color: @gray-darker;
-  text-align: center;
-  padding-top: (@grid-gutter-width * 2);
-  padding-bottom: (@grid-gutter-width * 2);
-  margin-top: (@grid-gutter-width * 3);
-  margin-bottom: (@grid-gutter-width * 3);
-  border-radius: 4px;
-  clear: both;
-  h2 {
-    margin: 0;
-    color: white;
-    font-size: 26px;
-    line-height: 30px;
-    font-weight: normal;
-    margin-bottom: 5px;
-  }
-  p {
-    color: @gray;
-    font-size: 15px;
-    line-height: 30px;
-    margin-bottom: 20px;
-  }
-  .form-control {
-    height: 40px;
-    padding: 12px 55px 12px 10px;
-    border-radius: 2px;
-  }
-  button.btn {
-    border: 1px solid @brand-primary;
-    font-weight: bold;
-    color: white;
-    background-color: @brand-primary;
-    height: 40px;
-    line-height: 38px;
-    padding: 0 10px;
-    text-align: center;
-    border-radius: 2px;
-    letter-spacing: 1px;
-    transition: background-color 0.2s linear 0s;
-    &:hover {
-      background-color: transparent;
-    }
-  }
-}
-
-.social-share {
-  background-color: white;
-  border-top: 1px solid #ddd;
-  padding: (@grid-gutter-width / 3) (@grid-gutter-width / 2);
-  line-height: 30px;
-  z-index: 5;
-  a {
-    border: 1px solid #abb0b7;
-    padding: 5px 10px;
-    margin-right: 5px;
-    border-radius: 4px;
-    &.fa-facebook {
-      color: #3b5998;
-      &:hover {
-        background-color: #3b5998;
-        border: 1px solid #3b5998;
-      }
-    }
-    &.fa-twitter {
-      color: #55acee;
-      &:hover {
-        background-color: #55acee;
-        border: 1px solid #55acee;
-      }
-    }
-    &.fa-google {
-      color: #dd4b39;
-      &:hover {
-        background-color: #dd4b39;
-        border: 1px solid #dd4b39;
-      }
-    }
-    &.fa-pinterest {
-      color: #cb2027;
-      &:hover {
-        background-color: #cb2027;
-        border: 1px solid #cb2027;
-      }
-    }
-    &:hover {
-      color: white;
-      cursor: pointer;
-      text-decoration: none;
-    }
-  }
-  #subscribe {
-    position: absolute;
-    right: 15px;
-    top: 10px;
-  }
-  .form-control {
-    box-shadow: none;
-  }
-  button.btn {
-    border: 1px solid @brand-primary;
-    font-weight: bold;
-    color: @brand-primary;
-  }
-}
-
-.blog.archive {
-  .social-share > .container {
-    display: none;
   }
 }

@@ -1,0 +1,16 @@
+{% assign author = site.data.authors[page.author] %}  
+{% if author %}
+	<div class="author">  
+		{% if author.image %}
+			<div class="pull-left">
+				<img src="{{author.image}}" alt="{{author.name}}" height="60" width="60" />
+			</div>
+		{% endif %}
+		      
+		<h5>By {{ author.name }}</h5>
+		    
+		{% if author.twitter %}
+			<h5><a href="http://twitter.com/{{author.twitter}}" target="_blank">@{{author.twitter}}</a></h5>
+		{% endif %}
+	</div><!-- END author -->
+{% endif %}
