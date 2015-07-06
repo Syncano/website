@@ -1,0 +1,28 @@
+<nav class="categories navbar">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-2" aria-expanded="true" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar-collapse-2" aria-expanded="false" style="{% if page.transparent_header %} background-color: {{page.bg_color}} {% endif %}">
+      <ul class="nav navbar-nav">
+        <li><a class="active" href="/blog">All</a></li>
+        <li><a href="/category/how-tos">Tutorials</a></li>
+        <li><a href="/category/events">Events</a></li>
+        <li><a href="/category/features">New Features</a></li>
+        <li><a href="/category/developer-profiles">Developer Profile</a></li>
+        <li><a href="#">More</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          {% include search.html %}
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

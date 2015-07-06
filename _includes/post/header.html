@@ -3,13 +3,12 @@
 {% else %}
 <div class="post-header">
 {% endif %}
-
+<div class="next pull-right"><a href="{{page.next.url}}"><img src="/assets/images/next-arrow.png"/></a></div>
   <div class="container">
   	<div class="row">
   	  <div class="col-md-8 col-md-offset-2">
   	    {% include post/meta.html %}
     	<h1 class="col-md-8">{{ page.title }}</h1>
-    	<div class="next pull-right"><a href="{{page.next.url}}"><img src="/assets/images/next-arrow.png"/></a></div>
     	{% include post/author.html %}
       </div><!-- END col-md-8 -->
     </div><!-- END row -->

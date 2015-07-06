@@ -1,66 +1,25 @@
 {% include header.html %}
-{% assign counter=0 %}
-{% for post in site.posts %}
-  {% for pc in post.categories %}
-    {% if pc == page.category %}
-      {% assign counter=counter | plus:1 %}
-      {% if counter < 2 %}
-        <a href="{{post.url}}">
-          <div class="hero" style="background-image: url('{{post.image}}'); min-height: {{post.image_height}};">
-            <div class="container">
-              <div class="post info">
-                <span class="categories">
-                {% for pc in post.categories %}
-                  {{ pc }}<span class="sep">, </span>
-                {% endfor %}
-                </span><!-- END categories -->
-                <h1>{{post.title}}</h1>
-                {% assign author = site.data.authors[post.author] %}
-                {% if author %}
-                  <div><img src="{{author.image}}" alt="{{author.name}}" height="50" width="50"/></div>
-                  <span class="author"><em>By</em> <strong>{{ author.name }}</strong></span>
-                {% endif %}
-              </div><!-- END post info -->
-            </div><!-- END container -->
-          </div><!-- END hero -->
-        </a>
-      {% endif %}
-    {% endif %}
-  {% endfor %}
-{% endfor %}
-    
-<div class="container blog">
+
+<div class="container archive {{page.catgeory}}">
   <div class="posts">
-    {% assign counter=0 %}
+    <h1 class="text-center">All posts for category: {{page.category}}</h1>
+    {% assign counter = 0 %}
+    {% capture cat %}{{page.category}}{% endcapture %}
     {% for post in site.posts %}
-      {% for pc in post.categories %}
-        {% if pc == page.category %}
-          {% assign counter=counter | plus:1 %}
-          {% if counter > 2 %}
-            <div class="col-md-6 post-content">
-              <a href="{{ post.url }}" class="permalink">
-                <div class="background-image"><img src="{{post.share_image}}" /></div>
-                <div class="post-meta">
-                  <span class="categories">
-                    {% for pc in post.categories %}
-                      {{ pc }}<span class="sep">, </span>
-                    {% endfor %}
-                  </span><!-- END categories -->
-                  <h1 class="title">{{ post.title }}</h1>
-                  {% assign author = site.data.authors[post.author] %}
-                  {% if author %}
-                    <span class="author">By {{ author.name }}</span>
-                  {% endif %}
-                </div><!-- END post-meta -->
-              </a>
-            </div><!-- END col-md-6 -->
-          {% endif %}
+      {% if post.categories contains cat %}
+        {% assign counter=counter | plus:1 %}
+        {% assign loopindex = forloop.index | modulo: 4 %}
+        {% if ((counter > 1) and (counter == 4)) or ((counter > 8) and (loopindex == 0)) %}
+          {% include blog/subscribe.html %}
         {% endif %}
-      {% endfor %}
+        <div class="row">
+          <div class="post-content">
+            {% include blog/post.html %}
+          </div><!-- END post content -->
+        </div><!-- END row -->
+      {% endif %}
     {% endfor %}
   </div><!-- END posts -->
-</div><!-- END container blog -->
-
-{% include sharing.html %}
+</div><!-- END container -->
 
 {% include footer.html %}

@@ -1,0 +1,31 @@
+<div class="container blog">
+  <div class="posts">
+    {% assign counter=0 %}
+    {% for post in site.posts %}
+      {% for pc in post.categories %}
+        {% if pc == page.category %}
+          {% assign counter=counter | plus:1 %}
+          {% if counter > 2 %}
+            <div class="col-md-6 post-content">
+              <a href="{{ post.url }}" class="permalink">
+                <div class="background-image"><img src="{{post.share_image}}" /></div>
+                <div class="post-meta">
+                  <span class="categories">
+                    {% for pc in post.categories %}
+                      {{ pc }}<span class="sep">, </span>
+                    {% endfor %}
+                  </span><!-- END categories -->
+                  <h1 class="title">{{ post.title }}</h1>
+                  {% assign author = site.data.authors[post.author] %}
+                  {% if author %}
+                    <span class="author">By {{ author.name }}</span>
+                  {% endif %}
+                </div><!-- END post-meta -->
+              </a>
+            </div><!-- END col-md-6 -->
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </div><!-- END posts -->
+</div><!-- END container blog -->
