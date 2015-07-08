@@ -8,9 +8,21 @@ body_class: ['solutions']
 {% include solutions/nav.html %}
 
 <div class="container solution">
-	<div class="row">
-		{% for s in site.data.solutions %}
-			{% include solutions/item.html %}
-		{% endfor %}
-	</div><!-- END row -->
+	{% for s in site.data.solutions %}
+		{% assign loopindex = forloop.index | modulo: 3 %}
+		{% if forloop.first %}
+			<div class="row">
+		{% endif %}
+
+		{% include solutions/item.html %}
+		
+		{% if loopindex == 0 %}
+			</div><!-- END row -->
+			<div class="row">
+		{% endif %}
+
+		{% if forloop.last %}
+			</div><!-- END row -->
+		{% endif %}
+	{% endfor %}
 </div><!-- END container -->

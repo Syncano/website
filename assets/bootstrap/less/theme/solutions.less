@@ -19,17 +19,27 @@
       padding: 0;
       margin-right: 15px;
       @media (min-width: 992px) {
-        max-width: 48%;
+        max-width: 32%;
       }
       .image {
-        img {
+        > img {
           width: 100%;
           height: auto;
           max-height: 200px;
         }
+        .placeholder {
+          background-color: @brand-primary;
+          text-align: center;
+          padding: 15px 35px;
+        }
       }
       header {
         padding: 15px;
+      }
+      .col-md-11,
+      .col-md-1 {
+        overflow: hidden;
+        padding: 0;
       }
       .star {
         font-size: 20px;
