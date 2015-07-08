@@ -2,5 +2,8 @@
   "name": "new-syncano",
   "root": "_site",
   "clean_urls": true,
-  "error_page": "404.html"
+  "error_page": "404.html",
+  "redirects": {
+    "/category/tutorial": "/category/how-tos"
+  }
 }

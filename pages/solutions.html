@@ -6,4 +6,11 @@ body_class: ['solutions']
 ---
 
 {% include solutions/nav.html %}
-{% include solutions/item.html %}
+
+<div class="container solution">
+	<div class="row">
+		{% for s in site.data.solutions %}
+			{% include solutions/item.html %}
+		{% endfor %}
+	</div><!-- END row -->
+</div><!-- END container -->

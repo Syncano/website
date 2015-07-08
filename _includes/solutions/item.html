@@ -1,46 +1,28 @@
-<div class="container">
-	<div class="row">
-		<div class="col-md-6">
-			<div class="col-md-4">
-				<img src="/public/solution-image.png" />
-			</div>
-			<div class="col-md-8">
-				<div class="star pull-right" style="height: 10px; width: 10px; background: yellow;"></div>
-				<h2>TwitterBox</h2>
-				<p style="clear: both;">TwitterBox helps you take out all feeds from twitter, store them and...</p>
-				<img src="/public/javascript.png" height="30"/>
-				<img src="/public/ruby.png" height="30" />
-				<h5>By: <a href="#">Author1</a>, <a href="#">Author 2</a></h5>
-			</div>
-			<footer>
-				<div class="pull-left">
-				</div>
-				<div class="pull-right">
-					<a href="#">Activate</a>
-				</div>
-				<div style="clear: both;"></div>
-			</footer>
-		</div><!-- END col-md-6 -->
-		<div class="col-md-6 pull-right">
-			<div class="col-md-4">
-				<img src="/public/solution-image.png" />
-			</div>
-			<div class="col-md-8">
-				<div class="star pull-right" style="height: 10px; width: 10px; background: yellow;"></div>
-				<h2>TwitterBox</h2>
-				<p style="clear: both;">TwitterBox helps you take out all feeds from twitter, store them and...</p>
-				<img src="/public/javascript.png" height="30"/>
-				<img src="/public/ruby.png" height="30" />
-				<h5>By: <a href="#">Author1</a>, <a href="#">Author 2</a></h5>
-			</div>
-			<footer>
-				<div class="pull-left">
-				</div>
-				<div class="pull-right">
-					<a href="#">Activate</a>
-				</div>
-				<div style="clear: both;"></div>
-			</footer>
-		</div><!-- END col-md-6 -->
-	</div><!-- END row -->
-</div><!-- END container -->
+<div class="col-md-4 item-{{s.id}}">
+	<div class="image">
+		<img src="/public/solution-image.png" />
+	</div>
+	<header>
+		<h2 class="pull-left">TwitterBox</h2>
+		<div class="star pull-right">
+			<a href="{{s.self}}" class="fa fa-star-o"></a>
+			<a href="{{s.star}}" class="fa fa-star"></a>
+		</div>
+		<div style="clear: both;"></div>
+	</header>
+	<p>{{s.description}}</p>
+	<div class="meta">
+		<h5>Version: 4.1</h5>
+		<h5>Updated: {{s.updated_at}}</h5>
+		<h5>Tags: <a href="#">widgets</a>, <a href="#">image</a></h5>
+	</div>
+	<footer>
+		<div class="pull-left">
+			<span><strong>245</strong> Activations</span>
+		</div>
+		<div class="pull-right">
+			<a href="{{s.self}}">See More</a>
+		</div>
+		<div style="clear: both;"></div>
+	</footer>
+</div><!-- END col-md-4 -->
