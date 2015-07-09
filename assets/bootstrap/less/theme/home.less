@@ -19,6 +19,18 @@
   }
   .hero {
     background-image: url('/assets/images/home-bg.png');
+    .info {
+      h1 {
+        margin-bottom: 20px;
+      }
+      h2 {
+        margin-bottom: 10px;
+      }
+      a.btn {
+        margin-top: 20px;
+        margin-bottom: 100px;
+      }
+    }
   }
 
   .collision {
@@ -31,7 +43,6 @@
   }
 
   .highlights {
-    background-color: #FAFAFA;
     @media (min-width: @grid-float-breakpoint) {
       padding: 100px 0;
     }
@@ -109,11 +120,33 @@
   .data {
     padding: 50px 0;
     background-color: #FAFAFA;
+    @media (min-width: 1024px) {
+      img {
+        margin-right: 50px;
+      }
+      .nosql {
+        img {
+          margin-right: 70px;
+        }
+      }
+    }
+    h3 {
+      font-size: 18px;
+      margin-top: 15px;
+    }
+    h5 {
+      font-size: 18px;
+      font-weight: lighter;
+      color: #3C3C3C;
+      margin-bottom: 60px;
+    }
   }
 
   .bugs {
-    padding: 50px 0;
-    background-color: white;
+    padding: 75px 0 100px;
+    h2 {
+      margin-bottom: 35px;
+    }
   }
 
   .middleware {
@@ -141,11 +174,46 @@
   }
 
   .showcase {
-    padding: 75px 0 35px;
+    padding: 75px 0;
+    h2 {
+      margin-bottom: 50px;
+    }
+    h3 {
+      margin-bottom: 10px;
+    }
+  }
+
+  .solutions {
+    padding: 75px 0;
+    background-color: #FAFAFA;
+    h2 {
+      font-weight: lighter;
+      color: #3C3C3C;
+    }
+    p {
+      font-size: 18px;
+      color: #3C3C3C;
+      margin-bottom: 50px;
+    }
+    .placeholder {
+      min-height: 200px;
+    }
   }
 
   .support {
     padding: 75px 0;
+    background-color: #1776D2;
+    color: white;
+    h2, a {
+      color: inherit;
+    }
+    a {
+      display: inline-block;
+      margin-top: 50px;
+      &:hover {
+        color: white;
+      }
+    }
   }
 
   .platforms {

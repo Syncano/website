@@ -1,0 +1,19 @@
+<div class="solutions">
+  <div class="container text-center">
+    <h2>Solutions</h2>
+    <p>Speed up your development process with Solutions. Create your own work, share it with others, and <br/> easily install it within your app. Simply enter our directory, find what you need and install it within seconds.</p>
+    <div class="row">
+    	{% for s in site.data.solutions limit:3 %}
+    	<div class="col-md-4 item-{{s.id}}">
+			<div class="image">
+			{% if s.metadata.screenshots[0] %}
+				<img src="{{s.metadata.screenshots[0]}}" />
+			{% else %}
+				<div class="placeholder"></div>
+			{% endif %}
+			</div>
+		</div><!-- END col-md-4 -->
+		{% endfor %}
+    </div><!-- END row -->
+  </div><!-- END container -->
+</div><!-- END solutions -->
