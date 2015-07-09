@@ -29,7 +29,7 @@
 				<li><a href="/category/events">Meetups</a></li>
 				<li><a href="/support/">Support</a></li>
 				<li><a href="/category/how-tos">Tutorials</a></li>
-				<li><a href="/libraries">Libraries</a></li>
+				<li><a href="http://docs.syncano.com/v4/docs/syncano-libraries">Libraries</a></li>
 			</ul>
 		</div>
 
@@ -37,7 +37,15 @@
 			<h4>Latest Blog Post</h4>
 			<ul>
 				{% for post in site.posts limit:2 %}
-					<li><a href="{{post.url}}">{{post.title}}</a></li>
+					<li>
+						{% if post.meetup_url %}
+						<a href="{{post.meetup_url}}" target="_blank">
+						{% else %}
+						<a href="{{post.url}}">
+						{% endif %}
+							{{post.title}}
+						</a>
+					</li>
   				{% endfor %}
 			</ul>
 			<div class="newsletter">
