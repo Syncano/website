@@ -22,8 +22,12 @@ body.single-post {
     line-height: 50px;
     padding-left: 0;
     margin-bottom: 30px;
+    @media (min-width: 320px) and (max-width: 767px) {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
-  h5, h5 a {
+  h5, a {
     color: white;
   }
   img {
@@ -79,6 +83,8 @@ body.single-post {
   font-size: 14px;
   color: #939393;
   box-shadow: 1px 1px 5px 0px #999;
+  margin-bottom: 20px;
+  max-width: 250px;
   >div {
     &.date {
       margin: 10px 0 15px;

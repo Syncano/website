@@ -3,6 +3,6 @@
 		{{ post.date | date: '%d. %B %Y' }}
 	</span><!-- END date -->
 	<span class="categories">
-		{% for pc in page.categories %}{{ pc }}<span class="sep">, </span>{% endfor %}
+		{% for pc in page.categories %}<a href="/category/{{ pc | replace:' ','-' }}" name="{{ pc }}">{{ pc }}</a><span class="sep">, </span>{% endfor %}
 	</span><!-- END categories -->
 </div><!-- END post-meta -->
