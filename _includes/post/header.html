@@ -1,9 +1,10 @@
 {% if page.image %}
 <div class="post-header image" style="background-image: url('{{page.image}}'); ">
-{% elsif page.map %}
-  {{ page.map }}
 {% else %}
-<div class="post-header">
+  <div class="post-header">
+  {% if page.map %}
+    <div class="map">{{ page.map }}</div>
+  {% endif %}
 {% endif %}
 <div class="next pull-right"><a href="{{page.next.url}}"><img src="/assets/images/next-arrow.png"/></a></div>
   <div class="container">

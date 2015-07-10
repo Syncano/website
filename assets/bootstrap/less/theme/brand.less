@@ -34,11 +34,55 @@
 		}
 	}
 	.logo {
-		.col-md-6.light {
-			background: url('/assets/images/syncano-white.png') 50% 50% no-repeat;
+		.row {
+			margin-left: 0;
+			margin-right: 0;
 		}
-		.col-md-6.dark {
-			background: url('/assets/images/syncano-logo-dark.png') 50% 50% no-repeat;
+		.col-md-6 {
+			min-height: 120px;
+			@media(min-width: 992px) {
+				max-width: 47%;
+			}
+			margin-right: 15px;
+			padding-top: 40px;
+			text-align: center;
+			img {
+				height: 37px;
+			}
+		}
+		.col-md-6.blue-light {
+			background: @brand-primary;
+		}
+		.col-md-6.blue-dark {
+			background: #244273;
+		}
+		.col-md-6.gray-light {
+			background: url('/assets/images/brand/syncano-light-gray.png');
+		}
+		.col-md-6.gray-dark {
+			background: url('/assets/images/brand/syncano-dark-gray.png');
+		}
+
+	}
+	.colors {
+		.col-md-6 {
+			> div {
+				height: 115px;
+				width: 315px;
+				&.gray-light {
+					background: url('/assets/images/brand/syncano-light-gray.png');
+				}
+				&.gray-dark {
+					background: url('/assets/images/brand/syncano-dark-gray.png');
+				}
+			}
+		}
+	}
+	.mark {
+		.col-md-8 {
+			h5 {
+				text-align: center;
+			}
 		}
 	}
 	h4 {
