@@ -1,9 +1,31 @@
 <div class="container">
   <article class="post-content">
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-      {{ content }}
-      </div>
-    </div>
-  </article>
-</div>
+    	<div class="col-md-2"></div>
+    		{% if page.categories contains 'meetup' %}
+			<div class="col-md-2">
+				<div class="event-meta">
+					<i class="fa fa-calendar"></i> MEETUP
+					<div class="date">
+						{% if page.day %}
+					        <span class="day">{{page.day}}<br/></span>
+					    {% endif %}
+					    {% if page.month %}
+					      <span class="month">{{page.month}}</span>
+					    {% endif %}
+					</div><!-- END date -->
+					{% if page.time %}
+						<div class="time">{{page.time}}</div>
+					{% endif %}
+					{% if page.location %}
+						<div class="location">{{page.location}}</div>
+					{% endif %}
+				</div><!-- END meta -->
+			</div><!-- END col-md-2 -->
+			{% endif %}
+			<div class="col-md-8">
+				{{ content }}
+			</div><!-- END col-md-8 -->
+		</div><!-- END row -->
+	</article>
+</div><!-- END container -->

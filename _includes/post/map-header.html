@@ -1,0 +1,18 @@
+<div class="map hero">
+  {% if page.map %}
+    {{ page.map }}
+  {% else %}
+    <span class="syncano-blue"></span>
+  {% endif %}
+  <div class="meetup-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          {% include post/meta.html %}
+          <h1>{{ page.title }}</h1>
+          {% include post/author.html %}
+        </div><!-- END col-md-8 -->
+      </div><!-- END row -->
+    </div><!-- END container -->
+  </div><!-- END meetup-info -->
+</div><!-- END map -->

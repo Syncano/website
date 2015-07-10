@@ -4,6 +4,37 @@
 
 body.single-post {
   padding-top: 77px;
+  .map.hero {
+    margin-top: 0!important;
+  }
+}
+
+.meetup-info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding-top: 50px;
+  background-color: rgba(23, 118, 210, .5);
+  h1 {
+    font-size: 50px;
+    line-height: 50px;
+    padding-left: 0;
+    margin-bottom: 30px;
+  }
+  h5, h5 a {
+    color: white;
+  }
+  img {
+    margin-right: 10px;
+  }
+}
+
+.categories {
+  span.sep:last-child {
+    display: none;
+  }
 }
 
 .post-header {
@@ -23,11 +54,6 @@ body.single-post {
   h4 {
     font-size: 30px;
   }
-  .categories {
-    span.sep:last-child {
-      display: none;
-    }
-  }
   .author {
     clear: both;
     padding-top: 20px;
@@ -44,6 +70,29 @@ body.single-post {
   .next {
     margin-top: 70px;
     margin-right: 55px;
+  }
+}
+
+.event-meta {
+  padding: 20px;
+  background-color: white;
+  font-size: 14px;
+  color: #939393;
+  box-shadow: 1px 1px 5px 0px #999;
+  >div {
+    &.date {
+      margin: 10px 0 15px;
+      font-weight: bold;
+      .day {
+        font-size: 70px;
+        line-height: 70px;
+      }
+      .month {
+        font-size: 25px;
+        font-weight: normal;
+        display: block;
+      }
+    }
   }
 }
 
@@ -67,6 +116,7 @@ body.single-post {
     position: absolute;
     top: 35px;
     border-radius: 4px;
+    z-index: 9999;
     .arrow-up {
       position: absolute;
       top: -10px;

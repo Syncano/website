@@ -1,12 +1,13 @@
 {% if page.image %}
 <div class="post-header image" style="background-image: url('{{page.image}}'); ">
+{% elsif page.map %}
+  {% include post/map-header.html %}
 {% else %}
   <div class="post-header">
-  {% if page.map %}
-    <div class="map">{{ page.map }}</div>
-  {% endif %}
 {% endif %}
 <div class="next pull-right"><a href="{{page.next.url}}"><img src="/assets/images/next-arrow.png"/></a></div>
+
+{% unless page.map %}
   <div class="container">
   	<div class="row">
   	  <div class="col-md-8 col-md-offset-2">
@@ -16,8 +17,11 @@
       </div><!-- END col-md-8 -->
     </div><!-- END row -->
   </div><!-- END container -->
+{% endunless %}
 
+{% unless page.map %}
 </div><!-- END post header -->
+{% endunless %}
 
 <div class="share">
 	<div class="container">
