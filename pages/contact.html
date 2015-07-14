@@ -7,68 +7,50 @@ seo_description: "Contact Syncano, a real-time sync API and backend in the cloud
 keywords: "real-time apps, real-time app, contact syncano, syncano contact"
 images: ['/public/new_york_office_hydra_420px.jpg']
 ---
+<div class="gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h1>Ideas, suggestions, interested in partnerships?</h1>
+        <h2>We'd love to hear from you!</h2>
+        <p>Drop us an email at <a href"mailto:build@syncano.com">build@syncano.com</a></p>
+        <p>Need to call us? Try <a href="tel:16468834189">+1 646 883 4189</a></p>
+      </div>
+      <div class="col-md-4">
+        {% include contact/form.html %}
+      </div>
+    </div><!-- END row -->
+    <div class="row visible-lg">
+      <div class="col-md-4">
+        <img src="/public/nyc.png" />
+      </div>
+      <div class="col-md-4">
+        <img src="/public/poland.png" />
+      </div>
+      <div class="col-md-4">
+        <img src="/public/norway.png" />
+      </div>
+    </div><!-- END row -->
+  </div><!-- END container -->
+</div><!-- END gray -->
+  
+<div class="white">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 location">
+        <h2>USA</h2>
+        <p>120 East 23rd St. <br/>5th Floor <br/>New York, NY 10010</p>
+      </div>
+      <div class="col-md-4 location">
+        <h2>POLAND</h2>
+        <p>Al. Jerozolimskie 81 <br/>02-001 Warsaw <br/>Poland</p>
+      </div>
+      <div class="col-md-4 location">
+        <h2>NORWAY</h2>
+        <p>Stortingsgata 30 <br/>0161 Oslo <br/>Norway</p>
+      </div>
+    </div>
+  </div><!-- END container -->
+</div><!-- END main -->
 
-<div class="container">
-	<div class="col-md-6 col-sm-8">
-		<h1>We Would Love to Hear from You!</h1>
-		<form action="//formspree.io/hello@syncano.com" method="POST" name="contact">
-			<input type="hidden" name="_subject" value="Contact Form Submission from syncano.com" />
-			<input type="text" name="_gotcha" style="display:none" />
-			<input type="hidden" name="_next" value="//syncano.com/thank-contacting-us" />
-			<div class="form-group" id="firstName">
-    			<label for="fname">First Name*</label>
-    			<input class="form-control" type="text" name="fname" required>
-  			</div>
-
-  			<div class="form-group">
-    			<label for="lname">Last Name</label>
-    			<input class="form-control" type="text" name="lname">
-  			</div>
-
-  			<div class="form-group" id="email">
-    			<label for="_replyto">Email*</label>
-    			<input class="form-control" type="email" name="_replyto" required>
-  			</div>
-
-  			<div class="form-group">
-    			<label for="company">Company</label>
-    			<input class="form-control" type="text" name="company">
-  			</div>
-    	
-    		<div class="form-group">
-    			<label for="message">Message</label>
-    			<textarea class="form-control" rows="3" name="message"></textarea>
-  			</div>
-    	
-    		<input type="submit" value="Send" class="btn btn-success">
-		</form>
-	</div>
-	<div class="col-md-6 col-sm-4">
-		<img src="/public/new_york_office_hydra_420px.jpg" alt="New York City" />
-	</div>
-</div><!-- END container -->
-
-
-<script>
-var forms = document.getElementsByTagName('form');
-var firstNameContainer = document.getElementById("firstName");
-var emailContainer = document.getElementById("email");
-for (var i = 0; i < forms.length; i++) {
-    forms[i].noValidate = true;
-
-    forms[i].addEventListener('submit', function(event) {
-        //Prevent submission if checkValidity on the form returns false.
-        var firstNameVal = document.forms['contact']['fname'].value;
-        var emailVal = document.forms['contact']['_replyto'].value;
-        if (!event.target.checkValidity()) {
-            event.preventDefault();
-            if (firstNameVal == null || firstNameVal == '') {
-              firstNameContainer.setAttribute( 'class', 'form-group has-error' );
-            }
-            if (emailVal == null || emailVal == '') {
-              emailContainer.setAttribute( 'class', 'form-group has-error' );
-            }
-        }
-    }, false);
-}
-</script>
+{% include contact/script.html %}
