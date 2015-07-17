@@ -11,46 +11,16 @@ images: ['/public/new_york_office_hydra_420px.jpg']
   <div class="container">
     <div class="row">
       <div class="col-md-8">
-        <h1>Ideas, suggestions, interested in partnerships?</h1>
-        <h2>We'd love to hear from you!</h2>
-        <p>Drop us an email at <a href"mailto:build@syncano.com">build@syncano.com</a></p>
-        <p>Need to call us? Try <a href="tel:16468834189">+1 646 883 4189</a></p>
+        {% include contact/header.html %}
       </div>
       <div class="col-md-4">
         {% include contact/form.html %}
       </div>
     </div><!-- END row -->
-    <div class="row visible-lg">
-      <div class="col-md-4">
-        <img src="/public/nyc.png" />
-      </div>
-      <div class="col-md-4">
-        <img src="/public/poland.png" />
-      </div>
-      <div class="col-md-4">
-        <img src="/public/norway.png" />
-      </div>
-    </div><!-- END row -->
+    {% include contact/city-pictures.html %}
   </div><!-- END container -->
 </div><!-- END gray -->
   
-<div class="white">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 location">
-        <h2>USA</h2>
-        <p>120 East 23rd St. <br/>5th Floor <br/>New York, NY 10010</p>
-      </div>
-      <div class="col-md-4 location">
-        <h2>POLAND</h2>
-        <p>Al. Jerozolimskie 81 <br/>02-001 Warsaw <br/>Poland</p>
-      </div>
-      <div class="col-md-4 location">
-        <h2>NORWAY</h2>
-        <p>Stortingsgata 30 <br/>0161 Oslo <br/>Norway</p>
-      </div>
-    </div>
-  </div><!-- END container -->
-</div><!-- END main -->
+{% include contact/locations.html %}
 
 {% include contact/script.html %}

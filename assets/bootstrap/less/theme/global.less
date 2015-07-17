@@ -9,6 +9,10 @@ form {
   }
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 //
 // Reused Styles
 // --------------------------------------------------
@@ -36,6 +40,19 @@ form {
     color: white;
     &.active {
       border-color: white;
+    }
+  }
+}
+
+.blog .categories.navbar {
+  background-color: white;
+  ul.dropdown-menu {
+    background-color: white;
+  }
+  a {
+    color: #878787;
+    &.active {
+      border-color: @brand-primary;
     }
   }
 }
@@ -147,7 +164,7 @@ form {
   background-position: 50% 50%;
   background-color: @brand-dark;
   color: white;
-  padding: 75px 0;
+  padding: 100px 0;
   .info {
     text-align: center;
     &.post {
@@ -156,7 +173,7 @@ form {
     h1 {
       font-size: 61px;
       line-height: 71px;
-      font-weight: 500;
+      font-weight: lighter;
       margin-bottom: 40px;
       margin-top: 0;
       letter-spacing: -0.5px;
