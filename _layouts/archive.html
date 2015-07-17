@@ -9,8 +9,15 @@
       {% if post.categories contains cat %}
         {% assign counter=counter | plus:1 %}
         {% assign loopindex = forloop.index | modulo: 4 %}
-        {% if ((counter > 1) and (counter == 4)) or ((counter > 8) and (loopindex == 0)) %}
-          {% include blog/subscribe.html %}
+        {% if counter > 1 %}
+          {% if counter == 4 %}
+            {% include blog/subscribe.html %}
+          {% endif %}
+        {% endif %}
+        {% if counter > 8 %}
+          {% if loopindex == 0 %}
+            {% include blog/subscribe.html %}
+          {% endif %}
         {% endif %}
         <div class="row">
           <div class="post-content">

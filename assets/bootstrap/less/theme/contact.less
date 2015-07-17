@@ -56,7 +56,7 @@
   	.location {
   		background-image: url('/assets/images/address-bg.png');
   		background-size: 360px 317px;
-  		background-position: 15px 0;
+  		background-position: 50% 50%;
   		background-repeat: no-repeat;
   		position: relative;
   		min-height: 300px;
@@ -65,14 +65,25 @@
   			color: #434242;
   			font-weight: lighter;
   			padding-left: 15px;
-  			padding-top: 15px;
+  			padding-top: 40px;
+        text-align: center;
+        @media(min-width: 992px) {
+          text-align: left;
+          padding-top: 15px;
+        }
   		}
   		p {
   			font-size: 18px;
   			color: #434242;
-  			position: absolute;
-  			left: 30px;
-  			bottom: 15px;
+        text-align: center;
+        margin-top: 100px;
+        @media(min-width: 992px) {
+          position: absolute;
+          left: 30px;
+          bottom: 15px;
+          text-align: left;
+          margin-top: 0;
+        }
   		}
   	}
 }
