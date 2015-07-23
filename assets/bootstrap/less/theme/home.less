@@ -88,17 +88,17 @@
     background: linear-gradient(@brand-dark, #1E1E21);
     #slider {
       width:960px;
-      height:420px; 
-      margin: -40px auto 0; 
+      height:420px;
+      margin: -40px auto 0;
       position: relative;
       max-width: 100%;
       div {
         max-width: 100%;
       }
     }
-    div.navBulletsWrapper { 
+    div.navBulletsWrapper {
       position: absolute;
-      bottom:-50px; 
+      bottom:-50px;
       left: 0px;
       right: 0;
       text-align: center;
@@ -178,21 +178,16 @@
   .solutions {
     padding: 75px 0;
     background-color: #FAFAFA;
-    .row {
-      margin-left: 0;
-      margin-right: 0;
-    }
-    h2 {
-      font-weight: lighter;
-      color: #3C3C3C;
-    }
-    p {
-      font-size: 18px;
-      color: #3C3C3C;
-      margin-bottom: 50px;
-    }
-    .placeholder {
-      min-height: 200px;
+    .container {
+      > h2 {
+        font-weight: lighter;
+        color: #3C3C3C;
+      }
+      > p {
+        font-size: 18px;
+        color: #3C3C3C;
+        margin-bottom: 50px;
+      }
     }
   }
 
@@ -201,15 +196,12 @@
     background: #1776D2 url('/assets/images/bg.png') 0 0 no-repeat;
     background-size: cover;
     color: white;
-    h2, a {
+    h2 {
       color: inherit;
     }
     a {
       display: inline-block;
       margin-top: 50px;
-      &:hover {
-        color: white;
-      }
     }
   }
 

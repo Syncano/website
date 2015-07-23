@@ -1,176 +1,444 @@
 [
-        {
-            "id": 1, 
-            "label": "supersol", 
-            "description": "super solution for all your problems", 
-            "metadata": {}, 
-            "public": true, 
-            "created_at": "2015-05-24T18:35:04.898316Z", 
-            "updated_at": "2015-05-24T18:35:04.898353Z", 
-            "tags": [], 
-            "stars_count": 1, 
-            "starred_by_me": null, 
-            "links": {
-                "self": "/v1/marketplace/solutions/1/", 
-                "unstar": "/v1/marketplace/solutions/1/unstar/", 
-                "star": "/v1/marketplace/solutions/1/star/", 
-                "versions-create-from-instance": "/v1/marketplace/solutions/1/versions/create_from_instance/", 
-                "versions": "/v1/marketplace/solutions/1/versions/"
-            }
-        }, 
-        {
-            "id": 2, 
-            "label": "newnewnew", 
-            "description": "", 
-            "metadata": {}, 
-            "public": true, 
-            "created_at": "2015-05-27T16:41:00.106211Z", 
-            "updated_at": "2015-05-27T16:41:00.106250Z", 
-            "tags": [], 
-            "stars_count": 0, 
-            "starred_by_me": null, 
-            "links": {
-                "self": "/v1/marketplace/solutions/2/", 
-                "unstar": "/v1/marketplace/solutions/2/unstar/", 
-                "star": "/v1/marketplace/solutions/2/star/", 
-                "versions-create-from-instance": "/v1/marketplace/solutions/2/versions/create_from_instance/", 
-                "versions": "/v1/marketplace/solutions/2/versions/"
-            }
-        }, 
-        {
-            "id": 3, 
-            "label": "ilonajulczuk/notify_about_order_to_slack", 
-            "description": "After new object of class Order is created, trigger will run and send me notification to slack about it.", 
-            "metadata": {
-                "screenshots": [
-                    "http://i.imgur.com/TD2etfn.png"
-                ]
-            }, 
-            "public": true, 
-            "created_at": "2015-06-01T11:49:55.765456Z", 
-            "updated_at": "2015-06-01T12:22:20.673018Z", 
-            "tags": [
-                "slack", 
-                "trigger", 
-                "python", 
-                "codebox", 
-                "notification"
-            ], 
-            "stars_count": 0, 
-            "starred_by_me": null, 
-            "links": {
-                "self": "/v1/marketplace/solutions/3/", 
-                "unstar": "/v1/marketplace/solutions/3/unstar/", 
-                "star": "/v1/marketplace/solutions/3/star/", 
-                "versions-create-from-instance": "/v1/marketplace/solutions/3/versions/create_from_instance/", 
-                "versions": "/v1/marketplace/solutions/3/versions/"
-            }
-        }, 
-        {
-            "id": 4, 
-            "label": "qwerty", 
-            "description": "", 
-            "metadata": {}, 
-            "public": true, 
-            "created_at": "2015-06-11T09:30:47.091496Z", 
-            "updated_at": "2015-06-11T09:30:47.091538Z", 
-            "tags": [], 
-            "stars_count": 0, 
-            "starred_by_me": null, 
-            "links": {
-                "self": "/v1/marketplace/solutions/4/", 
-                "unstar": "/v1/marketplace/solutions/4/unstar/", 
-                "star": "/v1/marketplace/solutions/4/star/", 
-                "versions-create-from-instance": "/v1/marketplace/solutions/4/versions/create_from_instance/", 
-                "versions": "/v1/marketplace/solutions/4/versions/"
-            }
-        }, 
-        {
-            "id": 5, 
-            "label": "testtest", 
-            "description": "test", 
-            "metadata": {}, 
-            "public": true, 
-            "created_at": "2015-07-02T13:18:49.686852Z", 
-            "updated_at": "2015-07-02T13:18:49.686895Z", 
-            "tags": [], 
-            "stars_count": 0, 
-            "starred_by_me": null, 
-            "links": {
-                "self": "/v1/marketplace/solutions/5/", 
-                "unstar": "/v1/marketplace/solutions/5/unstar/", 
-                "star": "/v1/marketplace/solutions/5/star/", 
-                "versions-create-from-instance": "/v1/marketplace/solutions/5/versions/create_from_instance/", 
-                "versions": "/v1/marketplace/solutions/5/versions/"
-            }
-        }, 
-        {
-            "id": 6, 
-            "label": "runscope_export_solution", 
-            "description": "test solution", 
-            "metadata": {
-                "test": "test"
-            }, 
-            "public": true, 
-            "created_at": "2015-07-02T13:44:16.215437Z", 
-            "updated_at": "2015-07-02T13:44:16.215476Z", 
-            "tags": [
-                "python", 
-                "twillio", 
-                "js"
-            ], 
-            "stars_count": 0, 
-            "starred_by_me": null, 
-            "links": {
-                "self": "/v1/marketplace/solutions/6/", 
-                "unstar": "/v1/marketplace/solutions/6/unstar/", 
-                "star": "/v1/marketplace/solutions/6/star/", 
-                "versions-create-from-instance": "/v1/marketplace/solutions/6/versions/create_from_instance/", 
-                "versions": "/v1/marketplace/solutions/6/versions/"
-            }
-        }, 
-        {
-            "id": 7, 
-            "label": "runscope_export_solution", 
-            "description": "test solution", 
-            "metadata": {
-                "test": "test"
-            }, 
-            "public": true, 
-            "created_at": "2015-07-02T14:32:24.936076Z", 
-            "updated_at": "2015-07-02T14:32:24.936124Z", 
-            "tags": [
-                "python", 
-                "twillio", 
-                "js"
-            ], 
-            "stars_count": 0, 
-            "starred_by_me": null, 
-            "links": {
-                "self": "/v1/marketplace/solutions/7/", 
-                "unstar": "/v1/marketplace/solutions/7/unstar/", 
-                "star": "/v1/marketplace/solutions/7/star/", 
-                "versions-create-from-instance": "/v1/marketplace/solutions/7/versions/create_from_instance/", 
-                "versions": "/v1/marketplace/solutions/7/versions/"
-            }
-        }, 
-        {
-            "id": 39, 
-            "label": "archiver", 
-            "description": "# Description\r\n\r\nSolution for archiving softly deleted stale objects.\r\n\r\n#  What's included?\r\n\r\nIncludes codebox, class and schedule that runs codebox every minute.\r\n", 
-            "metadata": {}, 
-            "public": true, 
-            "created_at": "2015-07-03T12:57:44.312151Z", 
-            "updated_at": "2015-07-03T12:57:44.312190Z", 
-            "tags": [], 
-            "stars_count": 0, 
-            "starred_by_me": null, 
-            "links": {
-                "self": "/v1/marketplace/solutions/39/", 
-                "unstar": "/v1/marketplace/solutions/39/unstar/", 
-                "star": "/v1/marketplace/solutions/39/star/", 
-                "versions-create-from-instance": "/v1/marketplace/solutions/39/versions/create_from_instance/", 
-                "versions": "/v1/marketplace/solutions/39/versions/"
-            }
-        }
-    ]
+  {
+    "id": 1,
+    "label": "supersol",
+    "description": "super solution for all your problems",
+    "metadata": {},
+    "public": true,
+    "created_at": "2015-05-24T18:35:04.898316Z",
+    "updated_at": "2015-05-24T18:35:04.898353Z",
+    "tags": [],
+    "stars_count": 5,
+    "starred_by_me": null,
+    "versions": {
+      "devel": null,
+      "stable": "2.0"
+    },
+    "author": {
+      "id": 689,
+      "first_name": "Justyna",
+      "last_name": "Ilczuk",
+      "avatar_url": "https://www.gravatar.com/avatar/7e75edb6c56eac992ad3db1a3d4d80cf"
+    },
+    "links": {
+      "self": "/v1/marketplace/solutions/1/",
+      "unstar": "/v1/marketplace/solutions/1/unstar/",
+      "star": "/v1/marketplace/solutions/1/star/",
+      "versions-create-from-instance": "/v1/marketplace/solutions/1/versions/create_from_instance/",
+      "versions": "/v1/marketplace/solutions/1/versions/"
+    }
+  },
+  {
+    "id": 2,
+    "label": "newnewnew",
+    "description": "",
+    "metadata": {},
+    "public": true,
+    "created_at": "2015-05-27T16:41:00.106211Z",
+    "updated_at": "2015-05-27T16:41:00.106250Z",
+    "tags": [],
+    "stars_count": 1,
+    "starred_by_me": null,
+    "versions": {
+      "devel": null,
+      "stable": null
+    },
+    "author": {
+      "id": 1379,
+      "first_name": "ccccccc",
+      "last_name": "ccccccc",
+      "avatar_url": "https://www.gravatar.com/avatar/0ee9267158182e697d781af5a8879b1e"
+    },
+    "links": {
+      "self": "/v1/marketplace/solutions/2/",
+      "unstar": "/v1/marketplace/solutions/2/unstar/",
+      "star": "/v1/marketplace/solutions/2/star/",
+      "versions-create-from-instance": "/v1/marketplace/solutions/2/versions/create_from_instance/",
+      "versions": "/v1/marketplace/solutions/2/versions/"
+    }
+  },
+  {
+    "id": 3,
+    "label": "ilonajulczuk/notify_about_order_to_slack",
+    "description": "After new object of class Order is created, trigger will run and send me notification to slack about it.",
+    "metadata": {
+      "screenshots": [
+        "http://i.imgur.com/TD2etfn.png"
+      ]
+    },
+    "public": true,
+    "created_at": "2015-06-01T11:49:55.765456Z",
+    "updated_at": "2015-06-01T12:22:20.673018Z",
+    "tags": [
+      "slack",
+      "trigger",
+      "python",
+      "codebox",
+      "notification"
+    ],
+    "stars_count": 0,
+    "starred_by_me": null,
+    "versions": {
+      "devel": null,
+      "stable": "1.0"
+    },
+    "author": {
+      "id": 7,
+      "first_name": "Justyna Hermenegilda",
+      "last_name": "Ilczuk",
+      "avatar_url": "https://www.gravatar.com/avatar/68a325eb1b42006fed82578bf5c9ae5e"
+    },
+    "links": {
+      "self": "/v1/marketplace/solutions/3/",
+      "unstar": "/v1/marketplace/solutions/3/unstar/",
+      "star": "/v1/marketplace/solutions/3/star/",
+      "versions-create-from-instance": "/v1/marketplace/solutions/3/versions/create_from_instance/",
+      "versions": "/v1/marketplace/solutions/3/versions/"
+    }
+  },
+  {
+    "id": 4,
+    "label": "qwerty",
+    "description": "",
+    "metadata": {},
+    "public": true,
+    "created_at": "2015-06-11T09:30:47.091496Z",
+    "updated_at": "2015-06-11T09:30:47.091538Z",
+    "tags": [],
+    "stars_count": 1,
+    "starred_by_me": null,
+    "versions": {
+      "devel": null,
+      "stable": null
+    },
+    "author": {
+      "id": 1,
+      "first_name": "Syncano",
+      "last_name": "Superuser",
+      "avatar_url": "https://www.gravatar.com/avatar/36df08b0900dd802495ba8f6d32387c3"
+    },
+    "links": {
+      "self": "/v1/marketplace/solutions/4/",
+      "unstar": "/v1/marketplace/solutions/4/unstar/",
+      "star": "/v1/marketplace/solutions/4/star/",
+      "versions-create-from-instance": "/v1/marketplace/solutions/4/versions/create_from_instance/",
+      "versions": "/v1/marketplace/solutions/4/versions/"
+    }
+  },
+  {
+    "id": 5,
+    "label": "testtest",
+    "description": "test",
+    "metadata": {},
+    "public": true,
+    "created_at": "2015-07-02T13:18:49.686852Z",
+    "updated_at": "2015-07-02T13:18:49.686895Z",
+    "tags": [],
+    "stars_count": 1,
+    "starred_by_me": null,
+    "versions": {
+      "devel": null,
+      "stable": null
+    },
+    "author": {
+      "id": 1,
+      "first_name": "Syncano",
+      "last_name": "Superuser",
+      "avatar_url": "https://www.gravatar.com/avatar/36df08b0900dd802495ba8f6d32387c3"
+    },
+    "links": {
+      "self": "/v1/marketplace/solutions/5/",
+      "unstar": "/v1/marketplace/solutions/5/unstar/",
+      "star": "/v1/marketplace/solutions/5/star/",
+      "versions-create-from-instance": "/v1/marketplace/solutions/5/versions/create_from_instance/",
+      "versions": "/v1/marketplace/solutions/5/versions/"
+    }
+  },
+  {
+    "id": 6,
+    "label": "runscope_export_solution",
+    "description": "test solution",
+    "metadata": {
+      "test": "test"
+    },
+    "public": true,
+    "created_at": "2015-07-02T13:44:16.215437Z",
+    "updated_at": "2015-07-02T13:44:16.215476Z",
+    "tags": [
+      "python",
+      "twillio",
+      "js"
+    ],
+    "stars_count": 0,
+    "starred_by_me": null,
+    "versions": {
+      "devel": null,
+      "stable": "1.0"
+    },
+    "author": {
+      "id": 2016,
+      "first_name": "",
+      "last_name": "",
+      "avatar_url": "https://www.gravatar.com/avatar/a8ea771c6cf820f3fafb244cd25dd5c2"
+    },
+    "links": {
+      "self": "/v1/marketplace/solutions/6/",
+      "unstar": "/v1/marketplace/solutions/6/unstar/",
+      "star": "/v1/marketplace/solutions/6/star/",
+      "versions-create-from-instance": "/v1/marketplace/solutions/6/versions/create_from_instance/",
+      "versions": "/v1/marketplace/solutions/6/versions/"
+    }
+  },
+  {
+    "id": 7,
+    "label": "runscope_export_solution",
+    "description": "test solution",
+    "metadata": {
+      "test": "test"
+    },
+    "public": true,
+    "created_at": "2015-07-02T14:32:24.936076Z",
+    "updated_at": "2015-07-02T14:32:24.936124Z",
+    "tags": [
+      "python",
+      "twillio",
+      "js"
+    ],
+    "stars_count": 0,
+    "starred_by_me": null,
+    "versions": {
+      "devel": null,
+      "stable": "1.0"
+    },
+    "author": {
+      "id": 1,
+      "first_name": "Syncano",
+      "last_name": "Superuser",
+      "avatar_url": "https://www.gravatar.com/avatar/36df08b0900dd802495ba8f6d32387c3"
+    },
+    "links": {
+      "self": "/v1/marketplace/solutions/7/",
+      "unstar": "/v1/marketplace/solutions/7/unstar/",
+      "star": "/v1/marketplace/solutions/7/star/",
+      "versions-create-from-instance": "/v1/marketplace/solutions/7/versions/create_from_instance/",
+      "versions": "/v1/marketplace/solutions/7/versions/"
+    }
+  },
+  {
+    "id": 39,
+    "label": "archiver",
+    "description": "# Description\r\n\r\nSolution for archiving softly deleted stale objects.\r\n\r\n#  What's included?\r\n\r\nIncludes codebox, class and schedule that runs codebox every minute.\r\n",
+    "metadata": {},
+    "public": true,
+    "created_at": "2015-07-03T12:57:44.312151Z",
+    "updated_at": "2015-07-03T12:57:44.312190Z",
+    "tags": [],
+    "stars_count": 0,
+    "starred_by_me": null,
+    "versions": {
+      "devel": null,
+      "stable": null
+    },
+    "author": {
+      "id": 1,
+      "first_name": "Syncano",
+      "last_name": "Superuser",
+      "avatar_url": "https://www.gravatar.com/avatar/36df08b0900dd802495ba8f6d32387c3"
+    },
+    "links": {
+      "self": "/v1/marketplace/solutions/39/",
+      "unstar": "/v1/marketplace/solutions/39/unstar/",
+      "star": "/v1/marketplace/solutions/39/star/",
+      "versions-create-from-instance": "/v1/marketplace/solutions/39/versions/create_from_instance/",
+      "versions": "/v1/marketplace/solutions/39/versions/"
+    }
+  },
+  {
+    "id": 109,
+    "label": "argggh",
+    "description": "",
+    "metadata": {},
+    "public": true,
+    "created_at": "2015-07-09T10:08:03.084647Z",
+    "updated_at": "2015-07-09T10:08:03.084693Z",
+    "tags": [],
+    "stars_count": 0,
+    "starred_by_me": null,
+    "versions": {
+      "devel": null,
+      "stable": null
+    },
+    "author": {
+      "id": 1379,
+      "first_name": "ccccccc",
+      "last_name": "ccccccc",
+      "avatar_url": "https://www.gravatar.com/avatar/0ee9267158182e697d781af5a8879b1e"
+    },
+    "links": {
+      "self": "/v1/marketplace/solutions/109/",
+      "unstar": "/v1/marketplace/solutions/109/unstar/",
+      "star": "/v1/marketplace/solutions/109/star/",
+      "versions-create-from-instance": "/v1/marketplace/solutions/109/versions/create_from_instance/",
+      "versions": "/v1/marketplace/solutions/109/versions/"
+    }
+  },
+  {
+    "id": 116,
+    "label": "hubert",
+    "description": "",
+    "metadata": {},
+    "public": true,
+    "created_at": "2015-07-09T11:46:32.742096Z",
+    "updated_at": "2015-07-09T11:46:32.742132Z",
+    "tags": [],
+    "stars_count": 0,
+    "starred_by_me": null,
+    "versions": {
+      "devel": null,
+      "stable": "1.0"
+    },
+    "author": {
+      "id": 1379,
+      "first_name": "ccccccc",
+      "last_name": "ccccccc",
+      "avatar_url": "https://www.gravatar.com/avatar/0ee9267158182e697d781af5a8879b1e"
+    },
+    "links": {
+      "self": "/v1/marketplace/solutions/116/",
+      "unstar": "/v1/marketplace/solutions/116/unstar/",
+      "star": "/v1/marketplace/solutions/116/star/",
+      "versions-create-from-instance": "/v1/marketplace/solutions/116/versions/create_from_instance/",
+      "versions": "/v1/marketplace/solutions/116/versions/"
+    }
+  },
+  {
+    "id": 127,
+    "label": "runscope_export_solution",
+    "description": "twilio solution that will help you send text messages",
+    "metadata": {},
+    "public": true,
+    "created_at": "2015-07-09T21:15:09.931838Z",
+    "updated_at": "2015-07-09T21:15:09.931877Z",
+    "tags": [
+      "python",
+      "twillio",
+      "sms"
+    ],
+    "stars_count": 0,
+    "starred_by_me": null,
+    "versions": {
+      "devel": null,
+      "stable": "1.0"
+    },
+    "author": {
+      "id": 1187,
+      "first_name": "jhishan",
+      "last_name": "khan",
+      "avatar_url": "https://www.gravatar.com/avatar/656abb47e589879370574da4db611bdc"
+    },
+    "links": {
+      "self": "/v1/marketplace/solutions/127/",
+      "unstar": "/v1/marketplace/solutions/127/unstar/",
+      "star": "/v1/marketplace/solutions/127/star/",
+      "versions-create-from-instance": "/v1/marketplace/solutions/127/versions/create_from_instance/",
+      "versions": "/v1/marketplace/solutions/127/versions/"
+    }
+  },
+  {
+    "id": 136,
+    "label": "exif_cleaner",
+    "description": "Removes EXIF data from Image DataObject and saves them in separate Object.",
+    "metadata": null,
+    "public": true,
+    "created_at": "2015-07-10T14:18:32.175157Z",
+    "updated_at": "2015-07-17T09:04:25.518734Z",
+    "tags": [
+      "python",
+      "photo",
+      "exif"
+    ],
+    "stars_count": 0,
+    "starred_by_me": null,
+    "versions": {
+      "devel": null,
+      "stable": "2.0"
+    },
+    "author": {
+      "id": 1315,
+      "first_name": "",
+      "last_name": "",
+      "avatar_url": "https://www.gravatar.com/avatar/6b48e88355e181a8dc44a6725c7ff38e"
+    },
+    "links": {
+      "self": "/v1/marketplace/solutions/136/",
+      "unstar": "/v1/marketplace/solutions/136/unstar/",
+      "star": "/v1/marketplace/solutions/136/star/",
+      "versions-create-from-instance": "/v1/marketplace/solutions/136/versions/create_from_instance/",
+      "versions": "/v1/marketplace/solutions/136/versions/"
+    }
+  },
+  {
+    "id": 137,
+    "label": "sdadasd",
+    "description": "sssss",
+    "metadata": {},
+    "public": true,
+    "created_at": "2015-07-11T17:41:14.734582Z",
+    "updated_at": "2015-07-11T17:41:14.734623Z",
+    "tags": [],
+    "stars_count": 0,
+    "starred_by_me": null,
+    "versions": {
+      "devel": null,
+      "stable": null
+    },
+    "author": {
+      "id": 9,
+      "first_name": "Maciej",
+      "last_name": "Kucharz",
+      "avatar_url": "https://www.gravatar.com/avatar/140edf22e2e3b6f7884079be0b9d32bb"
+    },
+    "links": {
+      "self": "/v1/marketplace/solutions/137/",
+      "unstar": "/v1/marketplace/solutions/137/unstar/",
+      "star": "/v1/marketplace/solutions/137/star/",
+      "versions-create-from-instance": "/v1/marketplace/solutions/137/versions/create_from_instance/",
+      "versions": "/v1/marketplace/solutions/137/versions/"
+    }
+  },
+  {
+    "id": 160,
+    "label": "SYNCORE-703",
+    "description": "",
+    "metadata": {
+      "test": "test"
+    },
+    "public": true,
+    "created_at": "2015-07-13T14:50:10.587288Z",
+    "updated_at": "2015-07-13T14:50:10.587325Z",
+    "tags": [
+      "python",
+      "twillio",
+      "js"
+    ],
+    "stars_count": 0,
+    "starred_by_me": null,
+    "versions": {
+      "devel": null,
+      "stable": "1.0"
+    },
+    "author": {
+      "id": 2205,
+      "first_name": "",
+      "last_name": "",
+      "avatar_url": "https://www.gravatar.com/avatar/f43e3ae87b288081fd30c8a1e2738921"
+    },
+    "links": {
+      "self": "/v1/marketplace/solutions/160/",
+      "unstar": "/v1/marketplace/solutions/160/unstar/",
+      "star": "/v1/marketplace/solutions/160/star/",
+      "versions-create-from-instance": "/v1/marketplace/solutions/160/versions/create_from_instance/",
+      "versions": "/v1/marketplace/solutions/160/versions/"
+    }
+  }
+]

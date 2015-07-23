@@ -4,16 +4,9 @@
     <p>Create your own work, share it with others, and easily install it within your app. <br/>Simply enter our directory, find what you need and start building within seconds.</p>
     <div class="row">
     	{% for s in site.data.solutions limit:3 %}
-    	<div class="col-md-4 item-{{s.id}}">
-			<div class="image">
-			{% if s.metadata.screenshots[0] %}
-				<img src="{{s.metadata.screenshots[0]}}" />
-			{% else %}
-				<div class="placeholder"></div>
-			{% endif %}
-			</div>
-		</div><!-- END col-md-4 -->
+			{% include solutions/item.html %}
 		{% endfor %}
     </div><!-- END row -->
+    <a href="/solutions" class="btn btn-dark-blue">See more Solutions</a>
   </div><!-- END container -->
 </div><!-- END solutions -->
