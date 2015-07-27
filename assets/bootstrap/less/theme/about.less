@@ -92,11 +92,16 @@
 }
 
 .about-us-carousel {
-  border-bottom: 1px solid #ddd;
+  //border-bottom: 1px solid #ddd;
 
   .owl-stage {
-    max-height: 390px;
+    max-height: 340px;
     overflow: hidden;
+  }
+
+  &.owl-carousel .owl-item img {
+    -webkit-transform-style: flat;
+    transform-style: flat;
   }
 
   &__item {
