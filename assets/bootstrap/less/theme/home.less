@@ -92,8 +92,24 @@
       margin: -40px auto 0;
       position: relative;
       max-width: 100%;
-      div {
+      @media (min-width: 320px) and (max-width: 520px) {
+        height: 211px!important;
+        background-size: 100%!important;
+      }
+      .sliderInner {
+        > div {
+          @media (min-width: 320px) and (max-width: 520px) {
+            background-size: 100%!important;
+          }
+        }
+      }
+      > div:not(.navBulletsWrapper) {
         max-width: 100%;
+        @media (min-width: 320px) and (max-width: 520px) {
+          background-size: 100%!important;
+          height: 211px!important;
+          width: 340px!important;
+        }
       }
     }
     div.navBulletsWrapper {

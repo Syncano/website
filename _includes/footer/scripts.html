@@ -21,18 +21,22 @@ analytics.page('Blog Post', {
 	Post: "{{page.title}}",
 });
 {% else %}
-analytics.page('WordPress', {
-	Page: "{{page.title}}",
+analytics.page('Website', {
+	Page: "{{page.mixpanel_title}}",
 });
 {% endif %}
 </script>
 <!-- END SEGMENT.IO TRACKING EVENTS -->
 
 <script>
+
 analytics.ready(function(){
   var unique_id = mixpanel.get_distinct_id();
+  var btns = document.getElementsByClassName('mixpanel-btn');
   if (unique_id) {
-    document.getElementById("login-btn").setAttribute("href", 'https://dashboard.syncano.io/#/login?unique_id=' + unique_id);
+    for(var i = 0; i < btns.length; i++){
+      btns[i].setAttribute("href", 'https://dashboard.syncano.io/#/login?distinct_id=' + unique_id);
+    }
   }
 });
 </script>
