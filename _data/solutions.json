@@ -1,4 +1,6 @@
-[
+{
+    "prev": null,
+    "objects": [
         {
             "starred_by_me": null,
             "description": "archive objects in a safe way, very customizable",
@@ -165,4 +167,6 @@
             "public": true,
             "metadata": {}
         }
-    ]
+    ],
+    "next": null
+}

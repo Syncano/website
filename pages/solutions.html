@@ -9,7 +9,7 @@ body_class: ['solutions']
 <!--{% include solutions/nav.html %}-->
 
 <div class="container solution">
-	{% for s in site.data.solutions %}
+	{% for s in site.data.solutions.objects %}
 		{% assign loopindex = forloop.index | modulo: 3 %}
 		{% if forloop.first %}
 			<div class="row">

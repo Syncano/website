@@ -297,15 +297,8 @@ footer {
         }
         &.col-md-2 {
           margin-bottom: 20px;
-          padding-top: 0;
-        }
-        .newsletter {
-          button {
-            margin-left: 0;
-          }
-          .form-control {
-            width: 75%;
-            float: left;
+          &:not(.no-header) {
+            padding-top: 0;
           }
         }
       }
@@ -319,4 +312,19 @@ footer {
     }
   }
 }
+}
+
+@media (max-width: 990px) {
+  footer {
+    .newsletter {
+      button {
+        margin-left: 0!important;
+        width: 100%;
+      }
+      .form-control {
+        width: 100%;
+        float: left;
+      }
+    }
+  }
 }
