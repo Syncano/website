@@ -32,10 +32,14 @@ analytics.page('Website', {
 
 analytics.ready(function(){
   var unique_id = mixpanel.get_distinct_id();
-  var btns = document.getElementsByClassName('mixpanel-btn');
+  var signupBtns = document.getElementsByClassName('mixpanel-btn');
+  var loginBtns = document.getElementsByClassName('mixpanel-login');
   if (unique_id) {
-    for(var i = 0; i < btns.length; i++){
-      btns[i].setAttribute("href", 'https://dashboard.syncano.io/#/login?distinct_id=' + unique_id);
+    for(var i = 0; i < signupBtns.length; i++){
+      signupBtns[i].setAttribute("href", 'https://dashboard.syncano.io/#/signup?distinct_id=' + unique_id);
+    }
+    for(var x = 0; i < loginBtns.length; x++){
+      loginBtns[x].setAttribute("href", 'https://dashboard.syncano.io/#/login?distinct_id=' + unique_id);
     }
   }
 });
