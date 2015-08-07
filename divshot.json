@@ -4,6 +4,8 @@
   "clean_urls": true,
   "error_page": "404.html",
   "redirects": {
-    "/category/tutorial": "/category/how-tos"
+    "/category/tutorial": "/category/how-tos",
+    "/get-started": "/",
+    "/features": "/"
   }
 }
