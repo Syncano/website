@@ -24,8 +24,8 @@
       "updated_at": "2015-07-27T19:18:12.179127Z",
       "id": 8,
       "author": {
-        "first_name": "",
-        "last_name": "",
+        "first_name": "Jhishan",
+        "last_name": "Khan",
         "id": 59,
         "avatar_url": "https://www.gravatar.com/avatar/656abb47e589879370574da4db611bdc"
       },
@@ -56,16 +56,16 @@
         "stable": "1.0",
         "devel": null
       },
-      "updated_at": "2015-07-27T20:58:59.960185Z",
+      "updated_at": "2015-08-06T20:30:29.680626Z",
       "id": 9,
       "author": {
-        "first_name": "",
-        "last_name": "",
+        "first_name": "Jhishan",
+        "last_name": "Khan",
         "id": 59,
         "avatar_url": "https://www.gravatar.com/avatar/656abb47e589879370574da4db611bdc"
       },
       "stars_count": 0,
-      "label": "Send sms",
+      "label": "Send SMS",
       "public": true,
       "metadata": {}
     },
@@ -94,8 +94,8 @@
       "updated_at": "2015-07-28T20:06:36.627839Z",
       "id": 10,
       "author": {
-        "first_name": "",
-        "last_name": "",
+        "first_name": "Jhishan",
+        "last_name": "Khan",
         "id": 59,
         "avatar_url": "https://www.gravatar.com/avatar/656abb47e589879370574da4db611bdc"
       },
@@ -256,7 +256,7 @@
         "stable": "1.0",
         "devel": null
       },
-      "updated_at": "2015-08-06T00:07:33.720979Z",
+      "updated_at": "2015-08-06T20:34:22.426993Z",
       "id": 18,
       "author": {
         "first_name": "Brian",
@@ -266,6 +266,69 @@
       },
       "stars_count": 0,
       "label": "Stripe",
+      "public": true,
+      "metadata": {}
+    },
+    {
+      "starred_by_me": null,
+      "description": "GeoSyncano is a solution that enables you to store & query a set of geographic locations. It also has the Google Geocoding API built in.",
+      "links": {
+        "self": "/v1/marketplace/solutions/27/",
+        "unstar": "/v1/marketplace/solutions/27/unstar/",
+        "star": "/v1/marketplace/solutions/27/star/",
+        "versions-create-from-instance": "/v1/marketplace/solutions/27/versions/create_from_instance/",
+        "versions": "/v1/marketplace/solutions/27/versions/"
+      },
+      "tags": [],
+      "created_at": "2015-08-06T17:55:35.560331Z",
+      "versions": {
+        "stable": "1.0",
+        "devel": "0.1"
+      },
+      "updated_at": "2015-08-06T20:04:08.577061Z",
+      "id": 27,
+      "author": {
+        "first_name": "Brian",
+        "last_name": "Chuk",
+        "id": 65,
+        "avatar_url": "https://www.gravatar.com/avatar/b1722680238e43e7f3889d617b23073b"
+      },
+      "stars_count": 0,
+      "label": "GeoSyncano",
+      "public": true,
+      "metadata": {}
+    },
+    {
+      "starred_by_me": null,
+      "description": "This uses the google youtube api. Make a search query and this solution will return a list of videos and store them in Syncano",
+      "links": {
+        "self": "/v1/marketplace/solutions/30/",
+        "unstar": "/v1/marketplace/solutions/30/unstar/",
+        "star": "/v1/marketplace/solutions/30/star/",
+        "versions-create-from-instance": "/v1/marketplace/solutions/30/versions/create_from_instance/",
+        "versions": "/v1/marketplace/solutions/30/versions/"
+      },
+      "tags": [
+        "python",
+        "google",
+        "youtube",
+        "youtube api"
+      ],
+      "created_at": "2015-08-06T19:40:22.875627Z",
+      "versions": {
+        "stable": "1.0",
+        "devel": null
+      },
+      "updated_at": "2015-08-06T19:42:30.287562Z",
+      "id": 30,
+      "author": {
+        "first_name": "Jhishan",
+        "last_name": "Khan",
+        "id": 59,
+        "avatar_url": "https://www.gravatar.com/avatar/656abb47e589879370574da4db611bdc"
+      },
+      "stars_count": 0,
+      "label": "Youtube Search",
       "public": true,
       "metadata": {}
     }
