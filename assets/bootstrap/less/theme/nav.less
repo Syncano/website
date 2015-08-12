@@ -98,20 +98,24 @@
       }
     }
     .navbar-collapse {
-      padding-left: 30px;
-      padding-right: 30px;
+      padding-left: 0;
+      padding-right: 0;
       margin-left: -30px;
       margin-right: -30px;
     }
     .navbar-nav {
       text-align: center;
+      border-bottom: none;
+      &.navbar-right {
+        border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+      }
       > li {
         float: none;
         display: inline-block;
         > a {
           color: white;
-          padding: 15px 8px;
-          border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+          padding: 15px 6px;
+          font-size: 12px;
           &.btn {
             margin: 10px 0;
             padding: 8px;
