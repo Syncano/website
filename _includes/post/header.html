@@ -5,7 +5,8 @@
 {% else %}
   <div class="post-header">
 {% endif %}
-<div class="next pull-right"><a href="{{page.next.url}}"><img src="/assets/images/next-arrow.png"/></a></div>
+
+<div class="next pull-right{% if site.posts.first.url == page.url %} hidden {% endif %}"><a href="{{page.next.url}}"><img src="/assets/images/next-arrow.png"/></a></div>
 
 {% unless page.map %}
   <div class="container">

@@ -170,7 +170,7 @@ span.categories {
 
 .highlight {
   pre {
-    padding: 4px 0 3px;
+    padding: 4px 0;
     background-color: #23241f;
     color: #f8f8f2;
     font-family: 'Courier New', 'Courier';
@@ -202,13 +202,15 @@ span.categories {
   td.linenos {
     width: 4%;
     pre {
-      padding: 5px 10px;
+      padding: 4px 10px;
       text-shadow: 1px 1px 1px rgba(0,0,0,.5);
       background-color: #353631;
       color: #839496;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
       border-color: #23241f;
+      font-size: 12px;
+      line-height: 1.5;
     }
   }
   td.code {
@@ -220,6 +222,7 @@ span.categories {
       display: block;
       max-width: 720px;
       overflow-x: scroll;
+      font-size: 12px;
       @media(min-width: 320px) and (max-width: 720px) {
         padding-right: 500px;
       }

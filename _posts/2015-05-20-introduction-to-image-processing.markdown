@@ -109,7 +109,7 @@ Other methods of filtering include:
 
 Now that we know how to read in our images, let's have some fun!  Facial recognition is among the greatest achievements of computation.  We glean so much information from faces - identity, emotion, age.  Our minds are made to see extremely nuanced details in faces.  Mostly because they are extremely complex, with many, many muscles that explain extremely complex emotions, without a single word.
 
-The true power of opencv is it's ability to make the task of facial recognition easy.
+The true power of OpenCV is it's ability to make the task of facial recognition easy.
 
 `face_detect.py`
 
@@ -144,7 +144,7 @@ for (x,y,w,h) in faces:
 
 [reference for haar cascade](http://opencv-python-tutroals.readthedocs.org/en/latest/py_tutorials/py_objdetect/py_face_detection/py_face_detection.html)
 
-Face detection with opencv2 is extremely easy.  All that is required is loading the haarcascade, and then calling detectMultiScale with a few parameters.
+Face detection with OpenCV2 is extremely easy.  All that is required is loading the haarcascade, and then calling detectMultiScale with a few parameters.
 
 **The haar cascade:**
 
@@ -201,7 +201,7 @@ for t_face,name in test_images:
 
 ##Object recognition
     
-Object detection is really just a generalized case of facial recognition.  All you need to do is apply a different xml file and you'll get what you need.  In an effort to not just show you the same technique over and over again, let's go over some other ways we can detect objects using opencv.
+Object detection is really just a generalized case of facial recognition.  All you need to do is apply a different xml file and you'll get what you need.  In an effort to not just show you the same technique over and over again, let's go over some other ways we can detect objects using OpenCV.
 
 ###Corner detection
 
