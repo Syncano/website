@@ -1,0 +1,12 @@
+---
+layout: post
+title: Meetup
+date: 2015-05-20 12:21:29
+author: eric_schles
+categories: ['meetup']
+day: 21
+month: May
+time: 9pm
+location: testing
+map: '<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d11210.84540906602!2d13.418351030750289!3d52.478113325163484!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1439728317400" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>'
+---
