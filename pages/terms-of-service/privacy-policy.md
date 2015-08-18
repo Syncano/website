@@ -2,6 +2,8 @@
 layout: terms
 title: Privacy Policy
 permalink: /terms-of-service/privacy/
+seo_description: "Syncano's privacy policy. Your data is completely safe and private with Syncano. We will never sell or give your data to third parties."
+keywords: "Privacy Policy"
 ---
 
 <h1>Privacy Policy</h1>

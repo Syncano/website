@@ -2,6 +2,8 @@
 layout: terms
 title: Acceptable Use Policy
 permalink: /terms-of-service/aup/
+seo_description: "Syncano's acceptable use policy."
+keywords: "Acceptable Use Policy"
 ---
 
 <h1>Acceptable Use Policy</h1>

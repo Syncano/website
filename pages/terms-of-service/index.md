@@ -2,6 +2,8 @@
 layout: terms
 title: Terms of Service
 permalink: /terms-of-service/
+seo_description: "Syncano's terms of service."
+keywords: "Syncano terms of service"
 ---
 
 <h1>Terms of Service</h1>
