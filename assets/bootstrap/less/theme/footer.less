@@ -49,18 +49,29 @@ footer {
           margin-bottom: 10px; 
         }
         input,
-        button {
+        input.btn {
           border: 1px solid #E9E9E9;
           border-radius: 0!important;
           max-width: 160px;
+          &.has-error {
+            border-color: #E65A58;
+          }
         }
         input:focus {
           border: 1px solid @brand-primary;
           box-shadow: none;
         }
-        button {
+        input.btn {
           margin-left: -3px;
           border-left: 0;
+        }
+        .alert {
+          max-width: 212px;
+          padding: 10px 20px 10px 10px;
+          display: none;
+          .close {
+            right: -10px;
+          }
         }
       }
     }

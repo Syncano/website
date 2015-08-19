@@ -8,9 +8,27 @@ analytics.load("fLDtpYXRjFYnHlp1gvzl4I3Gv8gDoQ8m");
 <script>
 function newsletterSubscribe() {
   var subscribeEmail = document.getElementById('subscribeEmail').value;
-  analytics.alias(subscribeEmail);
-  analytics.identify(subscribeEmail, {'email':subscribeEmail, 'Lifecycle stage':'lead', 'source':'Newsletter'});
-  analytics.track('Subscribed to newsletter', {'email':subscribeEmail});
+  var emailField = document.getElementById('subscribeEmail');
+  var success = document.getElementById('successful-subscribe');
+
+  if (subscribeEmail == null || subscribeEmail == "") {
+    emailField.className = emailField.className + " has-error";
+    return false;
+  } else {
+    //regex for valid email
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(subscribeEmail))  {  
+      if (emailField.classList.contains('has-error')) {
+        emailField.className = 'form-control';
+      }
+      analytics.alias(subscribeEmail);
+      analytics.identify(subscribeEmail, {'email':subscribeEmail, 'Lifecycle stage':'lead', 'source':'Newsletter'});
+      analytics.track('Subscribed to newsletter', {'email':subscribeEmail}); 
+      success.className = success.className + " show";
+    } else {
+      emailField.className = emailField.className + " has-error";
+      return false
+    }
+  }
 }
 </script>
 <!-- SEGMENT.IO TRACKING EVENTS -->
