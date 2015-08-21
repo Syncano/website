@@ -25,11 +25,18 @@
     }
   }
   footer {
-    .logo {
-      text-align: center;
-    }
+    text-align: center!important;
     .row {
       >div {
+        .newsletter {
+          .form-control {
+            display: inline;
+            float: none;
+          }
+          input.btn {
+            margin-top: -1px;
+          }
+        }
         &.col-md-3 {
           margin-top: 20px;
         }
