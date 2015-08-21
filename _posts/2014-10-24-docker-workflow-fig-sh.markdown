@@ -13,9 +13,9 @@ summary: "Fig is a python application that helps you run groups of docker contai
 
 The most pragmatic approach to this problem is creating a bash script:</p>
 
-{% highlight javascript linenos=table %}run_docker_containers.sh{% endhighlight %}
+{% highlight javascript lineanchors %}run_docker_containers.sh{% endhighlight %}
 
-{% highlight javascript linenos=table %}>#!/bin/bash
+{% highlight javascript lineanchors %}>#!/bin/bash
 # Usage:
 # `./run_docker_containers.sh`
 # or
@@ -64,7 +64,7 @@ docker run -i -t -e INSTANCE_TYPE="web-server" --name='my-web' -p 0.0.0.0:8000:8
 
 <p>Fig is available in pip, so all you have to do is type this into your command line:</p>
 
-{% highlight javascript linenos=table %}$ sudo pip install fig
+{% highlight javascript lineanchors %}$ sudo pip install fig
 {% endhighlight %}
 
 <p>You can more information about installing fig.sh on the <a href="http://www.fig.sh/install.html">official website</a>.</p>
@@ -75,7 +75,7 @@ docker run -i -t -e INSTANCE_TYPE="web-server" --name='my-web' -p 0.0.0.0:8000:8
 
 <p>Fig helps you manage docker containers, so its options are similar to those of the docker run command. In <em>fig.yml</em>, you'll start by entering the name of the container. Then, choose <em>build</em> or <em>image</em> to either run <em>docker build</em> or start a container based on the <em>image</em> you specified, respectively. You can specify many containers this way. Here's a simple example:</p>
 
-{% highlight javascript linenos=table %}my_app:
+{% highlight javascript lineanchors %}my_app:
   build: . # will run docker build in local directory
 redis:
   image: redis
@@ -85,7 +85,7 @@ redis:
 
 <p>Now for a less-simple example. Here's how you can migrate your first nightmarish bash script to fig.yml.</p>
 
-{% highlight javascript linenos=table %}postgres:
+{% highlight javascript lineanchors %}postgres:
     image: paintedfox/postgresql
     environment:
         - USER=root
@@ -136,12 +136,12 @@ worker:
 
 <p>To run containers, now use:</p>
 
-{% highlight javascript linenos=table %}$ fig up
+{% highlight javascript lineanchors %}$ fig up
 {% endhighlight %}
 
 <p>In another terminal window, you can inspect all of your containers with:</p>
 
-{% highlight javascript linenos=table %}$ fig ps
+{% highlight javascript lineanchors %}$ fig ps
 &nbsp; 
 Name                         Command               State                 Ports               
 -------------------------------------------------------------------------------------------------------
@@ -162,13 +162,13 @@ app_web_1        /sbin/my_init                    Up      8000->8000/tcp, 2022->
 
 <p>This is how I configured my <em>INSTANCE_TYPE</em> variable:</p>
 
-{% highlight javascript linenos=table %}environment:
+{% highlight javascript lineanchors %}environment:
     - INSTANCE_TYPE="web-server"
 {% endhighlight %}
 
 <p>During debugging I noticed that fig leaves double quotes in actual variable value:</p>
 
-{% highlight javascript linenos=table %}$ fig run web printenv
+{% highlight javascript lineanchors %}$ fig run web printenv
 &nbsp; 
 ...
 POSTGRES_1_ENV_USER=root
@@ -184,7 +184,7 @@ HOME=/root
 
 <p>I also noticed fig occasionally doesn't notice when a <em>Dockerfile</em> changes and its image needs to be rebuilt. When that happens, you'll just need to enter this into the command line:</p>
 
-{% highlight javascript linenos=table %}$ fig rm  # removes containers
+{% highlight javascript lineanchors %}$ fig rm  # removes containers
 $ fig build  # rebuild images
 $ fig up  # run whole setup again
 {% endhighlight %}

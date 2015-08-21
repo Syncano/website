@@ -40,22 +40,22 @@ Below are simple instructions on creating a real-time synced iOS app on Syncano.
 
 <H2>1. Install CocoaPods</h2>
 Open <em>Terminal</em> and type:
-{% highlight javascript linenos=table %}sudo gem install cocoapods{% endhighlight %}
+{% highlight javascript lineanchors %}sudo gem install cocoapods{% endhighlight %}
 
 <h2>2. Add syncano's iOS Library through CocoaPods</h2>
-In <em>Terminal</em>, navigate to the folder with the XCode project that you'd like to real-time sync, ie.{% highlight javascript linenos=table %}cd ~/syncano-sync-server-test/{% endhighlight %} where <em>~/syncano-sync-server-test/</em> is the actual path to the project.
+In <em>Terminal</em>, navigate to the folder with the XCode project that you'd like to real-time sync, ie.{% highlight javascript lineanchors %}cd ~/syncano-sync-server-test/{% endhighlight %} where <em>~/syncano-sync-server-test/</em> is the actual path to the project.
 
-Then, write in <em>Terminal</em>:{% highlight javascript linenos=table %}ls{% endhighlight %} and make sure you see your <em>.xcodeproj</em> file.
+Then, write in <em>Terminal</em>:{% highlight javascript lineanchors %}ls{% endhighlight %} and make sure you see your <em>.xcodeproj</em> file.
 
-Then, type: {% highlight javascript linenos=table %}pod init{% endhighlight %}
+Then, type: {% highlight javascript lineanchors %}pod init{% endhighlight %}
 
-When the command is finished, you should see a new file named <em>Podfile</em> in your project's folder. Open it in your favorite text editor and add following line under the target and end keywords:{% highlight javascript linenos=table %}pod 'syncano-ios'{% endhighlight %}
+When the command is finished, you should see a new file named <em>Podfile</em> in your project's folder. Open it in your favorite text editor and add following line under the target and end keywords:{% highlight javascript lineanchors %}pod 'syncano-ios'{% endhighlight %}
 
-Your <em>Podfile</em> should now look more less like this: {% highlight javascript linenos=table %}target "My-Application-Name" do
+Your <em>Podfile</em> should now look more less like this: {% highlight javascript lineanchors %}target "My-Application-Name" do
 pod 'syncano-ios'
 end{% endhighlight %}
 
-Close the <em>Podfile</em>, go back to <em>Terminal</em> and type:{% highlight javascript linenos=table %}pod install
+Close the <em>Podfile</em>, go back to <em>Terminal</em> and type:{% highlight javascript lineanchors %}pod install
 {% endhighlight %}
 
 When the command is finished, make sure you open (and from now on only use) the newly created <em>.xcworkspace</em> file, NOT the <em>.xcodeproj</em> file.
@@ -64,29 +64,29 @@ When the command is finished, make sure you open (and from now on only use) the 
 
 For this example, we'll assume you will be adding the Syncano Sync Server file to an instance of UIViewController. If you want to add it somewhere else, use the below as a guide - you will be taking the same essential steps.
 
-Include Syncano's header files by adding them at the top of your implementation (<em>.m</em>) file:{% highlight javascript linenos=table %}#import <Syncano.h>
+Include Syncano's header files by adding them at the top of your implementation (<em>.m</em>) file:{% highlight javascript lineanchors %}#import <Syncano.h>
 #import <SyncanoSyncServer.h>{% endhighlight %}
 
-In the interface of your class, add the following property:{% highlight javascript linenos=table %}@property (strong, nonatomic) SyncanoSyncServer *syncServer;{% endhighlight %}
+In the interface of your class, add the following property:{% highlight javascript lineanchors %}@property (strong, nonatomic) SyncanoSyncServer *syncServer;{% endhighlight %}
 
-Initialize the <em>syncServer</em> property (you can add this line e.g. to your <em>viewDidLoad</em> method):{% highlight javascript linenos=table %}self.syncServer = [SyncanoSyncServer syncanoSyncServerForDomain:@"PUT-YOUR-DOMAIN-HERE" apiKey:@"PUT-YOUR-API-KEY-HERE"];{% endhighlight %}
+Initialize the <em>syncServer</em> property (you can add this line e.g. to your <em>viewDidLoad</em> method):{% highlight javascript lineanchors %}self.syncServer = [SyncanoSyncServer syncanoSyncServerForDomain:@"PUT-YOUR-DOMAIN-HERE" apiKey:@"PUT-YOUR-API-KEY-HERE"];{% endhighlight %}
 
-Set yourself as a delegate of the Sync Server object after initializing it:{% highlight javascript linenos=table %}self.syncServer.delegate = self;{% endhighlight %}
+Set yourself as a delegate of the Sync Server object after initializing it:{% highlight javascript lineanchors %}self.syncServer.delegate = self;{% endhighlight %}
 
-Connect to Sync Server:{% highlight javascript linenos=table %}NSError *error = nil;
+Connect to Sync Server:{% highlight javascript lineanchors %}NSError *error = nil;
 [self.syncServer connect:&amp;error];{% endhighlight %}
 
-Subscribe to changes in your chosen collection (we recommend you add it to the implementation of the method mentioned below - <em>syncServerConnectionOpened:</em>):{% highlight javascript linenos=table %}SyncanoParameters_Subscriptions_SubscribeCollection *params = [[SyncanoParameters_Subscriptions_SubscribeCollection alloc] initWithProjectId:@"3800" collectionId:@"12061" context:@"connection"];
+Subscribe to changes in your chosen collection (we recommend you add it to the implementation of the method mentioned below - <em>syncServerConnectionOpened:</em>):{% highlight javascript lineanchors %}SyncanoParameters_Subscriptions_SubscribeCollection *params = [[SyncanoParameters_Subscriptions_SubscribeCollection alloc] initWithProjectId:@"3800" collectionId:@"12061" context:@"connection"];
 [self.syncServer sendRequest:params callback:^(SyncanoResponse *response) {
 NSLog(@"Subscription response: %@",response);
 }];{% endhighlight %}
 
-Add information about implementing <em>SyncanoSyncServerDelegate</em>:{% highlight javascript linenos=table %}@protocol SyncanoSyncServerDelegate;
+Add information about implementing <em>SyncanoSyncServerDelegate</em>:{% highlight javascript lineanchors %}@protocol SyncanoSyncServerDelegate;
 @interface MyViewController : UIViewController <SyncanoSyncServerDelegate>{% endhighlight %}
 
 Implement <em>SyncanoSyncServerDelegate</em> required methods by adding this to your implementation file:
 
-{% highlight javascript linenos=table %}- (void)syncServerConnectionOpened:(SyncanoSyncServer *)syncServer {
+{% highlight javascript lineanchors %}- (void)syncServerConnectionOpened:(SyncanoSyncServer *)syncServer {
   NSLog(@"Sync Server Connection opened");
   SyncanoParameters_Subscriptions_SubscribeCollection *params = [[SyncanoParameters_Subscriptions_SubscribeCollection alloc] initWithProjectId:@"3800" collectionId:@"12061" context:@"connection"];
   [self.syncServer sendRequest:params callback:^(SyncanoResponse *response) {
@@ -100,7 +100,7 @@ Implement <em>SyncanoSyncServerDelegate</em> required methods by adding this to 
 {% endhighlight %}
 
 Add desired optional protocol methods to receive notification and subscription information.
-E.g. to receive messages about new objects being added to Syncano, implement following method: {% highlight javascript linenos=table %}- (void)syncServer:(SyncanoSyncServer *)syncServer notificationAdded:(SyncanoData *)addedData {
+E.g. to receive messages about new objects being added to Syncano, implement following method: {% highlight javascript lineanchors %}- (void)syncServer:(SyncanoSyncServer *)syncServer notificationAdded:(SyncanoData *)addedData {
 NSLog(@"Added data: %@",addedData);
 }{% endhighlight %}
 
@@ -109,13 +109,13 @@ That's it. From now on, you'll be able to receive information every time a new o
 <h2>Add the GUI</h2>
 To show new objects on the screen, you can add a label that will contain the title of the last created object.
 
-Add the label property to your class in its interface:{% highlight javascript linenos=table %}@property (strong, nonatomic) UILabel *label; {% endhighlight %}
+Add the label property to your class in its interface:{% highlight javascript lineanchors %}@property (strong, nonatomic) UILabel *label; {% endhighlight %}
 
-Initialize the label and add it to your view in the <em>viewDidLoad</em> method: {% highlight javascript linenos=table %}self.label = [[UILabel alloc] initWithFrame:CGRectMake(0, 50, CGRectGetWidth(self.view.bounds), 50)];
+Initialize the label and add it to your view in the <em>viewDidLoad</em> method: {% highlight javascript lineanchors %}self.label = [[UILabel alloc] initWithFrame:CGRectMake(0, 50, CGRectGetWidth(self.view.bounds), 50)];
 self.label.textAlignment = NSTextAlignmentCenter;
 [self.view addSubview:self.label]; {% endhighlight %}
 
-Add the following lines to the <em>syncServer:notificationAdded</em> method (because protocol methods are invoked on an internal thread, you'll have to make sure you dispatch any UI code to the main thread): {% highlight javascript linenos=table %}- (void)syncServer:(SyncanoSyncServer *)syncServer notificationAdded:(SyncanoData *)addedData {
+Add the following lines to the <em>syncServer:notificationAdded</em> method (because protocol methods are invoked on an internal thread, you'll have to make sure you dispatch any UI code to the main thread): {% highlight javascript lineanchors %}- (void)syncServer:(SyncanoSyncServer *)syncServer notificationAdded:(SyncanoData *)addedData {
 NSLog(@"Added data: %@", addedData);
 dispatch_async(dispatch_get_main_queue(), ^{
 self.label.text = addedData.title;

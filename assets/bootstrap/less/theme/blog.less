@@ -51,14 +51,20 @@
   }
   input {
     border-radius: 0;
+    &.has-error {
+      border-color: #E65A58;
+    }
+    &.btn {
+      background-color: @brand-primary;
+      border: 0;
+      box-shadow: none;
+      padding: 7px 25px;
+      color: white;
+      border-radius: 0;
+    }
   }
-  button {
-    background-color: @brand-primary;
-    border: 0;
-    box-shadow: none;
-    padding: 7px 25px;
-    color: white;
-    border-radius: 0;
+  .alert {
+    display: none;
   }
 }
 

@@ -170,63 +170,60 @@ span.categories {
 }
 
 .highlight {
+  span.kd {
+    color: #F92672;
+  }
+  span.k {
+    color: #66d9ef;
+  }
+  span.s1,
+  span.s2 {
+    color: #E6DB74;
+  }
   pre {
-    padding: 4px 0;
-    background-color: #23241f;
+    counter-reset: line-numbering;
+    border: solid 1px #23241f;
+    border-radius: 0;
+    background: #23241f;
+    padding: 0;
+    line-height: 18px;
+    margin-bottom: 30px;
+    white-space: pre;
+    overflow-x: auto;
+    word-break: inherit;
+    word-wrap: inherit;
     color: #f8f8f2;
-    font-family: 'Courier New', 'Courier';
-    code {
-      font-family: inherit;
-      line-height: 17px;
-    }
-    .lineno {
-      padding: 5px 10px;
-      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-      background-color: #353631;
-      color: #839496;
-    }
-    span.kd {
-      color: #F92672;
-    }
-    span.k {
-      color: #66d9ef;
-    }
-    span.s1,
-    span.s2 {
-      color: #E6DB74;
-    }
   }
-}
+  pre a::before {
+    content: counter(line-numbering);
+    counter-increment: line-numbering;
+    padding-right: 1em; /* space after numbers */
+    width: 35px;
+    text-align: right;
+    opacity: 0.7;
+    display: inline-block;
+    color: #aaa;
+    background: #353631;
+    margin-right: 16px;
+    padding: 2px 10px;
+    font-size: 13px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 
-.highlighttable {
-  width: 100%;
-  td.linenos {
-    width: 4%;
-    pre {
-      padding: 4px 10px;
-      text-shadow: 1px 1px 1px rgba(0,0,0,.5);
-      background-color: #353631;
-      color: #839496;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      border-color: #23241f;
-      font-size: 12px;
-      line-height: 1.5;
-    }
+  pre a:first-of-type::before {
+    padding-top: 10px;
   }
-  td.code {
-    pre {
-      padding-left: 10px;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-      border-color: #23241f;
-      display: block;
-      max-width: 720px;
-      overflow-x: scroll;
-      font-size: 12px;
-      @media(min-width: 320px) and (max-width: 720px) {
-        padding-right: 500px;
-      }
-    }
+
+  pre a:last-of-type::before {
+    padding-bottom: 10px;
+  }
+
+  pre a:only-of-type::before {
+    padding: 10px;
   }
 }

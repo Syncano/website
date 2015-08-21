@@ -29,29 +29,29 @@ share_image: /public/create-ios-chat-app.png
 
 <p>If you don't have CocoaPods yet, install it by opening <em>Terminal</em> and typing</p>
 
-{% highlight javascript linenos=table %}$ sudo gem install cocoapods
+{% highlight javascript lineanchors %}$ sudo gem install cocoapods
 {% endhighlight %}
 
 <h3>3.2 Adding libraries</h3>
 
 <p>Open <em>Terminal</em> if you haven't already done so, and navigate to the folder with your newly created <em>.xcodeproj</em> file, e.g. by typing</p>
 
-{% highlight javascript linenos=table %}$ cd ~/path/to/my/project/SyncanoChat
+{% highlight javascript lineanchors %}$ cd ~/path/to/my/project/SyncanoChat
 {% endhighlight %}
 
 <p>Initialize CocoaPods by typing</p>
 
-{% highlight javascript linenos=table %}$ pod init
+{% highlight javascript lineanchors %}$ pod init
 {% endhighlight %}
 
 <p>Open <em>Podfile</em> to edit in your text editor by typing in <em>Terminal</em>:</p>
 
-{% highlight javascript linenos=table %}$ open Podfile
+{% highlight javascript lineanchors %}$ open Podfile
 {% endhighlight %}
 
 <p>You can now add missing lines with the libraries, or just replace the content of the file with this:</p>
 
-{% highlight javascript linenos=table %}target 'SyncanoChat' do
+{% highlight javascript lineanchors %}target 'SyncanoChat' do
 
 pod 'syncano-ios'
 pod 'JSQMessagesViewController'  
@@ -65,12 +65,12 @@ end
 
 <p>Save the file, close the text editor (we won't be changing the file anymore), and write in Terminal:</p>
 
-{% highlight javascript linenos=table %}$ pod install
+{% highlight javascript lineanchors %}$ pod install
 {% endhighlight %}
 
 <p>Once this process is finished, close XCode and open the Workspace file:</p>
 
-{% highlight javascript linenos=table %}$ open SyncanoChat.xcworkspace
+{% highlight javascript lineanchors %}$ open SyncanoChat.xcworkspace
 {% endhighlight %}
 
 <p>Build your project to make sure everything is installed correctly!</p>
@@ -92,7 +92,7 @@ end
 
 <p>Notice that next to the temporary class, XCode also created a bridging header named <em>SyncanoChat-Bridging-Header.h</em>. Open this file and add this inside it:</p>
 
-{% highlight javascript linenos=table %}#import <Syncano/Syncano.h>
+{% highlight javascript lineanchors %}#import <Syncano/Syncano.h>
 #import <Syncano/SyncanoSyncServer.h>
 #import <JSQMessagesViewController/JSQMessages.h>
 {% endhighlight %}
@@ -109,7 +109,7 @@ end
 
 <p>As you can see, it's currently is a subclass of <em>UIViewController</em>. Change it to <em>JSQMessagesViewController</em>, so it looks like</p>
 
-{% highlight javascript linenos=table %}import UIKit
+{% highlight javascript lineanchors %}import UIKit
 
 class ViewController: JSQMessagesViewController {
 //...
@@ -132,7 +132,7 @@ class ViewController: JSQMessagesViewController {
 
 <p>Add those variables before the <em>viewDidLoad</em> implementation.</p>
 
-{% highlight javascript linenos=table %}class ViewController: JSQMessagesViewController {
+{% highlight javascript lineanchors %}class ViewController: JSQMessagesViewController {
 
     var userName = ""
     var messages = [JSQMessage]()
@@ -147,7 +147,7 @@ class ViewController: JSQMessagesViewController {
 
 <p>To test our app, it would be good to have some messages. Lets add them in the <em>viewDidLoad</em> function.</p>
 
-{% highlight javascript linenos=table %}override func viewDidLoad() {
+{% highlight javascript lineanchors %}override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     self.userName = "iPhone"
@@ -170,7 +170,7 @@ class ViewController: JSQMessagesViewController {
 
 <p>Add the following code before the end of your class:</p>
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
 override func collectionView(collectionView: JSQMessagesCollectionView!, messageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageData! {
     var data = self.messages[indexPath.row]
     return data
@@ -198,7 +198,7 @@ override func collectionView(collectionView: UICollectionView, numberOfItemsInSe
 
 <p>To keep our app from crashing, we need to implement one more function:</p>
 
-{% highlight javascript linenos=table %}override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
+{% highlight javascript lineanchors %}override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
     var newMessage = JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text);
     messages += [newMessage]
     self.finishSendingMessage()
@@ -220,7 +220,7 @@ override func didPressAccessoryButton(sender: UIButton!) {
 
 <p>For the chat app, we will need both Syncano and SyncServer objects. Lets define them at the beginning of our <em>ViewController</em> class.</p>
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
 let syncano = Syncano(domain: "INSTANCE_NAME", apiKey: "API_KEY001122334455")
 let syncServer = SyncanoSyncServer(domain: "INSTANCE_NAME", apiKey: "API_KEY001122334455")
 let projectId = "1234"
@@ -239,7 +239,7 @@ let collectionId = "56789"
 
 <p>Now, instead of showing test messages, you'll want to show actual messages coming from Syncano. We'll do this by downloading the latest messages when the app starts in the <em>viewDidLoad</em> function. Notice we removed the code from before that added test messages:</p>
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
 override func viewDidLoad() {
    super.viewDidLoad()
    self.userName = "iPhone"
@@ -271,7 +271,7 @@ override func viewDidLoad() {
 
 <p>Replace the <em>didPressSendButton</em> function with:</p>
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
 override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
    let newMessage = JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text);
    self.sendMessageToSyncano(newMessage);
@@ -280,7 +280,7 @@ override func didPressSendButton(button: UIButton!, withMessageText text: String
 
 <p>and add the following function at the end of your class implementation:</p>
 
-{% highlight javascript linenos=table %}func sendMessageToSyncano(message: JSQMessage) {
+{% highlight javascript lineanchors %}func sendMessageToSyncano(message: JSQMessage) {
     let params = SyncanoParameters_DataObjects_New(projectId: projectId, collectionId: collectionId, state: "Pending")
     params.text = message.text
     params.additional = ["senderId" : message.senderId]
@@ -304,18 +304,18 @@ override func didPressSendButton(button: UIButton!, withMessageText text: String
 
 <p>We will start with setting ourselves as a SyncServer delegate and opening a SyncServer connection. Modify your class definition to match this following code:</p>
 
-{% highlight javascript linenos=table %}class ViewController: JSQMessagesViewController, SyncanoSyncServerDelegate {
+{% highlight javascript lineanchors %}class ViewController: JSQMessagesViewController, SyncanoSyncServerDelegate {
 {% endhighlight %}
 
 <p>At the end of your <em>viewDidLoad</em>, add these two lines of code:</p>
 
-{% highlight javascript linenos=table %}self.syncServer.delegate = self
+{% highlight javascript lineanchors %}self.syncServer.delegate = self
 self.syncServer.connect(nil);
 {% endhighlight %}
 
 <p>You may have noticed that XCode complains that <em>Type ViewController does not conform to protocol SyncanoSyncServerDelegate</em>. We will fix that by adding a few functions at the end of our class implemention:</p>
 
-{% highlight javascript linenos=table %}func syncServerConnectionOpened(syncServer: SyncanoSyncServer!) {
+{% highlight javascript lineanchors %}func syncServerConnectionOpened(syncServer: SyncanoSyncServer!) {
     self.subscribeToCollection()
 }
 
@@ -338,7 +338,7 @@ func syncServer(syncServer: SyncanoSyncServer!, notificationAdded addedData: Syn
 
 <p>In <em>syncServerConnectionOpened</em>, we invoke the <em>subscribeToCollection</em> function, which we will add now. Paste following code at the end of your class implementation: </p>
 
-{% highlight javascript linenos=table %}func subscribeToCollection() {
+{% highlight javascript lineanchors %}func subscribeToCollection() {
     let params = SyncanoParameters_Subscriptions_SubscribeCollection(projectId: projectId, collectionId: collectionId, context: "connection")
     self.syncServer.subscriptionSubscribeCollection(params) { response in
         //take care of errors here
@@ -358,7 +358,7 @@ func syncServer(syncServer: SyncanoSyncServer!, notificationAdded addedData: Syn
 
 <p>Let's fix that by changing the <em>syncServer(syncServer: notificationAdded: channel:)</em> function so that it adds messages to our list only if the message wasn't sent by our user.</p>
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
 func syncServer(syncServer: SyncanoSyncServer!, notificationAdded addedData: SyncanoData!, channel: SyncanoChannel!) {
    if let senderId = addedData.additional?["senderId"] as? String {
       if senderId == self.senderId {
@@ -379,12 +379,12 @@ func syncServer(syncServer: SyncanoSyncServer!, notificationAdded addedData: Syn
 
 <p>To fix that, we'll change the beginning of the <em>viewDidLoad</em> function by removing following line:</p>
 
-{% highlight javascript linenos=table %}self.userName = "iPhone"
+{% highlight javascript lineanchors %}self.userName = "iPhone"
 {% endhighlight %}
 
 <p>and replacing it with:</p>
 
-{% highlight javascript linenos=table %}if let savedUserName = NSUserDefaults.standardUserDefaults().stringForKey("userName") {
+{% highlight javascript lineanchors %}if let savedUserName = NSUserDefaults.standardUserDefaults().stringForKey("userName") {
     self.userName = savedUserName
 } else {
     self.userName = "user" + String(arc4random_uniform(UInt32.max))
