@@ -1,15 +1,20 @@
-<div id="blog-subscribe">
-<h2>Hello.</h2>
-<h3>Want our posts direct to your inbox?</h3>
-  <form class="form-inline">
-  	<div class="form-group">
-    	<input type="email" class="form-control" id="blogSubscribeEmail" placeholder="you@example.com">
-  	</div>
-    <input type="button" class="btn btn-default" value="Yes" onclick="shareSubscribe()"/>
-  </form>
-  <div class="alert alert-success alert-dismissible" role="alert" id="successful-blog-subscribe">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <strong>Success!</strong> Thank you for subscribing.
+<div id="blog-subscribe" class="container">
+  <div class="col-md-2">
+    <img src="/public/mascot.png" />
+  </div>
+  <div class="col-md-8 col-md-offset-2">
+    <h2>Hello.</h2>
+    <h3>Want our posts direct to your inbox?</h3>
+    <form class="form-inline">
+      <div class="form-group">
+        <input type="email" class="form-control" id="blogSubscribeEmail" placeholder="you@example.com">
+      </div>
+      <input type="button" class="btn btn-default" value="Yes" onclick="shareSubscribe()"/>
+    </form>
+    <div class="alert alert-success alert-dismissible" role="alert" id="successful-blog-subscribe">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <strong>Success!</strong> Thank you for subscribing.
+    </div>
   </div>
 </div>
 
