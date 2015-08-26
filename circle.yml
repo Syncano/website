@@ -9,7 +9,7 @@ dependencies:
 test:
   override:
     - jekyll build
-    - htmlproof ./_site
+    # - htmlproof ./_site
 
 deployment:
   production:
@@ -18,7 +18,7 @@ deployment:
       - "jekyll build --config _config.yml,./config/production/_config.yml"
       - s3_website push --config-dir=./config/production/
   staging:
-    branch: development
+    branch: SYNWWW-337
     commands:
       - "jekyll build --config _config.yml,./config/staging/_config.yml"
       - s3_website push --config-dir=./config/staging/
