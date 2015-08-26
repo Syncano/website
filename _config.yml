@@ -9,5 +9,12 @@ permalink:    /:title
 paginate:     6
 paginate_path: "blog/page:num/"
 exclude:
-  - divshot.json
   - config.codekit
+  - circle.yml
+  - s3_website.yml
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - Gemfile
+  - Gemfile.lock
+  - config
+  - s3_website.yml
