@@ -1,0 +1,24 @@
+machine:
+  ruby:
+    version: 1.9.3-p448
+
+dependencies:
+    override:
+        - bundle install
+
+test:
+  override:
+    - jekyll build
+    # - htmlproof ./_site
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - "jekyll build --config _config.yml,./config/production/_config.yml"
+      - s3_website push --config-dir=./config/production/
+  staging:
+    branch: development
+    commands:
+      - "jekyll build --config _config.yml,./config/staging/_config.yml"
+      - s3_website push --config-dir=./config/staging/

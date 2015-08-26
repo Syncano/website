@@ -2,6 +2,9 @@
 .DS_Store
 config.codekit
 .divshot-cache/*
+*.sublime-project
+*.sublime-workspace
+Gemfile.lock
 
 # jekyll build
 _site/*
