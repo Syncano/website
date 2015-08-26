@@ -18,7 +18,7 @@ deployment:
       - "jekyll build --config _config.yml,./config/production/_config.yml"
       - s3_website push --config-dir=./config/production/
   staging:
-    branch: SYNWWW-337
+    branch: development
     commands:
       - "jekyll build --config _config.yml,./config/staging/_config.yml"
       - s3_website push --config-dir=./config/staging/
