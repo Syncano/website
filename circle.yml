@@ -9,7 +9,7 @@ dependencies:
 test:
   override:
     - jekyll build
-    # - htmlproof ./_site
+    - htmlproof ./_site
 
 deployment:
   production:
