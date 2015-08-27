@@ -17,8 +17,13 @@
     font-weight: 600;
     margin: 0;
   }
-  .hero {
+  .bg-wrap {
     background-image: url('/assets/images/bg.png');
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  .hero {
+    background-color: transparent;
     .info {
       h1 {
         margin-bottom: 20px;
@@ -82,10 +87,10 @@
   }
 
   .slider {
-    background: -webkit-linear-gradient(@brand-dark, #1E1E21);
-    background: -o-linear-gradient(@brand-dark, #1E1E21);
-    background: -moz-linear-gradient(@brand-dark, #1E1E21);
-    background: linear-gradient(@brand-dark, #1E1E21);
+    // background: -webkit-linear-gradient(@brand-dark, #1E1E21);
+    // background: -o-linear-gradient(@brand-dark, #1E1E21);
+    // background: -moz-linear-gradient(@brand-dark, #1E1E21);
+    // background: linear-gradient(@brand-dark, #1E1E21);
     #slider {
       width:960px;
       height:420px;
@@ -128,6 +133,9 @@
         height: 10px;
         width: 10px;
         margin-right: 10px;
+        &:hover {
+          cursor: pointer!important;
+        }
         &.active {
           background-color: @brand-primary;
         }
@@ -215,7 +223,7 @@
 
   .support {
     padding: 75px 0;
-    background: #1776D2 url('/assets/images/bg.png') 0 0 no-repeat;
+    background: #1776D2 url('/assets/images/home-support-bg.png') 0 0 no-repeat;
     background-size: cover;
     color: white;
     h2 {

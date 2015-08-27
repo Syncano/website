@@ -1,20 +1,48 @@
-<div id="blog-subscribe">
-<h2>Hello.</h2>
-<h3>Want our posts direct to your inbox?</h3>
-  <form class="form-inline" onsubmit="shareSubscribe();">
-  	<div class="form-group">
-    	<input type="email" class="form-control" id="subscribeEmail" placeholder="you@example.com">
-  	</div>
-  	<button type="submit" class="btn btn-default">Yes</button>
-  </form>
+<div id="blog-subscribe" class="container">
+  <div class="col-md-2">
+    <img src="/public/mascot.png" />
+  </div>
+  <div class="col-md-8 col-md-offset-2">
+    <h2>Hei, Hi, Hola</h2>
+    <h3>Sign up here to receive our latest posts in your inbox.</h3>
+    <form class="form-inline">
+      <div class="form-group">
+        <input type="email" class="form-control" id="blogSubscribeEmail" placeholder="email">
+      </div>
+      <input type="button" class="btn btn-default" value="Join" onclick="shareSubscribe()"/>
+    </form>
+    <div class="alert alert-success alert-dismissible" role="alert" id="successful-blog-subscribe">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <strong>Success!</strong> Thank you for subscribing.
+    </div>
+  </div>
 </div>
 
 
 <script>
+
 function shareSubscribe() {
-  var subscribeEmail = document.getElementById('subscribeEmail').value;
-  analytics.alias(subscribeEmail);
-  analytics.identify(subscribeEmail, {'email':subscribeEmail, 'Lifecycle stage':'lead', 'source':'Newsletter'});
-  analytics.track('Subscribed to newsletter', {'email':subscribeEmail});
+  var subscribeEmail = document.getElementById('blogSubscribeEmail').value;
+  var emailField = document.getElementById('blogSubscribeEmail');
+  var success = document.getElementById('successful-blog-subscribe');
+
+  if (subscribeEmail == null || subscribeEmail == "") {
+    emailField.className = emailField.className + " has-error";
+    return false;
+  } else {
+    //regex for valid email
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(subscribeEmail))  {  
+      if (emailField.classList.contains('has-error')) {
+        emailField.className = 'form-control';
+      }
+      analytics.alias(subscribeEmail);
+      analytics.identify(subscribeEmail, {'email':subscribeEmail, 'Lifecycle stage':'lead', 'source':'Newsletter'});
+      analytics.track('Subscribed to newsletter', {'email':subscribeEmail}); 
+      success.className = success.className + " show";
+    } else {
+      emailField.className = emailField.className + " has-error";
+      return false
+    }
+  }
 }
 </script>

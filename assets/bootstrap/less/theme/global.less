@@ -42,6 +42,15 @@ a:hover {
       border-color: @brand-primary;
     }
   }
+  li.dropdown-toggle {
+    position: relative;
+    &:hover .dropdown-menu {
+      display: block;
+    }
+  }
+  .caret {
+    margin-bottom: 2px;
+  }
 }
 
 #search-container {

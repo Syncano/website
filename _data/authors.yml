@@ -29,3 +29,7 @@ maciej:
 nikolai:
     name: Nikolai
     image: /public/nikolai.png
+kelly:
+    name: Kelly Andrews
+    image: /public/kelly.png
+    twitter: kellyjandrews

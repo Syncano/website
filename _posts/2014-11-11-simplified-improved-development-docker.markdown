@@ -16,7 +16,7 @@ summary: "A few months ago, we started using Docker with Syncano and pretty much
 <li>Install Docker</li>
 <li>Install <a href="http://fig.sh">fig</a></li>
 <li>Clone our syncano-platform repo</li>
-<li>Type into shell: {% highlight javascript linenos=table %}$ fig up{% endhighlight %}</li>
+<li>Type into shell: {% highlight javascript lineanchors %}$ fig up{% endhighlight %}</li>
 </ul>
 
 <p>Our stack is quite big and consists of five main components. Every component is run in a separate container, and containers are connected over the network and environment variables using Docker <em>links</em>.</p>
@@ -39,7 +39,7 @@ summary: "A few months ago, we started using Docker with Syncano and pretty much
 
 <p>The first two steps are executed with help of fig:</p>
 
-{% highlight javascript linenos=table %}$ fig run web ./run_tests.sh
+{% highlight javascript lineanchors %}$ fig run web ./run_tests.sh
 {% endhighlight %}
 
 <p>You can read more about <a href="link">using Fig here</a> or setting up Docker with CircleCi on their <a href="https://circleci.com/docs/docker">documentation page</a>. It's very easy!</p>

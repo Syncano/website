@@ -31,7 +31,7 @@ Before we start with any of the material, we'll first need to understand how to 
 
 `read_write.py`
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
 import cv2
 img = cv2.imread("opencv_logo.png")
 cv2.imwrite("opencv_logo_copy.png",img)
@@ -51,7 +51,7 @@ Gray scaling is important and useful for a number of reasons - one is that it ma
 
 `grayscaling.py:`
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
 import cv2
 image = cv2.imread('opencv_logo.png')
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -63,7 +63,7 @@ cv2.imwrite('gray_image.png',gray_image)
 ####Example 2 - resizing
 
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
 import cv2
 
 image = cv2.imread("opencv_logo.png")
@@ -77,7 +77,7 @@ Resizing images is useful for a number of reasons.  The easiest to understand is
 
 `smoothing.py:`
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
@@ -113,7 +113,7 @@ The true power of OpenCV is it's ability to make the task of facial recognition 
 
 `face_detect.py`
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
 import cv2
 from PIL import Image
 import os
@@ -152,7 +152,7 @@ The notion is actually quite simple.  The haarcascade_frontalface_default.xml fi
 
 ##An indepth facial recognition example:
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
 import cv2
 import cv
 import numpy as np
@@ -205,7 +205,7 @@ Object detection is really just a generalized case of facial recognition.  All y
 
 ###Corner detection
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
 import cv2
 import numpy as np
 

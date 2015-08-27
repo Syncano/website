@@ -16,7 +16,7 @@ Let’s recreate the animated dropdown menu from the newest version of Chrome fo
 <h2>Step 1: Prepare the Groundwork.</h2> 
 Create a new folder and a new index.html file. Inside index.html, paste the following:
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,7 +44,7 @@ There's nothing too exciting here. We’re importing a custom font from Google a
 <h2>Step 2: Add the CSS.</h2> 
 You can drop the below css between the <head> tags or in a separate stylesheet – it's up to you.
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
 <style type="text/css">
 
   * {
@@ -185,7 +185,7 @@ You can drop the below css between the <head> tags or in a separate stylesheet �
 <h2>Step 3: Create your Components.</h2>
 To create your first component, paste the following code below the libraries:
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
 <script type="text/jsx">
   /** @jsx React.DOM */
   var App = React.createClass({
@@ -208,7 +208,7 @@ You may have noticed that the script tag requires a special type "text/jsx" and 
 
 In the above code, we’re creating an App component, rendering it, and appending it to the body. Notice that we're using plain HTML syntax within the render function - you may need to get used to this at first, but once you do, it’s extremely helpful. This code doesn't do much, so let's add more components.
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
 var DropdownItem = React.createClass({
 
   render: function() {
@@ -244,7 +244,7 @@ Here, we’re adding two additional components. DropdownItem is the single menu 
 <h2>Step 4: Add icons.</h2>
 Add icons with the below code:
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
 var Icon = React.createClass({
 
   getDefaultProps: function() {
@@ -318,7 +318,7 @@ One of the best things about React is that you can easily keep SVG icons as comp
 <h2>Step 5: Implement your Dropdown Component.</h2>
 Add the below code to implement the dropdown component from step 3:
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
 $.Velocity.RegisterUI("slideFadeIn", {
     defaultDuration: 100,
     calls: [[{
@@ -386,7 +386,7 @@ Notice that in the render function, we're including components that we've define
 <h2>Step 6: Update your App Component.</h2>
 Add this final bit of code to update your app component:
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
 var App = React.createClass({
 
   getInitialState: function() {

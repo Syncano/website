@@ -43,7 +43,7 @@ seo_description: "Natural language processing (NLP) is the study of translation 
 
 <p>Here's the code I used to generate the above sequences:</p>
 
-{% highlight javascript linenos=table %}def ngram(sentence,n):
+{% highlight javascript lineanchors %}def ngram(sentence,n):
     input_list = [elem for elem in sentence.split(" ") if elem != '']
     return zip(*[input_list[i:] for i in xrange(n)])
 {% endhighlight %}
@@ -52,7 +52,7 @@ seo_description: "Natural language processing (NLP) is the study of translation 
 
 <p>To understand the difference here, let's look at an example:</p>
 
-{% highlight javascript linenos=table %}#basic example
+{% highlight javascript lineanchors %}#basic example
 def thing(*x): print x
 >>> thing([[elem] for elem in xrange(5)])
 ([[0], [1], [2], [3], [4]],)
@@ -78,7 +78,7 @@ def thing(*x): print x
 
 <p>So how might we do that:</p>
 
-{% highlight javascript linenos=table %}def similarity_analysis(doc_one,doc_two):
+{% highlight javascript lineanchors %}def similarity_analysis(doc_one,doc_two):
     ngrams_one = [ngram(doc_one,elem) for elem in xrange(1,4)]
     ngrams_two = [ngram(doc_two,elem) for elem in xrange(1,4)]
 
@@ -117,7 +117,7 @@ def thing(*x): print x
 
 <p>1) Hand label a set of texts as certain mappings:</p>
 
-{% highlight javascript linenos=table %}[ ("Hello there, I'm Eric","greeting"),
+{% highlight javascript lineanchors %}[ ("Hello there, I'm Eric","greeting"),
   ("Hi there, I'm Jane","greeting"),
   ("Hi, how are you?","greeting"),
   ("Hello","greeting"),
@@ -131,7 +131,7 @@ def thing(*x): print x
 
 <p>In this case we split each piece of text by mapping the words to numbers:</p>
 
-{% highlight javascript linenos=table %}"Hello there, I'm Eric" -> Freq(Hello) = 1,  Freq(there,) = 1,  Freq(I'm) = 1, Freq(Eric) = 1 ->
+{% highlight javascript lineanchors %}"Hello there, I'm Eric" -> Freq(Hello) = 1,  Freq(there,) = 1,  Freq(I'm) = 1, Freq(Eric) = 1 ->
 prob(Hello) = 1/4, prob(there,) = 1/4, prob(I'm) = 1/4, prob(Eric) = 1/4 
 {% endhighlight %}
 
@@ -152,7 +152,7 @@ g(transform) = "greeting"</p>
 
 <p>Steps (1) and (2):
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
 from textblob.classifiers import NaiveBayesClassifier</p>
 
 train = [
@@ -179,7 +179,7 @@ test = [
 
 <p>Step (3):</p>
 
-{% highlight javascript linenos=table %}cl = NaiveBayesClassifier(train)
+{% highlight javascript lineanchors %}cl = NaiveBayesClassifier(train)
 cl.classify("Their burgers are amazing")  # "pos"
 cl.classify("I don't like their pizza.")  # "neg"
 {% endhighlight %}
@@ -226,7 +226,7 @@ cl.classify("I don't like their pizza.")  # "neg"
 
 <p>Some slick <a href="http://stackoverflow.com/questions/12118720/python-tf-idf-cosine-to-find-document-similarity">code from stackoverflow</a>:</p>
 
-{% highlight javascript linenos=table %}from sklearn.feature_extraction.text import TfidfVectorizer
+{% highlight javascript lineanchors %}from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.datasets import fetch_20newsgroups 
 from sklearn.metrics.pairwise import linear_kernel 
 twenty = fetch_20newsgroups()

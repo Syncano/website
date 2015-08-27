@@ -5,6 +5,9 @@
 .support {
   .hero {
     background-color: #F7F7F7;
+    @media(min-width: 320px) and (max-width: 520px) {
+      padding: 35px 0;
+    }
     h1 {
       color: #525252;
       font-size: 36px;
@@ -19,6 +22,9 @@
   }
   .main {
     padding: 60px 15px;
+    @media(min-width: 320px) and (max-width: 520px) {
+      padding: 20px 15px;
+    }
     h2 {
       font-size: 36px;
       font-weight: lighter;
@@ -65,5 +71,6 @@
     top: 50%;
     left: 50%;
     .translate(-50%, -50%);
+    height: 40px;
   }
 }

@@ -15,7 +15,7 @@ summary: "Although written in Objective-C, the Syncano iOS library is perfectly 
 
 <p>To install CocoaPods, open Terminal and paste the following line:</p>
 
-{% highlight javascript linenos=table %}$ sudo gem install cocoapods
+{% highlight javascript lineanchors %}$ sudo gem install cocoapods
 {% endhighlight %}
 
 <h2><strong>2. XCode</strong></h2>
@@ -41,24 +41,24 @@ summary: "Although written in Objective-C, the Syncano iOS library is perfectly 
 
 <p>Open Terminal and change the directory to the folder where you chose to save your project. If you don’t know how to do this, type:</p>
 
-{% highlight javascript linenos=table %}$ cd
+{% highlight javascript lineanchors %}$ cd
 {% endhighlight %}
 
 <p>then drag &amp; drop the folder which contains your XCode project into the Terminal app (if you followed previous steps, you should have a file named <strong>SyncanoProject.xcodeproj</strong> inside a folder <strong>SyncanoProject</strong>). Press ENTER to confirm.</p>
 
 <p>Next, type:</p>
 
-{% highlight javascript linenos=table %}$ pod init
+{% highlight javascript lineanchors %}$ pod init
 {% endhighlight %}
 
 <p>Now, open the file named <strong>Podfile</strong> in your desired text editor. Under the project's application target and before <strong>end</strong>, add line:</p>
 
-{% highlight javascript linenos=table %}pod 'syncano-ios'
+{% highlight javascript lineanchors %}pod 'syncano-ios'
 {% endhighlight %}
 
 <p>If you used our naming suggestions, your <strong>Podfile</strong> should now look like this:</p>
 
-{% highlight javascript linenos=table %}# Uncomment this line to define a global platform for your project
+{% highlight javascript lineanchors %}# Uncomment this line to define a global platform for your project
 # platform :ios, "6.0"
 
 target "SyncanoProject" do
@@ -72,14 +72,14 @@ end
 
 <p>Save the Podfile. Go back to Terminal and install the Syncano library by typing:</p>
 
-{% highlight javascript linenos=table %}$ pod install
+{% highlight javascript lineanchors %}$ pod install
 {% endhighlight %}
 
 <p>When the process is finished, you should see a new <strong>.xworkspace</strong> file in the same folder as your project (presumably <strong>SyncanoProject.xcworkspace</strong>). From now on, use this file instead of the <strong>.xcodeproj</strong> one.</p>
 
 <p>You can open the workspace by double clicking it in Finder or typing this in Terminal:</p>
 
-{% highlight javascript linenos=table %}$ open SyncanoProject.xcworkspace
+{% highlight javascript lineanchors %}$ open SyncanoProject.xcworkspace
 {% endhighlight %}
 
 <p>The library has been downloaded and added to your project.</p>
@@ -102,7 +102,7 @@ end
 </ol>
 
 
-{% highlight javascript linenos=table %}#import <Syncano/Syncano.h>
+{% highlight javascript lineanchors %}#import <Syncano/Syncano.h>
 #import <Syncano/SyncanoSyncServer.h>
 {% endhighlight %}
 
@@ -114,7 +114,7 @@ end
 
 <p>In the class body, add two variables and initialize them so at the end it looks like this:</p>
 
-{% highlight javascript linenos=table %}class ViewController: UIViewController {
+{% highlight javascript lineanchors %}class ViewController: UIViewController {
 
   var syncano = Syncano(forDomain: "YOUR_DOMAIN", apiKey: "YOUR_API_KEY")
   var syncServer = SyncanoSyncServer(forDomain: "YOUR_DOMAIN", apiKey: "YOUR_API_KEY")
@@ -135,7 +135,7 @@ end
 
 <p>Add this function to create a data object:</p>
 
-{% highlight javascript linenos=table %}func createDataObject() {
+{% highlight javascript lineanchors %}func createDataObject() {
   //Create parameteres for API request
   //Change "123456789" with project_id and collection_id with
   //data from your instance
@@ -165,7 +165,7 @@ end
 
 <p>Add this function to download the newest data objects:</p>
 
-{% highlight javascript linenos=table %}func downloadNewestDataObject() {
+{% highlight javascript lineanchors %}func downloadNewestDataObject() {
   //Create parameteres for API request
   //Change "123456789" with project_id and collection_id with
   //data from your instance
@@ -197,7 +197,7 @@ end
 
 <p>Add this function to delete a specific data object. You can obtain the ID of an object to be deleted through <a href="https://login.syncano.com/"><strong>Admin GUI</strong></a>, or use the ID of a previously downloaded object.</p>
 
-{% highlight javascript linenos=table %}func deleteDataObject() {
+{% highlight javascript lineanchors %}func deleteDataObject() {
   //Create parameteres for API request
   //Change "123456789" with project_id and collection_id with
   //data from your instance
@@ -226,25 +226,25 @@ end
 
 <p>Add this to the class information so that it implements the SyncanoSyncServerDelegate protocol:</p>
 
-{% highlight javascript linenos=table %}class ViewController: UIViewController, SyncanoSyncServerDelegate {
+{% highlight javascript lineanchors %}class ViewController: UIViewController, SyncanoSyncServerDelegate {
   ...
 }
 {% endhighlight %}
 
 <p>Set your class as a delegate on a Sync Server object:</p>
 
-{% highlight javascript linenos=table %}self.syncServer.delegate = self;
+{% highlight javascript lineanchors %}self.syncServer.delegate = self;
 {% endhighlight %}
 
 <p>Start connection with the Sync Server by using the instance name and API key you used previously. You can pass the pointer to an error that will be set if it occurs while opening the connection:</p>
 
-{% highlight javascript linenos=table %}var error : NSError?
+{% highlight javascript lineanchors %}var error : NSError?
 self.syncServer.connect(&amp;error)
 {% endhighlight %}
 
 <p>After those steps, your viewDidLoad should look like this:</p>
 
-{% highlight javascript linenos=table %}override func viewDidLoad() {
+{% highlight javascript lineanchors %}override func viewDidLoad() {
   super.viewDidLoad()
   self.syncServer.delegate = self
 
@@ -255,7 +255,7 @@ self.syncServer.connect(&amp;error)
 
 <p>Implement protocol methods (there are more than what's shown here, but only two of them are required and only one more is needed to receive notifications). Add this code before the end of your class implementation:</p>
 
-{% highlight javascript linenos=table %}//Called when Sync Server connection was successfully opened
+{% highlight javascript lineanchors %}//Called when Sync Server connection was successfully opened
 func syncServerConnectionOpened(syncServer: SyncanoSyncServer!) {
   println("Connection opened.")
 }
@@ -275,7 +275,7 @@ func syncServer(syncServer: SyncanoSyncServer!, messageReceived message: AnyObje
 
 <p>Open the Sync Server connection as described in point <strong>5.6</strong> and add this method to send notifications:</p>
 
-{% highlight javascript linenos=table %}func sendNotification() {
+{% highlight javascript lineanchors %}func sendNotification() {
   //Create parameteres for API request
   let params = SyncanoParameters_Notifications_Send()
 

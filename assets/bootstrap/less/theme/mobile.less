@@ -25,11 +25,18 @@
     }
   }
   footer {
-    .logo {
-      text-align: center;
-    }
+    text-align: center!important;
     .row {
       >div {
+        .newsletter {
+          .form-control {
+            display: inline;
+            float: none;
+          }
+          input.btn {
+            margin-top: -1px;
+          }
+        }
         &.col-md-3 {
           margin-top: 20px;
         }
@@ -99,9 +106,9 @@
     line-height: 36px;
   }
   .hero {
-    min-height: 450px;
+    min-height: 330px;
     background-position: 50% 50%;
-    padding: 50px 0;
+    padding: 30px 0 0;
     .info {
       top: 100px;
       h1 {
@@ -271,6 +278,7 @@
     .info {
       &.post {
         top: 100px;
+        padding: 0 20px;
       }
     }
   }

@@ -21,7 +21,7 @@ seo_description: "Angular.js is a front-end web framework responsible for accept
 
 <p>Angular.js is extremely easy to make use of. All you need to is include the CDN (<a href="http://en.wikipedia.org/wiki/Content_delivery_network">content delivery network</a>).  And then you're off to the races:</p>
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
 <!doctype html>
 <html>
 <head>
@@ -51,7 +51,7 @@ seo_description: "Angular.js is a front-end web framework responsible for accept
 
 <p>Notice that to make use of this variable, we simply need to add opening '{{' and closing '}}' around the variable name.  As an aside, the double open and close braces can also be used to evaluate statements generally.  So,</p>
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
 <div ng-app="">
  <p>5 5 = {{5   5}}</p>
 </div>
@@ -71,7 +71,7 @@ seo_description: "Angular.js is a front-end web framework responsible for accept
 
 <p>processing.js</p>
 
-{% highlight javascript linenos=table %}angular.module('processing', [])
+{% highlight javascript lineanchors %}angular.module('processing', [])
  .controller("ProcessingController", function(){
     this.first = 1;
     this.second = 2;
@@ -97,7 +97,7 @@ seo_description: "Angular.js is a front-end web framework responsible for accept
 
 <p>processing.html</p>
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
 <!doctype html>
 <html>
 <head>
@@ -123,7 +123,7 @@ seo_description: "Angular.js is a front-end web framework responsible for accept
 
 <p>Notice how easy iteration is:</p>
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
 <span ng-repeat="elem in processing.listing">
     {{elem}},
 </span>
@@ -131,7 +131,7 @@ seo_description: "Angular.js is a front-end web framework responsible for accept
 
 <p>Also, notice how easy changing values on the front-end is:</p>
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
 <p> Change First:<input type="number" ng-model="val">
 <button class="btn" ng-click="processing.setFirst(val)">change first</button>
 </p>
@@ -139,7 +139,7 @@ seo_description: "Angular.js is a front-end web framework responsible for accept
 
 <p>Finally, notice how easy accessing values in the object is:</p>
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
  <p>Doing a lookup:</p>
  <p>Name: {{processing.lookup["name"]}}</p>
  <p>Age: {{processing.lookup["age"]}}</p>
@@ -150,7 +150,7 @@ seo_description: "Angular.js is a front-end web framework responsible for accept
 
 <p>scoping.html</p>
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -184,7 +184,7 @@ Now that we have all the pieces in place, let's build a full front-end applicati
 
 <p>viewer.html</p>
 
-{% highlight javascript linenos=table %}
+{% highlight javascript lineanchors %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -216,7 +216,7 @@ app.controller('customersCtrl', function($scope, $http) {
 
 <p>api.js</p>
 
-{% highlight javascript linenos=table %}var express = require("express");
+{% highlight javascript lineanchors %}var express = require("express");
 
 var app = express();
 

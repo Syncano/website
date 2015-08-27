@@ -33,9 +33,8 @@
   box-shadow: 0 1px 1px rgba(0,0,0,.5);
   width: 660px;
   max-width: 100%;
-  margin: 20px auto 40px;
+  margin: 75px auto 40px;
   padding: 10px 20px 20px;
-  text-align: center;
   h2 {
     font-size: 36px;
     color: #525252;
@@ -43,22 +42,34 @@
     font-weight: lighter;
   }
   h3 {
-    font-size: 28px;
+    font-size: 23px;
     color: #525252;
     margin-top: 5px;
     margin-bottom: 20px;
     font-weight: lighter;
   }
+  img {
+    height: 200px;
+    width: auto;
+    max-width: 200px;
+    margin-top: -50px;
+  }
   input {
     border-radius: 0;
+    &.has-error {
+      border-color: #E65A58;
+    }
+    &.btn {
+      background-color: @brand-primary;
+      border: 0;
+      box-shadow: none;
+      padding: 7px 25px;
+      color: white;
+      border-radius: 0;
+    }
   }
-  button {
-    background-color: @brand-primary;
-    border: 0;
-    box-shadow: none;
-    padding: 7px 25px;
-    color: white;
-    border-radius: 0;
+  .alert {
+    display: none;
   }
 }
 
