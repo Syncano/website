@@ -1,17 +1,21 @@
+{% assign heroTextColor = "white" %}
+{% if post.color %}
+{% assign heroTextColor = post.color %}
+{% endif %}
 <div class="container">
   <a href="{{post.url}}" class="permalink">
     <div class="hero" style="background-image: url('{{post.image}}'); min-height: {{post.image_height}};">
       <div class="post info">
-        <span class="categories">
+        <span class="categories" style="color: {{heroTextColor}}">
           {% for pc in post.categories %}
             {{ pc }}<span class="sep">, </span>
           {% endfor %}
         </span><!-- END categories -->
-        <h1>{{post.title}}</h1>
+          <h1 style="color: {{heroTextColor}}">{{post.title}}</h1>
         {% assign author = site.data.authors[post.author] %}
         {% if author %}
-          <div><img src="{{author.image}}" alt="{{author.name}}" height="50" width="50"/></div>
-          <span class="author"><em>By</em> <strong>{{ author.name }}</strong></span>
+          <div><img src="{{author.image}}" alt="{{author.name}}" height="50" width="auto"/></div>
+          <span class="author" style="color: {{heroTextColor}}"><em>By</em> <strong>{{ author.name }}</strong></span>
         {% endif %}
       </div><!-- END post info -->
     </div><!-- END hero -->

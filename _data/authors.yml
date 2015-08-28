@@ -5,6 +5,7 @@ eric_schles:
 mariusz:
     name: Mariusz Wisniewski
     image: /public/mariusz.png
+    twitter: lifcio
 resham:
     name: Resham Parikh
     image: /public/resham.png
@@ -33,3 +34,8 @@ kelly:
     name: Kelly Andrews
     image: /public/kelly.png
     twitter: kellyjandrews
+mary:
+    name: Mary Fabro
+    image: /public/mary.png
+    twitter: MaryliseDC
+    
