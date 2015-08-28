@@ -4,9 +4,9 @@ title: Intro to Syncano
 date: 2015-08-26 09:00:00
 author: kelly
 categories: ['syncano']
-image: /public/blue-background.png
-share_image: /public/blue-background.png
-image_height: 450px
+image: /public/white-mark-on-blue.png
+share_image: /public/white-mark-on-blue.png
+image_height: 600px
 summary: "App development is hard. Some aspects tend to be harder to get right than others. As developers, we enjoy unknown challenges, but there are times when we just need to get our product on the shelf - and the faster the better."
 keywords: 'Syncano, CodeBox, Solutions, Real-time, realtime, backend, baas'
 seo_description: "Setting up a server, databases, user authentication and permissions, API routes, other microservice integrations - they are all parts of your application that have to be built somehow, and end up taking the bulk of the time. Isn’t solving the problem supposed to be the focus?" 
