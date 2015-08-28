@@ -4,9 +4,9 @@
     <span class="author"><img src="{{ author.image }}" alt="{{ author.name }}" /></span>
   {% endif %}
   {% if post.share_image %}
-    <img src="{{post.share_image}}" alt="{{post.title}}" name="{{post.title}}"/>
+    <img src="{{post.share_image}}" alt="{{post.title}}" name="{{post.title}}" height="auto"/>
   {% elsif post.image %}
-    <img src="{{post.image}}" alt="{{post.title}}" name="{{post.title}}"/>
+    <img src="{{post.image}}" alt="{{post.title}}" name="{{post.title}}" height="auto"/>
   {% else %}
     <span class="syncano-blue"></span>
   {% endif %}
