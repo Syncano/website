@@ -4,8 +4,8 @@ title: Syncano is speaking at Music of Code
 date: 2015-08-28 09:00:00
 author: mary
 categories: ['syncano']
-image: /public/music-of-code-white.png
-share_image: /public/music-of-code-white.png
+image: /public/blue-background.png
+share_image: /public/blue-background.png
 image_height: 220px
 color: white
 summary: "Kelly Andrews, Syncano Evangelist will be speaking at the Music of Code conference in Nashville, Tennessee."
