@@ -7,7 +7,7 @@ categories: ['syncano']
 image: /public/data.jpg
 share_image: /public/data.jpg
 image_height: 600px
-summary: "Data is the lifeblood of any application. Not being able to access your applications data quickly, is sort of the equivalent of having clogged arteries - it’s going to hurt, and if goes on long enough may lead to your app’s death. Good news, though, because with Syncano - we have a clear pathway to our data - using classes and data objects!."
+summary: "Data is the lifeblood of any application. Not being able to access your application’s data quickly  can be equated to having clogged arteries - it’s going to be painful, and if it continues long enough, may lead to your app’s death. The good news is that with Syncano, we have a clear pathway to our data - using classes and data objects!"
 keywords: 'Syncano, CodeBox, Solutions, Real-time, realtime, backend, baas'
 seo_description: "classes and data objects, SQL, properties inherited from its constructor"
 ---
