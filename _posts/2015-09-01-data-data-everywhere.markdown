@@ -77,14 +77,15 @@ Setting `other` gives anyone who has access to the data objects in a class the p
 
 ####Group
 
-The `group` type allows anyone in a specific group to have a set of permissions. This creates a bit of flexibility so that `others` can be set to a tighter restriction, but perhaps a `group` has additional permissions. This would allow you to easily create segmented data for a user’s type. For example, let’s say you have a group of “admins” who have access to more items within the application.
+The `group` type allows anyone in a specific group to have a set of permissions. This creates a bit of flexibility so that `other`'s can be set to a tighter restriction, but perhaps a `group` has additional permissions. This would allow you to easily create segmented data for a user’s type. For example, let’s say you have a group of “admins” who have access to more items within the application.
 
 Classes will typically be created in your Syncano dashboard - there really isn’t a need to define these in your application. The routes are available, but really - just use the dashboard, that’s what it’s there for.
 
 ##The name’s Object - Data Object
 
 Once you have your classes available, it’s time to fill them up with objects for your application to use. At this point, you’ve already done the hard part, and creating data objects are exactly like you would think - pass in all required data properties.
-Data objects will be created with your application - and will typically be created by a user.  One important thing to understand when creating your data objects is tobe explicit with your permissions.  
+
+Data objects will be created with your application - and will typically be created by a user.  One important thing to understand when creating your data objects is to be explicit with your permissions.  
 
 {% highlight javascript lineanchors %}
 {
@@ -97,7 +98,7 @@ Data objects will be created with your application - and will typically be creat
 }
 {% endhighlight %}
 
-Syncano does not make assumptions regarding who receives access to your data.  In fact, we default to `none` for everything.  The above example would allow anyone to read, update, and delete this particular object (create permissions are on the class level). The other permission levels would be `none`, `read`, `write`.  Using these permissions in parallel with the class permission options will give youa fairly complex permissions system.
+Syncano does not make assumptions regarding who receives access to your data.  In fact, we default to `none` for everything.  The above example would allow anyone to read, update, and delete this particular object (create permissions are on the class level). The other permission levels would be `none`, `read`, `write`.  Using these permissions in parallel with the class permission options will give you a fairly complex permissions system.
 Like classes, objects have `group` and `other` permissions. Unlike classes, they also include`owner` permissions.  Just like a UNIX system, Syncano gives you full control over who has access and who doesn’t.
 
 ###Filter and Order your data
