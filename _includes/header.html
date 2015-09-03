@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 	<title>{{page.title}} | {{site.title}}</title>
 
-	{% if page.id %} 
+	{% if page.id %}
 		{% include seo/post-seo.html %}
 	{% else %}
 		{% include seo/page-seo.html %}
@@ -13,7 +13,7 @@
 
 	{% include header/styles.html %}
 
-	<link rel="shortcut icon" href="/assets/images/favicon.ico" />
+	<link rel="shortcut icon" href="/assets/images/syncano_favicon.png" />
 </head>
 <body class="{% for c in page.body_class %}{{ c }}{% endfor %} {% if page.id %} single-post {% endif %}">
 
