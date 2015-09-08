@@ -4,8 +4,8 @@ title: CodeBox - Run your own code
 date: 2015-09-03 10:00:00
 author: mariusz
 categories: ['syncano']
-image: /public/blue-background.png
-share_image: /public/blue-background.png
+image: /public/cloud-code.jpg
+share_image: /public/cloud-code.jpg
 image_height: 450px
 summary: "At Syncano, we love building new tools to speed up and simplify the development process of your next app. With the launch of the new version of our platform, we delivered lots of new features for you, and we're excited about all of them! One of the features I, personally, like the most are the `CodeBoxes`."
 keywords: 'Syncano, CodeBox, code, run, backend, baas, nodejs, python, ruby'
