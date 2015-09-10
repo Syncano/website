@@ -47,18 +47,37 @@ analytics.page('Website', {
 <!-- END SEGMENT.IO TRACKING EVENTS -->
 
 <script>
-
-analytics.ready(function(){
-  var unique_id = mixpanel.get_distinct_id();
-  var signupBtns = document.getElementsByClassName('mixpanel-btn');
-  var loginBtns = document.getElementsByClassName('mixpanel-login');
-  if (unique_id) {
-    for(var i = 0; i < signupBtns.length; i++){
-      signupBtns[i].setAttribute("href", 'https://dashboard.syncano.io/#/signup?distinct_id=' + unique_id);
+  analytics.ready(function(){
+    var unique_id = mixpanel.get_distinct_id();
+    var signupBtns = document.getElementsByClassName('mixpanel-btn');
+    var loginBtns = document.getElementsByClassName('mixpanel-login');
+    if (unique_id) {
+      for(var i = 0; i < signupBtns.length; i++){
+        signupBtns[i].setAttribute("href", 'https://dashboard.syncano.io/#/signup?distinct_id=' + unique_id);
+      }
+      for(var x = 0; x < loginBtns.length; x++){
+        loginBtns[x].setAttribute("href", 'https://dashboard.syncano.io/#/login?distinct_id=' + unique_id);
+      }
     }
-    for(var x = 0; x < loginBtns.length; x++){
-      loginBtns[x].setAttribute("href", 'https://dashboard.syncano.io/#/login?distinct_id=' + unique_id);
-    }
-  }
-});
+  });
 </script>
+
+<script type="text/javascript">
+  adroll_adv_id = "S7SUYSWPEJFATDLJ4LR5QZ";
+  adroll_pix_id = "GJREFZUHUBAG3FK5J4VTSO";
+  (function () {
+    var oldonload = window.onload;
+    window.onload = function(){
+      __adroll_loaded=true;
+      var scr = document.createElement("script");
+      var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+      scr.setAttribute('async', 'true');
+      scr.type = "text/javascript";
+      scr.src = host + "/j/roundtrip.js";
+      ((document.getElementsByTagName('head') || [null])[0] ||
+      document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      if(oldonload){oldonload()}};
+  }());
+</script>
+
+<script type="text/javascript" src="//magnetic.t.domdex.com/23448/pix.js?t=r&for=syncano"></script><noscript><img src="//magnetic.t.domdex.com/23448/pix.gif?t=r&for=syncano" width="1" height="1" style="display:none;"></noscript>
