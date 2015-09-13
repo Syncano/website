@@ -1,0 +1,6 @@
+@media all and (max-width: 1020px) {
+    .navbar-brand {
+        position: absolute;
+        width: 100%
+    }
+}

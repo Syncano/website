@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e481d700-93f1-4105-ab79-00992cc2a8e9" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/OpenSans-Light-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/OpenSans-Light-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/OpenSans-Light-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/OpenSans-Regular-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/OpenSans-Regular-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/OpenSans-Regular-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/OpenSans-Semibold-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/OpenSans-Semibold-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/OpenSans-Semibold-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/OpenSansBold-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/OpenSansBold-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/OpenSansBold-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/about-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/about-hero-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/address-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/android.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/authentication.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/billing.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/bird.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/brand/hat.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/brand/mascot.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/brand/syncano-brand-header.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/brand/syncano-dark-gray.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/brand/syncano-dark.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/brand/syncano-hat.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/brand/syncano-light-gray.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/brand/syncano-light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/brand/syncano-mark_128.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/brand/syncano-mark_16.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/brand/syncano-mark_32.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/brand/syncano-mark_48.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/brand/syncano-mark_64.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/brand/syncano-mark_gray_128.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/brand/syncano-mark_gray_16.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/brand/syncano-mark_gray_32.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/brand/syncano-mark_gray_48.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/brand/syncano-mark_gray_64.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/brand/syncano-shirt-back.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/brand/syncano-shirt-front.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/carousel/1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/carousel/10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/carousel/11.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/carousel/12.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/carousel/13.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/carousel/14.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/carousel/15.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/carousel/2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/carousel/3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/carousel/4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/carousel/5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/carousel/6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/carousel/7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/carousel/8.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/carousel/9.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/dashboard.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/down-arrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/favicon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/grey-circles.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/hally.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/hally.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/home-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/home-support-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ios8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/javascript.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/jobs-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/krystian.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/management.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/mascot.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/middleware-support-icons.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/new-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/next-arrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/nosql.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/patrick.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pricing-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/python-logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ruby.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/security.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/share.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/slider/slide1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/slider/slide2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/slider/slide3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/slider/slide4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/support-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/syncano-logo-blue.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/syncano-logo-dark.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/syncano-logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/syncano-oval.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/syncano-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/syncano_favicon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/white-share.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/Jhishan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/adam.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/bartek.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/daniel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/eric.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/harald.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/hubert.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/jeff.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/justyna.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/kelly.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/maciej.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/map.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/marek.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/mariusz.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/mary.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/michal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/nik.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/nikolai.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/patryk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/pedro.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/resham.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/robert.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/sara.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/teodor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/thomas.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/thomas.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/category/default-blogpost-hero.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/pricing/billing.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/support/api.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/support/developers.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/support/docs.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.eslintignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.eslintrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/components/Newsletter.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/components/NewsletterInput.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/components/Pagination.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/components/ReadNext.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap-theme.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/OpenSans-Light-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/OpenSans-Regular-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/OpenSans-Semibold-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/OpenSansBold-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/_template.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/_TeamConstans.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/about/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/category/_template.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/category/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/pricing/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/solutions/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/support/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wrappers/_md.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wrappers/html.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wrappers/md.jsx" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/github.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/html.cjsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/npm-debug.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/_template.cjsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-03-17-introducing-syncano-a-real-time-sync-solution-for-complex-data-structures/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-03-24-how-to-create-push-notifications-with-syncano-on-osx/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-03-31-communication-distributed-team/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-04-07-newest-features-in-syncano-3-1/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-04-14-the-six-most-important-things-to-consider-when-building-a-backend-solution/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-04-21-syncano-named-one-of-150-most-promising-startups-in-the-world/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-05-05-5-signs-you-should-invest-in-a-backend-as-a-service/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-05-19-syncanos-drawing-app-demo-and-code/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-06-02-misconceptions-backend-as-a-service/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-06-09-beautiful-real-time-technology-apps/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-06-11-every-backend-developer-should-focus-on-these-3-things/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-06-16-the-critical-role-that-real-time-sync-plays-in-collaboration/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-06-18-how-to-create-great-applications-4-rules-to-follow/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-06-23-is-your-data-secure/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-06-26-startup-lessons-5-things-ive-learned/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-06-28-our-top-takeaways-from-twilios-roadshow/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-07-02-how-to-create-a-cross-platform-app-in-minutes-with-appgyver-and-syncano/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-07-09-3-ways-build-more-apps-less-time/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-07-15-insane-but-true-internet-of-things/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-07-22-second-screen-living-room-smartphone-real-time-apps/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-07-24-5-second-screen-real-time-apps/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-07-28-real-time-sync-apps-july/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-07-30-how-to-create-a-great-user-experience/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-08-01-world-without-real-time-sync/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-08-04-what-is-backend-as-a-service-baas/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-08-06-why-we-love-real-time-sync/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-08-08-how-api-will-change-internet-of-things/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-08-11-why-your-content-should-display-everywhere-cross-device/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-08-14-get-instant-notifications-syncano-ios/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-08-21-real-time-sync-apps-month-august-edition/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-08-27-david-dekadt-havoctv-second-screen/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-08-29-data-modeling-basics/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-09-02-using-syncano-ios-library-swift-demotutorial/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-09-03-reactjs-reasons-why-part-1/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-09-11-5-great-developer-tools-radar/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-09-19-getting-started-reactjs-tutorial/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-09-25-reasons-use-docker/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-10-02-monitor-app-performance-crittercism/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-10-09-getting-started-swift-playground/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-10-14-data-modeling-parent-child-relationships/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-10-17-getting-started-docker/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-10-24-docker-workflow-fig-sh/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-11-04-web-summit-official-beta-startup/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-11-11-simplified-improved-development-docker/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-11-20-friendly-code-review/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-11-27-thank-you-shirts/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-12-09-flask-micro-framework-introduction/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-12-16-intro-flask-pt-2-creating-writing-databases/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2014-12-23-flask-databases-sqlalchemy/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2015-01-19-advanced-concepts-flask/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2015-01-23-getting-know-javascript-intro/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2015-02-03-configuring-running-django-celery-docker-containers-pt-1/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2015-02-24-5-mistakes-great-developers-never-make/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2015-03-02-introduction-python/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2015-03-12-ios-chat-app-jsqmessagesviewcontroller/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2015-03-13-intro-to-express-js/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2015-03-18-intro-to-node-js/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2015-03-23-data-structures-in-javascript/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2015-04-07-introduction-natural-language-processing/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2015-04-14-intro-angular-js/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2015-05-20-introduction-to-image-processing/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2015-08-26-intro-to-syncano/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2015-08-28-Syncano-is-speaking-at-Music-City-of-Code/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2015-09-01-data-data-everywhere/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2015-09-03-codebox-run-your-own-code/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2015-09-08-how-can-i-use-codeboxes/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/2015-09-10-data-at-the-speed-of-life/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/_template.cjsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/blog/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/examples/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wrappers/md.cjsx" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.toml" afterPath="$PROJECT_DIR$/config.toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+    </list>
+    <ignored path="syncano.com.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="syncano.com" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="_md.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wrappers/_md.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-19.444445">
+              <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+              <folding>
+                <marker date="1443788303000" expanded="true" signature="2604:2847" placeholder="..." />
+                <marker date="1443788303000" expanded="true" signature="2649:2832" placeholder="..." />
+                <marker date="1443788303000" expanded="true" signature="2683:2811" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.toml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.toml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_template.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/_template.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8251748">
+              <caret line="201" column="26" selection-start-line="201" selection-start-column="26" selection-end-line="201" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_template.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/category/_template.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Newsletter.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/Newsletter.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/index.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="html.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wrappers/html.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="md.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wrappers/md.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pages/blog/2014-08-14-get-instant-notifications-syncano-ios/index.md" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/pages/support/index.html" />
+        <option value="$PROJECT_DIR$/pages/solutions/index.html" />
+        <option value="$PROJECT_DIR$/pages/public/css/bootstrap-theme.min.css" />
+        <option value="$PROJECT_DIR$/pages/pricing/index.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/pages/about/index.html" />
+        <option value="$PROJECT_DIR$/pages/index.html" />
+        <option value="$PROJECT_DIR$/pages/js/_js-image-slider.js" />
+        <option value="$PROJECT_DIR$/pages/old.js" />
+        <option value="$PROJECT_DIR$/pages/blog/2015-05-20-introduction-to-image-processing/index.md" />
+        <option value="$PROJECT_DIR$/pages/blog/2015-04-14-intro-angular-js/index.md" />
+        <option value="$PROJECT_DIR$/pages/blog/2015-04-07-introduction-natural-language-processing/index.md" />
+        <option value="$PROJECT_DIR$/pages/blog/2015-03-23-data-structures-in-javascript/index.md" />
+        <option value="$PROJECT_DIR$/pages/blog/2015-03-18-intro-to-node-js/index.md" />
+        <option value="$PROJECT_DIR$/pages/blog/2015-03-13-intro-to-express-js/index.md" />
+        <option value="$PROJECT_DIR$/pages/blog/2015-03-02-introduction-python/index.md" />
+        <option value="$PROJECT_DIR$/pages/blog/2015-01-23-getting-know-javascript-intro/index.md" />
+        <option value="$PROJECT_DIR$/pages/blog/2015-01-19-advanced-concepts-flask/index.md" />
+        <option value="$PROJECT_DIR$/pages/blog/2014-12-23-flask-databases-sqlalchemy/index.md" />
+        <option value="$PROJECT_DIR$/pages/blog/2014-12-16-intro-flask-pt-2-creating-writing-databases/index.md" />
+        <option value="$PROJECT_DIR$/pages/blog/2014-12-09-flask-micro-framework-introduction/index.md" />
+        <option value="$PROJECT_DIR$/pages/blog/2014-08-08-how-api-will-change-internet-of-things/index.md" />
+        <option value="$PROJECT_DIR$/pages/blog/2014-08-01-world-without-real-time-sync/index.md" />
+        <option value="$PROJECT_DIR$/pages/blog/2014-06-18-how-to-create-great-applications-4-rules-to-follow/index.md" />
+        <option value="$PROJECT_DIR$/pages/category/_template.jsx" />
+        <option value="$PROJECT_DIR$/pages/about/TeamConstans.js" />
+        <option value="$PROJECT_DIR$/pages/blog/2014-08-21-real-time-sync-apps-month-august-edition/index.md" />
+        <option value="$PROJECT_DIR$/components/Pagination.jsx" />
+        <option value="$PROJECT_DIR$/_site/blog/index.html" />
+        <option value="$PROJECT_DIR$/pages/blog/2015-09-15-user-management-for-your-apps/index.md" />
+        <option value="$PROJECT_DIR$/css/bootstrap-theme.min.css" />
+        <option value="$PROJECT_DIR$/pages/category/index.jsx" />
+        <option value="$PROJECT_DIR$/components/FooterNewsletterInput.jsx" />
+        <option value="$PROJECT_DIR$/components/FooterNewsletter.jsx" />
+        <option value="$PROJECT_DIR$/components/BlogNewsletter.jsx" />
+        <option value="$PROJECT_DIR$/components/Newsletter.jsx" />
+        <option value="$PROJECT_DIR$/pages/blog/index.jsx" />
+        <option value="$PROJECT_DIR$/pages/blog/2014-05-19-syncanos-drawing-app-demo-and-code/index.md" />
+        <option value="$PROJECT_DIR$/wrappers/html.jsx" />
+        <option value="$PROJECT_DIR$/.eslintrc" />
+        <option value="$PROJECT_DIR$/pages/blog/2014-04-14-the-six-most-important-things-to-consider-when-building-a-backend-solution/index.md" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/.eslintignore" />
+        <option value="$PROJECT_DIR$/wrappers/md.jsx" />
+        <option value="$PROJECT_DIR$/pages/index.jsx" />
+        <option value="$PROJECT_DIR$/html.jsx" />
+        <option value="$PROJECT_DIR$/config.toml" />
+        <option value="$PROJECT_DIR$/pages/blog/_template.jsx" />
+        <option value="$PROJECT_DIR$/pages/_template.jsx" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="2560" />
+    <option name="height" value="1413" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>HTML</id>
+          </State>
+          <State>
+            <id>XPath</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>CoffeeScript</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="syncano.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="syncano.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="syncano.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="syncano.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="syncano.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wrappers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="syncano.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="syncano.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.eslintrc" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/patrykkopycinski/Projects/syncano/syncano.com/components/FooterNewsletterInput.jsx&#10;white-s&#9;FILE&#9;file:///Users/patrykkopycinski/Projects/syncano/syncano.com/images/white-share.png&#10;insane-b&#9;FILE&#9;file:///Users/patrykkopycinski/Projects/syncano/syncano.com/old/_posts/2014-07-15-insane-but-true-internet-of-things.markdown&#10;thomas&#9;FILE&#9;file:///Users/patrykkopycinski/Projects/syncano/syncano.com/old/public/uploads/2014/01/thomas.jpg&#10;Screen-Shot-2014-04-05-at-7.33.32-PM.png&#9;FILE&#9;file:///Users/patrykkopycinski/Projects/syncano/syncano.com/_site/public/Screen-Shot-2014-04-05-at-7.33.32-PM.png&#10;bg.&#9;FILE&#9;file:///Users/patrykkopycinski/Projects/syncano/syncano.com/assets/images/bg.png&#10; bg.png&#9;FILE&#9;file:///Users/patrykkopycinski/Projects/syncano/syncano.com/_site/assets/images/bg.png&#10;bg.png&#9;FILE&#9;file:///Users/patrykkopycinski/Projects/syncano/syncano.com/_site/assets/images/bg.png&#10;support/faq&#9;FILE&#9;file:///Users/patrykkopycinski/Projects/syncano/syncano.com/_includes/support/faq.html&#10;sty&#9;FILE&#9;file:///Users/patrykkopycinski/Projects/syncano/syncano.com/_includes/header/styles.html&#10;pricing&#9;FILE&#9;file:///Users/patrykkopycinski/Projects/syncano/syncano.com/assets/bootstrap/less/theme/pricing.less&#10;pri&#9;FILE&#9;file:///Users/patrykkopycinski/Projects/syncano/syncano.com/assets/images/pricing-bg.png&#10;support&#9;FILE&#9;file:///Users/patrykkopycinski/Projects/syncano/syncano.com/assets/bootstrap/less/theme/support.less&#10;about/car&#9;FILE&#9;file:///Users/patrykkopycinski/Projects/syncano/syncano.com/_includes/about/carousel.html&#10;about/lo&#9;FILE&#9;file:///Users/patrykkopycinski/Projects/syncano/syncano.com/_includes/about/locations.html&#10;about/her&#9;FILE&#9;file:///Users/patrykkopycinski/Projects/syncano/syncano.com/_includes/about/hero.html&#10;about&#9;FILE&#9;file:///Users/patrykkopycinski/Projects/syncano/syncano.com/pages/about.html&#10;sup&#9;FILE&#9;file:///Users/patrykkopycinski/Projects/syncano/syncano.com/assets/bootstrap/less/theme/support.less&#10;solutions/ite&#9;FILE&#9;file:///Users/patrykkopycinski/Projects/syncano/syncano.com/_includes/solutions/item.html&#10;support  &#9;null&#9;null" />
+    <property name="editor.config.accepted" value="true" />
+    <property name="js.eslint.nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="js.eslint.eslintPackage" value="/usr/local/lib/node_modules/eslint" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages" />
+      <recent name="$PROJECT_DIR$/wrappers" />
+      <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$/pages/category" />
+      <recent name="$PROJECT_DIR$/pages/home" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages/blog/2015-09-15-user-management-for-your-apps" />
+      <recent name="$PROJECT_DIR$/js" />
+      <recent name="$PROJECT_DIR$/pages" />
+      <recent name="$PROJECT_DIR$/pages/js" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Node.js.html.jsx">
+    <configuration default="false" name="html.jsx" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="/usr/local/bin/node" path-to-js-file="html.jsx" working-dir="$PROJECT_DIR$/wrappers">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JsTestDriver-test-runner" factoryName="JsTestDriver">
+      <setting name="configLocationType" value="CONFIG_FILE" />
+      <setting name="settingsFile" value="" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Node.js.html.jsx" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.html.jsx" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e481d700-93f1-4105-ab79-00992cc2a8e9" name="Default" comment="" />
+      <created>1437506936354</created>
+      <option name="number" value="Default" />
+      <updated>1437506936354</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="2560" height="1413" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2059866" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32971016" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28766087" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.329296" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/old/_data/authors.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41130298">
+          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/Pagination.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44083527">
+          <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/ReadNext.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17401393">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_site/blog/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31322506">
+          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="139" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_site/3-ways-build-more-apps-less-time/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2726218">
+          <caret line="167" column="327" selection-start-line="167" selection-start-column="325" selection-end-line="167" selection-end-column="327" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/bootstrap-theme.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="36734" selection-start-line="0" selection-start-column="36734" selection-end-line="0" selection-end-column="36734" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/formsy-react/src/Mixin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34834123">
+          <caret line="102" column="19" selection-start-line="102" selection-start-column="19" selection-end-line="102" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/NewsletterInput.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.eslintrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.375">
+          <caret line="7" column="58" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.eslintignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="2" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/about/_TeamConstans.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="11" selection-start-line="0" selection-start-column="0" selection-end-line="66" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="3" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.toml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wrappers/_md.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.444445">
+          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+          <folding>
+            <marker date="1443788303000" expanded="true" signature="2604:2847" placeholder="..." />
+            <marker date="1443788303000" expanded="true" signature="2649:2832" placeholder="..." />
+            <marker date="1443788303000" expanded="true" signature="2683:2811" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/category/_template.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/Newsletter.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wrappers/html.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wrappers/md.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/_template.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8251748">
+          <caret line="201" column="26" selection-start-line="201" selection-start-column="26" selection-end-line="201" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

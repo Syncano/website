@@ -1,0 +1,39 @@
+{
+  "name": "syncano.com",
+  "version": "1.0.0",
+  "description": "Syncano website",
+  "main": "n/a",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .js --ext .jsx || true --debug"
+  },
+  "keywords": [
+    "syncano"
+  ],
+  "author": "Patryk Kopycinski <patryk.kopycinski@syncano.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chroma-js": "0.7.2",
+    "color-pairs-picker": "^1.3.5",
+    "file-loader": "^0.8.4",
+    "formsy-react": "^0.14.1",
+    "formsy-react-components": "^0.5.0",
+    "lodash": "^3.10.0",
+    "moment": "^2.10.6",
+    "radium": "^0.14.1",
+    "react": "^0.13.3",
+    "react-bootstrap": "^0.25.2",
+    "react-document-title": "^1.0.2",
+    "react-helmet": "^1.1.5",
+    "react-motion": "^0.1.0",
+    "react-responsive-grid": "^0.2.0",
+    "react-router": "^0.13.3",
+    "react-script-loader": "0.0.1",
+    "typography": "^0.3.6",
+    "underscore.string": "^3.1.1",
+    "url-loader": "^0.5.6"
+  },
+  "devDependencies": {
+    "webpack-deploy": "git://github.com/productboard/webpack-deploy"
+  }
+}

@@ -9,6 +9,9 @@ Gemfile.lock
 # jekyll build
 _site/*
 
+node_modules/
+/public/
+
 # large/disallowed file types
 # a CDN should be used for these
 *.hqx
@@ -44,5 +47,7 @@ _site/*
 *.wmv
 *.avi
 =======
+/old/
+.idea/
 _site/
 .sass-cache/
