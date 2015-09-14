@@ -4,8 +4,8 @@ title: Data at the Speed of Life
 date: 2015-09-10 10:00:00
 author: mariusz
 categories: ['syncano']
-image: /public/blue-background.png
-share_image: /public/blue-background.png
+image: /assets/images/home-support-bg.png
+share_image: /public/data-at-the-speed-of-life.png
 image_height: 450px
 summary: "One of the things I always struggled with when creating mobile apps, was the real-time aspect of them -- almost always nonexistent."
 keywords: 'Syncano, CodeBox, code, run, backend, baas, nodejs, python, ruby'
