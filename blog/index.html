@@ -7,19 +7,20 @@ keywords: "Syncano blog, real-time sync, real-time sync apps, real-time sync app
 ---
 
 {% include blog/nav.html %}
-
-{% for post in site.posts limit:1 %}
-  {% if post.categories contains 'meetup' %}
-    {% include blog/meetup-hero.html %}
-  {% else %}
-    {% include blog/hero.html %}
-  {% endif %}
-{% endfor %}
+{% unless paginator.previous_page %}
+  {% for post in site.posts limit:1 %}
+    {% if post.categories contains 'meetup' %}
+      {% include blog/meetup-hero.html %}
+    {% else %}
+      {% include blog/hero.html %}
+    {% endif %}
+  {% endfor %}
+{% endunless %}
 
 <div class="container blog">
   <div class="posts">
     {% assign counter = 0 %}
-    {% for post in site.posts limit:15 %}
+    {% for post in paginator.posts %}
       {% assign counter=counter | plus:1 %}
       {% assign loopindex = forloop.index | modulo: 4 %}
       {% if counter > 1 %}
@@ -43,4 +44,7 @@ keywords: "Syncano blog, real-time sync, real-time sync apps, real-time sync app
       {% endif %}
     {% endfor %}
   </div><!-- END posts -->
+
+  {% include blog/pagination.html %}
+  
 </div><!-- END container -->

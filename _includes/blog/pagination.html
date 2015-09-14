@@ -1,0 +1,13 @@
+<div class="pagination clearfix">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous col-md-4 col-xs-4">Prev Page</a>
+  {% else %}
+    <span class="previous col-md-4 col-xs-4">Prev Page</span>
+  {% endif %}
+  <span class="page_number col-md-4 col-xs-4">Page <strong>{{ paginator.page }}</strong> of <strong>{{ paginator.total_pages }}</strong></span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next col-md-4 col-xs-4">Next Page</a>
+  {% else %}
+    <span class="next col-md-4 col-xs-4">Next Page</span>
+  {% endif %}
+</div>

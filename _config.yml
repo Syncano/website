@@ -6,8 +6,8 @@ description: "A simple, beautiful theme for syncano.com."
 baseurl:     ""
 url:         "http://www.syncano.com"
 permalink:    /:title
-paginate:     6
-paginate_path: "blog/page:num/"
+paginate:     15
+paginate_path: "blog/page/:num/"
 exclude:
   - config.codekit
   - circle.yml
