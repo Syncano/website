@@ -7,11 +7,11 @@
     <h3>Sign up here to receive our latest posts in your inbox.</h3>
     <form class="form-inline">
       <div class="form-group">
-        <input type="email" class="form-control" id="blogSubscribeEmail" placeholder="email">
+        <input type="email" class="form-control" id="blogSubscribeEmail-1" placeholder="email">
       </div>
-      <input type="button" class="btn btn-default" value="Join" onclick="shareSubscribe()"/>
+      <input type="button" class="btn btn-default" value="Join" onclick="shareSubscribeFirst()"/>
     </form>
-    <div class="alert alert-success alert-dismissible" role="alert" id="successful-blog-subscribe">
+    <div class="alert alert-success alert-dismissible" role="alert" id="successful-blog-subscribe-1">
       <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       <strong>Success!</strong> Thank you for subscribing.
     </div>
@@ -21,10 +21,10 @@
 
 <script>
 
-function shareSubscribe() {
-  var emailField = document.getElementById('blogSubscribeEmail');
+function shareSubscribeFirst() {
+  var emailField = document.getElementById('blogSubscribeEmail-1');
   var subscribeEmail = emailField.value;
-  var success = document.getElementById('successful-blog-subscribe');
+  var success = document.getElementById('successful-blog-subscribe-1');
 
   if (subscribeEmail == null || subscribeEmail == "") {
     emailField.className = emailField.className + " has-error";
