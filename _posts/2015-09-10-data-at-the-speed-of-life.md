@@ -4,8 +4,8 @@ title: Data at the Speed of Life
 date: 2015-09-10 10:00:00
 author: mariusz
 categories: ['syncano']
-image: /public/blue-background.png
-share_image: /public/blue-background.png
+image: /assets/images/home-support-bg.png
+share_image: /public/data-at-the-speed-of-life.png
 image_height: 450px
 summary: "One of the things I always struggled with when creating mobile apps, was the real-time aspect of them -- almost always nonexistent."
 keywords: 'Syncano, CodeBox, code, run, backend, baas, nodejs, python, ruby'
@@ -47,6 +47,7 @@ Here, we'll show you how quickly you can set up Channels usage for your app.
 * Log in to your Dashboard under [dashboard.syncano.io](https://dashboard.syncano.io)
 * Choose your instance (or [add a new one](http://docs.syncano.com/docs/getting-started-with-syncano#adding-an-instance) if you don't have one yet)
 * Create a new Channel
+
 * Name it (e.g., `todo-list`) and set `Other permissions` to subscribe
 
 ![Adding new channel](/public/blog/Add_channel_01.png)
@@ -63,6 +64,7 @@ channel.subscribeToChannel()
 Next, implement the delegate protocol function that will be called every time there's an incoming message.
 
 {% highlight objc lineanchors %}
+>>>>>>> 1ed3fc268f5f18a479e841a1ac9ff07651bd3bc7
 extension ViewController : SCChannelDelegate {
     func chanellDidReceivedNotificationMessage(notificationMessage: SCChannelNotificationMessage!) {
     	// action will hold information about type of object change
@@ -96,6 +98,7 @@ todo.saveWithCompletionBlock { error in
 After the Todo object was saved, your `chanellDidReceivedNotificationMessage` function should have been called, with notification message object holding info about the new object.
 
 It also works when you update the object:
+
 
 {% highlight objc lineanchors %}
 let todo = ... //todo chosen by user to be updated
