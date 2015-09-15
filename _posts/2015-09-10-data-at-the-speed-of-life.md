@@ -4,8 +4,8 @@ title: Data at the Speed of Life
 date: 2015-09-10 10:00:00
 author: mariusz
 categories: ['syncano']
-image: /public/blue-background.png
-share_image: /public/blue-background.png
+image: /assets/images/home-support-bg.png
+share_image: /public/data-at-the-speed-of-life.png
 image_height: 450px
 summary: "One of the things I always struggled with when creating mobile apps, was the real-time aspect of them -- almost always nonexistent."
 keywords: 'Syncano, CodeBox, code, run, backend, baas, nodejs, python, ruby'
@@ -48,22 +48,23 @@ Here, we'll show you how quickly you can set up Channels usage for your app.
 * Choose your instance (or [add a new one](http://docs.syncano.com/docs/getting-started-with-syncano#adding-an-instance) if you don't have one yet)
 * Create a new Channel
 
-![Adding new channel](/public/blog/Add_channel_01.png)
-
 * Name it (e.g., `todo-list`) and set `Other permissions` to subscribe
+
+![Adding new channel](/public/blog/Add_channel_01.png)
 
 Now, we will move to coding. As an example, we're going to use Swift.
 
 Start from creating a Channel object and subscribing to it.
 
-```objc
+{% highlight objc lineanchors %}
 let channel : SCChannel = SCChannel(name: "todo-list", andDelegate: self)
 channel.subscribeToChannel()
-```
+{% endhighlight %}
 
 Next, implement the delegate protocol function that will be called every time there's an incoming message.
 
-```objc
+{% highlight objc lineanchors %}
+>>>>>>> 1ed3fc268f5f18a479e841a1ac9ff07651bd3bc7
 extension ViewController : SCChannelDelegate {
     func chanellDidReceivedNotificationMessage(notificationMessage: SCChannelNotificationMessage!) {
     	// action will hold information about type of object change
@@ -79,11 +80,11 @@ extension ViewController : SCChannelDelegate {
         }
     }
 }
-```
+{% endhighlight %}
 
 Create a Todo object to see if it all works.
 
-```objc
+{% highlight objc lineanchors %}
 let todo = Todo()
 todo.isCompleted = false //it's a new todo so it's not completed yet
 todo.title = "Get milk"
@@ -92,29 +93,30 @@ todo.channel = "todo-list" //use channel name you created before
 todo.saveWithCompletionBlock { error in
 	//handle error
 }
-```
+{% endhighlight %}
 
 After the Todo object was saved, your `chanellDidReceivedNotificationMessage` function should have been called, with notification message object holding info about the new object.
 
 It also works when you update the object:
 
-```objc
+
+{% highlight objc lineanchors %}
 let todo = ... //todo chosen by user to be updated
 todo.title = "Get more milk!"
 //notice we don't need to pass the channel again - we only do so on object creation
 todo.saveWithCompletionBlock { error in
 	//handle error
 }
-```
+{% endhighlight %}
 
 Or when you delete it:
 
-```objc
+{% highlight objc lineanchors %}
 let todo = ... //todo chosen by user to be deleted
 todo.deleteWithCompletion { error in
 	//handle error
 }
-```
+{% endhighlight %}
 
 As you can see, adding real-time features to your app requires you to add only a few extra lines of code. And, if you decide you don't need it after all, you can easily turn it off.
 

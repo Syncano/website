@@ -4,8 +4,8 @@ title: How can I use CodeBoxes?
 date: 2015-09-08 10:00:00
 author: jhishan
 categories: ['syncano']
-image: /public/blue-background.png
-share_image: /public/blue-background.png
+image: /assets/images/home-support-bg.png
+share_image: /public/codeboxes.png
 image_height: 450px
 summary: "You have some code that can be run in the cloud, which is great. Now, how can you use it? How does Syncano make this cloud code useful for you?"
 keywords: 'Syncano, CodeBox, code, run, backend, baas, nodejs, python, ruby'
