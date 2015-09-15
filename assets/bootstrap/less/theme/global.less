@@ -72,6 +72,7 @@ a:hover {
     background-color: white;
     z-index: 9999;
     list-style: none;
+    padding-left: 0;
     li {
       &:first-child a{
         border-top: 1px solid @gray-light;
@@ -87,6 +88,9 @@ a:hover {
         border-right: 1px solid @gray-light;
         padding: 10px;
         display: block;
+        &:hover {
+          color: @brand-primary;
+        }
       }
     }
   }
