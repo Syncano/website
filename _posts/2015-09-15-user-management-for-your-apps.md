@@ -46,7 +46,7 @@ I recommend two methods:
 
 Either way will look about the same. The code to add a user with the [Syncano JS library]() would look something like this
 
-```
+{% highlight javascript lineanchors %}
 var syncano = new Syncano({
   apiKey: API_KEY_WITH_ALLOW_USER_CREATE_FLAG,
   instance: INSTANCE_NAME
@@ -55,7 +55,7 @@ var syncano = new Syncano({
 syncano.user().add({username:'username', password:'password'}).then(function(res) {
 	//do something here
 });
-```
+{% endhighlight %}
 
 That will create the new `user` and `user_profile`, and the response payload will include the `user_key` for you to now authenticate that specific user.  Once that user is authenticated, and all calls have an `api_key` and `user_key`, only data that user has access to will be available.
 
@@ -75,7 +75,8 @@ Your application won't always need to create a new user, but instead only log th
 
 ####Username/Password
 Once a user has credentials, you can log them in using the `user/auth/` route
-```
+
+{% highlight javascript lineanchors %}
 var syncano = new Syncano({
   apiKey: API_KEY,
   instance: INSTANCE_NAME
@@ -84,12 +85,12 @@ var syncano = new Syncano({
 syncano().login({username:'username', password:'password'}).then(function(res) {
 	//do something here
 });
-```
+{% endhighlight %}
 
 ####Social Authentication
 Your user will first need to authenticate with either Facebook or Google-oAuth2, and then pass the authorization token to Syncano. If a user hasn't been created prior to the social login, it will automatically create a new user for you.
 
-```
+{% highlight javascript lineanchors %}
 var syncano = new Syncano({
   apiKey: API_KEY,
   instance: INSTANCE_NAME
@@ -98,7 +99,7 @@ var syncano = new Syncano({
 syncano().login({socialToken: BACKEND_PROVIDER_TOKEN, backend: backend_name}).then(function(res) {
 	//do something here
 });
-```
+{% endhighlight %}
 
 For additional reference and detail, please you can view our [User management documentation](http://docs.syncano.com/docs/user-management).
 
@@ -124,7 +125,7 @@ Here are some examples:
 
 Once you have created your new user, you can update the `user_profile`. If you ask for profile information during the signup process, it might look something like this in JavaScript:
 
-```
+{% highlight javascript lineanchors %}
 var syncano = new Syncano({
   apiKey: API_KEY_WITH_ALLOW_USER_CREATE_FLAG,
   instance: INSTANCE_NAME
@@ -140,7 +141,7 @@ syncano.user().add({username:'username', password:'password'}).then(function(res
 	instance.class('user_profile').dataobject(res.id).update({firstName: 'Kelly', lastName: 'Andrews'})
 });
 
-```
+{% endhighlight %}
 
 ##Go Forth and Make Users!
 Don't take my word for it -- go try it out. This is just an example. I'm sure you could come up with something better :)
