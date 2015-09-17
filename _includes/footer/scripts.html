@@ -6,10 +6,10 @@
 }}();
 </script>
 <script>
-function newsletterSubscribe() {
-  var subscribeEmail = document.getElementById('subscribeEmail').value;
-  var emailField = document.getElementById('subscribeEmail');
-  var success = document.getElementById('successful-subscribe');
+function newsletterSubscribeFooter() {
+  var emailField = document.getElementById('subscribeEmailFooter');
+  var subscribeEmail = emailField.value;
+  var success = document.getElementById('successful-subscribe-footer');
 
   if (subscribeEmail == null || subscribeEmail == "") {
     emailField.className = emailField.className + " has-error";
