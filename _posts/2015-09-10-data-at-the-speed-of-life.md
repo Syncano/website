@@ -34,7 +34,7 @@ Not to mention -- if your app is running in the environment that doesn't support
 
 That's why we want you to stop wasting your time on reimplementing the same “almost real-time” capabilities in every single one of your apps.
 
-When using Syncano, you have a great flexibility in creating your data structures (more on that [here](link to previous post on Classes)). Even better -- all that data can be easily synced between devices by using our Channels feature.
+When using Syncano, you have a great flexibility in creating your data structures (more on that [here](https://www.syncano.io/data-data-everywhere/)). Even better -- all that data can be easily synced between devices by using our Channels feature.
 
 How does it work? It's really simple -- we'll use a Todo app as an example.
 
