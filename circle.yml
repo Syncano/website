@@ -1,6 +1,8 @@
 machine:
   ruby:
     version: 1.9.3-p448
+  node:
+    version: 0.12.7
 
 dependencies:
   override:
