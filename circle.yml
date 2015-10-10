@@ -6,7 +6,7 @@ dependencies:
   override:
     - bundle install
     - npm install
-    - npm install -g gatsby
+    - npm install -g syncano-gatsby
 
 test:
   override:
