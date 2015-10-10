@@ -4,7 +4,7 @@ layout: post
 title: Getting to Know JavaScript - An Intro
 date: 2015-01-23 11:21:29
 author: eric
-categories: ['Javascript', 'Tutorial']
+categories: ['Javascript', 'Tutorials']
 image: intro-javascript.jpg
 summary: "JavaScript is probably one of the oddest languages in history – partly because of its back story. It was introduced with two different design principles for two separate communities. As a result, it developed into two distinct sets of paradigms."
 ---

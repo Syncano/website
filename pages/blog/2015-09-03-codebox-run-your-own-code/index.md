@@ -35,11 +35,11 @@ Log in to our [Dashboard](https://dashboard.syncano.io), choose an instance (or 
 
 Start by selecting a runtime.
 
-![CodeBoxes](/public/blog/Add_codebox_01.png)
+![CodeBoxes](Add_codebox_01.png)
 
 Name your CodeBox, add a description (optional), and confirm.
 
-![New CodeBox](/public/blog/Add_codebox_02.png)
+![New CodeBox](Add_codebox_02.png)
 
 In the example above, we named our CodeBox `Hello World` and chose `python` runtime.
 
@@ -58,7 +58,7 @@ print "Hello {name}!".format(name=name)
 
 Then, save the changes, and run it.
 
-![Hello World](/public/blog/Add_codebox_03.png)
+![Hello World](Add_codebox_03.png)
 
 If you scroll down, you will see a payload (we will get back to that in a minute) and a console with the result of the last run. In our case, it shows `Hello !` printed out.
 

@@ -4,7 +4,7 @@ layout: post
 title: 'Intro to Flask Pt. 2: Creating and Writing to Databases'
 date: 2014-12-16 11:21:29
 author: eric
-categories: ['Flask', 'How Tos', 'Python', 'Tutorial']
+categories: ['Flask', 'How Tos', 'Python', 'Tutorials']
 image: flask-databases.jpg
 summary: "This article is intended as a continuation of the introduction to Flask that appears in a previous post, found here. In this post, we will complete our understanding of Flask as a model view controller by showing how to add the “model” piece. The model of an MVC is the database connections that tell the application how to save persistent data. Typically, in MVC’s you don’t actually write a SQL scheme but rather interact with the database through an object relational model (aka ORM)."
 ---

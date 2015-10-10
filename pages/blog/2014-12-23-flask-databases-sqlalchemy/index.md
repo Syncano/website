@@ -4,7 +4,7 @@ layout: post
 title: 'Flask Databases: Object Relational Models with SQLAlchemy'
 date: 2014-12-23 11:21:29
 author: eric
-categories: ['Flask', 'Python', 'Tutorial']
+categories: ['Flask', 'Python', 'Tutorials']
 image: flask-pt-3-databases-mvc.jpg
 summary: "Last week, I demonstrated some strengths and weaknesses of using SQL. Now, I’m going to show you how a really great ORM like SQLAlchemy is far better in most cases."
 ---

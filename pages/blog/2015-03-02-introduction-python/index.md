@@ -4,7 +4,7 @@ layout: post
 title: Introduction to Python
 date: 2015-03-02 11:21:29
 author: eric
-categories: ['Python', 'Tutorial']
+categories: ['Python', 'Tutorials']
 image: Intro-to-Python.png
 summary: "I’ve been trying to learn how to program since I was ten years old. I tried many times – mostly because my dad is a developer and wanted to share the thing he loves – but Java, C, and C++ always looked scary. I couldn’t really get into it. There was too much I had to understand. Just getting started felt hard.
 And then came Python, with it’s obvious conventions and simple syntax. For the first time in my life, I thought I could write code. Even more than that, I wanted to write code. I hope that by the end of this post, you’ll share my love of Python (or at least begin to understand why I love it as much as I do)."

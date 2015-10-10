@@ -71,7 +71,7 @@ export default React.createClass({
     let categoryUrl = `/category/${categoryName}/`;
 
     return (
-      <li><Link to={categoryUrl}>{category}</Link></li>
+      <li><Link to={categoryUrl} style={{borderBottom: 0}}>{category}</Link></li>
     )
   },
 
@@ -106,7 +106,7 @@ export default React.createClass({
           <div className="collapse navbar-collapse" id="navbar-collapse-2" aria-expanded="false">
             <ul className="nav navbar-nav">
               <li><Link to="blog-template">All</Link></li>
-              {this.renderCategoryLink('tutorial')}
+              {this.renderCategoryLink('tutorials')}
               <li className="dropdown-toggle visible-lg">
                 <a href="#">Browse Categories <span className="caret"></span></a>
                 <ul className="dropdown-menu">

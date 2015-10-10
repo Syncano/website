@@ -48,7 +48,7 @@ Here, we'll show you how quickly you can set up Channels usage for your app.
 * Create a new Channel
 * Name it (e.g., `todo-list`) and set `Other permissions` to subscribe
 
-![Adding new channel](/public/blog/Add_channel_01.png)
+![Adding new channel](Add_channel_01.png)
 
 Now, we will move to coding. As an example, we're going to use Swift.
 

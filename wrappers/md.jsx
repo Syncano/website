@@ -47,7 +47,7 @@ export default Radium(React.createClass({
     return (
       <div style={{marginBottom: 70}}>
         <Helmet title={post.title}/>
-        <div className="post-header image" style={[post.image && this.getStyles().header]}>
+        <div className="post-header image">
           <div className="next pull-right hidden "><a href=""><img src={require('../images/next-arrow.png')}/></a></div>
           <div className="container">
             <div className="row">

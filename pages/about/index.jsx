@@ -15,7 +15,7 @@ export default React.createClass({
     require('../../node_modules/owl-carousel-2/owl.carousel.min');
     require('../../node_modules/owl-carousel-2/assets/owl.carousel.min.css');
 
-    setTimeout(() => {
+    $(window).load(() => {
       $('.owl-carousel').owlCarousel({
         loop: true,
         autoplay:true,
@@ -34,7 +34,7 @@ export default React.createClass({
           }
         }
       });
-    }, 100);
+    });
   },
 
   render() {

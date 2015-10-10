@@ -4,7 +4,7 @@ layout: post
 title: Intro to Express.js
 date: 2015-03-13 11:21:29
 author: eric
-categories: ['Javascript', 'Tutorial']
+categories: ['Javascript', 'Tutorials']
 image: intro-express-js-node-js.png
 summary: "Express.js is a web framework for the middleware of your Node.js application. It’s responsible for passing data from the backend to the front-end and vice versa. For those of you coming from Ruby, express is similar to Sinatra; for those of you coming from Python, it is similar to Flask."
 ---

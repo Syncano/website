@@ -15,7 +15,8 @@ seo_description: "users, user management, social authentication, user profiles, 
 
 Next to data, users are the other most important part of your app’s success. The goal of most applications is to get users to sign up and log in, with a few exceptions. Syncano has user authentication built in and ready to go with no setup required, or you can expand the functionality to any user experience you want.
 
-##The User Model
+## The User Model
+
 There are two parts to every user that make up its full profile.
 
 + User Object -- holds the username, password, and group association of each user.
@@ -25,9 +26,9 @@ By default, the user profile class is bare bones but, just like any class, you c
 
 These two parts, together, make up the entire view of an individual user. When you create a new `user`, a data object in `user_profile` is automatically created for you.
 
-###Creating New Users
+### Creating New Users
 
-####In The Dashboard
+#### In The Dashboard
 You can easily create a new user with the Syncano Dashboard.
 
 1. Log into your Syncano Dashboard and select your Instance
@@ -37,7 +38,7 @@ You can easily create a new user with the Syncano Dashboard.
 
 This builds a new `user` and `user_profile` object for you. However, this isn't how you will typically be creating users, since your application's interface would be doing this for you.
 
-####With Your Application
+#### With Your Application
 In order to create new users with your application, you need the permissions to set up new users. You could certainly do this with your account key, but that's not a good approach for security reasons.
 
 I recommend two methods:
@@ -60,7 +61,7 @@ syncano.user().add({username:'username', password:'password'}).then(function(res
 
 That will create the new `user` and `user_profile`, and the response payload will include the `user_key` for you to now authenticate that specific user.  Once that user is authenticated, and all calls have an `api_key` and `user_key`, only data that user has access to will be available.
 
-####User Permissions
+#### User Permissions
 The user has rights to every data object that allows `read`, `write`, or `full` permissions for the following:
 
 + `Owner` -- if the user created the data object
@@ -68,13 +69,13 @@ The user has rights to every data object that allows `read`, `write`, or `full` 
 
 You can read more about the specific permissions [in our docs](http://docs.syncano.com/docs/permissions).
 
-####Group Permissions
+#### Group Permissions
 A user can also belong to a group -- or a collection of users.  This allows you to really fine tune your permission model. Each data object also has a `group` permission set.  I'm not going to go into groups too much this time, but you can read more about groups [in our docs](http://docs.syncano.com/docs/groups) as well.
 
-###Logging In Users
+### Logging In Users
 Your application won't always need to create a new user, but instead only log them in -- or, even better, let them log in with a social account like Facebook or Google+.
 
-####Username/Password
+#### Username/Password
 Once a user has credentials, you can log them in using the `user/auth/` route
  
 ```javascript
@@ -88,7 +89,7 @@ syncano().login({username:'username', password:'password'}).then(function(res) {
 });
 ```
 
-####Social Authentication
+#### Social Authentication
 Your user will first need to authenticate with either Facebook or Google-oAuth2, and then pass the authorization token to Syncano. If a user hasn't been created prior to the social login, it will automatically create a new user for you.
 
 ```javascript
@@ -104,10 +105,10 @@ syncano().login({socialToken: BACKEND_PROVIDER_TOKEN, backend: backend_name}).th
 
 For additional reference and detail, please you can view our [User management documentation](http://docs.syncano.com/docs/user-management).
 
-###Updating Profiles
+### Updating Profiles
 The last item for this post is the `user_profile`. I mentioned earlier that the default profile doesn't have much to it. That's because no one at Syncano knows exactly what you want to include, and instead of forcing you to follow what we set up, we let you manage the requirements.
 
-####Adding Fields
+#### Adding Fields
 You add new `user_profile` fields like you would any other class.  Let's walk through one.
 
 1. Log into your Syncano Dashboard and click on your Instance
@@ -144,7 +145,7 @@ syncano.user().add({username:'username', password:'password'}).then(function(res
 
 ```
 
-##Go Forth and Make Users!
+## Go Forth and Make Users!
 Don't take my word for it -- go try it out. This is just an example. I'm sure you could come up with something better :)
 
 Let me know what you come up with, or shoot me a tweet [@kellyjandrews](https://twitter.com/kellyjandrews) -- I look forward to hearing from you!

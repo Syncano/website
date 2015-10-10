@@ -154,9 +154,7 @@ export default React.createClass({
                     I have a question that’s not answered here.
                   </div>
                   <div className="pricing-faq__item__text">
-                    No problem! Simply send an email to
-                    <a href="mailto:payments@syncano.com" target="_blank">payments@syncano.com</a> and one of our
-                    engineers will get back to you shortly!
+                    No problem! Simply send an email to <a href="mailto:payments@syncano.com" target="_blank">payments@syncano.com</a> and one of our engineers will get back to you shortly!
                   </div>
                 </div>
               </div>

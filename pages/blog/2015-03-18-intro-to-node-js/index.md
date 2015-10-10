@@ -4,7 +4,7 @@ layout: post
 title: Intro to Node.js
 date: 2015-03-18 11:21:29
 author: eric
-categories: ['Javascript', 'Tutorial']
+categories: ['Javascript', 'Tutorials']
 image: intro-node-js.png
 summary: "Node.js is an engine for running javascript locally and it is a library for doing server-side web development. In short, it is a development platform for JS on the server."
 ---

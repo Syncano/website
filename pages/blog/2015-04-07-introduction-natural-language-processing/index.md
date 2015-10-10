@@ -4,7 +4,7 @@ layout: post
 title: An Introduction to Natural Language Processing
 date: 2015-04-07 11:21:29
 author: eric
-categories: ['Tutorial']
+categories: ['Tutorials']
 image: natural-language-tag-cloud.png
 keywords: 'natural language processing'
 seo_description: "Natural language processing (NLP) is the study of translation of human language into something a computer can understand and manipulate."

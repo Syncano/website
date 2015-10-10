@@ -4,7 +4,7 @@ layout: post
 title: Introduction to Flask as a Micro-framework
 date: 2014-12-09 11:21:29
 author: eric
-categories: ['Flask', 'How Tos', 'Python', 'Tutorial']
+categories: ['Flask', 'How Tos', 'Python', 'Tutorials']
 image: intro-to-flask-pt-1.jpg
 summary: "For those of you who are not familar with it, Flask is a web development framework written in Python. To understand how to use Flask, let’s first consider the definition of a framework."
 ---

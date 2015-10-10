@@ -6,7 +6,7 @@ permalink: /solutions/
 body_class: ['solutions']
 ---
 
-<div class="solutions">
+<div class="solutions" style="background: #fafafa">
 <div class="hero">
 <div class="container">
 <div class="info support-hero-links">
@@ -15,7 +15,7 @@ community.</h1>
 </div>
 </div>
 </div>
-<div class="container solution">
+<div class="container solution" style="padding-top: 40px">
 <div class="row">
 <div class="col-md-4 item-8">
 <div class="solutions-item">

@@ -4,7 +4,7 @@ layout: post
 title: Getting Started With Docker
 date: 2014-10-17 11:21:29
 author: justyna
-categories: ['Docker', 'How Tos', 'Tutorial']
+categories: ['Docker', 'How Tos', 'Tutorials']
 image: getting-started-docker.png
 summary: "Since we started using Docker here at Syncano, we’ve become avid fans. Here’s some of our best knowledge on getting started with it. If you’re not sure about what Docker is or whether you should use it, check out the last post in this series."
 ---
