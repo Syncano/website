@@ -1,6 +1,5 @@
-'use strict';
-
 import React from 'react';
+
 /**
  * http://owlgraphic.com/owlcarousel/demos/one.html
  *
@@ -64,7 +63,6 @@ import React from 'react';
  *		stop()
  */
 
-require('../node_modules/owlcarousel-pre/owl-carousel/owl.carousel.min.js');
 require('../node_modules/owlcarousel-pre/owl-carousel/owl.carousel.css');
 
 export default React.createClass({
