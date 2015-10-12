@@ -1,7 +1,7 @@
 export default {
   sara: {
     name: 'Sara Cowie',
-    twitter: 'sara',
+    twitter: 'saracowie',
     photo: 'sara.png'
   },
   mariusz: {
@@ -26,7 +26,7 @@ export default {
   },
   eric: {
     name: 'Eric Schles',
-    twitter: 'eric',
+    twitter: 'EricSchles',
     photo: 'eric.png'
   },
   resham: {
@@ -35,12 +35,12 @@ export default {
   },
   justyna: {
     name: 'Justyna Ilczuk',
-    twitter: 'justyna',
+    twitter: 'attilczuk',
     photo: 'justyna.png'
   },
   marek: {
     name: 'Marek Pełka',
-    twitter: 'marek',
+    twitter: 'marekpelka',
     photo: 'marek.png'
   },
   madeleine: {
@@ -53,12 +53,11 @@ export default {
   },
   maciej: {
     name: 'Maciej Kucharz',
-    twitter: 'maciej',
+    twitter: 'mkucharz',
     photo: 'maciej.png'
   },
   nikolai: {
     name: 'Nikolai Fasting',
-    twitter: 'nikolai',
     photo: 'nikolai.png'
   }
 }

@@ -31,6 +31,17 @@ export default Radium(React.createClass({
     )
   },
 
+  renderTwitterAuthorLink() {
+    let post = this.props.page.data;
+    let author = Team[post.author];
+
+    if (!author.twitter) {
+      return null
+    }
+
+    return <h5><a href={`http://twitter.com/${author.twitter}`} target="_blank">@{author.twitter}</a></h5>;
+  },
+
   render() {
     let post = this.props.page.data;
     let author = Team[post.author];
@@ -65,7 +76,7 @@ export default Radium(React.createClass({
                     <img src={`/about/${author.photo}`} alt={author.name} height="60" width="auto" />
                   </div>
                   <h5>By {author.name}</h5>
-                  <h5><a href={`http://twitter.com/${author.twitter}`} target="_blank">@{author.twitter}</a></h5>
+                  {this.renderTwitterAuthorLink()}
                 </div>
               </div>
             </div>
