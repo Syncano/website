@@ -15,25 +15,33 @@ export default React.createClass({
     require('../../node_modules/owl-carousel-2/owl.carousel.min');
     require('../../node_modules/owl-carousel-2/assets/owl.carousel.min.css');
 
+    if (document.readyState === 'complete') {
+      this.runCarousel();
+    }
+
     $(window).load(() => {
-      $('.owl-carousel').owlCarousel({
-        loop: true,
-        autoplay:true,
-        autoplayTimeout:2000,
-        autoplayHoverPause:true,
-        center: true,
-        responsive: {
-          0: {
-            items: 1,
-            autoHeight: true
-          },
-          480: {
-            autoHeight: false,
-            items: 6,
-            autoWidth: true
-          }
+      this.runCarousel();
+    });
+  },
+
+  runCarousel() {
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      autoplay:true,
+      autoplayTimeout:2000,
+      autoplayHoverPause:true,
+      center: true,
+      responsive: {
+        0: {
+          items: 1,
+          autoHeight: true
+        },
+        480: {
+          autoHeight: false,
+          items: 6,
+          autoWidth: true
         }
-      });
+      }
     });
   },
 
@@ -56,7 +64,7 @@ export default React.createClass({
             </div>
           </div>
         </div>
-        <div className="locations">
+        <div className="locations" style={{textAlign: 'center'}}>
           <img src="map.png" alt="syncano office locations" />
         </div>
         <div className="owl-carousel about-us-carousel">
