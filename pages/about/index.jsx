@@ -1,6 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
+import OwlCarousel from '../../components/OwlCarousel';
+
 export default React.createClass({
 
   getSEOConfig() {
@@ -9,40 +11,6 @@ export default React.createClass({
       description: "Syncano was created to help developers build, test, and ship amazing experiences on more devices, in less time, and with fewer resources.",
       keywords: "syncano team, syncano jobs, syncano careers, syncano board, about syncano, syncano location, syncano office"
     }
-  },
-
-  componentDidMount() {
-    require('../../node_modules/owl-carousel-2/owl.carousel.min');
-    require('../../node_modules/owl-carousel-2/assets/owl.carousel.min.css');
-
-    if (document.readyState === 'complete') {
-      this.runCarousel();
-    }
-
-    $(window).load(() => {
-      this.runCarousel();
-    });
-  },
-
-  runCarousel() {
-    $('.owl-carousel').owlCarousel({
-      loop: true,
-      autoplay:true,
-      autoplayTimeout:2000,
-      autoplayHoverPause:true,
-      center: true,
-      responsive: {
-        0: {
-          items: 1,
-          autoHeight: true
-        },
-        480: {
-          autoHeight: false,
-          items: 6,
-          autoWidth: true
-        }
-      }
-    });
   },
 
   render() {
@@ -67,53 +35,23 @@ export default React.createClass({
         <div className="locations" style={{textAlign: 'center'}}>
           <img src="map.png" alt="syncano office locations" />
         </div>
-        <div className="owl-carousel about-us-carousel">
-          <div className="about-us-carousel__item">
-              <img src={require('../../images/carousel/1.jpg')} alt="image 1"/>
-          </div>
-          <div className="about-us-carousel__item">
-              <img src={require('../../images/carousel/2.jpg')} alt="image 2"/>
-          </div>
-          <div className="about-us-carousel__item">
-              <img src={require('../../images/carousel/3.jpg')} alt="image 3"/>
-          </div>
-          <div className="about-us-carousel__item">
-              <img src={require('../../images/carousel/4.jpg')} alt="image 4"/>
-          </div>
-          <div className="about-us-carousel__item">
-              <img src={require('../../images/carousel/5.jpg')} alt="image 5"/>
-          </div>
-          <div className="about-us-carousel__item">
-              <img src={require('../../images/carousel/6.jpg')} alt="image 6"/>
-          </div>
-          <div className="about-us-carousel__item">
-              <img src={require('../../images/carousel/7.jpg')} alt="image 7"/>
-          </div>
-          <div className="about-us-carousel__item">
-              <img src={require('../../images/carousel/8.jpg')} alt="image 8"/>
-          </div>
-          <div className="about-us-carousel__item">
-              <img src={require('../../images/carousel/9.jpg')} alt="image 9"/>
-          </div>
-          <div className="about-us-carousel__item">
-              <img src={require('../../images/carousel/10.jpg')} alt="image 10"/>
-          </div>
-          <div className="about-us-carousel__item">
-              <img src={require('../../images/carousel/11.jpg')} alt="image 11"/>
-          </div>
-          <div className="about-us-carousel__item">
-              <img src={require('../../images/carousel/12.jpg')} alt="image 12"/>
-          </div>
-          <div className="about-us-carousel__item">
-              <img src={require('../../images/carousel/13.jpg')} alt="image 13"/>
-          </div>
-          <div className="about-us-carousel__item">
-              <img src={require('../../images/carousel/14.jpg')} alt="image 14"/>
-          </div>
-          <div className="about-us-carousel__item">
-              <img src={require('../../images/carousel/15.jpg')} alt="image 15"/>
-          </div>
-        </div>
+        <OwlCarousel ref="car">
+          <div className="about-us-carousel__item"><img src={require('../../images/carousel/1.jpg')} alt="image 1"/></div>
+          <div className="about-us-carousel__item"><img src={require('../../images/carousel/2.jpg')} alt="image 2"/></div>
+          <div className="about-us-carousel__item"><img src={require('../../images/carousel/3.jpg')} alt="image 3"/></div>
+          <div className="about-us-carousel__item"><img src={require('../../images/carousel/4.jpg')} alt="image 4"/></div>
+          <div className="about-us-carousel__item"><img src={require('../../images/carousel/5.jpg')} alt="image 5"/></div>
+          <div className="about-us-carousel__item"><img src={require('../../images/carousel/6.jpg')} alt="image 6"/></div>
+          <div className="about-us-carousel__item"><img src={require('../../images/carousel/7.jpg')} alt="image 7"/></div>
+          <div className="about-us-carousel__item"><img src={require('../../images/carousel/8.jpg')} alt="image 8"/></div>
+          <div className="about-us-carousel__item"><img src={require('../../images/carousel/9.jpg')} alt="image 9"/></div>
+          <div className="about-us-carousel__item"><img src={require('../../images/carousel/10.jpg')} alt="image 10"/></div>
+          <div className="about-us-carousel__item"><img src={require('../../images/carousel/11.jpg')} alt="image 11"/></div>
+          <div className="about-us-carousel__item"><img src={require('../../images/carousel/12.jpg')} alt="image 12"/></div>
+          <div className="about-us-carousel__item"><img src={require('../../images/carousel/13.jpg')} alt="image 13"/></div>
+          <div className="about-us-carousel__item"><img src={require('../../images/carousel/14.jpg')} alt="image 14"/></div>
+          <div className="about-us-carousel__item"><img src={require('../../images/carousel/15.jpg')} alt="image 15"/></div>
+        </OwlCarousel>
 
         <div className="team">
           <div className="container">
