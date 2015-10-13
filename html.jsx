@@ -1,5 +1,6 @@
 import React from 'react';
 import Analytics from './components/Analytics';
+import config from './config'
 
 export default React.createClass({
   getDefaultProps() {
@@ -22,7 +23,7 @@ export default React.createClass({
       </head>
       <body>
       <div id="react-mount" dangerouslySetInnerHTML={{__html: this.props.body}}></div>
-      <Analytics writeKey="huLqAgfVwOWUuWKdMtkK8kyfLhAtLYF1"/>
+      <Analytics writeKey={config.analytics_key}/>
       <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
       <script src="/bundle.js"></script>
       <script type="text/javascript" src="//magnetic.t.domdex.com/23448/pix.js?t=r&for=syncano"></script><noscript><img src="//magnetic.t.domdex.com/23448/pix.gif?t=r&for=syncano" width="1" height="1" style={{display: 'none'}}/></noscript>
