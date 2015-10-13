@@ -23,5 +23,5 @@ deployment:
   staging:
     branch: devel
     commands:
-      - gatsby build
+      - NODE_ENV=staging gatsby build
       - s3_website push --config-dir=./config/staging/
