@@ -138,7 +138,7 @@ syncano.user().add({username:'username', password:'password'}).then(function(res
 	  userKey: res.user_key
 	});
 
-	instance.class('user_profile').dataobject(res.id).update({firstName: 'Kelly', lastName: 'Andrews'})
+	instance.class('user_profile').dataobject(res.profile.id).update({firstName: 'Kelly', lastName: 'Andrews'})
 });
 
 {% endhighlight %}
