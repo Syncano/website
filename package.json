@@ -21,7 +21,6 @@
     "lodash": "^3.10.0",
     "moment": "^2.10.6",
     "owl-carousel-2": "0.0.3",
-    "owlcarousel-pre": "^1.3.3",
     "radium": "^0.14.1",
     "react": "^0.13.3",
     "react-bootstrap": "^0.25.2",
