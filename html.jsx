@@ -1,6 +1,6 @@
 import React from 'react';
 import Analytics from './components/Analytics';
-import config from './config'
+import config from './config/';
 
 export default React.createClass({
   getDefaultProps() {
