@@ -12,7 +12,7 @@ export default React.createClass({
   getSEOConfig() {
     return {
       title: "Turning developers into superstars",
-      description: "Syncano is a backend platform to build powerful real-time apps more efficiently.  Integrate with any API, minimize boilerplate code and control your data.",
+      description: "Syncano is a backend platform to build powerful real-time apps more efficiently. Integrate with any API, minimize boilerplate code and control your data.",
       keywords: "real-time apps, real-time app, front-end code"
     }
   },
@@ -44,7 +44,7 @@ export default React.createClass({
             <div className="container">
               <div className="info">
                 <h1>Turning developers into superstars</h1>
-                <h2>Build real-time synchronized apps - Connect to data anywhere, anytime.</h2>
+                <h2>A backend platform to build powerful real-time apps more efficiently</h2>
                 <a href="https://dashboard.syncano.io/#/signup" className="btn btn-dark-blue cta-button mixpanel-btn" id="homepage-hero" style={{marginBottom: 0}}>START BUILDING FOR FREE</a>
               </div>
             </div>
