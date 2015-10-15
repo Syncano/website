@@ -50,11 +50,35 @@ export default React.createClass({
             </div>
           </div>
         </div>
-        <div className="platforms">
+        <div className="highlights" style={{paddingTop: 120}}>
           <div className="container">
             <div className="row text-center">
-              <h2>Your Data. Your Platform. Your Apps.</h2>
-              <h5>Get the data you need. Use the development environment of your choice and <br/>leverage our open source libraries to create your app in minutes.</h5>
+              <div className="col-md-4 col-sm-4">
+                <div className="">
+                  <h3>Take Control of Your Data</h3>
+                  <p>With CodeBox, run any code in the cloud with cron-like Schedules, Webhooks, or triggered by any kind of data change.</p>
+                </div>
+              </div>
+              <div className="col-md-4 col-sm-4">
+                <div className="">
+                  <h3>Create complex data structures. Add real-time communication.</h3>
+                  <p>Define your data the way you want it. Query your data. Connect your Data Objects to Channels to get real-time updates.</p>
+                </div>
+              </div>
+              <div className="col-md-4 col-sm-4">
+                <div className="">
+                  <h3>Integrate with any API</h3>
+                  <p>Minimize boilerplate code. Easily install code blocks and reuse them across all of your apps with Solutions. Share amongst the community.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="platforms" style={{paddingTop: 60, paddingBottom: 150}}>
+          <div className="container">
+            <div className="row text-center">
+              <h2>Build with your library of choice</h2>
+              <h5>We’re Open Source! Help contribute to our code</h5>
               <div className="col-md-1 hidden-md"></div>
               <div className="col-md-1 hidden-md"></div>
               <div className="col-md-1 hidden-md"></div>
@@ -68,34 +92,8 @@ export default React.createClass({
             </div>
           </div>
         </div>
-        <div className="highlights">
-          <div className="container">
-            <div className="row text-center">
-              <div className="col-md-4 col-sm-4">
-                <div className="">
-                  <h3>Take Control of Your Data</h3>
-                  <p>Syncano scales and syncs your data across devices in real-time. Get your data when you need it, where you need it, in the form you need it.</p>
-                </div>
-              </div>
-              <div className="col-md-4 col-sm-4">
-                <div className="">
-                  <h3>Build Your App Your Way</h3>
-                  <p>Syncano gives you the flexibility to run your code and define your data structures the way you want to - so you can focus on building powerful user experiences.</p>
-                </div>
-              </div>
-              <div className="col-md-4 col-sm-4">
-                <div className="">
-                  <h3>Join the Community</h3>
-                  <p>Syncano introduces Solutions, a marketplace that speeds up development, fosters collaboration among developers, and fuels creativity.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      
-        <div className="testimonials">
+        <div className="testimonials" style={{background: '#fff'}}>
           <div className="container-fluid" id="testimonials">
-      
             <div className="row">
               <div className="col-md-6 col-sm-6 image">
                 <img src={require('../images/hally.png')} alt="Hally Knutsen"/>
@@ -143,85 +141,49 @@ export default React.createClass({
       
           </div>
         </div>
-        <div className="build text-center">
-          <h2>Build true real-time apps in minutes. <br/>Exchange and synchronize your data blazingly fast.</h2>
-          <p>Easily send and receive data between users without delay with just a few lines of code. <br/>Use channels to broadcast and listen for messages.</p>
-        </div>
         <div className="data">
           <div className="container">
-            <h2 className="text-center">Control your data.</h2>
-            <h5 className="text-center">Store, manage, and synchronize data anywhere, anytime, in any form.</h5>
+            <h2 className="text-center">Define your data schema based on your apps’ needs</h2>
+            <h5 className="text-center">Build complex data structures</h5>
             <div className="row">
               <div className="col-md-4 col-md-offset-2 text-center">
                 <div>
                   <img src={require('../images/dashboard.png')} height="55"/>
                 </div>
                 <h3>Manage your own dashboard</h3>
-                <p>Upload, download, manage and sync data <br/>visually with your own Dashboard.</p>
+                <p>Create new objects in the Syncano dashboard<br/>or add them with code</p>
               </div>
               <div className="col-md-4 text-center">
                 <div>
                   <img src={require('../images/nosql.png')} height="55"/>
                 </div>
-                <h3>NoSQL database and file storage</h3>
-                <p>NoSQL database and file storage included. Define and create relations, store files, and update your structure based on your needs.</p>
+                <h3>NoSQL-like Database</h3>
+                <p>Gives you the flexibility to create sophisticated data relations</p>
               </div>
             </div>
           </div>
         </div>
-        <div className="bugs">
-          <div className="container">
-            <h2 className="text-center">Don't spend another minute on bugs, migration, <br/>load balancing or other backend issues.</h2>
-            <div className="row">
-              <div className="col-md-4 col-md-offset-2 text-center">
-                <h3>Replace your backend</h3>
-                <p>Use Syncano's API calls instead and focus on <br/>the user experience.</p>
-              </div>
-              <div className="col-md-4 text-center">
-                <h3>Deploy anywhere</h3>
-                <p>Deploy anywhere: mobile, web, server, and <br/>desktop. Use our REST HTTP API or one of <br/>our native libraries for JavaScript, Python, <br/>iOS, Android, and .Net.</p>
-              </div>
-            </div>
-          </div>
+        <div className="build text-center">
+          <h2>Add real-time communication with Channels</h2>
+          <br/>
+          <p>Subscribe to data changes, send custom notification messages, give users different permission types.<br/>Use Rooms to separate real-time data inside a Channel.</p>
         </div>
-      
         <div className="middleware text-center">
           <div className="container">
-            <h2>No middleware required!</h2>
-            <p>With CodeBox<sup>TM</sup>, create and run any code, whether it's your own or a third-party's. Build complex <br/>logic into your app. Process data on the fly. Integrate with anything.</p>
-            <p><strong>We support Javascript, Python, GO and Ruby</strong></p>
+            <h2>Build and add microservice-like functionality into your app without setting up a server or building out a custom API.</h2>
+            <br/>
+            <p>With CodeBox, write and run any code on a Schedule, Trigger or with a Webhook.<br/>Execute code by a particular date you set, or once a change is made to your data.</p>
+            <p><strong>We currently support Javascript, Python, Go and Ruby.</strong></p>
             <p><img src={require('../images/middleware-support-icons.png')} width="288"/></p>
             <img src={require('../images/slider/slide3.png')} />
           </div>
           <div className="shadow"></div>
         </div>
-        <div className="showcase">
-          <div className="container text-center">
-            <h2>Build apps with secure, world-class authentication <br/>and access management.</h2>
-            <div className="col-md-4">
-              <img src={require('../images/authentication.png')} height="50"/>
-              <h3>User Authentication</h3>
-              <p>Authenticate your users using <br/>passwords or social media <br/>profiles.</p>
-            </div>
-            <div className="col-md-4">
-              <img src={require('../images/management.png')} height="50"/>
-              <h3>Access Management</h3>
-              <p>Create Users and Groups. User Profiles <br/>enable you to store any <br/>user data.</p>
-            </div>
-            <div className="col-md-4">
-              <img src={require('../images/security.png')} height="50"/>
-              <h3>Data Security</h3>
-              <p>Syncano is HIPAA compliant and <br/>Safe Harbor certified.</p>
-            </div>
-          </div>
-        </div>
-      
         <div className="solutions">
           <div className="container text-center">
-            <h2>Speed up your development process with Solutions.</h2>
-            <p>Create your own work, share it with others, and easily install it within your app. <br/>Simply enter our directory, find what you need and start building within seconds.</p>
+            <h2>Install code blocks to your apps with Solutions</h2>
+            <p>Stop wasting time on CRUD operations or creating code that's already been written.<br/>Simply enter our directory, find what you need, add it to any of your instances and start building within seconds.</p>
             <div className="row">
-      
               <div className="col-md-4 item-8">
                 <div className="solutions-item">
                   <div className="solutions-item-header">
@@ -239,28 +201,20 @@ export default React.createClass({
                         <i className="zmdi zmdi-label solutions-item__meta__icon solutions-item__meta__icon--tags"></i>
                       </div>
                       <div className="solutions-item__meta__section__column solutions-item__meta__section__column--flex">
-      
                         <ul>
-      
                           <li>python, </li>
-      
                           <li>image, </li>
-      
                           <li>qrcode</li>
-      
                         </ul>
-      
                       </div>
                     </div>
                     <div className="solutions-item__meta__section">
-      
                       <div className="solutions-item__meta__section__column">
                         <i className="zmdi zmdi-info-outline solutions-item__meta__icon solutions-item__meta__icon--version--stable"></i>
                       </div>
                       <div className="solutions-item__meta__section__column">
                         stable (2.2)
                       </div>
-      
                     </div>
                   </div>
                   <div className="solutions-item-footer text-center">
@@ -270,8 +224,6 @@ export default React.createClass({
                   </div>
                 </div>
               </div>
-      
-      
               <div className="col-md-4 item-9">
                 <div className="solutions-item">
                   <div className="solutions-item-header">
@@ -289,32 +241,22 @@ export default React.createClass({
                         <i className="zmdi zmdi-label solutions-item__meta__icon solutions-item__meta__icon--tags"></i>
                       </div>
                       <div className="solutions-item__meta__section__column solutions-item__meta__section__column--flex">
-      
                         <ul>
-      
                           <li>python, </li>
-      
                           <li>mms, </li>
-      
                           <li>sms, </li>
-      
                           <li>text, </li>
-      
                           <li>twilio</li>
-      
                         </ul>
-      
                       </div>
                     </div>
                     <div className="solutions-item__meta__section">
-      
                       <div className="solutions-item__meta__section__column">
                         <i className="zmdi zmdi-info-outline solutions-item__meta__icon solutions-item__meta__icon--version--stable"></i>
                       </div>
                       <div className="solutions-item__meta__section__column">
                         stable (1.0)
                       </div>
-      
                     </div>
                   </div>
                   <div className="solutions-item-footer text-center">
@@ -324,8 +266,6 @@ export default React.createClass({
                   </div>
                 </div>
               </div>
-      
-      
               <div className="col-md-4 item-10">
                 <div className="solutions-item">
                   <div className="solutions-item-header">
@@ -343,32 +283,22 @@ export default React.createClass({
                         <i className="zmdi zmdi-label solutions-item__meta__icon solutions-item__meta__icon--tags"></i>
                       </div>
                       <div className="solutions-item__meta__section__column solutions-item__meta__section__column--flex">
-      
                         <ul>
-      
                           <li>python, </li>
-      
                           <li>image, </li>
-      
                           <li>convert, </li>
-      
                           <li>mashape, </li>
-      
                           <li>pdf</li>
-      
                         </ul>
-      
                       </div>
                     </div>
                     <div className="solutions-item__meta__section">
-      
                       <div className="solutions-item__meta__section__column">
                         <i className="zmdi zmdi-info-outline solutions-item__meta__icon solutions-item__meta__icon--version--stable"></i>
                       </div>
                       <div className="solutions-item__meta__section__column">
                         stable (1.0)
                       </div>
-      
                     </div>
                   </div>
                   <div className="solutions-item-footer text-center">
@@ -378,16 +308,34 @@ export default React.createClass({
                   </div>
                 </div>
               </div>
-      
-      
             </div>
             <a href="/solutions/" className="btn btn-dark-blue">See more Solutions</a>
           </div>
         </div>
+        <div className="showcase">
+          <div className="container text-center">
+            <h2>Easily add user management & user permissions.<br/>Ensure your data is safe</h2>
+            <div className="col-md-4">
+              <img src={require('../images/authentication.png')} height="50"/>
+              <h3>User Authentication</h3>
+              <p>Authenticate your users using<br/>passwords or social media</p>
+            </div>
+            <div className="col-md-4">
+              <img src={require('../images/management.png')} height="50"/>
+              <h3>User Management</h3>
+              <p>Create Users and Groups. User Profiles<br/>enable you to store any user data</p>
+            </div>
+            <div className="col-md-4">
+              <img src={require('../images/security.png')} height="50"/>
+              <h3>Data Security</h3>
+              <p>Syncano is HIPAA compliant</p>
+            </div>
+          </div>
+        </div>
         <div className="support">
           <div className="container text-center">
-            <h2>Real support from real developers.</h2>
-            <p>It's never a straight path to building the next viral app. There are challanges to overcome, trails to be blazed.<br/>When you have questions, you'll get answers from our developers.</p>
+            <h2>Get real support from real developers</h2>
+            <p>We’re a small but growing team and your success is vital to our success.<br/>When you have questions, you’ll get answers from our own developers.</p>
             <a href="/support/" className="btn btn-white">Check out our support page</a>
           </div>
         </div>
@@ -395,7 +343,8 @@ export default React.createClass({
           <div className="container text-center">
             <div className="row">
               <div className="col-sm-12">
-                <h2>Ready?</h2>
+                <h2 className="text-center">Database. Backend. Middleware. Real-time. Microservices.<br/>All in one place</h2>
+                <br/><br/>
                 <a href="https://dashboard.syncano.io/#/signup" className="btn btn-dark-blue cta-button mixpanel-btn">START BUILDING FOR FREE</a>
               </div>
             </div>
