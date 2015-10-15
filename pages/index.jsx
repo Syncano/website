@@ -78,7 +78,7 @@ export default React.createClass({
           <div className="container">
             <div className="row text-center">
               <h2>Build with your library of choice</h2>
-              <h5>We’re Open Source! Help contribute to our code on a <a href="https://github.com/syncano" target="_blank">GitHub</a></h5>
+              <h5>We’re Open Source! Help contribute to our code on <a href="https://github.com/syncano" target="_blank">GitHub</a></h5>
               <div className="col-md-1 hidden-md"></div>
               <div className="col-md-1 hidden-md"></div>
               <div className="col-md-1 hidden-md"></div>
@@ -314,7 +314,7 @@ export default React.createClass({
         </div>
         <div className="showcase">
           <div className="container text-center">
-            <h2>Easily add user management & user permissions.<br/>Ensure your data is safe</h2>
+            <h2>Easily add <a href="http://docs.syncano.com/docs/user-management" target="_blank">user management</a> & <a href="http://docs.syncano.com/docs/permissions" target="_blank">user permissions</a>.<br/>Ensure your data is safe</h2>
             <div className="col-md-4">
               <img src={require('../images/authentication.png')} height="50"/>
               <h3>User Authentication</h3>
