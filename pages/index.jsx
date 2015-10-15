@@ -74,7 +74,7 @@ export default React.createClass({
             </div>
           </div>
         </div>
-        <div className="platforms" style={{paddingTop: 60, paddingBottom: 150}}>
+        <div className="platforms" style={{paddingTop: 120, paddingBottom: 120, background: '#F6F6F6'}}>
           <div className="container">
             <div className="row text-center">
               <h2>Build with your library of choice</h2>

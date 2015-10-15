@@ -123,7 +123,7 @@ export default React.createClass({
   renderFooter() {
     return (
       <div>
-        <footer className="columns" style={{marginTop: 0}}>
+        <footer className="columns" style={{marginTop: 0, paddingBottom: 50}}>
           <div className="container">
             <div className="row">
               <div className="col-md-2 col-sm-2 col-xs-12 logo">
@@ -157,8 +157,8 @@ export default React.createClass({
               <div className="col-md-3 col-sm-3 col-xs-12">
                 <h4>Latest Blog Posts</h4>
                 <ul>
-                  <li><Link to="/data-at-the-speed-of-life/">Data at the Speed of Life</Link></li>
-                  <li><Link to="/how-can-i-use-codeboxes/">How can I use CodeBoxes?</Link></li>
+                  <li><Link to="/syncano-is-going-places-literally/">Syncano Is Going Places, Literally</Link></li>
+                  <li><Link to="/user-management-for-your-apps/">User Management For Your Apps</Link></li>
                 </ul>
                 <Newsletter/>
               </div>
