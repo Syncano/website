@@ -99,26 +99,32 @@ export default React.createClass({
               <p><a href="http://docs.syncano.com/docs/faq/" target="_blank">More questions? Check out our FAQ</a></p>
               <br/>
               <div className="row">
-                <div className="col-md-6">
+                <div className="col-md-12">
                   <div className="contact">
                     <Scroll.Element name="support-contact-form">
                       <h4>Get support</h4>
                       <br/>
-                      <form action="//formspree.io/support@syncano.com" method="POST" name="contact" className="contact">
-                        <input type="hidden" name="_subject" value="Contact Form Submission from syncano.com" />
-                        <input type="text" name="_gotcha" style={{display: 'none'}} />
-                        <input type="hidden" name="_next" value="//syncano.com/thank-contacting-us" />
-                        <div className="form-group" id="name">
-                          <input className="form-control" type="text" name="name" placeholder="Name" required/>
+                      <p>You can always shoot us an email at <a href="mailto:support@syncano.com">support@syncano.com</a>,<br/>chat with us on <a href="https://gitter.im/Syncano/community" target="_blank">Gitter</a> or simply fill out the form below.</p>
+                      <br/><br/>
+                      <div className="row">
+                        <div className="col-md-6">
+                          <form action="//formspree.io/support@syncano.com" method="POST" name="contact" className="contact">
+                            <input type="hidden" name="_subject" value="Contact Form Submission from syncano.com" />
+                            <input type="text" name="_gotcha" style={{display: 'none'}} />
+                            <input type="hidden" name="_next" value="/thank-contacting-us/" />
+                            <div className="form-group" id="name">
+                              <input className="form-control" type="text" name="name" placeholder="Name" required/>
+                            </div>
+                            <div className="form-group" id="email">
+                              <input className="form-control" type="email" name="_replyto" placeholder="Email" required/>
+                            </div>
+                            <div className="form-group">
+                              <textarea className="form-control" rows="3" name="message" placeholder="Message"></textarea>
+                            </div>
+                            <input type="submit" value="Send" className="btn btn-dark-blue" />
+                          </form>
                         </div>
-                        <div className="form-group" id="email">
-                          <input className="form-control" type="email" name="_replyto" placeholder="Email" required/>
-                        </div>
-                        <div className="form-group">
-                          <textarea className="form-control" rows="3" name="message" placeholder="Message"></textarea>
-                        </div>
-                        <input type="submit" value="Send" className="btn btn-dark-blue" />
-                      </form>
+                      </div>
                     </Scroll.Element>
                   </div>
                 </div>
