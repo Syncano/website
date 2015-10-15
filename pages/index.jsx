@@ -67,7 +67,7 @@ export default React.createClass({
               </div>
               <div className="col-md-4 col-sm-4">
                 <div className="">
-                  <h3>Integrate with any API</h3>
+                  <h3>Integrate with any API.</h3>
                   <p>Minimize boilerplate code. Easily install code blocks and reuse them across all of your apps with <a href="http://docs.syncano.com/docs/solutions" target="_blank">Solutions</a>. Share amongst the community.</p>
                 </div>
               </div>
