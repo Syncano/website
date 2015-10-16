@@ -4,7 +4,7 @@ title: Syncano Is Going Places, Literally
 date: 2015-10-13 13:00:00
 author: kelly
 path: '/syncano-is-going-places-literally/'
-categories: ['syncano', 'community']
+categories: ['Syncano', 'Community']
 image: maps.jpg
 summary: "That is where the best conversations happen, and I truly enjoy talking to everyone I meet. The work being done for developers at a micro level is simply incredible and, if I can sponsor an event to help keep that going, that’s important to me -- and to all of us at Syncano...."
 ---
