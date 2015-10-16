@@ -107,7 +107,7 @@ export default React.createClass({
             <img src="billing.png" className="img-responsive pricing-explanation__image" />
             <div className="l-pricing-explanation-section__cta">
               <p className="pricing-explanation-section__cta__text">Try it out yourself with our plan explorer.</p>
-              <a href="https://dashboard.syncano.io/#/signup" className="btn btn-dark-blue cta-button" id="homepage-hero">Explore Pricing</a>
+              <a href="https://dashboard.syncano.io/#/account/plan" className="btn btn-dark-blue cta-button" id="homepage-hero">Explore Pricing</a>
             </div>
           </div>
         </div>
