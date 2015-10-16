@@ -1,5 +1,5 @@
 ---
-path: '/data-at-the-speed-of-life/'
+path: '/blog/data-at-the-speed-of-life/'
 layout: post
 title: Data at the Speed of Life
 date: 2015-09-10 10:00:00

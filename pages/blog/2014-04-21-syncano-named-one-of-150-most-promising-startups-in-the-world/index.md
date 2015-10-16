@@ -1,5 +1,5 @@
 ---
-path: '/syncano-named-one-of-150-most-promising-startups-in-the-world/'
+path: '/blog/syncano-named-one-of-150-most-promising-startups-in-the-world/'
 layout: post
 title: Syncano Named One of 150 Most Promising Startups in the World
 date: 2014-04-21 11:21:29

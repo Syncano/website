@@ -1,5 +1,5 @@
 ---
-path: '/5-second-screen-real-time-apps/'
+path: '/blog/5-second-screen-real-time-apps/'
 layout: post
 title: 5 Second Screen Apps You Should Know About
 date: 2014-07-24 11:21:29

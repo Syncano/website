@@ -1,5 +1,5 @@
 ---
-path: '/getting-started-reactjs-tutorial/'
+path: '/blog/getting-started-reactjs-tutorial/'
 layout: post
 title: 'Getting Started with React.js: Creating Material Design Components'
 date: 2014-09-19 11:21:29

@@ -1,5 +1,5 @@
 ---
-path: '/intro-to-node-js/'
+path: '/blog/intro-to-node-js/'
 layout: post
 title: Intro to Node.js
 date: 2015-03-18 11:21:29

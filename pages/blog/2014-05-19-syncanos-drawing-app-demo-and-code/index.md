@@ -1,5 +1,5 @@
 ---
-path: '/syncanos-drawing-app-demo-and-code/'
+path: '/blog/syncanos-drawing-app-demo-and-code/'
 layout: post
 title: Syncano's Drawing App - Demo and Code
 date: 2014-05-19 11:21:29

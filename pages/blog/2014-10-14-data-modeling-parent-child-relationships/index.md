@@ -1,5 +1,5 @@
 ---
-path: '/data-modeling-parent-child-relationships/'
+path: '/blog/data-modeling-parent-child-relationships/'
 layout: post
 title: 'Data Modeling: Parent-Child Relationships'
 date: 2014-10-14 11:21:29

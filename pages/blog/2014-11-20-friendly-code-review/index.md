@@ -1,5 +1,5 @@
 ---
-path: '/friendly-code-review/'
+path: '/blog/friendly-code-review/'
 layout: post
 title: How to Facilitate Friendlier Code Reviews
 date: 2014-11-20 11:21:29

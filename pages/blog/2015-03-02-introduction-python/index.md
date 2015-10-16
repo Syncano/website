@@ -1,5 +1,5 @@
 ---
-path: '/introduction-python/'
+path: '/blog/introduction-python/'
 layout: post
 title: Introduction to Python
 date: 2015-03-02 11:21:29

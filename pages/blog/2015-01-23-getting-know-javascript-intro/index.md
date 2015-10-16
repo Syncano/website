@@ -1,5 +1,5 @@
 ---
-path: '/getting-know-javascript-intro/'
+path: '/blog/getting-know-javascript-intro/'
 layout: post
 title: Getting to Know JavaScript - An Intro
 date: 2015-01-23 11:21:29

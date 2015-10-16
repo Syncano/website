@@ -3,7 +3,7 @@ layout: post
 title: User Management For Your Apps
 date: 2015-09-15 10:00:00
 author: kelly
-path: '/user-management-for-your-apps/'
+path: '/blog/user-management-for-your-apps/'
 categories: ['Syncano', 'User Management']
 image: Business-iPhone-User-600x400.jpg
 share_image: Business-iPhone-User-600x400.jpg

@@ -1,5 +1,5 @@
 ---
-path: '/intro-to-syncano/'
+path: '/blog/intro-to-syncano/'
 layout: post
 title: Intro to Syncano
 date: 2015-08-26 09:00:00

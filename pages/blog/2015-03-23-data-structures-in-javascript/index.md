@@ -1,5 +1,5 @@
 ---
-path: '/data-structures-in-javascript/'
+path: '/blog/data-structures-in-javascript/'
 layout: post
 title: Data Structures in JavaScript
 date: 2015-03-23 11:21:29

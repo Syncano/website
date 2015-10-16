@@ -1,5 +1,5 @@
 ---
-path: '/monitor-app-performance-crittercism/'
+path: '/blog/monitor-app-performance-crittercism/'
 layout: post
 title: How to Monitor Your App's Performance
 date: 2014-10-02 11:21:29

@@ -1,5 +1,5 @@
 ---
-path: '/intro-flask-pt-2-creating-writing-databases/'
+path: '/blog/intro-flask-pt-2-creating-writing-databases/'
 layout: post
 title: 'Intro to Flask Pt. 2: Creating and Writing to Databases'
 date: 2014-12-16 11:21:29

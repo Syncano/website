@@ -1,5 +1,5 @@
 ---
-path: '/why-your-content-should-display-everywhere-cross-device/'
+path: '/blog/why-your-content-should-display-everywhere-cross-device/'
 layout: post
 title: Why Your Content Should Display Everywhere (And How to Do It)
 date: 2014-08-11 11:21:29

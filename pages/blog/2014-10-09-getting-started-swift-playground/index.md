@@ -1,5 +1,5 @@
 ---
-path: '/getting-started-swift-playground/'
+path: '/blog/getting-started-swift-playground/'
 layout: post
 title: Getting Started with Swift Playground
 date: 2014-10-09 11:21:29

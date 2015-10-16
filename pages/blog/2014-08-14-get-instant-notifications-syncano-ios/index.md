@@ -1,5 +1,5 @@
 ---
-path: '/get-instant-notifications-syncano-ios/'
+path: '/blog/get-instant-notifications-syncano-ios/'
 layout: post
 title: How to Get Instant Notifications on iOS
 date: 2014-08-14 11:21:29

@@ -1,5 +1,5 @@
 ---
-path: '/Syncano-is-speaking-at-Music-City-of-Code/'
+path: '/blog/Syncano-is-speaking-at-Music-City-of-Code/'
 layout: post
 title: Syncano is speaking at Music of Code
 date: 2015-08-28 09:00:00

@@ -1,5 +1,5 @@
 ---
-path: '/every-backend-developer-should-focus-on-these-3-things/'
+path: '/blog/every-backend-developer-should-focus-on-these-3-things/'
 layout: post
 title: Every Backend Developer Should Focus on These 3 Things
 date: 2014-06-11 11:21:29

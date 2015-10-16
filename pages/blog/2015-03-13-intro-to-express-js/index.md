@@ -1,5 +1,5 @@
 ---
-path: '/intro-to-express-js/'
+path: '/blog/intro-to-express-js/'
 layout: post
 title: Intro to Express.js
 date: 2015-03-13 11:21:29

@@ -47,7 +47,7 @@ export default React.createClass({
     let pagesCount = _.ceil(postsCount / postsPerPage);
     let currentPage = this.props.currentPage;
 
-    if (pagesCount === 1) {
+    if (pagesCount <= 1) {
       return null;
     }
 

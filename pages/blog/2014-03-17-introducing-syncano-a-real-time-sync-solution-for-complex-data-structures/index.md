@@ -1,5 +1,5 @@
 ---
-path: '/introducing-syncano-a-real-time-sync-solution-for-complex-data-structures/'
+path: '/blog/introducing-syncano-a-real-time-sync-solution-for-complex-data-structures/'
 layout: post
 title: Introducing Syncano - A Real-Time Sync API and Storage Solution
 date: 2014-03-17 11:21:29

@@ -1,5 +1,5 @@
 ---
-path: '/web-summit-official-beta-startup/'
+path: '/blog/web-summit-official-beta-startup/'
 layout: post
 title: Syncano is an Official Web Summit Beta Startup
 date: 2014-11-04 11:21:29

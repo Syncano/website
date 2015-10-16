@@ -1,5 +1,5 @@
 ---
-path: '/codebox-run-your-own-code/'
+path: '/blog/codebox-run-your-own-code/'
 layout: post
 title: CodeBox - Run your own code
 date: 2015-09-03 10:00:00

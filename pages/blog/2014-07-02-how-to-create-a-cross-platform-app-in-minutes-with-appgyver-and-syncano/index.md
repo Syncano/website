@@ -1,5 +1,5 @@
 ---
-path: '/how-to-create-a-cross-platform-app-in-minutes-with-appgyver-and-syncano/'
+path: '/blog/how-to-create-a-cross-platform-app-in-minutes-with-appgyver-and-syncano/'
 layout: post
 title: How to Create a Cross-Platform App In Minutes with AppGyver and Syncano
 date: 2014-07-02 11:21:29

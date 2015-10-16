@@ -1,5 +1,5 @@
 ---
-path: '/our-top-takeaways-from-twilios-roadshow/'
+path: '/blog/our-top-takeaways-from-twilios-roadshow/'
 layout: post
 title: Our Top Takeaways from Twilio's Roadshow
 date: 2014-06-28 11:21:29

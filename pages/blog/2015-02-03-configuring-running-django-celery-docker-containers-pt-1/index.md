@@ -1,5 +1,5 @@
 ---
-path: '/configuring-running-django-celery-docker-containers-pt-1/'
+path: '/blog/configuring-running-django-celery-docker-containers-pt-1/'
 layout: post
 title: Configuring and Running Django and Celery in Docker Containers (pt. 1)
 date: 2015-02-03 11:21:29

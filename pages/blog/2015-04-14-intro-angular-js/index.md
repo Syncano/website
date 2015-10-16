@@ -1,5 +1,5 @@
 ---
-path: '/intro-angular-js/'
+path: '/blog/intro-angular-js/'
 layout: post
 title: Intro to Angular.js
 date: 2015-04-14 11:21:29

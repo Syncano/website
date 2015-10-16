@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import Team from '../pages/about/_TeamConstans';
 import { Link } from 'react-router';
 import Radium from 'radium';
+import SocialLinks from '../components/SocialLinks';
 
 import WhiteShare from '../images/white-share.png';
 
@@ -24,7 +25,7 @@ export default Radium(React.createClass({
 
   renderCategoryLink(category) {
     let categoryName = _.kebabCase(category);
-    let categoryUrl = `/category/${categoryName}/`;
+    let categoryUrl = `/blog/category/${categoryName}/`;
 
     return (
       <Link to={categoryUrl}>{category} </Link>
@@ -86,13 +87,7 @@ export default Radium(React.createClass({
           <div className="container">
             <div className="pull-right">
               <span className="icon" style={{backgroundImage: `url(${WhiteShare})`}}> </span>
-              <div className="links social-share">
-                <div className="arrow-up"></div>
-                <a className="fa fa-facebook" href={`https://www.facebook.com/sharer/sharer.php?u=http://www.syncano.com${post.path}`} target="_blank"> </a>
-                <a className="fa fa-twitter" href={`https://twitter.com/intent/tweet?text=${post.title}&url=http://www.syncano.com${post.path}`} target="_blank"> </a>
-                <a className="fa fa-google" href={`https://plus.google.com/share?url=http://www.syncano.com${post.path}`} target="_blank"> </a>
-                <a className="fa fa-pinterest" href={`http://pinterest.com/pin/create/button/?url=http://www.syncano.com${post.path}&description=${post.title}&media=${post.image}`} target="_blank"> </a>
-              </div>
+              <SocialLinks arrow="up" item={post} title={post.title} image={post.image}/>
             </div>
           </div>
         </div>

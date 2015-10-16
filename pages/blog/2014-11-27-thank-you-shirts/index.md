@@ -1,5 +1,5 @@
 ---
-path: '/thank-you-shirts/'
+path: '/blog/thank-you-shirts/'
 layout: post
 title: Thank You, Syncano Beta Users!
 date: 2014-11-27 11:21:29

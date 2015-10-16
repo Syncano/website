@@ -1,5 +1,5 @@
 ---
-path: '/how-to-create-push-notifications-with-syncano-on-osx/'
+path: '/blog/how-to-create-push-notifications-with-syncano-on-osx/'
 layout: post
 title: How to Create Push Notifications in Only 28 Lines of Code
 date: 2014-03-24 11:21:29

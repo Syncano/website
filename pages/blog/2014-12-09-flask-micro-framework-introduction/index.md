@@ -1,5 +1,5 @@
 ---
-path: '/flask-micro-framework-introduction/'
+path: '/blog/flask-micro-framework-introduction/'
 layout: post
 title: Introduction to Flask as a Micro-framework
 date: 2014-12-09 11:21:29

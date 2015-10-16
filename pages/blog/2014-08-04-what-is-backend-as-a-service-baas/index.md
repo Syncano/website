@@ -1,5 +1,5 @@
 ---
-path: '/what-is-backend-as-a-service-baas/'
+path: '/blog/what-is-backend-as-a-service-baas/'
 layout: post
 title: What is "Backend as a Service?"
 date: 2014-08-04 11:21:29

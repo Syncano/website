@@ -1,5 +1,5 @@
 ---
-path: '/2014-03-31-communication-distributed-team/'
+path: '/blog/2014-03-31-communication-distributed-team/'
 layout: post
 title: Bootstrapping Communication for a Distributed Team
 date: 2014-03-31 11:21:29

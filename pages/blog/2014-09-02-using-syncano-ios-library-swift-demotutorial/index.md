@@ -1,5 +1,5 @@
 ---
-path: '/using-syncano-ios-library-swift-demotutorial/'
+path: '/blog/using-syncano-ios-library-swift-demotutorial/'
 layout: post
 title: Using the Syncano iOS Library with Swift - Demo/Tutorial
 date: 2014-09-02 11:21:29

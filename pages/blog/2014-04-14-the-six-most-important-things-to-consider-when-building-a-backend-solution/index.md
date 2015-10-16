@@ -1,5 +1,5 @@
 ---
-path: '/the-six-most-important-things-to-consider-when-building-a-backend-solution/'
+path: '/blog/the-six-most-important-things-to-consider-when-building-a-backend-solution/'
 layout: post
 title: The Six Most Important Things To Consider When Building a Backend Solution
 date: 2014-04-14 11:21:29

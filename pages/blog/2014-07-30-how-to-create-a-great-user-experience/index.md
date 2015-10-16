@@ -1,5 +1,5 @@
 ---
-path: '/how-to-create-a-great-user-experience/'
+path: '/blog/how-to-create-a-great-user-experience/'
 layout: post
 title: How to Create a Great User Experience
 date: 2014-07-30 11:21:29

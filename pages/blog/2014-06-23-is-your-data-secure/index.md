@@ -1,5 +1,5 @@
 ---
-path: '/is-your-data-secure/'
+path: '/blog/is-your-data-secure/'
 layout: post
 title: Is Your Data Secure? Questions to Ask Any Data Storage Provider
 date: 2014-06-23 11:21:29

@@ -1,5 +1,5 @@
 ---
-path: '/advanced-concepts-flask/'
+path: '/blog/advanced-concepts-flask/'
 layout: post
 title: Advanced Concepts in Flask
 date: 2015-01-19 11:21:29

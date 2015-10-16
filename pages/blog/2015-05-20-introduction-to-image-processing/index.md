@@ -1,5 +1,5 @@
 ---
-path: '/introduction-to-image-processing/'
+path: '/blog/introduction-to-image-processing/'
 layout: post
 title: Introduction to Image Processing
 date: 2015-05-20 12:21:29

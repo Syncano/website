@@ -1,5 +1,5 @@
 ---
-path: '/ios-chat-app-jsqmessagesviewcontroller/'
+path: '/blog/ios-chat-app-jsqmessagesviewcontroller/'
 layout: post
 title: Create an iOS Chat App using JSQMessagesViewController – Part 1
 date: 2015-03-12 11:21:29

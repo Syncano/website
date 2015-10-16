@@ -1,5 +1,5 @@
 ---
-path: '/data-modeling-basics/'
+path: '/blog/data-modeling-basics/'
 layout: post
 title: 'Data Modeling Basics: Definition and Usage'
 date: 2014-08-29 11:21:29

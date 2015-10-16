@@ -1,5 +1,5 @@
 ---
-path: '/introduction-natural-language-processing/'
+path: '/blog/introduction-natural-language-processing/'
 layout: post
 title: An Introduction to Natural Language Processing
 date: 2015-04-07 11:21:29

@@ -1,5 +1,5 @@
 ---
-path: '/misconceptions-backend-as-a-service/'
+path: '/blog/misconceptions-backend-as-a-service/'
 layout: post
 title: 4 Common Misconceptions About Backend As A Service
 date: 2014-06-02 11:21:29

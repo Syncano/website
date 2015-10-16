@@ -68,55 +68,10 @@ export default React.createClass({
 
   renderCategoryLink(category) {
     let categoryName = _.kebabCase(category);
-    let categoryUrl = `/category/${categoryName}/`;
+    let categoryUrl = `/blog/category/${categoryName}/`;
 
     return (
       <li><Link to={categoryUrl} style={{borderBottom: 0}}>{category}</Link></li>
-    )
-  },
-
-  isBlogContent() {
-    let isBlogPage = !_.isUndefined(this.props.page) && _.startsWith(this.props.page.path, '/blog/');
-    let isCategoryPage = _.startsWith(this.props.state.pathname, '/category/');
-
-    if (isCategoryPage || isBlogPage) {
-      return true;
-    }
-
-    return false;
-  },
-
-  renderBlogNav() {
-    if (!this.isBlogContent()) {
-      return null;
-    }
-
-    return (
-      <nav className="categories navbar visible-lg" style={{marginBottom: 0}}>
-        <div className="container">
-          <div className="navbar-header">
-            <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-2" aria-expanded="true" aria-controls="navbar">
-              <span className="sr-only">Toggle navigation</span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-            </button>
-          </div>
-
-          <div className="collapse navbar-collapse" id="navbar-collapse-2" aria-expanded="false">
-            <ul className="nav navbar-nav">
-              <li><Link to="blog-template">All</Link></li>
-              {this.renderCategoryLink('tutorials')}
-              <li className="dropdown-toggle visible-lg">
-                <a href="#">Browse Categories <span className="caret"></span></a>
-                <ul className="dropdown-menu">
-                  {this.renderCategoriesLinks(this.getCategoriesList())}
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
     )
   },
 
@@ -150,15 +105,15 @@ export default React.createClass({
               <div className="col-md-2 col-sm-2 col-xs-6 no-header resources">
                 <ul>
                   <li><Link to="/support/">Support</Link></li>
-                  <li><Link to="/category/tutorial">Tutorials</Link></li>
-                  <li><a href="http://docs.syncano.com/docs/syncano-libraries" target="_blank">Libraries</a></li>
+                  <li><Link to="/blog/category/tutorials/">Tutorials</Link></li>
+                  <li><a href="http://docs.syncano.com/docs/syncano-libraries/" target="_blank">Libraries</a></li>
                 </ul>
               </div>
               <div className="col-md-3 col-sm-3 col-xs-12">
                 <h4>Latest Blog Posts</h4>
                 <ul>
-                  <li><Link to="/syncano-is-going-places-literally/">Syncano Is Going Places, Literally</Link></li>
-                  <li><Link to="/user-management-for-your-apps/">User Management For Your Apps</Link></li>
+                  <li><Link to="/blog/syncano-is-going-places-literally/">Syncano Is Going Places, Literally</Link></li>
+                  <li><Link to="/blog/user-management-for-your-apps/">User Management For Your Apps</Link></li>
                 </ul>
                 <Newsletter/>
               </div>
@@ -189,7 +144,6 @@ export default React.createClass({
       <div>
         <Helmet titleTemplate="%s | Syncano.com" />
         {this.renderNav()}
-        {this.renderBlogNav()}
         <RouteHandler {...this.props}/>
         {this.renderFooter()}
       </div>

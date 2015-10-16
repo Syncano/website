@@ -1,5 +1,5 @@
 ---
-path: '/beautiful-real-time-technology-apps/'
+path: '/blog/beautiful-real-time-technology-apps/'
 layout: post
 title: 6 Real-Time Applications That Are Absolutely Stunning
 date: 2014-06-09 11:21:29

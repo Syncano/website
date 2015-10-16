@@ -1,5 +1,5 @@
 ---
-path: '/real-time-sync-apps-month-august-edition/'
+path: '/blog/real-time-sync-apps-month-august-edition/'
 layout: post
 title: 'Real-Time Sync Apps of the Month: August Edition'
 date: 2014-08-21 11:21:29

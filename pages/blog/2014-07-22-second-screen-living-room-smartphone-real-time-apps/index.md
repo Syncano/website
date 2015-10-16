@@ -1,5 +1,5 @@
 ---
-path: '/second-screen-living-room-smartphone-real-time-apps/'
+path: '/blog/second-screen-living-room-smartphone-real-time-apps/'
 layout: post
 title: The Second Screen in Your Living Room Isn't Your Smartphone
 date: 2014-07-22 11:21:29

@@ -1,5 +1,5 @@
 ---
-path: '/how-to-create-great-applications-4-rules-to-follow/'
+path: '/blog/how-to-create-great-applications-4-rules-to-follow/'
 layout: post
 title: 'How to Create Great Applications: 4 Rules to Follow'
 date: 2014-06-18 11:21:29

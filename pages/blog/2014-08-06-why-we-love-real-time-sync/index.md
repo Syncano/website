@@ -1,5 +1,5 @@
 ---
-path: '/why-we-love-real-time-sync/'
+path: '/blog/why-we-love-real-time-sync/'
 layout: post
 title: Why We Love Real-Time Sync (And You Should, Too)
 date: 2014-08-06 11:21:29

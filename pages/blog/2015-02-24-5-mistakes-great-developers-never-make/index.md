@@ -1,5 +1,5 @@
 ---
-path: '/5-mistakes-great-developers-never-make/'
+path: '/blog/5-mistakes-great-developers-never-make/'
 layout: post
 title: 5 Mistakes Great Developers Never Make
 date: 2015-02-24 11:21:29

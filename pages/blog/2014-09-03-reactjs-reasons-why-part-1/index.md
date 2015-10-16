@@ -1,5 +1,5 @@
 ---
-path: '/reactjs-reasons-why-part-1/'
+path: '/blog/reactjs-reasons-why-part-1/'
 layout: post
 title: 6 Reasons Why We Love React.js
 date: 2014-09-03 11:21:29

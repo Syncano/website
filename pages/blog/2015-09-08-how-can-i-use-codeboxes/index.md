@@ -1,5 +1,5 @@
 ---
-path: '/how-can-i-use-codeboxes/'
+path: '/blog/how-can-i-use-codeboxes/'
 layout: post
 title: How can I use CodeBoxes?
 date: 2015-09-08 10:00:00

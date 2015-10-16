@@ -1,5 +1,5 @@
 ---
-path: '/data-data-everywhere/'
+path: '/blog/data-data-everywhere/'
 layout: post
 title: Data, Data, Everywhere
 date: 2015-09-01 14:00:00
