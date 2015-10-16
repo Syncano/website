@@ -8,6 +8,7 @@ Gemfile.lock
 
 # jekyll build
 _site/*
+.idea/
 
 # large/disallowed file types
 # a CDN should be used for these
