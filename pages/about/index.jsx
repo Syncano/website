@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-import OwlCarousel from '../../components/OwlCarousel';
+import Slider from 'react-slick';
 
 export default React.createClass({
 
@@ -15,6 +15,15 @@ export default React.createClass({
 
   render() {
     let SEO = this.getSEOConfig();
+    var settings = {
+      infinite: true,
+      speed: 500,
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      autoplay: true,
+      variableWidth: true,
+      draggable: false
+    };
 
     return (
       <div className="about">
@@ -35,24 +44,25 @@ export default React.createClass({
         <div className="locations" style={{textAlign: 'center'}}>
           <img src="map.png" alt="syncano office locations" />
         </div>
-        <OwlCarousel ref="car">
-          <div className="about-us-carousel__item"><img src={require('../../images/carousel/1.jpg')} alt="image 1"/></div>
-          <div className="about-us-carousel__item"><img src={require('../../images/carousel/2.jpg')} alt="image 2"/></div>
-          <div className="about-us-carousel__item"><img src={require('../../images/carousel/3.jpg')} alt="image 3"/></div>
-          <div className="about-us-carousel__item"><img src={require('../../images/carousel/4.jpg')} alt="image 4"/></div>
-          <div className="about-us-carousel__item"><img src={require('../../images/carousel/5.jpg')} alt="image 5"/></div>
-          <div className="about-us-carousel__item"><img src={require('../../images/carousel/6.jpg')} alt="image 6"/></div>
-          <div className="about-us-carousel__item"><img src={require('../../images/carousel/7.jpg')} alt="image 7"/></div>
-          <div className="about-us-carousel__item"><img src={require('../../images/carousel/8.jpg')} alt="image 8"/></div>
-          <div className="about-us-carousel__item"><img src={require('../../images/carousel/9.jpg')} alt="image 9"/></div>
-          <div className="about-us-carousel__item"><img src={require('../../images/carousel/10.jpg')} alt="image 10"/></div>
-          <div className="about-us-carousel__item"><img src={require('../../images/carousel/11.jpg')} alt="image 11"/></div>
-          <div className="about-us-carousel__item"><img src={require('../../images/carousel/12.jpg')} alt="image 12"/></div>
-          <div className="about-us-carousel__item"><img src={require('../../images/carousel/13.jpg')} alt="image 13"/></div>
-          <div className="about-us-carousel__item"><img src={require('../../images/carousel/14.jpg')} alt="image 14"/></div>
-          <div className="about-us-carousel__item"><img src={require('../../images/carousel/15.jpg')} alt="image 15"/></div>
-        </OwlCarousel>
-
+        <div style={{height: 340, overflow: 'hidden'}}>
+          <Slider {...settings}>
+            <div style={{width: 340}}><img src={require('../../images/carousel/1.jpg')} alt="image 1"/></div>
+            <div style={{width: 510}}><img src={require('../../images/carousel/2.jpg')} alt="image 2"/></div>
+            <div style={{width: 510}}><img src={require('../../images/carousel/3.jpg')} alt="image 3"/></div>
+            <div style={{width: 453}}><img src={require('../../images/carousel/4.jpg')} alt="image 4"/></div>
+            <div style={{width: 453}}><img src={require('../../images/carousel/5.jpg')} alt="image 5"/></div>
+            <div style={{width: 510}}><img src={require('../../images/carousel/6.jpg')} alt="image 6"/></div>
+            <div style={{width: 510}}><img src={require('../../images/carousel/7.jpg')} alt="image 7"/></div>
+            <div style={{width: 510}}><img src={require('../../images/carousel/8.jpg')} alt="image 8"/></div>
+            <div style={{width: 510}}><img src={require('../../images/carousel/9.jpg')} alt="image 9"/></div>
+            <div style={{width: 510}}><img src={require('../../images/carousel/10.jpg')} alt="image 10"/></div>
+            <div style={{width: 510}}><img src={require('../../images/carousel/11.jpg')} alt="image 11"/></div>
+            <div style={{width: 510}}><img src={require('../../images/carousel/12.jpg')} alt="image 12"/></div>
+            <div style={{width: 256}}><img src={require('../../images/carousel/13.jpg')} alt="image 13"/></div>
+            <div style={{width: 256}}><img src={require('../../images/carousel/14.jpg')} alt="image 14"/></div>
+            <div style={{width: 453}}><img src={require('../../images/carousel/15.jpg')} alt="image 15"/></div>
+          </Slider>
+        </div>
         <div className="team">
           <div className="container">
             <h2 className="text-center">Meet the Team</h2>

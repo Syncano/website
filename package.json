@@ -31,6 +31,7 @@
     "react-router": "^0.13.3",
     "react-script-loader": "0.0.1",
     "react-scroll": "<0.26.0",
+    "react-slick": "^0.7.2",
     "typography": "^0.3.6",
     "underscore.string": "^3.1.1",
     "url-loader": "^0.5.6"
