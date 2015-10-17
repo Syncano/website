@@ -1,6 +1,5 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-
 import Slider from 'react-slick';
 
 export default React.createClass({
@@ -13,9 +12,8 @@ export default React.createClass({
     }
   },
 
-  render() {
-    let SEO = this.getSEOConfig();
-    var settings = {
+  getSliderConfig() {
+    return {
       infinite: true,
       speed: 500,
       slidesToShow: 6,
@@ -23,7 +21,24 @@ export default React.createClass({
       autoplay: true,
       variableWidth: true,
       draggable: false
-    };
+    }
+  },
+
+  getStyles() {
+    return {
+      mapContainer: {
+        textAlign: 'center'
+      },
+      sliderContainer: {
+        height: 340,
+        overflow: 'hidden'
+      }
+    }
+  },
+
+  render() {
+    let styles = this.getStyles();
+    let SEO = this.getSEOConfig();
 
     return (
       <div className="about">
@@ -41,11 +56,11 @@ export default React.createClass({
             </div>
           </div>
         </div>
-        <div className="locations" style={{textAlign: 'center'}}>
+        <div className="locations" style={styles.mapContainer}>
           <img src="map.png" alt="syncano office locations" />
         </div>
-        <div style={{height: 340, overflow: 'hidden'}}>
-          <Slider {...settings}>
+        <div style={styles.sliderContainer}>
+          <Slider {...this.getSliderConfig()}>
             <div style={{width: 340}}><img src={require('../../images/carousel/1.jpg')} alt="image 1"/></div>
             <div style={{width: 510}}><img src={require('../../images/carousel/2.jpg')} alt="image 2"/></div>
             <div style={{width: 510}}><img src={require('../../images/carousel/3.jpg')} alt="image 3"/></div>
