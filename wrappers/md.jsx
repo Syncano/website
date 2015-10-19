@@ -4,6 +4,7 @@ import Team from '../pages/about/_TeamConstans';
 import { Link } from 'react-router';
 import Radium from 'radium';
 import SocialLinks from '../components/SocialLinks';
+import ReactDisqusThread from 'react-disqus-thread';
 
 import WhiteShare from '../images/white-share.png';
 
@@ -94,7 +95,14 @@ export default Radium(React.createClass({
         <div className="container">
           <article className="post-content">
             <div className="row">
-              <div className="col-md-8 col-md-offset-2" dangerouslySetInnerHTML={{__html: post.body}}></div>
+              <div className="col-md-8 col-md-offset-2">
+                <div dangerouslySetInnerHTML={{__html: post.body}}></div>
+                <ReactDisqusThread
+                  shortname={this.props.config.disqus}
+                  identifier={this.props.page.path}
+                  title={post.title}
+                />
+              </div>
             </div>
           </article>
         </div>

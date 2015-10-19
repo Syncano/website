@@ -1,3 +1,4 @@
-siteTitle="Syncano"
+siteTitle = "Syncano"
 blogTitle = "Blog"
 postsPerPage = 15
+disqus = "syncanoblog"

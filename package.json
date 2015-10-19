@@ -24,6 +24,7 @@
     "radium": "^0.14.1",
     "react": "^0.13.3",
     "react-bootstrap": "^0.26.2",
+    "react-disqus-thread": "^0.2.2",
     "react-document-title": "^1.0.2",
     "react-helmet": "^1.1.5",
     "react-motion": "^0.1.0",
