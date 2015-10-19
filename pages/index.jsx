@@ -101,11 +101,6 @@ export default React.createClass({
               <div className="col-md-6 col-sm-6 text-center">
                 <div className="quote">"What used to take 5 weeks now takes just 1 <br/>week with Syncano. <strong>You let developers be <br/>developers and not get stuck being<br/> middleware or database engineers.</strong>"</div>
                 <div className="source">Hally Knutsen <br/><span>New York Digital Labs</span></div>
-                <div className="navBulletsWrapper visible-lg">
-                  <div rel="0" className="active">1</div>
-                  <div rel="1">2</div>
-                  <div rel="2">3</div>
-                </div>
               </div>
             </div>
             <div className="row">
@@ -116,11 +111,6 @@ export default React.createClass({
                 <div className="quote">"Hands-down the easiest way to build robust, <br/>advanced apps with real-time sync. CodeBox <br/>even lets me use third-party apps just like <br/>native ones. <strong>Finally I can build anywhere, <br/>anything, anytime on any device."</strong>
                 </div>
                 <div className="source">Krystian Sulek <br/><span>CHIMERA PRIME</span></div>
-                <div className="navBulletsWrapper visible-lg">
-                  <div rel="0">1</div>
-                  <div rel="1" className="active">2</div>
-                  <div rel="2">3</div>
-                </div>
               </div>
             </div>
             <div className="row">
@@ -131,11 +121,6 @@ export default React.createClass({
                 <div className="quote">"Syncano's personal, responsive support was a <br/>difference maker for me. <strong>Syncano is the <br/>developers' champion."</strong>
                 </div>
                 <div className="source">Patrick DeVivo <br/><span>Fastack</span></div>
-                <div className="navBulletsWrapper visible-lg">
-                  <div rel="0">1</div>
-                  <div rel="1">2</div>
-                  <div rel="2" className="active">3</div>
-                </div>
               </div>
             </div>
       
