@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import Pricing from '../../components/Pricing';
 
 export default React.createClass({
 
@@ -104,7 +105,7 @@ export default React.createClass({
                 </div>
               </div>
             </div>
-            <img src="billing.png" className="img-responsive pricing-explanation__image" />
+            <Pricing/>
             <div className="l-pricing-explanation-section__cta">
               <p className="pricing-explanation-section__cta__text">Try it out yourself with our plan explorer.</p>
               <a href="https://dashboard.syncano.io/#/account/plan" className="btn btn-dark-blue cta-button" id="homepage-hero">Explore Pricing</a>

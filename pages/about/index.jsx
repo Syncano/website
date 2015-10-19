@@ -15,12 +15,14 @@ export default React.createClass({
   getSliderConfig() {
     return {
       infinite: true,
+      adaptiveHeight: true,
       speed: 500,
       slidesToShow: 6,
       slidesToScroll: 1,
       autoplay: true,
       variableWidth: true,
-      draggable: false
+      draggable: false,
+      initialSlide: 2
     }
   },
 
