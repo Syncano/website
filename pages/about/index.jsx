@@ -85,18 +85,18 @@ export default React.createClass({
         </div>
         <div style={styles.sliderContainer}>
           <Slider {...this.getSliderConfig()}>
-            <img src={require('../../images/carousel/2.jpg')} alt="image 2"/>
-            <img src={require('../../images/carousel/3.jpg')} alt="image 3"/>
-            <img src={require('../../images/carousel/4.jpg')} alt="image 4"/>
-            <img src={require('../../images/carousel/5.jpg')} alt="image 5"/>
-            <img src={require('../../images/carousel/6.jpg')} alt="image 6"/>
-            <img src={require('../../images/carousel/7.jpg')} alt="image 7"/>
-            <img src={require('../../images/carousel/8.jpg')} alt="image 8"/>
-            <img src={require('../../images/carousel/9.jpg')} alt="image 9"/>
-            <img src={require('../../images/carousel/10.jpg')} alt="image 10"/>
-            <img src={require('../../images/carousel/11.jpg')} alt="image 11"/>
-            <img src={require('../../images/carousel/12.jpg')} alt="image 12"/>
-            <img src={require('../../images/carousel/15.jpg')} alt="image 15"/>
+            <img src={require('./2.jpg')} alt="image 2"/>
+            <img src={require('./3.jpg')} alt="image 3"/>
+            <img src={require('./4.jpg')} alt="image 4"/>
+            <img src={require('./5.jpg')} alt="image 5"/>
+            <img src={require('./6.jpg')} alt="image 6"/>
+            <img src={require('./7.jpg')} alt="image 7"/>
+            <img src={require('./8.jpg')} alt="image 8"/>
+            <img src={require('./9.jpg')} alt="image 9"/>
+            <img src={require('./10.jpg')} alt="image 10"/>
+            <img src={require('./11.jpg')} alt="image 11"/>
+            <img src={require('./12.jpg')} alt="image 12"/>
+            <img src={require('./15.jpg')} alt="image 15"/>
           </Slider>
         </div>
         <div className="team">
