@@ -15,14 +15,37 @@ export default React.createClass({
   getSliderConfig() {
     return {
       infinite: true,
-      adaptiveHeight: true,
       speed: 500,
       slidesToShow: 6,
       slidesToScroll: 1,
       autoplay: true,
-      variableWidth: true,
       draggable: false,
-      initialSlide: 2
+      responsive: [{
+        breakpoint: 2000,
+        settings: {
+          slidesToShow: 5
+        }
+      }, {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 4
+        }
+      }, {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3
+        }
+      }, {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2
+        }
+      }, {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1
+        }
+      }]
     }
   },
 
@@ -32,7 +55,6 @@ export default React.createClass({
         textAlign: 'center'
       },
       sliderContainer: {
-        height: 340,
         overflow: 'hidden'
       }
     }
@@ -63,21 +85,18 @@ export default React.createClass({
         </div>
         <div style={styles.sliderContainer}>
           <Slider {...this.getSliderConfig()}>
-            <div style={{width: 340}}><img src={require('../../images/carousel/1.jpg')} alt="image 1"/></div>
-            <div style={{width: 510}}><img src={require('../../images/carousel/2.jpg')} alt="image 2"/></div>
-            <div style={{width: 510}}><img src={require('../../images/carousel/3.jpg')} alt="image 3"/></div>
-            <div style={{width: 453}}><img src={require('../../images/carousel/4.jpg')} alt="image 4"/></div>
-            <div style={{width: 453}}><img src={require('../../images/carousel/5.jpg')} alt="image 5"/></div>
-            <div style={{width: 510}}><img src={require('../../images/carousel/6.jpg')} alt="image 6"/></div>
-            <div style={{width: 510}}><img src={require('../../images/carousel/7.jpg')} alt="image 7"/></div>
-            <div style={{width: 510}}><img src={require('../../images/carousel/8.jpg')} alt="image 8"/></div>
-            <div style={{width: 510}}><img src={require('../../images/carousel/9.jpg')} alt="image 9"/></div>
-            <div style={{width: 510}}><img src={require('../../images/carousel/10.jpg')} alt="image 10"/></div>
-            <div style={{width: 510}}><img src={require('../../images/carousel/11.jpg')} alt="image 11"/></div>
-            <div style={{width: 510}}><img src={require('../../images/carousel/12.jpg')} alt="image 12"/></div>
-            <div style={{width: 256}}><img src={require('../../images/carousel/13.jpg')} alt="image 13"/></div>
-            <div style={{width: 256}}><img src={require('../../images/carousel/14.jpg')} alt="image 14"/></div>
-            <div style={{width: 453}}><img src={require('../../images/carousel/15.jpg')} alt="image 15"/></div>
+            <img src={require('../../images/carousel/2.jpg')} alt="image 2"/>
+            <img src={require('../../images/carousel/3.jpg')} alt="image 3"/>
+            <img src={require('../../images/carousel/4.jpg')} alt="image 4"/>
+            <img src={require('../../images/carousel/5.jpg')} alt="image 5"/>
+            <img src={require('../../images/carousel/6.jpg')} alt="image 6"/>
+            <img src={require('../../images/carousel/7.jpg')} alt="image 7"/>
+            <img src={require('../../images/carousel/8.jpg')} alt="image 8"/>
+            <img src={require('../../images/carousel/9.jpg')} alt="image 9"/>
+            <img src={require('../../images/carousel/10.jpg')} alt="image 10"/>
+            <img src={require('../../images/carousel/11.jpg')} alt="image 11"/>
+            <img src={require('../../images/carousel/12.jpg')} alt="image 12"/>
+            <img src={require('../../images/carousel/15.jpg')} alt="image 15"/>
           </Slider>
         </div>
         <div className="team">
