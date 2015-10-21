@@ -53,7 +53,7 @@ export default React.createClass({
             </div>
           </div>
         </div>
-        <div className="l-pricing-explanation-section">
+        <div className="l-pricing-explanation-section" style={{background: '#fff'}}>
           <div className="container">
             <h2 className="pricing-explanation__headline">
               Pricing built for developers.
@@ -105,14 +105,13 @@ export default React.createClass({
                 </div>
               </div>
             </div>
-            <Pricing/>
-            <div className="l-pricing-explanation-section__cta">
-              <p className="pricing-explanation-section__cta__text">Try it out yourself with our plan explorer.</p>
-              <a href="https://dashboard.syncano.io/#/account/plan" className="btn btn-dark-blue cta-button" id="homepage-hero">Explore Pricing</a>
-            </div>
           </div>
         </div>
-
+        <section style={{background: '#fbfbfb', paddingTop: 74}}>
+          <div className="container">
+            <Pricing/>
+          </div>
+        </section>
         <section className="l-pricing-faq-section">
           <div className="container">
             <h2 className="pricing-faq__headline">Frequently Asked Questions</h2>
