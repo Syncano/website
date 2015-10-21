@@ -20,6 +20,7 @@ export default React.createClass({
       slidesToScroll: 1,
       autoplay: true,
       draggable: false,
+      lazyLoad: true,
       responsive: [{
         breakpoint: 2000,
         settings: {
