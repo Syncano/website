@@ -3,7 +3,6 @@ import { Navigation } from 'react-router';
 import _ from 'lodash';
 
 export default React.createClass({
-
   mixins: [Navigation],
 
   getAllPosts() {
@@ -12,8 +11,13 @@ export default React.createClass({
     return posts;
   },
 
+  getRouteId() {
+    return _.trimRight(this.props.params.splat, '/');
+  },
+
   componentDidMount() {
-    let newBlogPostPath = `/blog${this.props.state.path}`;
+    let routeId = this.getRouteId();
+    let newBlogPostPath = `/blog/${routeId}/`;
     let isBlogpost = _.some(this.getAllPosts(), { path: newBlogPostPath});
 
     if (isBlogpost) {
