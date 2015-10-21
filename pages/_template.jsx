@@ -112,8 +112,8 @@ export default React.createClass({
               <div className="col-md-3 col-sm-3 col-xs-12">
                 <h4>Latest Blog Posts</h4>
                 <ul>
+                  <li><Link to="/blog/create-ios-chat-app-part1/">Create an iOS Chat App using JSQMessagesViewController – Part 1</Link></li>
                   <li><Link to="/blog/syncano-is-going-places-literally/">Syncano Is Going Places, Literally</Link></li>
-                  <li><Link to="/blog/user-management-for-your-apps/">User Management For Your Apps</Link></li>
                 </ul>
                 <Newsletter/>
               </div>

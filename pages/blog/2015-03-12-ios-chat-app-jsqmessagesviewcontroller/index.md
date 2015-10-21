@@ -1,15 +1,21 @@
 ---
 path: '/blog/ios-chat-app-jsqmessagesviewcontroller/'
 layout: post
-title: Create an iOS Chat App using JSQMessagesViewController – Part 1
+title: Create an iOS Chat App using JSQMessagesViewController – Part 1 (Syncano Beta)
 date: 2015-03-12 11:21:29
 author: mariusz
-categories: ['Javascript', 'Data Modeling']
+categories: ['Swift', 'Data Modeling']
 image: create-ios-chat-app.png
-summary: "In this tutorial, I’m going to show you how easy it is to create a simple chat app (using Swift) on Syncano. We’ll start with the basics, and then add user accounts, user profiles, etc. in Part 2."
+summary: "In this tutorial, I’m going to show you how easy it is to create a simple chat app (using Swift) on Syncano Beta."
 ---
 
-<p>In this tutorial, I'm going to show you how easy it is to create a simple chat app (using Swift) on Syncano. We'll start with the basics, and then add user accounts, user profiles, etc. in Part 2.<!--more--></p>
+---
+
+## Since this post was written, we have launched the all new Syncano! Good news - we have a brand new post to go with it - you can read it [here](/create-ios-chat-app-part1/).
+
+---
+
+<p>In this tutorial, I'm going to show you how easy it is to create a simple chat app (using Swift) on Syncano.<!--more--></p>
 
 <h2>1. Creating a new project</h2>
 
