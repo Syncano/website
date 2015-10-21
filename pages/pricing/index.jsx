@@ -107,8 +107,15 @@ export default React.createClass({
             </div>
           </div>
         </div>
-        <section style={{background: '#fbfbfb', paddingTop: 74}}>
+        <section style={{background: '#fbfbfb', paddingTop: 74, paddingBottom: 74}}>
           <div className="container">
+            <div style={{marginBottom: 50}}>
+              <h2 className="pricing-explanation__headline" style={{marginBottom: 20}}>Choose your plan based on your needs</h2>
+              <p className="text-center" style={{fontSize: 18, color: '#3c3c3c'}}>
+                Move the toggles on API Calls and CodeBox runs to explore pricing. The more you grow, the lower the unit price.<br/>
+                Once you're ready to deploy, simply select your plan in your <a href="https://dashboard.syncano.io/#/account/plan/">Dashboard</a>.
+              </p>
+            </div>
             <Pricing/>
           </div>
         </section>
