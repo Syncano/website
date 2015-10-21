@@ -27,6 +27,7 @@
     "react-disqus-thread": "^0.2.2",
     "react-helmet": "^2.0.0",
     "react-motion": "^0.1.0",
+    "react-preload": "^0.1.2",
     "react-responsive-grid": "^0.2.0",
     "react-router": "^0.13.3",
     "react-script-loader": "0.0.1",

@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Slider from 'react-slick';
+import Preload from 'react-preload/Preload';
 
 export default React.createClass({
 
@@ -49,6 +50,27 @@ export default React.createClass({
     }
   },
 
+  getCarouselImages() {
+    return [
+      '2.jpg',
+      '3.jpg',
+      '4.jpg',
+      '5.jpg',
+      '6.jpg',
+      '7.jpg',
+      '8.jpg',
+      '9.jpg',
+      '10.jpg',
+      '11.jpg',
+      '12.jpg',
+      '15.jpg'
+    ]
+  },
+
+  renderCarouselImage(image) {
+    return <img src={image} alt={`image ${image}`}/>
+  },
+
   getStyles() {
     return {
       mapContainer: {
@@ -83,22 +105,19 @@ export default React.createClass({
         <div className="locations" style={styles.mapContainer}>
           <img src="map.png" alt="syncano office locations" />
         </div>
-        <div style={styles.sliderContainer}>
-          <Slider {...this.getSliderConfig()}>
-            <img src={'2.jpg'} alt="image 2"/>
-            <img src={'3.jpg'} alt="image 3"/>
-            <img src={'4.jpg'} alt="image 4"/>
-            <img src={'5.jpg'} alt="image 5"/>
-            <img src={'6.jpg'} alt="image 6"/>
-            <img src={'7.jpg'} alt="image 7"/>
-            <img src={'8.jpg'} alt="image 8"/>
-            <img src={'9.jpg'} alt="image 9"/>
-            <img src={'10.jpg'} alt="image 10"/>
-            <img src={'11.jpg'} alt="image 11"/>
-            <img src={'12.jpg'} alt="image 12"/>
-            <img src={'15.jpg'} alt="image 15"/>
-          </Slider>
-        </div>
+        <Preload
+          loadingIndicator={(<div></div>)}
+          images={this.getCarouselImages()}
+          autoResolveDelay={3000}
+          resolveOnError={true}
+          mountChildren={true}
+        >
+          <div style={styles.sliderContainer}>
+            <Slider {...this.getSliderConfig()}>
+              {_.map(this.getCarouselImages(), this.renderCarouselImage)}
+            </Slider>
+          </div>
+        </Preload>
         <div className="team">
           <div className="container">
             <h2 className="text-center">Meet the Team</h2>
