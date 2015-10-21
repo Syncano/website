@@ -20,7 +20,6 @@ export default React.createClass({
       slidesToScroll: 1,
       autoplay: true,
       draggable: false,
-      lazyLoad: true,
       responsive: [{
         breakpoint: 2000,
         settings: {
@@ -86,18 +85,18 @@ export default React.createClass({
         </div>
         <div style={styles.sliderContainer}>
           <Slider {...this.getSliderConfig()}>
-            <img src="2.jpg" alt="image 2"/>
-            <img src="3.jpg" alt="image 3"/>
-            <img src="4.jpg" alt="image 4"/>
-            <img src="5.jpg" alt="image 5"/>
-            <img src="6.jpg" alt="image 6"/>
-            <img src="7.jpg" alt="image 7"/>
-            <img src="8.jpg" alt="image 8"/>
-            <img src="9.jpg" alt="image 9"/>
-            <img src="10.jpg" alt="image 10"/>
-            <img src="11.jpg" alt="image 11"/>
-            <img src="12.jpg" alt="image 12"/>
-            <img src="15.jpg" alt="image 15"/>
+            <img src={'2.jpg'} alt="image 2"/>
+            <img src={'3.jpg'} alt="image 3"/>
+            <img src={'4.jpg'} alt="image 4"/>
+            <img src={'5.jpg'} alt="image 5"/>
+            <img src={'6.jpg'} alt="image 6"/>
+            <img src={'7.jpg'} alt="image 7"/>
+            <img src={'8.jpg'} alt="image 8"/>
+            <img src={'9.jpg'} alt="image 9"/>
+            <img src={'10.jpg'} alt="image 10"/>
+            <img src={'11.jpg'} alt="image 11"/>
+            <img src={'12.jpg'} alt="image 12"/>
+            <img src={'15.jpg'} alt="image 15"/>
           </Slider>
         </div>
         <div className="team">
