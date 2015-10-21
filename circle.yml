@@ -15,11 +15,11 @@ test:
     - gatsby build
 
 deployment:
-#  production:
-#    branch: master
-#    commands:
-#      - "jekyll build --config _config.yml,./config/production/_config.yml"
-#      - s3_website push --config-dir=./config/production/
+  production:
+    branch: master
+    commands:
+      - gatsby build
+      - s3_website push --config-dir=./config/production/
   staging:
     branch: devel
     commands:
