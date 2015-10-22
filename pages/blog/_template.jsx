@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, RouteHandler } from 'react-router';
 import _ from 'lodash';
+import Helmet from 'react-helmet';
 
 export default React.createClass({
 
@@ -75,6 +76,7 @@ export default React.createClass({
   render() {
     return (
       <div>
+        <Helmet titleTemplate="%s"/>
         {this.renderBlogNav()}
         <RouteHandler {...this.props}/>
       </div>
