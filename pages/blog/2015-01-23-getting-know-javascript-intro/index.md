@@ -97,7 +97,7 @@ And here's what this looks like executed as an HTML tree:
 <title>My title</title>
 </head>
 <body>
-<a href="http://www.syncano.com">My link</a>
+<a href="http://www.syncano.io">My link</a>
 <h1>My header</h1>
 </body>
 </html>

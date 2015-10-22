@@ -7,7 +7,7 @@ export default React.createClass({
   getDefaultProps() {
     return {
       body: '',
-      title: 'Turning developers into superstars | Syncano.com'
+      title: 'Turning developers into superstars | Syncano.io'
     };
   },
 

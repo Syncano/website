@@ -8,7 +8,7 @@ categories: ['How Tos', 'ReactJS']
 image: getting-started-with-ReactJS-e1411727250765.png
 summary: "In our previous post, we looked at some of the best features of React.js – a new generation framework from Facebook. Today, we’ll build something useful with it. Once you get the hang of it, I think you’ll be amazed at how easy it is to build components."
 ---
-In <a href="http://www.syncano.com/?p=7544">our previous post</a>, we looked at some of the best features of React.js – a new generation framework from Facebook. Today, we'll build something useful with it. Once you get the hang of it, I think you'll be amazed at how easy it is to build components.<!--more-->
+In <a href="http://www.syncano.io/blog/reactjs-reasons-why-part-1/">our previous post</a>, we looked at some of the best features of React.js – a new generation framework from Facebook. Today, we'll build something useful with it. Once you get the hang of it, I think you'll be amazed at how easy it is to build components.<!--more-->
 
 Let’s recreate the animated dropdown menu from the newest version of Chrome for Android. Here's how it looks on mobile devices:
 

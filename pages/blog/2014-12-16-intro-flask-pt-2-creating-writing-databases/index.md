@@ -8,7 +8,7 @@ categories: ['Flask', 'How Tos', 'Python', 'Tutorials']
 image: flask-databases.jpg
 summary: "This article is intended as a continuation of the introduction to Flask that appears in a previous post, found here. In this post, we will complete our understanding of Flask as a model view controller by showing how to add the “model” piece. The model of an MVC is the database connections that tell the application how to save persistent data. Typically, in MVC’s you don’t actually write a SQL scheme but rather interact with the database through an object relational model (aka ORM)."
 ---
-<p>This article is intended as a continuation of the introduction to Flask that appears in a previous post, found <a href="http://www.syncano.com/flask-micro-framework-introduction/">here</a>. In this post, we will complete our understanding of Flask as a model view controller by showing how to add the "model" piece. The model of an MVC is the database connections that tell the application how to save persistent data. Typically, in MVC's you don't actually write a SQL scheme but rather interact with the database through an object relational model (aka ORM).<!--more-->
+<p>This article is intended as a continuation of the introduction to Flask that appears in a previous post, found <a href="http://www.syncano.io/blog/flask-micro-framework-introduction/">here</a>. In this post, we will complete our understanding of Flask as a model view controller by showing how to add the "model" piece. The model of an MVC is the database connections that tell the application how to save persistent data. Typically, in MVC's you don't actually write a SQL scheme but rather interact with the database through an object relational model (aka ORM).<!--more-->
 
 An ORM makes writing SQL statements easier and higher level. It also works across many different database languages (each database uses a different version of the SQL language). That means migrating from one database to another is extremely easy with ORM; you'll usually just have to change a few small configuration settings.</p>
 
@@ -328,7 +328,7 @@ con.close()
         return render_template("directory.html",username=username,contacts=contacts)
 ```
 
-<p>There is a lot to digest here, unless you read <a href="http://www.syncano.com/flask-micro-framework-introduction/">my last post</a>. But, since I'll assume all of you are now familar enough with Flask OR you read my last post, I'm going to just going to explain the function calls that have to do with the database.</p>
+<p>There is a lot to digest here, unless you read <a href="http://www.syncano.io/blog/flask-micro-framework-introduction/">my last post</a>. But, since I'll assume all of you are now familar enough with Flask OR you read my last post, I'm going to just going to explain the function calls that have to do with the database.</p>
 
 ```javascript
     @app.route("/signedup", methods=["GET","POST"])

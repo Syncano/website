@@ -11,7 +11,7 @@ summary: "Within minutes, you can create dynamic iOS apps on Syncano that instan
 Within minutes, you can create dynamic iOS apps on Syncano that instantly reflect changes in data by “subscribing” to changes on Syncano’s Sync Server. Here’s a demo app and a quick guide so you can get started.<!--more-->
 
 <h2>Introduction to Syncano</h2>
-Syncano offers many <a href="http://www.syncano.com/features/">features</a> such as data modeling, an Admin GUI, a real-time sync API, data storage, and more. In this example, we'll focus on the latter two features - storing and syncing data.
+Syncano offers many <a href="http://www.syncano.io/features/">features</a> such as data modeling, an Admin GUI, a real-time sync API, data storage, and more. In this example, we'll focus on the latter two features - storing and syncing data.
 
 <h2>Data Storage</h2>
 To store data we use <em>DataObjects</em>, which are basically containers for a set of properties. We've already created a set of keys like <em>Title</em>, <em>Text</em>, or <em>Link</em> for each Data Object, which can store text values.
@@ -202,4 +202,4 @@ In the Title field, type “Hello world!” and hit <em>Save</em>.
 The title of the new object should now instantly show in your app.
 
 <H2>Monitoring your App</H2>
-Now that you've created a successful real-time application, how do you monitor it's performance? For the answer, check out our next tutorial in this series, <a href="http://www.syncano.com/monitor-app-performance-crittercism/">"How to Monitor Your App's Performance."</a>
+Now that you've created a successful real-time application, how do you monitor it's performance? For the answer, check out our next tutorial in this series, <a href="http://www.syncano.io/blog/monitor-app-performance-crittercism/">"How to Monitor Your App's Performance."</a>

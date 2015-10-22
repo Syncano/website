@@ -12,7 +12,7 @@ summary: "Node.js is an engine for running javascript locally and it is a librar
 
 <h2>Prerequisites</h2>
 
-<p>Writing applications with node means understanding the core of JavaScript first. Please do check out <a href="http://www.syncano.com/getting-know-javascript-intro/">this introduction</a> if you are unfamiliar.</p>
+<p>Writing applications with node means understanding the core of JavaScript first. Please do check out <a href="http://www.syncano.io/blog/getting-know-javascript-intro/">this introduction</a> if you are unfamiliar.</p>
 
 <h2>Installation</h2>
 

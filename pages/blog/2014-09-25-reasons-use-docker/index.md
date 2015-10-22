@@ -39,4 +39,4 @@ summary: "Docker is a tool that can be used to build applications, provide stand
 
 <p><a href="https://registry.hub.docker.com/">Docker Hub Registry</a> is also a great treasure box, full of useful software such as a fully functional <a href="https://registry.hub.docker.com/">postgresql server</a> or <a href="https://registry.hub.docker.com/_/redis/">redis</a>. You no longer have to install it on your own machine.</p>
 
-If you're ready to get started with Docker, check out my tutorial <a href="http://www.syncano.com/getting-started-docker/">"Getting Started with Docker."</a>
+If you're ready to get started with Docker, check out my tutorial <a href="http://www.syncano.io/blog/getting-started-docker/">"Getting Started with Docker."</a>

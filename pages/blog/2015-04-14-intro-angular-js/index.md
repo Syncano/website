@@ -15,7 +15,7 @@ seo_description: "Angular.js is a front-end web framework responsible for accept
 
 <h2>Prerequisites</h2>
 
-<p>Before writing applications with Angular.js, it's probably best to ensure a solid foundation in the core of JavaScript, Node.js, and Express.js.  Check out <a href="http://www.syncano.com/getting-know-javascript-intro/">this introduction to JavaScript</a>, <a href="http://www.syncano.com/intro-to-express-js">this intro to Express</a>, and <a href="http://www.syncano.com/intro-to-node-js">this introduction to Node</a> if you are unfamiliar.</p>
+<p>Before writing applications with Angular.js, it's probably best to ensure a solid foundation in the core of JavaScript, Node.js, and Express.js.  Check out <a href="http://www.syncano.io/blog/getting-know-javascript-intro/">this introduction to JavaScript</a>, <a href="http://www.syncano.io/intro-to-express-js">this intro to Express</a>, and <a href="http://www.syncano.io/intro-to-node-js">this introduction to Node</a> if you are unfamiliar.</p>
 
 <h2>A first example</h2>
 
@@ -94,7 +94,7 @@ angular.module('processing', [])
    });
 ```
 
-<p>Our controller isn't particularly sophisticated for right now, since we are defining all our data on the front-end (for now).  Essentially the controller is just a call back that passes an object to the front-end.  For those of you unfamiliar with callbacks or JavaScript objects, check out this <a href="http://www.syncano.com/intro-to-node-js">intro to Node.js for callbacks</a> and this <a href="http://www.syncano.com/data-structures-in-javascript/">introduction to JavaScript for javascript objects</a>.</p>
+<p>Our controller isn't particularly sophisticated for right now, since we are defining all our data on the front-end (for now).  Essentially the controller is just a call back that passes an object to the front-end.  For those of you unfamiliar with callbacks or JavaScript objects, check out this <a href="http://www.syncano.io/blog/intro-to-node-js/">intro to Node.js for callbacks</a> and this <a href="http://www.syncano.io/blog/data-structures-in-javascript/">introduction to JavaScript for javascript objects</a>.</p>
 
 <p>processing.html</p>
 

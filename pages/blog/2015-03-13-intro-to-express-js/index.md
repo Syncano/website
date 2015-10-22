@@ -11,7 +11,7 @@ summary: "Express.js is a web framework for the middleware of your Node.js appli
 
 Express.js is a web framework for the middleware of your Node.js application. It's responsible for passing data from the backend to the front-end and vice versa. For those of you coming from Ruby, express is similar to <a href="http://www.sinatrarb.com/">Sinatra</a>; for those of you coming from Python, it is similar to <a href="http://flask.pocoo.org/">Flask</a>.
 <h2>Prerequisites</h2>
-Writing applications with Express.js means first understanding the core of JavaScript and the Node.js run time. Please check out <a href="http://www.syncano.com/getting-know-javascript-intro/">this introduction to JavaScript</a> and <a href="https://github.com/EricSchles/intro_node">this introduction to Node</a> if you are unfamiliar.
+Writing applications with Express.js means first understanding the core of JavaScript and the Node.js run time. Please check out <a href="http://www.syncano.io/blog/getting-know-javascript-intro/">this introduction to JavaScript</a> and <a href="https://github.com/EricSchles/intro_node">this introduction to Node</a> if you are unfamiliar.
 <h2>Installation</h2>
 Express.js is extremely easy to install. All one needs is to have Node.js already installed. Since Node.js comes with npm, the Node package manager, it is extremely easy to install Express once you already have Node.
 

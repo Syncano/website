@@ -109,7 +109,7 @@ export default React.createClass({
                       <div className="row">
                         <div className="col-md-6">
                           <form action="//formspree.io/support@syncano.com" method="POST" name="contact" className="contact">
-                            <input type="hidden" name="_subject" value="Contact Form Submission from syncano.com" />
+                            <input type="hidden" name="_subject" value="Contact Form Submission from syncano.io" />
                             <input type="text" name="_gotcha" style={{display: 'none'}} />
                             <input type="hidden" name="_next" value="/thank-contacting-us/" />
                             <div className="form-group" id="name">

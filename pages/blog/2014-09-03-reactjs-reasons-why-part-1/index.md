@@ -26,6 +26,6 @@ When you start your adventure with React.js, don't forget to install the officia
 <h2>6. The brains behind Facebook are maintaining this project</h2>
 React.js is now open source, but it was first developed at Facebook for internal purposes. After a while, Facebook engineers realized that they created something truly awesome and decided to share their project with the world. Facebook uses some React.js, and Instagram’s entire website was built on React.js after the two companies joined forces. Other successful projects using React.js include <a href="https://www.khanacademy.org/">Khan Academy</a> and <a href="http://www.nytimes.com">New York Times</a>.
 
-If you haven't already, check out <a href="http://www.syncano.com/getting-started-reactjs-tutorial/">the next article in this series</a>, in which I share a demo/tutorial and we build something together.
+If you haven't already, check out <a href="http://www.syncano.io/blog/getting-started-reactjs-tutorial/">the next article in this series</a>, in which I share a demo/tutorial and we build something together.
 
 <em>Photo Credit: Code Geekz</em>

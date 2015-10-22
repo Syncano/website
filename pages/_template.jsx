@@ -142,7 +142,7 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <Helmet titleTemplate="%s | Syncano.com" />
+        <Helmet titleTemplate="%s | Syncano.io" />
         {this.renderNav()}
         <RouteHandler {...this.props}/>
         {this.renderFooter()}

@@ -9,7 +9,7 @@ image: docker-django-celery.png
 summary: "Today, you’ll learn how to setup a distributed task processing system for quick prototyping. You will configure Celery with Django, Postgres, Redis, and Rabbitmq, and then run everything in Docker containers. You’ll need some working knowledge of Docker for this tutorial, which you can get in one my previous posts here."
 ---
 
-Today, you'll learn how to setup a distributed task processing system for quick prototyping. You will configure Celery with Django, Postgres, Redis, and Rabbitmq, and then run everything in Docker containers. You'll need some working knowledge of <a href="http://www.docker.com">Docker</a> for this tutorial, which you can get in one my previous posts <a href="http://www.syncano.com/getting-started-docker">here</a>.<!--more-->
+Today, you'll learn how to setup a distributed task processing system for quick prototyping. You will configure Celery with Django, Postgres, Redis, and Rabbitmq, and then run everything in Docker containers. You'll need some working knowledge of <a href="http://www.docker.com">Docker</a> for this tutorial, which you can get in one my previous posts <a href="http://www.syncano.io/blog/getting-started-docker/">here</a>.<!--more-->
 
 <a href="https://www.djangoproject.com/">Django</a> is a well-known Python web framework, and <a href="https://celery.readthedocs.org/en/latest/">Celery</a> is a distributed task queue. You'll use Postgres as a regular database to store jobs, Rabbitmq to route tasks to different queues, and Redis as a task storage backend.
 
@@ -128,7 +128,7 @@ Here are the images I tested and selected for this project:
 	<li><a href="https://registry.hub.docker.com/u/tutum/rabbitmq/">Rabbitmq by Tutum</a></li>
 </ul>
 <h3>Using Fig.sh to set up multicontainer app</h3>
-Now you'll use <a href="http://www.fig.sh/">fig.sh</a> to combine your own containers with the ones we chose in the last section. If you're not familiar with Fig.sh, check out my post on <a href="http://www.syncano.com/docker-workflow-fig-sh/">making your Docker workflow awesome with fig</a>.
+Now you'll use <a href="http://www.fig.sh/">fig.sh</a> to combine your own containers with the ones we chose in the last section. If you're not familiar with Fig.sh, check out my post on <a href="http://www.syncano.io/blog/docker-workflow-fig-sh/">making your Docker workflow awesome with fig</a>.
 
 <strong>fig.yml</strong>
 ```javascript

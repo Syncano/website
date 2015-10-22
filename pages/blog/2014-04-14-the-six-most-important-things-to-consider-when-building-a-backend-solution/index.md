@@ -31,5 +31,5 @@ summary: "A good backend solution will ensure your data is secure, reliable, and
 <p><img class="alignnone  wp-image-2595" style="border: 1px solid grey;" src="Screen-Shot-2014-04-23-at-10.01.01-AM.png" alt="Client Libraries" width="800" /></p>
 
 <h2><strong>Upfront Pricing</strong></h2>
-<p>Finally, any platform that charges you high rates up front could be a scam, so look for pay-as-you go platforms that only charge you for what you use. We like to keep a<a href="http://www.syncano.com/pricing/"> pricing calculator </a>on our site so you can see exactly how much it will cost to use our platform.</p>
+<p>Finally, any platform that charges you high rates up front could be a scam, so look for pay-as-you go platforms that only charge you for what you use. We like to keep a<a href="http://www.syncano.io/pricing/"> pricing calculator </a>on our site so you can see exactly how much it will cost to use our platform.</p>
 <p><img class="alignnone  wp-image-2590" style="border: 1px solid grey;" src="Screen-Shot-2014-04-23-at-9.47.53-AM.png" alt="Pricing Calculator" width="800" /></p>
