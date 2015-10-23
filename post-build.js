@@ -5,6 +5,8 @@ import fs from 'fs';
 let generateSitemapUrl = (page) => {
   let pagePath = page.path;
   let isRootPath = pagePath === '/';
+  let importantPages = ['/', '/pricing/'];
+  let isImportantPage = _.includes(importantPages, pagePath);
 
   if (!pagePath) {
     return;
@@ -12,7 +14,7 @@ let generateSitemapUrl = (page) => {
 
   return {
     url: pagePath,
-    changefreq: 'daily',
+    changefreq: isImportantPage ? 'daily' : 'monthly',
     priority: isRootPath ? 1 : 0.85
   }
 };
