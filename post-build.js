@@ -4,6 +4,7 @@ import fs from 'fs';
 
 let generateSitemapUrl = (page) => {
   let pagePath = page.path;
+  let isRootPath = pagePath === '/';
 
   if (!pagePath) {
     return;
@@ -12,7 +13,7 @@ let generateSitemapUrl = (page) => {
   return {
     url: pagePath,
     changefreq: 'daily',
-    priority: pagePath === '/' ? 1 : 0.85
+    priority: isRootPath ? 1 : 0.85
   }
 };
 
@@ -25,7 +26,7 @@ let generateSitemap = (pages) => {
     urls: sitemapUrls
   });
 
-  return fs.writeFileSync("" + __dirname + "/sitemap.xml", sitemap.toString());
+  return fs.writeFileSync(`${__dirname}/public/sitemap.xml`, sitemap.toString());
 };
 
 export default (pages, callback) => {
