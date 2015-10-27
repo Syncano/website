@@ -62,6 +62,7 @@ export default {
   },
   devin: {
     name: 'Devin Visslailli',
+    twitter: 'devinviss',
     photo: 'devin.png'
   }
 }
