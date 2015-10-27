@@ -33,7 +33,7 @@ Login to your Syncano account [here](https://dashboard.syncano.io/#/login).
 
 If you don't have a Syncano Instance yet (think of it as a project) or would like to use an empty one, you will have to add a new Instance first:
 
-![Add Instance](Add_instance.png)
+![Add Instance](Add_Instance.png)
 
 Note down your instance name and select it.
 
