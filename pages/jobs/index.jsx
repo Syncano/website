@@ -44,7 +44,7 @@ export default React.createClass({
                 <h4>Telecommute, United States</h4>
               </li>
               <li>
-                <h3><a href="https://syncano.workable.com/jobs/41523" target="_blank">Frontend &amp; Javascript Developer</a></h3>
+                <h3><a href="https://syncano.workable.com/jobs/41523" target="_blank">Senior Front End Engineer</a></h3>
                 <h4>Mazowieckie, Warsaw</h4>
               </li>
               <li>
