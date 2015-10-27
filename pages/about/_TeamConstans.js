@@ -59,5 +59,9 @@ export default {
   nikolai: {
     name: 'Nikolai Fasting',
     photo: 'nikolai.png'
+  },
+  devin: {
+    name: 'Devin Visslailli',
+    photo: 'devin.png'
   }
 }
