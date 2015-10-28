@@ -27,7 +27,11 @@ export default React.createClass({
   },
 
   trackPageView() {
-    this.isBlogPost() ? this.trackBlogPostView() : this.trackWebsitePageView();
+    let pageTitle = this.isBlogPost() ? this.getBlogPostTitle() : this.getWebsitePageTitle();
+
+    analytics.page('Website', {
+      Page: pageTitle
+    });
   },
 
   isBlogPost() {
@@ -36,19 +40,14 @@ export default React.createClass({
     return (_.startsWith(page.requirePath, 'blog/') && _.isObject(page.data));
   },
 
-  trackBlogPostView() {
-    analytics.page('Blog Post', {
-      Post: this.props.page.data.title
-    });
+  getBlogPostTitle() {
+    return this.props.page.data.title;
   },
 
-  trackWebsitePageView() {
+  getWebsitePageTitle() {
     let helmet = Helmet.peek();
-    let mixpanelTitle = _.result(_.find(helmet.metaTags, 'name', 'mixpanelTitle'), 'content');
 
-    analytics.page('Website', {
-      Page: mixpanelTitle
-    });
+    return _.result(_.find(helmet.metaTags, 'name', 'mixpanelTitle'), 'content');
   },
 
   renderNav() {
