@@ -46,6 +46,11 @@ export default React.createClass({
 
   getWebsitePageTitle() {
     let helmet = Helmet.peek();
+    let markdownFileData = this.props.page.data;
+
+    if (markdownFileData) {
+      return markdownFileData.mixpanel_title;
+    }
 
     return _.result(_.find(helmet.metaTags, 'name', 'mixpanelTitle'), 'content');
   },

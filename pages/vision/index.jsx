@@ -15,7 +15,7 @@ export default React.createClass({
     let SEO = this.getSEOConfig();
 
     return (
-      <div>
+      <div style={{paddingTop: 80, paddingBottom: 80}}>
         <Helmet
           title={SEO.title}
           meta={[
@@ -23,13 +23,13 @@ export default React.createClass({
             {"name": "mixpanelTitle", "content": SEO.mixpanelTitle}
           ]}
         />
-        <div class="text-hero">
-          <div class="container">
+        <div className="text-hero">
+          <div className="container">
             <h1>Our Vision</h1>
             <h2>Screens are everywhere. Make them play together.</h2>
           </div>
         </div>
-        <div class="container">
+        <div className="container">
           <h2>People are more connected to screens than ever before. In fact, there are an average of 5.7 internet
             connected devices per household, dramatically transforming the way we consume media, interact, engage and
             make decisions.</h2>
