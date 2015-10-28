@@ -27,7 +27,16 @@ export default React.createClass({
   },
 
   trackPageView() {
-    let pageTitle = this.isBlogPost() ? this.getBlogPostTitle() : this.getWebsitePageTitle();
+    let isPage = this.props.page;
+    let pageTitle;
+
+    if (isPage) {
+      pageTitle = this.isBlogPost() ? this.getBlogPostTitle() : this.getWebsitePageTitle();
+    }
+
+    if (!isPage && this.isBlogCategory()) {
+      pageTitle = 'Blog'
+    }
 
     analytics.page('Website', {
       Page: pageTitle
@@ -37,7 +46,11 @@ export default React.createClass({
   isBlogPost() {
     let page = this.props.page;
 
-    return (_.startsWith(page.requirePath, 'blog/') && _.isObject(page.data));
+    return (page && _.startsWith(page.requirePath, 'blog/') && _.isObject(page.data));
+  },
+
+  isBlogCategory() {
+    return _.startsWith(this.props.state.path, '/blog/category/');
   },
 
   getBlogPostTitle() {
