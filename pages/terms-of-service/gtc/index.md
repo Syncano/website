@@ -64,4 +64,3 @@ Unless otherwise noted, the graphic images, buttons and text contained in the Sy
 In the event you elect to communicate to us suggestions for improvements to the Syncano Website or any of Syncano's services or properties (collectively, "Feedback"), we shall own all right, title, and interest in and to the same, even if You have designated the Feedback as confidential, and we shall be entitled to use the Feedback without restriction. Furthermore, any other content or information You post or provide to Syncano via comments, forums, emails and the like (collectively, "Communications") shall be considered the property of Syncano. You hereby irrevocably assign all right, title and interest in and to the Feedback and Communications to us and agree to provide us such assistance as we may require documenting, perfecting, and maintaining our rights to the Feedback and Communications.
 
 Last updated 4. feb 2014
- No newline at end of file

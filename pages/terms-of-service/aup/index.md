@@ -44,4 +44,3 @@ Violation of this Acceptable Use Policy may result in the immediate suspension o
 We reserve the right to change the Acceptable Use Policy from time to time without notice by posting changes to Syncano's website. When we do, we will also revise the "last update" date of the Acceptable Use Policy.
 
 Last updated 4. feb 2014
- No newline at end of file

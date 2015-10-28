@@ -58,4 +58,3 @@ Syncano operates "AS-IS" and "AS-AVAILABLE," without liability of any kind. Sync
 Last updated 4. feb 2014
 
 &nbsp;
- No newline at end of file

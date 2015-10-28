@@ -64,4 +64,3 @@ sara.cowie@syncano.com
 Subject to the requirements of the Safe Harbor Program, Syncano may modify and/or amend this policy at any time. Any changes or modification will be posted on our website and will take effect thirty (30) days after the changes are posted.
 
 &nbsp;
- No newline at end of file
