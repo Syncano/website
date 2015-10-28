@@ -6,7 +6,8 @@ export default React.createClass({
 
   getSEOConfig() {
     return {
-      title: "Thank you for contacting us"
+      title: "Thank you for contacting us",
+      mixpanelTitle: "Thank you for contacting us"
     }
   },
 
@@ -15,7 +16,10 @@ export default React.createClass({
 
     return (
       <div className="contact" style={{paddingTop: 90, paddingBottom: 90}}>
-        <Helmet title={SEO.title}/>
+        <Helmet
+          title={SEO.title}
+          meta={[{"name": "mixpanelTitle", "content": SEO.mixpanelTitle}]}
+        />
         <div className="container">
           <div className="col-md-7">
             <h1>Thank you!<br/>Your message has been received.</h1>

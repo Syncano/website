@@ -8,7 +8,7 @@ export default React.createClass({
     return {
       title: 'Support',
       description: 'Our scalable backend helps developers build complex, real-time apps with only front-end code.',
-      keywords: 'real-time apps, real-time app, front-end code'
+      mixpanelTitle: 'Support'
     }
   },
   
@@ -19,7 +19,10 @@ export default React.createClass({
       <div className="support">
         <Helmet
           title={SEO.title}
-          meta={[{"name": "description", "content": SEO.description}]}
+          meta={[
+            {"name": "description", "content": SEO.description},
+            {"name": "mixpanelTitle", "content": SEO.mixpanelTitle}
+          ]}
         />
         <div className="hero">
           <div className="container">
