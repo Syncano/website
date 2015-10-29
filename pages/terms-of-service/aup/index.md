@@ -1,6 +1,7 @@
 ---
 layout: terms
 title: Acceptable Use Policy
+mixpanel_title: Acceptable Use Policy
 permalink: /terms-of-service/aup/
 seo_description: "Syncano's acceptable use policy."
 keywords: "Acceptable Use Policy"

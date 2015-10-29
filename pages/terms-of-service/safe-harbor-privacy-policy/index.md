@@ -1,6 +1,7 @@
 ---
 layout: terms
 title: Safe Harbor Privacy Policy
+mixpanel_title: Safe Harbor Privacy Policy
 permalink: /terms-of-service/safe-harbor-privacy-policy/
 ---
 

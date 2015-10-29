@@ -7,7 +7,7 @@ export default React.createClass({
     return {
       title: "Terms of Service",
       description: "Syncano's terms of service.",
-      keywords: "Syncano terms of service"
+      mixpanelTitle: "Terms of Service"
     }
   },
       
@@ -18,7 +18,10 @@ export default React.createClass({
       <div>
         <Helmet
           title={SEO.title}
-          meta={[{"name": "description", "content": SEO.description}]}
+          meta={[
+            {"name": "description", "content": SEO.description},
+            {"name": "mixpanelTitle", "content": SEO.mixpanelTitle}
+          ]}
         />
         <h1>Terms of Service</h1>
         <p>In order to use the Syncano API (the “Syncano API” or “API”), access the information contained on the Syncano website (the “Website”) or make use of the services provided by Syncano (the “Service” or “Services”), you (hereinafter referred to as “You”) must first read this agreement (the “Agreement”) and accept it. You may not make use of the Syncano API, Website or Services if You do not accept this Agreement and the terms therein.

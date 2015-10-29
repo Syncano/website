@@ -5,7 +5,8 @@ export default React.createClass({
 
   getSEOConfig() {
     return {
-      title: "Jobs"
+      title: 'Jobs',
+      mixpanelTitle: 'Jobs'
     }
   },
 
@@ -14,7 +15,10 @@ export default React.createClass({
 
     return (
       <div className="jobs ">
-        <Helmet title={SEO.title}/>
+        <Helmet
+          title={SEO.title}
+          meta={[{"name": "mixpanelTitle", "content": SEO.mixpanelTitle}]}
+        />
         <div className="hero" style={{backgroundImage: `url('${require('../../images/jobs-bg.png')}')`}}>
           <div className="container">
             <div className="info">

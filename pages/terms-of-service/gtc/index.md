@@ -1,9 +1,9 @@
 ---
 layout: terms
 title: General Terms and Conditions
+mixpanel_title: General Terms and Conditions
 permalink: /terms-of-service/gtc/
 seo_description: "Syncano's general terms and conditions."
-keywords: "General Terms and Conditions"
 ---
 
 <h1>General Terms and Conditions</h1>

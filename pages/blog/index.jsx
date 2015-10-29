@@ -10,6 +10,14 @@ import BlogPostItem from '../../components/BlogPostItem';
 
 export default React.createClass({
 
+  getSEOConfig() {
+    return {
+      title: "Blog",
+      description: "The Syncano blog covers all news and tips related to real-time syncing and scaling data on the cloud.",
+      mixpanelTitle: "Blog"
+    }
+  },
+
   sortItem(item) {
     return item.data ? item.data.date : null;
   },
@@ -160,9 +168,17 @@ export default React.createClass({
   },
 
   render() {
+    let SEO = this.getSEOConfig();
+
     return (
       <div className="blog">
-        <Helmet title={this.props.config.blogTitle}/>
+        <Helmet
+          title={SEO.title}
+          meta={[
+            {"name": "description", "content": SEO.description},
+            {"name": "mixpanelTitle", "content": SEO.mixpanelTitle}
+          ]}
+        />
         <div className="container blog" style={{paddingBottom: 40}}>
           <div className="posts">
             {this.renderCategoryHeadline()}

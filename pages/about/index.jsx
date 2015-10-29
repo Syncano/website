@@ -9,7 +9,7 @@ export default React.createClass({
     return {
       title: "About Us",
       description: "Syncano was created to help developers build, test, and ship amazing experiences on more devices, in less time, and with fewer resources.",
-      keywords: "syncano team, syncano jobs, syncano careers, syncano board, about syncano, syncano location, syncano office"
+      mixpanelTitle: "About Us"
     }
   },
 
@@ -90,7 +90,10 @@ export default React.createClass({
       <div className="about">
         <Helmet
           title={SEO.title}
-          meta={[{"name": "description", "content": SEO.description}]}
+          meta={[
+            {"name": "description", "content": SEO.description},
+            {"name": "mixpanelTitle", "content": SEO.mixpanelTitle}
+          ]}
         />
         <div className="hero">
           <div className="container">

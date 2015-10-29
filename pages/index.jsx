@@ -13,7 +13,7 @@ export default React.createClass({
     return {
       title: "Turning developers into superstars",
       description: "Syncano is a backend platform to build powerful real-time apps more efficiently. Integrate with any API, minimize boilerplate code and control your data.",
-      keywords: "real-time apps, real-time app, front-end code"
+      mixpanelTitle: "Home"
     }
   },
 
@@ -37,7 +37,10 @@ export default React.createClass({
       <div className="home ">
         <Helmet
           title={SEO.title}
-          meta={[{"name": "description", "content": SEO.description}]}
+          meta={[
+            {"name": "description", "content": SEO.description},
+            {"name": "mixpanelTitle", "content": SEO.mixpanelTitle}
+          ]}
         />
         <div className="bg-wrap" style={{background: '#244273'}}>
           <div className="hero">

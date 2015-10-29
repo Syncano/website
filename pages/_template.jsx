@@ -18,8 +18,54 @@ require('../fonts/avenir/avenir.css');
 export default React.createClass({
   mixins: [State],
 
+  componentDidMount() {
+    this.trackPageView();
+  },
+
   componentDidUpdate() {
-    analytics.page();
+    this.trackPageView();
+  },
+
+  trackPageView() {
+    let isPage = this.props.page;
+    let pageTitle;
+
+    if (isPage) {
+      pageTitle = this.isBlogPost() ? this.getBlogPostTitle() : this.getWebsitePageTitle();
+    }
+
+    if (!isPage && this.isBlogCategory()) {
+      pageTitle = 'Blog'
+    }
+
+    analytics.page('Website', {
+      Page: pageTitle
+    });
+  },
+
+  isBlogPost() {
+    let page = this.props.page;
+
+    return (page && _.startsWith(page.requirePath, 'blog/') && _.isObject(page.data));
+  },
+
+  isBlogCategory() {
+    return _.startsWith(this.props.state.path, '/blog/category/');
+  },
+
+  getBlogPostTitle() {
+    return this.props.page.data.title;
+  },
+
+  getWebsitePageTitle() {
+    let helmet = Helmet.peek();
+    let markdownFileData = this.props.page.data;
+
+    if (markdownFileData) {
+      return markdownFileData.mixpanel_title;
+    }
+
+    return _.result(_.find(helmet.metaTags, 'name', 'mixpanelTitle'), 'content');
   },
 
   renderNav() {

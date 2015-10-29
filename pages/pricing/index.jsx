@@ -8,7 +8,7 @@ export default React.createClass({
     return {
       title: "Pricing",
       description: "Syncano's a pay-as-you go pricing model supports up to 1,500 simultaneous connections. Contact us if you need further support.",
-      keywords: "syncano, syncano pricing, syncano cost, real-time sync cost, real-time sync pricing"
+      mixpanelTitle: "Pricing"
     }
   },
 
@@ -19,7 +19,10 @@ export default React.createClass({
       <div className="pricing-page">
         <Helmet
           title={SEO.title}
-          meta={[{"name": "description", "content": SEO.description}]}
+          meta={[
+            {"name": "description", "content": SEO.description},
+            {"name": "mixpanelTitle", "content": SEO.mixpanelTitle}
+          ]}
         />
         <div className="hero">
           <div className="container">
