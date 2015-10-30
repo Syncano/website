@@ -99,7 +99,7 @@ export default React.createClass({
           <div className="container-fluid" id="testimonials">
             <div className="row">
               <div className="col-md-6 col-sm-6 image">
-                <img src={require('../images/hally.png')} alt="Hally Knutsen"/>
+                <img src={require('../images/hally.jpg')} alt="Hally Knutsen"/>
               </div>
               <div className="col-md-6 col-sm-6 text-center">
                 <div className="quote">"What used to take 5 weeks now takes just 1 <br/>week with Syncano. <strong>You let developers be <br/>developers and not get stuck being<br/> middleware or database engineers.</strong>"</div>
@@ -108,7 +108,7 @@ export default React.createClass({
             </div>
             <div className="row">
               <div className="col-md-6 col-sm-6 image">
-                <img src={require('../images/krystian.png')} alt="Krystian"/>
+                <img src={require('../images/krystian.jpg')} alt="Krystian"/>
               </div>
               <div className="col-md-6 col-sm-6 text-center">
                 <div className="quote">"Hands-down the easiest way to build robust, <br/>advanced apps with real-time sync. CodeBox <br/>even lets me use third-party apps just like <br/>native ones. <strong>Finally I can build anywhere, <br/>anything, anytime on any device."</strong>
@@ -118,7 +118,7 @@ export default React.createClass({
             </div>
             <div className="row">
               <div className="col-md-6 col-sm-6 image">
-                <img src={require('../images/patrick.png')} alt="Patrick"/>
+                <img src={require('../images/patrick.jpg')} alt="Patrick"/>
               </div>
               <div className="col-md-6 col-sm-6 text-center">
                 <div className="quote">"Syncano's personal, responsive support was a <br/>difference maker for me. <strong>Syncano is the <br/>developers' champion."</strong>
