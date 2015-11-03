@@ -27,7 +27,7 @@ export default React.createClass({
     let categoryUrl = `/blog/category/${categoryName}/`;
 
     return (
-      <li><Link to={categoryUrl} style={{borderBottom: 0}}>{category}</Link></li>
+      <li key={category}><Link to={categoryUrl} style={{borderBottom: 0}}>{category}</Link></li>
     )
   },
 

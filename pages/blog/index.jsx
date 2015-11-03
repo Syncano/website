@@ -31,7 +31,7 @@ export default React.createClass({
   },
 
   renderSingleItem(item, index) {
-    return <BlogPostItem item={item} index={index}/>
+    return <BlogPostItem key={index} item={item} index={index}/>
   },
 
   getCategorySlug(category) {

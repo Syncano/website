@@ -1,13 +1,12 @@
 import React from 'react';
 import { RouteHandler, Link, State } from 'react-router';
-import { Container, Grid, Breakpoint, Span } from 'react-responsive-grid';
 import colorPairsPicker from 'color-pairs-picker';
 import chroma from 'chroma-js';
 import includes from 'underscore.string/include';
 import { link, templateChildrenPages } from 'gatsby-helpers';
 import Newsletter from '../components/Newsletter';
 import _ from 'lodash';
-import { Navbar, CollapsibleNav, Nav } from 'react-bootstrap';
+import { Navbar, NavBrand, CollapsibleNav, Nav } from 'react-bootstrap';
 import Helmet from 'react-helmet';
 
 require('../css/bootstrap.min.css');
@@ -69,14 +68,13 @@ export default React.createClass({
   },
 
   renderNav() {
-    let brand = (
-      <Link to="/">
-        <img className="light-version" src={require('../images/syncano-white.png')} alt="Syncano Logo white"/>
-      </Link>
-    );
-
     return (
-      <Navbar bsStyle="" brand={brand} className="navbar navbar-fixed-top dark" style={{background: '#244273', boxShadow: 'none'}} toggleNavKey={0}>
+      <Navbar bsStyle="" className="navbar navbar-fixed-top dark" style={{background: '#244273', boxShadow: 'none'}} toggleNavKey={0}>
+        <NavBrand>
+          <Link to="/" style={{float: 'left'}}>
+            <img className="light-version" src={require('../images/syncano-white.png')} alt="Syncano Logo white"/>
+          </Link>
+        </NavBrand>
         <CollapsibleNav eventKey={0}>
           <Nav navbar>
             <li><a href="http://docs.syncano.com/" target="_blank">Docs</a></li>

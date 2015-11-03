@@ -54,7 +54,7 @@ export default React.createClass({
     return (
       <div className="pagination clearfix">
         {this.renderPrevButton()}
-        <span className="page_number col-md-4 col-xs-4">Page <strong>{{currentPage}}</strong> of <strong>{pagesCount}</strong></span>
+        <span className="page_number col-md-4 col-xs-4">Page <strong>{currentPage}</strong> of <strong>{pagesCount}</strong></span>
         {this.renderNextButton(pagesCount)}
       </div>
     )
