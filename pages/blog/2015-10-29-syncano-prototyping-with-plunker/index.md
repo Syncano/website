@@ -27,11 +27,9 @@ To benefit you as a Syncano user, we decided to create a Syncano Javascript Libr
 
 To get started, make sure you have a Syncano account. If you don't, visit our <a href="https://dashboard.syncano.io/#/signup" target="_blank">signup page</a> to create an account.
 
-If you already have an account, click on <a href="http://plnkr.co/edit/TjzdW0" target="_blank">this link</a> to open the Plunk.
+If you already have an account, click on <a href="http://plnkr.co/edit/tpl:TjzdW0" target="_blank">this link</a> to open the Plunk.
 
 You'll see that when you first open the code, there are a bunch of files listed on the left side of the window. These are the files you're going to edit in order to test your Syncano API calls. The only two you really have to worry about are **index.html** and **syncano-script.js**. Our Syncano JS Library is already included in that list of files, and already imported at the top of the **index.html** file, so that you can start using it right away!
-
-**Before you start using the Plunk template, click _"Fork"_ at the top of the window to save it as your own Plunk!**
 
 ## Inserting API Info
 
