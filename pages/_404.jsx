@@ -15,7 +15,7 @@ export default React.createClass({
     return _.trimRight(this.props.params.splat, '/');
   },
 
-  componentDidMount() {
+  componentWillMount() {
     let routeId = this.getRouteId();
     let newBlogPostPath = `/blog/${routeId}/`;
     let isBlogpost = _.some(this.getAllPosts(), { path: newBlogPostPath});
