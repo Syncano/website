@@ -1,5 +1,6 @@
 import React from 'react';
-import Syncano from 'syncano-components';
+import Slider from 'syncano-components/lib/slider/slider';
+import SliderSection from 'syncano-components/lib/slider/slider-section';
 
 export default React.createClass({
 
@@ -114,7 +115,7 @@ export default React.createClass({
     });
 
     return (
-      <Syncano.Slider.Slider
+      <Slider
         key={type + 'Slider'}
         ref={type + 'Slider'}
         name={type + 'Slider'}
@@ -178,12 +179,12 @@ export default React.createClass({
       <div className="hidden-xs" style={{marginBottom: 80}}>
         <div style={{paddingTop: 34}}>
 
-          <Syncano.Slider.Section
+          <SliderSection
             title="API calls"
             slider={this.renderSlider('api')}
             sliderSummary={apiSliderSummary}/>
 
-          <Syncano.Slider.Section
+          <SliderSection
             style={{paddingTop: 50}}
             title="CodeBox runs"
             slider={this.renderSlider('cbx')}

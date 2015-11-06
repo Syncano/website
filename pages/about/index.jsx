@@ -68,7 +68,13 @@ export default React.createClass({
   },
 
   renderCarouselImage(image) {
-    return <img src={image} alt={`image ${image}`}/>
+    return (
+      <img
+        key={image}
+        src={image}
+        alt={`image ${image}`}
+      />
+    )
   },
 
   getStyles() {
