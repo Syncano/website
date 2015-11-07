@@ -17,10 +17,10 @@ export default React.createClass({
     return (
       <div className="links social-share">
         <div className={`arrow-${arrow}`}></div>
-        <a className="fa fa-facebook" href={`https://www.facebook.com/sharer/sharer.php?u=http://www.syncano.io/blog${item.path}`} target="_blank"></a>
-        <a className="fa fa-twitter" href={`https://twitter.com/intent/tweet?text=Blog&url=http://www.syncano.io/blog${item.path}`} target="_blank"></a>
-        <a className="fa fa-google" href={`https://plus.google.com/share?url=http://www.syncano.io/blog${item.path}`} target="_blank"></a>
-        <a className="fa fa-pinterest" href={`http://pinterest.com/pin/create/button/?url=http://www.syncano.io/blog${item.path}&description=${title}&media=http://www.syncano.io${image}`} target="_blank"></a>
+        <a className="fa fa-facebook" href={`https://www.facebook.com/sharer/sharer.php?u=http://www.syncano.io${item.path}`} target="_blank"></a>
+        <a className="fa fa-twitter" href={`https://twitter.com/intent/tweet?text=Blog&url=http://www.syncano.io${item.path}`} target="_blank"></a>
+        <a className="fa fa-google" href={`https://plus.google.com/share?url=http://www.syncano.io${item.path}`} target="_blank"></a>
+        <a className="fa fa-pinterest" href={`http://pinterest.com/pin/create/button/?url=http://www.syncano.io${item.path}&description=${title}&media=http://www.syncano.io${image}`} target="_blank"></a>
       </div>
     )
   }
