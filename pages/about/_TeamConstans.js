@@ -1,4 +1,9 @@
 export default {
+  adam: {
+    name: 'Adam Wardecki',
+    twitter: 'AWardecki',
+    photo: 'adam.png'
+  },
   sara: {
     name: 'Sara Cowie',
     twitter: 'saracowie',
