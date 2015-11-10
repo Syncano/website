@@ -46,7 +46,7 @@ Ok. So we are done with the configuration part! After the changes, your config f
 ## Is it working?
 Now, let’s test to see if the backups are working. Go to the “readme_backup” CodeBox edit tab and press the “Run CodeBox” button:
 
-![Run your CodeBox](image01.png)
+![Run your CodeBox](image03.png)
 
 After a couple of seconds, the result screen should display “Success”. You can now go to Classes view to check if a Data Object with the docs backup was created. To do that:
 
