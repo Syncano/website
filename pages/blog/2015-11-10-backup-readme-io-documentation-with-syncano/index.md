@@ -14,8 +14,8 @@ What’s more, we are sharing the solution with you, so that you can also do you
 
 ## Create a Syncano account and install a ReadMe.io backups Solution
 
-1. First, you need to log in to your Syncano Dashboard, or create an account if you don’t yet have one. You can do this under this url:  dashboard.syncano.io
-2. Once you’re in and have your first Instance created, go to this Solution url: https://dashboard.syncano.io/#/solutions/56/edit
+1. First, you need to log in to your Syncano Dashboard, or create an account if you don’t yet have one. You can do this under this url:  [dashboard.syncano.io](https://dashboard.syncano.io/)
+2. Once you’re in and have your first Instance created, go to this Solution url: [https://dashboard.syncano.io/#/solutions/56/edit](https://dashboard.syncano.io/#/solutions/56/edit)
 
 A quick explanation here: Syncano Solutions are easy-to-install app templates that can significantly speed up the development process. In this case, we’ll be using Python scripts that will help us backup the data from ReadMe.io.
 
@@ -28,25 +28,25 @@ Once the Solution is installed, we’ll need to configure couple of things. Firs
 3. Click on the request that was just made to get its details.
 4. Copy the value of the Cookie from the “request headers” section
 
-![image00.png](image00.png)
+![Get Cookies](image05.png)
 
 5. Once you have the Cookie, go back to your Syncano Dashboard. Go to the Config section of a CodeBox called “readme_backup”. This is how the screen should look:
 
-![image01.png](image01.png)
+![Initial Config](image04.png)
 
 6. Replace the “COOKIE” with the value you copied from ReadMe.io
 7. Change “PROJECT_NAME” to the name of your documentation project on ReadMe.io
 8. “PROJECT_VERSION” should be the version you would like to back up
-9. “ACCOUNT_KEY” is your Syncano Account Key and can be found on this page
+9. “ACCOUNT_KEY” is your Syncano Account Key and can be found on [this page](https://dashboard.syncano.io/#/account/authentication)
 
 Ok. So we are done with the configuration part! After the changes, your config file should look more or less like this:
 
-![image03.png](image03.png)
+![Config with data](image02.png)
 
 ## Is it working?
 Now, let’s test to see if the backups are working. Go to the “readme_backup” CodeBox edit tab and press the “Run CodeBox” button:
 
-![image04.png](image04.png)
+![Run your CodeBox](image01.png)
 
 After a couple of seconds, the result screen should display “Success”. You can now go to Classes view to check if a Data Object with the docs backup was created. To do that:
 
@@ -55,7 +55,7 @@ After a couple of seconds, the result screen should display “Success”. You c
 
 You should see a table with one row. This is a Data Object that stores your docs! You can click on the arrow to download the file or use the “get_docs_backup” CodeBox to retrieve the exact page you want (more on that later).
 
-![image05.png](image05.png)
+![Backup object](image00.png)
 
 ## Let’s make a backup schedule!
 
@@ -66,7 +66,7 @@ Ok, so we have a CodeBox code that will create backups, but what about schedulin
 3. Choose the time interval at which the backups should be made
 4. Click the “Confirm” button to approve your changes
 
-![image06.png](image06.png)
+![Make a schedule](image01.png)
 
 Now the “readme_backup” CodeBox will run according to the schedule that we just set up and will create a regular backups.
 
@@ -78,7 +78,7 @@ To restore one of the docs pages:
 
 1. Go to the “readme_backup” Class and choose an ID of a Data Object that contains the backup that you’d like to restore
 2. Go to the CodeBox list and choose “get_docs_backup” CodeBox to view its details
-3. Go to the Config section and paste the Data Object ID and your Account Key (available here)
+3. Go to the Config section and paste the Data Object ID and your Account Key (available [here](https://dashboard.syncano.io/#/account/authentication))
 4. Go to the CodeBox edit screen
 
 Here you’ll have to edit the code to get exactly what you want. You can check the versions by printing this line:
