@@ -22,7 +22,7 @@ deployment:
   production:
     branch: master
     commands:
-      - gatsby build
+      - NODE_ENV=production gatsby build
       - bundle exec s3_website push --config-dir=./config/production/
   staging:
     branch: devel
