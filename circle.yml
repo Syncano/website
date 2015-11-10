@@ -1,6 +1,6 @@
 machine:
   ruby:
-    version: 1.9.3-p448
+    version: 2.2.3
   node:
     version: 4.2.2
   pre:
@@ -12,23 +12,20 @@ machine:
 
 dependencies:
   pre:
-    - if [ ! -e ~/nvm/versions/node/v4.2.2/bin/gatsby ]; then npm install -g syncano-gatsby@0.6.2-7; else echo "gatsby seems to be cached"; fi;
-  override:
-    - bundle install
-    - npm install
+    - if [ ! -e ~/nvm/versions/node/v4.2.2/lib/node_modules/syncano-gatsby ]; then npm install -g syncano-gatsby@0.6.2-7; else echo "gatsby seems to be cached"; fi;
 
 test:
   override:
-    - npm -g list
+    - echo "test"
 
 deployment:
   production:
     branch: master
     commands:
       - gatsby build
-      - s3_website push --config-dir=./config/production/
+      - bundle exec s3_website push --config-dir=./config/production/
   staging:
     branch: devel
     commands:
       - NODE_ENV=staging gatsby build
-      - s3_website push --config-dir=./config/staging/
+      - bundle exec s3_website push --config-dir=./config/staging/
