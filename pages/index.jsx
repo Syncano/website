@@ -132,7 +132,7 @@ export default React.createClass({
         <div className="data">
           <div className="container">
             <h2 className="text-center">Define your data schema based on your apps’ needs</h2>
-            <h5 className="text-center">Build complex data structures with <a href="http://docs.syncano.com/docs/classe" target="_blank">Classes</a></h5>
+            <h5 className="text-center">Build complex data structures with <a href="http://docs.syncano.com/docs/classes" target="_blank">Classes</a></h5>
             <div className="row">
               <div className="col-md-4 col-md-offset-2 text-center">
                 <div>
