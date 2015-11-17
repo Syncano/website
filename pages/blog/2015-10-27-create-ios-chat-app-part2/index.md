@@ -248,6 +248,6 @@ That's it! You just finished part 2 of this tutorial and your app is semi-ready 
 
 You can find the code on [GitHub](https://github.com/lifcio/SyncanoChat/tree/v4_Part_02).
 
-In the third part, we will add user registration and authentication and a few UI tweaks, to visually distinguish between messages sent by different people. Stay tuned!
+In [the third part](/blog/create-ios-chat-app-part3/), you can learn more about how to add user registration and authentication and a few UI tweaks, to visually distinguish between messages sent by different people. Stay tuned!
 
 As always, if you have any troubles implementing the app, don't hesitate to leave a comment or ask for help at [support@syncano.com](support@syncano.com) (or shoot me a tweet at [@lifcio](https://twitter.com/lifcio)).
