@@ -307,7 +307,7 @@ When someone presses the `Send` button, we will add a typed message to the `mess
 
 That's it! You now have a fully functioning chat app interface, allowing you to send messages and see ones coming from others.
 
-In ​[part 2](/blog/create-ios-chat-app-part2/)​you can learn more about how to add communication with Syncano, including storing messages on our servers, along with the ability for real-time sync.
+In [part 2](/blog/create-ios-chat-app-part2/) you can learn more about how to add communication with Syncano, including storing messages on our servers, along with the ability for real-time sync.
 
 You can find this project, and all the code from this part of our demo, on [GitHub](https://github.com/lifcio/SyncanoChat/tree/v4_Part_01).
 
