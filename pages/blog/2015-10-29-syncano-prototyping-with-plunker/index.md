@@ -66,4 +66,4 @@ Here is the link to the GitHub repo, so you can download the files and test them
 
 <a href="https://github.com/devintyler/syncano-plunker-template" target="_blank">Plunker Template GitHub Repo</a>
 
-**For examples on how to use Syncano, as well as different API calls that you can make, take a look at our <a href="http://docs.syncano.com/" target="_blank">docs</a>.**
+**For examples on how to use Syncano, as well as different API calls that you can make, take a look at our <a href="http://docs.syncano.io/" target="_blank">docs</a>.**

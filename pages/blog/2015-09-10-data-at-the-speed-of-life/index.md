@@ -44,7 +44,7 @@ When creating an object, next to setting its normal properties -- such as title,
 Here, we'll show you how quickly you can set up Channels usage for your app.
 
 * Log in to your Dashboard under [dashboard.syncano.io](https://dashboard.syncano.io)
-* Choose your instance (or [add a new one](http://docs.syncano.com/docs/getting-started-with-syncano#adding-an-instance) if you don't have one yet)
+* Choose your instance (or [add a new one](http://docs.syncano.io/docs/getting-started-with-syncano#adding-an-instance) if you don't have one yet)
 * Create a new Channel
 * Name it (e.g., `todo-list`) and set `Other permissions` to subscribe
 
@@ -120,7 +120,7 @@ As you can see, adding real-time features to your app requires you to add only a
 
 On top of using Channels, which are a generic place for all messages, you can also decide to use Channel Rooms -- which are more private, and no one else will be able to see the data in there (unless you share the room name with them).
 
-You can also use Channels to send your own custom messages, or to see the Channel message history. If you'd like to learn more, I encourage you to take a look at our docs on [Real-Time Communication](http://docs.syncano.com/docs/realtime-communication).
+You can also use Channels to send your own custom messages, or to see the Channel message history. If you'd like to learn more, I encourage you to take a look at our docs on [Real-Time Communication](http://docs.syncano.io/docs/realtime-communication).
 
 If you have any questions, mail us at [support@syncano.com](mailto:support@syncano.com).
 

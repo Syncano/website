@@ -23,7 +23,7 @@ Let’s say you have some code in your app that updates the weather for differen
 
 ![update weather](https://d3rij3t703q5l6.cloudfront.net/555/6/4076b80f129a75d6fef124eda7ce5667db7459d2.png)
 
-You can see how to set up a Schedule [here](http://docs.syncano.com/docs/schedules).
+You can see how to set up a Schedule [here](http://docs.syncano.io/docs/schedules).
 
 We support Schedules because we know that setting up task automation with a backend framework and server can get complex and difficult. Will you have to set up a task queue? Will your server be able to handle X number of tasks, scheduled to run every few minutes? What happens to your scheduled tasks if your servers stop running?
 
@@ -39,7 +39,7 @@ With Triggers, we are tackling some of the hurdles that come with event handling
 
 ## Webhooks
 
-Webhooks can be a lot of fun. You [can create Webhook URLs](http://docs.syncano.com/docs/webhooks#section-step-3-create-a-webhook-that-will-run-that-codebox) that trigger [CodeBoxes](http://docs.syncano.com/docs/codebox-overview). With this feature, you can set up ways for other applications to send data and activate events in Syncano.
+Webhooks can be a lot of fun. You [can create Webhook URLs](http://docs.syncano.io/docs/webhooks#section-step-3-create-a-webhook-that-will-run-that-codebox) that trigger [CodeBoxes](http://docs.syncano.io/docs/codebox-overview). With this feature, you can set up ways for other applications to send data and activate events in Syncano.
 
 Let’s say you made a CodeBox that uses the Venmo API to charge someone a dollar. You can make a slack integration so that any time a user types a swear word, you execute a Webhook sending that user’s email to Syncano. Your CodeBox called “SwearJar” then executes and charges that user a dollar.
 

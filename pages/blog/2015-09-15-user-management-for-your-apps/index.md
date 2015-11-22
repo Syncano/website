@@ -67,10 +67,10 @@ The user has rights to every data object that allows `read`, `write`, or `full` 
 + `Owner` -- if the user created the data object
 + `Other` -- if anyone else created the data object
 
-You can read more about the specific permissions [in our docs](http://docs.syncano.com/docs/permissions).
+You can read more about the specific permissions [in our docs](http://docs.syncano.io/docs/permissions).
 
 #### Group Permissions
-A user can also belong to a group -- or a collection of users.  This allows you to really fine tune your permission model. Each data object also has a `group` permission set.  I'm not going to go into groups too much this time, but you can read more about groups [in our docs](http://docs.syncano.com/docs/groups) as well.
+A user can also belong to a group -- or a collection of users.  This allows you to really fine tune your permission model. Each data object also has a `group` permission set.  I'm not going to go into groups too much this time, but you can read more about groups [in our docs](http://docs.syncano.io/docs/groups) as well.
 
 ### Logging In Users
 Your application won't always need to create a new user, but instead only log them in -- or, even better, let them log in with a social account like Facebook or Google+.
@@ -103,7 +103,7 @@ syncano().login({socialToken: BACKEND_PROVIDER_TOKEN, backend: backend_name}).th
 });
 ```
 
-For additional reference and detail, please you can view our [User management documentation](http://docs.syncano.com/docs/user-management).
+For additional reference and detail, please you can view our [User management documentation](http://docs.syncano.io/docs/user-management).
 
 ### Updating Profiles
 The last item for this post is the `user_profile`. I mentioned earlier that the default profile doesn't have much to it. That's because no one at Syncano knows exactly what you want to include, and instead of forcing you to follow what we set up, we let you manage the requirements.

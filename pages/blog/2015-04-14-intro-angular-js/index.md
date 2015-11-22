@@ -235,4 +235,4 @@ console.log("running");
 
 <p>The <em>$http</em> object is extremely powerful.  It's primary use is to ingest data from the backend.  As we see here, using $http object we are able to interact with Express directly.</p>
 
-Want to use Angular with Syncano? Check out our <a href="http://docs.syncano.com/v3.2.1/docs/javascript-index">JavaScript Quick Start Guide</a> to get started.
+Want to use Angular with Syncano? Check out our <a href="http://docs.syncano.io/v3.2.1/docs/javascript-index">JavaScript Quick Start Guide</a> to get started.

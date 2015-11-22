@@ -32,7 +32,7 @@ export default React.createClass({
                 <div className="col-md-8 col-md-offset-2">
                   <div className="row">
                     <div className="col-sm-4">
-                      <a href="http://docs.syncano.com" target="_blank">
+                      <a href="http://docs.syncano.io" target="_blank">
                         <div className="support-hero-links__image">
                           <img src="docs.png" alt="docs"/>
                         </div>
@@ -67,10 +67,10 @@ export default React.createClass({
             <div className="sidebar col-md-3 col-md-offset-1">
               <h2>Quicklinks</h2>
               <ul>
-                <li><a href="http://docs.syncano.com/docs/getting-started-with-syncano/" target="_blank">Getting Started</a></li>
-                <li><a href="http://docs.syncano.com/docs/syncano-libraries/" target="_blank">Libraries</a></li>
-                <li><a href="http://docs.syncano.com/v0.1/" target="_blank">HTTP API Reference</a></li>
-                <li><a href="http://docs.syncano.com/docs/faq/" target="_blank">FAQ</a></li>
+                <li><a href="http://docs.syncano.io/docs/getting-started-with-syncano/" target="_blank">Getting Started</a></li>
+                <li><a href="http://docs.syncano.io/docs/syncano-libraries/" target="_blank">Libraries</a></li>
+                <li><a href="http://docs.syncano.io/v0.1/" target="_blank">HTTP API Reference</a></li>
+                <li><a href="http://docs.syncano.io/docs/faq/" target="_blank">FAQ</a></li>
               </ul>
             </div>
             <div className="col-md-8">
@@ -99,7 +99,7 @@ export default React.createClass({
               <p>Additionally, when you create a specialized server and API for your app, then they are only good for that particular app. When you start developing a new app, you’re back at the beginning.  Syncano eliminates the need for you to create a specialized server and API. You can reuse functionality for any app you build and focus on problems specific to your app instead.</p>
               <p>Our goal is to reduce boilerplate code and for any front-end developer to be able to build a fully-fledged app without having to know backend code. We hope to give control back to the developer, to create a platform that gives you the flexibility to build how you want. We believe developers should be spending time focusing on your customers - not on middleware, backend or maintenance issues.</p>
               <br/><br/>
-              <p><a href="http://docs.syncano.com/docs/faq/" target="_blank">More questions? Check out our FAQ</a></p>
+              <p><a href="http://docs.syncano.io/docs/faq/" target="_blank">More questions? Check out our FAQ</a></p>
               <br/>
               <div className="row">
                 <div className="col-md-12">
