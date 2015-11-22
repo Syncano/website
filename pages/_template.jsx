@@ -1,8 +1,5 @@
 import React from 'react';
 import { RouteHandler, Link, State } from 'react-router';
-import colorPairsPicker from 'color-pairs-picker';
-import chroma from 'chroma-js';
-import includes from 'underscore.string/include';
 import { link, templateChildrenPages } from 'gatsby-helpers';
 import LatestBlogPosts from '../components/LatestBlogPosts';
 import Newsletter from '../components/Newsletter';
