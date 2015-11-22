@@ -147,7 +147,7 @@ export default React.createClass({
                     with multiple applications. You can use it to create integrations between third party services, to
                     create your own logic accessible by an API built on Webhooks, to run schedules, to create triggers
                     and more. CodeBox Executions are measured by webhooks, schedules or triggers. These are all
-                    explained in detail <a href="http://docs.syncano.com/v4/docs/codebox-overview/" target="_blank">here</a>.
+                    explained in detail <a href="http://docs.syncano.io/v4/docs/codebox-overview/" target="_blank">here</a>.
                   </div>
                 </div>
                 <div className="pricing-faq__item">

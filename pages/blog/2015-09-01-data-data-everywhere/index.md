@@ -134,10 +134,10 @@ All of these can be combined to provide you flexibility when retrieving data.
 
 These are the basics of classes and data objects, but our developer manual goes into more detail if you want to learn more:
 
-+ [Classes](http://docs.syncano.com/docs/classes)
-+ [Data Objects](http://docs.syncano.com/docs/data-objects)
-+ [Data Objects Filtering and Ordering](http://docs.syncano.com/docs/data-objects-filtering)
-+ [Permissions](http://docs.syncano.com/v1.0/docs/permissions)
++ [Classes](http://docs.syncano.io/docs/classes)
++ [Data Objects](http://docs.syncano.io/docs/data-objects)
++ [Data Objects Filtering and Ordering](http://docs.syncano.io/docs/data-objects-filtering)
++ [Permissions](http://docs.syncano.io/v1.0/docs/permissions)
 
 We are constantly improving the platform, and would love to incorporate your feedback.  If you have any specific suggestions or ideas, feel free to provide those here: [https://syncano.ideas.aha.io/ideas](https://syncano.ideas.aha.io/ideas)
 Be sure to follow [@syncano](https://twitter.com/syncano) and [@kellyjandrews](https://twitter.com/kellyjandrews) for the latest announcements and information as well.

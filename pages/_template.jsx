@@ -78,7 +78,7 @@ export default React.createClass({
         </NavBrand>
         <CollapsibleNav eventKey={0}>
           <Nav navbar>
-            <li><a href="http://docs.syncano.com/" target="_blank">Docs</a></li>
+            <li><a href="http://docs.syncano.io/" target="_blank">Docs</a></li>
             <li><Link to="/support/">Support</Link></li>
             <li><Link to="/solutions/">Solutions</Link></li>
             <li><Link to="/pricing/">Pricing</Link></li>
@@ -142,7 +142,7 @@ export default React.createClass({
                 <h4>Resources</h4>
                 <ul>
                   <li><Link to="blog-template">Blog</Link></li>
-                  <li><a href="http://docs.syncano.com/" target="_blank">Docs</a></li>
+                  <li><a href="http://docs.syncano.io/" target="_blank">Docs</a></li>
                   <li><Link to="/pricing/">Pricing</Link></li>
                   <li><Link to="/solutions/">Solutions</Link></li>
                 </ul>
@@ -151,7 +151,7 @@ export default React.createClass({
                 <ul>
                   <li><Link to="/support/">Support</Link></li>
                   <li><Link to="/blog/category/tutorials/">Tutorials</Link></li>
-                  <li><a href="http://docs.syncano.com/docs/syncano-libraries/" target="_blank">Libraries</a></li>
+                  <li><a href="http://docs.syncano.io/docs/syncano-libraries/" target="_blank">Libraries</a></li>
                 </ul>
               </div>
               <div className="col-md-3 col-sm-3 col-xs-12">

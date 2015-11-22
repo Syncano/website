@@ -249,8 +249,8 @@ let collectionId = "56789"
 <p>Replace data above with your actual API Key, instance name, and project/collection IDs.</p>
 
 <ul>
-<li><a href="http://docs.syncano.com/v3.2.1/docs/instance-settings#api-keys">How to find your API Key</a></li>
-<li><a href="http://docs.syncano.com/v3.2.1/docs/accessing-syncano">How to find your Instance name and project/collection ID</a></li>
+<li><a href="http://docs.syncano.io/v3.2.1/docs/instance-settings#api-keys">How to find your API Key</a></li>
+<li><a href="http://docs.syncano.io/v3.2.1/docs/accessing-syncano">How to find your Instance name and project/collection ID</a></li>
 </ul>
 
 
@@ -430,6 +430,6 @@ if let savedUserName = NSUserDefaults.standardUserDefaults().stringForKey("userN
 <p>Also, check out our new docs and let us know what you think!</p>
 
 <ul>
-<li><a href="http://docs.syncano.com/v3.2.1/docs/getting-started">Developer Manual Basics</a></li>
-<li><a href="http://docs.syncano.com/v3.2.1/docs/ios-library">iOS Syncano Library Reference</a></li>
+<li><a href="http://docs.syncano.io/v3.2.1/docs/getting-started">Developer Manual Basics</a></li>
+<li><a href="http://docs.syncano.io/v3.2.1/docs/ios-library">iOS Syncano Library Reference</a></li>
 </ul>
