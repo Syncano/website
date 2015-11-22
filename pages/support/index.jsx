@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Scroll from 'react-scroll';
+import ContactForm from '../../components/ContactForm';
 
 export default React.createClass({
 
@@ -111,21 +112,7 @@ export default React.createClass({
                       <br/><br/>
                       <div className="row">
                         <div className="col-md-6">
-                          <form action="//formspree.io/support@syncano.com" method="POST" name="contact" className="contact">
-                            <input type="hidden" name="_subject" value="Contact Form Submission from syncano.io" />
-                            <input type="text" name="_gotcha" style={{display: 'none'}} />
-                            <input type="hidden" name="_next" value="/thank-contacting-us/" />
-                            <div className="form-group" id="name">
-                              <input className="form-control" type="text" name="name" placeholder="Name" required/>
-                            </div>
-                            <div className="form-group" id="email">
-                              <input className="form-control" type="email" name="_replyto" placeholder="Email" required/>
-                            </div>
-                            <div className="form-group">
-                              <textarea className="form-control" rows="3" name="message" placeholder="Message"></textarea>
-                            </div>
-                            <input type="submit" value="Send" className="btn btn-dark-blue" />
-                          </form>
+                          <ContactForm/>
                         </div>
                       </div>
                     </Scroll.Element>
