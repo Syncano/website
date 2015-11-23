@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import Team from '../pages/about/_TeamConstans';
 import { Link } from 'react-router';
 import Radium from 'radium';
-import SocialLinks from '../components/SocialLinks';
+import { SocialLinks } from '../components/';
 import ReactDisqusThread from 'react-disqus-thread';
 
 import WhiteShare from '../images/white-share.png';

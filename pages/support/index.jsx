@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Scroll from 'react-scroll';
-import ContactForm from '../../components/ContactForm';
+import { ContactForm } from '../../components/';
 
 export default React.createClass({
 

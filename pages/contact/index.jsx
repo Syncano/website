@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import { ContactForm } from '../../components/';
 
 export default React.createClass({
 
@@ -33,21 +34,7 @@ export default React.createClass({
                 <p>Need to call us? Try <a href="tel:16468834189">+1 646 883 4189</a></p>
               </div>
               <div className="col-md-4">
-                <form action="//formspree.io/hello@syncano.com" method="POST" name="contact" className="contact">
-                  <input type="hidden" name="_subject" value="Contact Form Submission from syncano.io" />
-                  <input type="text" name="_gotcha" style={{display: 'none'}} />
-                  <input type="hidden" name="_next" value="/thank-contacting-us/" />
-                  <div className="form-group" id="name">
-                    <input className="form-control" type="text" name="name" placeholder="Name" required/>
-                  </div>
-                  <div className="form-group" id="email">
-                    <input className="form-control" type="email" name="_replyto" placeholder="Email" required/>
-                  </div>
-                  <div className="form-group">
-                    <textarea className="form-control" rows="3" name="message" placeholder="Message"></textarea>
-                  </div>
-                  <input type="submit" value="Send" className="btn btn-dark-blue" />
-                </form>
+                <ContactForm mail="hello@syncano.com"/>
               </div>
             </div>
           </div>

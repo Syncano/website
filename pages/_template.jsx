@@ -1,8 +1,7 @@
 import React from 'react';
 import { RouteHandler, Link, State } from 'react-router';
 import { link, templateChildrenPages } from 'gatsby-helpers';
-import LatestBlogPosts from '../components/LatestBlogPosts';
-import Newsletter from '../components/Newsletter';
+import { LatestBlogPosts, Newsletter} from '../components/';
 import _ from 'lodash';
 import { Navbar, NavBrand, CollapsibleNav, Nav } from 'react-bootstrap';
 import Helmet from 'react-helmet';
@@ -43,7 +42,7 @@ export default React.createClass({
   isBlogPost() {
     let page = this.props.page;
 
-    return (page && _.startsWith(page.requirePath, 'blog/') && _.isObject(page.data));
+    return (page && _.startsWith(page.requirePath, 'blog/') && !_.startsWith(page.requirePath, 'blog/category/') && _.isObject(page.data));
   },
 
   isBlogCategory() {
@@ -91,7 +90,7 @@ export default React.createClass({
   },
 
   getAllPosts() {
-    let posts = _.filter(this.props.pages, (page) => page.data && _.startsWith(page.requirePath, 'blog/')).reverse();
+    let posts = _.filter(this.props.pages, (page) => page.data && _.startsWith(page.requirePath, 'blog/') && !_.startsWith(page.requirePath, 'blog/category/')).reverse();
 
     return posts;
   },

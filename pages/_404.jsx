@@ -6,7 +6,7 @@ export default React.createClass({
   mixins: [Navigation],
 
   getAllPosts() {
-    let posts = _.filter(this.props.pages, (page) => page.data && _.startsWith(page.requirePath, 'blog/'));
+    let posts = _.filter(this.props.pages, (page) => page.data && _.startsWith(page.requirePath, 'blog/') && !_.startsWith(page.requirePath, 'blog/category/'));
 
     return posts;
   },

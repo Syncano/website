@@ -1,5 +1,5 @@
 import React from 'react';
-import Analytics from './components/Analytics';
+import { Analytics } from './components/';
 import config from './config/';
 import Helmet from 'react-helmet';
 

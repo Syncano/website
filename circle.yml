@@ -12,7 +12,7 @@ machine:
 
 dependencies:
   pre:
-    - if [ ! -e ~/nvm/versions/node/v4.2.2/lib/node_modules/syncano-gatsby ]; then npm install -g syncano-gatsby@0.6.2-7; else echo "gatsby seems to be cached"; fi;
+    - if [ ! -e ~/nvm/versions/node/v4.2.2/lib/node_modules/syncano-gatsby ]; then npm install -g syncano-gatsby@0.7.0-1; else echo "gatsby seems to be cached"; fi;
 
 test:
   override:
