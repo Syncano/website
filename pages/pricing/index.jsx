@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import Pricing from '../../components/Pricing';
+import { Pricing } from '../../components/';
 
 export default React.createClass({
 
