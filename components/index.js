@@ -3,6 +3,7 @@ import Analytics from './Analytics';
 import BlogNav from './BlogNav';
 import BlogPostItem from './BlogPostItem';
 import ContactForm from './ContactForm';
+import Footer from './Footer';
 import LatestBlogPosts from './LatestBlogPosts';
 import Newsletter from './Newsletter';
 import NewsletterInput from './NewsletterInput';
@@ -16,6 +17,7 @@ export default {
   BlogNav,
   BlogPostItem,
   ContactForm,
+  Footer,
   LatestBlogPosts,
   Newsletter,
   NewsletterInput,

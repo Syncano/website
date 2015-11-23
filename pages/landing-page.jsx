@@ -3,15 +3,14 @@ import { Link } from 'react-router';
 import _ from 'lodash';
 
 import Helmet from 'react-helmet';
-import { link } from 'gatsby-helpers';
 
 export default React.createClass({
 
   getSEOConfig() {
     return {
-      title: "Turning developers into superstars",
+      title: "Landing Page",
       description: "Syncano is a backend platform to build powerful real-time apps more efficiently. Integrate with any API, minimize boilerplate code and control your data.",
-      mixpanelTitle: "Home"
+      mixpanelTitle: "Landing Page"
     }
   },
 
@@ -124,7 +123,7 @@ export default React.createClass({
                 <div className="source">Patrick DeVivo <br/><span>Fastack</span></div>
               </div>
             </div>
-      
+
           </div>
         </div>
         <div className="data">
