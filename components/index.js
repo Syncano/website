@@ -1,3 +1,4 @@
+import Adwords from './Adwords';
 import Analytics from './Analytics';
 import BlogNav from './BlogNav';
 import BlogPostItem from './BlogPostItem';
@@ -10,6 +11,7 @@ import Pricing from './Pricing';
 import SocialLinks from './SocialLinks';
 
 export default {
+  Adwords,
   Analytics,
   BlogNav,
   BlogPostItem,
