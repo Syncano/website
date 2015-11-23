@@ -7,7 +7,6 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <Helmet titleTemplate="%s"/>
         <BlogNav {...this.props}/>
         <RouteHandler {...this.props}/>
       </div>

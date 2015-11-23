@@ -115,7 +115,7 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <Helmet titleTemplate="%s"/>
+        <Helmet title={`${this.getCategoryName()} category`}/>
         <BlogNav {...this.props}/>
         <div className="blog">
           <div className="container blog" style={{paddingBottom: 40}}>
