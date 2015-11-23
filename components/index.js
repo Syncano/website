@@ -1,7 +1,7 @@
 import Analytics from './Analytics';
 import BlogNav from './BlogNav';
 import BlogPostItem from './BlogPostItem';
-import ConctactForm from './ContactForm';
+import ContactForm from './ContactForm';
 import LatestBlogPosts from './LatestBlogPosts';
 import Newsletter from './Newsletter';
 import NewsletterInput from './NewsletterInput';
@@ -13,7 +13,7 @@ export default {
   Analytics,
   BlogNav,
   BlogPostItem,
-  ConctactForm,
+  ContactForm,
   LatestBlogPosts,
   Newsletter,
   NewsletterInput,

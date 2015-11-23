@@ -14,6 +14,12 @@ export default React.createClass({
     }
   },
 
+  getDefaultProps() {
+    return {
+      mail: 'support@syncano.com'
+    }
+  },
+
   enableButton() {
     this.setState({
       canSubmit: true
@@ -27,7 +33,7 @@ export default React.createClass({
   },
 
   submit(model) {
-    request.post('//formspree.io/support@syncano.com').type('form').send(model).end(() => {
+    request.post(`//formspree.io/${this.props.mail}`).type('form').send(model).end(() => {
       this.transitionTo('/thank-contacting-us/');
     });
   },
