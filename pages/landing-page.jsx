@@ -321,7 +321,6 @@ export default React.createClass({
           <div className="container text-center">
             <h2>Get real support from real developers</h2>
             <p>We’re a small but growing team and your success is vital to our success.<br/>When you have questions, you’ll get answers from our own developers.</p>
-            <Link to="/support/" className="btn btn-white">Check out our support page</Link>
           </div>
         </div>
         <div className="cta">
