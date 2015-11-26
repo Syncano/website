@@ -3,15 +3,14 @@ import { Link } from 'react-router';
 import _ from 'lodash';
 
 import Helmet from 'react-helmet';
-import { link } from 'gatsby-helpers';
 
 export default React.createClass({
 
   getSEOConfig() {
     return {
-      title: "Turning developers into superstars",
+      title: "Landing Page",
       description: "Syncano is a backend platform to build powerful real-time apps more efficiently. Integrate with any API, minimize boilerplate code and control your data.",
-      mixpanelTitle: "Home"
+      mixpanelTitle: "Landing Page"
     }
   },
 
@@ -57,19 +56,19 @@ export default React.createClass({
               <div className="col-md-4 col-sm-4">
                 <div className="">
                   <h3>Add microservice-like functionality to your app.</h3>
-                  <p>With <a href="http://docs.syncano.io/docs/codebox-overview" target="_blank">CodeBox</a>, run any code in the cloud with cron-like Schedules, Webhooks, or triggered by any kind of data change.</p>
+                  <p>With CodeBox, run any code in the cloud with cron-like Schedules, Webhooks, or triggered by any kind of data change.</p>
                 </div>
               </div>
               <div className="col-md-4 col-sm-4">
                 <div className="">
                   <h3>Create complex data structures. Add real-time communication.</h3>
-                  <p>Define your data the way you want it. <a href="http://docs.syncano.io/docs/data-objects-filtering" target="_blank">Query your data</a>. Connect your data to <a href="http://docs.syncano.io/docs/realtime-communication" target="_blank">Channels</a> to get real-time updates.</p>
+                  <p>Define your data the way you want it. Query your data. Connect your data to Channels to get real-time updates.</p>
                 </div>
               </div>
               <div className="col-md-4 col-sm-4">
                 <div className="">
                   <h3>Integrate with any API.</h3>
-                  <p>Minimize boilerplate code. Easily install code blocks and reuse them across all of your apps with <a href="http://docs.syncano.io/docs/solutions" target="_blank">Solutions</a>. Share amongst the community.</p>
+                  <p>Minimize boilerplate code. Easily install code blocks and reuse them across all of your apps with Solutions. Share amongst the community.</p>
                 </div>
               </div>
             </div>
@@ -79,16 +78,16 @@ export default React.createClass({
           <div className="container">
             <div className="row text-center">
               <h2>Build with your library of choice</h2>
-              <h5>We’re Open Source! Help contribute to our code on <a href="https://github.com/syncano" target="_blank">GitHub</a></h5>
+              <h5>We’re Open Source! Help contribute to our code on GitHub</h5>
               <div className="col-md-1 hidden-md"></div>
               <div className="col-md-1 hidden-md"></div>
               <div className="col-md-1 hidden-md"></div>
-              <div className="col-md-1 col-xs-3"><a href="http://docs.syncano.io/docs/python" target="_blank"><img src={require('../images/python-logo.png')} alt="Python Logo"/></a></div>
-              <div className="col-md-1 col-xs-3"><a href="http://docs.syncano.io/docs/javascript" target="_blank"><img src={require('../images/javascript.png')} alt="Javascript icon"/></a></div>
-              <div className="col-md-1 col-xs-3"><a href="http://docs.syncano.io/docs/android" target="_blank"><img src={require('../images/android.png')} alt="android icon"/></a></div>
-              <div className="col-md-1 col-xs-3"><a href="http://docs.syncano.io/docs/ruby" target="_blank"><img src={require('../images/ruby.png')} alt="ruby icon"/></a></div>
-              <div className="col-md-1 col-xs-3"><a href="http://docs.syncano.io/docs/ios" target="_blank"><img src={require('../images/ios8.png')} alt="ios icon"/></a></div>
-              <div className="col-md-1 col-xs-3"><a href="http://docs.syncano.io/v1.0/docs/ios#section-syncano-library-and-swift" target="_blank"><img src={require('../images/bird.png')} alt="firebird icon"/></a></div>
+              <div className="col-md-1 col-xs-3"><img src={require('../images/python-logo.png')} alt="Python Logo"/></div>
+              <div className="col-md-1 col-xs-3"><img src={require('../images/javascript.png')} alt="Javascript icon"/></div>
+              <div className="col-md-1 col-xs-3"><img src={require('../images/android.png')} alt="android icon"/></div>
+              <div className="col-md-1 col-xs-3"><img src={require('../images/ruby.png')} alt="ruby icon"/></div>
+              <div className="col-md-1 col-xs-3"><img src={require('../images/ios8.png')} alt="ios icon"/></div>
+              <div className="col-md-1 col-xs-3"><img src={require('../images/bird.png')} alt="firebird icon"/></div>
               <div className="col-md-1"></div>
             </div>
           </div>
@@ -124,13 +123,13 @@ export default React.createClass({
                 <div className="source">Patrick DeVivo <br/><span>Fastack</span></div>
               </div>
             </div>
-      
+
           </div>
         </div>
         <div className="data">
           <div className="container">
             <h2 className="text-center">Define your data schema based on your apps’ needs</h2>
-            <h5 className="text-center">Build complex data structures with <a href="http://docs.syncano.io/docs/classes" target="_blank">Classes</a></h5>
+            <h5 className="text-center">Build complex data structures with Classes</h5>
             <div className="row">
               <div className="col-md-4 col-md-offset-2 text-center">
                 <div>
@@ -152,7 +151,7 @@ export default React.createClass({
         <div className="build text-center">
           <h2>Add real-time communication with Channels</h2>
           <br/>
-          <p>Subscribe to data changes, send custom notification messages, give users different permission types.<br/>Use Rooms to separate real-time data inside a <a href="http://docs.syncano.io/docs/realtime-communication" target="_blank">Channel</a>.</p>
+          <p>Subscribe to data changes, send custom notification messages, give users different permission types.<br/>Use Rooms to separate real-time data inside a Channel.</p>
         </div>
         <div className="middleware text-center">
           <div className="container">
@@ -167,7 +166,7 @@ export default React.createClass({
         </div>
         <div className="solutions">
           <div className="container text-center">
-            <h2>Install code blocks to your apps with <a href="http://docs.syncano.io/docs/solutions" target="_blank">Solutions</a></h2>
+            <h2>Install code blocks to your apps with Solutions</h2>
             <p>Stop wasting time on CRUD operations or creating code that's already been written.<br/>Simply enter our directory, find what you need, add it to any of your instances and start building within seconds.</p>
             <div className="row">
               <div className="col-md-4 item-8">
@@ -202,11 +201,6 @@ export default React.createClass({
                         stable (2.2)
                       </div>
                     </div>
-                  </div>
-                  <div className="solutions-item-footer text-center">
-                    <a className="solutions-item-footer__see-details-btn" href="https://dashboard.syncano.io/#/solutions/8/edit">
-                      See Details
-                    </a>
                   </div>
                 </div>
               </div>
@@ -245,11 +239,6 @@ export default React.createClass({
                       </div>
                     </div>
                   </div>
-                  <div className="solutions-item-footer text-center">
-                    <a className="solutions-item-footer__see-details-btn" href="https://dashboard.syncano.io/#/solutions/9/edit">
-                      See Details
-                    </a>
-                  </div>
                 </div>
               </div>
               <div className="col-md-4 item-10">
@@ -287,11 +276,6 @@ export default React.createClass({
                       </div>
                     </div>
                   </div>
-                  <div className="solutions-item-footer text-center">
-                    <a className="solutions-item-footer__see-details-btn" href="https://dashboard.syncano.io/#/solutions/10/edit">
-                      See Details
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -300,7 +284,7 @@ export default React.createClass({
         </div>
         <div className="showcase">
           <div className="container text-center">
-            <h2>Easily add <a href="http://docs.syncano.io/docs/user-management" target="_blank">user management</a> & <a href="http://docs.syncano.io/docs/permissions" target="_blank">user permissions</a>.<br/>Ensure your data is safe</h2>
+            <h2>Easily add user management & user permissions.<br/>Ensure your data is safe</h2>
             <div className="col-md-4">
               <img src={require('../images/authentication.png')} height="50"/>
               <h3>User Authentication</h3>
@@ -322,7 +306,6 @@ export default React.createClass({
           <div className="container text-center">
             <h2>Get real support from real developers</h2>
             <p>We’re a small but growing team and your success is vital to our success.<br/>When you have questions, you’ll get answers from our own developers.</p>
-            <Link to="/support/" className="btn btn-white">Check out our support page</Link>
           </div>
         </div>
         <div className="cta">
