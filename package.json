@@ -31,6 +31,6 @@
     "react-tap-event-plugin": "0.2.1",
     "sitemap": "1.4.1",
     "superagent": "1.4.0",
-    "syncano-components": "0.0.4"
+    "syncano-components": "0.0.5"
   }
 }
