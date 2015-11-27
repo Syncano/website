@@ -1,7 +1,7 @@
 import React from 'react';
 import { RouteHandler, Link, State } from 'react-router';
 import { link, templateChildrenPages } from 'gatsby-helpers';
-import { Footer, Header, LandingPageHeader, LatestBlogPosts, Newsletter} from '../components/';
+import { Footer, Header, Landing, LatestBlogPosts, Newsletter} from '../components/';
 import _ from 'lodash';
 import Helmet from 'react-helmet';
 
@@ -64,7 +64,7 @@ export default React.createClass({
   },
 
   renderHeader() {
-    return this.isLandingPage() ? <LandingPageHeader/> : <Header/>;
+    return this.isLandingPage() ? <Landing.Header/> : <Header/>;
   },
 
   getAllPosts() {

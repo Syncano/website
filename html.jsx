@@ -40,11 +40,11 @@ export default React.createClass({
       </head>
       <body>
         <div id="react-mount" dangerouslySetInnerHTML={{__html: this.props.body}}></div>
-        <Analytics writeKey={config.analytics_key}/>
+        <Analytics writeKey={config.analyticsKey}/>
         <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="/bundle.js"></script>
         <script type="text/javascript" src="//magnetic.t.domdex.com/23448/pix.js?t=r&for=syncano"></script>
-        <Adwords/>
+        <Adwords.Remarketing/>
       </body>
       </html>
     );

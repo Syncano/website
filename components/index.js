@@ -5,7 +5,7 @@ import BlogPostItem from './BlogPostItem';
 import ContactForm from './ContactForm';
 import Footer from './Footer';
 import Header from './Header';
-import LandingPageHeader from './LandingPageHeader';
+import Landing from './Landing';
 import LatestBlogPosts from './LatestBlogPosts';
 import Newsletter from './Newsletter';
 import NewsletterInput from './NewsletterInput';
@@ -21,7 +21,7 @@ export default {
   ContactForm,
   Footer,
   Header,
-  LandingPageHeader,
+  Landing,
   LatestBlogPosts,
   Newsletter,
   NewsletterInput,
