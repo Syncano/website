@@ -7,9 +7,7 @@ export default React.createClass({
     return (
       <Navbar bsStyle="" className="navbar navbar-fixed-top dark" style={{background: '#244273', boxShadow: 'none'}} toggleNavKey={0}>
         <NavBrand>
-          <Link to="/" style={{float: 'left'}}>
-            <img className="light-version" src={require('../images/syncano-white.png')} alt="Syncano Logo white"/>
-          </Link>
+          <img className="light-version" src={require('../../images/syncano-white.png')} alt="Syncano Logo white"/>
         </NavBrand>
         <CollapsibleNav eventKey={0}>
           <Nav navbar right>

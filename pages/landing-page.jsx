@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import _ from 'lodash';
 
+import { Adwords, Landing } from '../components/';
 import Helmet from 'react-helmet';
 
 export default React.createClass({
@@ -11,6 +12,12 @@ export default React.createClass({
       title: "Landing Page",
       description: "Syncano is a backend platform to build powerful real-time apps more efficiently. Integrate with any API, minimize boilerplate code and control your data.",
       mixpanelTitle: "Landing Page"
+    }
+  },
+
+  getInitialState() {
+    return {
+      converted: false
     }
   },
 
@@ -27,11 +34,16 @@ export default React.createClass({
     }, 7500)
   },
 
+  renderConversionTag() {
+    return this.state.converted ? <Adwords.Conversion/> : null;
+  },
+
   render() {
     let SEO = this.getSEOConfig();
 
     return (
       <div className="home ">
+        {this.renderConversionTag()}
         <Helmet
           title={SEO.title}
           meta={[
@@ -45,6 +57,13 @@ export default React.createClass({
               <div className="info">
                 <h1>Turning developers into superstars</h1>
                 <h2>A backend platform to build powerful real-time apps more efficiently</h2>
+                <br/><br/>
+                <div className="row">
+                  <div className="col-md-offset-4 col-md-4">
+                    <Landing.ContactForm/>
+                  </div>
+                </div>
+                <br/><br/>
                 <a href="https://dashboard.syncano.io/#/signup" className="btn btn-dark-blue cta-button mixpanel-btn" id="homepage-hero" style={{marginBottom: 0}}>START BUILDING FOR FREE</a>
               </div>
             </div>
@@ -314,7 +333,12 @@ export default React.createClass({
               <div className="col-sm-12">
                 <h2 className="text-center">Database. Backend. Middleware. Real-time. Microservices.<br/>All in one place</h2>
                 <br/><br/>
-                <a href="https://dashboard.syncano.io/#/signup" className="btn btn-dark-blue cta-button mixpanel-btn">START BUILDING FOR FREE</a>
+                <div className="row">
+                  <div className="col-md-offset-4 col-md-4">
+                    <Landing.ContactForm/>
+                  </div>
+                </div>
+                <br/><br/>
               </div>
             </div>
           </div>
