@@ -48,7 +48,7 @@ export default React.createClass({
                 <h2>USA - East Coast</h2>
                 <p><a href="https://www.google.com/maps/place/120+E+23rd+St,+New+York,+NY+10010/@40.739496,-73.98572,17z/data=!3m1!4b1!4m2!3m1!1s0x89c259a0de37a537:0x60b1997940b9a35f" target="_blank">120 East 23rd St.</a></p>
                 <p>5th Floor</p>
-                <p>New York, NY 10010</p>
+                <p>10010 New York, NY</p>
               </div>
               <div className="col-sm-3 text-center location">
                 <img src="sanleandro.jpg" alt="sanleandro"/>
