@@ -7,9 +7,9 @@ export default React.createClass({
 
   getSEOConfig() {
     return {
-      title: "About Us",
-      description: "Syncano was created to help developers build, test, and ship amazing experiences on more devices, in less time, and with fewer resources.",
-      mixpanelTitle: "About Us"
+      title: 'About Us | Syncano.io',
+      description: `Synchronize data in real-time, wherever it's from, whenever it's relevant, and whatever it looks like. Deploy totally scalable code to any device. Learn more...`,
+      mixpanelTitle: 'About Us'
     }
   },
 

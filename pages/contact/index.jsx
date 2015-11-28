@@ -6,8 +6,8 @@ export default React.createClass({
 
   getSEOConfig() {
     return {
-      title: "Contact Us",
-      description: "Contact Syncano, a real-time sync API and backend in the cloud that helps developers create real-time apps.",
+      title: "Contact Syncano",
+      description: "Ideas, suggestions, interested in partnerships? We'd love to hear from you! Get in touch with us.",
       mixpanelTitle: "Contact Us"
     }
   },

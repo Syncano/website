@@ -2,6 +2,7 @@
 path: '/blog/reactjs-reasons-why-part-1/'
 layout: post
 title: 6 Reasons Why We Love React.js
+description: "Here’s why we’re re-building our GUI in React.js, and why you might want to consider it as the basis of your next project!"
 date: 2014-09-03 11:21:29
 author: marek
 categories: ['News', 'ReactJS']
@@ -12,7 +13,7 @@ Our front-end team loves trying new things. New frameworks, new build tools... 
 
 But with the front-end world changing on a daily basis, it’s hard hard to devote time to learning a new framework – especially when that framework could ultimately become a dead end. So if you're looking for the next best thing but you're feeling a little bit lost in the framework jungle, I suggest checking out <a href="http://facebook.github.io/react/">React.js</a>.
 
-Here's why we're re-building our GUI in React.js, and why you might want to consider it as the basis of your next project:<!--more-->
+Here's why we're re-building our GUI in React.js, and why you might want to consider it as the basis of your next project:
 <h2>1. Components are the future of web development</h2>
 <a href="http://www.polymer-project.org/platform/shadow-dom.html">Shadow DOM</a> and frameworks such as PolymerJS generated a lot of buzz lately, and rightly so. The core concept of Polymer boils down to creating self-contained, customizable elements that you can easily import and use in your project. This in itself is a fantastic idea, but React.js takes that concept to the next level. React.js doesn't use Shadow DOM – instead it gives you the ability to create your own components that you can later reuse, combine, and nest to your heart’s content. I've found this to be the single-biggest productivity boost because it’s so easy to define and manipulate your own components.
 <h2>2. React.js is extremely efficient</h2>

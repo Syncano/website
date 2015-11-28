@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Syncano Is Going Places, Literally
+description: "Syncano has been publicly available for about two months now. As Principal Developer Evangelist, I couldn’t be more excited!"
 date: 2015-10-13 13:00:00
 author: kelly
 path: '/blog/syncano-is-going-places-literally/'

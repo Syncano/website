@@ -2,13 +2,14 @@
 path: '/blog/communication-distributed-team/'
 layout: post
 title: Bootstrapping Communication for a Distributed Team
+description: "Though we’re still experimenting with new and improved channels for communication, here are three apps we’re loving."
 date: 2014-03-31 11:21:29
 author: resham
 categories: ['Culture']
 image: NYC-Oslo-Warsaw3.png
 summary: "Our team at Syncano is distributed across three international cities – New York, Oslo, and Warsaw – so we’re always looking for the best tools to stay connected and productive. Though we’re still experimenting with new and improved channels for communication, here are three apps we’re loving."
 ---
-Our team at Syncano is distributed across three international cities – New York, Oslo, and Warsaw – so we’re always looking for the best tools to stay connected and productive. Though we’re still experimenting with new and improved channels for communication, here are three apps we're loving.<!--more-->
+Our team at Syncano is distributed across three international cities – New York, Oslo, and Warsaw – so we’re always looking for the best tools to stay connected and productive. Though we’re still experimenting with new and improved channels for communication, here are three apps we're loving.
 
 <b>Jira</b>
 

@@ -105,7 +105,7 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <Helmet titleTemplate="%s | Syncano.io" />
+        <Helmet titleTemplate="%s" />
         {this.renderHeader()}
         <RouteHandler {...this.props}/>
         {this.renderFooter()}

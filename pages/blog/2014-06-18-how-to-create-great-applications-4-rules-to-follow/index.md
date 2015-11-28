@@ -2,13 +2,14 @@
 path: '/blog/how-to-create-great-applications-4-rules-to-follow/'
 layout: post
 title: 'How to Create Great Applications: 4 Rules to Follow'
+description: "Users are demanding dynamic performance and a flawless cross platform user experience. Make your apps great by incorporating these 4 characteristics."
 date: 2014-06-18 11:21:29
 author: thomas
 categories: ['How Tos', 'Real-Time Sync']
 image: origin_4588410548.jpg
 summary: "We believe the difference between good apps and great apps can be both a matter of small details and a matter of greater purpose. Today, users are demanding dynamic performance and a flawless cross platform user experience. Make your apps great by incorporating these four characteristics into your end product."
 ---
-We believe the difference between good apps and <i>great</i> apps can be both a matter of small details and a matter of greater purpose. Today, users are demanding dynamic performance and a flawless cross platform user experience. Make your apps great by incorporating these four characteristics into your end product.<!--more-->
+We believe the difference between good apps and <i>great</i> apps can be both a matter of small details and a matter of greater purpose. Today, users are demanding dynamic performance and a flawless cross platform user experience. Make your apps great by incorporating these four characteristics into your end product.
 <h2><b>Make your UI fast, smooth, and beautiful.</b></h2>
 Today's user interface needs to be a work of art and an exemplar of functionality all at once. Great apps have a user interface that looks attractive yet simple, and UI functionality needs to be seamless and hiccup-free under all circumstances. If load times are sluggish or if the screen freezes without explanation, the user might quit the app altogether.
 <h2><b>Create a cross-platform user experience.</b></h2>

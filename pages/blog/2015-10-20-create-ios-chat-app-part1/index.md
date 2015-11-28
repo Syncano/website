@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Create an iOS Chat App using JSQMessagesViewController – Part 1
+seo_title: Create an iOS Chat App using JSQMessagesViewController
+description: "In this tutorial, I’m going to show you how easy it is to create a simple chat app in iOS (using Swift and Syncano)."
 date: 2015-10-20 13:00:00
 author: mariusz
 path: '/blog/create-ios-chat-app-part1/'

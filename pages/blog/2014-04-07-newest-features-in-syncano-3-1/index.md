@@ -2,13 +2,14 @@
 path: '/blog/newest-features-in-syncano-3-1/'
 layout: post
 title: The Best New Features in Syncano 3.1
+description: "We’re excited to open Syncano to the public for the first time with version 3.1! Here are some of our key new features..."
 date: 2014-04-07 11:21:29
 author: maciej
 categories: ['News', 'Real-Time Sync']
 image: Resham-Admin-GUI-Syncano-copy.png
 summary: "We’re excited to open Syncano to the public for the first time with version 3.1! While we’re still in beta, we feel this new version is a huge accomplishment equipped with a simplified sign up process, completely re-invented admin GUI, new API functionality, and easier access to support. Here are some of our key new features"
 ---
-<p>We’re excited to open Syncano to the public for the first time with version 3.1! While we’re still in beta, we feel this new version is a huge accomplishment equipped with a simplified sign up process, completely re-invented admin GUI, new API functionality, and easier access to support. Here are some of our key new features:<!--more--></p>
+<p>We’re excited to open Syncano to the public for the first time with version 3.1! While we’re still in beta, we feel this new version is a huge accomplishment equipped with a simplified sign up process, completely re-invented admin GUI, new API functionality, and easier access to support. Here are some of our key new features:</p>
 
 <h2>Simplified Login and Social Media Authentication</h2>
 <p>You no longer need a code to sign up, and we've added social media authentication so you can quickly register and log in with Github, Google, Amazon, Bitbucket and Twitter. (You can manage all of your social media connections by going to <em>Account</em> > <em>Authentication</em> in your admin GUI.)</p>

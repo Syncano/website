@@ -2,6 +2,7 @@
 path: '/blog/how-can-i-use-codeboxes/'
 layout: post
 title: How can I use CodeBoxes?
+description: "You have some code that can be run in the cloud, which is great. Now, how can you use it? How does Syncano make this cloud code useful for you?"
 date: 2015-09-08 10:00:00
 author: jhishan
 categories: ['Syncano']

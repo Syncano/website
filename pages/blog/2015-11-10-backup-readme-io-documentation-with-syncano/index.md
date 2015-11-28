@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Backup ReadMe.io Documentation With Syncano
+description: "Learn how to create auto backups and retrieve the Readme.io documentation whenever you want."
 date: 2015-11-10 10:00:00
 author: adam
 path: '/blog/backup-readme-io-documentation-with-syncano/'

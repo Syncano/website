@@ -10,8 +10,8 @@ export default React.createClass({
 
   getSEOConfig() {
     return {
-      title: "Blog",
-      description: "The Syncano blog covers all news and tips related to real-time syncing and scaling data on the cloud.",
+      title: "Syncano Blog",
+      description: "We covers serverless app development in a realtime world. Learn tips and tricks to develop your applications with out a server!",
       mixpanelTitle: "Blog"
     }
   },

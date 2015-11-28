@@ -2,13 +2,14 @@
 path: '/blog/using-syncano-ios-library-swift-demotutorial/'
 layout: post
 title: Using the Syncano iOS Library with Swift - Demo/Tutorial
+description: "Although written in Objective-C, the Syncano iOS library is perfectly compatible with Swift. Here are some simple steps to get started!"
 date: 2014-09-02 11:21:29
 author: mariusz
 categories: ['API', 'How Tos', 'iOS', 'Real-Time Sync']
 image: Apple_Swift_Logo.png
 summary: "Although written in Objective-C, the Syncano iOS library is perfectly compatible with Swift. Here are some simple steps to get started:"
 ---
-<p>Although written in Objective-C, the Syncano iOS library is perfectly compatible with Swift. Here are some simple steps to get started:</p><!--more-->
+<p>Although written in Objective-C, the Syncano iOS library is perfectly compatible with Swift. Here are some simple steps to get started:</p>
 
 <h2><strong>1. Install CocoaPods</strong></h2>
 

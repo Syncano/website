@@ -2,13 +2,15 @@
 path: '/blog/is-your-data-secure/'
 layout: post
 title: Is Your Data Secure? Questions to Ask Any Data Storage Provider
+seo_title: Is Your Data Secure? Questions to Ask Data Storage Providers
+description: "Here are questions you should be asking your data storage provider to gauge the effectiveness and reliability of physical and virtual security for your data."
 date: 2014-06-23 11:21:29
 author: maciej
 categories: ['Backend as a Service']
 image: Data_Security.png
 summary: "When looking at data storage providers, you want speed and scalability to power your applications. You also need security—and not all data security methods are equal. Here are questions you should be asking your data storage provider to gauge the effectiveness and reliability of physical and virtual security for your data."
 ---
-When looking at data storage providers, you want speed and scalability to power your applications. You also need security—and not all data security methods are equal. Here are questions you should be asking your data storage provider to gauge the effectiveness and reliability of physical and virtual security for your data.<!--more-->
+When looking at data storage providers, you want speed and scalability to power your applications. You also need security—and not all data security methods are equal. Here are questions you should be asking your data storage provider to gauge the effectiveness and reliability of physical and virtual security for your data.
 <h2><b>How is my data encrypted at the facility?</b></h2>
 Don’t let a conversation about data encryption end without getting a full picture of the encryption process and access. Does the provider use one or two encryption keys, and who exactly has the keys?
 

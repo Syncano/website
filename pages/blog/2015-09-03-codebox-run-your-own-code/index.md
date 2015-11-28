@@ -2,6 +2,7 @@
 path: '/blog/codebox-run-your-own-code/'
 layout: post
 title: CodeBox - Run your own code
+description: "The simplest definition of a CodeBox: It’s an object that contains a script, and that can be run on Syncano’s servers. Learn more..."
 date: 2015-09-03 10:00:00
 author: mariusz
 categories: ['Syncano']

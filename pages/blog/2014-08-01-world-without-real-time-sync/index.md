@@ -2,13 +2,14 @@
 path: '/blog/world-without-real-time-sync/'
 layout: post
 title: What Would the World Be Like Without Real-Time Sync?
+description: "Real-time sync technology is what powers most apps we’ve come to rely on and allows our personal, social, and work lives to be integrated. Learn more..."
 date: 2014-08-01 11:21:29
 author: thomas
 categories: ['Real-Time Sync']
 image: 4355457660_3bf87da0fd_b-e1411727956761.jpg
 summary: "It’s 7:00am. You just woke up and are getting your clothes on for your morning run. You grab your phone and put your headphones in so you can listen to the new running playlist you added to Spotify last night. On your way out, you realize – the playlist isn’t anywhere to be found. 'What? I swear I saw it yesterday and added it,' you think."
 ---
-It’s 7:00am. You just woke up and are getting your clothes on for your morning run. You grab your phone and put your headphones in so you can listen to the new running playlist you added to Spotify last night. On your way out, you realize - the playlist isn’t anywhere to be found. “<i>What? I swear I saw it yesterday and added it,”</i> you think. <!--more-->That's okay. You’ll listen to “Happy” again - no big deal.
+It’s 7:00am. You just woke up and are getting your clothes on for your morning run. You grab your phone and put your headphones in so you can listen to the new running playlist you added to Spotify last night. On your way out, you realize - the playlist isn’t anywhere to be found. “<i>What? I swear I saw it yesterday and added it,”</i> you think. That's okay. You’ll listen to “Happy” again - no big deal.
 
 When you’re ready to leave for work, you check the train times on your mobile app before you leave your apartment. Everything looks to be normal and on time. When you get to the station, you see a sign that the line you normally take is closed for construction. That's strange. You overhear an employee telling another traveler that they published the information on the website last night, but it didn’t update on the app. “<i>Great,”</i> you think, “<i>I’m going to be late to a meeting at work, but I’ll just e-mail my team and let them know.</i>”
 

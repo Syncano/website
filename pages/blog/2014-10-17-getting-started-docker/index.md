@@ -2,13 +2,14 @@
 path: '/blog/getting-started-docker/'
 layout: post
 title: Getting Started With Docker
+description: "Since we started using Docker here at Syncano, we’ve become avid fans. Here’s some of our best knowledge on getting started with it."
 date: 2014-10-17 11:21:29
 author: justyna
 categories: ['Docker', 'How Tos', 'Tutorials']
 image: getting-started-docker.png
 summary: "Since we started using Docker here at Syncano, we’ve become avid fans. Here’s some of our best knowledge on getting started with it. If you’re not sure about what Docker is or whether you should use it, check out the last post in this series."
 ---
-Since we started using Docker here at Syncano, we've become avid fans. Here's some of our best knowledge on getting started with it. If you're not sure about what Docker is or whether you should use it, check out <a href="http://www.syncano.io/blog/reasons-use-docker/">the last post in this series.</a><!--more-->
+Since we started using Docker here at Syncano, we've become avid fans. Here's some of our best knowledge on getting started with it. If you're not sure about what Docker is or whether you should use it, check out <a href="http://www.syncano.io/blog/reasons-use-docker/">the last post in this series.</a>
 
 <h2>Documentation</h2>
 

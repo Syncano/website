@@ -2,13 +2,14 @@
 path: '/blog/flask-micro-framework-introduction/'
 layout: post
 title: Introduction to Flask as a Micro-framework
+description: "Flask’s mindset is 'web development: one drop at a time.' Read more to understand how to use Flask."
 date: 2014-12-09 11:21:29
 author: eric
 categories: ['Flask', 'How Tos', 'Python', 'Tutorials']
 image: intro-to-flask-pt-1.jpg
 summary: "For those of you who are not familar with it, Flask is a web development framework written in Python. To understand how to use Flask, let’s first consider the definition of a framework."
 ---
-For those of you who are not familar with it, Flask is a web development framework written in Python. To understand how to use Flask, let's first consider the definition of a framework. <!--more-->
+For those of you who are not familar with it, Flask is a web development framework written in Python. To understand how to use Flask, let's first consider the definition of a framework. 
 <h2>Def: Framework :=</h2>
 A framework in coding is a set of classes, functions, and variables that form a mindset for thinking about how to solve a given set of challenges within a specific problem domain.
 

@@ -2,6 +2,7 @@
 path: '/blog/reasons-use-docker/'
 layout: post
 title: 3 Reasons to Use Docker for Your Next Project
+description: "Docker is a tool that can be used to build apps, provide standardized environments for development, testing and production, isolate dependencies, and more."
 date: 2014-09-25 11:21:29
 author: justyna
 categories: ['Docker']
@@ -9,7 +10,7 @@ image: docker-e1411726692554.png
 summary: "Docker is a tool that can be used to build applications, provide standardized environments for development, testing and production, isolate dependencies, and more. It uses lightweight containers instead of virtual machines, making it simpler to use than virtualization. Here are three reasons why you may want to consider using Docker for your next project on Syncano."
 ---
 
-<p>Docker is a tool that can be used to build applications, provide standardized environments for development, testing and production, isolate dependencies, and more. It uses lightweight containers instead of virtual machines, making it simpler to use than virtualization. Here are three reasons why you may want to consider using Docker for your next project on Syncano.</p><!--more-->
+<p>Docker is a tool that can be used to build applications, provide standardized environments for development, testing and production, isolate dependencies, and more. It uses lightweight containers instead of virtual machines, making it simpler to use than virtualization. Here are three reasons why you may want to consider using Docker for your next project on Syncano.</p>
 
 <h2>Develop and deploy in the same environment</h2>
 

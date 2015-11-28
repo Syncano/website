@@ -1,6 +1,8 @@
 ---
 layout: terms
 title: General Terms and Conditions
+seo_title: General Terms and Conditions - Syncano
+description: "These General Terms and Conditions are governed by our ToS. Our ToS take precedence over any conflicting General Terms and Conditions provision."
 mixpanel_title: General Terms and Conditions
 permalink: /terms-of-service/gtc/
 seo_description: "Syncano's general terms and conditions."

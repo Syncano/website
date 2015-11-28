@@ -1,6 +1,7 @@
 ---
 layout: post
 title: User Management For Your Apps
+description: "The goal of most apps is to get users to sign up and log in, with a few exceptions. Syncano has user authentication built in and ready to go without setup."
 date: 2015-09-15 10:00:00
 author: kelly
 path: '/blog/user-management-for-your-apps/'

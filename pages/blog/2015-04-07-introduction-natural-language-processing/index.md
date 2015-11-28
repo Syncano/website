@@ -2,6 +2,7 @@
 path: '/blog/introduction-natural-language-processing/'
 layout: post
 title: An Introduction to Natural Language Processing
+description: "In this lecture, we will focus on text based machine learning techniques and learn how to make use of these techniques to do text classification and analysis."
 date: 2015-04-07 11:21:29
 author: eric
 categories: ['Tutorials']
@@ -10,7 +11,7 @@ keywords: 'natural language processing'
 seo_description: "Natural language processing (NLP) is the study of translation of human language into something a computer can understand and manipulate."
 summary: "Natural language processing (NLP) is the study of translation of human language into something a computer can understand and manipulate. The areas of study within NLP are diverse and require a somewhat disparate set of skills. Many of these have evolved with the prevalence of machine learning techniques and practices."
 ---
-<p>Natural language processing (NLP) is the study of translation of human language into something a computer can understand and manipulate.  The areas of study within NLP are diverse and require a somewhat disparate set of skills.  Many of these have evolved with the prevalence of machine learning techniques and practices.<!--more--></p>
+<p>Natural language processing (NLP) is the study of translation of human language into something a computer can understand and manipulate.  The areas of study within NLP are diverse and require a somewhat disparate set of skills.  Many of these have evolved with the prevalence of machine learning techniques and practices.</p>
 
 <p>In this lecture, we will focus on text based machine learning techniques and learn how to make use of these techniques to do text classification and analysis.</p>
 

@@ -2,13 +2,14 @@
 path: '/blog/startup-lessons-5-things-ive-learned/'
 layout: post
 title: "Startup Lessons: 5 Things I've Learned"
+description: "Creating a tech startup is the adventure of a lifetime. Here are the 5 most important things I learned by creating Syncano."
 date: 2014-06-26 11:21:29
 author: nikolai
 categories: ['Building Syncano', 'Culture', 'Startup Lessons']
 image: 8290528771_4ab84a0303_h.jpg
 summary: "Creating a tech startup is the adventure of a lifetime, and entrepreneurship is the best teacher you’ll ever have. While I believe in doing, learning, failing, and succeeding, knowledge from others will help you do these things with a little more wisdom. Here are the 5 most important things I learned by creating Syncano."
 ---
-Creating a tech startup is the adventure of a lifetime, and entrepreneurship is the best teacher you’ll ever have. While I believe in doing, learning, failing, and succeeding, knowledge from others will help you do these things with a little more wisdom. Here are the 5 most important things I learned by creating Syncano.<!--more-->
+Creating a tech startup is the adventure of a lifetime, and entrepreneurship is the best teacher you’ll ever have. While I believe in doing, learning, failing, and succeeding, knowledge from others will help you do these things with a little more wisdom. Here are the 5 most important things I learned by creating Syncano.
 <h2> <b>The Iceberg Effect</b></h2>
 Icebergs are notorious for being much larger than they appear at the surface of the ocean, with the majority of their mass deceptively hidden underwater. Starting a company is much like solving an iceberg of problems. When you think you've found a solution to a problem, you’ll almost always realize you’ve only scraped the surface of it. Be mentally prepared to discover the bottom of the iceberg – a seemingly simple problem could end up being the hardest to solve.
 <h2><b>Embrace good frustration</b></h2>

@@ -2,6 +2,7 @@
 path: '/blog/every-backend-developer-should-focus-on-these-3-things/'
 layout: post
 title: Every Backend Developer Should Focus on These 3 Things
+description: "To stay relevant in the 'I want it now' era, there are three things every backend developer should be focusing on to stay ahead. Read on to learn more..."
 date: 2014-06-11 11:21:29
 author: mariusz
 categories: ['Backend as a Service', 'Real-Time Sync']
@@ -10,7 +11,7 @@ summary: "<p>Patience is indeed a virtue, but when it comes to using apps and te
 ---
 Patience is indeed a virtue, but when it comes to using apps and technology, patience is quickly becoming a thing of the past. We live in the “I want it now” era where people are increasingly demanding access to the things they want in seconds. And, as the “Internet of things” begins to become a reality, people simply expect their information to be immediately and securely available on any and all of their devices at any time, without waiting. For app developers this means putting the highest priority on real-time sync and other innovations that enable information to be instantly shared safely across all devices.
 
-To stay relevant in the “I want it now” era, there are three things every backend developer should be focusing on to stay ahead.<!--more-->
+To stay relevant in the “I want it now” era, there are three things every backend developer should be focusing on to stay ahead.
 <h2><b>1. Real-time sync: Data in an instant.</b></h2>
 As a developer, you experience the promise of technology day in and day out. You are already aware of the promise real-time sync offers for the app industry. But as you may have experienced already, creating applications that can seamlessly sync a users’ information across any device or platform isn’t always the easiest thing to accomplish. Many backend services don't think beyond the traditional smartphone and tablet. In the age of the Internet of Things, highly complex data will need be synced and shared across so many other devices—including cars, homes, watches, glasses, shopping carts, medical devices and much more.
 

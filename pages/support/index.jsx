@@ -7,8 +7,8 @@ export default React.createClass({
 
   getSEOConfig() {
     return {
-      title: 'Support',
-      description: 'Our scalable backend helps developers build complex, real-time apps with only front-end code.',
+      title: 'Support - Get in touch with Syncano',
+      description: "View our docs, check the status of APIs or simply write our support team and we'll get back to you as soon as possible!",
       mixpanelTitle: 'Support'
     }
   },

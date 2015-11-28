@@ -1,6 +1,8 @@
 ---
 layout: terms
 title: Privacy Policy
+seo_title: Privacy Policy - Syncano
+description: "We have created the following Privacy Policy to let you know what information we collect when you visit our website, why we collect it and how it is used."
 mixpanel_title: Privacy Policy
 permalink: /terms-of-service/privacy/
 seo_description: "Syncano's privacy policy. Your data is completely safe and private with Syncano. We will never sell or give your data to third parties."

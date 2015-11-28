@@ -1,14 +1,15 @@
 ---
 path: '/blog/second-screen-living-room-smartphone-real-time-apps/'
 layout: post
-title: The Second Screen in Your Living Room Isn't Your Smartphone
+title: "The Second Screen in Your Living Room Isn't Your Smartphone"
+description: "TV isn’t engaging enough now to hold our attention through revenue generating advertisements — or is it?"
 date: 2014-07-22 11:21:29
 author: madeleine
 categories: ['Real-Time Apps', 'Real-Time Sync', 'Second Screen']
 image: 1392413224_5bc1ef0563_b.jpg
 summary: "The TV was probably your first screen. Maybe you huddled around the screen with your family to watch a sporting event or you and your friends went to the movie theater to see the latest hit. TV was a way to be entertained, to engage with others, and to learn about the world around us. But the introduction of smartphones, tablets, and laptop computers caused a conundrum to TV broadcasters and advertisers alike. Our attention is no longer focused on our 'first' screens (or even the companions we watched it with). Instead, our smartphones, computers, and tablets have begun to distract us with social media and the joy of on-demand content. TV isn’t engaging enough now to hold our attention through revenue generating advertisements — or is it?"
 ---
-The TV was probably your first screen. Maybe you huddled around the screen with your family to watch a sporting event or you and your friends went to the movie theater to see the latest hit. TV was a way to be entertained, to engage with others, and to learn about the world around us. But the introduction of smartphones, tablets, and laptop computers caused a conundrum to TV broadcasters and advertisers alike. Our attention is no longer focused on our “first” screens (or even the companions we watched it with). Instead, our smartphones, computers, and tablets have begun to distract us with social media and the joy of on-demand content. TV isn’t engaging enough now to hold our attention through revenue generating advertisements — or is it?<!--more-->
+The TV was probably your first screen. Maybe you huddled around the screen with your family to watch a sporting event or you and your friends went to the movie theater to see the latest hit. TV was a way to be entertained, to engage with others, and to learn about the world around us. But the introduction of smartphones, tablets, and laptop computers caused a conundrum to TV broadcasters and advertisers alike. Our attention is no longer focused on our “first” screens (or even the companions we watched it with). Instead, our smartphones, computers, and tablets have begun to distract us with social media and the joy of on-demand content. TV isn’t engaging enough now to hold our attention through revenue generating advertisements — or is it?
 
 The high level of engagement on other devices and “second” screens means that viewers are more likely to watch advertisements online. As an added benefit, they can click and engage with the advertisements themselves and make a purchase – all during a commercial break. During this year’s Oscars, women who used twitter throughout the show watched the program <a href="http://www.marketwired.com/press-release/-1885731.htm">39% longer</a> than women who didn’t tweet. The answer for broadcasters, then, is the creation of real-time “second screen” applications – experiences that compliment the on-air broadcast of shows, increase audience engagement, and generate the added benefit of social media buzz.
 

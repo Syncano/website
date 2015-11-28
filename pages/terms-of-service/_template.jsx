@@ -2,6 +2,7 @@ import React from 'react';
 import { RouteHandler, Link, State, Navigation } from 'react-router';
 import sortBy from 'lodash/collection/sortBy';
 import { templateChildrenPages } from 'gatsby-helpers';
+import Helmet from 'react-helmet';
 
 export default React.createClass({
   mixins: [State, Navigation],

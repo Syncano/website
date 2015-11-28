@@ -1,6 +1,8 @@
 ---
 layout: terms
 title: Acceptable Use Policy
+seo_title: Acceptable Use Policy - Syncano
+description: "This Acceptable Use Policy describes actions that Syncano prohibits when You use its Services. The Acceptable Use Policy is governed by our ToS."
 mixpanel_title: Acceptable Use Policy
 permalink: /terms-of-service/aup/
 seo_description: "Syncano's acceptable use policy."

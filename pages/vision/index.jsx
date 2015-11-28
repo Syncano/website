@@ -5,9 +5,9 @@ export default React.createClass({
 
   getSEOConfig() {
     return {
-      title: "Our Vision",
-      description: "People are more connected than ever. There are an average of 5.7 internet connected devices per household. Our vision is to make them all play together.",
-      mixpanelTitle: "Vision"
+      title: 'Our Vision - Syncano',
+      description: "Syncano's cloud-based platform makes it easier for app developers to synchronize and scale data across devices and servers in real time.",
+      mixpanelTitle: 'Vision'
     }
   },
 

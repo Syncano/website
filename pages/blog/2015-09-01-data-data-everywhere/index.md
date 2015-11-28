@@ -2,6 +2,7 @@
 path: '/blog/data-data-everywhere/'
 layout: post
 title: Data, Data, Everywhere
+description: "Data is the lifeblood of any application. Not being able to access your application’s data quickly can be equated to having clogged arteries. Read more..."
 date: 2015-09-01 14:00:00
 author: kelly
 categories: ['Syncano']

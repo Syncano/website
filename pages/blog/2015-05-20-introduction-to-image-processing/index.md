@@ -2,6 +2,7 @@
 path: '/blog/introduction-to-image-processing/'
 layout: post
 title: Introduction to Image Processing
+description: "Image processing is about applying mathematics to pictures. It’s no different than any other part of computer science, except the data structures are different."
 date: 2015-05-20 12:21:29
 author: eric
 categories: ['Image Processing', 'Tutorials']

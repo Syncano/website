@@ -2,13 +2,14 @@
 path: '/blog/5-second-screen-real-time-apps/'
 layout: post
 title: 5 Second Screen Apps You Should Know About
+description: "It’s clear that second screen is the enhanced viewing wave of the future. For your viewing pleasure, here are five of our favorite second screens apps."
 date: 2014-07-24 11:21:29
 author: mariusz
 categories: ['Real-Time Apps', 'Real-Time Sync', 'Second Screen']
 share_image: Secondscreen_wettendass_Ipad-app-e1411728029108.jpg
 summary: "Second screen apps are like a sidecar on a motorcycle: a way to bring along your favorite pal while hitting the open road. App developers can take advantage of millennials’ inability to put down their mobile devices by creating useful, interactive applications that complement rather than distract from the television. Here, for your viewing pleasure, are five of our favorite second screens apps. Watch and learn (see what we did there?)."
 ---
-Second screen apps are like a sidecar on a motorcycle: a way to bring along your favorite pal while hitting the open road. App developers can take advantage of millennials' inability to put down their mobile devices by creating useful, interactive applications that complement rather than distract from the television. Here, for your viewing pleasure, are five of our favorite second screens apps. Watch <em>and</em> learn (see what we did there?).<!--more-->
+Second screen apps are like a sidecar on a motorcycle: a way to bring along your favorite pal while hitting the open road. App developers can take advantage of millennials' inability to put down their mobile devices by creating useful, interactive applications that complement rather than distract from the television. Here, for your viewing pleasure, are five of our favorite second screens apps. Watch <em>and</em> learn (see what we did there?).
 <h2>1. TVTag</h2>
 <h2><img class="alignnone wp-image-5202 size-large" src="TvTag.png" alt="TvTag Second Screen Real-Time App" width="1024" height="605" /></h2>
 TVTag is the must-have TV-junkie second screen app for the connected tube watcher with a wandering mind. <a href="http://tvtag.com">TVTag</a> integrates with social media so users can share their responses to what's happening in real time, often creating trending topics on Twitter and other networks. Available for smartphones and tablets, this app is the heir to the GetGlue legacy of complete TV-watching connectivity.

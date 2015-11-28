@@ -2,13 +2,14 @@
 path: '/blog/3-ways-build-more-apps-less-time/'
 layout: post
 title: 3 Ways to Build More Apps in Less Time
+description: "With today’s tech, you can build apps in less time, keep your clients happy, and grow your business at the same time - you just need a few good shortcuts!"
 date: 2014-07-09 11:21:29
 author: maciej
 categories: ['API', 'Backend as a Service', 'How Tos', 'Real-Time Apps', 'Real-Time Sync']
 image: 7103502393_f5178f5c9e_h.jpg
 summary: "'How fast can you build it?' You’ve probably heard this question a thousand times. A few years ago, building apps quickly wasn’t an option. You had to keep multiple moving parts in mind, synchronize your team, and estimate a timeline that extended far into the future. But with today’s technology, you can build more apps in less time, keep your clients happy, and grow your business at the same time – you just need a few good shortcuts. The good news is: we know what they are. Here are three expert tips so you can develop high-quality apps in less time."
 ---
-“How fast can you build it?” You’ve probably heard this question a thousand times. A few years ago, building apps quickly wasn’t an option. You had to keep multiple moving parts in mind, synchronize your team, and estimate a timeline that extended far into the future. But with today’s technology, you can build more apps in less time, keep your clients happy, and grow your business at the same time - you just need a few good shortcuts. The good news is: we know what they are. Here are three expert tips so you can develop high-quality apps in less time.<!--more-->
+“How fast can you build it?” You’ve probably heard this question a thousand times. A few years ago, building apps quickly wasn’t an option. You had to keep multiple moving parts in mind, synchronize your team, and estimate a timeline that extended far into the future. But with today’s technology, you can build more apps in less time, keep your clients happy, and grow your business at the same time - you just need a few good shortcuts. The good news is: we know what they are. Here are three expert tips so you can develop high-quality apps in less time.
 <h2><strong>1. Change the way you collaborate</strong></h2>
 Cut out downtime during development with productivity tools that allow more employees to work from home and communicate in real-time across different platforms and geographical locations. You’ll finish more apps quickly when your team members can work where and how they want, because it will maximize their individual efficiency and speed up development.
 <h2><strong>2. Use Backend as a Service and focus on what you do best</strong></h2>

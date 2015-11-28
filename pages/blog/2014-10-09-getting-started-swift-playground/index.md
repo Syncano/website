@@ -2,6 +2,7 @@
 path: '/blog/getting-started-swift-playground/'
 layout: post
 title: Getting Started with Swift Playground
+description: "As Apple announced during their latest event, you can now write Swift applications and submit them to the AppStore. Awesome!"
 date: 2014-10-09 11:21:29
 author: mariusz
 categories: ['iOS', 'Swift']
@@ -10,7 +11,7 @@ summary: "As Apple announced during their latest event, you can now write Swift 
 ---
 <p>As Apple announced during their latest event, you can now write <a href="https://developer.apple.com/swift/">Swift</a> applications and submit them to the AppStore.</p>
 
-<p>One of the most interesting features of Swift and the new XCode IDE are its interactive playgrounds. In the playgrounds, you can type a line of code and the result appears immediately – enabling you to run your code after you make changes without creating new projects. You can finally stop flinching in pain when you're designer tells you a button needs to be just a few pixels farther to the left.</p><!--more-->
+<p>One of the most interesting features of Swift and the new XCode IDE are its interactive playgrounds. In the playgrounds, you can type a line of code and the result appears immediately – enabling you to run your code after you make changes without creating new projects. You can finally stop flinching in pain when you're designer tells you a button needs to be just a few pixels farther to the left.</p>
 
 <h2>XCode</h2>
 
