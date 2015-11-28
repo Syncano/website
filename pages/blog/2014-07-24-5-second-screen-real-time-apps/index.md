@@ -6,7 +6,6 @@ description: "It’s clear that second screen is the enhanced viewing wave of th
 date: 2014-07-24 11:21:29
 author: mariusz
 categories: ['Real-Time Apps', 'Real-Time Sync', 'Second Screen']
-share_image: Secondscreen_wettendass_Ipad-app-e1411728029108.jpg
 summary: "Second screen apps are like a sidecar on a motorcycle: a way to bring along your favorite pal while hitting the open road. App developers can take advantage of millennials’ inability to put down their mobile devices by creating useful, interactive applications that complement rather than distract from the television. Here, for your viewing pleasure, are five of our favorite second screens apps. Watch and learn (see what we did there?)."
 ---
 Second screen apps are like a sidecar on a motorcycle: a way to bring along your favorite pal while hitting the open road. App developers can take advantage of millennials' inability to put down their mobile devices by creating useful, interactive applications that complement rather than distract from the television. Here, for your viewing pleasure, are five of our favorite second screens apps. Watch <em>and</em> learn (see what we did there?).
