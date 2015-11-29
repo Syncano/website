@@ -28,4 +28,4 @@ deployment:
     branch: devel
     commands:
       - NODE_ENV=staging gatsby build
-      - bundle exec s3_website push --config-dir=./config/staging/
+      - bundle exec s3_website push --force --config-dir=./config/staging/
