@@ -2,13 +2,14 @@
 path: '/blog/how-api-will-change-internet-of-things/'
 layout: post
 title: How APIs Will Change the Future of the Internet of Things
+description: "With an increase in demand and requirements for IoT apps, more and more APIs will emerge to support fast growth in three major ways. Learn more..."
 date: 2014-08-08 11:21:29
 author: thomas
 categories: ['API', 'Internet of Things', 'Real-Time Sync']
 image: Screen-Shot-2014-08-08-at-12.07.48-PM.png
 summary: "The dawn of the Application Programming Interface (API) has been an exciting time for developers who are passionate about the coming world of connectivity. There are currently over 11,000 APIs listed on programmableweb.com. With an increase in demand and requirements for Internet of Things apps, more and more APIs will emerge to support fast growth in three major ways"
 ---
-The dawn of the Application Programming Interface (API) has been an exciting time for developers who are passionate about the coming world of connectivity. There are currently over 11,000 APIs listed on <a href="http://programmableweb.com">programmableweb.com</a>. With an increase in demand and requirements for Internet of Things apps, more and more APIs will emerge to support fast growth in three major ways:<!--more-->
+The dawn of the Application Programming Interface (API) has been an exciting time for developers who are passionate about the coming world of connectivity. There are currently over 11,000 APIs listed on <a href="http://programmableweb.com">programmableweb.com</a>. With an increase in demand and requirements for Internet of Things apps, more and more APIs will emerge to support fast growth in three major ways:
 <h2>1. Merging front-end and backend development</h2>
 APIs will allow front-end developers to build production-ready apps without any knowledge of backend code. If you are well-versed in JavaScript but are unsure of how to create things like subscription notifications, an <a href="http://docs.syncano.io">API client library</a> will bridge the gap and enable you to develop apps single handedly without a backend expert. APIs essentially empower developers to take action and build apps whenever they fancy.
 <h2>2. Faster development times</h2>

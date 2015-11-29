@@ -9,8 +9,8 @@ export default React.createClass({
 
   getSEOConfig() {
     return {
-      title: "Turning developers into superstars",
-      description: "Syncano is a backend platform to build powerful real-time apps more efficiently. Integrate with any API, minimize boilerplate code and control your data.",
+      title: "Syncano - Build real-time apps, integrate with any API",
+      description: "A backend platform to build real-time apps efficiently. Integrate with any API, minimize boilerplate code and control your data - all from one place. Start building!",
       mixpanelTitle: "Home"
     }
   },

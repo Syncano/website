@@ -2,13 +2,14 @@
 path: '/blog/data-modeling-basics/'
 layout: post
 title: 'Data Modeling Basics: Definition and Usage'
+description: "In an application development project, defining the data models is just as important as defining the system architecture and user interface. Learn more..."
 date: 2014-08-29 11:21:29
 author: resham
 categories: ['How Tos']
 image: MySQL_Workbench_Visual_Design_Mac-e1411727585654.png
 summary: "Simply put, data modeling is the process of designing a database to meet the needs of a computer application. A complete data model identifies the data objects that are needed in an application, describes their characteristics, and shows the relationships between them. It is also an essential piece of the design of any application that involves obtaining, managing, storing, or querying sets of data—and these days, most applications do."
 ---
-Simply put, data modeling is the process of designing a database to meet the needs of a computer application. A complete data model identifies the data objects that are needed in an application, describes their characteristics, and shows the relationships between them. It is also an essential piece of the design of any application that involves obtaining, managing, storing, or querying sets of data—and these days, most applications do.<!--more-->
+Simply put, data modeling is the process of designing a database to meet the needs of a computer application. A complete data model identifies the data objects that are needed in an application, describes their characteristics, and shows the relationships between them. It is also an essential piece of the design of any application that involves obtaining, managing, storing, or querying sets of data—and these days, most applications do.
 
 Data modeling projects typically involve the development of three (sometimes more) different models, or views:
 <ul>

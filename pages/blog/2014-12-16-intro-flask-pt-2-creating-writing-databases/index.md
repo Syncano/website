@@ -2,13 +2,14 @@
 path: '/blog/intro-flask-pt-2-creating-writing-databases/'
 layout: post
 title: 'Intro to Flask Pt. 2: Creating and Writing to Databases'
+description: "In this post, we will complete our understanding of Flask as a model view controller by showing how to add the 'model' piece. Learn more..."
 date: 2014-12-16 11:21:29
 author: eric
 categories: ['Flask', 'How Tos', 'Python', 'Tutorials']
 image: flask-databases.jpg
 summary: "This article is intended as a continuation of the introduction to Flask that appears in a previous post, found here. In this post, we will complete our understanding of Flask as a model view controller by showing how to add the “model” piece. The model of an MVC is the database connections that tell the application how to save persistent data. Typically, in MVC’s you don’t actually write a SQL scheme but rather interact with the database through an object relational model (aka ORM)."
 ---
-<p>This article is intended as a continuation of the introduction to Flask that appears in a previous post, found <a href="http://www.syncano.io/blog/flask-micro-framework-introduction/">here</a>. In this post, we will complete our understanding of Flask as a model view controller by showing how to add the "model" piece. The model of an MVC is the database connections that tell the application how to save persistent data. Typically, in MVC's you don't actually write a SQL scheme but rather interact with the database through an object relational model (aka ORM).<!--more-->
+<p>This article is intended as a continuation of the introduction to Flask that appears in a previous post, found <a href="http://www.syncano.io/blog/flask-micro-framework-introduction/">here</a>. In this post, we will complete our understanding of Flask as a model view controller by showing how to add the "model" piece. The model of an MVC is the database connections that tell the application how to save persistent data. Typically, in MVC's you don't actually write a SQL scheme but rather interact with the database through an object relational model (aka ORM).
 
 An ORM makes writing SQL statements easier and higher level. It also works across many different database languages (each database uses a different version of the SQL language). That means migrating from one database to another is extremely easy with ORM; you'll usually just have to change a few small configuration settings.</p>
 

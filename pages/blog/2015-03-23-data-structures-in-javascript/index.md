@@ -2,6 +2,7 @@
 path: '/blog/data-structures-in-javascript/'
 layout: post
 title: Data Structures in JavaScript
+description: "JavaScript is a reasonably new language compared to the standard choices for studying data structures: Java, C, or C++. Learn more..."
 date: 2015-03-23 11:21:29
 author: eric
 summary: "JavaScript is a reasonably new language compared to the standard choices for studying data structures: Java, C, or C++. The reason for it’s choosing is twofold: first, because JavaScript exposes references rather than forcing one to make use of pointers; second, because JavaScript is easier to understand, which allows the concepts to shine rather than the minutiae."

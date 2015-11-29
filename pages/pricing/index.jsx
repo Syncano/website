@@ -6,9 +6,9 @@ export default React.createClass({
 
   getSEOConfig() {
     return {
-      title: "Pricing",
-      description: "Syncano's a pay-as-you go pricing model supports up to 1,500 simultaneous connections. Contact us if you need further support.",
-      mixpanelTitle: "Pricing"
+      title: 'Pricing and Plans at Syncano',
+      description: "Choose your plan based on your needs. We've created pricing built for devs. When you are ready to move to production, just flip the switch. It is that easy.",
+      mixpanelTitle: 'Pricing'
     }
   },
 

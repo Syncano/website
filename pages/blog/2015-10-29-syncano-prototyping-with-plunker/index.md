@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Syncano Prototyping with Plunker
+description: "Let me introduce you to Plunker. If you haven’t used Plunker yet, this is a great opportunity for you to try it out!"
 date: 2015-10-29 15:00:00
 author: devin
 path: '/blog/syncano-prototyping-with-plunker/'

@@ -95,7 +95,7 @@ export default React.createClass({
   },
 
   isLandingPage() {
-    return _.startsWith(this.props.page.path, '/landing-page/');
+    return this.props.page && _.startsWith(this.props.page.path, '/landing-page/');
   },
 
   renderFooter() {
@@ -105,7 +105,7 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <Helmet titleTemplate="%s | Syncano.io" />
+        <Helmet titleTemplate="%s" />
         {this.renderHeader()}
         <RouteHandler {...this.props}/>
         {this.renderFooter()}

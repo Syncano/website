@@ -5,9 +5,9 @@ export default React.createClass({
 
   getSEOConfig() {
     return {
-      title: "Terms of Service",
-      description: "Syncano's terms of service.",
-      mixpanelTitle: "Terms of Service"
+      title: 'Terms of Service',
+      description: 'In order to use the Syncano API, access the information or make use of the services provided by Syncano, you must first read this agreement and accept it.',
+      mixpanelTitle: 'Terms of Service'
     }
   },
       

@@ -5,7 +5,8 @@ export default React.createClass({
 
   getSEOConfig() {
     return {
-      title: 'Jobs',
+      title: 'Careers at Syncano',
+      description: 'If you are an explorer, an adventurer or a start-up entrepreneur at heart, apply on this page. Check for job openings in the US and Europe.',
       mixpanelTitle: 'Jobs'
     }
   },

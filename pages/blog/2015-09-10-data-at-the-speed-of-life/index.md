@@ -2,6 +2,7 @@
 path: '/blog/data-at-the-speed-of-life/'
 layout: post
 title: Data at the Speed of Life
+description: "One of the things I always struggled with when creating mobile apps, was the real-time aspect of them – almost always nonexistent."
 date: 2015-09-10 10:00:00
 author: mariusz
 categories: ['Syncano']

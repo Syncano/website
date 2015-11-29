@@ -2,13 +2,14 @@
 path: '/blog/insane-but-true-internet-of-things/'
 layout: post
 title: Four Insane (But True) Facts About the Internet of Things
+description: "Here are four insane 'things' you should know about the rapidly advancing Internet of Things. Read more..."
 date: 2014-07-15 11:21:29
 author: madeleine
 categories: ['Internet of Things']
 image: brown-2160011280.jpg
 summary: "The 'Internet of Things'—it’s a term that gets tossed around a lot. With more and more 'things' being connected everyday, the relevancy of the IoT is increasing in our businesses and day-to day-lives. From smart refrigerators to wireless heart monitors, there is no limit to the way things are being connected. Here are four insane “things” you should know about the rapidly advancing Internet of Things."
 ---
-The "Internet of Things"—it’s a term that gets tossed around a lot. With more and more “things” being connected everyday, the relevancy of the IoT is increasing in our businesses and day-to day-lives. From smart refrigerators to wireless heart monitors, there is no limit to the way things are being connected. Here are four insane “things” you should know about the rapidly advancing Internet of Things.<!--more-->
+The "Internet of Things"—it’s a term that gets tossed around a lot. With more and more “things” being connected everyday, the relevancy of the IoT is increasing in our businesses and day-to day-lives. From smart refrigerators to wireless heart monitors, there is no limit to the way things are being connected. Here are four insane “things” you should know about the rapidly advancing Internet of Things.
 <h2>1. Your refrigerator is going to outsmart you.</h2>
 The days of spoiled milk are gone. This <a href="http://www.lg.com/us/refrigerators/lg-LFX31995ST-french-3-door-refrigerator">smart refrigerator</a> can read radio frequency identification tags on food items as they’re placed into the refrigerator. It looks up those tags on the Internet to identify the food you’ve just bought and notifies you when the food is about to expire. With a quick check of the LCD screen, you can even learn what additional ingredients you need to buy to make a fantastic meal.
 <h2>2. You will have more Internet-connected devices than friends.</h2>

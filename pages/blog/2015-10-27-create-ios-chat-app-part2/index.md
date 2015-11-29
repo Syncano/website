@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Create an iOS Chat App using JSQMessagesViewController – Part 2
+seo_title: "Create an iOS Chat App using JSQMessagesViewController"
+description: "In part 2 we will add storing data on the server and real-time updates (receiving new messages as soon as they are send by others, without a need to refresh)."
 date: 2015-10-27 15:00:00
 author: mariusz
 path: '/blog/create-ios-chat-app-part2/'

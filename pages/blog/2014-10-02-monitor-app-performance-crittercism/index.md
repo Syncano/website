@@ -2,13 +2,14 @@
 path: '/blog/monitor-app-performance-crittercism/'
 layout: post
 title: How to Monitor Your App's Performance
+description: "After building a successful real-time app with Syncano with out last tutorial, it’s time to make sure your app’s performance remains on top of its game."
 date: 2014-10-02 11:21:29
 author: mariusz
 categories: ['How Tos', 'Info']
 image: crittercism-syncano2.png
 summary: "After building a successful real-time app with Syncano with out last tutorial, it’s time to make sure your app’s performance remains on top of its game. We recommend using Crittercism, which allows you to monitor your app performance and do things like prioritize issues, troubleshoot, and view performance trends."
 ---
-<a href="http://www.syncano.io/blog/get-instant-notifications-syncano-ios/">After building a successful real-time app with Syncano with out last tutorial</a>, it’s time to make sure your app’s performance remains on top of its game. We recommend using <a href="http://www.crittercism.com/solution-overview/">Crittercism</a>, which allows you to monitor your app performance and do things like prioritize issues, troubleshoot, and view performance trends.<!--more-->
+<a href="http://www.syncano.io/blog/get-instant-notifications-syncano-ios/">After building a successful real-time app with Syncano with out last tutorial</a>, it’s time to make sure your app’s performance remains on top of its game. We recommend using <a href="http://www.crittercism.com/solution-overview/">Crittercism</a>, which allows you to monitor your app performance and do things like prioritize issues, troubleshoot, and view performance trends.
 
 There are three main features of Crittercism that we particularly like: Crash Reports, Breadcrumbs, and Network Endpoints. If your app crashes at any time, the next time it’s re-launched, Crittercism's Crash Report feature will record information on what exactly caused the crash in the first place, so you can find it on the server immediately and fix it. You can also see things like how many times the crash occurred and how many users were affected - features that are especially important when you need to prioritize your troubleshooting. Breadcrumbs are great because they allow you to see the sequence of events a user took before a crash happened. For joint use with Syncano or other integrations, Network Endpoints are particularly valuable - you can see how Syncano performs in your app, how fast it’s working/responding, etc.
 

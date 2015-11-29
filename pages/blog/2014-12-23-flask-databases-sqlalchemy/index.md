@@ -2,13 +2,14 @@
 path: '/blog/flask-databases-sqlalchemy/'
 layout: post
 title: 'Flask Databases: Object Relational Models with SQLAlchemy'
+description: "The power of SQLAlchemy is many-fold, but we'll touch on just a few of a few features. Read on..."
 date: 2014-12-23 11:21:29
 author: eric
 categories: ['Flask', 'Python', 'Tutorials']
 image: flask-pt-3-databases-mvc.jpg
 summary: "Last week, I demonstrated some strengths and weaknesses of using SQL. Now, I’m going to show you how a really great ORM like SQLAlchemy is far better in most cases."
 ---
-<p>Last week, I demonstrated some strengths and weaknesses of using SQL. Now, I'm going to show you how a really great ORM like SQLAlchemy is far better in most cases.<!--more-->
+<p>Last week, I demonstrated some strengths and weaknesses of using SQL. Now, I'm going to show you how a really great ORM like SQLAlchemy is far better in most cases.
 The power of SQLAlchemy is many-fold, but I'll touch on just a few of a few features:</p>
 
 <ol>

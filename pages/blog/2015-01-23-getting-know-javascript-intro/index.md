@@ -2,6 +2,7 @@
 path: '/blog/getting-know-javascript-intro/'
 layout: post
 title: Getting to Know JavaScript - An Intro
+description: "JavaScript was introduced with two different design principles for two separate communities. As a result, it developed into two distinct sets of paradigms."
 date: 2015-01-23 11:21:29
 author: eric
 categories: ['Javascript', 'Tutorials']
@@ -9,7 +10,7 @@ image: intro-javascript.jpg
 summary: "JavaScript is probably one of the oddest languages in history – partly because of its back story. It was introduced with two different design principles for two separate communities. As a result, it developed into two distinct sets of paradigms."
 ---
 <h2>A little history</h2>
-JavaScript is probably one of the oddest languages in history - partly because of its back story. It was introduced with two different design principles for two separate communities. As a result, it developed into two distinct sets of paradigms.<!--more-->
+JavaScript is probably one of the oddest languages in history - partly because of its back story. It was introduced with two different design principles for two separate communities. As a result, it developed into two distinct sets of paradigms.
 
 JavaScript was originally developed at NetScape to help non-programmers use the web (keep in mind - the web was young and we weren't sure where it was going or if it would even be around in the near future). The easy-to-use, minimalistic language disgusted "real" programmers (mainly college educated C++ programmers), and since it wasn't a real "programming language" like C++, it was prone to all kinds of bugs and errors. However, it accomplished something very important: it opened up programming to others.
 

@@ -2,13 +2,15 @@
 path: '/blog/the-six-most-important-things-to-consider-when-building-a-backend-solution/'
 layout: post
 title: The Six Most Important Things To Consider When Building a Backend Solution
+seo_title: Six Important Things To Consider When Building a Backend Solution
+description: "A good backend solution will ensure your data is secure, reliable, and integrated within all of your apps. Here are the top 6 things we took into account."
 date: 2014-04-14 11:21:29
 author: thomas
 categories: ['Building Syncano', 'Real-Time Sync']
 image: syncano-all.png
 summary: "A good backend solution will ensure your data is secure, reliable, and seamlessly integrated within all of your applications. Here are the top six things we took into account when we built ours."
 ---
-<p>A good backend solution will ensure your data is secure, reliable, and seamlessly integrated within all of your applications. Here are the top six things we took into account when we built ours.<!--more--></p>
+<p>A good backend solution will ensure your data is secure, reliable, and seamlessly integrated within all of your applications. Here are the top six things we took into account when we built ours.</p>
 
 <h2><strong>Scalability</strong></h2>
 <p>Scalability is essential for anyone using a backend service provider. Your storage should be able to grow as your business grows, so a platform should give you access to more than enough server space to account for unforeseen data surges. We built Syncano on top Amazon Web Services (AWS) because of its unlimited capacity.</p>

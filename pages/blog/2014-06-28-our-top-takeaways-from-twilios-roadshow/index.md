@@ -1,14 +1,15 @@
 ---
 path: '/blog/our-top-takeaways-from-twilios-roadshow/'
 layout: post
-title: Our Top Takeaways from Twilio's Roadshow
+title: "Our Top Takeaways from Twilio's Roadshow"
+description: "We joined Twilio’s 'Engineering the Customer Experience' Roadshow - an event designed to help companies engineer great customer experiences. Read more.."
 date: 2014-06-28 11:21:29
 author: sara
 categories: ['API', 'Backend as a Service', 'Startup Lessons']
 image: Twilio_Blog_Roadshow-640x265.jpg
 summary: "This month, we joined Twilio’s 'Engineering the Customer Experience' Roadshow – an event designed to help developers and companies engineer great customer experiences in our new software-defined world. With a room full of forward-thinking engineers and decision-makers, John Rymer, VP and Principal Analyst at Forrester, imparted these need-to-know tips to New York City’s tech leaders."
 ---
-<p dir="ltr">This month, we joined <a href="http://roadshow.twilio.com/">Twilio’s “Engineering the Customer Experience” Roadshow</a> - an event designed to help developers and companies engineer great customer experiences in our new software-defined world. With a room full of forward-thinking engineers and decision-makers, John Rymer, VP and Principal Analyst at Forrester, imparted these need-to-know tips to New York City's tech leaders.<!--more--></p>
+<p dir="ltr">This month, we joined <a href="http://roadshow.twilio.com/">Twilio’s “Engineering the Customer Experience” Roadshow</a> - an event designed to help developers and companies engineer great customer experiences in our new software-defined world. With a room full of forward-thinking engineers and decision-makers, John Rymer, VP and Principal Analyst at Forrester, imparted these need-to-know tips to New York City's tech leaders.</p>
 
 <h2 dir="ltr">1. Everyone in the company must embrace change.</h2>
 <p dir="ltr">Prototype, build, deploy, and change. This “Minimum Viable Product” method of building businesses is the new norm, and it requires a team in which every individual member embraces change. Companies must develop and deploy at web speed with a strong culture of communication and innovation.</p>

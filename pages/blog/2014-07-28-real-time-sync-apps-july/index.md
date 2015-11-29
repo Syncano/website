@@ -2,13 +2,14 @@
 path: '/blog/real-time-sync-apps-july/'
 layout: post
 title: 'Real-Time Sync Apps of the Month: July Edition'
+description: "Every month, we see some incredible real-time apps launch in the app store. Here are some that caught our eye this past July."
 date: 2014-07-28 11:21:29
 author: madeleine
 categories: ['Real-Time Apps', 'Real-Time Sync']
 image: apps-of-mont-july-14.png
 summary: "Every month, we see some incredible real-time apps launch in the app store. Here are some that caught our eye this past July."
 ---
-Every month, we see some incredible real-time apps launch in the app store. Here are some that caught our eye this past July.<!--more-->
+Every month, we see some incredible real-time apps launch in the app store. Here are some that caught our eye this past July.
 <h2><b>1. Stack</b></h2>
 <img class="aligncenter size-large wp-image-5361" src="example1.png" alt="stack real-time app" width="1024" height="617" /> <a href="http://www.getstack.io">Stack</a> is a productivity tool that brings your team, tasks, discussions, and workflow together — so you can get more stuff done. The app lets you manage your projects seamlessly, letting you assign responsibility, set due dates and priorities, and attach files to your tasks. Additionally, Stack lets you comment on tasks in real-time so you and your team can stay in sync.
 <h2><b>2. Vima – GPS Bike Tracker</b></h2>

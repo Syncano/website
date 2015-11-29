@@ -2,13 +2,14 @@
 path: '/blog/what-is-backend-as-a-service-baas/'
 layout: post
 title: What is "Backend as a Service?"
+description: "Although BaaS is fairly new, the benefits of using it has created great growth in the industry, shifting BaaS to a natural part of the app development process."
 date: 2014-08-04 11:21:29
 author: sara
 categories: ['Backend as a Service']
 image: sync.png
 summary: "Applications make up a vast, diverse, and growing market – but in some ways, applications are all very much alike. Certain features show up again and again: cloud storage, integration with social networks such as Twitter, Facebook, and Google Plus, push notifications from central servers, real-time sync, user management, etc. Any company that designs multiple apps will soon realize that much of their backend requires re-inventing the wheel with one integration after another. Backend as a Service (BaaS) eliminates that redundancy."
 ---
-Applications make up a vast, diverse, and growing market – but in some ways, applications are all very much alike. Certain features show up again and again: cloud storage, integration with social networks such as Twitter, Facebook, and Google Plus, push notifications from central servers, real-time sync, user management, etc. Any company that designs multiple apps will soon realize that much of their backend requires re-inventing the wheel with one integration after another. Backend as a Service (BaaS) eliminates that redundancy.<!--more-->
+Applications make up a vast, diverse, and growing market – but in some ways, applications are all very much alike. Certain features show up again and again: cloud storage, integration with social networks such as Twitter, Facebook, and Google Plus, push notifications from central servers, real-time sync, user management, etc. Any company that designs multiple apps will soon realize that much of their backend requires re-inventing the wheel with one integration after another. Backend as a Service (BaaS) eliminates that redundancy.
 <h2>BaaS outsources the commodified details of development so you can focus on what makes your app unique.</h2>
 BaaS is unique from SaaS and PaaS because it focuses on saving backend development time. BaaS links your apps to cloud storage and high-performing APIs that handle tasks across a variety of services. Whether you're authenticating through Facebook or performing location-based calculations using Google Maps data, you can access the functionality without being an expert in the API syntax. That means more painless integration and time for you to focus on the core features of your app.
 <h2>BaaS is a development accelerator.</h2>

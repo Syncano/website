@@ -2,13 +2,14 @@
 path: '/blog/how-to-create-a-great-user-experience/'
 layout: post
 title: How to Create a Great User Experience
+description: "Here are six actions you can take to create the best experience for your users - higher adoption, better conversion and retention rates, etc. Read more..."
 date: 2014-07-30 11:21:29
 author: resham
 categories: ['How Tos', 'Startup Lessons']
 image: 10874001974_4ce37fe90e_b-e1411727992129.jpg
 summary: "By implementing the essential elements of a great user experience, your app will have higher adoption, better conversion and retention rates, an increase in customer satisfaction, and invaluable word-of-mouth referrals. Here are six actions you can take to create the best experience for your users."
 ---
-By implementing the essential elements of a great user experience, your app will have higher adoption, better conversion and retention rates, an increase in customer satisfaction, and invaluable word-of-mouth referrals. Here are six actions you can take to create the best experience for your users.<!--more-->
+By implementing the essential elements of a great user experience, your app will have higher adoption, better conversion and retention rates, an increase in customer satisfaction, and invaluable word-of-mouth referrals. Here are six actions you can take to create the best experience for your users.
 <h2>Know your target user.</h2>
 Instead of trying to create a good user experience for everyone, design a great user experience for a niche group of users—those who are most likely going to use your product or services.
 <h2>Simplify the experience.</h2>

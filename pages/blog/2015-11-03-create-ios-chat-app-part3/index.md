@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Create an iOS Chat App using JSQMessagesViewController – Part 3
+seo_title: Create an iOS Chat App using JSQMessagesViewController
+description: "In part 3 we will add user auth - ability to sign up, log in and display sender name of each message. Learn more..."
 date: 2015-11-02 15:00:00
 author: mariusz
 path: '/blog/create-ios-chat-app-part3/'

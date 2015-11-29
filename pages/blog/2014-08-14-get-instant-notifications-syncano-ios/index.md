@@ -2,13 +2,14 @@
 path: '/blog/get-instant-notifications-syncano-ios/'
 layout: post
 title: How to Get Instant Notifications on iOS
+description: "Within minutes, you can create dynamic iOS apps on Syncano that instantly reflect changes. Here’s a demo app and a quick guide so you can get started."
 date: 2014-08-14 11:21:29
 author: mariusz
 categories: ['API', 'How Tos', 'iOS', 'Real-Time Sync']
 image: data.png
 summary: "Within minutes, you can create dynamic iOS apps on Syncano that instantly reflect changes in data by 'subscribing' to changes on Syncano’s Sync Server. Here’s a demo app and a quick guide so you can get started."
 ---
-Within minutes, you can create dynamic iOS apps on Syncano that instantly reflect changes in data by “subscribing” to changes on Syncano’s Sync Server. Here’s a demo app and a quick guide so you can get started.<!--more-->
+Within minutes, you can create dynamic iOS apps on Syncano that instantly reflect changes in data by “subscribing” to changes on Syncano’s Sync Server. Here’s a demo app and a quick guide so you can get started.
 
 <h2>Introduction to Syncano</h2>
 Syncano offers many <a href="http://www.syncano.io/features/">features</a> such as data modeling, an Admin GUI, a real-time sync API, data storage, and more. In this example, we'll focus on the latter two features - storing and syncing data.

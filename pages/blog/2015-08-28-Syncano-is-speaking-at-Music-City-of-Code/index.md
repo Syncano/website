@@ -2,6 +2,7 @@
 path: '/blog/syncano-is-speaking-at-music-city-of-code/'
 layout: post
 title: Syncano is speaking at Music of Code
+description: "Catch Kelly Andrews, our very own Syncano Developer Evangelist, in Nashville Tennessee on Saturday at the Music City of Code."
 date: 2015-08-28 09:00:00
 author: mary
 categories: ['Syncano']

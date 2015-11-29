@@ -2,6 +2,7 @@
 path: '/blog/friendly-code-review/'
 layout: post
 title: How to Facilitate Friendlier Code Reviews
+description: "Having others review your code helps you catch bugs early, improve the design and quality of your code, and teach devs new skills."
 date: 2014-11-20 11:21:29
 author: justyna
 categories: ['Culture', 'How Tos']
@@ -9,7 +10,7 @@ image: friendly-code-review.png
 summary: "Imagine that you’ve worked on a feature for two days, and it’s finally ready. You tested it a little bit – so it should work – and now you can just merge it and push the feature to production. That way, everyone will be able to instantly see and use it, and you can move on. But instead of a new feature, this is what happens"
 ---
 
-Imagine that you've worked on a feature for two days, and it's finally ready. You tested it a little bit - so it should work - and now you can just merge it and push the feature to production. That way, everyone will be able to instantly see and use it, and you can move on. But instead of a new feature, this is what happens:<!--more-->
+Imagine that you've worked on a feature for two days, and it's finally ready. You tested it a little bit - so it should work - and now you can just merge it and push the feature to production. That way, everyone will be able to instantly see and use it, and you can move on. But instead of a new feature, this is what happens:
 
 <img class="aligncenter size-full wp-image-10502" src="Screen-Shot-2014-11-20-at-11.01.07-AM.png" alt="500 internal server error" width="1016" height="164" />
 

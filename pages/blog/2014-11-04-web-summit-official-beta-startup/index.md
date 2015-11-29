@@ -2,6 +2,7 @@
 path: '/blog/web-summit-official-beta-startup/'
 layout: post
 title: Syncano is an Official Web Summit Beta Startup
+description: "The fourth official Web Summit starts in Dublin today, and Syncano team is re-uniting from our different offices to attend as their official Beta startup."
 date: 2014-11-04 11:21:29
 author: resham
 categories: ['News']

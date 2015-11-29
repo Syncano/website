@@ -2,13 +2,14 @@
 path: '/blog/misconceptions-backend-as-a-service/'
 layout: post
 title: 4 Common Misconceptions About Backend As A Service
+description: "Despite the advantages BaaS has to offer, there are still some common misconceptions about the industry. Here’s a closer look at the top four."
 date: 2014-06-02 11:21:29
 author: maciej
 categories: ['Backend as a Service']
 image: 11189692736_5ef65679be_b.jpg
 summary: "Backend as a Service (BaaS) allows developers to focus on what really matters: innovation, user experience, and user acquisition. Yet despite the advantages BaaS has to offer, there are still some common misconceptions about the industry left over from the earliest days of its inception. Here’s a closer look at the top four."
 ---
-<p class="MsoNormal" style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto;">Backend as a Service (BaaS) allows developers to focus on what really matters: innovation, user experience, and user acquisition. Yet despite the advantages BaaS has to offer, there are still some common misconceptions about the industry left over from the earliest days of its inception. Here’s a closer look at the top four.<!--more--></p>
+<p class="MsoNormal" style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto;">Backend as a Service (BaaS) allows developers to focus on what really matters: innovation, user experience, and user acquisition. Yet despite the advantages BaaS has to offer, there are still some common misconceptions about the industry left over from the earliest days of its inception. Here’s a closer look at the top four.</p>
 
 <h2 class="MsoNormal" style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-outline-level: 2;"><b>1. It’s too expensive.</b></h2>
 <p class="MsoNormal" style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-outline-level: 2;">A few years back, app developers had no choice but to spend valuable time and resources building a backend. Now, with <a href="http://readwrite.com/2013/01/07/apple-app-store-growing-by#awesm=~oGgUBITkZBEIoF" target="_blank">20,000 new apps on the App Store each month</a>, developers need solutions that are going to minimize time to launch and maximize user acquisition post-launch – all while keeping the cost as low as possible. A Backend as a Service can in many ways help maximize success while minimizing costs. It can help developers flip apps faster, open up time to focus on more important initiatives, and bring monetary success quicker without requiring extra staff. Plus, some <a href="http://www.syncano.io/pricing/" target="_blank">pay-per-use pricing models</a> mean you don't pay for your backend until you've significantly grown your user base – so you don't have to worry about making a huge initial capital investment before you start generating revenue.<b></b></p>

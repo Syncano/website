@@ -2,6 +2,7 @@
 path: '/blog/why-your-content-should-display-everywhere-cross-device/'
 layout: post
 title: Why Your Content Should Display Everywhere (And How to Do It)
+description: "With consumers expecting multiple screens to complete one single user experience, your content will is expected to be constant across devices. Read more..."
 date: 2014-08-11 11:21:29
 author: sara
 categories: ['Backend as a Service', 'How Tos', 'Real-Time Sync', 'Second Screen']
@@ -10,7 +11,7 @@ summary: "The release of the smartphone revolutionized the way humans interacted
 ---
 The release of the smartphone revolutionized the way humans interacted with each other, but this was just the beginning of a major worldwide technological shift. With the introduction of tablets, smartwatches, smart TVs, and other non-mobile technology, people are connecting to the internet through multiple screens, and cross-device interactions are on the rise. A recent Google study projected 84% of consumers would start shopping on one device and finish a purchase on another. And when it comes to television, a whopping 84% of smartphone and tablet owners use their devices as second screens while watching TV programming.
 
-The addition of multiple screens is an opportunity for brands to reach consumers in new ways. But how do brands ensure their messages reach consumers, no matter what platform they’re on? Here are some best practices to ensure your company’s content can reach its cross-device consumers.<!--more-->
+The addition of multiple screens is an opportunity for brands to reach consumers in new ways. But how do brands ensure their messages reach consumers, no matter what platform they’re on? Here are some best practices to ensure your company’s content can reach its cross-device consumers.
 <h2>Simplify your user experience.</h2>
 Mobile web users spend 86% of their time on applications, and only 14% of their time on mobile web browsers. Yet 55% of these users are still shopping on mobile browsers. So if users overall are spending most of their time on mobile applications, why aren’t they shopping on them?
 

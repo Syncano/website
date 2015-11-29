@@ -2,6 +2,7 @@
 path: '/blog/intro-to-express-js/'
 layout: post
 title: Intro to Express.js
+description: "Express.js is a web framework for the middleware of your Node.js application. It’s responsible for passing data from the backend to the front-end and vice versa."
 date: 2015-03-13 11:21:29
 author: eric
 categories: ['Javascript', 'Tutorials']

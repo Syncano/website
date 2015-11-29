@@ -2,6 +2,8 @@
 path: '/blog/syncano-named-one-of-150-most-promising-startups-in-the-world/'
 layout: post
 title: Syncano Named One of 150 Most Promising Startups in the World
+seo_title: Syncano One of 150 Most Promising Startups in the World
+description: "We are excited to share Syncano has been selected among 150 of the 'most promising' startups in the world - from a pool of thousands of applicants!"
 date: 2014-04-21 11:21:29
 author: sara
 categories: ['News']
@@ -10,7 +12,7 @@ summary: "We are excited to share Syncano has been selected among 150 of the “
 ---
 We are excited to share Syncano has been selected among 150 of the “most promising” startups in the world - from a pool of thousands of applicants!
 
-<!--more-->Back in February, we applied to be part of the Collision Conference, the first annual US-based conference by <a href="http://www.thesummit.co/">The Summit</a> that brings some of the world’s most promising startups, investors and entrepreneurs together in an effort to shape the future of technology.
+Back in February, we applied to be part of the Collision Conference, the first annual US-based conference by <a href="http://www.thesummit.co/">The Summit</a> that brings some of the world’s most promising startups, investors and entrepreneurs together in an effort to shape the future of technology.
 
 For the last three years, The Summit held their <a href="F.ounders">annual conference</a> in Dublin – a tech event considered to be one of the most prestigious in the world. <a href="http://www.forbes.com/sites/haydnshaughnessy/2011/10/28/reed-hastings-on-his-vision-for-netflix/">Forbes</a> described it as the “new hot ticket on the tech conference scene,” while <a href="http://www.bloomberg.com/now/2012-06-25/the-davos-for-tech-geeks/">Bloomberg</a> said it was “Davos for geeks” and the “‘Rolls Royce’ of tech events.” Last year’s event generated 10,242 attendees from 98 countries around the world, and this year they are expecting 20,000 attendees. Previously selected startup exhibitors include Uber, Stripe, Nest, Vine, Dropbox, and other now Fortune 500 companies.
 

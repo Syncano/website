@@ -1,6 +1,8 @@
 ---
 layout: terms
 title: Safe Harbor Privacy Policy
+seo_title: Syncano Performance Insight Safe Harbor Privacy Policy
+description: "We have created this Privacy Policy to help explain about how we handle Information that we receive from the EEA in connection with our product."
 mixpanel_title: Safe Harbor Privacy Policy
 permalink: /terms-of-service/safe-harbor-privacy-policy/
 ---

@@ -2,6 +2,7 @@
 path: '/blog/intro-to-syncano/'
 layout: post
 title: Intro to Syncano
+description: "Time to production is getting smaller but requirements remain the same. Syncano gets it - and it’s the very reason we exist."
 date: 2015-08-26 09:00:00
 author: kelly
 categories: ['Syncano']

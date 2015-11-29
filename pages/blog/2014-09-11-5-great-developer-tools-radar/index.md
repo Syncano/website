@@ -2,13 +2,14 @@
 path: '/blog/5-great-developer-tools-radar/'
 layout: post
 title: 5 Great Developer Tools Under the Radar
+description: "Here’s a glance at 5 tools that we’ve tried and recommend to simplify your workflow. Read more..."
 date: 2014-09-11 11:21:29
 author: resham
 categories: ['API', 'Info']
 image: Screen-Shot-2014-09-10-at-10.06.06-PM-e1411727368997.png
 summary: "As developers, we have more tools than ever to automate and assist with every step of our projects—the hard part is figuring out which tools are worth using in our apps. Here’s a glance at 5 tools that we’ve tried and recommend to simplify your workflow."
 ---
-As developers, we have more tools than ever to automate and assist with every step of our projects—the hard part is figuring out which tools are worth using in our apps. Here’s a glance at 5 tools that we've tried and recommend to simplify your workflow.<!--more-->
+As developers, we have more tools than ever to automate and assist with every step of our projects—the hard part is figuring out which tools are worth using in our apps. Here’s a glance at 5 tools that we've tried and recommend to simplify your workflow.
 <h2><strong>Cockpit: Cloud CMS</strong></h2>
 <img class="aligncenter size-full wp-image-8135" src="teaser.png" alt="cockpit cloud cms" width="973" height="489" />
 

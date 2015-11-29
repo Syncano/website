@@ -2,13 +2,14 @@
 path: '/blog/why-we-love-real-time-sync/'
 layout: post
 title: Why We Love Real-Time Sync (And You Should, Too)
+description: "Syncano makes it pretty easy for you to integrate - so your only challenge now is to find time and bring all those brainstormed app ideas to fruition."
 date: 2014-08-06 11:21:29
 author: maciej
 categories: ['Real-Time Apps', 'Real-Time Sync']
 image: gamecat.png
 summary: "Syncing data across devices and servers in real-time not only makes it easier for you to bridge, build, scale and manage your apps effectively; it makes virtual engagements feel more real. Whether you are developing cool apps solely for the enjoyment of your fellow man or are creating experiences that you, too, want to embrace, here’s some reasons we know you’ll love real-time sync"
 ---
-Syncing data across devices and servers in real-time not only makes it easier for you to bridge, build, scale and manage your apps effectively; it makes virtual engagements feel more real. Whether you are developing cool apps solely for the enjoyment of your fellow man or are creating experiences that you, too, want to embrace, here’s some reasons we know you’ll love real-time sync:<!--more-->
+Syncing data across devices and servers in real-time not only makes it easier for you to bridge, build, scale and manage your apps effectively; it makes virtual engagements feel more real. Whether you are developing cool apps solely for the enjoyment of your fellow man or are creating experiences that you, too, want to embrace, here’s some reasons we know you’ll love real-time sync:
 <h2>It empowers the voice of the consumer</h2>
 Developers using real-time sync to create apps enable the audience's voices to be heard. With second screen apps like <a href="http://www.syncano.io/second-screen/">Havoc 247</a>, anyone in the audience can vote to make decisions about programming. You can also let everyone know – in real-time – what you think about the show and have conversations even when you're watching TV alone.
 <h2>It gives fans up-to-the-millisecond updates</h2>

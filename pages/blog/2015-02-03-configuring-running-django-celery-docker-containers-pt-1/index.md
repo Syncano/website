@@ -1,7 +1,8 @@
 ---
 path: '/blog/configuring-running-django-celery-docker-containers-pt-1/'
 layout: post
-title: Configuring and Running Django and Celery in Docker Containers (pt. 1)
+title: Configuring and Running Django + Celery in Docker Containers
+description: "After reading this blog post, you will be able to configure Celery with Django, Postgres, Redis, and Rabbitmq, and then run everything in Docker containers."
 date: 2015-02-03 11:21:29
 author: justyna
 categories: ['Celery', 'Django', 'Docker', 'Fig.sh']
@@ -9,7 +10,7 @@ image: docker-django-celery.png
 summary: "Today, you’ll learn how to setup a distributed task processing system for quick prototyping. You will configure Celery with Django, Postgres, Redis, and Rabbitmq, and then run everything in Docker containers. You’ll need some working knowledge of Docker for this tutorial, which you can get in one my previous posts here."
 ---
 
-Today, you'll learn how to setup a distributed task processing system for quick prototyping. You will configure Celery with Django, Postgres, Redis, and Rabbitmq, and then run everything in Docker containers. You'll need some working knowledge of <a href="http://www.docker.com">Docker</a> for this tutorial, which you can get in one my previous posts <a href="http://www.syncano.io/blog/getting-started-docker/">here</a>.<!--more-->
+Today, you'll learn how to setup a distributed task processing system for quick prototyping. You will configure Celery with Django, Postgres, Redis, and Rabbitmq, and then run everything in Docker containers. You'll need some working knowledge of <a href="http://www.docker.com">Docker</a> for this tutorial, which you can get in one my previous posts <a href="http://www.syncano.io/blog/getting-started-docker/">here</a>.
 
 <a href="https://www.djangoproject.com/">Django</a> is a well-known Python web framework, and <a href="https://celery.readthedocs.org/en/latest/">Celery</a> is a distributed task queue. You'll use Postgres as a regular database to store jobs, Rabbitmq to route tasks to different queues, and Redis as a task storage backend.
 

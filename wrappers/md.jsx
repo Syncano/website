@@ -46,12 +46,13 @@ export default Radium(React.createClass({
 
   render() {
     let post = this.props.page.data;
+    let seoTitle = post.seo_title ? post.seo_title : post.title;
     let author = Team[post.author];
 
     if (!post.categories) {
       return (
         <div>
-          <Helmet title={post.title}/>
+          <Helmet title={seoTitle}/>
           <div dangerouslySetInnerHTML={{__html: post.body}}></div>
         </div>
       )
@@ -59,9 +60,14 @@ export default Radium(React.createClass({
 
     return (
       <div style={{marginBottom: 70}}>
-        <Helmet title={post.title}/>
+        <Helmet
+          title={post.title}
+          meta={[{"name": "description", "content": post.description}]}
+        />
         <div className="post-header image">
-          <div className="next pull-right hidden "><a href=""><img src={require('../images/next-arrow.png')}/></a></div>
+          <div className="next pull-right hidden">
+            <a href=""><img src={require('../images/next-arrow.png')} alt="next-arrow"/></a>
+          </div>
           <div className="container">
             <div className="row">
               <div className="col-md-8 col-md-offset-2">
@@ -75,7 +81,7 @@ export default Radium(React.createClass({
                 <h1>{post.title}</h1>
                 <div className="author">
                   <div className="pull-left">
-                    <img src={`/about/${author.photo}`} alt={author.name} height="60" width="auto" />
+                    <img src={`/about/${author.photo}`} alt={author.name} height="60"/>
                   </div>
                   <h5>By {author.name}</h5>
                   {this.renderTwitterAuthorLink()}

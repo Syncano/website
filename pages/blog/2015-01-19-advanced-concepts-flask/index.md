@@ -2,13 +2,14 @@
 path: '/blog/advanced-concepts-flask/'
 layout: post
 title: Advanced Concepts in Flask
+description: "Advanced Flask concepts are used to build applications that scale, so let's talk a little bit about what scaling an application means."
 date: 2015-01-19 11:21:29
 author: eric
 categories: ['Flask', 'Python']
 image: advanced-flask-concepts1.png
 summary: "A lot of the concepts we mention in this article can be found in Armin Ronacher’s presentation on advanced Flask patterns. Mr.Ronacher did great job enumerating the concepts, so I want to make sure he’s given due credit."
 ---
-<p>A lot of the concepts we mention in this article can be found in <a href="https://speakerdeck.com/mitsuhiko/advanced-flask-patterns">Armin Ronacher's presentation</a> on advanced Flask patterns. Mr.Ronacher did great job enumerating the concepts, so I want to make sure he's given due credit.<!--more--></p>
+<p>A lot of the concepts we mention in this article can be found in <a href="https://speakerdeck.com/mitsuhiko/advanced-flask-patterns">Armin Ronacher's presentation</a> on advanced Flask patterns. Mr.Ronacher did great job enumerating the concepts, so I want to make sure he's given due credit.</p>
 
 <h2>Introduction - an application that you can scale.</h2>
 

@@ -5,8 +5,9 @@ export default React.createClass({
 
   getSEOConfig() {
     return {
-      title: "Solutions",
-      mixpanelTitle: "Solutions"
+      title: 'Syncano Solutions - Easily install code blocks and reuse them across all of your apps',
+      description: 'Easily install code blocks and reuse them across all of your apps with Solutions. Spend less time writing code with help from the Syncano community.',
+      mixpanelTitle: 'Solutions'
     }
   },
 

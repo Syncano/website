@@ -2,6 +2,7 @@
 path: '/blog/data-modeling-parent-child-relationships/'
 layout: post
 title: 'Data Modeling: Parent-Child Relationships'
+description: "One of the more important concepts in database modeling is the notion of a parent-child (or hierarchical) relationship. Learn more..."
 date: 2014-10-14 11:21:29
 author: resham
 categories: ['Data Modeling', 'How Tos']
@@ -9,7 +10,7 @@ image: parent-child-relationships-e1412881958647.png
 summary: "One of the more important concepts in database modeling is the notion of a parent-child (or hierarchical) relationship. A parent-child relationship is one in which one object (the parent) has other objects (the children) associated with it in a hierarchical arrangement. For example, a manager object can have worker objects associated with it."
 ---
 <div>One of the more important concepts in database modeling is the notion of a parent-child (or <wbr />hierarchical) relationship. A parent-child relationship is one in which one object (the parent) has other objects (the children) associated with it in a hierarchical arrangement. For example, a manager object can have worker objects associated with it.</div>
-<!--more-->
+
 Typically, parent-child arrangements are modeled as one-to-many relationships, where each record in one table can be associated with multiple records in another table. (Other logical models include one-to-one and many-<wbr />to-many.) In the table designs, each row in the child table refers to a row in the parent table. For example:
 
 Parent table: Managers

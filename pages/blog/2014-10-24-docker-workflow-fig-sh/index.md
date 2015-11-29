@@ -2,6 +2,7 @@
 path: '/blog/docker-workflow-fig-sh/'
 layout: post
 title: Make Your Docker Workflow Awesome With Fig.sh
+description: "Fig simplified our complicated docker setup and life is awesome again. If you're looking for improving your docker workflow even more, check out our blog post."
 date: 2014-10-24 11:21:29
 author: justyna
 categories: ['Docker', 'Fig.sh', 'How Tos']
@@ -10,7 +11,7 @@ summary: "Fig is a python application that helps you run groups of docker contai
 ---
 <h2>What is fig?</h2>
 
-<p>Fig is a python application that helps you run groups of docker containers. The docker command line interface is awesome, but if you start working with many containers at once and link them in the development environment, typing the commands into the command line gets burdensome.<!--more-->
+<p>Fig is a python application that helps you run groups of docker containers. The docker command line interface is awesome, but if you start working with many containers at once and link them in the development environment, typing the commands into the command line gets burdensome.
 
 The most pragmatic approach to this problem is creating a bash script:</p>
 
