@@ -97,7 +97,9 @@ The Document Object Model (DOM) is a platform and language-neutral interface tha
 Intuitively:
 
 The Document Object Model (DOM) is what you see when the browser loads HTML onto the page. The DOM is an example of a tree data structure. The nesting of HTML tags inside other tags inform the tree like structure. The outer-most tag is the root of a tree, the inner-most tag is the leaf of a given tree.
+
 ### Definition: tree
+
 In computer science, a tree data structure is any data that is organized in a hierarchical way, with a root node (forming the top of the tree) and a bunch of nodes beneath the root and ending with terminal nodes, known as leafs. The connections between nodes are referred to as branches. Nodes on the same level are referred to as sibling nodes. Here's a visual of what this structure looks like:
 
 <img src="http://www.teach-ict.com/as_as_computing/ocr/H447/F453/3_3_5/data_structures/miniweb/images/tree.jpg" alt="" />
@@ -105,6 +107,7 @@ In computer science, a tree data structure is any data that is organized in a hi
 And here's what this looks like executed as an HTML tree:
 
 <img src="http://www.w3schools.com/js/pic_htmltree.gif" alt="" />
+
 ```javascript
 
 <html>
@@ -118,8 +121,11 @@ And here's what this looks like executed as an HTML tree:
 </html>
 
 ```
+
 Notice that the DOM only shows the openning tags, because it is assumed that any openned tags will be closed.
+
 ## Example #1: Hello World!
+
 ```javascript
 
 <html>
@@ -135,9 +141,9 @@ document.write(txt);
 ```
 This first example follows traditions of the <a title="K&amp;R Book (introduction to C)" href="http://www.amazon.com/The-Programming-Language-2nd-Edition/dp/0131103628">K&amp;R book (introduction to C) </a>- a must have for any serious programmer. The document object is how JavaScript interacts with the DOM in general. Here we make use of two methods:
 
-<strong>getElementById("first")</strong>: This method grabs any elements with id "first". It doesn't do anything specific with the element, but it's handy for interacting with a specific HTML element or set of HTML elements.
+**getElementById("first")**: This method grabs any elements with id "first". It doesn't do anything specific with the element, but it's handy for interacting with a specific HTML element or set of HTML elements.
 
-<strong>innerHTML</strong>:This simply gets the value of the innerHTML of any tag.
+**innerHTML**:This simply gets the value of the innerHTML of any tag.
 
 Notice that JavaScript is very heavy on object oriented programming. The way you interact with, access, and write data is through objects.
 
@@ -175,14 +181,14 @@ For those of you unfamiliar with object oriented programming, you can find a goo
 ```
 There is a ton of stuff going on here. First, we use a form to grab the input from the user. Then, we write a personalized greeting to the screen for the person.
 
-<strong>Let's talk about forms:</strong>
+**Let's talk about forms:**
 
 Forms are the standard way to grab input to the user. There are few common things you can do with form data once you have it:
-<ol>
-	<li>Display it back to the user with some other content.</li>
-	<li>Use the user supplied data to decide what to do next.</li>
-	<li>Send the data off to a server for further processing or data storage.</li>
-</ol>
+
+1.  Display it back to the user with some other content.
+2.  Use the user supplied data to decide what to do next.
+3.  Send the data off to a server for further processing or data storage.
+
 Forms appear in the form tag. The different fields are usually similar to the example above: one or more input fields and one submission button.
 
 The types for the input tags are text, radio, file, text area, and submit.  The input and form tags give you a lot of power of how the form is displayed and what type of input the forms accept.
@@ -190,12 +196,15 @@ The types for the input tags are text, radio, file, text area, and submit.  The
 Let's talk about the JavaScript:
 
 Note that I grab the response from the form and then do extra processing. I refer to the form by document.myform because this the specified name of the form. To reference the specific field, I simply append so it appears as document.myform.name.value because the name of the input field is simply "name". The value is the only property of the tag that is universal.
+
 ## Exercise:
+
 Write a few web forms. Get different kinds of information from the user. Return this information to the screen with some extra processing.  For example, you could ask them for their birthday, their name, and their age.  And then you could return their age in days in the form [name], you are [this many] days old.
 
 For a reference to a list of common ways to interact with the DOM see: <a href="http://www.w3schools.com/js/js_htmldom_document.asp">JavaScript DOM reference</a>
 
 Next, we'll change a picture on click:
+
 ```javascript
 <!doctype html>
 <html>
@@ -219,6 +228,7 @@ document.getElementById("description").innerHTML = "The face is sad!";
 </html>
 
 ```
+
 Notice there isn't too much no information here.  The big difference is the type of data we are working with.  So, first off, you should copy the above code into your favorite text editor and give it a try!  In case you are lazy, here's what it does:
 
 The code displays a picture of a many with a happy face and the text:  "The face is happy!"
@@ -226,18 +236,23 @@ The code displays a picture of a many with a happy face and the text:  "The fac
 Then if you click the submit button the text and picture change from the smiling face to a very serious looking man with the text "The face is sad!"
 
 As we did in the first example, we made use of document.getElementById and then referenced two specific attributes, in this case src and innerHTML.  The src attribute of an img tag will change the image that is displayed.  We manipulate this with:
+
 ```javascript
 document.getElementById([name of tag]).src = [new image source]
 ```
+
 &nbsp;
 
 We do the same thing with the text displayed by the html as follows:
+
 ```javascript
 document.getElementById([name of tag]).innerHTML = [new text]
 ```
+
 &nbsp;
 
 Notice the pattern for interacting with images and text is almost the same, the difference being the specific attribute being referenced.
+
 ```javascript
 <html>
 <body>
@@ -253,9 +268,11 @@ document.getElementById("changeable_text").style.color="blue";
 </html>
 
 ```
+
 Here we've made some CSS happen on the fly! Typically when dealing with Javascript you'll want it to be caused by some user interaction like an onclick event or on hover event or something, however, I think it's also important to understand that this need not be the case.  Here we show that the Javascript does execute on load of the page.  Notice that we included the same text twice, once with the id="changeable_text" and once with it.  As you can see, since I reference the element by id, only the p tag with id="changeable_text" is affected.  To experiment with this, copy and paste the above code into your favorite text editor.  
 
 Try commenting out the
+
 ```javascript
 document.getElementById("changeable_text").style.color="blue";
 ```
@@ -265,33 +282,41 @@ By doing this:
 ```javascript
 //document.getElementById("changeable_text").style.color="blue";
 ```
+
 &nbsp;
 
 You should also try playing with the color of the text. Here's an example of another color you could set:
+
 ```javascript
 document.getElementById("changeable_text").style.color="green";
 ```
+
 &nbsp;
 
 All the major colors will work, give it a whirl!
 
 There is another larger point worth mentioning here. We changed the CSS on the page this time. Generally this is done by interacting with the .style attribute that comes with almost all html tags.
+
 ## Exercise:
+
 Add a button to make the p-tag with id="changeable_text" change on click, not on load.  The best way to do this is by adding a button tag and then giving it an onclick event with a javascript function call.  If these directions are unclear see <a title="this example" href="http://www.w3schools.com/jsref/event_onclick.asp">this example</a>.
+
 ## Event handling
+
 Up until this point we've been just trying to get you comfortable with javascript, html, css and their interaction.  Now we are going to look more formally at the Javascript pieces we've been working with.  Let's start by understanding when how to use Javascript in the browser.  Javascript can be thought of generally as a tool for doing event driven actions.  An 'event' is an action the user caries out that triggers the JavaScript to run. You can think of the HTML that triggers the JavaScript like one giant controller that's more intuitive for the user. By clicking in different places or typing in different things, different scripts will be executed. A good user experience creates something new that still feels somewhat familiar enough for users to trigger the events intuitively. We've sort of been making use of it in the above examples - can you spot where?
 
 Here's a list of some common HTML 'events':
-<ul>
-	<li>When a user clicks the mouse.</li>
-	<li>When a web page has loaded.</li>
-	<li>When an image has loaded.</li>
-	<li>When the mouse moves over an element.</li>
-	<li>When an input field is changed.</li>
-	<li>When an HTML form is submitted.</li>
-	<li>When a user strokes a key.</li>
-</ul>
+
+*   When a user clicks the mouse.
+*   When a web page has loaded.
+*   When an image has loaded.
+*   When the mouse moves over an element.
+*   When an input field is changed.
+*   When an HTML form is submitted.
+*   When a user strokes a key.
+
 We've already seen examples of on-click events. Let's look at one more onclick now that we understand that the javascript is being used to handle some event.
+
 ```javascript
 <HTML>
  <HEAD>
@@ -322,6 +347,7 @@ We've already seen examples of on-click events. Let's look at one more onclick n
  </BODY>
 </HTML>
 ```
+
 Here, the new stuff is
 
 1. Making use of JavaScript's built-in alert function
@@ -330,6 +356,7 @@ Here, the new stuff is
 This covers two very big cases for onclick - manipulating something on the page and sending messages to the user. The alert pattern isn't used much in websites anymore, except when the user does something they really aren't supposed to. I personally enjoy the alert function for quick debugging. If you have a larger set of issues, you should always make use of developer tools for this! This can be accessed by right-clicking (two finger click on Mac) and going to inspect element. Then click on the console tab. This gives you a command line environment in your browser! If those steps were unclear, check out <a title="this video" href="https://www.youtube.com/watch?v=nOEw9iiopwI">this video</a> explaining how to do it, by showing you.
 
 Now that we have a strong grasp of onclick events and some of their uses lets look at another type of event in Javascript land, onload.
+
 ```javascript
 <!doctype html>
 <html>
@@ -353,9 +380,11 @@ else
 </body>
 </html>
 ```
+
 This code tells you whether or not cookies are enabled in your browser.  Notice the onload attribute in the body tag.  This ensures the Javascript is loaded first by the browser and is good practice.  The navigator class has a few useful functions, but the most useful is the cookiesEnabled method.  This let's us know if the user will be able to view the page in a stateful manner or not.  This allows us to program for both cases - when the cookies are enabled and when they are not.  If the idea of state doesn't make sense, don't worry, I'm going to get into cookies generally below.
 
 The another thing to understand here is the use of flow - namely through if/else statements.  An if statement is a way of ensuring code only executes under certain conditions.  The condition is listed in the parenthesis after the if keyword as follows:
+
 ```javascript
 if ( [boolean statement] ) {
 
@@ -363,7 +392,9 @@ if ( [boolean statement] ) {
 
 }
 ```
+
 If the boolean statement evaluates to true then the code inside the curly braces will be executed.  If the boolean fails one can include another case like we did above:
+
 ```javascript
 if ([ boolean statement] {
 
@@ -375,34 +406,41 @@ if ([ boolean statement] {
 
 }
 ```
+
 So here, should the boolean statement fail the code block in the curly braces after the else keyword will be executed.
 
 So, looking back at our example we can see - if cookies are enabled, we let the user know with an alert statement telling them so.  Otherwise we tell them cookies aren't enabled.  So this is all possible because of the navigator class.  Let's take a closer look at this class and understand some history about the modern internet, all at the same time.
+
 ## The navigator
+
 We've seen one of the useful methods in the navigator class.  Let's dive a little deeper here:
 
 The navigator is a 'builtin' object to JavaScript. It's technically part of the window object, which is a subset of the Browser object model. All browsers define their own slightly different object models, which is why certain pages only load properly on certain browsers - they were written with that browser in mind.  The navigator class has a long and interesting history, you can read more about it <a title="here" href="http://webaim.org/blog/user-agent-string-history/">here</a>.  I'll reference to the article below quiet a bit so please do read it (its not very long).  The navigator comes with the following methods and properties:
-<ul>
-<ul>
-	<li>navigator.appCodeName: Displays the name of the browser, which is pulled from the browser's user-agent string (rendered useless). </li>
-	<li>navigator.appName: Displays the Browser's name (rendered useless).</li>
-	<li>navigator.appVersion: Displays the Browser version. (rendered useless).</li>
-	<li>navigator.cookieEnabled: Returns a boolean that tells you whether a cookie is enabled.</li>
-	<li>navigator.language: Tells you what language the browser is set to.</li>
-	<li>navigator.onLine: Tells you whether the browser is on the internet or viewing a local file.</li>
-	<li>navigator.platform: Tells you what operating system the browser is running on (this is useful for marketing purposes).</li>
-	<li>navigator.userAgent: Returns the user-agent string (rendered useless).</li>
-	<li>navigator.systemLanguage: Returns the language edition of the installed operating system, AKA what language the browser is written in (mostly useless).</li>
-</ul>
-</ul>
+
+*   navigator.appCodeName: Displays the name of the browser, which is pulled from the browser's user-agent string (rendered useless).
+*   navigator.appName: Displays the Browser's name (rendered useless).
+*   navigator.appVersion: Displays the Browser version. (rendered useless).
+*   navigator.cookieEnabled: Returns a boolean that tells you whether a cookie is enabled.
+*   navigator.language: Tells you what language the browser is set to.
+*   navigator.onLine: Tells you whether the browser is on the internet or viewing a local file.
+*   navigator.platform: Tells you what operating system the browser is running on (this is useful for marketing purposes).
+*   navigator.userAgent: Returns the user-agent string (rendered useless).
+*   navigator.systemLanguage: Returns the language edition of the installed operating system, AKA what language the browser is written in (mostly useless).
+
 As you can see some of the navigator class is extremely useful, while other parts you'll never use.
 
 Now onto cookies!
+
 ## Why cookies are awesome
+
 In the above example we told the user whether or not cookies were enabled.  Now we'll understand why we would want cookies to be enabled.  Cookies provide you with state for a given user. Each cookie has a unique id for a given user that let's you create unique browsing experiences for the users of your site. Without cookies it wouldn't be possible for you to "log in" to websites, or for websites to remember anything about you. This is because servers and clients are naturally "stateless".
+
 ## How cookies work
+
 Cookies are data, stored in small text files on your computer. They are usually saved in name-value pairs like: username=Eric Schles or Syncano=awesome. When a browser requests a web page from the server, cookies belonging to the page are added to the request. This way, the server gets the necessary data to "remember" information about users. JavaScript can create cookies, read cookies, and delete cookies with the property document.cookie. Note cookies need to be enabled in order for us to create, read, or use cookies, which we get from the navigator class. So any functionality relating to cookies should be wrapped in an "if" statement that checks if cookies are enabled.
+
 ## Creating cookies
+
 ```javascript
 <!doctype html>
 <html>
@@ -430,7 +468,9 @@ function displayCookies()
 </html>
 
 ```
+
 The above code should create five buttons. One that creates the firstname cookie, one that creates the lastname cookie, one that deletes the firstname cookie, one that deletes the lastname cookie, and one that displays all the cookies. Note this is a toy example and doesn't show you how people typically use cookies. A better example that does almost the same thing, but with far greater complexity is:
+
 ```javascript
 <html>
 <head>
@@ -537,15 +577,12 @@ Write a new HTML document, and generate all the HTML using JavaScript
 With JavaScript, like most languages, you can time events.
 
 There are two key methods:
-<ul>
-<ul>
-<ul>
-	<li>setInterval() - executes a function over and over again, at specified time intervals.</li>
-	<li>setTimeout() - executes a function once, after waiting a specified number of miliseconds</li>
-</ul>
-</ul>
-</ul>
+
+*   setInterval() - executes a function over and over again, at specified time intervals.
+*   setTimeout() - executes a function once, after waiting a specified number of miliseconds
+
 Let's check out an example of setInterval
+
 ```javascript
 <!DOCTYPE html>
 <html>
@@ -566,7 +603,9 @@ setInterval(function(){alert("Hello")},3000);
 </html>
 
 ```
+
 Now we'll look at setTimeout
+
 ```javascript
 <!DOCTYPE html>
 <html>
@@ -584,7 +623,6 @@ setTimeout(function(){alert("Hello")},3000);
 
 </body>
 </html>
-
 ```
 
 Looking at both of these examples it should be obvious the difference between setTimeout and setInterval.  The setTimeout does an action once and the setInterval does an action continuously.  To try this, please copy paste the above examples into your favorite text editor and run the code.

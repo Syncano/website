@@ -114,7 +114,7 @@ Because the Syncano iOS library is written in Objective-C, you will need a bridg
 
 Because you already have library files included in the bridging header, there’s no need to import anything else in your **.swift** files.
 
-Choose the file where you’d like to add Syncano communication. We will use the <strnog>ViewController.swift** in the examples below.
+Choose the file where you’d like to add Syncano communication. We will use the **ViewController.swift** in the examples below.
 
 ### 5.2 Initializing Syncano objects
 
