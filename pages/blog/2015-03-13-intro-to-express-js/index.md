@@ -30,7 +30,7 @@ var express = require("express");
 If this returns undefined it means you have installed express correctly and are ready to move on!
 ## Hello World<
 
-Now that you know Express.js is installed correctly, enter the following into a file called <em>app.js</em> (this is by convention - you can call it whatever you like).
+Now that you know Express.js is installed correctly, enter the following into a file called _app.js_ (this is by convention - you can call it whatever you like).
 
 ```javascript
 var express = require("express");
@@ -70,14 +70,16 @@ This will start the web server. Then you can head over to http://localhost:5000 
 
 So let's break down what happened here:
 
-First we started a new <em>app</em> object, which is initialized by <em>express();</em>
+First we started a new _app_ object, which is initialized by _express();_
 
-The app object has various methods associated with it. Check out the <a href="http://expressjs.com/api.html">full list here</a>. Each method is set with respect to the server. For example - above, <em>app.get()</em> means: when a get request is sent to the server, do the following action. Notice there are two parameters, "/", and a function. The first parameter is called the route and tells the server when to call the action. This is relative to the root domain of the website. So "/" refers to localhost:5000/. Everything after localhost:5000 is what the server will use to make calls for different data or actions. So the "/Hi" route will be called when we type in localhost:5000/Hi to the browser.
+The app object has various methods associated with it. Check out the <a href="http://expressjs.com/api.html">full list here</a>. Each method is set with respect to the server. For example - above, _app.get()_ means: when a get request is sent to the server, do the following action. Notice there are two parameters, "/", and a function. The first parameter is called the route and tells the server when to call the action. This is relative to the root domain of the website. So "/" refers to localhost:5000/. Everything after localhost:5000 is what the server will use to make calls for different data or actions. So the "/Hi" route will be called when we type in localhost:5000/Hi to the browser.
 
 The next thing to understand is the second parameter, a callback. This function determines what will be sent back to the browser from the server. In this case, both routes just send back a string. This is great for testing your server and making sure your routes work. This won't always be the case, so it's important to test at this stage with a dummy route.
 
-The final piece of the above code is <em>app.listen(5000);</em> which tells the server to run and to run on port 5000.
-<h2>Comparing Express with Node</h2>
+The final piece of the above code is _app.listen(5000);_ which tells the server to run and to run on port 5000.
+
+## Comparing Express with Node
+
 Technically, everything you can do with Express you can do with Node, however compare the following pieces of code, one written with Express and the other with Node. Note: they do the same thing.
 
 Written with Node.js alone:
@@ -122,10 +124,15 @@ app.listen(5000);
 
 console.log("Server started on http://localhost:5000");
 ```
+
 Notice how much less code you need to write when you use both Node and Express. The routing information isn't even clear in the Node-only code! Clearly, using Express and Node together is superior in terms of readability and functionality.
-<h2>A Real example</h2>
+
+## Real example
+
 Now that we understand how easy it is to get up and running, let's start working with our front-end and make it dynamic. For that, we'll need hbs.
-<h4>Verifying installation</h4>
+
+#### Verifying installation
+
 ```javascript
 var express = require("express");
 
@@ -155,17 +162,23 @@ app.listen(5000);
 
 console.log("Server started on http://localhost:5000")
 ```
+
 This piece of code isn't dynamic. I include it mostly to go over the basics of hbs. Notice there is a bit more set up required:
+
 ```javascript
 app.set("view engine", "html");
 ```
+
 This sets up what hbs will render, in our case HTML
+
 ```javascript
 app.engine("html", hbs.__express);
 ```
+
 This tells the hbs we'll be making use of HTML and Express.
 
-The second thing to notice is <em>res.render</em>. This assumes that there exists a document called <em>index.html</em> in a folder called <em>views</em>. So the file structure of the app should now be:
+The second thing to notice is _res.render_. This assumes that there exists a document called _index.html_ in a folder called _views_. So the file structure of the app should now be:
+
 ```javascript
 root_dir/
 
@@ -175,9 +188,13 @@ root_dir/
 
     index.html
 ```
-In general, <em>res.render([file name])</em> looks for <em>views/[file name].html</em>
-<h4>A Real example:</h4>
+
+In general, _res.render([file name])_ looks for _views/[file name].html_
+
+#### A Real example:
+
 app.js
+
 ```javascript
 var express = require("express");
 
@@ -211,6 +228,7 @@ app.listen(5000);
 
 console.log("Server started on http://localhost:5000")
 ```
+
 views/index.html:
 
 ```javascript

@@ -69,7 +69,7 @@ The run section of the app is typically where anything related to the server is 
 
 Now that we've seen how easy it is to write a very simple website in Flask, let's get a little more complex.
 
-## Example 2: A more complete application</h2>
+## Example 2: A more complete application
 
 While you can just send Python strings to the front-end, it's probably a good idea to send actual html. To see how to do this, you will write a slightly more complex Flask app. This project lives <a href="https://github.com/EricSchles/example2-intro-to-flask">on github</a>
 
@@ -123,7 +123,7 @@ These primitives form a sort of psuedo pythonic syntax which allows you to make 
 
 The next thing to do is look at an app that let's you call view methods to accomplish specific tasks. Then you'll be ready to build your first 'real' Flask app.
 
-## Example 3: An app with view method calls:</h2>
+## Example 3: An app with view method calls:
 
 Full project lives [on github]https://github.com/EricSchles/example3-intro-to-flask
 
@@ -304,7 +304,7 @@ This is the typical API way to pass data back to the user. Granted I prepopulate
 
 The only real thing that's different here is that you're passing back a data structure instead of a single variable to the html. It's good practice to pass back XML or JSON, so you aren't bound to a particular programming language. Of course you are free to pass back serialized objects, but they will be language specific and are best suited for internal APIs. Anything used in a generalized way or as a web service should follow general object standards like XML and JSON.
 
-## Conclusion:</h2>
+## Conclusion:
 
 Flask is a fun and easy framework that lets you write full applications in just a few lines. It's great for:
 

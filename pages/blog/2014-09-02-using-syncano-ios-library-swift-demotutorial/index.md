@@ -9,60 +9,58 @@ categories: ['API', 'How Tos', 'iOS', 'Real-Time Sync']
 image: Apple_Swift_Logo.png
 summary: "Although written in Objective-C, the Syncano iOS library is perfectly compatible with Swift. Here are some simple steps to get started:"
 ---
-<p>Although written in Objective-C, the Syncano iOS library is perfectly compatible with Swift. Here are some simple steps to get started:</p>
+Although written in Objective-C, the Syncano iOS library is perfectly compatible with Swift. Here are some simple steps to get started:
 
-<h2><strong>1. Install CocoaPods</strong></h2>
+## 1. Install CocoaPods
 
-<p>We use <a href="http://cocoapods.org/">CocoaPods</a> to distribute our library. If you aren't familiar with CocoaPods, you can read more about it <a href="http://guides.cocoapods.org/">here</a>.</p>
+We use <a href="http://cocoapods.org/">CocoaPods</a> to distribute our library. If you aren't familiar with CocoaPods, you can read more about it <a href="http://guides.cocoapods.org/">here</a>.
 
-<p>To install CocoaPods, open Terminal and paste the following line:</p>
+To install CocoaPods, open Terminal and paste the following line:
 
 ```javascript
 $ sudo gem install cocoapods
 ```
 
-<h2><strong>2. XCode</strong></h2>
+## 2. XCode
 
-<p>If you don't have an Xcode IDE, you can find it and install using <a href="https://itunes.apple.com/en/app/xcode/id497799835?mt=12">AppStore</a>.</p>
+If you don't have an Xcode IDE, you can find it and install using <a href="https://itunes.apple.com/en/app/xcode/id497799835?mt=12">AppStore</a>.
 
-<p>Swift is currently available only under the beta of <strong>XCode 6</strong>, which you can find in Apple's <a href="https://developer.apple.com/devcenter/ios/index.action">Developer Center</a> after logging into your Apple Developer Account.</p>
+Swift is currently available only under the beta of **XCode 6**, which you can find in Apple's <a href="https://developer.apple.com/devcenter/ios/index.action">Developer Center</a> after logging into your Apple Developer Account.
 
-<h2><strong>3. Create a new XCode project</strong></h2>
+## 3. Create a new XCode project
 
-<ol>
-<li>Launch XCode.</li>
-<li>Using the XCode menu, choose <strong>File -> New -> Project</strong>.</li>
-<li>Choose the <strong>Single View Application</strong> template.</li>
-<li>Pick a name for your project, or name it <strong>SyncanoProject</strong>.</li>
-<li>In the prefix field enter <strong>SYN</strong> (you can keep devices in the <strong>Universal</strong> state or change it to either <strong>iPhone</strong> or <strong>iPad</strong>).</li>
-<li>Choose where you want to keep your project on your disk and hit <strong>Create</strong>.</li>
-<li>Close the XCode project for now.</li>
-</ol>
+1.  Launch XCode.
+2.  Using the XCode menu, choose **File -> New -> Project**.
+3.  Choose the **Single View Application** template.
+4.  Pick a name for your project, or name it **SyncanoProject**.
+5.  In the prefix field enter **SYN** (you can keep devices in the **Universal** state or change it to either **iPhone** or **iPad**).
+6.  Choose where you want to keep your project on your disk and hit **Create**.
+7.  Close the XCode project for now.
 
 
-<h2><strong>4. Add the Syncano library</strong></h2>
+## 4. Add the Syncano library
 
-<p>Open Terminal and change the directory to the folder where you chose to save your project. If you don’t know how to do this, type:</p>
+Open Terminal and change the directory to the folder where you chose to save your project. If you don’t know how to do this, type:
 
 ```javascript
 $ cd
 ```
 
-<p>then drag &amp; drop the folder which contains your XCode project into the Terminal app (if you followed previous steps, you should have a file named <strong>SyncanoProject.xcodeproj</strong> inside a folder <strong>SyncanoProject</strong>). Press ENTER to confirm.</p>
+then drag &amp; drop the folder which contains your XCode project into the Terminal app (if you followed previous steps, you should have a file named **SyncanoProject.xcodeproj** inside a folder **SyncanoProject**). Press ENTER to confirm.
 
-<p>Next, type:</p>
+Next, type:
 
 ```javascript
 $ pod init
 ```
 
-<p>Now, open the file named <strong>Podfile</strong> in your desired text editor. Under the project's application target and before <strong>end</strong>, add line:</p>
+Now, open the file named **Podfile** in your desired text editor. Under the project's application target and before **end**, add line:
 
 ```javascript
 pod 'syncano-ios'
 ```
 
-<p>If you used our naming suggestions, your <strong>Podfile</strong> should now look like this:</p>
+If you used our naming suggestions, your **Podfile** should now look like this:
 
 ```javascript
 # Uncomment this line to define a global platform for your project
@@ -77,38 +75,36 @@ target "SyncanoProjectTests" do
 end
 ```
 
-<p>Save the Podfile. Go back to Terminal and install the Syncano library by typing:</p>
+Save the Podfile. Go back to Terminal and install the Syncano library by typing:
 
 ```javascript
 $ pod install
 ```
 
-<p>When the process is finished, you should see a new <strong>.xworkspace</strong> file in the same folder as your project (presumably <strong>SyncanoProject.xcworkspace</strong>). From now on, use this file instead of the <strong>.xcodeproj</strong> one.</p>
+When the process is finished, you should see a new **.xworkspace** file in the same folder as your project (presumably **SyncanoProject.xcworkspace**). From now on, use this file instead of the **.xcodeproj** one.
 
-<p>You can open the workspace by double clicking it in Finder or typing this in Terminal:</p>
+You can open the workspace by double clicking it in Finder or typing this in Terminal:
 
 ```javascript
 $ open SyncanoProject.xcworkspace
 ```
 
-<p>The library has been downloaded and added to your project.</p>
+The library has been downloaded and added to your project.
 
-<h2><strong>5. Using the Syncano library with Swift</strong></h2>
+## 5. Using the Syncano library with Swift
 
-<h2>5.1 Importing Syncano headers</h2>
+### 5.1 Importing Syncano headers
 
-<p>Because the Syncano iOS library is written in Objective-C, you will need a bridging header. You can add it manually, but the easiest way is to add it with XCode:</p>
+Because the Syncano iOS library is written in Objective-C, you will need a bridging header. You can add it manually, but the easiest way is to add it with XCode:
 
-<ol>
-<li>Add a new <strong>.m</strong> file to your project by choosing <strong>File -> New -> File -> “Objective-C File”</strong> (select the option with the <strong>.m</strong> icon).</li>
-<li>Give it a random name e.g. <strong>SyncanoSwift</strong> (the name is not important because we won't be using the file again).</li>
-<li>Leave the file type as <strong>Empty File</strong> and click <strong>Next</strong>.</li>
-<li>Save the file anywhere in the project by choosing a directory and clicking <strong>Create</strong>.</li>
-<li>When XCode asks you “Would you like to configure an Objective-C bridging header?”, choose <strong>Yes</strong>.</li>
-<li>XCode should have added a bridging file to your project named <strong>YourProjectName-Bridging-Header.h</strong>. In our case it would be <strong>SyncanoProject-Bridging-Header.h</strong></li>
-<li>Remove the previously created <strong>.m</strong> file by selecting it in your project, right clicking on it, and choosing <strong>Delete</strong> and <strong>Move to Trash</strong>.</li>
-<li>Select the bridging header and paste these two <strong>#import</strong> directives inside of it:</li>
-</ol>
+1.  Add a new **.m** file to your project by choosing **File -> New -> File -> “Objective-C File”** (select the option with the **.m** icon).
+2.  Give it a random name e.g. **SyncanoSwift** (the name is not important because we won't be using the file again).
+3.  Leave the file type as **Empty File** and click **Next**.
+4.  Save the file anywhere in the project by choosing a directory and clicking **Create**.
+5.  When XCode asks you “Would you like to configure an Objective-C bridging header?”, choose **Yes**.
+6.  XCode should have added a bridging file to your project named **YourProjectName-Bridging-Header.h**. In our case it would be **SyncanoProject-Bridging-Header.h**
+7.  Remove the previously created **.m** file by selecting it in your project, right clicking on it, and choosing **Delete** and **Move to Trash**.
+8.  Select the bridging header and paste these two **#import** directives inside of it:
 
 
 ```javascript
@@ -116,13 +112,13 @@ $ open SyncanoProject.xcworkspace
 #import <Syncano/SyncanoSyncServer.h>
 ```
 
-<p>Because you already have library files included in the bridging header, there’s no need to import anything else in your <strong>.swift</strong> files.</p>
+Because you already have library files included in the bridging header, there’s no need to import anything else in your **.swift** files.
 
-<p>Choose the file where you’d like to add Syncano communication. We will use the <strnog>ViewController.swift</strong> in the examples below.</p>
+Choose the file where you’d like to add Syncano communication. We will use the <strnog>ViewController.swift** in the examples below.
 
-<h2>5.2 Initializing Syncano objects</h2>
+### 5.2 Initializing Syncano objects
 
-<p>In the class body, add two variables and initialize them so at the end it looks like this:</p>
+In the class body, add two variables and initialize them so at the end it looks like this:
 
 ```javascript
 class ViewController: UIViewController {
@@ -140,11 +136,11 @@ class ViewController: UIViewController {
 }
 ```
 
-<p>You can obtain your domain name and your API key as well as the desired project and collection ID in the <a href="http://login.syncano.com/"><strong>Admin GUI</strong></a>.</p>
+You can obtain your domain name and your API key as well as the desired project and collection ID in the <a href="http://login.syncano.com/">**Admin GUI**</a>.
 
-<h2>5.3 Creating a Data Object</h2>
+### 5.3 Creating a Data Object
 
-<p>Add this function to create a data object:</p>
+Add this function to create a data object:
 
 ```javascript
 func createDataObject() {
@@ -173,9 +169,9 @@ func createDataObject() {
 }
 ```
 
-<h2>5.4 Downloading the newest Data Objects</h2>
+### 5.4 Downloading the newest Data Objects
 
-<p>Add this function to download the newest data objects:</p>
+Add this function to download the newest data objects:
 
 ```javascript
 func downloadNewestDataObject() {
@@ -206,9 +202,9 @@ func downloadNewestDataObject() {
 }
 ```
 
-<h2>5.5 Deleting a Data Object</h2>
+### 5.5 Deleting a Data Object
 
-<p>Add this function to delete a specific data object. You can obtain the ID of an object to be deleted through <a href="https://login.syncano.com/"><strong>Admin GUI</strong></a>, or use the ID of a previously downloaded object.</p>
+Add this function to delete a specific data object. You can obtain the ID of an object to be deleted through <a href="https://login.syncano.com/">**Admin GUI**</a>, or use the ID of a previously downloaded object.
 
 ```javascript
 func deleteDataObject() {
@@ -234,11 +230,11 @@ func deleteDataObject() {
 }
 ```
 
-<h2>5.6 Receiving notifications</h2>
+### 5.6 Receiving notifications
 
-<p>Notifications can be obtained through closures or by using the SyncServer protocol. For this example, we'll use the latter.</p>
+Notifications can be obtained through closures or by using the SyncServer protocol. For this example, we'll use the latter.
 
-<p>Add this to the class information so that it implements the SyncanoSyncServerDelegate protocol:</p>
+Add this to the class information so that it implements the SyncanoSyncServerDelegate protocol:
 
 ```javascript
 class ViewController: UIViewController, SyncanoSyncServerDelegate {
@@ -246,20 +242,20 @@ class ViewController: UIViewController, SyncanoSyncServerDelegate {
 }
 ```
 
-<p>Set your class as a delegate on a Sync Server object:</p>
+Set your class as a delegate on a Sync Server object:
 
 ```javascript
 self.syncServer.delegate = self;
 ```
 
-<p>Start connection with the Sync Server by using the instance name and API key you used previously. You can pass the pointer to an error that will be set if it occurs while opening the connection:</p>
+Start connection with the Sync Server by using the instance name and API key you used previously. You can pass the pointer to an error that will be set if it occurs while opening the connection:
 
 ```javascript
 var error : NSError?
 self.syncServer.connect(&amp;error)
 ```
 
-<p>After those steps, your viewDidLoad should look like this:</p>
+After those steps, your viewDidLoad should look like this:
 
 ```javascript
 override func viewDidLoad() {
@@ -271,7 +267,7 @@ override func viewDidLoad() {
 }
 ```
 
-<p>Implement protocol methods (there are more than what's shown here, but only two of them are required and only one more is needed to receive notifications). Add this code before the end of your class implementation:</p>
+Implement protocol methods (there are more than what's shown here, but only two of them are required and only one more is needed to receive notifications). Add this code before the end of your class implementation:
 
 ```javascript
 //Called when Sync Server connection was successfully opened
@@ -290,9 +286,9 @@ func syncServer(syncServer: SyncanoSyncServer!, messageReceived message: AnyObje
 }
 ```
 
-<h2>5.7 Sending notifications</h2>
+### 5.7 Sending notifications
 
-<p>Open the Sync Server connection as described in point <strong>5.6</strong> and add this method to send notifications:</p>
+Open the Sync Server connection as described in point **5.6** and add this method to send notifications:
 
 ```javascript
 func sendNotification() {
@@ -320,10 +316,8 @@ func sendNotification() {
 }
 ```
 
-<h2><strong>6. Support</strong></h2>
+## 6. Support
 
-<p>Now you’re ready to use Syncano in your iOS project. We hope you enjoy working with our platform!</p>
+Now you’re ready to use Syncano in your iOS project. We hope you enjoy working with our platform!
 
-<p>If you have any issues, just let us know at <a href="mailto:support@syncano.com">support@syncano.com</a>. We're here to help!</p>
-</body>
-</html>
+If you have any issues, just let us know at <a href="mailto:support@syncano.com">support@syncano.com</a>. We're here to help!

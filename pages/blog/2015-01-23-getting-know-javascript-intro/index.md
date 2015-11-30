@@ -56,7 +56,6 @@ function myFunction()
 
 </body>
 </html>
-
 ```
 
 There are a bunch of things going on in this example. To run it, save it as a .html file and then open it with your favorite browser. There are some standard HTML elements, like tags. But there is also a script tag where the JavaScript is written. JavaScript can appear in either head or body tags. It's typically good practice to include all JavaScript in between the head tags. We include it here in the body for demonstrative purposes. Notice how well the HTML and the JavaScript integrate: We are including a JavaScript function inside an HTML tag! There are plenty of other languages that integrate with the web, but none of them do it as obviously as JavaScript.

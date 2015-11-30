@@ -452,7 +452,9 @@ Two important points that didn't make it into the above explanation:
   <li>Lists can store any type of value - lists, strings, objects, integers, floats, etc.</li>
   <li>Dictionaries can only store primitive types (integers or strings) as keys, but anything as values.</li>
 </ol>
-<h2 id="toc_14">For Loops</h2>
+
+## For Loops
+
 Looping is possibly the most importand and powerful thing a program can do. Without understanding loops, programming wouldn't be nearly as powerful.
 
 Possibly the easiest way to see this is with the following:
@@ -477,7 +479,9 @@ for [iterator] in [list of values]:
 ```
 
 And a for loop accesses each of the elements in the list, sequentially starting at index 0 and going all the way up to the index of the last element in the list. Because lists start at zero (this is referred to as zero-indexing or being zero-indexed), there are n - 1 elements in the list, where n is the size of the list.
-<h3 id="toc_15">A concrete example</h3>
+
+### A concrete example
+
 Now that we understand how one might use a for loop, let's actually use it to do something cool!
 
 A big problem in mathematics is optimization. By making use of a for loop, we can do discrete optimization easily and quickly:
@@ -496,7 +500,9 @@ print find_max([1,2,3,4,5])
 ```
 
 This code will work on any example where all the elements are integers or floats. As an experiment, you could try using a list of words. The code will still work, but doesn't make much sense.
-<h2 id="toc_16">Object Oriented Programming</h2>
+
+## Object Oriented Programming
+
 The final topic of the day is that of object oriented programming. This style of programming is used throughout the industry and is full of useful features to make a programmer's life easier. Here, we will merely introduce you to objects and their power.
 
 ```javascript

@@ -53,7 +53,7 @@ Notice that some of these ideas are vague from a software engineering standpoint
 
 So let's break up the vague concepts:
 
-<strong>A way to log user activity so we can talk about all the awareness we are raising.</strong>
+**A way to log user activity so we can talk about all the awareness we are raising.**
 
 can be split into:
 
@@ -61,7 +61,7 @@ can be split into:
 2.  A function or set of functions that log when an event takes place in our system that we care about.
 
 
-<strong>A way to engage with the community we develop.</strong>
+**A way to engage with the community we develop.**
 
 can be split into:
 
@@ -80,7 +80,7 @@ Database - Flask comes with SQLite and there are lots of other options.
 
 Logging user activity? We'll need to create this functionality within our larger application.
 
-<strong>What we need to write:</strong>
+**What we need to write:**
 
 A content mangagement system - this is the biggest part of the application. Notice we can have comments and video in here so we don't need to create separate functionality for those.
 
@@ -110,7 +110,8 @@ Setting up a blue print is almost the same syntax as setting up a Flask app. The
 
 ## directory structure:
 
-<pre><code class="python">run.py
+```python
+run.py
 /slavery_website/
     __init__.py
     blog/
@@ -149,13 +150,14 @@ Setting up a blue print is almost the same syntax as setting up a Flask app. The
         templates/
         views.py
         models.py
-</code></pre>
+```
 
 ## The start of some of the views.py files
 
 cms/views.py
 
-<pre><code class="python">from flask import Blueprint, render_template
+```python
+from flask import Blueprint, render_template
 from models import *
 cms = Blueprint("cms",__name__,template_folder='templates')
 
@@ -171,11 +173,12 @@ def remove():
 def view_entries():
     entries = get_entries()
     return render_template("entries.html",entries=entries)
-</code></pre>
+```
 
 logger/views.py
 
-<pre><code class="python">from flask import Blueprint, render_template
+```python
+from flask import Blueprint, render_template
 from models import *
 logger = Blueprint('logger',__name__,template_folder="templates")
 
@@ -189,20 +192,21 @@ def button_press():
     buttons = get_button_press()
     return render_template("viewer.html",buttons=buttons)
 **Some functions snipped**
-</code></pre>
+```
 
-slavery_website/<strong>init</strong>.py:
+slavery_website/**init**.py:
 
-<pre><code class="python">from flask import Flask
+```python
+from flask import Flask
 from cms.views import cms
 from logger.views import logger
 
 app = Flask(__name__)
 app.register_blueprint(cms, url_prefix='/admin') 
 app.register_blueprint(logger,url_prefix='/analytics')
-</code></pre>
+```
 
-As you can see there isn't much new going on here.  The Blueprint object replaces the Flask object in each sub-application and gets registered to the app in the project <em>__init__.py</em> file.  Notice another nice feature of blueprints: we can easily set the base url for all views in each sub-application.  This is done by the url_prefix keyword argument.
+As you can see there isn't much new going on here.  The Blueprint object replaces the Flask object in each sub-application and gets registered to the app in the project ___init__.py_ file.  Notice another nice feature of blueprints: we can easily set the base url for all views in each sub-application.  This is done by the url_prefix keyword argument.
 
 Before moving on, I do want to say there are a few more topics here that I'll revisit (probably in a later post): url value pulling and hidden url values.
 
@@ -214,7 +218,7 @@ Contexts are sometimes an opaque.  Below I do my best to motivate this concept a
 
 In computational systems, a context has to do with multi-threaded programming, when the programmer has access to threads and processes.
 
-Def: <strong>context</strong> := The circumstances that form the setting for an event, statement, or idea, in terms of which it can be fully understood and assessed.
+Def: **context** := The circumstances that form the setting for an event, statement, or idea, in terms of which it can be fully understood and assessed.
 
 In multi-threaded programming, a context is the state of certain variables that may or may not be global.
 
@@ -228,7 +232,8 @@ Daniel Kronovet helps us understand contexts within Flask in <a href="http://kro
 
 In general, when you are learning a new skill or technology, it's best to keep it simple.
 
-<pre><code class="python">from flask import Flask, current_app, request
+```python
+from flask import Flask, current_app, request
 
 app = Flask(__name__)
 
@@ -239,7 +244,7 @@ with app.test_request_context():
     print request # prints Request 'http://localhost/' [GET]
 
 print has_request_context() # prints False
-</code></pre>
+```
 
 This example illustrates the two major contexts we care about: the application context and the request context. As the <a href="http://flask.pocoo.org/docs/0.10/appcontext/">Flask Docs</a> tell us: "The application context starts when the Flask object is instantiated, and it implicitly ends when the first request comes in."
 
@@ -257,7 +262,8 @@ However, there are also specific functions you can make use of to take advantage
 
 Note: the below code assumes you are deploying on Heroku. It may work on other systems, but I don't guarantee this as it is untested.
 
-<pre><code class="python">from flask import Flask, has_request_context
+```python
+from flask import Flask, has_request_context
 from flask.ext.sqlachlemy import SQLAlchemy
 import os
 app = Flask(__name__)
@@ -286,14 +292,14 @@ def index():
         db.session.add(log)
         db.session.commit()
     return render_template("index.html")
-</code></pre>
+```
 
-This code sets up a database with <em>app.config["SQLALCHEMY_DATABASE_URI'] = os.environ["DATABASE_URL"]</em>.  <em>DATABASE_URL</em> is an environment variable on Heroku systems, so it should already be populated!  For more advice on how to set up a database on heroku with Flask check out <a href="http://blog.y3xz.com/blog/2012/08/16/flask-and-postgresql-on-heroku">this article</a>.
+This code sets up a database with _app.config["SQLALCHEMY_DATABASE_URI'] = os.environ["DATABASE_URL"]_.  _DATABASE_URL_ is an environment variable on Heroku systems, so it should already be populated!  For more advice on how to set up a database on heroku with Flask check out <a href="http://blog.y3xz.com/blog/2012/08/16/flask-and-postgresql-on-heroku">this article</a>.
 
 This simple view function figures out if someone is trying to connect to index.html on your website and then logs the IP address of said individual.
 
-It should be noted that heroku uses forwarding so request.remote_addr probably won't work. That's why I include the next line - <em>request.headers.getlist("X-Forwarded-For")[0]</em>. There are still some security issues with this that are beyond the scope of this post. Check out <a href="http://esd.io/blog/flask-apps-heroku-real-ip-spoofing.html">this post</a> if you are interested in using this in an actual application.
+It should be noted that heroku uses forwarding so request.remote_addr probably won't work. That's why I include the next line - _request.headers.getlist("X-Forwarded-For")[0]_. There are still some security issues with this that are beyond the scope of this post. Check out <a href="http://esd.io/blog/flask-apps-heroku-real-ip-spoofing.html">this post</a> if you are interested in using this in an actual application.
 
-So let's understand <em>has_request_context()</em>. As the Flask API docs state: "If you have code that wants to test if a request context is there or not, this function can be used. For instance, you may want to take advantage of request information if the request object is available, but fail silently if it is unavailable." The ability to handle exceptional cases with grace is one of the many advantages of contexts. This speaks to a nuanced argument in development: that you can handle edge cases gracefully, to build a fuller, richer experience.
+So let's understand _has_request_context()_. As the Flask API docs state: "If you have code that wants to test if a request context is there or not, this function can be used. For instance, you may want to take advantage of request information if the request object is available, but fail silently if it is unavailable." The ability to handle exceptional cases with grace is one of the many advantages of contexts. This speaks to a nuanced argument in development: that you can handle edge cases gracefully, to build a fuller, richer experience.
 
 To summarize, contexts let you design complete experiences. They are by no means essential to the foundations of web-development, as they are only needed when you're building a website that could run into many edge cases. Contexts are also not always directly exposed to Flask developers - they are a concept used throughout the Flask framework and are a major part of what makes Flask such a joy to work with. Just because the implementation details have been abstracted away, it doesn't mean they aren't important - it simply means the framework has been designed well.
