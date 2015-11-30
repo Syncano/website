@@ -22,12 +22,16 @@ Express.js is extremely easy to install. All one needs is to have Node.js alread
 ## Verifying installation
 
 Once you have express installed, the next thing to do is ensure your installation is correct. Do this by opening a terminal window and typing: `$ node` This opens up the Node REPL, which allows you to type in small pieces of code (typically one-liners) to verify your code is correct. It's great for testing small pieces of code and allows your code to be more bug free. Once you've done the above, type: 
+
 ```javascript
 var express = require("express");
 ```
+
 If this returns undefined it means you have installed express correctly and are ready to move on!
-<h2>Hello World</h2>
+## Hello World<
+
 Now that you know Express.js is installed correctly, enter the following into a file called <em>app.js</em> (this is by convention - you can call it whatever you like).
+
 ```javascript
 var express = require("express");
 
@@ -55,10 +59,13 @@ app.listen(5000);
 
 console.log("Server started on http://localhost:5000");
 ```
+
 You can run this by going to the directory you saved this file in and typing out the following:
+
 ```javascript
 node app.js
 ```
+
 This will start the web server. Then you can head over to http://localhost:5000 in your favorite web browser, and the words "Hello world" should be displayed to you.
 
 So let's break down what happened here:

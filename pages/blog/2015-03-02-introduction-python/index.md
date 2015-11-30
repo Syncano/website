@@ -10,39 +10,44 @@ image: Intro-to-Python.png
 summary: "I’ve been trying to learn how to program since I was ten years old. I tried many times – mostly because my dad is a developer and wanted to share the thing he loves – but Java, C, and C++ always looked scary. I couldn’t really get into it. There was too much I had to understand. Just getting started felt hard.
 And then came Python, with it’s obvious conventions and simple syntax. For the first time in my life, I thought I could write code. Even more than that, I wanted to write code. I hope that by the end of this post, you’ll share my love of Python (or at least begin to understand why I love it as much as I do)."
 ---
-I've been trying to learn how to program since I was ten years old. I tried many times - mostly because my dad is a developer and wanted to share the thing he loves - but Java, C, and C++ always looked scary. I couldn't really get into it. There was too much I had to understand. Just getting started felt hard.
+I've been trying to learn how to program since I was ten years old. I tried many times - mostly because my dad is a developer and wanted to share the thing he loves - but Java, C, and C++ always looked scary. I couldn't really get into it. There was too much I had to understand. Just getting started felt hard. 
 
-And then came Python, with it's obvious conventions and simple syntax. For the first time in my life, I thought I could write code. Even more than that, I <em>wanted</em> to write code. I hope that by the end of this post, you'll share my love of Python (or at least begin to understand why I love it as much as I do).
+And then came Python, with it's obvious conventions and simple syntax. For the first time in my life, I thought I could write code. Even more than that, I _wanted_ to write code. I hope that by the end of this post, you'll share my love of Python (or at least begin to understand why I love it as much as I do).
 
-<h2 id="toc_1">Set up</h2>
-Before you can get started, you'll need to download Python and Emacs, a text editor (AKA place to write your code).
+## Set up
 
-<a href="https://www.python.org/downloads/">Get Python here</a>
+Before you can get started, you'll need to download Python and Emacs, a text editor (AKA place to write your code). 
 
-<strong>Emacs for Ubuntu and Mac OS X:</strong>
+[Get Python here](https://www.python.org/downloads/) 
 
-Install Ubuntu: 
+**Emacs for Ubuntu and Mac OS X:** 
+
+Install Ubuntu:
+
 ```javascript
 sudo apt-get install emacs
 ```
 
-Install Mac OS X: <a href="http://emacsformacosx.com/">Emacs for mac - installer</a>
+Install Mac OS X: [Emacs for mac - installer](http://emacsformacosx.com/) 
 
-To use, simply type in the terminal: emacs [filename]
+To use, simply type in the terminal: emacs [filename] 
 
-<strong>Emacs for windows:</strong>
+**Emacs for windows:** 
 
-<a href="https://ftp.gnu.org/gnu/emacs/windows/emacs-24.3-bin-i386.zip">Emacs for Windows - zipped file</a>
+[Emacs for Windows - zipped file](https://ftp.gnu.org/gnu/emacs/windows/emacs-24.3-bin-i386.zip) 
 
-After installing, extract the folder (typically you should extract to C:\Program Files)
+After installing, extract the folder (typically you should extract to C:\Program Files) 
 
-To use Emacs, navigate to <em>[path-to-emacs-root-folder]\emacs-24.3\bin\emacs</em>. If you decided to install emacs in <em>C:\Program Files</em> this becomes: <em>C:\Program Files\emacs-24.3\bin\emacs</em>. Then double click <em>emacs.exe</em>
-<h2 id="toc_2">Python - elegance above all</h2>
+To use Emacs, navigate to _[path-to-emacs-root-folder]\emacs-24.3\bin\emacs_. If you decided to install emacs in _C:\Program Files_ this becomes: _C:\Program Files\emacs-24.3\bin\emacs_. Then double click _emacs.exe_
+
+## Python - elegance above all
+
 ```javascript
 print "Hello there, my name is Eric and I like warm hugs"
 ```
 
 This simple one line program encapsulates everything about Python. For a point of reference, let's look at the equivalent program in Java:
+
 ```javascript
 public class Hello{
     public static void main(String[] args){
@@ -51,7 +56,9 @@ public class Hello{
     }
 }
 ```
+
 And in C++
+
 ```javascript
 #include <iostream>
 using namespace std;
@@ -62,24 +69,30 @@ int main(void){
     return 0;
 }
 ```
+
 As you can see, it requires significantly more work to do simple things in older languages like Java and C++ than it does in newer languages like Python.
-<h2 id="toc_3">Running Python code</h2>
+
+## Running Python code
+
 Let's start by teaching the computer some manners. We'll do this by writing a simple program that asks you for your name and then greets you.
+
 ```javascript
 print "Hello there"
 name = str(raw_input("What's your name?")) #get's input from the user
 print "Hello,"+name
 print "How are you today?"
 ```
+
 To run this program (and the previous one) check out this quick video that shows you how to run Python programs on your OS:
 
-<a href="https://www.youtube.com/watch?v=f95KleM_waU">for mac osx</a>
-<a href="https://www.youtube.com/watch?v=cLmp3w75ArE">for ubuntu</a>
-<a href="https://www.youtube.com/watch?v=OIuXVZuHXXo">for windows</a>
+[for mac osx](https://www.youtube.com/watch?v=f95KleM_waU) 
+[for ubuntu](https://www.youtube.com/watch?v=cLmp3w75ArE) 
+[for windows](https://www.youtube.com/watch?v=OIuXVZuHXXo)
 
 Now that we know how to run Python programs, type the above code into Emacs, save it as greeting.py.
 
 You should see:
+
 ```javascript
 $ python greeting.py # type this into the terminal (make sure you are in the right folder)
 Hello there
@@ -87,20 +100,24 @@ What's your name? Eric
 Hello, Eric
 How are you today?
 ```
-<h3 id="toc_4">Understanding the above code</h3>
-Clearly, print sends anything between a set of quotes (" ") to the screen. The print command is called a function in Python - it's a piece of code that has been pre-written and does some preset thing everytime it's run.
 
-The next functions to understand are <em>raw_input</em> and <em>str</em>. But before move on to them, let's take a look at how functions work in general within computer science:
-<h3 id="toc_5">Math versus CS - functions</h3>
-As you might recall from elementary school:
+### Understanding the above code
 
-f(x) -> y can be thought of as: y = f(x)
+Clearly, print sends anything between a set of quotes (" ") to the screen. The print command is called a function in Python - it's a piece of code that has been pre-written and does some preset thing everytime it's run. The next functions to understand are _raw_input_ and _str_. But before move on to them, let's take a look at how functions work in general within computer science:
 
-Where x is the input of the function f, and y is the output of f. In this way we can say, f is a function that 'maps' x to y. Thus it is fair to say that f(x) is equal to y, hence y = f(x).
+### Math versus CS - functions
+
+As you might recall from elementary school: 
+
+f(x) -> y can be thought of as: y = f(x) 
+
+Where x is the input of the function f, and y is the output of f. In this way we can say, f is a function that 'maps' x to y. Thus it is fair to say that f(x) is equal to y, hence y = f(x). 
 
 In computer science, you can say the same thing: y = f(x) for function f, input x, and output y. However, it's not exactly the same (but don't worry about that yet!)
-<h3 id="toc_6">Back to our examples</h3>
-Now that we understand that functions take in input and send back output, let's go back to the <em>raw_input</em> and <em>str</em> functions. The <raw_input function works like this:
+
+### Back to our examples
+
+Now that we understand that functions take in input and send back output, let's go back to the _raw_input_ and _str_ functions. The raw_input function works like this:
 
 ```javascript
 
@@ -120,7 +137,7 @@ name = str(raw_input("What's your name?"))
 
 What's really happening is:
 
-<em>"What's your name?"</em> is the input of the function <em>raw_input</em>, and the output is then passed as input to the <em>str</em> function. The result is saved in the variable <em>name</em>. Notice that we don't need to name the output of raw_input. So,
+_"What's your name?"_ is the input of the function _raw_input_, and the output is then passed as input to the _str_ function. The result is saved in the variable _name_. Notice that we don't need to name the output of raw_input. So,
 
 ```javascript
 name = str(raw_input("What's your name?"))
@@ -136,9 +153,12 @@ tmp = raw_input("What's your name?")
 name = str(tmp)
 ```
 
-except explicitly assigned the returned result to a variable <em>tmp</em>.
-<h2 id="toc_7">Functions - Write your own!</h2>
-Now that you understand what a function is, it's time to make your own. In Python, there are a number of keywords - think of these words and phrases like power words - and everytime you learn one, you can do so much more with your program. Use the <em>def</em> keyword and the following structure to define your own function:
+except explicitly assigned the returned result to a variable _tmp_.
+
+## Functions - Write your own!
+
+Now that you understand what a function is, it's time to make your own. In Python, there are a number of keywords - think of these words and phrases like power words - and everytime you learn one, you can do so much more with your program. Use the _def_ keyword and the following structure to define your own function:
+
 ```javascript
 
 def [name of function]([any input variables, ]):
@@ -146,7 +166,9 @@ def [name of function]([any input variables, ]):
     ends block of code..
     [optional return statement] [return value]
 ```
+
 Making the structure concrete:
+
 ```javascript
 def f(x): 
     return x
@@ -183,7 +205,7 @@ print g("Eric","Hello there,")
 
 ```
 
-In this function we have two inputs, name and greeting. Since we are passing in input inside of quotes (called strings), when you <em>+</em> them it combines them.
+In this function we have two inputs, name and greeting. Since we are passing in input inside of quotes (called strings), when you _+_ them it combines them.
 
 Now let's write a function that does something before returning.
 
@@ -214,13 +236,15 @@ print f(thing,7)
 
 ```
 
-If you ran the above code, you'll see that the result returned is 11. So how did that work? Well, we first define a function f, which takes two inputs - g and x. The input g is expected to be a function. We call the function g on the input x by putting parentheses around g. This signals to Python that the input g should be treated as a function. What actually happens is Python checks to see if g has a specific attribute, in this case <em>__call__</em>. You'll learn what that means later on in the post.
-<h2 id="toc_8">Flow Of Control</h2>
-Now that we can make some simple mathematical functions, let's get a little more complicated and talk about logic.
-<h3 id="toc_9">Boolean Values</h3>
-A boolean is a statement that evaluates to true or false. The boolean was named after George Boole - its creator. They have proven to be extremely valuable for mathematics, computer science, and a number of other fields.
+If you ran the above code, you'll see that the result returned is 11\. So how did that work? Well, we first define a function f, which takes two inputs - g and x. The input g is expected to be a function. We call the function g on the input x by putting parentheses around g. This signals to Python that the input g should be treated as a function. What actually happens is Python checks to see if g has a specific attribute, in this case ___call___. You'll learn what that means later on in the post.
 
-Boolean statements typically involve one or more of the boolean operators. In Python these are <em>and</em>, <em>or</em>, <em>not</em>, <em><</em>,<em>></em>,<em>==</em>,<em><=</em>,<em>>=</em>.
+## Flow Of Control
+
+Now that we can make some simple mathematical functions, let's get a little more complicated and talk about logic.
+
+### Boolean Values
+
+A boolean is a statement that evaluates to true or false. The boolean was named after George Boole - its creator. They have proven to be extremely valuable for mathematics, computer science, and a number of other fields. Boolean statements typically involve one or more of the boolean operators. In Python these are _and_, _or_, _not_, _<_,_>_,_==_,_<=_,_>=_. 
 
 Here are some examples of boolean statements in Python:
 
@@ -237,8 +261,11 @@ print not "everything" == "anything"
 ```
 
 If you run the above code, you will get back the boolean values true or false for each statement. As an exercise, try figuring out what each statement should return before running it.
-<h3 id="toc_10">If Statements</h3>
+
+### If Statements
+
 The simplest piece of logic in Python is the if statement:
+
 ```javascript
 
 if [boolean statement]:
@@ -260,10 +287,11 @@ if x < 5:
 
 ```
 
-The above code first gives variable x a value 4 and then checks to see if x is less than 5. If it is, then the value of x is printed. Try changing the value of x to 6 and see what happens.
+The above code first gives variable x a value 4 and then checks to see if x is less than 5\. If it is, then the value of x is printed. Try changing the value of x to 6 and see what happens.
 
-<h3 id="toc_11">If, Else conditionals</h3>
-Now we know how to check if something is true before executing, which is great! But what if we want something to execute if the boolean statement is false? Enter the else clause.
+### If, Else conditionals
+
+Now we know how to check if something is true before executing, which is great! But what if we want something to execute if the boolean statement is false? Enter the else clause. 
 
 In general:
 
@@ -295,10 +323,12 @@ print "all done"
 
 ```
 
-Because of the values we set for x and y, the code block in the if statement will execute. Can you change the code so that the else statement is executed instead?
+Because of the values we set for x and y, the code block in the if statement will execute. Can you change the code so that the else statement is executed instead? 
 
 Stepping back a bit, logically we can think of an if statement as saying, "if the statement is true, then execute the following code." The if, else statement says, "if the the statement is true, then execute the following code. Otherwise, execute this other code."
-<h3 id="toc_12">A real example of when to use if statements</h3>
+
+### A real example of when to use if statements
+
 Remember this code?:
 
 ```javascript
@@ -340,17 +370,19 @@ g needs to be a function!
 
 ```
 
-Which means we have programmed our code to work even when the user of our code does something we didn't account for or something they weren't supposed to. This allows us to write safer code that works more often.
+Which means we have programmed our code to work even when the user of our code does something we didn't account for or something they weren't supposed to. This allows us to write safer code that works more often. 
 
-So a natural question for some of you might be, what was that <em>import types</em> thing? Well, Python comes with a whole bunch of code that isn't loaded for every program you write. By importing the code, you tell Python to go look for that library and import it if it finds it. By importing the code into your program, you are able to make use of the functions, objects, and anything else that imported code comes with.
+So a natural question for some of you might be, what was that _import types_ thing? Well, Python comes with a whole bunch of code that isn't loaded for every program you write. By importing the code, you tell Python to go look for that library and import it if it finds it. By importing the code into your program, you are able to make use of the functions, objects, and anything else that imported code comes with. 
 
-The number of libraries available for import is one reason the Python language is so great! By way of explanation, check out this XKCD comic on how awesome Python imports are: <a href="http://xkcd.com/353/">xkcd comic</a>
-<h2 id="toc_13">Basic Data Structures</h2>
+The number of libraries available for import is one reason the Python language is so great! By way of explanation, check out this XKCD comic on how awesome Python imports are: [xkcd comic](http://xkcd.com/353/)
+
+## Basic Data Structures
+
 A data structure in Python is kind of like a variable, except it holds more values or it treats values in a particular way. The two most used data structures in Python are:
-<ol>
-  <li>lists - > [ ]</li>
-  <li>dictionaries -> { }</li>
-</ol>
+
+1.  lists - > [ ]
+2.  dictionaries -> { }
+
 lists hold elements like this:
 
 ```javascript

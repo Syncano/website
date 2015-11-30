@@ -12,7 +12,7 @@ summary: "In our previous post, we looked at some of the best features of React.
 ---
 In [our previous post](http://www.syncano.io/blog/reactjs-reasons-why-part-1/), we looked at some of the best features of React.js – a new generation framework from Facebook. Today, we'll build something useful with it. Once you get the hang of it, I think you'll be amazed at how easy it is to build components. Let’s recreate the animated dropdown menu from the newest version of Chrome for Android. Here's how it looks on mobile devices:
 
-<div align="center">![](nexusae0_flyout.gif)</div>
+<div style="align: center">![](nexusae0_flyout.gif)</div>
 
 ## Step 1: Prepare the Groundwork.
 

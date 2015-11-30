@@ -13,8 +13,9 @@ summary: "One of the more important concepts in database modeling is the notion 
 
 Typically, parent-child arrangements are modeled as one-to-many relationships, where each record in one table can be associated with multiple records in another table. (Other logical models include one-to-one and many-<wbr />to-many.) In the table designs, each row in the child table refers to a row in the parent table. For example:
 
-Parent table: Managers
-<table border="1" cellspacing="0" cellpadding="0">
+### Parent table: Managers
+
+<table class="table">
 <tbody>
 <tr>
 <td>ID</td>
@@ -48,8 +49,10 @@ Parent table: Managers
 </tr>
 </tbody>
 </table>
-Child Table: Workers
-<table border="1" cellspacing="0" cellpadding="0">
+
+### Child Table: Workers
+
+<table class="table">
 <tbody>
 <tr>
 <td>ID</td>
@@ -119,6 +122,7 @@ Child Table: Workers
 </tr>
 </tbody>
 </table>
+
 In both tables, there is an ID column. This column uniquely identifies each row in the table and is known as a primary key. Usually only one column is designated as the primary key, but sometimes combinations of columns can together serve as the primary key.
 
 In the Workers table, notice that the Reports To column contains values that match the values in the ID column in the Managers table. The Reports To column is therefore a foreign key, because its values refer to primary key values in another table. A table could conceivably have many foreign keys; for example, if there were a Locations table with a unique identifier (primary key) for each office location (St. Louis, Toronto, Tokyo…), the Workers table could have a Location column that refers to values in the Locations table.

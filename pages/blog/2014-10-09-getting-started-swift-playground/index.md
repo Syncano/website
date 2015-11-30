@@ -9,17 +9,17 @@ categories: ['iOS', 'Swift']
 image: Apple-Swift-2.png
 summary: "As Apple announced during their latest event, you can now write Swift applications and submit them to the AppStore. One of the most interesting features of Swift and the new XCode IDE are its interactive playgrounds. In the playgrounds, you can type a line of code and the result appears immediately – enabling you to run your code after you make changes without creating new projects. You can finally stop flinching in pain when you’re designer tells you a button needs to be just a few pixels farther to the left."
 ---
-<p>As Apple announced during their latest event, you can now write <a href="https://developer.apple.com/swift/">Swift</a> applications and submit them to the AppStore.</p>
+As Apple announced during their latest event, you can now write <a href="https://developer.apple.com/swift/">Swift</a> applications and submit them to the AppStore.
 
-<p>One of the most interesting features of Swift and the new XCode IDE are its interactive playgrounds. In the playgrounds, you can type a line of code and the result appears immediately – enabling you to run your code after you make changes without creating new projects. You can finally stop flinching in pain when you're designer tells you a button needs to be just a few pixels farther to the left.</p>
+One of the most interesting features of Swift and the new XCode IDE are its interactive playgrounds. In the playgrounds, you can type a line of code and the result appears immediately – enabling you to run your code after you make changes without creating new projects. You can finally stop flinching in pain when you're designer tells you a button needs to be just a few pixels farther to the left.
 
-<h2>XCode</h2>
+## XCode<
 
-<p>Before you start working in a playground, make sure you've downloaded version 6 of XCode (available on the <a href="https://itunes.apple.com/us/app/xcode/id497799835">AppStore</a>).</p>
+Before you start working in a playground, make sure you've downloaded version 6 of XCode (available on the <a href="https://itunes.apple.com/us/app/xcode/id497799835">AppStore</a>).
 
-<p>Once you have it installed (it may take some time), don't start a  new project. Instead, hit <em>File -> New -> Playground</em>.</p>
+Once you have it installed (it may take some time), don't start a  new project. Instead, hit _File -> New -> Playground_.
 
-<p>When you create a new playground file, it will be filled with this content by default:</p>
+When you create a new playground file, it will be filled with this content by default:
 
 ```javascript
 // Playground - noun: a place where people can play
@@ -29,13 +29,13 @@ import UIKit
 var str = "Hello, playground"
 ```
 
-<p>The code will fill whole left side of the file, and on the right you can see its corresponding results:</p>
+The code will fill whole left side of the file, and on the right you can see its corresponding results:
 
-<p><img src="SwiftPlayground_01.png" alt="SwiftPlayground_01" width="201" height="30" class="aligncenter size-full wp-image-10107" /></p>
+![SwiftPlayground_01](SwiftPlayground_01.png)
 
-<h2>Adding a function</h2>
+## Adding a function
 
-<p>Let's add a function to the playground to see if it works properly. Start by calculating the sum of 3 + 7:</p>
+Let's add a function to the playground to see if it works properly. Start by calculating the sum of 3 + 7:
 
 ```javascript
 func sumOfTwoNumbers(firstNumber: Int, secondNumber: Int) -> Int {
@@ -45,15 +45,15 @@ func sumOfTwoNumbers(firstNumber: Int, secondNumber: Int) -> Int {
 sumOfTwoNumbers(3, 7)
 ```
 
-<p><img src="SwiftPlayground_02.png" alt="SwiftPlayground_02" width="581" height="78" class="aligncenter size-full wp-image-10106" /></p>
+![SwiftPlayground_02](SwiftPlayground_02.png)
 
-<p>As you can see on the right, the result is 10 – meaning the playground is working as expected.</p>
+As you can see on the right, the result is 10 – meaning the playground is working as expected.
 
-<h2>Timeline</h2>
+## Timeline
 
-<p>If the code you write works over time and its result changes, you can enable the timeline view to see what's happening under the hood.</p>
+If the code you write works over time and its result changes, you can enable the timeline view to see what's happening under the hood.
 
-<p>Here's an example of how this works. Add a loop to your code by entering:</p>
+Here's an example of how this works. Add a loop to your code by entering:
 
 ```javascript
 for index in 0...10 {
@@ -61,21 +61,21 @@ for index in 0...10 {
 }
 ```
 
-<p><img src="SwiftPlayground_03.png" alt="SwiftPlayground_03" width="416" height="48" class="aligncenter size-full wp-image-10105" /></p>
+![SwiftPlayground_03](SwiftPlayground_03.png)
 
-<p>Notice how the result indicates the code ran 11 times - as it actually did. Next to that result, there is an eye icon and a circle icon.</p>
+Notice how the result indicates the code ran 11 times - as it actually did. Next to that result, there is an eye icon and a circle icon.
 
-<p><img src="SwiftPlayground_10.png" alt="SwiftPlayground_10" width="133" height="72" class="aligncenter size-full wp-image-10098" /></p>
+![SwiftPlayground_10](SwiftPlayground_10.png)
 
-<p>Click on the circle icon to see the <em>Value History</em>: a chart that shows how your values changed overtime.</p>
+Click on the circle icon to see the _Value History_: a chart that shows how your values changed overtime.
 
-<p>There are 11 discreet points on this graph. Click on one to see it's value. For example, when you click on the sum of 5 and 5, you'll get it's sum: 10.</p>
+There are 11 discreet points on this graph. Click on one to see it's value. For example, when you click on the sum of 5 and 5, you'll get it's sum: 10.
 
-<p><img src="SwiftPlayground_04.png" alt="SwiftPlayground_04" width="490" height="294" class="aligncenter size-full wp-image-10104" /></p>
+![SwiftPlayground_04](SwiftPlayground_04.png)
 
-<p><em>This graph also helps with more advanced calculations, because you can quickly see if something is wrong (e.g. when larger or negative numbers are taken as inputs).</em></p>
+_This graph also helps with more advanced calculations, because you can quickly see if something is wrong (e.g. when larger or negative numbers are taken as inputs)._
 
-<p><em>Notice what happens if we change our code to multiply both numbers when the first number is greater than 5:</em></p>
+_Notice what happens if we change our code to multiply both numbers when the first number is greater than 5:_
 
 ```javascript
 func sumOfTwoNumbers(firstNumber: Int, secondNumber: Int) -> Int {
@@ -86,13 +86,13 @@ func sumOfTwoNumbers(firstNumber: Int, secondNumber: Int) -> Int {
 }
 ```
 
-<p>the chart would now look like this:</p>
+the chart would now look like this:
 
-<p><img src="SwiftPlayground_05.png" alt="SwiftPlayground_05" width="493" height="305" class="aligncenter size-full wp-image-10103" /></p>
+![SwiftPlayground_05](SwiftPlayground_05.png)
 
-<h2>Testing UI and the Quick Look Feature</h2>
+## Testing UI and the Quick Look Feature
 
-<p>You can also use UI code in Playground - a pretty neat feature. Start here by creating and configuring a simple UILabel.</p>
+You can also use UI code in Playground - a pretty neat feature. Start here by creating and configuring a simple UILabel.
 
 ```javascript
 let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
@@ -102,11 +102,11 @@ label.textColor = UIColor.blueColor()
 label.text = "Swift Playground"
 ```
 
-<p>Now, click the <em>Quick Look</em> icon (the eye icon) next to the last line of your code to see how the label looks.</p>
+Now, click the _Quick Look_ icon (the eye icon) next to the last line of your code to see how the label looks.
 
-<p><img src="SwiftPlayground_06.png" alt="SwiftPlayground_06" width="271" height="64" class="aligncenter size-full wp-image-10102" /></p>
+![SwiftPlayground_06](SwiftPlayground_06.png)
 
-<p>You can also see how the label would look with varying gray backgrounds.  Add this loop to change it to different UIColor instances:</p>
+You can also see how the label would look with varying gray backgrounds.  Add this loop to change it to different UIColor instances:
 
 ```javascript
 for var grayColor : CGFloat = 0.9; grayColor > 0.0; grayColor -= 0.1 {
@@ -114,19 +114,19 @@ for var grayColor : CGFloat = 0.9; grayColor > 0.0; grayColor -= 0.1 {
 }
 ```
 
-<p>To see the history of how the background changed, click the <em>Value History</em> icon (plus sign icon), next to the line where we set the background color.</p>
+To see the history of how the background changed, click the _Value History_ icon (plus sign icon), next to the line where we set the background color.
 
-<p><img src="SwiftPlayground_07.png" alt="SwiftPlayground_07" width="489" height="442" class="aligncenter size-full wp-image-10101" /></p>
+![SwiftPlayground_07](SwiftPlayground_07.png)
 
-<h2>More advanced UI testing - UITableView</h2>
+## More advanced UI testing - UITableView
 
-<p>So what about more complicated UI things like UITableView? That also requires a data source and a delegate – and those need to be instances of existing classes, right? Fortunately, it is all possible to do in the playground.</p>
+So what about more complicated UI things like UITableView? That also requires a data source and a delegate – and those need to be instances of existing classes, right? Fortunately, it is all possible to do in the playground.
 
-<p>You can start by creating a class conforming to a UITableViewDelegate protocol. Inside will be two functions - one defining the height of a single row, and another returning the custom header view.</p>
+You can start by creating a class conforming to a UITableViewDelegate protocol. Inside will be two functions - one defining the height of a single row, and another returning the custom header view.
 
-<p>As a requirement, your class must also conform to NSObjectProtocol. You'll do that by subclassing <em>NSObject</em>.</p>
+As a requirement, your class must also conform to NSObjectProtocol. You'll do that by subclassing _NSObject_.
 
-<p>To create a custom header view, use the same code you used to create a label with one of the background colors we used earlier:</p>
+To create a custom header view, use the same code you used to create a label with one of the background colors we used earlier:
 
 ```javascript
 class Delegate : NSObject, UITableViewDelegate {
@@ -148,13 +148,13 @@ class Delegate : NSObject, UITableViewDelegate {
 
 <hr />
 
-<h3>NOTE</h3>
+### NOTE
 
-<p>Remember this is just sample code to quickly implement a table view. In your project, try to register Nib for the header whenever possible and reuse it later with the function <em>dequeueReusableHeaderFooterViewWithIdentifier(identifier:)</em>. For simplicity, you're recreating a new UILabel here, but doing so in your own app can affect its performance.</p>
+Remember this is just sample code to quickly implement a table view. In your project, try to register Nib for the header whenever possible and reuse it later with the function _dequeueReusableHeaderFooterViewWithIdentifier(identifier:)_. For simplicity, you're recreating a new UILabel here, but doing so in your own app can affect its performance.
 
 <hr />
 
-<p>Next, add a DataSource class. Implement obligatory functions returning the number of rows in a section, a cell for index path, and as an extra - the number of sections in a table view to see how creating the header view in Delegate works:</p>
+Next, add a DataSource class. Implement obligatory functions returning the number of rows in a section, a cell for index path, and as an extra - the number of sections in a table view to see how creating the header view in Delegate works:
 
 ```javascript
 class DataSource : NSObject, UITableViewDataSource {
@@ -180,7 +180,7 @@ class DataSource : NSObject, UITableViewDataSource {
 }
 ```
 
-<p>Now you need to create Delegate and DataSource objects and set them as properties of our newly created UITableView. At the end, you have to perform a <em>reloadData()</em> function for the tableView to fetch data from your data source.</p>
+Now you need to create Delegate and DataSource objects and set them as properties of our newly created UITableView. At the end, you have to perform a _reloadData()_ function for the tableView to fetch data from your data source.
 
 ```javascript
 let delegate = Delegate()
@@ -191,13 +191,13 @@ tableView.dataSource = dataSource
 tableView.reloadData()
 ```
 
-<p>Now on the last line (the one with <em>reloadData()</em>), you can use either <em>Quick Look</em> or <em>Value History</em> to see how your tableView looks. For this example, click on the latter to see how it changes while we change the code.</p>
+Now on the last line (the one with _reloadData()_), you can use either _Quick Look_ or _Value History_ to see how your tableView looks. For this example, click on the latter to see how it changes while we change the code.
 
-<p><img src="SwiftPlayground_08.png" alt="SwiftPlayground_08" width="490" height="353" class="aligncenter size-full wp-image-10100" /></p>
+![SwiftPlayground_08](SwiftPlayground_08.png)
 
-<p>Now add some more info to your cells and change its background color as well as your header view look.</p>
+Now add some more info to your cells and change its background color as well as your header view look.
 
-<p>In the Delegate class, change the function creating header view to:</p>
+In the Delegate class, change the function creating header view to:
 
 ```javascript
 func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -211,7 +211,7 @@ func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> U
 &nbsp; }
 ```
 
-<p>And then update the function creating a cell in the Data Source:</p>
+And then update the function creating a cell in the Data Source:
 
 ```javascript
 func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -228,14 +228,12 @@ func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexP
 &nbsp; }
 ```
 
-<p>After a short while, Timeline will refresh, and your Table View will change:</p>
+After a short while, Timeline will refresh, and your Table View will change:
 
-<p><img src="SwiftPlayground_09.png" alt="SwiftPlayground_09" width="491" height="355" class="aligncenter size-full wp-image-10099" /></p>
+![SwiftPlayground_09](SwiftPlayground_09.png)
 
-<h2>Final words</h2>
+## Final words
 
-<p>Swift's playground can be a very useful tool, especially since you can quickly test UI element designs without creating a new project or worrying about rebuild time. Swift developers will probably begin implementing apps after testing ideas in the playground first, and then they'll continue to use the playground during the development process to quickly test small changes.</p>
+Swift's playground can be a very useful tool, especially since you can quickly test UI element designs without creating a new project or worrying about rebuild time. Swift developers will probably begin implementing apps after testing ideas in the playground first, and then they'll continue to use the playground during the development process to quickly test small changes.
 
-<p>If you want to learn more about Swift, check out "The Swift Programming Language" – available in <a href="https://itunes.apple.com/us/book/swift-programming-language/id881256329?mt=11">iTunes</a>. You can also leave questions or additional comments below or email us at support@syncano.com - we'd be happy to help you get started!</p>
-</body>
-</html>
+If you want to learn more about Swift, check out "The Swift Programming Language" – available in <a href="https://itunes.apple.com/us/book/swift-programming-language/id881256329?mt=11">iTunes</a>. You can also leave questions or additional comments below or email us at support@syncano.com - we'd be happy to help you get started!

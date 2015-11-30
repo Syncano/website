@@ -19,7 +19,9 @@ Note: Although I don't demonstrate it in this post, Redis can be used in a varie
 - As a cache
 - To publish and/or subscribe
 - For distributed locking
-<h2>Motivation</h2>
+
+## Motivation
+
 When you build a web application, sooner or later you'll have to implement some kind of offline task processing.
 
 Example:
@@ -41,15 +43,18 @@ To scale, you need something between the web server and worker: a broker. The we
 All of this can be greatly simplified by using Celery - an open source distributed tasks queue. It works like a charm after you configure it -as long as you do so correctly.
 <h3>How Celery is built</h3>
 Celery consists of:
+
 <ul>
 	<li>Tasks, as defined in your app</li>
 	<li>A broker that routes tasks to workers and queues</li>
 	<li>Workers doing the actual work</li>
 	<li>A storage backend</li>
 </ul>
+
 You can watch a more in-depth introduction to Celery <a href="https://www.youtube.com/watch?v=3cyq5DHjymw">here</a> or jump straight to Celery's <a href="http://Celery.readthedocs.org/en/latest/getting-started/">getting started guide</a>.
 <h3>Rapid prototyping</h3>
 Sooner or later, you will end up with a pretty complex distributed system - and distributed systems have <a href="http://www.rgoarchitects.com/Files/fallacies.pdf">fallacies</a> that you should be aware of:
+
 <ul>
 	<li>Messages travel with a finite speed</li>
 	<li>Services are occasionally unavailable or unreliable</li>
@@ -58,8 +63,11 @@ Sooner or later, you will end up with a pretty complex distributed system - and 
 	<li>Data corruption</li>
 	<li>Lost tasks</li>
 </ul>
+
 With Docker, it's much easier to test solutions on a system level - by prototyping different task designs and the interactions between them.
-<h2>Your setup</h2>
+
+## Your setup
+
 Start with the standard Django project structure. It can be created with django-admin, if you have it installed.
 ```javascript
 
@@ -85,10 +93,15 @@ $ tree -I *.pyc
 └── run_web.sh
 
 ```
-<h2>Creating containers</h2>
+
+## Creating containers
+
 Since we are working with Docker, we need a proper Dockerfile to specify how our image will be built.
-<h3>Custom container</h3>
-<strong>Dockerfile</strong>
+
+### Custom container
+
+**Dockerfile**
+
 ```javascript
  
 # use base python image with python 2.7
@@ -107,8 +120,10 @@ RUN pip install -r requirements.txt
 RUN adduser --disabled-password --gecos '' myuser
 
 ```
+
 Our dependencies are:
-<strong>requirements.txt</strong>
+**requirements.txt**
+
 ```javascript
 
 django==1.7.2
@@ -119,19 +134,25 @@ redis==2.10.3
 
 ```
 I've frozen versions of dependencies to make sure that you will have a working setup. If you wish, you can update any of them, but it's not guaranteed to work.
+
 <h3>Choosing images for services</h3>
+
 Now we only need to set up Rabbitmq, Postgresql, and Redis. Since Docker introduced its official library, I use their official images whenever possible. However, even these can be broken sometimes. When that happens, you'll have to use something else.
 
 Here are the images I tested and selected for this project:
+
 <ul>
 	<li><a href="https://github.com/docker-library/official-images">Official Postgresql image</a></li>
 	<li><a href="https://registry.hub.docker.com/_/redis/">Official Redis image</a></li>
 	<li><a href="https://registry.hub.docker.com/u/tutum/rabbitmq/">Rabbitmq by Tutum</a></li>
 </ul>
+
 <h3>Using Fig.sh to set up multicontainer app</h3>
+
 Now you'll use <a href="http://www.fig.sh/">fig.sh</a> to combine your own containers with the ones we chose in the last section. If you're not familiar with Fig.sh, check out my post on <a href="http://www.syncano.io/blog/docker-workflow-fig-sh/">making your Docker workflow awesome with fig</a>.
 
-<strong>fig.yml</strong>
+**fig.yml**
+
 ```javascript
 
 # database container
@@ -175,10 +196,13 @@ worker:
     - redis:redis
 
 ```
-<h2>Configuring the webserver and worker</h2>
+
+## Configuring the webserver and worker
+
 You've probably noticed that both the worker and web server run some starting scripts. Here they are:
 
-<strong>run_web.sh</strong>
+**run_web.sh**
+
 ```javascript
 
 #!/bin/sh
@@ -190,9 +214,10 @@ su -m myuser -c "python manage.py migrate"
 su -m myuser -c "python manage.py runserver 0.0.0.0:8000"
 
 ```
-<strong>run_celery.sh</strong>
-{% highlight javascript lineanchors %}
 
+**run_celery.sh**
+
+```javascript
 #!/bin/sh
  
 cd myproject
@@ -200,14 +225,15 @@ cd myproject
 su -m myuser -c "celery worker -A myproject.celeryconf -Q default -n default@%h"
 
 ```
-The first script - <strong>run_web.sh</strong> - will migrate the database and start django development server on port 8000.
-Ths second one , <strong>run_celery.sh</strong>, will start a celery worker listening on a queue <em>default</em>.
+
+The first script - **run_web.sh** - will migrate the database and start django development server on port 8000.
+Ths second one , **run_celery.sh**, will start a celery worker listening on a queue <em>default</em>.
 
 At this stage, these scripts won't work as we'd like them to because we haven't yet configured them. Our app still doesn't know that we want to use Postgres as database and where to find it (in a container somewhere). We also have to configure Redis and Rabbitmq.
 
 But before we get to that, there are some useful Celery settings that will make your system perform better. Below are complete settings of this django app.
 
-<strong>myproject/settings.py</strong>
+**myproject/settings.py**
 ```javascript
 
 import os
@@ -340,7 +366,7 @@ Those settings will configure django app so that it will discover PostgreSQL dat
 
 Now, it's time to connect Celery to the app. Create file <em>celeryconf.py</em> and paste in this code:
 
-<strong>myproject/celeryconf.py</strong>
+**myproject/celeryconf.py**
 ```javascript
 
 import os
@@ -358,11 +384,15 @@ app.config_from_object('django.conf:settings')
 app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
 
 ```
+
 That should be enough to connect Celery to our app so the run_X scripts will work. You can read more about first steps with Django and Celery <a href="http://celery.readthedocs.org/en/latest/django/first-steps-with-django.html">here</a>.
-<h2>Defining tasks</h2>
+
+## Defining tasks
+
 Celery looks for tasks inside the <em>tasks.py</em> file in each Django app. Usually, tasks are created either with decorator or by inheriting after the Celery Task class.
 
 Here's how you can create a task using decorator:
+
 ```javascript
 
 @app.task
@@ -371,7 +401,9 @@ def power(n):
     return 2 ** n
 
 ```
+
 And here's how you can create a task by inheriting after the Celery Task class:
+
 ```javascript
 
 class PowerTask(app.Task):
@@ -380,9 +412,11 @@ class PowerTask(app.Task):
         return 2 ** n
 
 ```
+
 Both are fine and good for slightly different use cases.
 
-<strong>myproject/tasks.py</strong>
+**myproject/tasks.py**
+
 ```javascript
 
 from functools import wraps
@@ -447,12 +481,15 @@ TASK_MAPPING = {
 }
 
 ```
-<h2>Building an API for scheduling tasks</h2>
+
+## Building an API for scheduling tasks
+
 If you have tasks in your system, how do you run them? In this section, you'll create a user interface for job scheduling. In a backend application, the API will be your user interface. Let's use the <a href="http://www.django-rest-framework.org/">Django REST Framework</a> for your API.
 
 To make it as simple as possible, your app will have one model and only one ViewSet (endpoint with many HTTP methods).
 
-Create your model, called <em>Job</em>, in <strong>myproject/models.py</strong>.
+Create your model, called <em>Job</em>, in **myproject/models.py**.
+
 ```javascript
 
 from django.db import models
@@ -494,7 +531,7 @@ class Job(models.Model):
 ```
 Then create a <em>serializer</em>, <em>view</em> and url configuration to access it.
 
-<strong>myproject/serializers.py</strong>
+**myproject/serializers.py**
 ```javascript
 
 from rest_framework import serializers
@@ -507,7 +544,7 @@ class JobSerializer(serializers.HyperlinkedModelSerializer):
         model = Job
 
 ```
-<strong>myproject/views.py</strong>
+**myproject/views.py**
 ```javascript
 
 from rest_framework import mixins, viewsets
@@ -527,7 +564,7 @@ class JobViewSet(mixins.CreateModelMixin,
     serializer_class = JobSerializer
 
 ```
-<strong>myproject/urls.py</strong>
+**myproject/urls.py**
 ```javascript
 
 from django.conf.urls import url, include
@@ -548,7 +585,7 @@ urlpatterns = [
 ]
 
 ```
-For completeness, there is also <strong>myproject/wsgi.py</strong> defining wsgi config for the project:
+For completeness, there is also **myproject/wsgi.py** defining wsgi config for the project:
 ```javascript
 
 import os
@@ -558,7 +595,7 @@ from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
 
 ```
-and <strong>manage.py</strong>
+and **manage.py**
 ```javascript
 
 #!/usr/bin/env python
@@ -573,10 +610,12 @@ if __name__ == "__main__":
     execute_from_command_line(sys.argv)
 
 ```
-<strong><em>__init__.py</em></strong> is traditionally empty.
+**<em>__init__.py</em>** is traditionally empty.
 
 That's all. Uh... lots of code. Luckily everything is on <a href="https://github.com/atteroTheGreatest/docker-Django-Celery">github</a>, so you can just fork it.
-<h2>Running the setup</h2>
+
+## Running the setup
+
 Since everything is run from Fig, make sure you have both Docker and Fig installed before you try to start the app:
 ```javascript
 
@@ -586,11 +625,15 @@ $ fig up
 
 ```
 The last command will start five different containers, so just start using your API and have some fun with Celery in the mean time.
-<h2>Accessing the API</h2>
+
+## Accessing the API
+
 Navigate in your browser to 127.0.0.1:8000 to browse your API and schedule some jobs.
 
-Put this <strong>demo gif</strong> in the queue.
-<h2>Scale things out</h2>
+Put this **demo gif** in the queue.
+
+## Scale things out
+
 Currently we have only one instance of each container. We can get information about our group of containers with the <em>fig ps</em> command.
 ```javascript
 
@@ -637,7 +680,9 @@ dockerdjangocelery_worker_5     ./run_celery.sh                  Up
 
 ```
 You'll see there five powerful Celery workers. Nice!
-<h2>Summary</h2>
+
+## Summary
+
 You just married Django with Celery to build a distributed asynchronous computation system. I think you'll agree it was pretty easy to build an API and even easier to scale workers for it! However, life isn't always so nice to us, and sometimes we have to troubleshoot.
 
 In the next post, I'll show you tools to help you debug Celery problems, like:

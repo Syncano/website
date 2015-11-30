@@ -9,11 +9,11 @@ categories: ['Docker', 'Fig.sh', 'How Tos']
 image: figsh-y.png
 summary: "Fig is a python application that helps you run groups of docker containers. The docker command line interface is awesome, but if you start working with many containers at once and link them in the development environment, typing the commands into the command line gets burdensome."
 ---
-<h2>What is fig?</h2>
+## What is fig?
 
-<p>Fig is a python application that helps you run groups of docker containers. The docker command line interface is awesome, but if you start working with many containers at once and link them in the development environment, typing the commands into the command line gets burdensome.
+Fig is a python application that helps you run groups of docker containers. The docker command line interface is awesome, but if you start working with many containers at once and link them in the development environment, typing the commands into the command line gets burdensome.
 
-The most pragmatic approach to this problem is creating a bash script:</p>
+The most pragmatic approach to this problem is creating a bash script:
 
 ```javascript
 run_docker_containers.sh
@@ -50,9 +50,9 @@ docker run -i -t -e INSTANCE_TYPE="web-server" --name='my-web' -p 0.0.0.0:8000:8
     --link=postgres:postgres --link=redis:redis --link=rabbitmq:rabbit my_docker_image "$@"
 ```
 
-<p>Woah, it's super complicated and ugly – and that's only for running containers. What about inspecting containers, stopping them, or rebuilding them? You need more scripts for that. Managing docker this way can easily become a nightmare. Luckily, you can use <a href="http://www.fig.sh/">fig.sh</a> instead.</p>
+Woah, it's super complicated and ugly – and that's only for running containers. What about inspecting containers, stopping them, or rebuilding them? You need more scripts for that. Managing docker this way can easily become a nightmare. Luckily, you can use <a href="http://www.fig.sh/">fig.sh</a> instead.
 
-<p>Fig lets you configure the setup of your docker containers with a simple <a href="http://en.wikipedia.org/wiki/YAML">yaml</a> file and provides you with commands such as:</p>
+Fig lets you configure the setup of your docker containers with a simple <a href="http://en.wikipedia.org/wiki/YAML">yaml</a> file and provides you with commands such as:
 
 <ul>
 <li>up - runs all containers; builds containers if none are available</li>
@@ -61,25 +61,25 @@ docker run -i -t -e INSTANCE_TYPE="web-server" --name='my-web' -p 0.0.0.0:8000:8
 </ul>
 
 
-<p><img src="http://i.imgur.com/2paHteu.png" alt="Fig logs" /></p>
+<img src="http://i.imgur.com/2paHteu.png" alt="Fig logs" />
 
-<h2>How do you get started with fig?</h2>
+## How do you get started with fig?
 
-<h3>Step 1 - Install it.</h3>
+### Step 1 - Install it.
 
-<p>Fig is available in pip, so all you have to do is type this into your command line:</p>
+Fig is available in pip, so all you have to do is type this into your command line:
 
 ```javascript
 $ sudo pip install fig
 ```
 
-<p>You can more information about installing fig.sh on the <a href="http://www.fig.sh/install.html">official website</a>.</p>
+You can more information about installing fig.sh on the <a href="http://www.fig.sh/install.html">official website</a>.
 
-<h3>Step 2 - Create a fig config.</h3>
+### Step 2 - Create a fig config.
 
-<p>Fig config is written in yaml and is called <em>fig.yml</em> - you should place it in the directory in which you want to call fig commands.</p>
+Fig config is written in yaml and is called _fig.yml_ - you should place it in the directory in which you want to call fig commands.
 
-<p>Fig helps you manage docker containers, so its options are similar to those of the docker run command. In <em>fig.yml</em>, you'll start by entering the name of the container. Then, choose <em>build</em> or <em>image</em> to either run <em>docker build</em> or start a container based on the <em>image</em> you specified, respectively. You can specify many containers this way. Here's a simple example:</p>
+Fig helps you manage docker containers, so its options are similar to those of the docker run command. In _fig.yml_, you'll start by entering the name of the container. Then, choose _build_ or _image_ to either run _docker build_ or start a container based on the _image_ you specified, respectively. You can specify many containers this way. Here's a simple example:
 
 ```javascript
 my_app:
@@ -88,9 +88,9 @@ redis:
   image: redis
 ```
 
-<p>Of course you can do more things, like forwarding ports by choosing the <em>ports</em> field , mounting directories using the <em>volumes</em> field, and linking containers with <em>links</em>. It's really intuitive! You can read more about configuration options in the <a href="http://www.fig.sh/yml.html">fig.yml reference</a>.</p>
+Of course you can do more things, like forwarding ports by choosing the _ports_ field , mounting directories using the _volumes_ field, and linking containers with _links_. It's really intuitive! You can read more about configuration options in the <a href="http://www.fig.sh/yml.html">fig.yml reference</a>.
 
-<p>Now for a less-simple example. Here's how you can migrate your first nightmarish bash script to fig.yml.</p>
+Now for a less-simple example. Here's how you can migrate your first nightmarish bash script to fig.yml.
 
 ```javascript
 postgres:
@@ -142,13 +142,13 @@ worker:
         - INSTANCE_TYPE=worker
 ```
 
-<p>To run containers, now use:</p>
+To run containers, now use:
 
 ```javascript
 $ fig up
 ```
 
-<p>In another terminal window, you can inspect all of your containers with:</p>
+In another terminal window, you can inspect all of your containers with:
 
 ```javascript
 $ fig ps
@@ -162,22 +162,22 @@ app_worker_1     /sbin/my_init                    Up      8000/tcp, 2023->22/tcp
 app_web_1        /sbin/my_init                    Up      8000->8000/tcp, 2022->22/tcp 
 ```
 
-<p>That's it! Pretty easy, right?</p>
+That's it! Pretty easy, right?
 
-<h2>Issues with fig (troubleshooting)</h2>
+## Issues with fig (troubleshooting)
 
-<h3>Unexpected quotes in environment variables</h3>
+### Unexpected quotes in environment variables
 
-<p>I'm used to wrapping string environment variables in double quotes <em>" "</em>. I did the same in my <em>fig.yml</em> config and to my surprise app wasn't working.</p>
+I'm used to wrapping string environment variables in double quotes _" "_. I did the same in my _fig.yml_ config and to my surprise app wasn't working.
 
-<p>This is how I configured my <em>INSTANCE_TYPE</em> variable:</p>
+This is how I configured my _INSTANCE_TYPE_ variable:
 
 ```javascript
 environment:
     - INSTANCE_TYPE="web-server"
 ```
 
-<p>During debugging I noticed that fig leaves double quotes in actual variable value:</p>
+During debugging I noticed that fig leaves double quotes in actual variable value:
 
 ```javascript
 $ fig run web printenv
@@ -190,11 +190,11 @@ HOME=/root
 ...
 ```
 
-<p>So, my advice is to strip quotes in environment specification.</p>
+So, my advice is to strip quotes in environment specification.
 
-<h4>Rebuilding images</h4>
+#### Rebuilding images
 
-<p>I also noticed fig occasionally doesn't notice when a <em>Dockerfile</em> changes and its image needs to be rebuilt. When that happens, you'll just need to enter this into the command line:</p>
+I also noticed fig occasionally doesn't notice when a _Dockerfile_ changes and its image needs to be rebuilt. When that happens, you'll just need to enter this into the command line:
 
 ```javascript
 $ fig rm  # removes containers
@@ -202,7 +202,7 @@ $ fig build  # rebuild images
 $ fig up  # run whole setup again
 ```
 
-<h2>Summary</h2>
+## Summary
 
-<p>Fig simplified our complicated docker setup and life is awesome again.
-If you're looking for improving your docker workflow even more, check out <a href="https://github.com/jpetazzo/nsenter">nsenter</a> - a tool for entering docker containers - and <a href="http://www.serfdom.io/?__hstc=257401556.182ff0b6ce2fca3b36826f0cd98e0f47.1413914085927.1413914085927.1413914085927.1&amp;__hssc=257401556.1.1413914085928&amp;__hsfp=1866256635">serf</a> - a decentralized solution for cluster membership, failure detection, and orchestration.</p>
+Fig simplified our complicated docker setup and life is awesome again.
+If you're looking for improving your docker workflow even more, check out <a href="https://github.com/jpetazzo/nsenter">nsenter</a> - a tool for entering docker containers - and <a href="http://www.serfdom.io/?__hstc=257401556.182ff0b6ce2fca3b36826f0cd98e0f47.1413914085927.1413914085927.1413914085927.1&amp;__hssc=257401556.1.1413914085928&amp;__hsfp=1866256635">serf</a> - a decentralized solution for cluster membership, failure detection, and orchestration.
