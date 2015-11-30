@@ -11,13 +11,13 @@ keywords: 'JavaScript, Data Structures, Node, Tree Structures'
 seo_description: "We'll begin with an example and then extract from it a definition of data structures, beginning with the node and classes."
 ---
 JavaScript is a reasonably new language compared to the standard choices for studying data structures: Java, C, or C++. The reason for it's choosing is twofold: first, because JavaScript exposes references rather than forcing one to make use of pointers; second, because JavaScript is easier to understand, which allows the concepts to shine rather than the minutiae.
-<h2>The node and classes</h2>
-Rather than starting with a general definition of data structures, we'll begin with an example and then extract from it a definition, beginning with the node and classes.
 
-There are many ways to to write classes in JavaScript. However, good taste and clarity demands we pick one, at least for a given project. For this tutorial, we will follow conventions <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript">established here</a>.
+## The node and classes
 
-Classes are a blueprint for a piece of code, and below we define our first class. It is similar to past examples you may have seen in that variables and functions exist, except they are bound together, creating a union of "nouns" and "verbs". The reason for this is to set up conventions around functionality. It tells future programmers where to put what functionality and gives hints on your notion of good design. Classes are technically unnecessary constructs for most code, but then again, so is using human language or comments. Everything we write below could be written in brainfuck or binary, but it isn't - because that would be a terrible idea. The same holds here with objects, which is why they are organized with classes.
-<h3>A First Example</h3>
+Rather than starting with a general definition of data structures, we'll begin with an example and then extract from it a definition, beginning with the node and classes. There are many ways to to write classes in JavaScript. However, good taste and clarity demands we pick one, at least for a given project. For this tutorial, we will follow conventions [established here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript). Classes are a blueprint for a piece of code, and below we define our first class. It is similar to past examples you may have seen in that variables and functions exist, except they are bound together, creating a union of "nouns" and "verbs". The reason for this is to set up conventions around functionality. It tells future programmers where to put what functionality and gives hints on your notion of good design. Classes are technically unnecessary constructs for most code, but then again, so is using human language or comments. Everything we write below could be written in brainfuck or binary, but it isn't - because that would be a terrible idea. The same holds here with objects, which is why they are organized with classes.
+
+### A First Example
+
 filename: classes.js
 ```javascript
 var Person = function(firstName){
@@ -29,15 +29,15 @@ Person.prototype.walking = function(){
 var person = new Person();
 person.walking();
 ```
-We write our class by setting a var equal to a function. The parameters of said function will be initialized upon instantiation. Notice the use of the <em>this</em> keyword. The <em>this</em> acts as a place holder for whatever name is given to the object when instantiated. In general, instantiation happens with a statement of the form <em>var [some object] = new [Some Class]();</em>. In this case, the object is called <em>person</em> and the class is called <em>Person</em>.
+We write our class by setting a var equal to a function. The parameters of said function will be initialized upon instantiation. Notice the use of the _this_ keyword. The _this_ acts as a place holder for whatever name is given to the object when instantiated. In general, instantiation happens with a statement of the form _var [some object] = new [Some Class]();_. In this case, the object is called _person_ and the class is called _Person_. Also notice the use of Person.prototype.walking. This allows us to add functions and data to our class, which the object will then make use of. In our case, the walking function is given to the person object when instatiated.
 
-Also notice the use of Person.prototype.walking. This allows us to add functions and data to our class, which the object will then make use of. In our case, the walking function is given to the person object when instatiated.
-<h3>how to run the above code:</h3>
-If you've been following our series on node.js, you'll be aware of the node compiler. For a full explanation of that, <a href="https://github.com/EricSchles/intro_node">see this</a>.
+### how to run the above code:
 
-<code>node classes.js \\ prints 'i am walking' to the screen</code>
-<h3>The node class</h3>
-Now that we understand what a class is, let's write a node.
+If you've been following our series on node.js, you'll be aware of the node compiler. For a full explanation of that, [see this](https://github.com/EricSchles/intro_node). `node classes.js \\ prints 'i am walking' to the screen`
+
+### The node class
+
+Now that we understand what a class is, let's write a node. 
 ```javascript
 var Node = function(data,next){
     this.data = data;
@@ -52,8 +52,9 @@ head.next = node;
 head.next.getData();
 node.getData();
 ```
-<h2>A First Data Structure - linked list</h2>
-Now that we have all the terminology out of the way, we are ready to create our first data structure: the linked list.
+## A First Data Structure - linked list
+
+Now that we have all the terminology out of the way, we are ready to create our first data structure: the linked list. 
 ```javascript
 var Node = function(data,next){
     this.data = data;
@@ -191,7 +192,7 @@ LinkedList.prototype.get = function(offset){
     }
 }
 ```
-It is here in the for-loop: <em>cur = cur.next;</em> What could that bizzare looking statement mean? In fact it means take the value of cur's next and set it equal to cur. Recall that the assignment statement works from right to left, assigning the value what is to the right of the equals sign to what is to the left of the equals sign. And since we are dealing with objects, our reference to object becomes our object. Truly it is an odd circumstance we find ourselves in, but it is powerful.
+It is here in the for-loop: _cur = cur.next;_ What could that bizzare looking statement mean? In fact it means take the value of cur's next and set it equal to cur. Recall that the assignment statement works from right to left, assigning the value what is to the right of the equals sign to what is to the left of the equals sign. And since we are dealing with objects, our reference to object becomes our object. Truly it is an odd circumstance we find ourselves in, but it is powerful.
 
 We may think of this statement as similar to updating a counter in a while loop:
 ```javascript
@@ -209,12 +210,16 @@ while(counter < 7){
  console.log(i);
 }
 ```
-I argue the statement with a while loop and the statement that updates the reference are the same (or at least similar). This is due to the way that memory works inside the computer. We won't go into detail about this here, but please do <a href="http://www.cs.umd.edu/class/sum2003/cmsc311/Notes/BitOp/pointer.html">review this</a> if interested.
-<h2>Binary Trees</h2>
+I argue the statement with a while loop and the statement that updates the reference are the same (or at least similar). This is due to the way that memory works inside the computer. We won't go into detail about this here, but please do [review this](http://www.cs.umd.edu/class/sum2003/cmsc311/Notes/BitOp/pointer.html) if interested.
+
+## Binary Trees
+
 Now that we understand linear data structures - data structures that can only be traversed with iteration, let's move onto data structures that should only really be traversed recursively.
 
 Tree's are exactly such a data structure.
-<h3>Definition</h3>
+
+### Definition
+
 A tree data structure is like a linked list, in that it is connected by a series of references and has a root node. However, a tree is quite different from a linked list in one very important way. Let's look at the node definition of a binary tree to understand this:
 ```javascript
 var Node = function(data,left,right){
@@ -226,11 +231,15 @@ var Node = function(data,left,right){
 The main difference is the left and right. These are references to either a left node or a right node "below" the current node in the tree. So really all we've done is allow ourselves to "nexts" instead of one. But this adds a great deal of complexity and power to what we can do. You can think of the node of a data structure as sort of it's atomic structure. By changing it, you fundamentally change the larger pattern of the data, often in interesting and powerful ways.
 
 Since we can now move left or right at a given node, we'll need to be able to decide where we want to go and why.
-<h3>Zeroing in: The binary tree</h3>
+
+### Zeroing in: The binary tree
+
 A binary tree is aptly named. It can have at most two leaves for any of it's nodes. And so only binary decisions can be made at each node, when traversing. It's important to note this is only the simplest possible tree.
 
 Rather than showing you everything, in this post, we'll simply cover binary trees - those with only two possible branches at each node. It's important to be aware however that your trees can have as many forks as you like. The qualification that a data structure is a tree is that it has a root node and terminal nodes. And that traversal is done from the root to the leaves (nodes that only reference null at left or right).
-<h3>How to traverse and append:</h3>
+
+### How to traverse and append:
+
 ```javascript
 var prettyPrint = function(cur){
     if(cur.left != null){
@@ -293,7 +302,7 @@ As the above code shows, we append and print out our data via a technique known 
 
 If a recursive function should fail to terminate, such a function will continue on forever (in theory).
 
-Understanding the idea behind recursion requires us to think visually for a moment. The best way to understand what is happening inside of a recursive function is to consider <a href="http://www.stsci.edu/~lbradley/seminar/fractals.html">fractal pictures</a> or a <a href="https://www.youtube.com/watch?v=G_GBwuYuOOs">factal video</a>
+Understanding the idea behind recursion requires us to think visually for a moment. The best way to understand what is happening inside of a recursive function is to consider [fractal pictures](http://www.stsci.edu/~lbradley/seminar/fractals.html) or a [factal video](https://www.youtube.com/watch?v=G_GBwuYuOOs)
 
 Here is an example of a very simple recursive function:
 ```javascript
@@ -343,17 +352,23 @@ tree.append(3);
 They will be printed in order: 1,2,3
 
 Notice this is because we add elements to the tree, under the ordering of the natural numbers. Thus the actual order of our appending shouldn't matter. This is great if we need to maintain an ordered list! Inserting and removal into such a structure is also requires far less computation. In fact an insertion or removal that takes n steps in a linked list, will take log(n) steps in a binary tree!
-<h2>Graphs</h2>
+
+## Graphs
+
 Now that we understand linked lists and trees, we are ready to understand the graph. A graph is the most general data structure we've seen so far. In fact, linked lists can be thought of as a special case of a tree, and in turn a tree can be thought of as a special case of a graph. Linked lists are special cases of trees in that they only have one reference to the next. Trees are special cases of graphs since they are directed. By relaxing both the only one reference, and relaxing the fact that a node must be a reference in only one direction, we have a very powerful and complex data structure.
 
-For those of you unfamiliar with graphs already I recommend the following graphical representation as a <a href="https://www.flickr.com/photos/kentbye/1156410748/">visual aid</a>.
+For those of you unfamiliar with graphs already I recommend the following graphical representation as a [visual aid](https://www.flickr.com/photos/kentbye/1156410748/)
 
 As the picture shows, a graph is represented as a series of nodes and edges connecting those nodes. So all we need is an understanding of the relationships between a given node pair, and then we store the edge connecting them. An edge is typically represented visually as a line and in words as a pair of nodes.
-<h3>Our example</h3>
+
+### Our example
+
 There aren't any new programming concepts in a graph, at least not for the graph I built. In general there are number of problems that graphs describe well and the solutions to such problems lend themselves to a set of general algorithms that seem to work on all graphs. Most of these problems and solutions revolve around graph traversal and metrics on graphs. By measuring a graph one is able to understand much about its contents, without looking at any of its individual elements.
 
 Examples of uses of graph based analysis include social network analysis, computer networking, entropy of a system, and more.
-<h3>A graph data structure:</h3>
+
+### A graph data structure:
+
 ```javascript
 //rolling our own contains method
 //from: http://stackoverflow.com/questions/237104/array-containsobj-in-javascript
@@ -437,21 +452,28 @@ graph.printNodes();
 The code here makes heavy use of JavaScript arrays. This allows our graph to remain extremely simple. We also store a fair bit of knowledge in our nodes, allowing the connections to remain trivial to traverse.
 
 Now that we understand the underpinnings of modern data structures lets take advantage of a few libraries, so we can get stuff done :)
-<h2>Some libraries</h2>
-<h3>Mori</h3>
-The official docs can be found <a href="http://swannodette.github.io/mori/">here</a>
+
+## Some libraries
+
+### Mori
+
+The official docs can be found [here](http://swannodette.github.io/mori/)
 
 Mori is extremely powerful - it gives you access to lists, sequences, hash maps, sorted hash maps, and a few more wonderful data structures.
 
 Here are some examples:
-<h4>enumerate:</h4>
+
+#### enumerate:
+
 ```javascript
 var xs = mori.range(10);
 mori.each(xs, function(n) {
 console.log(n);
 });
 ```
-<h4>store:</h4>
+
+#### store:
+
 ```javascript
 //in a vector
 var vec = mori.vector(1,2,3);
@@ -463,5 +485,7 @@ mori.get(map,"hello");
 var sorted_map = mori.sorted_map(2, "two", 3, "three", 1, "one");
 mori.get(sorted_map, 2);
 ```
-<h3>Buckets-js</h3>
-As powerful as Mori is, the syntax is very functional. So I also include <a href="https://github.com/mauriciosantos/buckets">buckets-js</a>. Buckets isn't as fully featured and it doesn't give you a way to enumerate, but it is object oriented, which is nice for data structures.
+
+### Buckets-js
+
+As powerful as Mori is, the syntax is very functional. So I also include [buckets-js](https://github.com/mauriciosantos/buckets). Buckets isn't as fully featured and it doesn't give you a way to enumerate, but it is object oriented, which is nice for data structures.

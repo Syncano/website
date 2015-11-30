@@ -9,32 +9,19 @@ categories: ['Javascript', 'Tutorials']
 image: intro-express-js-node-js.png
 summary: "Express.js is a web framework for the middleware of your Node.js application. It’s responsible for passing data from the backend to the front-end and vice versa. For those of you coming from Ruby, express is similar to Sinatra; for those of you coming from Python, it is similar to Flask."
 ---
+Express.js is a web framework for the middleware of your Node.js application. It's responsible for passing data from the backend to the front-end and vice versa. For those of you coming from Ruby, express is similar to [Sinatra](http://www.sinatrarb.com/); for those of you coming from Python, it is similar to [Flask](http://flask.pocoo.org/).
 
-Express.js is a web framework for the middleware of your Node.js application. It's responsible for passing data from the backend to the front-end and vice versa. For those of you coming from Ruby, express is similar to <a href="http://www.sinatrarb.com/">Sinatra</a>; for those of you coming from Python, it is similar to <a href="http://flask.pocoo.org/">Flask</a>.
-<h2>Prerequisites</h2>
-Writing applications with Express.js means first understanding the core of JavaScript and the Node.js run time. Please check out <a href="http://www.syncano.io/blog/getting-know-javascript-intro/">this introduction to JavaScript</a> and <a href="https://github.com/EricSchles/intro_node">this introduction to Node</a> if you are unfamiliar.
-<h2>Installation</h2>
-Express.js is extremely easy to install. All one needs is to have Node.js already installed. Since Node.js comes with npm, the Node package manager, it is extremely easy to install Express once you already have Node.
+## Prerequisites
 
-To install, open a terminal window and type the following:
-<code>$ sudo npm install express 
-$ sudo npm install hbs #not required
-$ sudo npm install body-parser #not required
-</code>
+Writing applications with Express.js means first understanding the core of JavaScript and the Node.js run time. Please check out [this introduction to JavaScript](http://www.syncano.io/blog/getting-know-javascript-intro/) and [this introduction to Node](https://github.com/EricSchles/intro_node) if you are unfamiliar.
 
-While not required, we install hbs because it will make our lives much easier.
+## Installation
 
-<strong>Note: npm only installs packages to a directory and any of its subdirectories. Therefore, if you try to run express from some other disassociated directory, it won't work.</strong>
+Express.js is extremely easy to install. All one needs is to have Node.js already installed. Since Node.js comes with npm, the Node package manager, it is extremely easy to install Express once you already have Node. To install, open a terminal window and type the following: `$ sudo npm install express $ sudo npm install hbs #not required $ sudo npm install body-parser #not required` While not required, we install hbs because it will make our lives much easier. **Note: npm only installs packages to a directory and any of its subdirectories. Therefore, if you try to run express from some other disassociated directory, it won't work.**
 
-<h2>Verifying installation</h2>
-Once you have express installed, the next thing to do is ensure your installation is correct.
+## Verifying installation
 
-Do this by opening a terminal window and typing:
-<code>$ node
-</code>
-This opens up the Node REPL, which allows you to type in small pieces of code (typically one-liners) to verify your code is correct. It's great for testing small pieces of code and allows your code to be more bug free.
-
-Once you've done the above, type:
+Once you have express installed, the next thing to do is ensure your installation is correct. Do this by opening a terminal window and typing: `$ node` This opens up the Node REPL, which allows you to type in small pieces of code (typically one-liners) to verify your code is correct. It's great for testing small pieces of code and allows your code to be more bug free. Once you've done the above, type: 
 ```javascript
 var express = require("express");
 ```

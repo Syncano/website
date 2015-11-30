@@ -11,10 +11,12 @@ summary: "Within minutes, you can create dynamic iOS apps on Syncano that instan
 ---
 Within minutes, you can create dynamic iOS apps on Syncano that instantly reflect changes in data by “subscribing” to changes on Syncano’s Sync Server. Here’s a demo app and a quick guide so you can get started.
 
-<h2>Introduction to Syncano</h2>
+## Introduction to Syncano
+
 Syncano offers many <a href="http://www.syncano.io/features/">features</a> such as data modeling, an Admin GUI, a real-time sync API, data storage, and more. In this example, we'll focus on the latter two features - storing and syncing data.
 
-<h2>Data Storage</h2>
+##Data Storage
+
 To store data we use <em>DataObjects</em>, which are basically containers for a set of properties. We've already created a set of keys like <em>Title</em>, <em>Text</em>, or <em>Link</em> for each Data Object, which can store text values.
 
 Each object can be given a state (<em>Pending</em>, <em>Moderated</em> or <em>Rejected</em>), something useful if you want to moderate incoming data before displaying it to your users e.g. inside an app or on a big screen.

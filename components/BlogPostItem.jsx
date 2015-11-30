@@ -77,8 +77,8 @@ export default React.createClass({
           key={item.path}>
           <div className="post-content">
             <Link to={item.path} className="permalink">
-              <span className="author"><img src={`/about/${author.photo}`} alt={author.name} /></span>
-              <img src={heroImageURL} alt={title} name={title} height="auto"/>
+              <span className="author"><img src={`/about/${author.photo}`} alt={author.name}/></span>
+              <img src={heroImageURL} alt={title}/>
             </Link>
             {this.renderHeader(item)}
             <div className="summary">{item.data.summary}</div>
