@@ -42,7 +42,7 @@ export default React.createClass({
   handleClick(event) {
     event.preventDefault();
 
-    Hello('facebook').login().then((data) => {
+    Hello('github').login().then((data) => {
       console.error('data', data);
 
       if (data.network === 'google') {
