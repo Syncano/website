@@ -8,7 +8,7 @@ if (isBrowser) {
   let credentials = {};
   let options = {};
 
-  credentials.facebook = config.hello.google;
+  credentials.facebook = config.hello.facebook;
   credentials.google = config.hello.google;
   credentials.github = config.hello.github;
 
