@@ -1,14 +1,9 @@
-const isBrowser = typeof window !== 'undefined';
-const Syncano = isBrowser ? require('syncano') : undefined;
-
 import React from 'react';
-import { Link } from 'react-router';
+import { RouteHandler, Link } from 'react-router';
 import _ from 'lodash';
-import request from 'superagent';
 
-import { Adwords, Hello, Landing } from '../components/';
+import { Adwords, Hello, Landing } from '../../components/';
 import Helmet from 'react-helmet';
-import config from '../config/';
 
 export default React.createClass({
 
@@ -39,31 +34,6 @@ export default React.createClass({
     }, 7500)
   },
 
-  handleClick(event) {
-    event.preventDefault();
-
-    Hello('github').login().then((data) => {
-      console.error('data', data);
-
-      if (data.network === 'google') {
-        data.network = 'google-oauth2';
-      }
-
-      request
-        .post(`${config.apiUrl}v1/account/auth/${data.network}/`)
-        .send({access_token: data.authResponse.access_token})
-        .end((err, res) => {
-          if(!err) {
-            this.setState({converted: true});
-            let redirectUrl = `${config.dashboardUrl}?token=${res.body.account_key}`;
-            window.location.href = redirectUrl;
-          }
-        });
-    }, (error) => {
-      console.error('error', error);
-    });
-  },
-
   renderConversionTag() {
     return this.state.converted ? <Adwords.Conversion/> : null;
   },
@@ -88,13 +58,7 @@ export default React.createClass({
                 <h1>Turning developers into superstars</h1>
                 <h2>A backend platform to build powerful real-time apps more efficiently</h2>
                 <br/><br/>
-                <div className="row">
-                  <div className="col-md-offset-4 col-md-4">
-                    <Landing.ContactFormInline/>
-                  </div>
-                </div>
-                <br/><br/>
-                <a href="https://dashboard.syncano.io/#/signup" onClick={this.handleClick} className="btn btn-dark-blue cta-button mixpanel-btn" id="homepage-hero" style={{marginBottom: 0}}>START BUILDING FOR FREE</a>
+                <RouteHandler {...this.props}/>
               </div>
             </div>
           </div>
@@ -131,12 +95,12 @@ export default React.createClass({
               <div className="col-md-1 hidden-md"></div>
               <div className="col-md-1 hidden-md"></div>
               <div className="col-md-1 hidden-md"></div>
-              <div className="col-md-1 col-xs-3"><img src={require('../images/python-logo.png')} alt="Python Logo"/></div>
-              <div className="col-md-1 col-xs-3"><img src={require('../images/javascript.png')} alt="Javascript icon"/></div>
-              <div className="col-md-1 col-xs-3"><img src={require('../images/android.png')} alt="android icon"/></div>
-              <div className="col-md-1 col-xs-3"><img src={require('../images/ruby.png')} alt="ruby icon"/></div>
-              <div className="col-md-1 col-xs-3"><img src={require('../images/ios8.png')} alt="ios icon"/></div>
-              <div className="col-md-1 col-xs-3"><img src={require('../images/bird.png')} alt="firebird icon"/></div>
+              <div className="col-md-1 col-xs-3"><img src={require('../../images/python-logo.png')} alt="Python Logo"/></div>
+              <div className="col-md-1 col-xs-3"><img src={require('../../images/javascript.png')} alt="Javascript icon"/></div>
+              <div className="col-md-1 col-xs-3"><img src={require('../../images/android.png')} alt="android icon"/></div>
+              <div className="col-md-1 col-xs-3"><img src={require('../../images/ruby.png')} alt="ruby icon"/></div>
+              <div className="col-md-1 col-xs-3"><img src={require('../../images/ios8.png')} alt="ios icon"/></div>
+              <div className="col-md-1 col-xs-3"><img src={require('../../images/bird.png')} alt="firebird icon"/></div>
               <div className="col-md-1"></div>
             </div>
           </div>
@@ -145,7 +109,7 @@ export default React.createClass({
           <div className="container-fluid" id="testimonials">
             <div className="row">
               <div className="col-md-6 col-sm-6 image">
-                <img src={require('../images/hally.jpg')} alt="Hally Knutsen"/>
+                <img src={require('../../images/hally.jpg')} alt="Hally Knutsen"/>
               </div>
               <div className="col-md-6 col-sm-6 text-center">
                 <div className="quote">"What used to take 5 weeks now takes just 1 <br/>week with Syncano. <strong>You let developers be <br/>developers and not get stuck being<br/> middleware or database engineers.</strong>"</div>
@@ -154,7 +118,7 @@ export default React.createClass({
             </div>
             <div className="row">
               <div className="col-md-6 col-sm-6 image">
-                <img src={require('../images/krystian.jpg')} alt="Krystian"/>
+                <img src={require('../../images/krystian.jpg')} alt="Krystian"/>
               </div>
               <div className="col-md-6 col-sm-6 text-center">
                 <div className="quote">"Hands-down the easiest way to build robust, <br/>advanced apps with real-time sync. CodeBox <br/>even lets me use third-party apps just like <br/>native ones. <strong>Finally I can build anywhere, <br/>anything, anytime on any device."</strong>
@@ -164,7 +128,7 @@ export default React.createClass({
             </div>
             <div className="row">
               <div className="col-md-6 col-sm-6 image">
-                <img src={require('../images/patrick.jpg')} alt="Patrick"/>
+                <img src={require('../../images/patrick.jpg')} alt="Patrick"/>
               </div>
               <div className="col-md-6 col-sm-6 text-center">
                 <div className="quote">"Syncano's personal, responsive support was a <br/>difference maker for me. <strong>Syncano is the <br/>developers' champion."</strong>
@@ -182,14 +146,14 @@ export default React.createClass({
             <div className="row">
               <div className="col-md-4 col-md-offset-2 text-center">
                 <div>
-                  <img src={require('../images/dashboard.png')} height="55"/>
+                  <img src={require('../../images/dashboard.png')} height="55"/>
                 </div>
                 <h3>Manage your own dashboard</h3>
                 <p>Create new objects in the Syncano dashboard<br/>or add them with code</p>
               </div>
               <div className="col-md-4 text-center">
                 <div>
-                  <img src={require('../images/nosql.png')} height="55"/>
+                  <img src={require('../../images/nosql.png')} height="55"/>
                 </div>
                 <h3>NoSQL-like Database</h3>
                 <p>Gives you the flexibility to create sophisticated data relations</p>
@@ -208,8 +172,8 @@ export default React.createClass({
             <br/>
             <p>With CodeBox, write and run any code on a Schedule, Trigger or with a Webhook.<br/>Execute code by a particular date you set, or once a change is made to your data.</p>
             <p><strong>We currently support Javascript, Python, Go and Ruby.</strong></p>
-            <p><img src={require('../images/middleware-support-icons.png')} width="288"/></p>
-            <img src={require('../images/slider/slide3.png')} />
+            <p><img src={require('../../images/middleware-support-icons.png')} width="288"/></p>
+            <img src={require('../../images/slider/slide3.png')} />
           </div>
           <div className="shadow"></div>
         </div>
@@ -335,17 +299,17 @@ export default React.createClass({
           <div className="container text-center">
             <h2>Easily add user management & user permissions.<br/>Ensure your data is safe</h2>
             <div className="col-md-4">
-              <img src={require('../images/authentication.png')} height="50"/>
+              <img src={require('../../images/authentication.png')} height="50"/>
               <h3>User Authentication</h3>
               <p>Authenticate your users using<br/>passwords or social media</p>
             </div>
             <div className="col-md-4">
-              <img src={require('../images/management.png')} height="50"/>
+              <img src={require('../../images/management.png')} height="50"/>
               <h3>User Management</h3>
               <p>Create Users and Groups. User Profiles<br/>enable you to store any user data</p>
             </div>
             <div className="col-md-4">
-              <img src={require('../images/security.png')} height="50"/>
+              <img src={require('../../images/security.png')} height="50"/>
               <h3>Data Security</h3>
               <p>Syncano is HIPAA compliant</p>
             </div>
