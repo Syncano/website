@@ -3,7 +3,7 @@ export default {
   apiUrl: 'https://api.syncano.io/',
   dashboardUrl: 'https://dashboard.syncano.io/',
   hello: {
-    google: '263058036063-8h3r2mn9le5mllf0q3je6gruv14u2ms3.apps.googleusercontent.com',
+    google: '263058036063-ii0k7hrmm3gigk74011jb38sq3q9t0n0.apps.googleusercontent.com',
     redirect_uri: 'https://syncano.rocks/'
   }
 };
