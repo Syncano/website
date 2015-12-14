@@ -1,9 +1,14 @@
+const isBrowser = typeof window !== 'undefined';
+const Syncano = isBrowser ? require('syncano') : undefined;
+
 import React from 'react';
 import { Link } from 'react-router';
 import _ from 'lodash';
+import request from 'superagent';
 
-import { Adwords, Landing } from '../components/';
+import { Adwords, Hello, Landing } from '../components/';
 import Helmet from 'react-helmet';
+import config from '../config/';
 
 export default React.createClass({
 
@@ -34,6 +39,31 @@ export default React.createClass({
     }, 7500)
   },
 
+  handleClick(event) {
+    event.preventDefault();
+
+    Hello('google').login().then((data) => {
+      console.error('data', data);
+
+      if (data.network === 'google') {
+        data.network = 'google-oauth2';
+      }
+
+      request
+        .post(`${config.apiUrl}v1/account/auth/${data.network}/`)
+        .send({access_token: data.authResponse.access_token})
+        .end((err, res) => {
+          if(!err) {
+            this.setState({converted: true});
+            let redirectUrl = `${config.dashboardUrl}?token=${res.body.account_key}`;
+            window.location.href = redirectUrl;
+          }
+        });
+    }, (error) => {
+      console.error('error', error);
+    });
+  },
+
   renderConversionTag() {
     return this.state.converted ? <Adwords.Conversion/> : null;
   },
@@ -60,11 +90,11 @@ export default React.createClass({
                 <br/><br/>
                 <div className="row">
                   <div className="col-md-offset-4 col-md-4">
-                    <Landing.ContactForm/>
+                    <Landing.ContactFormInline/>
                   </div>
                 </div>
                 <br/><br/>
-                <a href="https://dashboard.syncano.io/#/signup" className="btn btn-dark-blue cta-button mixpanel-btn" id="homepage-hero" style={{marginBottom: 0}}>START BUILDING FOR FREE</a>
+                <a href="https://dashboard.syncano.io/#/signup" onClick={this.handleClick} className="btn btn-dark-blue cta-button mixpanel-btn" id="homepage-hero" style={{marginBottom: 0}}>START BUILDING FOR FREE</a>
               </div>
             </div>
           </div>
