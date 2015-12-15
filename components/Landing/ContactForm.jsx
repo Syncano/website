@@ -8,24 +8,6 @@ import config from '../../config/';
 
 export default React.createClass({
 
-  getInitialState() {
-    return {
-      canSubmit: false
-    }
-  },
-
-  enableButton() {
-    this.setState({
-      canSubmit: true
-    });
-  },
-
-  disableButton() {
-    this.setState({
-      canSubmit: false
-    });
-  },
-
   submit(model) {
     let syncano = new Syncano({baseUrl: config.apiUrl});
 
@@ -52,7 +34,7 @@ export default React.createClass({
         <div className="form-group" id="password">
           <Input layout="elementOnly" type="password" name="password" placeholder="Password" required/>
         </div>
-        <input type="submit" value="Sign Up for Free" className="btn btn-dark-blue" style={{width: '100%'}} disabled={!this.state.canSubmit}/>
+        <input type="submit" value="Sign Up for Free" className="btn btn-dark-blue" style={{width: '100%', background: '#ffcc00', color: '#000'}}/>
       </Formsy.Form>
     )
   }

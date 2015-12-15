@@ -99,7 +99,7 @@ export default React.createClass({
   },
 
   renderFooter() {
-    return !this.isLandingPage() ? <Footer/> : null;
+    return !this.isLandingPage() ? <Footer/> : <Landing.Footer/>;
   },
 
   render() {

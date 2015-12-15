@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom';
 import { Link } from 'react-router';
 import { Navbar, NavBrand, CollapsibleNav, Nav } from 'react-bootstrap';
 import { OnScroll } from 'react-window-mixins';
+const isBrowser = typeof window !== 'undefined';
 
 export default React.createClass({
   mixins: [OnScroll],
 
   shouldBeVisible() {
+    if (!isBrowser) {
+      return false;
+    }
+
     let highlightsSection = document.getElementsByClassName('highlights')[0];
 
     if (!highlightsSection) {
@@ -27,7 +32,7 @@ export default React.createClass({
         </NavBrand>
         <CollapsibleNav eventKey={0}>
           <Nav navbar right>
-            <li className={this.shouldBeVisible() ? 'show' : 'hidden'}><a href="https://dashboard.syncano.io/#/signup" className="btn btn-dark-blue mixpanel-btn" target="_blank">Sign Up</a></li>
+            <li className={this.shouldBeVisible() ? 'show' : 'hidden'}><a href="https://dashboard.syncano.io/#/signup" className="btn btn-dark-blue mixpanel-btn" target="_blank" style={{background: '#ffcc00', color: '#000'}}>Sign Up For Free</a></li>
           </Nav>
         </CollapsibleNav>
       </Navbar>

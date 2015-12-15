@@ -55,8 +55,8 @@ export default React.createClass({
           <div className="hero">
             <div className="container">
               <div className="info">
-                <h1>Turning developers into superstars</h1>
-                <h2>A backend platform to build powerful real-time apps more efficiently</h2>
+                <h1>A Serverless Application Platform</h1>
+                <h2>Build Powerful Real-Time Apps More Efficiently With Syncano</h2>
                 <br/><br/>
                 <RouteHandler {...this.props}/>
               </div>
@@ -80,8 +80,8 @@ export default React.createClass({
               </div>
               <div className="col-md-4 col-sm-4">
                 <div className="">
-                  <h3>Integrate with any API.</h3>
-                  <p>Minimize boilerplate code. Easily install code blocks and reuse them across all of your apps with Solutions. Share amongst the community.</p>
+                  <h3>Integrate with any API.<br/>Minimize boilerplate code.</h3>
+                  <p>Easily install code blocks and reuse them across all of your apps with Solutions. Share your custom Solutions with the community.</p>
                 </div>
               </div>
             </div>
@@ -149,14 +149,14 @@ export default React.createClass({
                   <img src={require('../../images/dashboard.png')} height="55"/>
                 </div>
                 <h3>Manage your own dashboard</h3>
-                <p>Create new objects in the Syncano dashboard<br/>or add them with code</p>
+                <p>Create new objects in the Syncano dashboard<br/>or add them with code.</p>
               </div>
               <div className="col-md-4 text-center">
                 <div>
                   <img src={require('../../images/nosql.png')} height="55"/>
                 </div>
                 <h3>NoSQL-like Database</h3>
-                <p>Gives you the flexibility to create sophisticated data relations</p>
+                <p>Gives you the flexibility to create sophisticated data relations.</p>
               </div>
             </div>
           </div>
@@ -310,7 +310,7 @@ export default React.createClass({
             <div className="col-md-4">
               <img src={require('../../images/security.png')} height="50"/>
               <h3>Data Security</h3>
-              <p>Syncano is HIPAA compliant to ensure your data is kept safe.</p>
+              <p>Syncano is HIPAA compliant to ensure<br/>your data is kept safe.</p>
             </div>
           </div>
         </div>
@@ -324,7 +324,7 @@ export default React.createClass({
           <div className="container text-center">
             <div className="row">
               <div className="col-sm-12">
-                <h2 className="text-center">Add the modules you need to build serverless apps</h2>
+                <h2 className="text-center">Add all the modules you need to build serverless apps</h2>
                 <br/><br/>
                 <div className="row">
                   <div className="col-md-offset-4 col-md-4">
