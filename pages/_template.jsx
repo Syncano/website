@@ -95,7 +95,7 @@ export default React.createClass({
   },
 
   isLandingPage() {
-    return this.props.page && _.startsWith(this.props.page.path, '/landing-page/');
+    return this.props.page && _.startsWith(this.props.page.path, '/lp/');
   },
 
   renderFooter() {
