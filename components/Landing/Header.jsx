@@ -1,8 +1,24 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { Link } from 'react-router';
 import { Navbar, NavBrand, CollapsibleNav, Nav } from 'react-bootstrap';
+import { OnScroll } from 'react-window-mixins';
 
 export default React.createClass({
+  mixins: [OnScroll],
+
+  shouldBeVisible() {
+    let highlightsSection = document.getElementsByClassName('highlights')[0];
+
+    if (!highlightsSection) {
+      return false;
+    }
+
+    let highlightsSectionOffsetTop = highlightsSection.offsetTop;
+
+    return this.state.scroll.y > highlightsSectionOffsetTop;
+  },
+
   render() {
     return (
       <Navbar bsStyle="" className="navbar navbar-fixed-top dark" style={{background: '#244273', boxShadow: 'none'}} toggleNavKey={0}>
@@ -11,7 +27,7 @@ export default React.createClass({
         </NavBrand>
         <CollapsibleNav eventKey={0}>
           <Nav navbar right>
-            <li><a href="https://dashboard.syncano.io/#/signup" className="btn btn-dark-blue mixpanel-btn" target="_blank">Sign Up</a></li>
+            <li className={this.shouldBeVisible() ? 'show' : 'hidden'}><a href="https://dashboard.syncano.io/#/signup" className="btn btn-dark-blue mixpanel-btn" target="_blank">Sign Up</a></li>
           </Nav>
         </CollapsibleNav>
       </Navbar>
