@@ -81,7 +81,7 @@ export default React.createClass({
               <div className="col-md-4 col-sm-4">
                 <div className="">
                   <h3>Integrate with any API.<br/>Minimize boilerplate code.</h3>
-                  <p>Minimize boilerplate code. Easily install code blocks and reuse them across all of your apps with Solutions. Share your custom Solutions with the community.</p>
+                  <p>Easily install code blocks and reuse them across all of your apps with Solutions. Share your custom Solutions with the community.</p>
                 </div>
               </div>
             </div>
@@ -324,7 +324,7 @@ export default React.createClass({
           <div className="container text-center">
             <div className="row">
               <div className="col-sm-12">
-                <h2 className="text-center">Add the modules you need to build serverless apps</h2>
+                <h2 className="text-center">Add all the modules you need to build serverless apps</h2>
                 <br/><br/>
                 <div className="row">
                   <div className="col-md-offset-4 col-md-4">
