@@ -3,7 +3,7 @@ import React from 'react';
 export default React.createClass({
   render() {
     return (
-      <div dangerouslySetInnerHTML={{__html:`
+      <div style={{height: 0, overflow: 'hidden'}} dangerouslySetInnerHTML={{__html:`
         <!-- Google Code for All Users - maximum period -->
         <!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup -->
         <script type="text/javascript">

@@ -3,7 +3,7 @@ import React from 'react';
 export default React.createClass({
   render() {
     return (
-      <div dangerouslySetInnerHTML={{__html:`
+      <div style={{height: 0, overflow: 'hidden'}} dangerouslySetInnerHTML={{__html:`
         <!-- Google Code for Lead from Sign Up Conversion Page -->
         <script type="text/javascript">
         /* <![CDATA[ */

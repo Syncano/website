@@ -31,7 +31,7 @@ export default React.createClass({
 
   render() {
     return (
-      <a href="https://dashboard.syncano.io/#/signup" onClick={this.handleClick} className="btn btn-dark-blue cta-button mixpanel-btn" id="homepage-hero" style={{marginBottom: 0}}>START BUILDING FOR FREE</a>
+      <a href="https://dashboard.syncano.io/#/signup" onClick={this.handleClick} className="btn btn-dark-blue cta-button mixpanel-btn" id="homepage-hero" style={{marginBottom: 0, background: '#ffcc00', color: '#000'}}>SIGN UP FOR FREE</a>
     )
   }
 });

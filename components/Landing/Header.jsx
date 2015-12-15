@@ -10,7 +10,7 @@ export default React.createClass({
 
   shouldBeVisible() {
     if (!isBrowser) {
-      return true;
+      return false;
     }
 
     let highlightsSection = document.getElementsByClassName('highlights')[0];
@@ -32,7 +32,7 @@ export default React.createClass({
         </NavBrand>
         <CollapsibleNav eventKey={0}>
           <Nav navbar right>
-            <li className={this.shouldBeVisible() ? 'show' : 'hidden'}><a href="https://dashboard.syncano.io/#/signup" className="btn btn-dark-blue mixpanel-btn" target="_blank">Sign Up</a></li>
+            <li className={this.shouldBeVisible() ? 'show' : 'hidden'}><a href="https://dashboard.syncano.io/#/signup" className="btn btn-dark-blue mixpanel-btn" target="_blank" style={{background: '#ffcc00', color: '#000'}}>Sign Up For Free</a></li>
           </Nav>
         </CollapsibleNav>
       </Navbar>
