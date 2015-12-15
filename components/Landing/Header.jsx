@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom';
 import { Link } from 'react-router';
 import { Navbar, NavBrand, CollapsibleNav, Nav } from 'react-bootstrap';
 import { OnScroll } from 'react-window-mixins';
+const isBrowser = typeof window !== 'undefined';
 
 export default React.createClass({
   mixins: [OnScroll],
 
   shouldBeVisible() {
+    if (!isBrowser) {
+      return true;
+    }
+
     let highlightsSection = document.getElementsByClassName('highlights')[0];
 
     if (!highlightsSection) {
