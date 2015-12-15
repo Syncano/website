@@ -46,27 +46,16 @@ export default React.createClass({
     return (
       <nav className="categories navbar visible-lg" style={{marginBottom: 0}}>
         <div className="container">
-          <div className="navbar-header">
-            <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-2" aria-expanded="true" aria-controls="navbar">
-              <span className="sr-only">Toggle navigation</span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-            </button>
-          </div>
-
-          <div className="collapse navbar-collapse" id="navbar-collapse-2" aria-expanded="false">
-            <ul className="nav navbar-nav">
-              {this.renderAllLink()}
-              <li><Link to="/blog/category/tutorials/">Tutorials</Link></li>
-              <li className="dropdown-toggle visible-lg">
-                <a href="#">Browse Categories <span className="caret"></span></a>
-                <ul className="dropdown-menu">
-                  {this.renderCategoriesLinks(this.getCategoriesList())}
-                </ul>
-              </li>
-            </ul>
-          </div>
+          <ul className="nav navbar-nav">
+            {this.renderAllLink()}
+            <li><Link to="/blog/category/tutorials/">Tutorials</Link></li>
+            <li className="dropdown-toggle visible-lg">
+              <a href="#">Browse Categories <span className="caret"></span></a>
+              <ul className="dropdown-menu">
+                {this.renderCategoriesLinks(this.getCategoriesList())}
+              </ul>
+            </li>
+          </ul>
         </div>
       </nav>
     )

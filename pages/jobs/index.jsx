@@ -80,9 +80,9 @@ export default React.createClass({
                 <p>We have degrees. We have no degrees. We have computer scientists. We have liberal arts majors. We’re about rewarding those who do great things.</p>
               </div>
               <div className="col-md-3 col-md-offset-1">
-                <div><img src="IMG_8182.png" /></div>
-                <div><img src="TapadNewOffice0314-2.png" /></div>
-                <div><img src="mariuszsara_websummit.png" /></div>
+                <div><img src="IMG_8182.png" alt="IMG_8182"/></div>
+                <div><img src="TapadNewOffice0314-2.png" alt="TapadNewOffice0314-2"/></div>
+                <div><img src="mariuszsara_websummit.png" alt="mariuszsara_websummit"/></div>
               </div>
             </div>
           </div>

@@ -134,14 +134,14 @@ export default React.createClass({
             <div className="row">
               <div className="col-md-4 col-md-offset-2 text-center">
                 <div>
-                  <img src={require('../images/dashboard.png')} height="55"/>
+                  <img src={require('../images/dashboard.png')} height="55" alt="dashboard"/>
                 </div>
                 <h3>Manage your own dashboard</h3>
                 <p>Create new objects in the Syncano dashboard<br/>or add them with code</p>
               </div>
               <div className="col-md-4 text-center">
                 <div>
-                  <img src={require('../images/nosql.png')} height="55"/>
+                  <img src={require('../images/nosql.png')} height="55" alt="nosql"/>
                 </div>
                 <h3>NoSQL-like Database</h3>
                 <p>Gives you the flexibility to create sophisticated data relations</p>
@@ -160,8 +160,8 @@ export default React.createClass({
             <br/>
             <p>With CodeBox, write and run any code on a Schedule, Trigger or with a Webhook.<br/>Execute code by a particular date you set, or once a change is made to your data.</p>
             <p><strong>We currently support Javascript, Python, Go and Ruby.</strong></p>
-            <p><img src={require('../images/middleware-support-icons.png')} width="288"/></p>
-            <img src={require('../images/slider/slide3.png')} />
+            <p><img src={require('../images/middleware-support-icons.png')} width="288" alt="middleware-support-icons"/></p>
+            <img src={require('../images/slider/slide3.png')} alt="slide3"/>
           </div>
           <div className="shadow"></div>
         </div>
@@ -302,17 +302,17 @@ export default React.createClass({
           <div className="container text-center">
             <h2>Easily add <a href="http://docs.syncano.io/docs/user-management" target="_blank">user management</a> & <a href="http://docs.syncano.io/docs/permissions" target="_blank">user permissions</a>.<br/>Ensure your data is safe</h2>
             <div className="col-md-4">
-              <img src={require('../images/authentication.png')} height="50"/>
+              <img src={require('../images/authentication.png')} height="50" alt="authentication"/>
               <h3>User Authentication</h3>
               <p>Authenticate your users using<br/>passwords or social media</p>
             </div>
             <div className="col-md-4">
-              <img src={require('../images/management.png')} height="50"/>
+              <img src={require('../images/management.png')} height="50" alt="management"/>
               <h3>User Management</h3>
               <p>Create Users and Groups. User Profiles<br/>enable you to store any user data</p>
             </div>
             <div className="col-md-4">
-              <img src={require('../images/security.png')} height="50"/>
+              <img src={require('../images/security.png')} height="50" alt="security"/>
               <h3>Data Security</h3>
               <p>Syncano is HIPAA compliant</p>
             </div>

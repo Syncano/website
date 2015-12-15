@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { RouteHandler, Link } from 'react-router';
 import _ from 'lodash';
 
-import { Adwords, Landing } from '../components/';
+import { Adwords, Hello, Landing } from '../../components/';
 import Helmet from 'react-helmet';
 
 export default React.createClass({
@@ -58,13 +58,7 @@ export default React.createClass({
                 <h1>Turning developers into superstars</h1>
                 <h2>A backend platform to build powerful real-time apps more efficiently</h2>
                 <br/><br/>
-                <div className="row">
-                  <div className="col-md-offset-4 col-md-4">
-                    <Landing.ContactForm/>
-                  </div>
-                </div>
-                <br/><br/>
-                <a href="https://dashboard.syncano.io/#/signup" className="btn btn-dark-blue cta-button mixpanel-btn" id="homepage-hero" style={{marginBottom: 0}}>START BUILDING FOR FREE</a>
+                <RouteHandler {...this.props}/>
               </div>
             </div>
           </div>
@@ -97,16 +91,16 @@ export default React.createClass({
           <div className="container">
             <div className="row text-center">
               <h2>Build with your library of choice</h2>
-              <h5>We’re Open Source! Help contribute to our code on GitHub</h5>
+              <h5>Syncano libraries are Open Source! You can contribute to our code on GitHub at any time.</h5>
               <div className="col-md-1 hidden-md"></div>
               <div className="col-md-1 hidden-md"></div>
               <div className="col-md-1 hidden-md"></div>
-              <div className="col-md-1 col-xs-3"><img src={require('../images/python-logo.png')} alt="Python Logo"/></div>
-              <div className="col-md-1 col-xs-3"><img src={require('../images/javascript.png')} alt="Javascript icon"/></div>
-              <div className="col-md-1 col-xs-3"><img src={require('../images/android.png')} alt="android icon"/></div>
-              <div className="col-md-1 col-xs-3"><img src={require('../images/ruby.png')} alt="ruby icon"/></div>
-              <div className="col-md-1 col-xs-3"><img src={require('../images/ios8.png')} alt="ios icon"/></div>
-              <div className="col-md-1 col-xs-3"><img src={require('../images/bird.png')} alt="firebird icon"/></div>
+              <div className="col-md-1 col-xs-3"><img src={require('../../images/python-logo.png')} alt="Python Logo"/></div>
+              <div className="col-md-1 col-xs-3"><img src={require('../../images/javascript.png')} alt="Javascript icon"/></div>
+              <div className="col-md-1 col-xs-3"><img src={require('../../images/android.png')} alt="android icon"/></div>
+              <div className="col-md-1 col-xs-3"><img src={require('../../images/ruby.png')} alt="ruby icon"/></div>
+              <div className="col-md-1 col-xs-3"><img src={require('../../images/ios8.png')} alt="ios icon"/></div>
+              <div className="col-md-1 col-xs-3"><img src={require('../../images/bird.png')} alt="firebird icon"/></div>
               <div className="col-md-1"></div>
             </div>
           </div>
@@ -115,7 +109,7 @@ export default React.createClass({
           <div className="container-fluid" id="testimonials">
             <div className="row">
               <div className="col-md-6 col-sm-6 image">
-                <img src={require('../images/hally.jpg')} alt="Hally Knutsen"/>
+                <img src={require('../../images/hally.jpg')} alt="Hally Knutsen"/>
               </div>
               <div className="col-md-6 col-sm-6 text-center">
                 <div className="quote">"What used to take 5 weeks now takes just 1 <br/>week with Syncano. <strong>You let developers be <br/>developers and not get stuck being<br/> middleware or database engineers.</strong>"</div>
@@ -124,7 +118,7 @@ export default React.createClass({
             </div>
             <div className="row">
               <div className="col-md-6 col-sm-6 image">
-                <img src={require('../images/krystian.jpg')} alt="Krystian"/>
+                <img src={require('../../images/krystian.jpg')} alt="Krystian"/>
               </div>
               <div className="col-md-6 col-sm-6 text-center">
                 <div className="quote">"Hands-down the easiest way to build robust, <br/>advanced apps with real-time sync. CodeBox <br/>even lets me use third-party apps just like <br/>native ones. <strong>Finally I can build anywhere, <br/>anything, anytime on any device."</strong>
@@ -134,7 +128,7 @@ export default React.createClass({
             </div>
             <div className="row">
               <div className="col-md-6 col-sm-6 image">
-                <img src={require('../images/patrick.jpg')} alt="Patrick"/>
+                <img src={require('../../images/patrick.jpg')} alt="Patrick"/>
               </div>
               <div className="col-md-6 col-sm-6 text-center">
                 <div className="quote">"Syncano's personal, responsive support was a <br/>difference maker for me. <strong>Syncano is the <br/>developers' champion."</strong>
@@ -152,14 +146,14 @@ export default React.createClass({
             <div className="row">
               <div className="col-md-4 col-md-offset-2 text-center">
                 <div>
-                  <img src={require('../images/dashboard.png')} height="55"/>
+                  <img src={require('../../images/dashboard.png')} height="55"/>
                 </div>
                 <h3>Manage your own dashboard</h3>
                 <p>Create new objects in the Syncano dashboard<br/>or add them with code</p>
               </div>
               <div className="col-md-4 text-center">
                 <div>
-                  <img src={require('../images/nosql.png')} height="55"/>
+                  <img src={require('../../images/nosql.png')} height="55"/>
                 </div>
                 <h3>NoSQL-like Database</h3>
                 <p>Gives you the flexibility to create sophisticated data relations</p>
@@ -174,12 +168,12 @@ export default React.createClass({
         </div>
         <div className="middleware text-center">
           <div className="container">
-            <h2>Build and add microservice-like functionality into your app without setting up a server or building out a custom API</h2>
+            <h2>Build and add microservices into your app</h2>
             <br/>
-            <p>With CodeBox, write and run any code on a Schedule, Trigger or with a Webhook.<br/>Execute code by a particular date you set, or once a change is made to your data.</p>
+            <p>Write and run any code on a schedule, triggered by an event or with a Webhook without setting up a server.<br/>Execute code by a particular date or a change in data.</p>
             <p><strong>We currently support Javascript, Python, Go and Ruby.</strong></p>
-            <p><img src={require('../images/middleware-support-icons.png')} width="288"/></p>
-            <img src={require('../images/slider/slide3.png')} />
+            <p><img src={require('../../images/middleware-support-icons.png')} width="288"/></p>
+            <img src={require('../../images/slider/slide3.png')} />
           </div>
           <div className="shadow"></div>
         </div>
@@ -195,7 +189,7 @@ export default React.createClass({
                       <p className="solutions-item__title">QRCode Generator</p>
                     </div>
                     <div className="solutions-item-header__column">
-                      <div className="solutions-item__avatar" style={{backgroundImage: `url('https://www.gravatar.com/avatar/656abb47e589879370574da4db611bdc')`}}></div>
+                      <div className="solutions-item__avatar" style={{backgroundImage: `url(${require('./QR.png')})`}}></div>
                     </div>
                   </div>
                   <div className="solutions-item__description">This solution generates and stores QRCodes</div>
@@ -230,7 +224,7 @@ export default React.createClass({
                       <p className="solutions-item__title">Send SMS</p>
                     </div>
                     <div className="solutions-item-header__column">
-                      <div className="solutions-item__avatar" style={{backgroundImage: `url('https://www.gravatar.com/avatar/656abb47e589879370574da4db611bdc')`}}></div>
+                      <div className="solutions-item__avatar" style={{backgroundImage: `url(${require('./Comments.png')})`}}></div>
                     </div>
                   </div>
                   <div className="solutions-item__description">Integrate with Twilio to send text and picture messages with CodeBox calls!</div>
@@ -267,7 +261,7 @@ export default React.createClass({
                       <p className="solutions-item__title">PDF to Image Converter</p>
                     </div>
                     <div className="solutions-item-header__column">
-                      <div className="solutions-item__avatar" style={{backgroundImage: `url('https://www.gravatar.com/avatar/656abb47e589879370574da4db611bdc')`}}></div>
+                      <div className="solutions-item__avatar" style={{backgroundImage: `url(${require('./Acrobat.png')})`}}></div>
                     </div>
                   </div>
                   <div className="solutions-item__description">This solution lets you convert PDFs and store them as images in syncano</div>
@@ -298,26 +292,25 @@ export default React.createClass({
                 </div>
               </div>
             </div>
-            <a href="/solutions/" className="btn btn-dark-blue">See more Solutions</a>
           </div>
         </div>
         <div className="showcase">
           <div className="container text-center">
-            <h2>Easily add user management & user permissions.<br/>Ensure your data is safe</h2>
+            <h2>Easily add user management & user permissions</h2>
             <div className="col-md-4">
-              <img src={require('../images/authentication.png')} height="50"/>
+              <img src={require('../../images/authentication.png')} height="50"/>
               <h3>User Authentication</h3>
-              <p>Authenticate your users using<br/>passwords or social media</p>
+              <p>Authenticate your users using<br/>passwords or social media.</p>
             </div>
             <div className="col-md-4">
-              <img src={require('../images/management.png')} height="50"/>
+              <img src={require('../../images/management.png')} height="50"/>
               <h3>User Management</h3>
-              <p>Create Users and Groups. User Profiles<br/>enable you to store any user data</p>
+              <p>Create Users and Groups. User Profiles<br/>enable you to store any user data.</p>
             </div>
             <div className="col-md-4">
-              <img src={require('../images/security.png')} height="50"/>
+              <img src={require('../../images/security.png')} height="50"/>
               <h3>Data Security</h3>
-              <p>Syncano is HIPAA compliant</p>
+              <p>Syncano is HIPAA compliant to ensure your data is kept safe.</p>
             </div>
           </div>
         </div>
@@ -331,7 +324,7 @@ export default React.createClass({
           <div className="container text-center">
             <div className="row">
               <div className="col-sm-12">
-                <h2 className="text-center">Database. Backend. Middleware. Real-time. Microservices.<br/>All in one place</h2>
+                <h2 className="text-center">Add the modules you need to build serverless apps</h2>
                 <br/><br/>
                 <div className="row">
                   <div className="col-md-offset-4 col-md-4">

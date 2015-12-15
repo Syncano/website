@@ -12,15 +12,15 @@ categories: ['AngularJS', 'Tutorials']
 keywords: 'Angular, Angular JS, AngularJS, Angular.js'
 seo_description: "Angular.js is a front-end web framework responsible for accepting data from the middleware of your app & vice versa. See how easy (& awesome) it is to use!"
 ---
-<p>Angular is a web framework for the front-end of your application.  It's responsible for accepting data from the middleware of your application and vice versa. Angular.js is similar to other templating engines.  For those of you coming from Python, Angular is similar to jinja2.  For those of you coming from Ruby, this is similar to HAML.</p>
+Angular is a web framework for the front-end of your application. It's responsible for accepting data from the middleware of your application and vice versa. Angular.js is similar to other templating engines. For those of you coming from Python, Angular is similar to jinja2\. For those of you coming from Ruby, this is similar to HAML.
 
-<h2>Prerequisites</h2>
+## Prerequisites
 
-<p>Before writing applications with Angular.js, it's probably best to ensure a solid foundation in the core of JavaScript, Node.js, and Express.js.  Check out <a href="http://www.syncano.io/blog/getting-know-javascript-intro/">this introduction to JavaScript</a>, <a href="http://www.syncano.io/intro-to-express-js">this intro to Express</a>, and <a href="http://www.syncano.io/intro-to-node-js">this introduction to Node</a> if you are unfamiliar.</p>
+Before writing applications with Angular.js, it's probably best to ensure a solid foundation in the core of JavaScript, Node.js, and Express.js. Check out [this introduction to JavaScript](http://www.syncano.io/blog/getting-know-javascript-intro/), [this intro to Express](http://www.syncano.io/intro-to-express-js), and [this introduction to Node](http://www.syncano.io/intro-to-node-js) if you are unfamiliar.
 
-<h2>A first example</h2>
+## A first example
 
-<p>Angular.js is extremely easy to make use of. All you need to is include the CDN (<a href="http://en.wikipedia.org/wiki/Content_delivery_network">content delivery network</a>).  And then you're off to the races:</p>
+Angular.js is extremely easy to make use of. All you need to is include the CDN ([content delivery network](http://en.wikipedia.org/wiki/Content_delivery_network)). And then you're off to the races:
 
 ```javascript
 <!doctype html>
@@ -38,19 +38,19 @@ seo_description: "Angular.js is a front-end web framework responsible for accept
 </html>
 ```
 
-<h2>Directives</h2>
+## Directives
 
-<p>Despite its simplicity, there is a ton of conceptual stuff going on here.  First, we need to understand the notion of directives, which Angular makes use of to manipulate the DOM (Document Object Model).  There are a number of directives, and in the above example we see four very common ones: ng-app, ng-model, ng-init and ng-bind.</p>
+Despite its simplicity, there is a ton of conceptual stuff going on here. First, we need to understand the notion of directives, which Angular makes use of to manipulate the DOM (Document Object Model). There are a number of directives, and in the above example we see four very common ones: ng-app, ng-model, ng-init and ng-bind.
 
-<p>Def: The <strong>ng-app</strong> directive defines the tag that should be treated as the root of the Angular app.</p>
+Def: The **ng-app** directive defines the tag that should be treated as the root of the Angular app.
 
-<p>This tells the rendering engine where the dynamic content will live.  This is nice because you do not need to have all of your HTML code be unnecessarily dynamic.  Of course, you're free to simply make the whole document dynamic by passing ng-app as an attribute to the HTML tag.</p>
+This tells the rendering engine where the dynamic content will live. This is nice because you do not need to have all of your HTML code be unnecessarily dynamic. Of course, you're free to simply make the whole document dynamic by passing ng-app as an attribute to the HTML tag.
 
-<p>Def: The <strong>ng-model</strong> directive binds the value of the input field to the application variable.</p>
+Def: The **ng-model** directive binds the value of the input field to the application variable.
 
-<p>In our case ng-model binds the variable name to the user accepted input field.  This variable is then accessible throughout the Angular-app section of the HTML document.</p>
+In our case ng-model binds the variable name to the user accepted input field. This variable is then accessible throughout the Angular-app section of the HTML document.
 
-<p>Notice that to make use of this variable, we simply need to add opening '{{' and closing '}}' around the variable name.  As an aside, the double open and close braces can also be used to evaluate statements generally.  So,</p>
+Notice that to make use of this variable, we simply need to add opening '{{' and closing '}}' around the variable name. As an aside, the double open and close braces can also be used to evaluate statements generally. So,
 
 ```javascript
 <div ng-app="">
@@ -58,19 +58,19 @@ seo_description: "Angular.js is a front-end web framework responsible for accept
 </div>
 ```
 
-<p>Will show 5+5 = 10.</p>
+Will show 5+5 = 10.
 
-<p>Def: The <strong>ng-init</strong> directive assigns default values to different variable names.  These names are given onload.</p>
+Def: The **ng-init** directive assigns default values to different variable names. These names are given onload.
 
-<p>Def: The <strong>ng-bind</strong> directive binds the application data to the HTML.</p>
+Def: The **ng-bind** directive binds the application data to the HTML.
 
-<p>Notice that the ng-bind has the same effect as the double curly braces.  Typically choosing to use one or the other comes down to a matter of taste.</p>
+Notice that the ng-bind has the same effect as the double curly braces. Typically choosing to use one or the other comes down to a matter of taste.
 
-<h2>Adding a controller: sending data to the front-end.</h2>
+## Adding a controller: sending data to the front-end.
 
-<p>Now that we can manipulate our view, it's time to see the true power of Angular: making use of the controller.</p>
+Now that we can manipulate our view, it's time to see the true power of Angular: making use of the controller.
 
-<p>processing.js</p>
+processing.js
 
 ```javascript
 angular.module('processing', [])
@@ -95,9 +95,9 @@ angular.module('processing', [])
    });
 ```
 
-<p>Our controller isn't particularly sophisticated for right now, since we are defining all our data on the front-end (for now).  Essentially the controller is just a call back that passes an object to the front-end.  For those of you unfamiliar with callbacks or JavaScript objects, check out this <a href="http://www.syncano.io/blog/intro-to-node-js/">intro to Node.js for callbacks</a> and this <a href="http://www.syncano.io/blog/data-structures-in-javascript/">introduction to JavaScript for javascript objects</a>.</p>
+Our controller isn't particularly sophisticated for right now, since we are defining all our data on the front-end (for now). Essentially the controller is just a call back that passes an object to the front-end. For those of you unfamiliar with callbacks or JavaScript objects, check out this [intro to Node.js for callbacks](http://www.syncano.io/blog/intro-to-node-js/) and this [introduction to JavaScript for javascript objects](http://www.syncano.io/blog/data-structures-in-javascript/).
 
-<p>processing.html</p>
+processing.html
 
 ```javascript
 <!doctype html>
@@ -121,9 +121,9 @@ angular.module('processing', [])
 </body>
 </html>
 ```
-<p>Here we see how to interact with the controller object on the front-end - which is the secret sauce for Angular.</p>
+Here we see how to interact with the controller object on the front-end - which is the secret sauce for Angular.
 
-<p>Notice how easy iteration is:</p>
+Notice how easy iteration is:
 
 ```javascript
 <span ng-repeat="elem in processing.listing">
@@ -131,7 +131,7 @@ angular.module('processing', [])
 </span>
 ```
 
-<p>Also, notice how easy changing values on the front-end is:</p>
+Also, notice how easy changing values on the front-end is:
 
 ```javascript
 <p> Change First:<input type="number" ng-model="val">
@@ -139,7 +139,7 @@ angular.module('processing', [])
 </p>
 ```
 
-<p>Finally, notice how easy accessing values in the object is:</p>
+Finally, notice how easy accessing values in the object is:
 
 ```javascript
  <p>Doing a lookup:</p>
@@ -148,9 +148,9 @@ angular.module('processing', [])
  <p>Company: {{processing.lookup["company"]}}</p>
 ```
 
-<h2>Understanding scope</h2>
+## Understanding scope
 
-<p>scoping.html</p>
+scoping.html
 
 ```javascript
 <!DOCTYPE html>
@@ -178,13 +178,13 @@ app.controller('customersCtrl', function($scope) {
 </html>
 ```
 
-<p>In Angular, $scope is the application object - owner of application variables and functions.  Anything defined in the templated HTML will be available to your controller via the $scope object.</p>
+In Angular, $scope is the application object - owner of application variables and functions. Anything defined in the templated HTML will be available to your controller via the $scope object.
 
-<h2>Understanding HTTP</h2>
+## Understanding HTTP
 
-Now that we have all the pieces in place, let's build a full front-end application - by combining Express and Angular.  Here Angular acts as our view, and Express as our controller.
+Now that we have all the pieces in place, let's build a full front-end application - by combining Express and Angular. Here Angular acts as our view, and Express as our controller.
 
-<p>viewer.html</p>
+viewer.html
 
 ```javascript
 <!DOCTYPE html>
@@ -216,7 +216,7 @@ app.controller('customersCtrl', function($scope, $http) {
 </html>
 ```
 
-<p>api.js</p>
+api.js
 
 ```javascript
 var express = require("express");
@@ -234,6 +234,6 @@ app.listen(5000);
 console.log("running");
 ```
 
-<p>The <em>$http</em> object is extremely powerful.  It's primary use is to ingest data from the backend.  As we see here, using $http object we are able to interact with Express directly.</p>
+The _$http_ object is extremely powerful. It's primary use is to ingest data from the backend. As we see here, using $http object we are able to interact with Express directly.
 
-Want to use Angular with Syncano? Check out our <a href="http://docs.syncano.io/v3.2.1/docs/javascript-index">JavaScript Quick Start Guide</a> to get started.
+Want to use Angular with Syncano? Check out our [JavaScript Quick Start Guide](http://docs.syncano.io/v3.2.1/docs/javascript-index) to get started.

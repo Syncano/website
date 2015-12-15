@@ -12,8 +12,7 @@ summary: "App development is hard. Some aspects tend to be harder to get right t
 keywords: 'Syncano, CodeBox, Solutions, Real-time, realtime, backend, baas'
 seo_description: "Setting up a server, databases, user authentication and permissions, API routes, other microservice integrations - they are all parts of your application that have to be built somehow, and end up taking the bulk of the time. Isn’t solving the problem supposed to be the focus?" 
 ---
-
-# Introducing Syncano
+## Introducing Syncano
 
 App development is hard. Some aspects tend to be harder to get right than others. As developers, we enjoy unknown challenges, but there are times when we just need to get our product on the shelf - and the faster the better. Time to production is getting smaller but requirements remain the same - so we end up taking shortcuts that can cause problems down the road. 
 

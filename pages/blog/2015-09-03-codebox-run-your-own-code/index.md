@@ -20,13 +20,13 @@ With the launch of the new version of our platform, we delivered lots of new fea
 
 One of the features I, personally, like the most are the `CodeBoxes`.
 
-# What is a CodeBox
+## What is a CodeBox
 
 The simplest definition of a CodeBox: It's an object that contains a script, and that can be run on Syncano's servers.
 
 Because it gives you the ability to write and run your own code (in Python, Ruby, NodeJS or Go), it's a very powerful tool.
 
-# Example
+## Example
 
 Instead of spending a lot of time explaining to you in detail what it is and how to use it, let's start with an example.
 
@@ -107,7 +107,7 @@ curl -X POST \
 
 Now you can try to modify the code, pass more data in the payload, and see what else you can do with it!
 
-# Summary
+## Summary
 
 That's it! As you can see, the concept of a CodeBox is really simple -- you write your own, test it, and run it.
 

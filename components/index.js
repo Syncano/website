@@ -5,6 +5,7 @@ import BlogPostItem from './BlogPostItem';
 import ContactForm from './ContactForm';
 import Footer from './Footer';
 import Header from './Header';
+import Hello from './Hello';
 import Landing from './Landing';
 import LatestBlogPosts from './LatestBlogPosts';
 import Newsletter from './Newsletter';
@@ -21,6 +22,7 @@ export default {
   ContactForm,
   Footer,
   Header,
+  Hello,
   Landing,
   LatestBlogPosts,
   Newsletter,

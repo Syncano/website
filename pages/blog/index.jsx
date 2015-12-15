@@ -105,9 +105,9 @@ export default React.createClass({
 
   renderNewsletterBox(id = 1) {
     return (
-      <div key={`blog-subscribe-${id}`} id="blog-subscribe" className="container">
+      <div key={`blog-subscribe-${id}`} id={`blog-subscribe-${id}`} className="container">
         <div className="col-md-2">
-          <img src={require('../../images/mascot.png')}/>
+          <img src={require('../../images/mascot.png')} alt="mascot"/>
         </div>
         <div className="col-md-8 col-md-offset-2">
           <h2>Hei, Hi, Hola</h2>

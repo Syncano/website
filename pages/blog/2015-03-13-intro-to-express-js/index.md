@@ -9,38 +9,29 @@ categories: ['Javascript', 'Tutorials']
 image: intro-express-js-node-js.png
 summary: "Express.js is a web framework for the middleware of your Node.js application. It’s responsible for passing data from the backend to the front-end and vice versa. For those of you coming from Ruby, express is similar to Sinatra; for those of you coming from Python, it is similar to Flask."
 ---
+Express.js is a web framework for the middleware of your Node.js application. It's responsible for passing data from the backend to the front-end and vice versa. For those of you coming from Ruby, express is similar to [Sinatra](http://www.sinatrarb.com/); for those of you coming from Python, it is similar to [Flask](http://flask.pocoo.org/).
 
-Express.js is a web framework for the middleware of your Node.js application. It's responsible for passing data from the backend to the front-end and vice versa. For those of you coming from Ruby, express is similar to <a href="http://www.sinatrarb.com/">Sinatra</a>; for those of you coming from Python, it is similar to <a href="http://flask.pocoo.org/">Flask</a>.
-<h2>Prerequisites</h2>
-Writing applications with Express.js means first understanding the core of JavaScript and the Node.js run time. Please check out <a href="http://www.syncano.io/blog/getting-know-javascript-intro/">this introduction to JavaScript</a> and <a href="https://github.com/EricSchles/intro_node">this introduction to Node</a> if you are unfamiliar.
-<h2>Installation</h2>
-Express.js is extremely easy to install. All one needs is to have Node.js already installed. Since Node.js comes with npm, the Node package manager, it is extremely easy to install Express once you already have Node.
+## Prerequisites
 
-To install, open a terminal window and type the following:
-<code>$ sudo npm install express 
-$ sudo npm install hbs #not required
-$ sudo npm install body-parser #not required
-</code>
+Writing applications with Express.js means first understanding the core of JavaScript and the Node.js run time. Please check out [this introduction to JavaScript](http://www.syncano.io/blog/getting-know-javascript-intro/) and [this introduction to Node](https://github.com/EricSchles/intro_node) if you are unfamiliar.
 
-While not required, we install hbs because it will make our lives much easier.
+## Installation
 
-<strong>Note: npm only installs packages to a directory and any of its subdirectories. Therefore, if you try to run express from some other disassociated directory, it won't work.</strong>
+Express.js is extremely easy to install. All one needs is to have Node.js already installed. Since Node.js comes with npm, the Node package manager, it is extremely easy to install Express once you already have Node. To install, open a terminal window and type the following: `$ sudo npm install express $ sudo npm install hbs #not required $ sudo npm install body-parser #not required` While not required, we install hbs because it will make our lives much easier. **Note: npm only installs packages to a directory and any of its subdirectories. Therefore, if you try to run express from some other disassociated directory, it won't work.**
 
-<h2>Verifying installation</h2>
-Once you have express installed, the next thing to do is ensure your installation is correct.
+## Verifying installation
 
-Do this by opening a terminal window and typing:
-<code>$ node
-</code>
-This opens up the Node REPL, which allows you to type in small pieces of code (typically one-liners) to verify your code is correct. It's great for testing small pieces of code and allows your code to be more bug free.
+Once you have express installed, the next thing to do is ensure your installation is correct. Do this by opening a terminal window and typing: `$ node` This opens up the Node REPL, which allows you to type in small pieces of code (typically one-liners) to verify your code is correct. It's great for testing small pieces of code and allows your code to be more bug free. Once you've done the above, type: 
 
-Once you've done the above, type:
 ```javascript
 var express = require("express");
 ```
+
 If this returns undefined it means you have installed express correctly and are ready to move on!
-<h2>Hello World</h2>
-Now that you know Express.js is installed correctly, enter the following into a file called <em>app.js</em> (this is by convention - you can call it whatever you like).
+## Hello World<
+
+Now that you know Express.js is installed correctly, enter the following into a file called _app.js_ (this is by convention - you can call it whatever you like).
+
 ```javascript
 var express = require("express");
 
@@ -68,22 +59,27 @@ app.listen(5000);
 
 console.log("Server started on http://localhost:5000");
 ```
+
 You can run this by going to the directory you saved this file in and typing out the following:
+
 ```javascript
 node app.js
 ```
+
 This will start the web server. Then you can head over to http://localhost:5000 in your favorite web browser, and the words "Hello world" should be displayed to you.
 
 So let's break down what happened here:
 
-First we started a new <em>app</em> object, which is initialized by <em>express();</em>
+First we started a new _app_ object, which is initialized by _express();_
 
-The app object has various methods associated with it. Check out the <a href="http://expressjs.com/api.html">full list here</a>. Each method is set with respect to the server. For example - above, <em>app.get()</em> means: when a get request is sent to the server, do the following action. Notice there are two parameters, "/", and a function. The first parameter is called the route and tells the server when to call the action. This is relative to the root domain of the website. So "/" refers to localhost:5000/. Everything after localhost:5000 is what the server will use to make calls for different data or actions. So the "/Hi" route will be called when we type in localhost:5000/Hi to the browser.
+The app object has various methods associated with it. Check out the <a href="http://expressjs.com/api.html">full list here</a>. Each method is set with respect to the server. For example - above, _app.get()_ means: when a get request is sent to the server, do the following action. Notice there are two parameters, "/", and a function. The first parameter is called the route and tells the server when to call the action. This is relative to the root domain of the website. So "/" refers to localhost:5000/. Everything after localhost:5000 is what the server will use to make calls for different data or actions. So the "/Hi" route will be called when we type in localhost:5000/Hi to the browser.
 
 The next thing to understand is the second parameter, a callback. This function determines what will be sent back to the browser from the server. In this case, both routes just send back a string. This is great for testing your server and making sure your routes work. This won't always be the case, so it's important to test at this stage with a dummy route.
 
-The final piece of the above code is <em>app.listen(5000);</em> which tells the server to run and to run on port 5000.
-<h2>Comparing Express with Node</h2>
+The final piece of the above code is _app.listen(5000);_ which tells the server to run and to run on port 5000.
+
+## Comparing Express with Node
+
 Technically, everything you can do with Express you can do with Node, however compare the following pieces of code, one written with Express and the other with Node. Note: they do the same thing.
 
 Written with Node.js alone:
@@ -128,10 +124,15 @@ app.listen(5000);
 
 console.log("Server started on http://localhost:5000");
 ```
+
 Notice how much less code you need to write when you use both Node and Express. The routing information isn't even clear in the Node-only code! Clearly, using Express and Node together is superior in terms of readability and functionality.
-<h2>A Real example</h2>
+
+## Real example
+
 Now that we understand how easy it is to get up and running, let's start working with our front-end and make it dynamic. For that, we'll need hbs.
-<h4>Verifying installation</h4>
+
+#### Verifying installation
+
 ```javascript
 var express = require("express");
 
@@ -161,17 +162,23 @@ app.listen(5000);
 
 console.log("Server started on http://localhost:5000")
 ```
+
 This piece of code isn't dynamic. I include it mostly to go over the basics of hbs. Notice there is a bit more set up required:
+
 ```javascript
 app.set("view engine", "html");
 ```
+
 This sets up what hbs will render, in our case HTML
+
 ```javascript
 app.engine("html", hbs.__express);
 ```
+
 This tells the hbs we'll be making use of HTML and Express.
 
-The second thing to notice is <em>res.render</em>. This assumes that there exists a document called <em>index.html</em> in a folder called <em>views</em>. So the file structure of the app should now be:
+The second thing to notice is _res.render_. This assumes that there exists a document called _index.html_ in a folder called _views_. So the file structure of the app should now be:
+
 ```javascript
 root_dir/
 
@@ -181,9 +188,13 @@ root_dir/
 
     index.html
 ```
-In general, <em>res.render([file name])</em> looks for <em>views/[file name].html</em>
-<h4>A Real example:</h4>
+
+In general, _res.render([file name])_ looks for _views/[file name].html_
+
+#### A Real example:
+
 app.js
+
 ```javascript
 var express = require("express");
 
@@ -217,6 +228,7 @@ app.listen(5000);
 
 console.log("Server started on http://localhost:5000")
 ```
+
 views/index.html:
 
 ```javascript
