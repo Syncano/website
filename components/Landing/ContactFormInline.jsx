@@ -66,6 +66,10 @@ export default React.createClass({
     let syncano = new Syncano({baseUrl: config.apiUrl});
 
     syncano.register({email: model.email, password: model.password}).then((data) => {
+      analytics.track('Sign up Landing Page', {
+        authBackend: 'password',
+        email: model.email
+      });
       this.setState({converted: true});
       let redirectUrl = `${config.dashboardUrl}?token=${data.account_key}`;
       window.location.href = redirectUrl;
