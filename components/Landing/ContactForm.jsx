@@ -10,7 +10,8 @@ export default React.createClass({
 
   getInitialState() {
     return {
-      canSubmit: true
+      canSubmit: true,
+      validationErrors: {}
     }
   },
 
@@ -46,6 +47,20 @@ export default React.createClass({
     });
   },
 
+  getErrors() {
+    let errors = this.state.validationErrors;
+
+    if (_.isEmpty(errors)) {
+      return null;
+    }
+
+    return (
+      <div className="alert alert-danger" role="alert" style={{margin: '0 auto 20px', maxWidth: 330}}>
+        {_.map(errors, (error, index) => <div style={{textAlign: 'left'}}><strong>{_.capitalize(index)}:</strong> {error[0]}</div>)}
+      </div>
+    );
+  },
+
   submit(model) {
     this.disableButton();
 
@@ -57,7 +72,7 @@ export default React.createClass({
       window.location.href = redirectUrl;
     }).catch((error) => {
       this.enableButton();
-      console.error('error', error);
+      this.setState({validationErrors: JSON.parse(error.message)});
     });
   },
 
@@ -69,6 +84,7 @@ export default React.createClass({
         className="contact"
         onValidSubmit={this.submit}
       >
+        {this.getErrors()}
         <div className="form-group" id="email">
           <Input style={styles.base} layout="elementOnly" validations="isEmail" type="email" name="email" placeholder="Email" required/>
         </div>

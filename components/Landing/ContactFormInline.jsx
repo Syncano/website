@@ -4,13 +4,15 @@ const Syncano = isBrowser ? require('syncano') : undefined;
 import React from 'react';
 import Formsy from 'formsy-react';
 import {Input, Textarea} from 'formsy-react-components';
+import _ from 'lodash';
 import config from '../../config/';
 
 export default React.createClass({
 
   getInitialState() {
     return {
-      canSubmit: true
+      canSubmit: true,
+      validationErrors: {}
     }
   },
 
@@ -44,6 +46,20 @@ export default React.createClass({
     });
   },
 
+  getErrors() {
+    let errors = this.state.validationErrors;
+
+    if (_.isEmpty(errors)) {
+      return null;
+    }
+
+    return (
+      <div className="alert alert-danger" role="alert" style={{margin: '0 5px 20px'}}>
+        {_.map(errors, (error, index) => <div style={{textAlign: 'left'}}><strong>{_.capitalize(index)}:</strong> {error[0]}</div>)}
+      </div>
+    );
+  },
+
   submit(model) {
     this.disableButton();
 
@@ -55,7 +71,7 @@ export default React.createClass({
       window.location.href = redirectUrl;
     }).catch((error) => {
       this.enableButton();
-      console.error('error', error);
+      this.setState({validationErrors: JSON.parse(error.message)});
     });
   },
 
@@ -67,6 +83,7 @@ export default React.createClass({
         className="contact form-inline"
         onValidSubmit={this.submit}
       >
+        {this.getErrors()}
         <div className="form-group col-sm-4" id="email" style={styles.column}>
           <Input style={styles.base} layout="elementOnly" validations="isEmail" type="email" name="email" placeholder="Email" required/>
         </div>
