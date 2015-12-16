@@ -1,6 +1,7 @@
 import React from 'react';
 import { RouteHandler, Link } from 'react-router';
 import _ from 'lodash';
+import Scroll from 'react-scroll';
 
 import { Adwords, Hello, Landing } from '../../components/';
 import Helmet from 'react-helmet';
@@ -9,8 +10,8 @@ export default React.createClass({
 
   getSEOConfig() {
     return {
-      title: "Landing Page",
-      description: "Syncano is a backend platform to build powerful real-time apps more efficiently. Integrate with any API, minimize boilerplate code and control your data.",
+      title: "A Serverless Application Platform - Syncano",
+      description: "Syncano is a backend platform to build powerful real-time apps efficiently. Integrate with any API, minimize boilerplate code and control your data.",
       mixpanelTitle: "Landing Page"
     }
   },
@@ -165,6 +166,10 @@ export default React.createClass({
           <h2>Add real-time communication with Channels</h2>
           <br/>
           <p>Subscribe to data changes, send custom notification messages, give users different permission types.<br/>Use Rooms to separate real-time data inside a Channel.</p>
+          <br/><br/>
+          <Scroll.Link to="landing-contact-form" smooth={true} offset={-90} duration={500} style={{cursor: 'pointer'}}>
+            <div className="btn btn-dark-blue cta-button mixpanel-btn" id="homepage-hero" style={{marginBottom: 0, background: '#ffcc00', color: '#000'}}>SIGN UP FOR FREE</div>
+          </Scroll.Link>
         </div>
         <div className="middleware text-center">
           <div className="container">
@@ -320,22 +325,24 @@ export default React.createClass({
             <p>We’re a small but growing team and your success is vital to our success.<br/>When you have questions, you’ll get answers from our own developers.</p>
           </div>
         </div>
-        <div className="cta">
-          <div className="container text-center">
-            <div className="row">
-              <div className="col-sm-12">
-                <h2 className="text-center">Add all the modules you need to build serverless apps</h2>
-                <br/><br/>
-                <div className="row">
-                  <div className="col-md-offset-4 col-md-4">
-                    <Landing.ContactForm/>
+        <Scroll.Element name="landing-contact-form">
+          <div className="cta">
+            <div className="container text-center">
+              <div className="row">
+                <div className="col-sm-12">
+                  <h2 className="text-center">Add all the modules you need to build serverless apps</h2>
+                  <br/><br/>
+                  <div className="row">
+                    <div className="col-md-offset-4 col-md-4">
+                      <Landing.ContactForm/>
+                    </div>
                   </div>
+                  <br/><br/>
                 </div>
-                <br/><br/>
               </div>
             </div>
           </div>
-        </div>
+        </Scroll.Element>
       </div>
     )
   }
