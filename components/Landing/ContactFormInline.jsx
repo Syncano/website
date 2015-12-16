@@ -95,7 +95,7 @@ export default React.createClass({
           <Input style={styles.base} layout="elementOnly" type="password" name="password" placeholder="Password" required/>
         </div>
         <div className="form-group col-sm-4" style={styles.column}>
-          <input type="submit" value="Sign Up for Free" className="btn btn-dark-blue cta-button" style={{background: '#ffcc00', color: '#000', paddingTop: 14, paddingBottom: 14}} disabled={!this.state.canSubmit}/>
+          <input type="submit" value="Sign Up for Free" className="btn btn-dark-blue cta-button" style={{background: '#ffcc00', color: '#363636', paddingTop: 14, paddingBottom: 14}} disabled={!this.state.canSubmit}/>
         </div>
       </Formsy.Form>
     )
