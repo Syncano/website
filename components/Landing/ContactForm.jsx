@@ -8,7 +8,47 @@ import config from '../../config/';
 
 export default React.createClass({
 
+  getInitialState() {
+    return {
+      canSubmit: true
+    }
+  },
+
+  getStyles() {
+    return {
+      base: {
+        height: 60,
+        width: '100%',
+        maxWidth: 330,
+        margin: '0 auto'
+      },
+      column: {
+        padding: '0 5px'
+      },
+      input: {
+
+      },
+      submit: {
+        padding: 0
+      }
+    }
+  },
+
+  enableButton() {
+    this.setState({
+      canSubmit: true
+    });
+  },
+
+  disableButton() {
+    this.setState({
+      canSubmit: false
+    });
+  },
+
   submit(model) {
+    this.disableButton();
+
     let syncano = new Syncano({baseUrl: config.apiUrl});
 
     syncano.register({email: model.email, password: model.password}).then((data) => {
@@ -16,25 +56,26 @@ export default React.createClass({
       let redirectUrl = `${config.dashboardUrl}?token=${data.account_key}`;
       window.location.href = redirectUrl;
     }).catch((error) => {
+      this.enableButton();
       console.error('error', error);
     });
   },
 
   render() {
+    const styles = this.getStyles();
+
     return (
       <Formsy.Form
         className="contact"
         onValidSubmit={this.submit}
-        onValid={this.enableButton}
-        onInvalid={this.disableButton}
       >
         <div className="form-group" id="email">
-          <Input layout="elementOnly" validations="isEmail" type="email" name="email" placeholder="Email" required/>
+          <Input style={styles.base} layout="elementOnly" validations="isEmail" type="email" name="email" placeholder="Email" required/>
         </div>
         <div className="form-group" id="password">
-          <Input layout="elementOnly" type="password" name="password" placeholder="Password" required/>
+          <Input style={styles.base} layout="elementOnly" type="password" name="password" placeholder="Password" required/>
         </div>
-        <input type="submit" value="Sign Up for Free" className="btn btn-dark-blue" style={{width: '100%', background: '#ffcc00', color: '#000'}}/>
+        <input type="submit" value="Sign Up for Free" className="btn btn-dark-blue cta-button" style={{width: '100%', background: '#ffcc00', color: '#000'}} disabled={!this.state.canSubmit}/>
       </Formsy.Form>
     )
   }
