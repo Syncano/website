@@ -41,6 +41,7 @@ export default React.createClass({
         `}}></script>
       </head>
       <body>
+        <Adwords.GTM/>
         <div id="react-mount" dangerouslySetInnerHTML={{__html: this.props.body}}></div>
         <Analytics writeKey={config.analyticsKey}/>
         <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
