@@ -14,6 +14,7 @@ export default React.createClass({
   render() {
     let head = Helmet.rewind();
     let title = head && head.title ? head.title : this.props.title;
+    let favicon = require('./syncano_favicon.png');
 
     return (
       <html lang="en">
@@ -23,6 +24,7 @@ export default React.createClass({
         <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
         <meta name='viewport' content='user-scalable=no width=device-width, initial-scale=1.0 maximum-scale=1.0'/>
         {title.toComponent()}
+        <link rel="icon" type="image/png" href={favicon} />
         <link rel="stylesheet" href="/style.css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.1.1/css/material-design-iconic-font.min.css"/>
@@ -39,6 +41,7 @@ export default React.createClass({
         `}}></script>
       </head>
       <body>
+        <Adwords.GTM/>
         <div id="react-mount" dangerouslySetInnerHTML={{__html: this.props.body}}></div>
         <Analytics writeKey={config.analyticsKey}/>
         <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>

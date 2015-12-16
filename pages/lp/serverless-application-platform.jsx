@@ -5,8 +5,8 @@ export default React.createClass({
   render() {
     return (
       <div className="row">
-        <div className="col-md-offset-4 col-md-4">
-          <Landing.ContactForm/>
+        <div className="col-sm-12 col-md-offset-2 col-md-8">
+          <Landing.ContactFormInline/>
         </div>
       </div>
     )
