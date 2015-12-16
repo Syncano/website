@@ -66,6 +66,7 @@ export default React.createClass({
     let syncano = new Syncano({baseUrl: config.apiUrl});
 
     syncano.register({email: model.email, password: model.password}).then((data) => {
+      analytics.alias(model.email);
       analytics.track('Sign up Landing Page', {
         authBackend: 'password',
         email: model.email
