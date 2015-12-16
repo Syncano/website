@@ -18,7 +18,7 @@ export default React.createClass({
   getStyles() {
     return {
       base: {
-        height: 48,
+        height: 52,
         width: '100%',
         maxWidth: 330,
         margin: '0 auto'
@@ -91,7 +91,7 @@ export default React.createClass({
         <div className="form-group" id="password">
           <Input style={styles.base} layout="elementOnly" type="password" name="password" placeholder="Password" required/>
         </div>
-        <input type="submit" value="Sign Up for Free" className="btn btn-dark-blue cta-button" style={{width: '100%', background: '#ffcc00', color: '#000', paddingTop: 12, paddingBottom: 12}} disabled={!this.state.canSubmit}/>
+        <input type="submit" value="Sign Up for Free" className="btn btn-dark-blue cta-button" style={{width: '100%', background: '#ffcc00', color: '#000', paddingTop: 14, paddingBottom: 14}} disabled={!this.state.canSubmit}/>
       </Formsy.Form>
     )
   }
