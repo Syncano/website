@@ -168,7 +168,7 @@ export default React.createClass({
           <p>Subscribe to data changes, send custom notification messages, give users different permission types.<br/>Use Rooms to separate real-time data inside a Channel.</p>
           <br/><br/>
           <Scroll.Link to="landing-contact-form" smooth={true} offset={-90} duration={500} style={{cursor: 'pointer'}}>
-            <div className="btn btn-dark-blue cta-button mixpanel-btn" id="homepage-hero" style={{marginBottom: 0, background: '#ffcc00', color: '#000'}}>SIGN UP FOR FREE</div>
+            <div className="btn btn-dark-blue cta-button mixpanel-btn" id="homepage-hero" style={{marginBottom: 0, background: '#ffcc00', color: '#363636'}}>SIGN UP FOR FREE</div>
           </Scroll.Link>
         </div>
         <div className="middleware text-center">

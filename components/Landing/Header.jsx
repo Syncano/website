@@ -36,7 +36,7 @@ export default React.createClass({
         <CollapsibleNav eventKey={0}>
           <Nav navbar right>
             <Scroll.Link to="landing-contact-form" smooth={true} offset={-90} duration={500} style={{cursor: 'pointer'}}>
-              <li className={this.shouldBeVisible() ? 'show' : 'hidden'}><div className="btn btn-dark-blue mixpanel-btn" target="_blank" style={{background: '#ffcc00', color: '#000', textTransform: 'uppercase', fontWeight: 800}}>Sign Up For Free</div></li>
+              <li className={this.shouldBeVisible() ? 'show' : 'hidden'}><div className="btn btn-dark-blue mixpanel-btn" target="_blank" style={{background: '#ffcc00', color: '#363636', textTransform: 'uppercase', fontWeight: 800}}>Sign Up For Free</div></li>
             </Scroll.Link>
           </Nav>
         </CollapsibleNav>
