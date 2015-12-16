@@ -19,7 +19,7 @@ export default React.createClass({
   getStyles() {
    return {
      base: {
-       height: 60,
+       height: 52,
        width: '100%'
      },
      column: {
@@ -66,6 +66,10 @@ export default React.createClass({
     let syncano = new Syncano({baseUrl: config.apiUrl});
 
     syncano.register({email: model.email, password: model.password}).then((data) => {
+      analytics.track('Sign up Landing Page', {
+        authBackend: 'password',
+        email: model.email
+      });
       this.setState({converted: true});
       let redirectUrl = `${config.dashboardUrl}?token=${data.account_key}`;
       window.location.href = redirectUrl;
@@ -91,7 +95,7 @@ export default React.createClass({
           <Input style={styles.base} layout="elementOnly" type="password" name="password" placeholder="Password" required/>
         </div>
         <div className="form-group col-sm-4" style={styles.column}>
-          <input type="submit" value="Sign Up for Free" className="btn btn-dark-blue cta-button" style={{background: '#ffcc00', color: '#000'}} disabled={!this.state.canSubmit}/>
+          <input type="submit" value="Sign Up for Free" className="btn btn-dark-blue cta-button" style={{background: '#ffcc00', color: '#000', paddingTop: 14, paddingBottom: 14}} disabled={!this.state.canSubmit}/>
         </div>
       </Formsy.Form>
     )

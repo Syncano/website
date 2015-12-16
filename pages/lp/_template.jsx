@@ -10,7 +10,7 @@ export default React.createClass({
 
   getSEOConfig() {
     return {
-      title: "A Serverless Application Platform - Syncano",
+      title: "A Serverless App Platform For Developers - Syncano",
       description: "Syncano is a backend platform to build powerful real-time apps efficiently. Integrate with any API, minimize boilerplate code and control your data.",
       mixpanelTitle: "Landing Page"
     }
@@ -56,8 +56,8 @@ export default React.createClass({
           <div className="hero">
             <div className="container">
               <div className="info">
-                <h1>A Serverless Application Platform</h1>
-                <h2>Build Powerful Real-Time Apps More Efficiently With Syncano</h2>
+                <h1>A Serverless App Platform<br/>For Developers</h1>
+                <h2>Forget About The Backend. Build Powerful Realtime Apps Efficiently.</h2>
                 <br/><br/>
                 <RouteHandler {...this.props}/>
               </div>
@@ -330,7 +330,7 @@ export default React.createClass({
             <div className="container text-center">
               <div className="row">
                 <div className="col-sm-12">
-                  <h2 className="text-center">Add all the modules you need to build serverless apps</h2>
+                  <h2 className="text-center">Build serverless apps with Syncano​</h2>
                   <br/><br/>
                   <div className="row">
                     <div className="col-md-offset-4 col-md-4">
