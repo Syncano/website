@@ -4,6 +4,7 @@ const Syncano = isBrowser ? require('syncano') : undefined;
 import React from 'react';
 import Formsy from 'formsy-react';
 import {Input, Textarea} from 'formsy-react-components';
+import {Conversion} from '../Adwords';
 import config from '../../config/';
 
 export default React.createClass({
@@ -11,7 +12,8 @@ export default React.createClass({
   getInitialState() {
     return {
       canSubmit: true,
-      validationErrors: {}
+      validationErrors: {},
+      converted: false
     }
   },
 
@@ -73,8 +75,10 @@ export default React.createClass({
         email: model.email
       });
       this.setState({converted: true});
-      let redirectUrl = `${config.dashboardUrl}?token=${data.account_key}`;
-      window.location.href = redirectUrl;
+      setTimeout(() => {
+        let redirectUrl = `${config.dashboardUrl}?token=${data.account_key}`;
+        window.location.href = redirectUrl;
+      }, 3000);
     }).catch((error) => {
       this.enableButton();
       this.setState({validationErrors: JSON.parse(error.message)});
@@ -97,6 +101,7 @@ export default React.createClass({
           <Input style={styles.base} layout="elementOnly" type="password" name="password" placeholder="Password" required/>
         </div>
         <input type="submit" value="Sign Up for Free" className="btn btn-dark-blue cta-button" style={{width: '100%', background: '#ffcc00', color: '#363636', paddingTop: 14, paddingBottom: 14}} disabled={!this.state.canSubmit}/>
+        {this.state.converted ? <Conversion/> : null}
       </Formsy.Form>
     )
   }
