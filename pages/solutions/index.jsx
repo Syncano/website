@@ -66,7 +66,7 @@ export default React.createClass({
                 </div>
                 <div className="solutions-item-footer text-center">
                   <a className="solutions-item-footer__see-details-btn"
-                     href="https://dashboard.syncano.io/#/solutions/8/edit" target="_blank">
+                     href="https://dashboard.syncano.io/#/solutions/8/install" target="_blank">
                     See Details
                   </a>
                 </div>
@@ -111,7 +111,7 @@ export default React.createClass({
                 </div>
                 <div className="solutions-item-footer text-center">
                   <a className="solutions-item-footer__see-details-btn"
-                     href="https://dashboard.syncano.io/#/solutions/9/edit" target="_blank">
+                     href="https://dashboard.syncano.io/#/solutions/9/install" target="_blank">
                     See Details
                   </a>
                 </div>
@@ -156,7 +156,7 @@ export default React.createClass({
                 </div>
                 <div className="solutions-item-footer text-center">
                   <a className="solutions-item-footer__see-details-btn"
-                     href="https://dashboard.syncano.io/#/solutions/10/edit" target="_blank">
+                     href="https://dashboard.syncano.io/#/solutions/10/install" target="_blank">
                     See Details
                   </a>
                 </div>
@@ -201,7 +201,7 @@ export default React.createClass({
                 </div>
                 <div className="solutions-item-footer text-center">
                   <a className="solutions-item-footer__see-details-btn"
-                     href="https://dashboard.syncano.io/#/solutions/11/edit" target="_blank">
+                     href="https://dashboard.syncano.io/#/solutions/11/install" target="_blank">
                     See Details
                   </a>
                 </div>
@@ -245,7 +245,7 @@ export default React.createClass({
                 </div>
                 <div className="solutions-item-footer text-center">
                   <a className="solutions-item-footer__see-details-btn"
-                     href="https://dashboard.syncano.io/#/solutions/12/edit" target="_blank">
+                     href="https://dashboard.syncano.io/#/solutions/12/install" target="_blank">
                     See Details
                   </a>
                 </div>
@@ -289,7 +289,7 @@ export default React.createClass({
                 </div>
                 <div className="solutions-item-footer text-center">
                   <a className="solutions-item-footer__see-details-btn"
-                     href="https://dashboard.syncano.io/#/solutions/14/edit" target="_blank">
+                     href="https://dashboard.syncano.io/#/solutions/14/install" target="_blank">
                     See Details
                   </a>
                 </div>
@@ -331,7 +331,7 @@ export default React.createClass({
                 </div>
                 <div className="solutions-item-footer text-center">
                   <a className="solutions-item-footer__see-details-btn"
-                     href="https://dashboard.syncano.io/#/solutions/17/edit" target="_blank">
+                     href="https://dashboard.syncano.io/#/solutions/17/install" target="_blank">
                     See Details
                   </a>
                 </div>
@@ -372,7 +372,7 @@ export default React.createClass({
                 </div>
                 <div className="solutions-item-footer text-center">
                   <a className="solutions-item-footer__see-details-btn"
-                     href="https://dashboard.syncano.io/#/solutions/18/edit" target="_blank">
+                     href="https://dashboard.syncano.io/#/solutions/18/install" target="_blank">
                     See Details
                   </a>
                 </div>
@@ -411,7 +411,7 @@ export default React.createClass({
                 </div>
                 <div className="solutions-item-footer text-center">
                   <a className="solutions-item-footer__see-details-btn"
-                     href="https://dashboard.syncano.io/#/solutions/27/edit" target="_blank">
+                     href="https://dashboard.syncano.io/#/solutions/27/install" target="_blank">
                     See Details
                   </a>
                 </div>
@@ -457,7 +457,7 @@ export default React.createClass({
                 </div>
                 <div className="solutions-item-footer text-center">
                   <a className="solutions-item-footer__see-details-btn"
-                     href="https://dashboard.syncano.io/#/solutions/30/edit" target="_blank">
+                     href="https://dashboard.syncano.io/#/solutions/30/install" target="_blank">
                     See Details
                   </a>
                 </div>
