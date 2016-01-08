@@ -2,7 +2,7 @@
 layout: post
 title: How to Scrape Craigslist with CodeBoxes
 description: "In this article, we're going to use a Syncano Solution to create a craigslist scraper"
-date: 2015-12-21 15:00:00
+date: 2016-01-08 15:00:00
 author: devin
 path: '/blog/craigslist-scraper-solution/'
 categories: ['Syncano', 'Node.js', 'Solution', 'CodeBox']
