@@ -1,3 +1,4 @@
+domain = "https://www.syncano.io"
 siteTitle = "Syncano"
 blogTitle = "Blog"
 postsPerPage = 15

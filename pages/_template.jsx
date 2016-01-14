@@ -105,7 +105,12 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <Helmet titleTemplate="%s" />
+        <Helmet
+          titleTemplate="%s"
+          link={[
+            {"rel": "canonical", "href": `${this.props.config.domain}${this.props.state.path}`}
+          ]}
+        />
         {this.renderHeader()}
         <RouteHandler {...this.props}/>
         {this.renderFooter()}
