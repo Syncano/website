@@ -50,7 +50,7 @@ export default React.createClass({
             {this.renderAllLink()}
             <li><Link to="/blog/category/tutorials/">Tutorials</Link></li>
             <li className="dropdown-toggle visible-lg">
-              <a href="#">Browse Categories <span className="caret"></span></a>
+              <div>Browse Categories <span className="caret"></span></div>
               <ul className="dropdown-menu">
                 {this.renderCategoriesLinks(this.getCategoriesList())}
               </ul>
