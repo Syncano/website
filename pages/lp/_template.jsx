@@ -49,7 +49,8 @@ export default React.createClass({
           title={SEO.title}
           meta={[
             {"name": "description", "content": SEO.description},
-            {"name": "mixpanelTitle", "content": SEO.mixpanelTitle}
+            {"name": "mixpanelTitle", "content": SEO.mixpanelTitle},
+            {"name": "robots", "content": "noindex, nofollow"}
           ]}
         />
         <div className="bg-wrap" style={{background: '#244273'}}>
