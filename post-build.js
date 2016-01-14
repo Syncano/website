@@ -6,7 +6,15 @@ let generateSitemapUrl = (page) => {
   let pagePath = page.path;
   let isRootPath = pagePath === '/';
   let importantPages = ['/', '/pricing/'];
-  let nonIndexedPages = ['/thank-contacting-us/'];
+  let nonIndexedPages = [
+    '/thank-contacting-us/',
+    '/lp/',
+    '/lp/facebook/',
+    '/lp/github/',
+    '/lp/google/',
+    '/lp/serverless-app-platform/',
+    '/lp/serverless-application-platform/'
+  ];
   let isImportantPage = _.includes(importantPages, pagePath);
   let isNonInedexedPage = _.includes(nonIndexedPages, pagePath);
 
