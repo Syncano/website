@@ -68,7 +68,7 @@ When key is added, write it down - we will need it later in the app.
 First, we need Syncano object, to define Instance and API Key used for all the connections, and a Channel object, for the real-time sync. Add them at the beginning of your `ViewController` implementation:
 
 ```objc
-let syncanoChannelName = "message"
+let syncanoChannelName = "messages"
 
 class ViewController: JSQMessagesViewController {
     
