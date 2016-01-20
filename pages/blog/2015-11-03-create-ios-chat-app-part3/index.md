@@ -131,7 +131,7 @@ Open newly created file `Settings.swift`, remove its content and paste following
 ```objc
 let syncanoApiKey = ""
 let syncanoInstanceName = ""
-let syncanoChannelName = "message"
+let syncanoChannelName = "messages"
 ```
 
 and enter your API Key and Instance name (you should have it in `ViewController.swift` file).
@@ -139,7 +139,7 @@ and enter your API Key and Instance name (you should have it in `ViewController.
 Go to `ViewController.swift` file, and remove 2 lines from there:
 
 ```objc
-let syncanoChannelName = "message"
+let syncanoChannelName = "messages"
 ```
  
 ```objc

@@ -41,7 +41,15 @@ export default React.createClass({
         `}}></script>
       </head>
       <body>
-        <Adwords.GTM/>
+        <noscript dangerouslySetInnerHTML={{__html:`
+          <iframe src="//www.googletagmanager.com/ns.html?id=GTM-MMNJC7" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        `}}></noscript>
+        <script dangerouslySetInnerHTML={{__html:`
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MMNJC7');`}}></script>
         <div id="react-mount" dangerouslySetInnerHTML={{__html: this.props.body}}></div>
         <Analytics writeKey={config.analyticsKey}/>
         <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
