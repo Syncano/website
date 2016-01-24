@@ -57,9 +57,6 @@ export default React.createClass({
           <div className="hero">
             <div className="container">
               <div className="info">
-                <h1>A Serverless App Platform<br/>For Developers</h1>
-                <h2>Forget About The Backend. Build Powerful Realtime Apps Efficiently.</h2>
-                <br/><br/>
                 <RouteHandler {...this.props}/>
               </div>
             </div>
