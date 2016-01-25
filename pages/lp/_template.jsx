@@ -93,14 +93,13 @@ export default React.createClass({
               <h5>Syncano libraries are Open Source! You can contribute to our code on GitHub at any time.</h5>
               <div className="col-md-1 hidden-md"></div>
               <div className="col-md-1 hidden-md"></div>
-              <div className="col-md-1 hidden-md"></div>
               <div className="col-md-1 col-xs-3"><img src={require('../../images/python-logo.png')} alt="Python Logo"/></div>
               <div className="col-md-1 col-xs-3"><img src={require('../../images/javascript.png')} alt="Javascript icon"/></div>
               <div className="col-md-1 col-xs-3"><img src={require('../../images/android.png')} alt="android icon"/></div>
               <div className="col-md-1 col-xs-3"><img src={require('../../images/ruby.png')} alt="ruby icon"/></div>
               <div className="col-md-1 col-xs-3"><img src={require('../../images/ios8.png')} alt="ios icon"/></div>
               <div className="col-md-1 col-xs-3"><img src={require('../../images/bird.png')} alt="firebird icon"/></div>
-              <div className="col-md-1"></div>
+              <div className="col-md-1 col-xs-3"><img src={require('../../images/arduino.svg')} alt="arduino icon"/></div>
             </div>
           </div>
         </div>

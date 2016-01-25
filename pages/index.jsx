@@ -82,14 +82,13 @@ export default React.createClass({
               <h5>We’re Open Source! Help contribute to our code on <a href="https://github.com/syncano" target="_blank">GitHub</a></h5>
               <div className="col-md-1 hidden-md"></div>
               <div className="col-md-1 hidden-md"></div>
-              <div className="col-md-1 hidden-md"></div>
               <div className="col-md-1 col-xs-3"><a href="http://docs.syncano.io/docs/python" target="_blank"><img src={require('../images/python-logo.png')} alt="Python Logo"/></a></div>
               <div className="col-md-1 col-xs-3"><a href="http://docs.syncano.io/docs/javascript" target="_blank"><img src={require('../images/javascript.png')} alt="Javascript icon"/></a></div>
               <div className="col-md-1 col-xs-3"><a href="http://docs.syncano.io/docs/android" target="_blank"><img src={require('../images/android.png')} alt="android icon"/></a></div>
               <div className="col-md-1 col-xs-3"><a href="http://docs.syncano.io/docs/ruby" target="_blank"><img src={require('../images/ruby.png')} alt="ruby icon"/></a></div>
               <div className="col-md-1 col-xs-3"><a href="http://docs.syncano.io/docs/ios" target="_blank"><img src={require('../images/ios8.png')} alt="ios icon"/></a></div>
               <div className="col-md-1 col-xs-3"><a href="http://docs.syncano.io/v1.0/docs/ios#section-syncano-library-and-swift" target="_blank"><img src={require('../images/bird.png')} alt="firebird icon"/></a></div>
-              <div className="col-md-1"></div>
+              <div className="col-md-1 col-xs-3"><a href="http://docs.syncano.io/docs/arduino" target="_blank"><img src={require('../images/arduino.svg')} alt="arduino icon"/></a></div>
             </div>
           </div>
         </div>
