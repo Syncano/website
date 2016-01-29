@@ -16,7 +16,7 @@ We want to make this transition as smooth as possible and give you the tools to 
 
 If you’re interested in giving Syncano a test drive, we’re here to help you in any way to make this hurdle less painful. All of Syncano’s features are free to use for 6 months. We have a dedicated support team that can guide you through the migration. 
 
-If you want to learn more, check out our docs and please send any requests for help our way at [support@syncano.io](mailto:support@syncano.io) -- or talk directly with our developers on [Gitter](https://gitter.im/Syncano/community)!
+If you want to learn more, check out [our docs](http://docs.syncano.io) and please send any requests for help our way at [support@syncano.io](mailto:support@syncano.io) -- or talk directly with our developers on [Gitter](https://gitter.im/Syncano/community)!
 
 The future is bright and we’re excited to see what you can build!
 
