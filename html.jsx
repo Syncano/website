@@ -19,7 +19,6 @@ export default React.createClass({
     return (
       <html lang="en">
       <head>
-        <script src="//cdn.optimizely.com/js/3962180131.js"></script>
         <meta charSet="utf-8"/>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
         <meta name='viewport' content='user-scalable=no width=device-width, initial-scale=1.0 maximum-scale=1.0'/>
