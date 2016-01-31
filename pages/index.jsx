@@ -56,7 +56,7 @@ export default React.createClass({
             <div className="row text-center">
               <div className="col-md-4 col-sm-4">
                 <div className="">
-                  <h3>Add microservice-like functionality to your app.</h3>
+                  <h3>Add microservices to your app.</h3>
                   <p>With <a href="http://docs.syncano.io/docs/codebox-overview" target="_blank">CodeBox</a>, run any code in the cloud with cron-like Schedules, Webhooks, or triggered by any kind of data change.</p>
                 </div>
               </div>
@@ -155,7 +155,7 @@ export default React.createClass({
         </div>
         <div className="middleware text-center">
           <div className="container">
-            <h2>Build and add microservice-like functionality into your app without setting up a server or building out a custom API</h2>
+            <h2>Build and add microservices into your app without setting up a server or building out a custom API</h2>
             <br/>
             <p>With CodeBox, write and run any code on a Schedule, Trigger or with a Webhook.<br/>Execute code by a particular date you set, or once a change is made to your data.</p>
             <p><strong>We currently support Javascript, Python, Go and Ruby.</strong></p>
