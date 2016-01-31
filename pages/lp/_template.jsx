@@ -67,7 +67,7 @@ export default React.createClass({
             <div className="row text-center">
               <div className="col-md-4 col-sm-4">
                 <div className="">
-                  <h3>Add microservice-like functionality to your app.</h3>
+                  <h3>Add microservices to your app.</h3>
                   <p>With CodeBox, run any code in the cloud with cron-like Schedules, Webhooks, or triggered by any kind of data change.</p>
                 </div>
               </div>
