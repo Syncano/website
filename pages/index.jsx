@@ -44,8 +44,8 @@ export default React.createClass({
           <div className="hero">
             <div className="container">
               <div className="info">
-                <h1>Turning developers into superstars</h1>
-                <h2>A backend platform to build powerful real-time apps more efficiently</h2>
+                <h1>Build Serverless Apps</h1>
+                <h2>A powerful platform to create connected apps without handling a backend or server</h2>
                 <a href="https://dashboard.syncano.io/#/signup" className="btn btn-dark-blue cta-button mixpanel-btn" id="homepage-hero" style={{marginBottom: 0}}>START BUILDING FOR FREE</a>
               </div>
             </div>
