@@ -23,17 +23,16 @@ When switching from Parse to Syncano, there are many features that are similar. 
 
 Here is a quick overview of some of the terminology that Syncano uses for different features that are also supported in Parse.
 
-<table>
-<tr><th>Parse</th><th>Syncano</th></tr>
-<tr><td>Apps</td><td><a href="http://docs.syncano.io/docs/getting-started-with-syncano">Instances</a></td></tr>
-<tr><td>Classes</td><td><a href="http://docs.syncano.io/docs/classes">Classes</a></td></tr>
-<tr><td>Objects</td><td><a href="http://docs.syncano.io/docs/data-objects">Data Objects</a></td></tr>
-<tr><td>Queries</td><td><a href="http://docs.syncano.io/docs/data-objects-filtering">Filtering and Ordering</a></td></tr>
-<tr><td>Users</td><td><a href="http://docs.syncano.io/docs/user-management">Users</a></td></tr>
-<tr><td>Roles</td><td><a href="http://docs.syncano.io/docs/groups">Groups</a></td></tr>
-<tr><td>Cloud Code</td><td><a href="http://docs.syncano.io/docs/codebox-overview">CodeBox</a></td></tr>
-<tr><td>Hooks</td><td><a href="http://docs.syncano.io/docs/webhooks">Webhooks</a></td></tr>
-</table>
+| Parse | Syncano |
+|-------|--------|
+|Apps |[Instances](http://docs.syncano.io/docs/getting-started-with-syncano)|
+|Classes|[Classes](http://docs.syncano.io/docs/classes)|
+|Objects|[Data Objects](http://docs.syncano.io/docs/data-objects)|
+|Queries|[Filtering and Ordering](http://docs.syncano.io/docs/data-objects-filtering)|
+|Users|[Users](http://docs.syncano.io/docs/user-management)|
+|Roles|[Groups](http://docs.syncano.io/docs/groups)|
+|Cloud Code|[CodeBox](http://docs.syncano.io/docs/codebox-overview)|
+|Hooks|[Webhooks](http://docs.syncano.io/docs/webhooks)|
 
 ### Feature Overview
 
