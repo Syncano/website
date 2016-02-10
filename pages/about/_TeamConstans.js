@@ -69,5 +69,10 @@ export default {
     name: 'Devin Visslailli',
     twitter: 'devinviss',
     photo: 'devin.png'
+  },
+  todd: {
+    name: 'Todd Wacker',
+    twitter: 'WackerTheHacker',
+    photo: 'todd.jpg'
   }
 }
