@@ -12,13 +12,13 @@ keywords: 'Syncano, Parse, Alternative, BaaS, Serverless, Comparison'
 
 ![Keyboard Smash](http://stream1.gifsoup.com/view3/1402562/keyboard-smash-o.gif)
 
-##We know you're frustrated. Syncano is here to help!
+## We know you're frustrated. Syncano is here to help!
 
 The recent news that Parse is shutting down has left many developers scrambling to find an alternative. While it may be tempting to pull out your hair or pound your keyboard in frustration, Syncano is here to help alleviate your anxiety. Like Parse, we provide a platform for you to build and manage your applications. Unlike Parse, however, we are committed to growing with you into the future and continuing to add new features that you care about. Currently, we are offering new users who [sign up](https://dashboard.syncano.io/#/signup) six months to try our platform **free** and determine if it is the right fit for you and your applications. 
 
 Let’s break down Parse and Syncano.
 
-##Comparable Features 
+## Comparable Features 
 When switching from Parse to Syncano, there are many features that are similar. In many instances, they just have different names (to-MAY-to, to-MAH-to, right?).
 
 Here is a quick overview of some of the terminology that Syncano uses for different features that are also supported in Parse.
@@ -35,7 +35,7 @@ Here is a quick overview of some of the terminology that Syncano uses for differ
 <tr><td>Hooks</td><td><a href="http://docs.syncano.io/docs/webhooks">Webhooks</a></td></tr>
 </table>
 
-###Feature Overview
+### Feature Overview
 
 **User Authentication & API Keys** - Both Syncano and Parse allow you to authenticate your users easily and manage a set of API Keys to give your users certain permissions. This way, you can regulate what endpoints or actions your users can utilize.
 
@@ -49,14 +49,14 @@ Here is a quick overview of some of the terminology that Syncano uses for differ
 
 **Library Support** - Like Parse, we allow users to either interact with our API directly or through one of our many libraries. We currently support libraries for Python, Javascript, Ruby, iOS, Android, and Arduino.
 
-##Features Exclusive to Syncano
+## Features Exclusive to Syncano
 While there are many features that Parse and Syncano share, there are also some features that are exclusive to Syncano.
 
 **Realtime Channels** - Syncano's Channels allow you to add realtime communication to your application. With Channels, you can set your client-side code to watch for any changes to your data and update the front-end accordingly. This is a great tool to use for any chat application or any application where realtime updates could be useful.
 
 **Solutions** - Syncano also allows you to download and install ready-made CodeBoxes directly into your application. Stuck reading docs trying to interface with a Third-Party API? Install a Solution and don't worry about it. Solutions are created by the community to solve the common, everyday problems that developers may face, and more are being added all the time!
 
-##Upcoming Features Roadmap
+## Upcoming Features Roadmap
 At Syncano, we know we're not perfect. There are a few features that Parse had that we don't have currently. Luckily, we are an innovative, passionate team that listens to our users and works hard to implement the features they need to be successful. We've heard you, and we're excited to announce that the following features are already being developed.
 
 * Parse Migration Tool - coming ASAP
@@ -64,7 +64,7 @@ At Syncano, we know we're not perfect. There are a few features that Parse had t
 * Push Notifications - end of March
 
 
-##Get Started with Syncano
+## Get Started with Syncano
 If you'd like to get started with Syncano, [sign up](https://dashboard.syncano.io/#/signup) and see what you think. Like I mentioned earlier, we are offering six **free** months for all new users to get started. Also, if you need any help with the transition, reach out to our [Support Team](mailto:support@syncano.io). Thanks and happy coding!
 
 
