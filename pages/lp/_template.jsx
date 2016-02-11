@@ -173,8 +173,15 @@ export default React.createClass({
             <h2>Build and add microservices into your app</h2>
             <br/>
             <p>Write and run any code on a schedule, triggered by an event or with a Webhook without setting up a server.<br/>Execute code by a particular date or a change in data.</p>
-            <p><strong>We currently support Javascript, Python, Go and Ruby.</strong></p>
-            <p><img src={require('../../images/middleware-support-icons.png')} width="288"/></p>
+            <p><strong>We currently support NodeJS, Python, Go, Swift, PHP, and Ruby.</strong></p>
+            <p style={{fontSize: 60}}>
+              <span style={{margin: '0 5px'}} className="devicons devicons-nodejs_small"/>
+              <span style={{margin: '0 5px'}} className="devicons devicons-python"/>
+              <img style={{verticalAlign: 'baseline', margin: '0 5px'}} src={require('../../images/gopher.svg')} height="50" width="60" alt="gopher"/>
+              <span style={{margin: '0 5px'}} className="devicons devicons-swift"/>
+              <span style={{margin: '0 5px'}} className="devicons devicons-php"/>
+              <span style={{margin: '0 5px'}} className="devicons devicons-ruby"/>
+            </p>
             <img src={require('../../images/slider/slide3.png')} />
           </div>
           <div className="shadow"></div>
