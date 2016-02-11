@@ -78,7 +78,7 @@ export default React.createClass({
               <h2>Frequently Asked Questions</h2>
               <h4>What is Syncano?</h4>
               <br/>
-              <p>Syncano is a backend platform to build powerful real-time apps more efficiently.</p>
+              <p>Syncano is a serverless application platform to create connected apps without handling a backend or server.</p>
               <p>Syncano gives you the freedom to integrate with any API, define your data schema, write sophisticated processes to run any code in the cloud - on a schedule or with triggers and webhooks, and share app functionality in our open source community of Solutions - all from one intuitive dashboard.</p>
               <p>Our goal is to help you solve real user experience problems so that you don't have to worry about wasting time on CRUD operations and other plumbing activities.</p>
               <br/>
