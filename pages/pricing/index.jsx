@@ -134,8 +134,20 @@ export default React.createClass({
                   <div className="pricing-faq__item__text">
                     When you log into your Dashboard, you can set hard limits (absolute) and soft limits
                     (warnings/notifications issued). This ensures you are always in the loop when you have a sudden
-                    burst in usage. If you actually exceed your usage, overage fees will appear on the next month’s
-                    bill. You can change your limits at any time.
+                    burst in usage. If you actually exceed your usage, overage fees will in a separate bill at the end
+                    of the month (billing period). You can change your limits at any time.
+                  </div>
+                </div>
+                <div className="pricing-faq__item">
+                  <div className="pricing-faq__item__headline">
+                    When will I be billed?
+                  </div>
+                  <div className="pricing-faq__item__text">
+                    As soon as you're ready to switch to Production, simply enter your credit card to access the amount
+                    of usage that you need. The bill for the first month is prorated but the usage is not. On the
+                    following 1st of every month, you will be billed for that entire month's usage. Should you exceed
+                    your usage, you can always change your plan and/or pay the overage. Your overage will appear as a
+                    separate bill at the end of the billing cycle, or month.
                   </div>
                 </div>
                 <div className="pricing-faq__item">
