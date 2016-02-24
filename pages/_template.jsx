@@ -15,6 +15,10 @@ export default React.createClass({
 
   componentDidMount() {
     this.trackPageView();
+
+    $('.navbar-nav > li > a').click(function() {
+      $('.navbar-toggle').click();
+    });
   },
 
   componentDidUpdate() {
