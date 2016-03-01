@@ -10,7 +10,7 @@ summary: "The recent news that Parse is shutting down has left many developers s
 keywords: 'Syncano, Parse, Alternative, BaaS, Serverless, Comparison'
 ---
 
-![Keyboard Smash](http://stream1.gifsoup.com/view3/1402562/keyboard-smash-o.gif)
+![Monitor Throw](http://i.imgur.com/czYesMI.gif)
 
 ## We know you're frustrated. Syncano is here to help!
 
