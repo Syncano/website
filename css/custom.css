@@ -4,3 +4,55 @@
         width: 100%
     }
 }
+
+.documentation-page {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.documentation-page a {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.documentation-page div {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.documentation-page h1 {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.documentation-page h2 {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.documentation-page h3 {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.documentation-page h4 {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.documentation-page h5 {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.documentation-page h6 {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.documentation-page li {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.documentation-page p {
+    font-family: 'Roboto', sans-serif !important
+}
+
+.documentation-page span {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.documentation-page ul {
+    font-family: 'Roboto', sans-serif !important;
+}

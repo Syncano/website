@@ -102,8 +102,27 @@ export default React.createClass({
     return this.props.page && _.startsWith(this.props.page.path, '/lp/');
   },
 
+  isDocumentationPage() {
+    console.error(this.props);
+    return this.props.page && _.startsWith(this.props.page.path, '/documentation/');
+  },
+
   renderFooter() {
     return !this.isLandingPage() ? <Footer/> : <Landing.Footer/>;
+  },
+
+  renderContent() {
+    if (this.isDocumentationPage()) {
+      return <RouteHandler {...this.props}/>
+    }
+
+    return (
+      <div>
+        {this.renderHeader()}
+        <RouteHandler {...this.props} />
+        {this.renderFooter()}
+      </div>
+    )
   },
 
   render() {
@@ -115,9 +134,7 @@ export default React.createClass({
             {"rel": "canonical", "href": `${this.props.config.domain}${this.props.state.path}`}
           ]}
         />
-        {this.renderHeader()}
-        <RouteHandler {...this.props}/>
-        {this.renderFooter()}
+        {this.renderContent()}
       </div>
     );
   }
