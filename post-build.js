@@ -13,7 +13,8 @@ let generateSitemapUrl = (page) => {
     '/lp/github/',
     '/lp/google/',
     '/lp/serverless-app-platform/',
-    '/lp/serverless-application-platform/'
+    '/lp/serverless-application-platform/',
+    '/documentation/'
   ];
   let isImportantPage = _.includes(importantPages, pagePath);
   let isNonInedexedPage = _.includes(nonIndexedPages, pagePath);
