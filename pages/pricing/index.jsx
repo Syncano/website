@@ -152,14 +152,15 @@ export default React.createClass({
                 </div>
                 <div className="pricing-faq__item">
                   <div className="pricing-faq__item__headline">
-                    What counts as 1 CodeBox execution?
+                    What counts as a CodeBox second??
                   </div>
                   <div className="pricing-faq__item__text">
-                    To understand a CodeBox execution, let’s look at CodeBox itself. CodeBox is a powerful Syncano tool
-                    with multiple applications. You can use it to create integrations between third party services, to
-                    create your own logic accessible by an API built on Webhooks, to run schedules, to create triggers
-                    and more. CodeBox Executions are measured by webhooks, schedules or triggers. These are all
-                    explained in detail <a href="http://docs.syncano.io/v4/docs/codebox-overview/" target="_blank">here</a>.
+                    CodeBox is a tool with multiple applications. You can use it to create integrations between third
+                    party services, to create your own logic accessible by an API built on Webhooks, to run schedules,
+                    to create triggers and more. A CodeBox is measured by a webhook, schedule or trigger. These are all
+                    explained in detail
+                    <a href="http://docs.syncano.io/v4/docs/codebox-overview/" target="_blank"> here</a>. You’re billed
+                    for each second a CodeBox is run.
                   </div>
                 </div>
                 <div className="pricing-faq__item">
@@ -167,8 +168,8 @@ export default React.createClass({
                     What are the limits on the Builder plan?
                   </div>
                   <div className="pricing-faq__item__text">
-                    You have access to 100,000 API calls per month and 1,000 CodeBox executions per month - as long as
-                    you're in building mode, it's on us.
+                    You have access to 100,000 API calls per month and 20,000 CodeBox seconds per month - as long as
+                    you’re in building mode, it’s on us.
                   </div>
                 </div>
                 <div className="pricing-faq__item">
