@@ -33,7 +33,7 @@
     "react-tap-event-plugin": "0.2.1",
     "react-window-mixins": "0.0.6",
     "sitemap": "1.4.1",
-    "superagent": "1.5.0",
+    "superagent": "1.7.2",
     "syncano": "0.4.2",
     "syncano-components": "0.0.5"
   }

@@ -1,34 +1,36 @@
 import React from 'react';
+import request from 'superagent';
+import config from '../config/';
 import Slider from 'syncano-components/lib/slider/slider';
 import SliderSection from 'syncano-components/lib/slider/slider-section';
 
 export default React.createClass({
-
   getInitialState() {
-    return {}
-  },
-
-  getPlan() {
     return {
-      "options":{"cbx":["5","10","25","50","100","175","250"],"api":["20","40","80","150","350","600","900","1250"]}
-      ,"name":"paid-commitment"
-      ,"pricing":{"cbx":{"10":{"overage":"0.0002222","included":45000},"25":{"overage":"0.0002174","included":115000},"175":{"overage":"0.000175","included":1000000},"50":{"overage":"0.0002128","included":235000},"5":{"overage":"0.00025","included":20000},"100":{"overage":"0.0002","included":500000},"250":{"overage":"0.0001471","included":1700000}},"api":{"150":{"overage":"0.0000167","included":9000000},"900":{"overage":"0.0000129","included":70000000},"20":{"overage":"0.00002","included":1000000},"600":{"overage":"0.0000143","included":42000000},"40":{"overage":"0.00002","included":2000000},"1250":{"overage":"0.0000125","included":100000000},"350":{"overage":"0.0000152","included":23000000},"80":{"overage":"0.0000178","included":4500000}}}
+      plan: null
     }
   },
 
+  componentWillMount() {
+    request(`${config.apiUrl}v1/billing/plans/`, (err, res) => {
+      this.setState({plan: res.body.objects[0]})
+    })
+  },
+
   getInfo(type) {
+    const {plan} = this.state;
     let info = {
       included: 0,
       overage: 0,
       total: 0
     };
 
-    if (!this.getPlan()) {
+    if (!plan) {
       return info;
     }
 
-    let pricing = this.getPlan().pricing[type];
-    let options = this.getPlan().options[type];
+    let pricing = plan.pricing[type];
+    let options = plan.options[type];
     let sliderValue = this.state[type + 'Selected'];
 
     if (!sliderValue) {
@@ -103,11 +105,14 @@ export default React.createClass({
   },
 
   renderSlider(type) {
-    if (!this.getPlan()) {
+    const {plan} = this.state;
+
+    if (!plan) {
       return true;
     }
+
     const defaultValue = 0;
-    let options = this.getPlan().options[type];
+    let options = plan.options[type];
     let selected = this.state[type + 'Selected'];
 
     options = options.map((item) => {
@@ -166,11 +171,11 @@ export default React.createClass({
       {
         included: {
           value: parseInt(cbxInfo.included, 10).toLocaleString(),
-          label: 'Total CodeBox runs'
+          label: 'Total CodeBox seconds'
         },
         overage: {
           value: cbxInfo.overage,
-          label: 'Overage Unit Price: CodeBox run'
+          label: 'Overage Unit Price: CodeBox seconds'
         }
       }
     );
@@ -186,7 +191,7 @@ export default React.createClass({
 
           <SliderSection
             style={{paddingTop: 50}}
-            title="CodeBox runs"
+            title="CodeBox seconds"
             slider={this.renderSlider('cbx')}
             sliderSummary={cbxSliderSummary}/>
 
@@ -202,7 +207,7 @@ export default React.createClass({
                   <div className="col-sm-4" style={styles.tableColumnSummary}>${apiInfo.total}/Month</div>
                 </div>
                 <div className="row" style={styles.tableRow}>
-                  <div className="col-sm-4">CodeBox runs</div>
+                  <div className="col-sm-4">CodeBox seconds</div>
                   <div className="col-sm-4" style={styles.tableColumnSummary}>
                     {parseInt(cbxInfo.included, 10).toLocaleString()}
                   </div>
