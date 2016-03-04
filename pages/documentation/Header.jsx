@@ -27,7 +27,7 @@ export default () => (
       <Nav navbar right>
         <li><Link style={styles.link} to="/features/">Features</Link></li>
         <li><Link style={styles.link} to="/pricing/">Pricing</Link></li>
-        <li><Link style={styles.link} to="/blog/">Blog</Link></li>
+        <li><a style={styles.link} href="/blog/">Blog</a></li>
         <li><a href="https://dashboard.syncano.io/#/login" style={styles.link} target="_blank">Login</a></li>
         <li>
           <a href="https://dashboard.syncano.io/#/signup" className="btn btn-dark-blue mixpanel-btn" target="_blank">

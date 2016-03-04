@@ -17,7 +17,7 @@ export default React.createClass({
             <li><Link to="/support/">Support</Link></li>
             <li><Link to="/solutions/">Solutions</Link></li>
             <li><Link to="/pricing/">Pricing</Link></li>
-            <li><Link to="/blog/">Blog</Link></li>
+            <li><a href="/blog/">Blog</a></li>
           </Nav>
           <Nav navbar right>
             <li><a href="https://dashboard.syncano.io/#/login" className="btn btn-blue mixpanel-login" target="_blank">Login</a></li>

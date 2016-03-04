@@ -17,7 +17,9 @@ export default React.createClass({
     this.trackPageView();
 
     $('.navbar-nav > li > a').click(function() {
-      $('.navbar-toggle').click();
+      if ($('.navbar-collapse').hasClass('in')) {
+        $('.navbar-toggle').click();
+      }
     });
   },
 
@@ -103,7 +105,6 @@ export default React.createClass({
   },
 
   isDocumentationPage() {
-    console.error(this.props);
     return this.props.page && _.startsWith(this.props.page.path, '/documentation/');
   },
 
