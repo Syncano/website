@@ -11,10 +11,10 @@ export default React.createClass({
     }
   },
 
-  componentWillMount() {
-    request(`${config.apiUrl}v1/billing/plans/`, (err, res) => {
-      this.setState({plan: res.body.objects[0]})
-    })
+  componentDidMount() {
+    request.get(`${config.apiUrl}v1/billing/plans/`).end((err, res) => {
+      this.setState({plan: res.body.objects[0]});
+    });
   },
 
   getInfo(type) {
