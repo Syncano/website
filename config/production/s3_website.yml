@@ -2,7 +2,6 @@ s3_id: <%= ENV['PRODUCTION_AWS_S3_ACCESS_KEY_ID'] %>
 s3_secret: <%= ENV['PRODUCTION_AWS_S3_SECRET_ACCESS_KEY'] %>
 s3_bucket: <%= ENV['PRODUCTION_AWS_S3_BUCKET'] %>
 s3_endpoint: us-east-1
-gzip: true
 cache_control:
   "index.html": "no-cache, no-store, must-revalidate"
   "*": "max-age=315360000, no-transform, public"
