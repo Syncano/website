@@ -9,15 +9,10 @@ let generateSitemapUrl = (page) => {
   let nonIndexedPages = [
     '/thank-contacting-us/',
     '/lp/',
-    '/lp/facebook/',
-    '/lp/github/',
-    '/lp/google/',
-    '/lp/serverless-app-platform/',
-    '/lp/serverless-application-platform/',
     '/documentation/'
   ];
   let isImportantPage = _.includes(importantPages, pagePath);
-  let isNonInedexedPage = _.includes(nonIndexedPages, pagePath);
+  let isNonInedexedPage = _.includes(nonIndexedPages, pagePath) || _.some(nonIndexedPages, (nonIndexedPage) => _.startsWith(pagePath, nonIndexedPage));
 
   if (!pagePath || isNonInedexedPage) {
     return;
@@ -30,8 +25,14 @@ let generateSitemapUrl = (page) => {
   }
 };
 
+let addBlogToSitemap = (pages) => {
+  pages.unshift({path: '/blog/'});
+  return pages;
+};
+
 let generateSitemap = (pages) => {
-  let sitemapUrls = _(pages).map(generateSitemapUrl).filter().value();
+  let newPagesList = addBlogToSitemap(pages);
+  let sitemapUrls = _(newPagesList).map(generateSitemapUrl).filter().value();
 
   let sitemap = sm.createSitemap({
     hostname: 'https://www.syncano.io',
@@ -42,7 +43,17 @@ let generateSitemap = (pages) => {
   return fs.writeFileSync(`${__dirname}/public/sitemap.xml`, sitemap.toString());
 };
 
+let generateRobots = () => {
+  const fileContent = 'User-agent: *\n' +
+    'Allow: /\n\n' +
+    'Sitemap: https://www.syncano.io/sitemap.xml\n' +
+    'Sitemap: https://www.syncano.io/blog/sitemap.xml';
+
+  return fs.writeFileSync(`${__dirname}/public/robots.txt`, fileContent);
+};
+
 export default (pages, callback) => {
   generateSitemap(pages);
+  generateRobots();
   return callback();
 };
