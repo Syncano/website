@@ -20,7 +20,7 @@ export default React.createClass({
           title={SEO.title}
           meta={[{"name": "mixpanelTitle", "content": SEO.mixpanelTitle}]}
         />
-        <div className="hero" style={{backgroundImage: `url('${require('../../images/jobs-bg.png')}')`}}>
+        <div className="hero" style={{backgroundImage: `url('${require('./jobs-bg.png')}')`}}>
           <div className="container">
             <div className="info">
               <h1>We are dreamers, thinkers, <br/>inventors - and doers.</h1>

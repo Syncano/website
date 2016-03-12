@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router';
 import Helmet from 'react-helmet';
 
 export default React.createClass({
@@ -24,7 +23,7 @@ export default React.createClass({
           <div className="col-md-7">
             <h1>Thank you!<br/>Your message has been received.</h1>
             <br/>
-            <p>We’ll get back to you soon. In the mean time, check out some of our recent <Link to="blog-template">blog articles.</Link></p>
+            <p>We’ll get back to you soon. In the mean time, check out some of our recent <a href="/blog/">blog articles</a>.</p>
           </div>
           <div className="col-md-5">
             <img src="new_york_office_hydra_420px.jpg" alt="New York City" />

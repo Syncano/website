@@ -1,7 +1,6 @@
 import React from 'react';
-import { RouteHandler, Link, State } from 'react-router';
-import { link, templateChildrenPages } from 'gatsby-helpers';
-import { Footer, Header, Landing, LatestBlogPosts, Newsletter} from '../components/';
+import { RouteHandler, State } from 'react-router';
+import { Footer, Header, Landing } from '../components/';
 import _ from 'lodash';
 import Helmet from 'react-helmet';
 
@@ -28,34 +27,9 @@ export default React.createClass({
   },
 
   trackPageView() {
-    let isPage = this.props.page;
-    let pageTitle;
-
-    if (isPage) {
-      pageTitle = this.isBlogPost() ? this.getBlogPostTitle() : this.getWebsitePageTitle();
-    }
-
-    if (!isPage && this.isBlogCategory()) {
-      pageTitle = 'Blog'
-    }
-
     analytics.page('Website', {
-      Page: pageTitle
+      Page: this.getWebsitePageTitle()
     });
-  },
-
-  isBlogPost() {
-    let page = this.props.page;
-
-    return (page && _.startsWith(page.requirePath, 'blog/') && !_.startsWith(page.requirePath, 'blog/category/') && _.isObject(page.data));
-  },
-
-  isBlogCategory() {
-    return _.startsWith(this.props.state.path, '/blog/category/');
-  },
-
-  getBlogPostTitle() {
-    return this.props.page.data.title;
   },
 
   getWebsitePageTitle() {
@@ -71,33 +45,6 @@ export default React.createClass({
 
   renderHeader() {
     return this.isLandingPage() ? <Landing.Header/> : <Header/>;
-  },
-
-  getAllPosts() {
-    let posts = _.filter(this.props.pages, (page) => page.data && _.startsWith(page.requirePath, 'blog/') && !_.startsWith(page.requirePath, 'blog/category/')).reverse();
-
-    return posts;
-  },
-
-
-  getCategoriesList() {
-    let posts = this.getAllPosts();
-    let categories = _.sortBy(_.uniq(_.flatten(_.map(posts, (post) => post.data.categories))));
-
-    return categories;
-  },
-
-  renderCategoriesLinks(categories) {
-    return _.map(categories, this.renderCategoryLink);
-  },
-
-  renderCategoryLink(category) {
-    let categoryName = _.kebabCase(category);
-    let categoryUrl = `/blog/category/${categoryName}/`;
-
-    return (
-      <li><Link to={categoryUrl} style={{borderBottom: 0}}>{category}</Link></li>
-    )
   },
 
   isLandingPage() {
