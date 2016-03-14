@@ -34,7 +34,7 @@ export default React.createClass({
               <div className="col-md-2 col-sm-2 col-xs-6 no-header resources">
                 <ul>
                   <li><Link to="/support/">Support</Link></li>
-                  <li><Link to="/blog/tag/tutorials/">Tutorials</Link></li>
+                  <li><a href="/blog/tag/tutorials/" target="_blank">Tutorials</a></li>
                   <li><a href="http://docs.syncano.io/docs/syncano-libraries/" target="_blank">Libraries</a></li>
                 </ul>
               </div>
