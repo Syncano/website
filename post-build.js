@@ -25,14 +25,8 @@ let generateSitemapUrl = (page) => {
   }
 };
 
-let addBlogToSitemap = (pages) => {
-  pages.unshift({path: '/blog/'});
-  return pages;
-};
-
 let generateSitemap = (pages) => {
-  let newPagesList = addBlogToSitemap(pages);
-  let sitemapUrls = _(newPagesList).map(generateSitemapUrl).filter().value();
+  let sitemapUrls = _(pages).map(generateSitemapUrl).filter().value();
 
   let sitemap = sm.createSitemap({
     hostname: 'https://www.syncano.io',
