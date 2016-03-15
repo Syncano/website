@@ -8,8 +8,7 @@ machine:
 
 dependencies:
   pre:
-    # - git clone -b devel git@github.com:Syncano/syncano-ansible.git
-    - git clone -b website-tags git@github.com:Syncano/syncano-ansible.git
+    - git clone -b devel git@github.com:Syncano/syncano-ansible.git
     - cp syncano-ansible/config/ssh_config ~/.ssh/config
     - if [ ! -e ~/nvm/versions/node/v4.2.2/lib/node_modules/syncano-gatsby ]; then npm install -g syncano-gatsby@0.7.0-1; else echo "gatsby seems to be cached"; fi;
   override:
@@ -27,9 +26,8 @@ deployment:
       - bundle exec s3_website push --config-dir=./config/production/
       - cd syncano-ansible/playbooks/ && ansible-playbook www-server.yml -e 'env=prd' --tags=website
   staging:
-    # branch: devel
-    branch: INFRA-227
+    branch: devel
     commands:
-      # - NODE_ENV=staging gatsby build
-      # - bundle exec s3_website push --force --config-dir=./config/staging/
+      - NODE_ENV=staging gatsby build
+      - bundle exec s3_website push --force --config-dir=./config/staging/
       - cd syncano-ansible/playbooks/ && ansible-playbook www-server.yml -e 'env=stg' --tags=website
