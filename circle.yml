@@ -3,10 +3,16 @@ machine:
     version: 2.2.3
   node:
     version: 4.2.2
+  python:
+    version: 2.7.9
 
 dependencies:
   pre:
+    - git clone -b devel git@github.com:Syncano/syncano-ansible.git
+    - cp syncano-ansible/config/ssh_config ~/.ssh/config
     - if [ ! -e ~/nvm/versions/node/v4.2.2/lib/node_modules/syncano-gatsby ]; then npm install -g syncano-gatsby@0.7.0-1; else echo "gatsby seems to be cached"; fi;
+  override:
+    - pip install -r syncano-ansible/requirements.txt
 
 test:
   override:
@@ -18,8 +24,10 @@ deployment:
     commands:
       - NODE_ENV=production gatsby build
       - bundle exec s3_website push --config-dir=./config/production/
+      - cd syncano-ansible/playbooks/ && ansible-playbook www-server.yml -e 'env=prd' --tags=website
   staging:
     branch: devel
     commands:
       - NODE_ENV=staging gatsby build
       - bundle exec s3_website push --force --config-dir=./config/staging/
+      - cd syncano-ansible/playbooks/ && ansible-playbook www-server.yml -e 'env=stg' --tags=website
