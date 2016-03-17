@@ -1,6 +1,13 @@
 import React from 'react';
 import Radium from 'radium';
-import Header from './Header';
+import Helmet from 'react-helmet';
+import Header from './_Header';
+
+const SEOConfig = {
+  title: "Documentation",
+  description: "Documentation",
+  mixpanelTitle: "Documentation"
+};
 
 const styles = {
   hero: {
@@ -123,6 +130,14 @@ const styles = {
 
 export default Radium(() => (
   <div className="documentation-page">
+    <Helmet
+      title={SEOConfig.title}
+      meta={[
+        {"name": "description", "content": SEOConfig.description},
+        {"name": "mixpanelTitle", "content": SEOConfig.mixpanelTitle},
+        {"name": "robots", "content": "noindex, nofollow"}
+      ]}
+    />
     <Header/>
     <div>
       <div className="container">
