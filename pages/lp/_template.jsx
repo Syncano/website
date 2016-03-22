@@ -68,7 +68,7 @@ export default React.createClass({
               <div className="col-md-4 col-sm-4">
                 <div className="">
                   <h3>Add microservices to your app.</h3>
-                  <p>With CodeBox, run any code in the cloud with cron-like Schedules, Webhooks, or triggered by any kind of data change.</p>
+                  <p>With Scripts, run any code in the cloud with cron-like Schedules, Webhooks, or triggered by any kind of data change.</p>
                 </div>
               </div>
               <div className="col-md-4 col-sm-4">
@@ -120,7 +120,7 @@ export default React.createClass({
                 <img src={require('../../images/krystian.jpg')} alt="Krystian"/>
               </div>
               <div className="col-md-6 col-sm-6 text-center">
-                <div className="quote">"Hands-down the easiest way to build robust, <br/>advanced apps with real-time sync. CodeBox <br/>even lets me use third-party apps just like <br/>native ones. <strong>Finally I can build anywhere, <br/>anything, anytime on any device."</strong>
+                <div className="quote">"Hands-down the easiest way to build robust, <br/>advanced apps with real-time sync. Scripts <br/>even lets me use third-party apps just like <br/>native ones. <strong>Finally I can build anywhere, <br/>anything, anytime on any device."</strong>
                 </div>
                 <div className="source">Krystian Sulek <br/><span>CHIMERA PRIME</span></div>
               </div>
@@ -237,7 +237,7 @@ export default React.createClass({
                       <div className="solutions-item__avatar" style={{backgroundImage: `url(${require('./Comments.png')})`}}></div>
                     </div>
                   </div>
-                  <div className="solutions-item__description">Integrate with Twilio to send text and picture messages with CodeBox calls!</div>
+                  <div className="solutions-item__description">Integrate with Twilio to send text and picture messages with Scripts calls!</div>
                   <div className="solutions-item__meta">
                     <div className="solutions-item__meta__section">
                       <div className="solutions-item__meta__section__column">

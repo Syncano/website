@@ -171,11 +171,11 @@ export default React.createClass({
       {
         included: {
           value: parseInt(cbxInfo.included, 10).toLocaleString(),
-          label: 'Total CodeBox seconds'
+          label: 'Total Scripts seconds'
         },
         overage: {
           value: cbxInfo.overage,
-          label: 'Overage Unit Price: CodeBox seconds'
+          label: 'Overage Unit Price: Scripts seconds'
         }
       }
     );
@@ -191,7 +191,7 @@ export default React.createClass({
 
           <SliderSection
             style={{paddingTop: 50}}
-            title="CodeBox seconds"
+            title="Scripts seconds"
             slider={this.renderSlider('cbx')}
             sliderSummary={cbxSliderSummary}/>
 
@@ -207,7 +207,7 @@ export default React.createClass({
                   <div className="col-sm-4" style={styles.tableColumnSummary}>${apiInfo.total}/Month</div>
                 </div>
                 <div className="row" style={styles.tableRow}>
-                  <div className="col-sm-4">CodeBox seconds</div>
+                  <div className="col-sm-4">Scripts seconds</div>
                   <div className="col-sm-4" style={styles.tableColumnSummary}>
                     {parseInt(cbxInfo.included, 10).toLocaleString()}
                   </div>

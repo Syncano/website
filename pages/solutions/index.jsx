@@ -83,7 +83,7 @@ export default React.createClass({
                   </div>
                 </div>
                 <div className="solutions-item__description">Integrate with Twilio to send text and picture messages
-                  with CodeBox calls!
+                  with Scripts calls!
                 </div>
                 <div className="solutions-item__meta">
                   <div className="solutions-item__meta__section">
