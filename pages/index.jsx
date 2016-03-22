@@ -44,8 +44,8 @@ export default React.createClass({
           <div className="hero">
             <div className="container">
               <div className="info">
-                <h1>Build Serverless Apps</h1>
-                <h2>A powerful platform to create connected apps without handling a backend or server</h2>
+                <h1>Rethink the way you build</h1>
+                <h2>A complete platform to orchestrate your app’s ecosystem.</h2>
                 <a href="https://dashboard.syncano.io/#/signup" className="btn btn-dark-blue cta-button mixpanel-btn" id="homepage-hero" style={{marginBottom: 0}}>START BUILDING FOR FREE</a>
               </div>
             </div>
@@ -56,20 +56,20 @@ export default React.createClass({
             <div className="row text-center">
               <div className="col-md-4 col-sm-4">
                 <div className="">
-                  <h3>Add microservices to your app.</h3>
-                  <p>With <a href="http://docs.syncano.io/docs/codebox-overview" target="_blank">CodeBox</a>, run any code in the cloud with cron-like Schedules, Webhooks, or triggered by any kind of data change.</p>
+                  <h3>Simplify your stack</h3>
+                  <p>Stop writing code to connect disparate backend systems. With Syncano you can integrate anything, all from one place.</p>
                 </div>
               </div>
               <div className="col-md-4 col-sm-4">
                 <div className="">
-                  <h3>Create complex data structures. Add real-time communication.</h3>
-                  <p>Define your data the way you want it. <a href="http://docs.syncano.io/docs/data-objects-filtering" target="_blank">Query your data</a>. Connect your data to <a href="http://docs.syncano.io/docs/realtime-communication" target="_blank">Channels</a> to get real-time updates.</p>
+                  <h3>Control your data schema</h3>
+                  <p>Create sophisticated data relations and apply multiple filters. Easily manage your data from our user-friendly dashboard.</p>
                 </div>
               </div>
               <div className="col-md-4 col-sm-4">
                 <div className="">
-                  <h3>Integrate with any API.</h3>
-                  <p>Minimize boilerplate code. Easily install code blocks and reuse them across all of your apps with <a href="http://docs.syncano.io/docs/solutions" target="_blank">Solutions</a>. Share amongst the community.</p>
+                  <h3>Code and prototype faster</h3>
+                  <p>Write your own code snippets and prototype them in the browser with built-in traces. Get your MVP to market and save development costs.</p>
                 </div>
               </div>
             </div>
@@ -109,7 +109,7 @@ export default React.createClass({
                 <img src={require('../images/krystian.jpg')} alt="Krystian"/>
               </div>
               <div className="col-md-6 col-sm-6 text-center">
-                <div className="quote">"Hands-down the easiest way to build robust, <br/>advanced apps with real-time sync. CodeBox <br/>even lets me use third-party apps just like <br/>native ones. <strong>Finally I can build anywhere, <br/>anything, anytime on any device."</strong>
+                <div className="quote">"Hands-down the easiest way to build robust, <br/>advanced apps with real-time sync. Scripts <br/>even lets me use third-party apps just like <br/>native ones. <strong>Finally I can build anywhere, <br/>anything, anytime on any device."</strong>
                 </div>
                 <div className="source">Krystian Sulek <br/><span>CHIMERA PRIME</span></div>
               </div>
@@ -156,9 +156,9 @@ export default React.createClass({
         </div>
         <div className="middleware text-center">
           <div className="container">
-            <h2>Build and add microservices into your app without setting up a server or building out a custom API</h2>
+            <h2>Run server-side logic in the cloud</h2>
             <br/>
-            <p>With CodeBox, write and run any code on a Schedule, Trigger or with a Webhook.<br/>Execute code by a particular date you set, or once a change is made to your data.</p>
+            <p>With Scripts, run your code in response to events, updates to data, in-app activity or by a particular schedule. Use multiple languages, integrate with anything.</p>
             <p><strong>We currently support NodeJS, Python, Go, Swift, PHP, and Ruby.</strong></p>
             <p style={{fontSize: 60}}>
               <span style={{margin: '0 5px'}} className="devicons devicons-nodejs_small"/>
@@ -171,139 +171,6 @@ export default React.createClass({
             <img src={require('../images/slider/slide3.png')} alt="slide3"/>
           </div>
           <div className="shadow"></div>
-        </div>
-        <div className="solutions">
-          <div className="container text-center">
-            <h2>Install code blocks to your apps with <a href="http://docs.syncano.io/docs/solutions" target="_blank">Solutions</a></h2>
-            <p>Stop wasting time on CRUD operations or creating code that's already been written.<br/>Simply enter our directory, find what you need, add it to any of your instances and start building within seconds.</p>
-            <div className="row">
-              <div className="col-md-4 item-8">
-                <div className="solutions-item">
-                  <div className="solutions-item-header">
-                    <div className="solutions-item-header__column">
-                      <p className="solutions-item__title">QRCode Generator</p>
-                    </div>
-                    <div className="solutions-item-header__column">
-                      <div className="solutions-item__avatar" style={{backgroundImage: `url('https://www.gravatar.com/avatar/656abb47e589879370574da4db611bdc')`}}></div>
-                    </div>
-                  </div>
-                  <div className="solutions-item__description">This solution generates and stores QRCodes</div>
-                  <div className="solutions-item__meta">
-                    <div className="solutions-item__meta__section">
-                      <div className="solutions-item__meta__section__column">
-                        <i className="zmdi zmdi-label solutions-item__meta__icon solutions-item__meta__icon--tags"></i>
-                      </div>
-                      <div className="solutions-item__meta__section__column solutions-item__meta__section__column--flex">
-                        <ul>
-                          <li>python, </li>
-                          <li>image, </li>
-                          <li>qrcode</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="solutions-item__meta__section">
-                      <div className="solutions-item__meta__section__column">
-                        <i className="zmdi zmdi-info-outline solutions-item__meta__icon solutions-item__meta__icon--version--stable"></i>
-                      </div>
-                      <div className="solutions-item__meta__section__column">
-                        stable (2.2)
-                      </div>
-                    </div>
-                  </div>
-                  <div className="solutions-item-footer text-center">
-                    <a className="solutions-item-footer__see-details-btn" href="https://dashboard.syncano.io/#/solutions/8/edit">
-                      See Details
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-4 item-9">
-                <div className="solutions-item">
-                  <div className="solutions-item-header">
-                    <div className="solutions-item-header__column">
-                      <p className="solutions-item__title">Send SMS</p>
-                    </div>
-                    <div className="solutions-item-header__column">
-                      <div className="solutions-item__avatar" style={{backgroundImage: `url('https://www.gravatar.com/avatar/656abb47e589879370574da4db611bdc')`}}></div>
-                    </div>
-                  </div>
-                  <div className="solutions-item__description">Integrate with Twilio to send text and picture messages with CodeBox calls!</div>
-                  <div className="solutions-item__meta">
-                    <div className="solutions-item__meta__section">
-                      <div className="solutions-item__meta__section__column">
-                        <i className="zmdi zmdi-label solutions-item__meta__icon solutions-item__meta__icon--tags"></i>
-                      </div>
-                      <div className="solutions-item__meta__section__column solutions-item__meta__section__column--flex">
-                        <ul>
-                          <li>python, </li>
-                          <li>mms, </li>
-                          <li>sms, </li>
-                          <li>text, </li>
-                          <li>twilio</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="solutions-item__meta__section">
-                      <div className="solutions-item__meta__section__column">
-                        <i className="zmdi zmdi-info-outline solutions-item__meta__icon solutions-item__meta__icon--version--stable"></i>
-                      </div>
-                      <div className="solutions-item__meta__section__column">
-                        stable (1.0)
-                      </div>
-                    </div>
-                  </div>
-                  <div className="solutions-item-footer text-center">
-                    <a className="solutions-item-footer__see-details-btn" href="https://dashboard.syncano.io/#/solutions/9/edit">
-                      See Details
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-4 item-10">
-                <div className="solutions-item">
-                  <div className="solutions-item-header">
-                    <div className="solutions-item-header__column">
-                      <p className="solutions-item__title">PDF to Image Converter</p>
-                    </div>
-                    <div className="solutions-item-header__column">
-                      <div className="solutions-item__avatar" style={{backgroundImage: `url('https://www.gravatar.com/avatar/656abb47e589879370574da4db611bdc')`}}></div>
-                    </div>
-                  </div>
-                  <div className="solutions-item__description">This solution lets you convert PDFs and store them as images in syncano</div>
-                  <div className="solutions-item__meta">
-                    <div className="solutions-item__meta__section">
-                      <div className="solutions-item__meta__section__column">
-                        <i className="zmdi zmdi-label solutions-item__meta__icon solutions-item__meta__icon--tags"></i>
-                      </div>
-                      <div className="solutions-item__meta__section__column solutions-item__meta__section__column--flex">
-                        <ul>
-                          <li>python, </li>
-                          <li>image, </li>
-                          <li>convert, </li>
-                          <li>mashape, </li>
-                          <li>pdf</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="solutions-item__meta__section">
-                      <div className="solutions-item__meta__section__column">
-                        <i className="zmdi zmdi-info-outline solutions-item__meta__icon solutions-item__meta__icon--version--stable"></i>
-                      </div>
-                      <div className="solutions-item__meta__section__column">
-                        stable (1.0)
-                      </div>
-                    </div>
-                  </div>
-                  <div className="solutions-item-footer text-center">
-                    <a className="solutions-item-footer__see-details-btn" href="https://dashboard.syncano.io/#/solutions/10/edit">
-                      See Details
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <a href="/solutions/" className="btn btn-dark-blue">See more Solutions</a>
-          </div>
         </div>
         <div className="showcase">
           <div className="container text-center">
