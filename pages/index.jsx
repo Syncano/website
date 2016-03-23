@@ -168,7 +168,7 @@ export default React.createClass({
               <span style={{margin: '0 5px'}} className="devicons devicons-php"/>
               <span style={{margin: '0 5px'}} className="devicons devicons-ruby"/>
             </p>
-            <img src={require('../images/slider/slide3.png')} alt="slide3"/>
+            <img src={require('../images/slider/slide3.jpg')} alt="slide3"/>
           </div>
           <div className="shadow"></div>
         </div>
