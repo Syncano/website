@@ -42,7 +42,7 @@ export default React.createClass({
             <ul>
               <li>
                 <h3><a href="https://syncano.workable.com/jobs/214712" target="_blank">Senior DevOps Engineer</a></h3>
-                <h4>New York, NY</h4>
+                <h4>Mazowieckie, Warsaw</h4>
               </li>
               <li>
                 <h3><a href="https://syncano.workable.com/jobs/41523" target="_blank">Senior Front End Engineer</a></h3>
