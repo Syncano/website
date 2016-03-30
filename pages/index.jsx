@@ -44,7 +44,7 @@ export default React.createClass({
           <div className="hero">
             <div className="container">
               <div className="info">
-                <h1>Rethink the way you build</h1>
+                <h1>Rethink how you build apps</h1>
                 <h2>A complete platform to orchestrate your app’s ecosystem.</h2>
                 <a href="https://dashboard.syncano.io/#/signup" className="btn btn-dark-blue cta-button mixpanel-btn" id="homepage-hero" style={{marginBottom: 0}}>START BUILDING FOR FREE</a>
               </div>
