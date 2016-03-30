@@ -159,7 +159,7 @@ export default React.createClass({
                     party services, to create your own logic accessible by an API built on Webhooks, to run schedules,
                     to create triggers and more. A Scripts is measured by a webhook, schedule or trigger. These are all
                     explained in detail
-                    <a href="http://docs.syncano.io/docs/codebox-overview" target="_blank"> here</a>. You’re billed
+                    <a href="http://docs.syncano.io/docs/snippets-scripts/" target="_blank"> here</a>. You’re billed
                     for each second a Scripts is run.
                   </div>
                 </div>
