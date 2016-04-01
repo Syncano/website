@@ -94,12 +94,12 @@ export default React.createClass({
               <div className="col-md-1 hidden-md"></div>
               <div className="col-md-1 hidden-md"></div>
               <div className="col-md-1 col-xs-3"><img src={require('../../images/angularjs-logo.png')} alt="AngularJS Logo"/></div>
+              <div className="col-md-1 col-xs-3"><img src={require('../../images/logo-ember.png')} alt="EmberJS Logo"/></div>
               <div className="col-md-1 col-xs-3"><img src={require('../../images/python-logo.png')} alt="Python Logo"/></div>
               <div className="col-md-1 col-xs-3"><img src={require('../../images/javascript.png')} alt="Javascript icon"/></div>
               <div className="col-md-1 col-xs-3"><img src={require('../../images/android.png')} alt="android icon"/></div>
               <div className="col-md-1 col-xs-3"><img src={require('../../images/ruby.png')} alt="ruby icon"/></div>
               <div className="col-md-1 col-xs-3"><img src={require('../../images/ios8.png')} alt="ios icon"/></div>
-              <div className="col-md-1 col-xs-3"><img src={require('../../images/bird.png')} alt="firebird icon"/></div>
               <div className="col-md-1 col-xs-3"><img src={require('../../images/arduino.svg')} alt="arduino icon"/></div>
             </div>
           </div>
