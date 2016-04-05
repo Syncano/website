@@ -1,18 +1,12 @@
-import React from 'react'
-import { Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
+import React from 'react';
+import DocumentTitle from 'react-document-title';
 
-import Sitemap from 'components/Sitemap'
+import Sitemap from '../components/sitemap';
 
-// Styles for highlighted code blocks.
-// import 'css/zenburn.css'
-
-export default React.createClass({
-	render () {
-		return (
-			<div>
-				<Sitemap />
-			</div>
-		)
-	}
-})
+export default () => (
+	<DocumentTitle title='Syncano'>
+		<div>
+			<Sitemap />
+		</div>
+	</DocumentTitle>
+);
