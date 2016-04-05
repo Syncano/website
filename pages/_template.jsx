@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 export default React.createClass({
   propTypes () {
     return {
-     children: React.PropTypes.any,
+      children: React.PropTypes.any,
     }
   },
 
