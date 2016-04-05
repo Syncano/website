@@ -4,10 +4,10 @@ import { prefixLink } from 'gatsby-helpers';
 import DocumentTitle from 'react-document-title';
 
 export default () => (
-	<DocumentTitle title='404'>
-		<div>
-			<h2>404</h2>
-			<Link to={prefixLink('/')}>Back to Home</Link>
-		</div>
-	</DocumentTitle>
+  <DocumentTitle title='404'>
+    <div>
+      <h2>404</h2>
+      <Link to={prefixLink('/')}>Back to Home</Link>
+    </div>
+  </DocumentTitle>
 );

@@ -7,4 +7,4 @@ exports.loadContext = function (callback) {
     })
   }
   return callback(context)
-}
+};
