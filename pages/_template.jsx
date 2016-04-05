@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { prefixLink } from 'gatsby-helpers';
 
 export default React.createClass({
   propTypes () {
@@ -13,7 +12,7 @@ export default React.createClass({
     return (
       <div>
         <div>
-          <Link to={prefixLink('/')}>Syncano</Link>
+          <Link to="/">Syncano</Link>
         </div>
         <div>
           {this.props.children}
