@@ -1,0 +1,30 @@
+$very-small: 320px;
+$small: 480px;
+$medium: 768px;
+$large: 1024px;
+$very-large: 1300px;
+$full: 1600px;
+
+@mixin very-small {
+  @include breakpoint($very-small) { @content; }
+}
+
+@mixin small {
+  @include breakpoint($small) { @content; }
+}
+
+@mixin medium {
+  @include breakpoint($medium) { @content; }
+}
+
+@mixin large {
+  @include breakpoint($large) { @content; }
+}
+
+@mixin very-large {
+  @include breakpoint($very-large) { @content; }
+}
+
+@mixin full {
+  @include breakpoint($full) { @content; }
+}

@@ -1,0 +1,23 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+
+  line-height: 1;
+  font-weight: normal;
+}
+
+body {
+  font-size: 14px;
+  padding-bottom: 50px;
+  background: $color-main3;
+
+  @include medium {
+    font-size: 16px;
+  }
+}
+
+a {
+  text-decoration: none;
+}

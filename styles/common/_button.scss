@@ -1,0 +1,21 @@
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  font-weight: bold;
+  padding: 15px 20px;
+  letter-spacing: -.1px;
+  
+  &.button-large {
+    text-transform: uppercase;
+  }
+
+  &.button-featured {
+    text-transform: uppercase;
+    background: $color-main2;
+    color: $color-text-headline;
+  }
+
+  @include medium {
+    padding: 19px 32px;
+  }
+}

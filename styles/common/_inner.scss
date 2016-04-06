@@ -1,0 +1,18 @@
+.inner {
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: content-box;
+
+  @include medium {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+
+  @include large {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}

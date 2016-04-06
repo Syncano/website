@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+import 'normalize.css/normalize.css';
+import 'styles/styles';
+
 export default React.createClass({
   propTypes () {
     return {
@@ -11,11 +14,8 @@ export default React.createClass({
   render () {
     return (
       <div>
-        <div>
-          <Link to="/">Syncano</Link>
-        </div>
-        <div>
-          {this.props.children}
+        <div className="wrapper">
+        {this.props.children}
         </div>
       </div>
     )
