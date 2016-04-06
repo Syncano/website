@@ -3,28 +3,40 @@ $small: 480px;
 $medium: 768px;
 $large: 1024px;
 $very-large: 1300px;
-$full: 1600px;
+$full: 1401px;
 
 @mixin very-small {
-  @include breakpoint($very-small) { @content; }
+  @media screen and (min-width: $very-small) {
+    @content;
+  }
 }
 
 @mixin small {
-  @include breakpoint($small) { @content; }
+  @media screen and (min-width: $small) {
+    @content;
+  }
 }
 
 @mixin medium {
-  @include breakpoint($medium) { @content; }
+  @media screen and (min-width: $medium) {
+    @content;
+  }
 }
 
 @mixin large {
-  @include breakpoint($large) { @content; }
+  @media screen and (min-width: $large) {
+    @content;
+  }
 }
 
 @mixin very-large {
-  @include breakpoint($very-large) { @content; }
+  @media screen and (min-width: $very-large) {
+    @content;
+  }
 }
 
 @mixin full {
-  @include breakpoint($full) { @content; }
+  @media screen and (min-width: $full) {
+    @content;
+  }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router';
 import DocumentTitle from 'react-document-title';
 import Hero from '../components/Hero';
+import { Link } from 'react-router';
 
 export default () => (
   <DocumentTitle title="Syncano">

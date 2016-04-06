@@ -1,29 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router';
-import { prefixLink } from 'gatsby-helpers';
 import classNames  from 'classnames';
 
-export default React.createClass({
-  propTypes () {
-    return {
-      children: React.PropTypes.any,
-    }
-  },
+export default ({variant, headline, textline, children}) => {
+  const heroClass = classNames({
+    'hero': true,
+    'hero--home': (variant == 'home'),
+  });
 
-  render () {
-    var heroClass = classNames({
-      'hero': true,
-      'hero--home': (this.props.variant == 'home'),
-    });
-
-    return (
-      <div className={heroClass}>
-        <div className="inner">
-          <h2>{this.props.headline}</h2>
-          <p>{this.props.textline}</p>
-          {this.props.children}
-        </div>
+  return (
+    <div className={heroClass}>
+      <div className="inner">
+        <h2>{headline}</h2>
+        <p>{textline}</p>
+        {children}
       </div>
-    )
-  }
-});
+    </div>
+  );
+}

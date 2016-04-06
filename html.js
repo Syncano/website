@@ -2,13 +2,13 @@ import React from 'react';
 import DocumentTitle from 'react-document-title';
 
 module.exports = React.createClass({
-  propTypes () {
+  propTypes() {
     return {
       title: React.PropTypes.string,
     }
   },
 
-  render () {
+  render() {
     const title = DocumentTitle.rewind();
 
     let cssLink;
@@ -20,12 +20,22 @@ module.exports = React.createClass({
       <html lang="en">
       <head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <meta
+          name="viewport"
+          content="initial-scale=1.0, user-scalable=no"
+        />
         <title>{title}</title>
         {cssLink}
+        <link
+          href="https://fonts.googleapis.com/css?family=Roboto:400,700"
+          rel="stylesheet"
+        />
       </head>
       <body>
-        <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
+        <div
+          id="react-mount"
+          dangerouslySetInnerHTML={{ __html: this.props.body }}
+        />
         <script src="/bundle.js" />
       </body>
       </html>
