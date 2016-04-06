@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+import 'breakpoint-sass';
 import 'normalize.css/normalize.css';
 import 'styles/styles';
 
@@ -15,7 +16,7 @@ export default React.createClass({
     return (
       <div>
         <div className="wrapper">
-        {this.props.children}
+          {this.props.children}
         </div>
       </div>
     )
