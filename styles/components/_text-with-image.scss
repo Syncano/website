@@ -1,0 +1,34 @@
+.text-with-image {
+  background: #fff;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 88px;
+
+  .text-with-image__image {
+    padding: 0 40px;
+
+    img {
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .text-with-image__text {
+    h2 {
+      margin-top: 35px;
+      font-size: 20px;
+      color: $color-text-headline;
+      font-weight: bold;
+    }
+
+    p {
+      line-height: 1.5em;
+      margin-top: 32px;
+    }
+
+    .button {
+      margin-top: 40px;
+    }
+  }
+}
