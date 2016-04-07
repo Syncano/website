@@ -12,7 +12,7 @@ export default () => (
       <Hero
         variant="home"
         headline="Rethink how you build apps"
-        textline="A complete platform to orchestrate your app's ecosystem."
+        textline="A complete platform to orchestrate your app’s ecosystem."
       >
         <Link
           to="/about/"
@@ -33,6 +33,20 @@ export default () => (
           className="button"
         >
           View All Features
+        </Link>
+      </TextWithImage>
+      <TextWithImage
+        variant=""
+        theme="purple"
+        imageSrc={prefixLink('images/sample-illustration.svg')}
+        headline="Customize your APIs and features"
+        textline="Every app’s needs are different. With Sockets, we give you the flexibility to combine and configure the building blocks your application needs. The backend work is mostly done - you’ll be building stronger and better apps, faster!"
+      >
+        <Link
+          to="/about/"
+          className="button"
+        >
+          More About Sockets
         </Link>
       </TextWithImage>
     </div>

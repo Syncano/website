@@ -2,10 +2,11 @@
   background: #fff;
   text-align: center;
   padding-top: 80px;
-  padding-bottom: 88px;
+  padding-bottom: 80px;
 
   .text-with-image__image {
-    padding: 0 40px;
+    padding-left: 40px;
+    padding-right: 40px;
 
     img {
       max-width: 100%;
@@ -20,6 +21,7 @@
       font-size: 20px;
       color: $color-text-headline;
       font-weight: bold;
+      line-height: 1.5em;
     }
 
     p {
@@ -29,6 +31,22 @@
 
     .button {
       margin-top: 40px;
+    }
+  }
+
+  &.text-with-image--purple {
+    background: $color-main-purple;
+
+    h2, .button {
+      color: #fff;
+    }
+
+    p {
+      color: rgba(255, 255, 255, .85);
+    }
+
+    .button {
+      border-color: rgba(255, 255, 255, .5);
     }
   }
 }
