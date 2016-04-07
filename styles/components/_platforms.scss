@@ -25,12 +25,10 @@
       height: 40px;
     }
 
-    &.platforms__item--more {
-      img {
-        height: 20px;
-        position: relative;
-        top: -10px;
-      }
+    &.platforms__item--more img {
+      height: 20px;
+      position: relative;
+      top: -10px;
     }
   }
 
@@ -44,10 +42,8 @@
     .platforms__item {
       margin-right: 0;
 
-      &.platforms__item--more {
-        img {
-          top: 10px;
-        }
+      &.platforms__item--more img {
+        top: 10px;
       }
     }
   }
@@ -58,11 +54,9 @@
         height: 60px;
       }
 
-      &.platforms__item--more {
-        img {
-          height: 29px;
-          top: 16px;
-        }
+      &.platforms__item--more img {
+        height: 29px;
+        top: 16px;
       }
     }
   }
