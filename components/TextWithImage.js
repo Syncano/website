@@ -6,7 +6,7 @@ export default ({variant, theme, imageSrc, imageAlt, headline, textline, childre
     'text-with-image': true,
     'text-with-image--image-left': (variant == 'image-left'),
     'text-with-image--image-right': (variant == 'image-right'),
-    'text-with-image--purple': (theme == 'purple'),
+    'text-with-image--purple': (theme == 'purple')
   });
 
   return (
@@ -14,7 +14,10 @@ export default ({variant, theme, imageSrc, imageAlt, headline, textline, childre
       <div className="inner">
         <div className="text-with-image__image">
           <div className="text-with-image__image__inner">
-            <img src={imageSrc} alt={imageAlt} />
+            <img
+              src={imageSrc}
+              alt={imageAlt}
+            />
           </div>
         </div>
         <div className="text-with-image__text">

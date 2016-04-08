@@ -91,10 +91,8 @@
       }
     }
 
-    &.text-with-image--image-right {
-      .text-with-image__image {
-        order: 1;
-      }
+    &.text-with-image--image-right .text-with-image__image {
+      order: 1;
     }
   }
 
@@ -102,10 +100,8 @@
     padding-top: 140px;
     padding-bottom: 140px;
 
-    .text-with-image__image {
-      .text-with-image__image__inner {
-        padding: 0 45px;
-      }
+    .text-with-image__image .text-with-image__image__inner {
+      padding: 0 45px;
     }
 
     .text-with-image__text {
