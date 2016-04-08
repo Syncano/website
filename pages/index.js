@@ -3,7 +3,7 @@ import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
 import Hero from '../components/Hero';
 import Platforms from '../components/Platforms';
-import CtaSection from '../components/CtaSection';
+import CTASection from '../components/CTASection';
 
 export default () => (
   <DocumentTitle title="Syncano">
@@ -21,14 +21,14 @@ export default () => (
         </Link>
       </Hero>
       <Platforms />
-      <CtaSection>
+      <CTASection>
         <Link
           to="/about/"
           className="button button-large button-featured"
         >
           Get Started for Free
         </Link>
-      </CtaSection>
+      </CTASection>
     </div>
   </DocumentTitle>
 );
