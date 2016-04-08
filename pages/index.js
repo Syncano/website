@@ -23,7 +23,7 @@ export default () => (
       </Hero>
       <Platforms />
       <TextWithImage
-        variant=""
+        variant="image-left"
         imageSrc={prefixLink('images/sample-illustration.svg')}
         headline="Focus on your app"
         textline="Forget about managing infrastructure and redundant code. Spend your time writing code specific for your app. Instantly scale to support millions of users without learning the nuts and bolts of handling servers."
@@ -36,7 +36,7 @@ export default () => (
         </Link>
       </TextWithImage>
       <TextWithImage
-        variant=""
+        variant="image-right"
         theme="purple"
         imageSrc={prefixLink('images/sample-illustration.svg')}
         headline="Customize your APIs and features"
@@ -47,6 +47,19 @@ export default () => (
           className="button"
         >
           More About Sockets
+        </Link>
+      </TextWithImage>
+      <TextWithImage
+        variant="image-left"
+        imageSrc={prefixLink('images/sample-illustration.svg')}
+        headline="Run server-side logic in the cloud"
+        textline="With Scripts, run your code in response to events, updates to data, in-app activity or by a particular schedule. Use multiple languages, integrate with anything."
+      >
+        <Link
+          to="/about/"
+          className="button"
+        >
+          More About Scripts
         </Link>
       </TextWithImage>
     </div>

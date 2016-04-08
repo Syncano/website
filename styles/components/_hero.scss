@@ -2,7 +2,10 @@
   min-height: 500px;
   text-align: center;
   padding-top: 140px;
-  background: #eee;
+  background-color: #eee;
+  background-repeat: no-repeat;
+  background-position: 30% 50%;
+  background-size: cover;
 
   h2, p {
     margin-left: auto;
@@ -30,17 +33,19 @@
   }
 
   &.hero--home {
-    background: url("../pages/images/Hero-home-large.jpg") no-repeat top;
+    background-image: url("../pages/images/Hero-home-large.jpg");
   }
 
   @include small {
     padding-top: 55px;
+    background-position: 46% 50%;
   }
 
   @include medium {
     min-height: 757px;
     text-align: left;
     padding-top: 300px;
+    background-position: 50% 50%;
 
     h2, p {
       max-width: none;

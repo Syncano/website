@@ -4,6 +4,8 @@ import classNames  from 'classnames';
 export default ({variant, theme, imageSrc, headline, textline, children}) => {
   const textWithImageClass = classNames({
     'text-with-image': true,
+    'text-with-image--image-left': (variant == 'image-left'),
+    'text-with-image--image-right': (variant == 'image-right'),
     'text-with-image--purple': (theme == 'purple'),
   });
 
@@ -11,7 +13,9 @@ export default ({variant, theme, imageSrc, headline, textline, children}) => {
     <div className={textWithImageClass}>
       <div className="inner">
         <div className="text-with-image__image">
-          <img src={imageSrc} alt={headline} />
+          <div className="text-with-image__image__inner">
+            <img src={imageSrc} alt={headline} />
+          </div>
         </div>
         <div className="text-with-image__text">
           <h2>{headline}</h2>
