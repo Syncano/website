@@ -1,6 +1,6 @@
 .inner {
-  padding-left: 11px;
-  padding-right: 11px;
+  padding-left: 10px;
+  padding-right: 10px;
   max-width: 1180px;
   margin-left: auto;
   margin-right: auto;
@@ -11,13 +11,13 @@
     padding-right: 55px;
   }
 
-  @include large {
+  @include very-large {
     padding-left: 110px;
     padding-right: 110px;
   }
 
   &.inner--platforms {
-    @include large {
+    @include very-large {
       padding-left: 110px + 25;
       padding-right: 110px + 25;
     }

@@ -1,15 +1,14 @@
 * {
   box-sizing: border-box;
   margin: 0;
-
   line-height: 1;
   font-weight: normal;
 }
 
 body {
   font-size: 14px;
-  padding-bottom: 50px;
   background: $color-main-silver;
+  color: $color-text-base;
 
   @include medium {
     font-size: 16px;

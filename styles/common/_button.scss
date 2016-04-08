@@ -2,20 +2,34 @@
   display: inline-block;
   border-radius: 4px;
   font-weight: bold;
-  padding: 15px 20px;
-  letter-spacing: -.1px;
-  
+  padding: 13px;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: $color-main-blue;
+  border-style: solid;
+  border-width: 2px;
+  min-width: 170px;
+  text-align: center;
+
   &.button-large {
+    padding: 15px;
+    min-width: 210px;
     text-transform: uppercase;
+    font-size: 14px;
   }
 
   &.button-featured {
-    text-transform: uppercase;
     background: $color-main-yellow;
     color: $color-text-headline;
+    border-style: none;
   }
 
   @include medium {
-    padding: 19px 32px;
+    letter-spacing: -.1px;
+
+    &.button-large {
+      padding: 20px;
+      min-width: 260px;
+    }
   }
 }
