@@ -4,7 +4,7 @@ import classNames  from 'classnames';
 export default ({variant, headline, textline, children}) => {
   const heroClass = classNames({
     'hero': true,
-    'hero--home': (variant == 'home'),
+    'hero--home': (variant == 'home')
   });
 
   return (
