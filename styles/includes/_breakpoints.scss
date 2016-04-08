@@ -40,3 +40,9 @@ $full: 1401px;
     @content;
   }
 }
+
+@mixin retina {
+  @media  only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+    @content;
+  }
+}
