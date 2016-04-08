@@ -29,9 +29,9 @@
     margin-top: 50px;
   }
 
-  // &.hero--home {
-  //   background: url("../images/Hero-home.jpg") no-repeat top;
-  // }
+  &.hero--home {
+    background: url("../pages/images/Hero-home-large.jpg") no-repeat top;
+  }
 
   @include small {
     padding-top: 55px;
