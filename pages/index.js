@@ -1,9 +1,7 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import Hero from '../components/Hero';
-import Platforms from '../components/Platforms';
-import TextWithImage from '../components/TextWithImage';
+import { Hero, Platforms, TextWithImage } from '../components';
 
 export default () => (
   <DocumentTitle title="Syncano">
@@ -25,7 +23,7 @@ export default () => (
         variant="image-left"
         image={
           <img
-            src="images/sample-illustration.svg"
+            src={require('../images/sample-illustration.svg')}
             alt="sample-illustration"
           />
         }
@@ -44,7 +42,7 @@ export default () => (
         theme="purple"
         image={
           <img
-            src="images/sample-illustration.svg"
+            src={require('../images/sample-illustration.svg')}
             alt="sample-illustration"
           />
         }
@@ -62,7 +60,7 @@ export default () => (
         variant="image-left"
         image={
           <img
-            src="images/sample-illustration.svg"
+            src={require('../images/sample-illustration.svg')}
             alt="sample-illustration"
           />
         }
