@@ -36,7 +36,8 @@ export default React.createClass({
   },
 
   renderConversionTag() {
-    return this.state.converted ? <Adwords.Conversion/> : null;
+    // return this.state.converted ? <Adwords.Conversion/> : null;
+    return null;
   },
 
   render() {
