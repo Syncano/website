@@ -5,7 +5,7 @@
 
 body {
   font-size: 14px;
-  background: #f1f2f4;
+  background: $color-body-bg;
   color: $color-text-base;
 
   @include medium {
