@@ -1,7 +1,7 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { Hero, Platforms, TextWithImage } from '../components';
+import { CTASection, Hero, Platforms, TextWithImage } from '../components';
 
 export default () => (
   <DocumentTitle title="Syncano">
@@ -74,6 +74,14 @@ export default () => (
           More About Scripts
         </Link>
       </TextWithImage>
+      <CTASection>
+        <Link
+          to="/about/"
+          className="button button-large button-featured"
+        >
+          Get Started for Free
+        </Link>
+      </CTASection>
     </div>
   </DocumentTitle>
 );
