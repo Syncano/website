@@ -6,6 +6,7 @@ export default ({variant, theme, image, headline, textline, children}) => {
     'text-with-image': true,
     'text-with-image--image-left': (variant == 'image-left'),
     'text-with-image--image-right': (variant == 'image-right'),
+    'text-with-image--gray': (theme == 'gray'),
     'text-with-image--purple': (theme == 'purple')
   });
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { CTASection, Hero, Platforms, TextWithImage } from '../components';
+import { CTASection, Hero, Platforms, TextColumns, TextWithImage } from '../components';
 
 export default () => (
   <DocumentTitle title="Syncano">
@@ -21,6 +21,7 @@ export default () => (
       <Platforms />
       <TextWithImage
         variant="image-left"
+        theme="gray"
         image={
           <img
             src={require('../images/sample-illustration.svg')}
@@ -56,6 +57,38 @@ export default () => (
           More About Sockets
         </Link>
       </TextWithImage>
+      <TextColumns>
+        <TextColumns.Column
+          icon={
+            <img
+              src={require('../images/icons/stack.svg')}
+              alt="stack"
+            />
+          }
+          headline="Simplify your stack"
+          text="Stop writing code to connect disparate backend systems. Integrate anything, all from one place. Provide one more line of text here."
+        />
+        <TextColumns.Column
+          icon={
+            <img
+              src={require('../images/icons/file.svg')}
+              alt="file"
+            />
+          }
+          headline="Control your data schema"
+          text="Create sophisticated data relations and apply multiple filters. Easily manage your data from our user-friendly dashboard."
+        />
+        <TextColumns.Column
+          icon={
+            <img
+              src={require('../images/icons/clock.svg')}
+              alt="clock"
+            />
+          }
+          headline="Code and prototype faster"
+          text="Write your own code snippets and prototype them in the browser with built-in traces. Get your MVP to market and save development costs."
+        />
+      </TextColumns>
       <TextWithImage
         variant="image-left"
         image={
