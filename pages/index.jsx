@@ -127,7 +127,15 @@ export default React.createClass({
       
           </div>
         </div>
-        <div className="data">
+        <div className="build text-center">
+          <h2>Customize your APIs and features</h2>
+          <br/>
+          <p>Every app’s needs are different. With Sockets, we give you the flexibility to combine and configure the building blocks your application needs. Build stronger and better apps, faster!</p>
+          <div className="text-center">
+            <img src={require('../images/sockets.png')} alt="sockets"/>
+          </div>
+        </div>
+        <div className="build">
           <div className="container">
             <h2 className="text-center">Define your data schema based on your apps’ needs</h2>
             <h5 className="text-center">Build complex data structures with <a href="http://docs.syncano.io/docs/classes" target="_blank">Classes</a></h5>
@@ -149,7 +157,7 @@ export default React.createClass({
             </div>
           </div>
         </div>
-        <div className="build text-center">
+        <div className="data text-center">
           <h2>Add real-time communication with Channels</h2>
           <br/>
           <p>Subscribe to data changes, send custom notification messages, give users different permission types.<br/>Use Rooms to separate real-time data inside a <a href="http://docs.syncano.io/docs/realtime-communication" target="_blank">Channel</a>.</p>
