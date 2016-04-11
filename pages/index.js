@@ -1,7 +1,7 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { CTASection, Hero, Platforms, TextWithImage } from '../components';
+import { CTASection, Hero, Platforms, TextWithBottomImage, TextWithImage } from '../components';
 
 export default () => (
   <DocumentTitle title="Syncano">
@@ -74,6 +74,23 @@ export default () => (
           More About Scripts
         </Link>
       </TextWithImage>
+      <TextWithBottomImage
+        headline="Get answers from our developers"
+        textline="Our engineers specialize in the tricky and technical investigations of our platform. When you have questions, you’ll get timely answers from our team."
+        image={
+          <img
+            src={require('../images/robot.svg')}
+            alt="robot"
+          />
+        }
+      >
+        <Link
+          to="/about/"
+          className="button"
+        >
+          Get Support
+        </Link>
+      </TextWithBottomImage>
       <CTASection>
         <Link
           to="/about/"
