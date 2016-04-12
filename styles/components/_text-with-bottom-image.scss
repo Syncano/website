@@ -1,0 +1,55 @@
+.text-with-bottom-image {
+  background: #fff;
+  text-align: center;
+  padding-top: 80px;
+
+  h2 {
+    font-size: 20px;
+    color: $color-text-headline;
+    font-weight: bold;
+    line-height: 1.5em;
+  }
+
+  p {
+    line-height: 1.5em;
+    margin-top: 25px;
+  }
+
+  .button {
+    margin-top: 40px;
+  }
+
+  img {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+  }
+
+  @include medium {
+    h2 {
+      font-size: 28px;
+    }
+
+    p {
+      line-height: 1.75em;
+    }
+
+    img {
+      margin-top: 80px;
+      max-width: 100%;
+    }
+  }
+
+  @include large {
+    padding-top: 140px;
+
+    h2 {
+      font-size: 36px;
+    }
+
+    p {
+      margin-top: 40px;
+    }
+  }
+}
