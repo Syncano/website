@@ -25,7 +25,8 @@
     "react-document-title": "^2.0.1",
     "react-router": "^2.0.1",
     "toml-js": "0.0.8",
-    "typography": "^0.7.0"
+    "typography": "^0.7.0",
+    "underscore.string": "^3.3.4"
   },
   "devDependencies": {
     "babel-preset-react-hmre": "^1.1.1",

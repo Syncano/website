@@ -1,0 +1,70 @@
+.top-bar {
+  overflow: hidden;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  .top-bar__logo {
+    float: left;
+  }
+
+  .top-bar__nav {
+    float: right;
+
+    .top-bar__nav__menu {
+      display: none;
+      text-align: right;
+
+      li {
+        display: inline-block;
+        margin-right: 30px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .button {
+          min-width: 0;
+          height: 34px;
+          line-height: 30px;
+          padding: 0;
+          color: transparentize(#5F6C7A, .5);
+
+          &.button-filled {
+            padding: 0 18px;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  @include medium {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    .top-bar__logo img {
+      height: 18px;
+      margin-top: 10px;
+    }
+
+    .top-bar__nav {
+      .top-bar__nav__hamburger {
+        display: none;
+      }
+
+      .top-bar__nav__menu {
+        display: block;
+      }
+    }
+  }
+
+  @include large {
+    .top-bar__nav .top-bar__nav__menu li {
+      margin-right: 35px;
+    }
+  }
+}
