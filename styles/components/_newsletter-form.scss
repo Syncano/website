@@ -1,0 +1,48 @@
+.newsletter-form {
+  margin-top: 14px;
+
+  form {
+    font-size: 0;
+  }
+
+  .newsletter-form__field {
+    border-radius: 4px;
+    overflow: hidden;
+    display: inline-block;
+    width: 270px;
+
+    ::-webkit-input-placeholder { color: transparentize($color-text-base, .5); }
+    :-moz-placeholder { color: transparentize($color-text-base, .5); }
+    ::-moz-placeholder { color: transparentize($color-text-base, .5); }
+    :-ms-input-placeholder { color: transparentize($color-text-base, .5); }
+
+    .newsletter-form__field__input,
+    .newsletter-form__field__button {
+      display: inline-block;
+      height: 34px;
+      line-height: 14px;
+      vertical-align: middle;
+      font-size: 12px;
+      padding: 10px;
+    }
+
+    .newsletter-form__field__input {
+      background: #fff;
+      width: calc(100% - 80px);
+      color: transparentize($color-text-base, .5);
+
+      &.is-invalid {
+        box-shadow: 0 0 10px rgba(255, 0, 0, .5) inset;
+      }
+    }
+
+    .newsletter-form__field__button {
+      background: $color-main-blue;
+      color: #fff;
+      text-align: center;
+      font-weight: bold;
+      text-transform: uppercase;
+      width: 80px;
+    }
+  }
+}

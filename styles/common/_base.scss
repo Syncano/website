@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  outline: none;
 }
 
 body {
@@ -18,10 +19,22 @@ h1, h2, h3, h4 {
   line-height: 1;
 }
 
+ul, ol {
+  padding: 0;
+  list-style: none;
+}
+
 img {
   display: block;
 }
 
 a {
   text-decoration: none;
+}
+
+input, button {
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
 }

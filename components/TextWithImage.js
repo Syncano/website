@@ -26,4 +26,4 @@ export default ({variant, theme, image, headline, textline, children}) => {
       </div>
     </div>
   );
-}
+};
