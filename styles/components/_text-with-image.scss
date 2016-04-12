@@ -6,7 +6,7 @@
 
   .text-with-image__image {
     img {
-      max-width: 60%;
+      max-width: 80%;
       margin-left: auto;
       margin-right: auto;
     }
@@ -26,13 +26,17 @@
     }
 
     p {
-      line-height: 1.5em;
+      line-height: 1.75em;
       margin-top: 25px;
     }
 
     .button {
       margin-top: 40px;
     }
+  }
+
+  &.text-with-image--gray {
+    background: $color-main-gray;
   }
 
   &.text-with-image--purple {
@@ -84,10 +88,6 @@
       h2 {
         font-size: 28px;
         margin-top: 0;
-      }
-
-      p {
-        line-height: 1.75em;
       }
     }
 

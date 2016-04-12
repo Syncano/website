@@ -23,6 +23,10 @@
     }
   }
 
+  &.inner--text-columns {
+    max-width: 1180px + (2 * 20px);
+  }
+  
   &.inner--text-with-bottom-image {
     max-width: 630px;
   }

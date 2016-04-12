@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>stack 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Mobile-design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.9">
+        <g id="Mobile-Portrait" transform="translate(-65.000000, -1848.000000)" fill="#0070D3">
+            <g id="Group-4" transform="translate(65.000000, 1848.000000)">
+                <g id="stack-2">
+                    <g id="Layer_1">
+                        <path d="M2,15 L2,5 C1.00235357,5.49247366 0,6.82494353 0,8.39449701 L0,20.3987301 C0,22.3884317 1.61156829,24 3.60126992,24 L15.605503,24 C17.1750565,24 18.5075263,22.9976465 19,22 L3,22 C2.93803604,21.5991534 2.40084661,22.061964 2,21 L2,15 Z M20.4375,0 L8.5625,0 C6.59421875,0 5,1.59421875 5,3.5625 L5,15.4375 C5,17.4057812 6.59421875,19 8.5625,19 L20.4375,19 C22.4057812,19 24,17.4057812 24,15.4375 L24,3.5625 C24,1.59421875 22.4057812,0 20.4375,0 L20.4375,0 Z M22,15.75 C22,16.440625 21.440625,17 20.75,17 L8.25,17 C7.559375,17 7,16.440625 7,15.75 L7,3.25 C7,2.559375 7.559375,2 8.25,2 L20.75,2 C21.440625,2 22,2.559375 22,3.25 L22,15.75 L22,15.75 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

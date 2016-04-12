@@ -13,5 +13,12 @@ exports.modifyWebpackConfig = function(config, env) {
     return cfg;
   });
 
+  config.removeLoader('svg');
+  config.loader('svg', function(cfg) {
+    cfg.test = /\.svg/;
+    cfg.loader = 'file-loader';
+    return cfg;
+  });
+
   return config;
 };
