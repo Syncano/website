@@ -56,3 +56,7 @@
 .documentation-page ul {
     font-family: 'Roboto', sans-serif !important;
 }
+
+.home .data h5 {
+    line-height: 1.6;
+}

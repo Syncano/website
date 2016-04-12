@@ -1,6 +1,5 @@
 import React from 'react';
 import { RouteHandler, Link } from 'react-router';
-import _ from 'lodash';
 import Scroll from 'react-scroll';
 
 import { Adwords, Hello, Landing } from '../../components/';
@@ -139,7 +138,14 @@ export default React.createClass({
 
           </div>
         </div>
-        <div className="data">
+        <div className="data text-center">
+          <h2>Customize your APIs and features</h2>
+          <h5>Every app’s needs are different. With Sockets, we give you the flexibility to combine and<br/>configure the building blocks your application needs. Build stronger and better apps, faster!</h5>
+          <div className="text-center">
+            <img src={require('../../images/sockets.png')} alt="sockets"/>
+          </div>
+        </div>
+        <div className="data" style={{background: '#fff'}}>
           <div className="container">
             <h2 className="text-center">Define your data schema based on your apps’ needs</h2>
             <h5 className="text-center">Build complex data structures with Classes</h5>
@@ -161,10 +167,10 @@ export default React.createClass({
             </div>
           </div>
         </div>
-        <div className="build text-center">
+        <div className="data text-center">
           <h2>Add real-time communication with Channels</h2>
           <br/>
-          <p>Subscribe to data changes, send custom notification messages, give users different permission types.<br/>Use Rooms to separate real-time data inside a Channel.</p>
+          <h5>Subscribe to data changes, send custom notification messages, give users different permission types.<br/>Use Rooms to separate real-time data inside a Channel.</h5>
           <br/><br/>
           <Scroll.Link to="landing-contact-form" smooth={true} offset={-90} duration={500} style={{cursor: 'pointer'}}>
             <div className="btn btn-dark-blue cta-button mixpanel-btn" id="homepage-hero" style={{marginBottom: 0, background: '#ffcc00', color: '#363636'}}>SIGN UP FOR FREE</div>
@@ -187,123 +193,6 @@ export default React.createClass({
             <img src={require('../../images/slider/slide3.jpg')} />
           </div>
           <div className="shadow"></div>
-        </div>
-        <div className="solutions">
-          <div className="container text-center">
-            <h2>Install code blocks to your apps with Solutions</h2>
-            <p>Stop wasting time on CRUD operations or creating code that's already been written.<br/>Simply enter our directory, find what you need, add it to any of your instances and start building within seconds.</p>
-            <div className="row">
-              <div className="col-md-4 item-8">
-                <div className="solutions-item">
-                  <div className="solutions-item-header">
-                    <div className="solutions-item-header__column">
-                      <p className="solutions-item__title">QRCode Generator</p>
-                    </div>
-                    <div className="solutions-item-header__column">
-                      <div className="solutions-item__avatar" style={{backgroundImage: `url(${require('./QR.png')})`}}></div>
-                    </div>
-                  </div>
-                  <div className="solutions-item__description">This solution generates and stores QRCodes</div>
-                  <div className="solutions-item__meta">
-                    <div className="solutions-item__meta__section">
-                      <div className="solutions-item__meta__section__column">
-                        <i className="zmdi zmdi-label solutions-item__meta__icon solutions-item__meta__icon--tags"></i>
-                      </div>
-                      <div className="solutions-item__meta__section__column solutions-item__meta__section__column--flex">
-                        <ul>
-                          <li>python, </li>
-                          <li>image, </li>
-                          <li>qrcode</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="solutions-item__meta__section">
-                      <div className="solutions-item__meta__section__column">
-                        <i className="zmdi zmdi-info-outline solutions-item__meta__icon solutions-item__meta__icon--version--stable"></i>
-                      </div>
-                      <div className="solutions-item__meta__section__column">
-                        stable (2.2)
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-4 item-9">
-                <div className="solutions-item">
-                  <div className="solutions-item-header">
-                    <div className="solutions-item-header__column">
-                      <p className="solutions-item__title">Send SMS</p>
-                    </div>
-                    <div className="solutions-item-header__column">
-                      <div className="solutions-item__avatar" style={{backgroundImage: `url(${require('./Comments.png')})`}}></div>
-                    </div>
-                  </div>
-                  <div className="solutions-item__description">Integrate with Twilio to send text and picture messages with Scripts calls!</div>
-                  <div className="solutions-item__meta">
-                    <div className="solutions-item__meta__section">
-                      <div className="solutions-item__meta__section__column">
-                        <i className="zmdi zmdi-label solutions-item__meta__icon solutions-item__meta__icon--tags"></i>
-                      </div>
-                      <div className="solutions-item__meta__section__column solutions-item__meta__section__column--flex">
-                        <ul>
-                          <li>python, </li>
-                          <li>mms, </li>
-                          <li>sms, </li>
-                          <li>text, </li>
-                          <li>twilio</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="solutions-item__meta__section">
-                      <div className="solutions-item__meta__section__column">
-                        <i className="zmdi zmdi-info-outline solutions-item__meta__icon solutions-item__meta__icon--version--stable"></i>
-                      </div>
-                      <div className="solutions-item__meta__section__column">
-                        stable (1.0)
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-4 item-10">
-                <div className="solutions-item">
-                  <div className="solutions-item-header">
-                    <div className="solutions-item-header__column">
-                      <p className="solutions-item__title">PDF to Image Converter</p>
-                    </div>
-                    <div className="solutions-item-header__column">
-                      <div className="solutions-item__avatar" style={{backgroundImage: `url(${require('./Acrobat.png')})`}}></div>
-                    </div>
-                  </div>
-                  <div className="solutions-item__description">This solution lets you convert PDFs and store them as images in syncano</div>
-                  <div className="solutions-item__meta">
-                    <div className="solutions-item__meta__section">
-                      <div className="solutions-item__meta__section__column">
-                        <i className="zmdi zmdi-label solutions-item__meta__icon solutions-item__meta__icon--tags"></i>
-                      </div>
-                      <div className="solutions-item__meta__section__column solutions-item__meta__section__column--flex">
-                        <ul>
-                          <li>python, </li>
-                          <li>image, </li>
-                          <li>convert, </li>
-                          <li>mashape, </li>
-                          <li>pdf</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="solutions-item__meta__section">
-                      <div className="solutions-item__meta__section__column">
-                        <i className="zmdi zmdi-info-outline solutions-item__meta__icon solutions-item__meta__icon--version--stable"></i>
-                      </div>
-                      <div className="solutions-item__meta__section__column">
-                        stable (1.0)
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
         <div className="showcase">
           <div className="container text-center">
@@ -328,7 +217,7 @@ export default React.createClass({
         <div className="support">
           <div className="container text-center">
             <h2>Get real support from real developers</h2>
-            <p>We’re a small but growing team and your success is vital to our success.<br/>When you have questions, you’ll get answers from our own developers.</p>
+            <h5>We’re a small but growing team and your success is vital to our success.<br/>When you have questions, you’ll get answers from our own developers.</h5>
           </div>
         </div>
         <Scroll.Element name="landing-contact-form">
