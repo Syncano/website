@@ -7,6 +7,10 @@
   left: 0;
   right: 0;
 
+  .inner {
+    overflow: hidden;
+  }
+
   .top-bar__logo {
     float: left;
   }
@@ -66,5 +70,9 @@
     .top-bar__nav .top-bar__nav__menu li {
       margin-right: 35px;
     }
+  }
+
+  @include full {
+    top: 30px;
   }
 }
