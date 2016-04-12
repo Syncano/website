@@ -8,7 +8,12 @@ export default (props) => {
   `;
 
   if (props.writeKey) {
-    return <script type="text/javascript" dangerouslySetInnerHTML={{__html: snippet}}></script>;
+    return (
+      <script
+        type="text/javascript"
+        dangerouslySetInnerHTML={{__html: snippet}}
+      ></script>
+    );
   }
 
   return null;
