@@ -3,11 +3,13 @@ import Formsy from 'formsy-react';
 
 export default React.createClass({
   mixins: [Formsy.Mixin],
+
   changeValue(event) {
     this.setValue(event.currentTarget.value);
   },
+
   render() {
-    let className = this.showError() ? 'is-invalid' : '';
+    const className = this.showError() ? 'is-invalid' : '';
 
     return (
       <input

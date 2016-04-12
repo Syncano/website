@@ -1,15 +1,12 @@
 .newsletter-form {
   margin-top: 14px;
 
-  form {
-    font-size: 0;
-  }
-
   .newsletter-form__field {
     border-radius: 4px;
     overflow: hidden;
-    display: inline-block;
     width: 270px;
+    margin-left: auto;
+    margin-right: auto;
 
     ::-webkit-input-placeholder { color: transparentize($color-text-base, .5); }
     :-moz-placeholder { color: transparentize($color-text-base, .5); }

@@ -8,8 +8,9 @@ export default React.createClass({
       completed: false
     }
   },
+
   submit(model) {
-    let subscribeEmail = model.email;
+    const subscribeEmail = model.email;
 
     analytics.alias(subscribeEmail);
     analytics.identify(subscribeEmail, {
@@ -25,6 +26,7 @@ export default React.createClass({
       completed: true
     })
   },
+
   renderForm() {
     return (
       <Formsy.Form onSubmit={this.submit}>
@@ -40,6 +42,7 @@ export default React.createClass({
       </Formsy.Form>
     )
   },
+
   renderThankyou() {
     return (
       <div className="newsletter-form__alert">
@@ -47,8 +50,10 @@ export default React.createClass({
       </div>
     )
   },
+
   render() {
-    let content = this.state.completed ? this.renderThankyou() : this.renderForm();
+    const {completed} = this.state;
+    const content = completed ? this.renderThankyou() : this.renderForm();
 
     return (
       <div className="newsletter-form">

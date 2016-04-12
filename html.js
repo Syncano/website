@@ -9,6 +9,7 @@ module.exports = React.createClass({
       title: React.PropTypes.string,
     }
   },
+
   render() {
     const title = DocumentTitle.rewind();
 

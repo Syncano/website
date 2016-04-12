@@ -16,24 +16,16 @@ export default () => (
           <h4>Company</h4>
           <ul>
             <li>
-              <Link to="/about/">
-                About Us
-              </Link>
+              <Link to="/about/">About Us</Link>
             </li>
             <li>
-              <Link to="/about/">
-                Career
-              </Link>
+              <Link to="/about/">Career</Link>
             </li>
             <li>
-              <Link to="/about/">
-                Contact Us
-              </Link>
+              <Link to="/about/">Contact Us</Link>
             </li>
             <li>
-              <Link to="/about/">
-                Terms and Legal
-              </Link>
+              <Link to="/about/">Terms and Legal</Link>
             </li>
           </ul>
         </div>
@@ -41,24 +33,16 @@ export default () => (
           <h4>Resources</h4>
           <ul>
             <li>
-              <Link to="/about/">
-                Blog
-              </Link>
+              <Link to="/about/">Blog</Link>
             </li>
             <li>
-              <Link to="/about/">
-                Docs
-              </Link>
+              <Link to="/about/">Docs</Link>
             </li>
             <li>
-              <Link to="/about/">
-                Plans &amp; Pricing
-              </Link>
+              <Link to="/about/">Plans &amp; Pricing</Link>
             </li>
             <li>
-              <Link to="/about/">
-                Solutions
-              </Link>
+              <Link to="/about/">Solutions</Link>
             </li>
           </ul>
         </div>
@@ -66,24 +50,16 @@ export default () => (
           <h4>More</h4>
           <ul>
             <li>
-              <Link to="/about/">
-                Help
-              </Link>
+              <Link to="/about/">Help</Link>
             </li>
             <li>
-              <Link to="/about/">
-                Tutorials
-              </Link>
+              <Link to="/about/">Tutorials</Link>
             </li>
             <li>
-              <Link to="/about/">
-                Libraries
-              </Link>
+              <Link to="/about/">Libraries</Link>
             </li>
             <li>
-              <Link to="/about/">
-                Status
-              </Link>
+              <Link to="/about/">Status</Link>
             </li>
           </ul>
         </div>
@@ -91,29 +67,19 @@ export default () => (
           <h4>Social Media</h4>
           <ul>
             <li>
-              <Link to="/about/">
-                Twitter
-              </Link>
+              <Link to="/about/">Twitter</Link>
             </li>
             <li>
-              <Link to="/about/">
-                Facebook
-              </Link>
+              <Link to="/about/">Facebook</Link>
             </li>
             <li>
-              <Link to="/about/">
-                Github
-              </Link>
+              <Link to="/about/">Github</Link>
             </li>
             <li>
-              <Link to="/about/">
-                LinkedIn
-              </Link>
+              <Link to="/about/">LinkedIn</Link>
             </li>
             <li>
-              <Link to="/about/">
-                Dribbble
-              </Link>
+              <Link to="/about/">Dribbble</Link>
             </li>
           </ul>
         </div>
