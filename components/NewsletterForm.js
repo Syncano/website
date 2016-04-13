@@ -53,11 +53,10 @@ export default React.createClass({
 
   render() {
     const {completed} = this.state;
-    const content = completed ? this.renderThankyou() : this.renderForm();
 
     return (
       <div className="newsletter-form">
-        {content}
+        {completed ? this.renderThankyou() : this.renderForm()}
       </div>
     )
   }
