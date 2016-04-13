@@ -4,6 +4,7 @@ import Platforms from './Platforms';
 import TextColumns from './TextColumns';
 import TextWithBottomImage from './TextWithBottomImage';
 import TextWithImage from './TextWithImage';
+import TopBar from './TopBar';
 
 export default {
   CTASection,
@@ -11,5 +12,6 @@ export default {
   Platforms,
   TextColumns,
   TextWithBottomImage,
-  TextWithImage
+  TextWithImage,
+  TopBar
 };

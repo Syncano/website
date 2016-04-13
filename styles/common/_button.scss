@@ -18,6 +18,16 @@
     font-size: 14px;
   }
 
+  &.button-filled {
+    background: $color-main-blue;
+    border-color: $color-main-blue;
+    color: #fff;
+  }
+
+  &.button-noborder {
+    border-color: transparent;
+  }
+
   &.button-featured {
     background: $color-main-yellow;
     color: $color-text-headline;
