@@ -27,7 +27,7 @@ module.exports = React.createClass({
         <title>{title}</title>
         {cssLink}
         <link
-          href="https://fonts.googleapis.com/css?family=Roboto:400,700"
+          href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700"
           rel="stylesheet"
         />
       </head>

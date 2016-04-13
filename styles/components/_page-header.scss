@@ -1,0 +1,45 @@
+.page-header {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  background: #fff;
+
+  h2 {
+    font-size: 28px;
+    color: #333A42;
+    font-weight: bold;
+    line-height: 40px;
+  }
+
+  p {
+    margin-top: 30px;
+    line-height: 1.5;
+    color: transparentize($color-text-base, .2);
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  .button {
+    margin-top: 50px;
+  }
+
+  @include medium {
+    padding-top: 210px;
+    padding-bottom: 180px;
+
+    h2 {
+      font-size: 35px;
+      line-height: 1.2;
+    }
+
+    p {
+      margin-top: 20px;
+    }
+  }
+
+  @include large {
+    h2 {
+      font-size: 42px;
+    }
+  }
+}
