@@ -18,6 +18,11 @@ h1, h2, h3, h4 {
   line-height: 1;
 }
 
+ul, ol {
+  padding: 0;
+  list-style: none;
+}
+
 img {
   display: block;
 }
