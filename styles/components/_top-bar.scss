@@ -37,6 +37,10 @@
           padding: 0;
           color: transparentize(#5F6C7A, .5);
 
+          &.is-active {
+            color: $color-main-blue;
+          }
+
           &.button-filled {
             padding: 0 18px;
             color: #fff;

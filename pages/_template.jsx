@@ -3,9 +3,9 @@ import { TopBar } from '../components';
 import 'normalize.css/normalize.css';
 import 'styles/styles';
 
-export default (props) => (
+export default ({children}) => (
   <div className="wrapper">
-    <TopBar pathname={props.location.pathname} />
-    {props.children}
+    <TopBar />
+    {children}
   </div>
 );
