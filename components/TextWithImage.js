@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames  from 'classnames';
 
-export default ({variant, theme, image, headline, textline, children}) => {
+export default ({ variant, theme, image, headline, textline, children }) => {
   const textWithImageClass = classNames({
     'text-with-image': true,
     'text-with-image--image-left': (variant == 'image-left'),

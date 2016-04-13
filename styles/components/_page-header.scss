@@ -23,6 +23,17 @@
     margin-top: 50px;
   }
 
+  &.page-header--error {
+    h2 {
+      font-size: 80px;
+      line-height: 1.2;
+    }
+
+    p {
+      margin-top: 0;
+    }
+  }
+
   @include medium {
     padding-top: 210px;
     padding-bottom: 180px;
@@ -32,14 +43,27 @@
       line-height: 1.2;
     }
 
-    p {
-      margin-top: 20px;
+    .button {
+      margin-top: 40px;
+    }
+
+    &.page-header--error {
+      padding-top: 190px;
+      padding-bottom: 150px;
+
+      h2 {
+        font-size: 100px;
+      }
     }
   }
 
   @include large {
     h2 {
       font-size: 42px;
+    }
+
+    &.page-header--error h2 {
+      font-size: 120px;
     }
   }
 }

@@ -7,12 +7,13 @@ export default () => (
   <DocumentTitle title="404">
     <div>
       <PageHeader
-        headline="Build apps without managing a server"
-        textlineHTML="30 day money back guarantee.<br />No contracts. Upgrade, downgrade or cancel at any time."
+        variant="error"
+        headline="404"
+        textlineHTML="The page your were looking for doesn't exist"
       >
         <Link
           to="/"
-          className="button"
+          className="button button--large"
         >
           Go Back
         </Link>
@@ -20,7 +21,7 @@ export default () => (
       <CTASection>
         <Link
           to="/about/"
-          className="button button-large button-featured"
+          className="button button--large button--featured"
         >
           Get Started for Free
         </Link>

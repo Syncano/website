@@ -13,7 +13,7 @@ export default () => (
       >
         <Link
           to="/about/"
-          className="button button-large button-featured"
+          className="button button--large button--featured"
         >
           Get Started for Free
         </Link>
@@ -127,7 +127,7 @@ export default () => (
       <CTASection>
         <Link
           to="/about/"
-          className="button button-large button-featured"
+          className="button button--large button--featured"
         >
           Get Started for Free
         </Link>
