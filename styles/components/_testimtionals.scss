@@ -1,0 +1,68 @@
+.testimtionals {
+  background-image: url("../images/testimtionals-background.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  padding-bottom: 60px;
+
+  .slick-list {
+    overflow-x: hidden;
+  }
+
+  .slick-track {
+    display: flex;
+  }
+
+  .slick-slide {
+    text-align: center;
+    padding-top: 80px;
+
+    blockquote p {
+      color: #fff;
+      font-size: 18px;
+      line-height: 30px;
+      font-style: italic;
+    }
+  }
+
+  .slick-dots {
+    display: flex !important;
+    justify-content: center;
+    margin-top: 40px;
+
+    li {
+      width: 8px;
+      height: 8px;
+      background: #fff;
+      opacity: .4;
+      border-radius: 50%;
+      transition: $transition-default;
+      margin: 0 5px;
+      position: relative;
+      overflow: hidden;
+
+      &.slick-active {
+        opacity: 1;
+        transform: scale(1.25);
+      }
+
+      button {
+        width: 100%;
+        height: 100%;
+        font-size: 0;
+        border: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: none;
+        outline: none;
+        padding: 0;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @include retina {
+    background-image: url("../images/testimtionals-background@2x.jpg");
+  }
+}
