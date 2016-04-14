@@ -1,7 +1,7 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { CTASection, Hero, Platforms, TextColumns, TextWithBottomImage, TextWithImage } from '../components';
+import { CTASection, Footer, Hero, Platforms, TextColumns, TextWithBottomImage, TextWithImage } from '../components';
 
 export default () => (
   <DocumentTitle title="Syncano">
@@ -132,6 +132,7 @@ export default () => (
           Get Started for Free
         </Link>
       </CTASection>
+      <Footer />
     </div>
   </DocumentTitle>
 );
