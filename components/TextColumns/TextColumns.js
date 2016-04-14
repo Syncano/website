@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default ({children}) => {
+export default ({ children }) => {
   return (
     <div className="text-columns">
       <div className="inner inner--text-columns">

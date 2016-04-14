@@ -1,7 +1,7 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { CTASection, Hero, Platforms, Testimtionals, TextColumns, TextWithBottomImage, TextWithImage } from '../components';
+import { CTASection, Footer, Hero, Platforms, Testimtionals, TextColumns, TextWithBottomImage, TextWithImage } from '../components';
 
 export default () => (
   <DocumentTitle title="Syncano">
@@ -13,7 +13,7 @@ export default () => (
       >
         <Link
           to="/about/"
-          className="button button-large button-featured"
+          className="button button--large button--featured"
         >
           Get Started for Free
         </Link>
@@ -128,11 +128,12 @@ export default () => (
       <CTASection>
         <Link
           to="/about/"
-          className="button button-large button-featured"
+          className="button button--large button--featured"
         >
           Get Started for Free
         </Link>
       </CTASection>
+      <Footer />
     </div>
   </DocumentTitle>
 );

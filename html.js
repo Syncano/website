@@ -1,5 +1,7 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
+import config from './config/';
+import { Analytics } from './components/';
 
 module.exports = React.createClass({
   propTypes() {
@@ -27,8 +29,8 @@ module.exports = React.createClass({
         <title>{title}</title>
         {cssLink}
         <link
+          href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700"
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic"
         />
       </head>
       <body>
@@ -36,6 +38,7 @@ module.exports = React.createClass({
           id="react-mount"
           dangerouslySetInnerHTML={{ __html: this.props.body }}
         />
+        <Analytics writeKey={config.analyticsKey} />
         <script src="/bundle.js" />
       </body>
       </html>

@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  outline: none;
 }
 
 body {
@@ -16,6 +17,17 @@ body {
 h1, h2, h3, h4 {
   font-weight: normal;
   line-height: 1;
+  margin: 0;
+}
+
+ul, ol {
+  padding: 0;
+  list-style: none;
+}
+
+ul, ol {
+  padding: 0;
+  list-style: none;
 }
 
 ul, ol {
@@ -29,4 +41,11 @@ img {
 
 a {
   text-decoration: none;
+}
+
+input, button {
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
 }

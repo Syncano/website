@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames  from 'classnames';
 
-export default ({variant, headline, textline, children}) => {
+export default ({ variant, headline, textline, children }) => {
   const heroClass = classNames({
     'hero': true,
     'hero--home': (variant == 'home')
@@ -16,4 +16,4 @@ export default ({variant, headline, textline, children}) => {
       </div>
     </div>
   );
-}
+};
