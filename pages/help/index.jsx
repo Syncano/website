@@ -7,7 +7,6 @@ export default () => (
   <DocumentTitle title="Help">
     <div>
       <PageHeader
-        status="ok"
         headline="All systems operational"
         textlineHTML="Updated about one minute ago. <a href='http://syncano.statuspage.io' target='_blank'>View our status page</a> for more info."
       >
