@@ -1,13 +1,14 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { CTASection, Footer, PageHeader, TextPanels, TextWithImage } from '../../components';
+import { CTASection, Footer, PageHeader, StatusImage, TextPanels, TextWithImage } from '../../components';
 
 export default () => (
   <DocumentTitle title="Help">
     <div>
       <PageHeader
         showStatusImage={true}
+        overHeadlineContent={<StatusImage className="page-header__status" />}
         headline="All systems operational"
         textlineHTML="Updated about one minute ago. <a href='http://syncano.statuspage.io' target='_blank'>View our status page</a> for more info."
       >

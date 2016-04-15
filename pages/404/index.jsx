@@ -7,7 +7,7 @@ export default () => (
   <DocumentTitle title="404">
     <div>
       <PageHeader
-        variant="server-error"
+        variant="large-headline"
         headline="404"
         textlineHTML="The page your were looking for doesn't exist"
       >
