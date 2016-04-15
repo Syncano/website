@@ -1,8 +1,14 @@
 .page-header {
   text-align: center;
   padding-top: 100px;
-  padding-bottom: 60px;
+  padding-bottom: 80px;
   background: #fff;
+
+  .page-header__status {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
 
   h2 {
     font-size: 28px;
@@ -17,10 +23,19 @@
     color: transparentize($color-text-base, .2);
     font-weight: 500;
     font-size: 18px;
+
+    a {
+      color: transparentize($color-text-base-link, .2);
+    }
   }
 
   .button {
     margin-top: 50px;
+  }
+
+  .page-header__more {
+    font-size: 12px;
+    margin-top: 20px;
   }
 
   &.page-header--error {
@@ -35,16 +50,24 @@
   }
 
   @include medium {
-    padding-top: 210px;
-    padding-bottom: 180px;
+    padding-top: 170px;
+    padding-bottom: 110px;
 
     h2 {
       font-size: 35px;
       line-height: 1.2;
     }
 
+    p {
+      margin-top: 17px;
+    }
+
     .button {
-      margin-top: 40px;
+      margin-top: 60px;
+    }
+
+    .page-header__more {
+      font-size: 14px;
     }
 
     &.page-header--error {
@@ -53,6 +76,10 @@
 
       h2 {
         font-size: 100px;
+      }
+
+      .button {
+        margin-top: 40px;
       }
     }
   }
