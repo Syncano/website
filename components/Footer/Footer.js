@@ -94,7 +94,10 @@ export default () => (
           <h4>Syncano in Social Media</h4>
           <ul>
             <li>
-              <a href="#" target="_blank">
+              <a
+                href="#"
+                target="_blank"
+              >
                 <img
                   src={require('./images/twitter.svg')}
                   alt="Twitter"
@@ -102,7 +105,10 @@ export default () => (
               </a>
             </li>
             <li>
-              <a href="#" target="_blank">
+              <a
+                href="#"
+                target="_blank"
+              >
                 <img
                   src={require('./images/facebook.svg')}
                   alt="Facebook"
@@ -110,7 +116,10 @@ export default () => (
               </a>
             </li>
             <li>
-              <a href="#" target="_blank">
+              <a
+                href="#"
+                target="_blank"
+              >
                 <img
                   src={require('./images/github.svg')}
                   alt="Github"
@@ -118,7 +127,10 @@ export default () => (
               </a>
             </li>
             <li>
-              <a href="#" target="_blank">
+              <a
+                href="#"
+                target="_blank"
+              >
                 <img
                   src={require('./images/linkedin.svg')}
                   alt="LinkedIn"
@@ -126,7 +138,10 @@ export default () => (
               </a>
             </li>
             <li>
-              <a href="#" target="_blank">
+              <a
+                href="#"
+                target="_blank"
+              >
                 <img
                   src={require('./images/slack.svg')}
                   alt="Slack"
@@ -134,7 +149,10 @@ export default () => (
               </a>
             </li>
             <li>
-              <a href="#" target="_blank">
+              <a
+                href="#"
+                target="_blank"
+              >
                 <img
                   src={require('./images/dribbble.svg')}
                   alt="Dribbble"
