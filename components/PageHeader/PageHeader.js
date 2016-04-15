@@ -5,7 +5,7 @@ import StatusImage from '../StatusImage';
 export default ({ variant, showStatusImage, headline, textlineHTML, children }) => {
   const pageHeaderClass = classNames({
     'page-header': true,
-    'page-header--error': (variant == 'error')
+    'page-header--server-error': (variant == 'server-error')
   });
 
   return (

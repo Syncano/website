@@ -38,7 +38,7 @@
     margin-top: 20px;
   }
 
-  &.page-header--error {
+  &.page-header--server-error {
     h2 {
       font-size: 80px;
       line-height: 1.2;
@@ -70,7 +70,7 @@
       font-size: 14px;
     }
 
-    &.page-header--error {
+    &.page-header--server-error {
       padding-top: 190px;
       padding-bottom: 150px;
 
@@ -89,7 +89,7 @@
       font-size: 42px;
     }
 
-    &.page-header--error h2 {
+    &.page-header--server-error h2 {
       font-size: 120px;
     }
   }
