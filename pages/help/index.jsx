@@ -1,7 +1,7 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { CTASection, Footer, PageHeader, TextPanels, TextWithImage } from '../../components';
+import { CTASection, Footer, PageHeader, SocialProfiles, TextPanels, TextWithImage } from '../../components';
 
 export default () => (
   <DocumentTitle title="Help">
@@ -179,6 +179,7 @@ export default () => (
           View FAQ
         </Link>
       </TextWithImage>
+      <SocialProfiles />
       <CTASection>
         <Link
           to="/about/"
