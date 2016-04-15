@@ -55,4 +55,10 @@
   .footer__copyright {
     margin-top: 80px;
   }
+
+  @include medium {
+    .footer__column {
+      flex-basis: 25%;
+    }
+  }
 }
