@@ -7,28 +7,12 @@ export default ({ variant, status, headline, textlineHTML, children }) => {
     'page-header--error': (variant == 'error')
   });
 
-  if (status) {
-    if (status == 'ok') {
-      const statusImg = {
-        <img
-          className="page-header__status"
-          src={require('./images/status-ok.svg')}
-          alt="status ok"
-        />
-      };
-    }
-
-    if (status == 'error') {
-      const statusImg = {
-        <img
-          className="page-header__status"
-          src={require('./images/status-error.svg')}
-          alt="status error"
-        />
-      };
-    }
-  } else {
-    const statusImg = '';
+  let statusImg = '';
+  if (status == 'ok') {
+    statusImg = <img className="page-header__status" src={require('./images/status-ok.svg')} alt="status ok" />;
+  }
+  if (status == 'error') {
+    statusImg = <img className="page-header__status" src={require('./images/status-error.svg')} alt="status error" />;
   }
 
   return (
