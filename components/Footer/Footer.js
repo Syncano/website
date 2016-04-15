@@ -10,6 +10,9 @@ export default () => (
           src={require('./images/logo.svg')}
           alt="Syncano"
         />
+        <div className="footer__logo__copyright">
+          <p>&copy; 2016 Syncano. All Rights Reserved.</p>
+        </div>
       </div>
       <div className="footer__columns">
         <div className="footer__column">
@@ -87,6 +90,77 @@ export default () => (
       <div className="footer__newsletter">
         <h4>Join Our Newsletter</h4>
         <NewsletterForm />
+        <div className="footer__newsletter__social">
+          <h4>Syncano in Social Media</h4>
+          <ul>
+            <li>
+              <a
+                href="#"
+                target="_blank"
+              >
+                <img
+                  src={require('./images/twitter.svg')}
+                  alt="Twitter"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                target="_blank"
+              >
+                <img
+                  src={require('./images/facebook.svg')}
+                  alt="Facebook"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                target="_blank"
+              >
+                <img
+                  src={require('./images/github.svg')}
+                  alt="Github"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                target="_blank"
+              >
+                <img
+                  src={require('./images/linkedin.svg')}
+                  alt="LinkedIn"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                target="_blank"
+              >
+                <img
+                  src={require('./images/slack.svg')}
+                  alt="Slack"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                target="_blank"
+              >
+                <img
+                  src={require('./images/dribbble.svg')}
+                  alt="Dribbble"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
       <div className="footer__copyright">
         <p>&copy; 2016 Syncano. All Rights Reserved.</p>
