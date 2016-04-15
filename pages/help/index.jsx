@@ -17,7 +17,9 @@ export default () => (
         >
           Create Support Ticket
         </Link>
-        <p className="page-header__more">or chat with us on <a href="https://syncano-community.slack.com/" target="_blank">Slack</a></p>
+        <p className="page-header__more">
+          or chat with us on <a href="https://syncano-community.slack.com/" target="_blank">Slack</a>
+        </p>
       </PageHeader>
       <TextWithImage
         variant="image-right"
