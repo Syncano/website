@@ -9,6 +9,7 @@
     max-width: 300px;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .27);
 
     &:last-child {
       margin-bottom: 0;
@@ -16,7 +17,7 @@
 
     h3 {
       font-size: 20px;
-      font-weight: bold;
+      font-weight: 700;
       margin-bottom: 30px;
       color: #fff;
     }

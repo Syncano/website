@@ -13,7 +13,7 @@
   }
 
   h2 {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 28px;
     line-height: 40px;
     color: $color-text-headline;
@@ -34,7 +34,7 @@
   }
 
   &.hero--home {
-    background-image: url("../images/hero-home-large.jpg");
+    background-image: url("../components/hero/images/hero-home-large.jpg");
   }
 
   @include small {

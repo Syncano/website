@@ -9,7 +9,7 @@ export default () => {
           <h1>
             <Link to="/">
               <img
-                src={require('../images/logo.svg')}
+                src={require('./images/logo.svg')}
                 alt="Syncano Logo"
               />
             </Link>
@@ -18,7 +18,7 @@ export default () => {
         <nav className="top-bar__nav">
           <div className="top-bar__nav__hamburger">
             <img
-              src={require('../images/hamburger.svg')}
+              src={require('./images/hamburger.svg')}
               alt="hamburger icon"
             />
           </div>

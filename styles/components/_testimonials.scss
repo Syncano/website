@@ -1,5 +1,5 @@
-.testimtionals {
-  background-image: url("../images/testimtionals-background.jpg");
+.testimonials {
+  background-image: url("../components/testimonials/images/testimonials-background.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -63,6 +63,6 @@
   }
 
   @include retina {
-    background-image: url("../images/testimtionals-background@2x.jpg");
+    background-image: url("../components/testimonials/images/testimonials-background@2x.jpg");
   }
 }

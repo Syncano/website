@@ -7,19 +7,18 @@ export default () => (
   <DocumentTitle title="Help">
     <div>
       <PageHeader
-        showStatusImage={true}
         overHeadlineContent={<StatusImage className="page-header__status" />}
         headline="All systems operational"
         textlineHTML="Updated about one minute ago. <a href='http://syncano.statuspage.io' target='_blank'>View our status page</a> for more info."
       >
         <Link
           to="/"
-          className="button button--large"
+          className="button button--large button--filled"
         >
           Create Support Ticket
         </Link>
         <p className="page-header__more">
-          or chat with us on <a href="https://syncano-community.slack.com/" target="_blank">Slack</a>
+          or <a href="https://syncano-community.slack.com/" target="_blank">chat with us on Slack</a>
         </p>
       </PageHeader>
       <TextWithImage
