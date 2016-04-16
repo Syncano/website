@@ -4,7 +4,7 @@
   .newsletter-form__field {
     border-radius: 4px;
     overflow: hidden;
-    width: 270px;
+    width: 280px;
     margin-left: auto;
     margin-right: auto;
 
@@ -42,5 +42,9 @@
       width: 80px;
       cursor: pointer;
     }
+  }
+
+  @include very-large {
+    margin-top: 20px;
   }
 }

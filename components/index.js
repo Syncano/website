@@ -4,6 +4,7 @@ import Footer from './Footer';
 import Hero from './Hero';
 import PageHeader from './PageHeader';
 import Platforms from './Platforms';
+import StatusImage from './StatusImage';
 import Testimtionals from './Testimtionals';
 import TextColumns from './TextColumns';
 import TextPanels from './TextPanels';
@@ -18,6 +19,7 @@ export default {
   Hero,
   PageHeader,
   Platforms,
+  StatusImage,
   Testimtionals,
   TextColumns,
   TextPanels,

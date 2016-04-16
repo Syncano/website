@@ -1,21 +1,16 @@
 import React from 'react';
 import classNames  from 'classnames';
 
-export default ({ variant, status, headline, textlineHTML, children }) => {
+export default ({ variant, overHeadlineContent, headline, textlineHTML, children }) => {
   const pageHeaderClass = classNames({
     'page-header': true,
-    'page-header--error': (variant == 'error')
+    'page-header--large-headline': (variant == 'large-headline')
   });
-
-  let statusImg = '';
-  if (status) {
-    statusImg = (status == 'ok') ? <img className="page-header__status" src={require('./images/status-ok.svg')} alt="status ok" /> : <img className="page-header__status" src={require('./images/status-error.svg')} alt="status error" />;
-  }
 
   return (
     <header className={pageHeaderClass}>
       <div className="inner">
-        {statusImg}
+      {overHeadlineContent}
         <h2>{headline}</h2>
         <p dangerouslySetInnerHTML={{__html: textlineHTML}}></p>
         {children}
