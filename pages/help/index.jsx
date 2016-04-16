@@ -1,7 +1,7 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { CTASection, Footer, PageHeader, StatusImage, TextPanels, TextWithImage } from '../../components';
+import { CTASection, Footer, PageHeader, StatusImage, SocialProfiles, TextPanels, TextWithImage } from '../../components';
 
 export default () => (
   <DocumentTitle title="Help">
@@ -161,6 +161,19 @@ export default () => (
         headline="Get answers to common questions"
         textline="Get answers to your frequently asked questions and more..."
       >
+        <div className="text-with-image__text__list">
+          <ul>
+            <li>
+              <Link to="/about/">General answers</Link>
+            </li>
+            <li>
+              <Link to="/about/">Platform Specific answers</Link>
+            </li>
+            <li>
+              <Link to="/about/">Pricing/Billing answers</Link>
+            </li>
+          </ul>
+        </div>
         <Link
           to="/about/"
           className="button"
@@ -168,6 +181,7 @@ export default () => (
           View FAQ
         </Link>
       </TextWithImage>
+      <SocialProfiles />
       <CTASection>
         <Link
           to="/about/"

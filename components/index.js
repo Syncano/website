@@ -7,6 +7,7 @@ import Platforms from './Platforms';
 import Pricing from './Pricing';
 import StatusImage from './StatusImage';
 import Testimonials from './Testimonials';
+import SocialProfiles from './SocialProfiles';
 import TextColumns from './TextColumns';
 import TextPanels from './TextPanels';
 import TextWithBottomImage from './TextWithBottomImage';
@@ -23,6 +24,7 @@ export default {
   Pricing,
   StatusImage,
   Testimonials,
+  SocialProfiles,
   TextColumns,
   TextPanels,
   TextWithBottomImage,
