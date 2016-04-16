@@ -62,7 +62,7 @@ export default () => {
               </li>
               <li>
                 <Link
-                  to="/signup/"
+                  to="/help/"
                   className="button button--filled"
                 >
                   Sign Up For Free

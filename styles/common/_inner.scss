@@ -1,7 +1,9 @@
 .inner {
+  $max-width: 1180px;
+
   padding-left: 10px;
   padding-right: 10px;
-  max-width: 1180px;
+  max-width: $max-width;
   margin-left: auto;
   margin-right: auto;
   box-sizing: content-box;
@@ -24,9 +26,9 @@
   }
 
   &.inner--text-columns {
-    max-width: 1180px + (2 * 20px);
+    max-width: $max-width + (2 * 20px);
   }
-  
+
   &.inner--text-with-bottom-image {
     max-width: 630px;
   }
