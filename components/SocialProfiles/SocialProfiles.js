@@ -11,6 +11,7 @@ export default () => {
               className="social-profiles__group__profiles__icon" 
               href="#"
               target="_blank"
+              title="GitHub"
             >
               <img
                 src={require('./images/github.svg')}
@@ -26,6 +27,7 @@ export default () => {
               className="social-profiles__group__profiles__icon"
               href="#"
               target="_blank"
+              title="Facebook"
             >
               <img
                 src={require('./images/facebook.svg')}
@@ -36,6 +38,7 @@ export default () => {
               className="social-profiles__group__profiles__icon"
               href="#"
               target="_blank"
+              title="Twitter"
             >
               <img
                 src={require('./images/twitter.svg')}
@@ -46,6 +49,7 @@ export default () => {
               className="social-profiles__group__profiles__icon"
               href="#"
               target="_blank"
+              title="Twitter"
             >
               <img
                 src={require('./images/twitter.svg')}
@@ -53,8 +57,8 @@ export default () => {
               />
               <div className="social-profiles__group__profiles__icon__dot">
                 <img
-                  src={require('./images/signal.svg')}
-                  alt=""
+                  src={require('./images/status.svg')}
+                  alt="Status"
                 />
               </div>
             </a>
@@ -67,6 +71,7 @@ export default () => {
               className="social-profiles__group__profiles__icon"
               href="#"
               target="_blank"
+              title="Slack"
             >
               <img
                 src={require('./images/slack.svg')}
