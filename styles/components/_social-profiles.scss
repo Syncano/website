@@ -1,0 +1,88 @@
+.social-profiles {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: $color-main-gray;
+
+  .social-profiles__group {
+    margin-bottom: 70px;
+    text-align: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    h4 {
+      font-size: 18px;
+      color: $color-text-headline;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .social-profiles__group__profiles {
+      .social-profiles__group__profiles__icon,
+      .social-profiles__group__profiles__icon__dot {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .social-profiles__group__profiles__icon {
+        width: 70px;
+        height: 70px;
+        text-align: center;
+        border: 2px solid $color-footer-link;
+        border-radius: 50%;
+        margin-right: 28px;
+        position: relative;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .social-profiles__group__profiles__icon__dot {
+          position: absolute;
+          top: -7px;
+          right: -7px;
+          width: 30px;
+          height: 30px;
+          background: $color-main-azure;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  @include medium {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .inner {
+      display: flex;
+    }
+
+    .social-profiles__group {
+      flex: 1;
+      margin-bottom: 0;
+
+      &:nth-child(2) {
+        flex: 1.3;
+      }
+
+      .social-profiles__group__profiles .social-profiles__group__profiles__icon {
+        margin-right: 15px;
+      }
+    }
+  }
+
+  @include large {
+    .social-profiles__group {
+      &:nth-child(2) {
+        flex: 1;
+      }
+
+      .social-profiles__group__profiles .social-profiles__group__profiles__icon {
+        margin-right: 28px;
+      }
+    }
+  }
+}

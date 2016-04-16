@@ -5,6 +5,7 @@ import Hero from './Hero';
 import PageHeader from './PageHeader';
 import Platforms from './Platforms';
 import StatusImage from './StatusImage';
+import SocialProfiles from './SocialProfiles';
 import Testimtionals from './Testimtionals';
 import TextColumns from './TextColumns';
 import TextPanels from './TextPanels';
@@ -20,6 +21,7 @@ export default {
   PageHeader,
   Platforms,
   StatusImage,
+  SocialProfiles,
   Testimtionals,
   TextColumns,
   TextPanels,
