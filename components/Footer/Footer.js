@@ -95,8 +95,9 @@ export default () => (
           <ul>
             <li>
               <a
-                href="#"
+                href="https://twitter.com/Syncano"
                 target="_blank"
+                title="Twitter"
               >
                 <img
                   src={require('./images/twitter.svg')}
@@ -106,8 +107,9 @@ export default () => (
             </li>
             <li>
               <a
-                href="#"
+                href="https://www.facebook.com/syncano"
                 target="_blank"
+                title="Facebook"
               >
                 <img
                   src={require('./images/facebook.svg')}
@@ -117,19 +119,21 @@ export default () => (
             </li>
             <li>
               <a
-                href="#"
+                href="https://github.com/Syncano"
                 target="_blank"
+                title="GitHub"
               >
                 <img
                   src={require('./images/github.svg')}
-                  alt="Github"
+                  alt="GitHub"
                 />
               </a>
             </li>
             <li>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/syncano"
                 target="_blank"
+                title="LinkedIn"
               >
                 <img
                   src={require('./images/linkedin.svg')}
@@ -139,8 +143,9 @@ export default () => (
             </li>
             <li>
               <a
-                href="#"
+                href="https://syncano-community.slack.com"
                 target="_blank"
+                title="Slack"
               >
                 <img
                   src={require('./images/slack.svg')}
@@ -150,8 +155,9 @@ export default () => (
             </li>
             <li>
               <a
-                href="#"
+                href="https://dribbble.com/SYNCANO"
                 target="_blank"
+                title="Dribbble"
               >
                 <img
                   src={require('./images/dribbble.svg')}
