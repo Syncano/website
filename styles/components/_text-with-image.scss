@@ -25,9 +25,30 @@
       line-height: 1.5em;
     }
 
+    p,
+    .text-with-image__text__list {
+      margin-top: 25px;
+    }
+
     p {
       line-height: 1.75em;
-      margin-top: 25px;
+    }
+
+    .text-with-image__text__list {
+      ul {
+        list-style: disc;
+        padding-left: 25px;
+        text-align: left;
+        display: inline-block;
+
+        li {
+          line-height: 2;
+        }
+      }
+    }
+
+    a {
+      color: transparentize($color-text-base-link, .1);
     }
 
     .button {
@@ -42,7 +63,8 @@
   &.text-with-image--purple {
     background: $color-main-purple;
 
-    h2, .button {
+    h2,
+    .button {
       color: #fff;
     }
 
