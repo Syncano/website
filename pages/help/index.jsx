@@ -1,13 +1,13 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { CTASection, Footer, PageHeader, SocialProfiles, TextPanels, TextWithImage } from '../../components';
+import { CTASection, Footer, PageHeader, StatusImage, SocialProfiles, TextPanels, TextWithImage } from '../../components';
 
 export default () => (
   <DocumentTitle title="Help">
     <div>
       <PageHeader
-        status="ok"
+        overHeadlineContent={<StatusImage className="page-header__status" />}
         headline="All systems operational"
         textlineHTML="Updated about one minute ago. <a href='http://syncano.statuspage.io' target='_blank'>View our status page</a> for more info."
       >
@@ -17,7 +17,9 @@ export default () => (
         >
           Create Support Ticket
         </Link>
-        <p className="page-header__more">or chat with us on <a href="https://syncano-community.slack.com/" target="_blank">Slack</a></p>
+        <p className="page-header__more">
+          or chat with us on <a href="https://syncano-community.slack.com/" target="_blank">Slack</a>
+        </p>
       </PageHeader>
       <TextWithImage
         variant="image-right"
