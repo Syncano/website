@@ -25,7 +25,8 @@
       line-height: 1.5em;
     }
 
-    p, .text-with-image__text__list {
+    p,
+    .text-with-image__text__list {
       margin-top: 25px;
     }
 
@@ -62,7 +63,8 @@
   &.text-with-image--purple {
     background: $color-main-purple;
 
-    h2, .button {
+    h2,
+    .button {
       color: #fff;
     }
 
