@@ -34,7 +34,7 @@ export default React.createClass({
 
     return (
       <ul>
-        {features.map((feature, key) => (
+        {features.map((feature) => (
           <li key={_.kebabCase(feature)}>
             {feature}
           </li>
