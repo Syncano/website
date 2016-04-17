@@ -9,10 +9,9 @@ export default React.createClass({
     }
   },
 
-  handleClick(event) {
+  handleClick() {
     const { isExpanded } = this.state;
 
-    event.preventDefault();
     this.setState({
       isExpanded: !isExpanded
     });

@@ -53,7 +53,8 @@ export default () => {
         />
         <footer className="pricing__footer">
           <p>
-            Premium support? Custom SLA? We’ve got you covered. <Link to="/contact/">Contact us</Link> and we’ll configure a plan that’s best for you.
+            Premium support? Custom SLA? We’ve got you covered. <Link to="/contact/">Contact us</Link> and we’ll 
+            configure a plan that’s best for you.
           </p>
         </footer>
       </div>
