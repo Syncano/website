@@ -15,6 +15,7 @@
     "highlight.js": "^9.2.0",
     "history": "^2.0.1",
     "js-yaml": "^3.5.5",
+    "lodash": "^4.11.1",
     "markdown-it": "^6.0.0",
     "markdown-it-abbr": "^1.0.3",
     "markdown-it-attrs": "^0.1.8",

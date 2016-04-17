@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames  from 'classnames';
+import _ from 'lodash';
 import { Link } from 'react-router';
 
 export default React.createClass({
@@ -31,12 +32,14 @@ export default React.createClass({
   renderFeatures() {
     const { features } = this.props;
 
-    return features.map(
-      (object, key) => (
-        <li key={key}>
-          {object}
-        </li>
-      )
+    return (
+      <ul>
+        {features.map((feature, key) => (
+          <li key={_.kebabCase(feature)}>
+            {feature}
+          </li>
+        ))}
+      </ul>
     );
   },
 
@@ -52,8 +55,6 @@ export default React.createClass({
           overage rates
         </Link>
       );
-    } else {
-      return;
     }
   },
 
@@ -119,9 +120,7 @@ export default React.createClass({
             </span>
           </div>
           <div className="pricing__plan__box__features">
-            <ul>
-              {this.renderFeatures()}
-            </ul>
+            {this.renderFeatures()}
           </div>
         </div>
         {this.renderOverageRatesLink()}
