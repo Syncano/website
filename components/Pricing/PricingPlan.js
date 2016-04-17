@@ -3,59 +3,97 @@ import classNames  from 'classnames';
 import { Link } from 'react-router';
 
 export default React.createClass({
-  getInitialState: function() {
-    return {isExpanded: false};
+  getInitialState() {
+    return {
+      isExpanded: false
+    }
   },
 
-  handleClick: function(event) {
+  handleClick(event) {
+    const { isExpanded } = this.state;
+
     event.preventDefault();
-    this.setState({isExpanded: !this.state.isExpanded});
+    this.setState({
+      isExpanded: !isExpanded
+    });
   },
 
-  render() {
-    const pricingPlanClass = classNames({
+  renderPrice() {
+    const { price } = this.props;
+    const currency = (price != 'Free') ? <span className="pricing__plan__box__price">&#36;</span> : '';
+
+    return (
+      <div>
+        {currency}{price}
+      </div>
+    );
+  },
+
+  renderFeatures() {
+    const { features } = this.props;
+
+    return features.map(
+      (object, key) => (
+        <li key={key}>
+          {object}
+        </li>
+      )
+    );
+  },
+
+  renderOverageRatesLink() {
+    const { overageRatesLinkTo } = this.props;
+
+    if (overageRatesLinkTo) {
+      return (
+        <Link
+          to={overageRatesLinkTo}
+          className="pricing__plan__overage-rates"
+        >
+          overage rates
+        </Link>
+      );
+    } else {
+      return;
+    }
+  },
+
+  getPricingPlanClass() {
+    const { isExpanded } = this.state;
+    const { isFeatured } = this.props;
+
+    return classNames({
       'pricing__plan': true,
-      'pricing__plan--expanded': (this.state.isExpanded == true),
-      'pricing__plan--featured': (this.props.isFeatured == true)
+      'pricing__plan--expanded': (isExpanded == true),
+      'pricing__plan--featured': (isFeatured == true)
     });
+  },
 
-    const currency = (this.props.price != 'Free') ? <span className="pricing__plan__box__price">&#36;</span> : '';
+  getPricingPlanButtonClass() {
+    const { isFeatured } = this.props;
 
-    const pricingPlanButtonClass = classNames({
+    return classNames({
       'button': true,
-      'button--featured': (this.props.isFeatured == true),
+      'button--featured': (isFeatured == true),
       'button--large': true,
       'button--wide': true
     });
+  },
 
-    const getOverageRatesLink = () => {
-      let overageRatesLink = '';
-
-      if (this.props.overageRatesLinkTo) {
-        overageRatesLink = (
-          <Link
-            to={this.props.overageRatesLinkTo}
-            className="pricing__plan__overage-rates"
-          >
-            overage rates
-          </Link>
-        );
-      }
-
-      return overageRatesLink;
-    };
+  render() {
+    const { buttonText, period, title } = this.props;
 
     return (
-      <div className={pricingPlanClass}>
+      <div className={this.getPricingPlanClass()}>
         <div className="pricing__plan__box">
           <h3 className="pricing__plan__box__title">
-            {this.props.title}
+            {title}
           </h3>
           <div className="pricing__plan__box__price">
-            {currency}{this.props.price}
+            {this.renderPrice()}
           </div>
           <div className="pricing__plan__box__period">
-            {this.props.period}
+            {period}
           </div>
           <div className="pricing__plan__box__options">
             <h4>Includes:</h4>
@@ -72,31 +110,22 @@ export default React.createClass({
           </div>
           <Link
             to="/about/"
-            className={pricingPlanButtonClass}
+            className={this.getPricingPlanButtonClass()}
           >
-            {this.props.buttonText}
+            {buttonText}
           </Link>
           <div className="pricing__plan__box__more">
-            <a
-              href="#"
-              onClick={this.handleClick}
-            >
+            <span onClick={this.handleClick}>
               Show More
-            </a>
+            </span>
           </div>
           <div className="pricing__plan__box__features">
             <ul>
-              {this.props.features.map(function(object, key) {
-                return (
-                  <li key={key}>
-                    {object}
-                  </li>
-                );
-              })}
+              {this.renderFeatures()}
             </ul>
           </div>
         </div>
-        {getOverageRatesLink()}
+        {this.renderOverageRatesLink()}
       </div>
     );
   }

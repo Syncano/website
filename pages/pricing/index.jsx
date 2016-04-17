@@ -10,37 +10,7 @@ export default () => (
         headline="Build apps without managing a server"
         textlineHTML="30 day money back guarantee. No contracts. Upgrade, downgrade or cancel at any time."
       />
-      <Pricing>
-        <Pricing.Plan
-          title="Starter"
-          price="Free"
-          period="for 6 months"
-          buttonText="Get Started for Free"
-          features={['Full access to all features', '60 requests per second', 'Unlimited storage', '16 instances (apps)', '8 concurrent Scripts', 'Unlimited users']}
-        />
-        <Pricing.Plan
-          isFeatured={true}
-          title="Developer"
-          price="25"
-          period="per month"
-          buttonText="Buy Now"
-          features={['Full access to all features', '60 requests per second', 'Unlimited storage', '16 instances (apps)', '8 concurrent Scripts', 'Unlimited users']}
-          overageRatesLinkTo="/pricing/"
-        />
-        <Pricing.Plan
-          title="Business"
-          price="85"
-          period="per month"
-          buttonText="Buy Now"
-          features={['Full access to all features', '60 requests per second', 'Unlimited storage', '16 instances (apps)', '8 concurrent Scripts', 'Unlimited users']}
-          overageRatesLinkTo="/pricing/"
-        />
-        <footer className="pricing__footer">
-          <p>
-            Premium support? Custom SLA? We’ve got you covered. <Link to="/contact/">Contact us</Link> and we’ll configure a plan that’s best for you.
-          </p>
-        </footer>
-      </Pricing>
+      <Pricing />
       <TextWithImage
         variant="image-left"
         theme="gray"

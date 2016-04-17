@@ -107,7 +107,7 @@ export default () => (
             </li>
             <li>
               <a
-                href="https://www.facebook.com/syncano"
+                href="https://www.facebook.com/syncano/"
                 target="_blank"
                 title="Facebook"
               >
@@ -143,7 +143,7 @@ export default () => (
             </li>
             <li>
               <a
-                href="https://syncano-community.slack.com"
+                href="https://syncano-community.slack.com/"
                 target="_blank"
                 title="Slack"
               >
