@@ -95,7 +95,7 @@ export default () => (
           <ul>
             <li>
               <a
-                href="https://twitter.com/Syncano"
+                href="https://twitter.com/Syncano/"
                 target="_blank"
                 title="Twitter"
               >
@@ -119,7 +119,7 @@ export default () => (
             </li>
             <li>
               <a
-                href="https://github.com/Syncano"
+                href="https://github.com/Syncano/"
                 target="_blank"
                 title="GitHub"
               >
@@ -131,7 +131,7 @@ export default () => (
             </li>
             <li>
               <a
-                href="https://www.linkedin.com/company/syncano"
+                href="https://www.linkedin.com/company/syncano/"
                 target="_blank"
                 title="LinkedIn"
               >
@@ -155,7 +155,7 @@ export default () => (
             </li>
             <li>
               <a
-                href="https://dribbble.com/SYNCANO"
+                href="https://dribbble.com/SYNCANO/"
                 target="_blank"
                 title="Dribbble"
               >
