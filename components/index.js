@@ -1,5 +1,6 @@
 import Analytics from './Analytics';
 import CTASection from './CTASection';
+import FAQ from './FAQ';
 import Footer from './Footer';
 import Hero from './Hero';
 import PageHeader from './PageHeader';
@@ -17,6 +18,7 @@ import TopBar from './TopBar';
 export default {
   Analytics,
   CTASection,
+  FAQ,
   Footer,
   Hero,
   PageHeader,
