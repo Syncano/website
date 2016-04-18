@@ -3,10 +3,10 @@ import DocumentTitle from 'react-document-title';
 import config from './config/';
 import { Analytics } from './components/';
 
-module.exports = React.createClass({
+export default React.createClass({
   propTypes() {
     return {
-      title: React.PropTypes.string,
+      title: React.PropTypes.string
     }
   },
 
@@ -14,7 +14,7 @@ module.exports = React.createClass({
     const title = DocumentTitle.rewind();
 
     let cssLink;
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV !== 'development') {
       cssLink = <link rel="stylesheet" href="/styles.css" />;
     }
 
