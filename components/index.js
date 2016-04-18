@@ -4,9 +4,10 @@ import Footer from './Footer';
 import Hero from './Hero';
 import PageHeader from './PageHeader';
 import Platforms from './Platforms';
+import Pricing from './Pricing';
 import StatusImage from './StatusImage';
+import Testimonials from './Testimonials';
 import SocialProfiles from './SocialProfiles';
-import Testimtionals from './Testimtionals';
 import TextColumns from './TextColumns';
 import TextPanels from './TextPanels';
 import TextWithBottomImage from './TextWithBottomImage';
@@ -20,9 +21,10 @@ export default {
   Hero,
   PageHeader,
   Platforms,
+  Pricing,
   StatusImage,
+  Testimonials,
   SocialProfiles,
-  Testimtionals,
   TextColumns,
   TextPanels,
   TextWithBottomImage,

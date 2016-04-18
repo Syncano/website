@@ -3,7 +3,7 @@ import React from 'react';
 export default ({ className }) => {
   const status = 'ok';
 
-  if (status === 'ok' || status === 'error') {
+  if (status === 'ok' || status === 'warning' || status === 'error') {
     return (
       <img
         className={className}

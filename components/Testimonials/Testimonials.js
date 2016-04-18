@@ -12,7 +12,7 @@ export default () => {
   };
 
   return (
-    <div className="testimtionals">
+    <div className="testimonials">
       <Slider {...sliderProps}>
         <div>
           <div className="inner">

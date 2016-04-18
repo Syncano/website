@@ -9,7 +9,7 @@ export default () => {
           <div className="social-profiles__group__profiles">
             <a
               className="social-profiles__group__profiles__icon" 
-              href="#"
+              href="https://github.com/Syncano/"
               target="_blank"
               title="GitHub"
             >
@@ -25,7 +25,7 @@ export default () => {
           <div className="social-profiles__group__profiles">
             <a
               className="social-profiles__group__profiles__icon"
-              href="#"
+              href="https://www.facebook.com/syncano/"
               target="_blank"
               title="Facebook"
             >
@@ -36,7 +36,7 @@ export default () => {
             </a>
             <a
               className="social-profiles__group__profiles__icon"
-              href="#"
+              href="https://twitter.com/Syncano/"
               target="_blank"
               title="Twitter"
             >
@@ -47,7 +47,7 @@ export default () => {
             </a>
             <a
               className="social-profiles__group__profiles__icon"
-              href="#"
+              href="https://twitter.com/SyncanoStatus/"
               target="_blank"
               title="Twitter"
             >
@@ -69,7 +69,7 @@ export default () => {
           <div className="social-profiles__group__profiles">
             <a
               className="social-profiles__group__profiles__icon"
-              href="#"
+              href="https://syncano-community.slack.com/"
               target="_blank"
               title="Slack"
             >

@@ -5,6 +5,7 @@
 }
 
 body {
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   background: $color-body-bg;
   color: $color-text-base;
@@ -43,7 +44,7 @@ a {
   text-decoration: none;
 }
 
-input, button {
+button, input, select {
   background: none;
   border: none;
   border-radius: 0;

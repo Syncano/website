@@ -13,12 +13,12 @@ export default () => (
       >
         <Link
           to="/"
-          className="button button--large"
+          className="button button--large button--filled"
         >
           Create Support Ticket
         </Link>
         <p className="page-header__more">
-          or chat with us on <a href="https://syncano-community.slack.com/" target="_blank">Slack</a>
+          or <a href="https://syncano-community.slack.com/" target="_blank">chat with us on Slack</a>
         </p>
       </PageHeader>
       <TextWithImage
