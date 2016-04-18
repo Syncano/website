@@ -1,5 +1,5 @@
 .testimonials {
-  background-image: url("../components/testimonials/images/testimonials-background.jpg");
+  background-image: url("../components/Testimonials/images/testimonials-background.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -69,11 +69,11 @@
   }
 
   @include retina {
-    background-image: url("../components/testimonials/images/testimonials-background@2x.jpg");
+    background-image: url("../components/Testimonials/images/testimonials-background@2x.jpg");
   }
 
   @include medium {
-    background-image: url("../components/testimonials/images/testimonials-background-medium.jpg");
+    background-image: url("../components/Testimonials/images/testimonials-background-medium.jpg");
     padding-bottom: 100px;
 
     .slick-slide {
@@ -87,7 +87,7 @@
     }
 
     @include retina {
-      background-image: url("../components/testimonials/images/testimonials-background-medium@2x.jpg");
+      background-image: url("../components/Testimonials/images/testimonials-background-medium@2x.jpg");
     }
   }
 
