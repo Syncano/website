@@ -1,7 +1,7 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { CTASection, Footer, PageHeader, Pricing, TextWithImage, TextWithBottomImage } from '../../components';
+import { CTASection, FAQ, Footer, PageHeader, Pricing, TextWithImage, TextWithBottomImage } from '../../components';
 
 export default () => (
   <DocumentTitle title="Pricing">
@@ -23,6 +23,7 @@ export default () => (
         headline="Pricing that scales with your app"
         textline="Pay as you grow. Every app comes in different shapes and sizes. You are in control to adjust your plan based on your needs and growth. Easily upgrade or downgrade your account at any time."
       />
+      <FAQ />
       <TextWithBottomImage
         headline="Get answers from our developers"
         textline="Our engineers specialize in the tricky and technical investigations of our platform. When you have questions, you’ll get timely answers from our team."

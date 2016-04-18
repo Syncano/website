@@ -1,0 +1,40 @@
+.faq-item {
+  margin-bottom: 60px;
+
+  .faq-item__title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 2;
+    color: transparentize($color-text-headline, .1);
+  }
+
+  .faq-item__content {
+    margin-top: 10px;
+    
+    p {
+      color: $color-text-base;
+      line-height: 2;
+
+      a {
+        color: $color-text-base-link;
+      }
+    }
+  }
+
+  @include medium {
+    margin-bottom: 50px;
+
+    .faq-item__title,
+    .faq-item__content p {
+      font-size: 16px;
+    }
+
+    .faq-item__title {
+      line-height: 26px;
+    }
+
+    .faq-item__content {
+      margin-top: 20px;
+    }
+  }
+}
