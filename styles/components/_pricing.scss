@@ -3,146 +3,6 @@
   margin-top: -30px;
   padding-bottom: 80px;
 
-  .pricing__plan {
-    margin-bottom: 30px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    .pricing__plan__box {
-      border: 1px solid transparentize(#B8C0C9, .5);
-      border-radius: 4px;
-      padding: 30px;
-      padding-bottom: 40px;
-
-      .pricing__plan__box__title {
-        border-bottom: 1px solid transparentize(#B8C0C9, .5);
-        line-height: 60px;
-        font-size: 16px;
-        text-align: center;
-        font-weight: 500;
-        margin: -30px;
-        margin-bottom: 0;
-      }
-
-      .pricing__plan__box__price {
-        font-weight: 700;
-        color: #333A42;
-        font-size: 48px;
-        text-align: center;
-        margin-top: 30px;
-        text-transform: uppercase;
-
-        .pricing__plan__box__price {
-          font-size: 24px;
-        }
-      }
-
-      .pricing__plan__box__period {
-        font-size: 18px;
-        font-weight: 500;
-        color: $color-main-graphite;
-        text-align: center;
-      }
-
-      .pricing__plan__box__options {
-        margin-top: 25px;
-
-        h4 {
-          font-size: 14px;
-          color: $color-main-graphite;
-          margin-bottom: 10px;
-        }
-
-        select {
-          margin-bottom: 10px;
-          width: 100%;
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          line-height: 44px;
-          border-radius: 4px;
-          border: 1px solid transparentize(#DBDEE3, .5);
-          font-weight: 500;
-          color: $color-text-base;
-          padding: 0 20px;
-          background: #fff;
-
-          &:last-child {
-            margin-bottom: 0;
-          }
-        }
-      }
-
-      .button {
-        margin-top: 30px;
-      }
-
-      .pricing__plan__box__more {
-        text-align: center;
-        margin-top: 30px;
-
-        span {
-          font-size: 14px;
-          font-weight: 700;
-          color: $color-main-blue;
-          text-transform: uppercase;
-          cursor: pointer;
-
-          &:after {
-            display: inline-block;
-            content: '';
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 5px 4.5px 0 4.5px;
-            border-color: $color-main-blue transparent transparent transparent;
-            margin-left: 10px;
-            position: relative;
-            top: -2px;
-          }
-        }
-      }
-
-      .pricing__plan__box__features {
-        padding-left: 40px;
-        margin-top: 25px;
-        display: none;
-
-        li {
-          line-height: 2.5;
-          list-style-image: url("../images/check.svg");
-          padding-left: 10px;
-        }
-      }
-    }
-
-    .pricing__plan__overage-rates {
-      text-align: center;
-      margin-top: 30px;
-      line-height: 1;
-      text-decoration: underline;
-      font-size: 14px;
-      color: $color-main-graphite;
-      display: block;
-    }
-
-    &.pricing__plan--expanded .pricing__plan__box {
-      .pricing__plan__box__more a:after {
-        transform: rotate(180deg);
-      }
-
-      .pricing__plan__box__features {
-        display: block;
-      }
-    }
-
-    &.pricing__plan--featured .pricing__plan__box {
-      background: $color-main-gray;
-      box-shadow: 0 0 18px rgba(0, 112, 211, .27), 0 4px 8px rgba(0, 112, 211, .33);
-    }
-  }
-
   .pricing__footer {
     text-align: center;
     margin-top: 80px;
@@ -152,6 +12,24 @@
 
     a {
       color: #0086DC;
+    }
+  }
+
+  @include medium {
+    .pricing__plans {
+      display: flex;
+    }
+
+    .pricing__footer {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  }
+
+  @include medium-only {
+    .pricing__plans {
+      margin-left: -20px;
+      margin-right: -20px;
     }
   }
 }

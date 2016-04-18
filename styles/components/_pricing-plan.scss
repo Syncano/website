@@ -1,0 +1,203 @@
+.pricing-plan {
+  $border-radius: 4px;
+
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .pricing-plan__box {
+    border: 1px solid #DBDFE4;
+    border-radius: $border-radius;
+    padding: 30px;
+    padding-bottom: 40px;
+
+    .pricing-plan__box__title {
+      border-bottom: 1px solid #DBDFE4;
+      line-height: 60px;
+      font-size: 16px;
+      text-align: center;
+      font-weight: 500;
+      margin: -30px;
+      margin-bottom: 0;
+    }
+
+    .pricing-plan__box__price {
+      font-weight: 700;
+      color: #333A42;
+      font-size: 48px;
+      text-align: center;
+      margin-top: 30px;
+      text-transform: uppercase;
+
+      .pricing-plan__box__price {
+        font-size: 24px;
+      }
+    }
+
+    .pricing-plan__box__period {
+      font-size: 18px;
+      font-weight: 500;
+      color: $color-main-graphite;
+      text-align: center;
+    }
+
+    .pricing-plan__box__options {
+      margin-top: 25px;
+
+      h4 {
+        font-size: 14px;
+        color: $color-main-graphite;
+        margin-bottom: 10px;
+      }
+
+      select {
+        margin-bottom: 10px;
+        width: 100%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        line-height: 44px;
+        border-radius: $border-radius;
+        border: 1px solid transparentize(#DBDEE3, .5);
+        font-weight: 500;
+        color: $color-text-base;
+        padding: 0 20px;
+        background: #fff;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .button {
+      margin-top: 30px;
+    }
+
+    .pricing-plan__box__more {
+      text-align: center;
+      margin-top: 30px;
+
+      span {
+        font-size: 14px;
+        font-weight: 700;
+        color: $color-main-blue;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &:after {
+          display: inline-block;
+          content: '';
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 5px 4.5px 0 4.5px;
+          border-color: $color-main-blue transparent transparent transparent;
+          margin-left: 10px;
+          position: relative;
+          top: -2px;
+        }
+      }
+    }
+
+    .pricing-plan__box__features {
+      padding-left: 40px;
+      margin-top: 25px;
+      display: none;
+
+      li {
+        line-height: 2.5;
+        list-style-image: url("../images/check.svg");
+        padding-left: 10px;
+      }
+    }
+  }
+
+  .pricing-plan__overage-rates {
+    text-align: center;
+    margin-top: 30px;
+    line-height: 1;
+    text-decoration: underline;
+    font-size: 14px;
+    color: $color-main-graphite;
+    display: block;
+  }
+
+  &.pricing-plan--expanded .pricing-plan__box {
+    .pricing-plan__box__more a:after {
+      transform: rotate(180deg);
+    }
+
+    .pricing-plan__box__features {
+      display: block;
+    }
+  }
+
+  &.pricing-plan--featured .pricing-plan__box {
+    background: $color-main-gray;
+    box-shadow: 0 0 18px rgba(0, 112, 211, .27), 0 4px 8px rgba(0, 112, 211, .33);
+  }
+
+  @include medium {
+    margin-bottom: 0;
+
+    .pricing-plan__box__options select,
+    .pricing-plan__box__features li {
+      font-size: 14px;
+    }
+
+    .pricing-plan__overage-rates {
+      margin-top: 40px;
+    }
+  }
+
+  @include medium-only {
+    &:not(:last-child) {
+      margin-right: -1px;
+    }
+
+    .pricing-plan__box {
+      padding-left: 15px;
+      padding-right: 15px;
+      border-radius: 0;
+
+      .pricing-plan__box__title {
+        margin-left: -15px;
+        margin-right: -15px;
+      }
+
+      .pricing-plan__box__options select {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .button {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    &:first-child .pricing-plan__box {
+      border-top-left-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
+    }
+
+    &:last-child .pricing-plan__box {
+      border-top-right-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+
+    &.pricing-plan--featured .pricing-plan__box {
+      box-shadow: none;
+    }
+  }
+
+  @include large {
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

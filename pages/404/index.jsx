@@ -1,7 +1,7 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { CTASection, PageHeader } from '../../components';
+import { CTASection, Footer, PageHeader } from '../../components';
 
 export default () => (
   <DocumentTitle title="404">
@@ -26,6 +26,7 @@ export default () => (
           Get Started for Free
         </Link>
       </CTASection>
+      <Footer />
     </div>
   </DocumentTitle>
 );
