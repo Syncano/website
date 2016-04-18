@@ -1,42 +1,69 @@
-$very-small: 320px;
-$small: 480px;
-$medium: 768px;
-$large: 1024px;
-$very-large: 1300px;
-$full: 1401px;
+$breakpoints: (
+  very-small: (
+    min-width: 320px,
+    max-width: 480px - 1,
+  ),
+  small: (
+    min-width: 480px,
+    max-width: 768px - 1,
+  ),
+  medium: (
+    min-width: 768px,
+    max-width: 1024px - 1,
+  ),
+  large: (
+    min-width: 1024px,
+    max-width: 1300px - 1,
+  ),
+  very-large: (
+    min-width: 1300px,
+    max-width: 1401px - 1,
+  ),
+  full: (
+    min-width: 1401px,
+    max-width: null,
+  )
+);
 
 @mixin very-small {
-  @media screen and (min-width: $very-small) {
+  @media screen and (min-width: map-get(map-get($breakpoints, 'very-small'), 'min-width')) {
     @content;
   }
 }
 
 @mixin small {
-  @media screen and (min-width: $small) {
+  @media screen and (min-width: map-get(map-get($breakpoints, 'small'), 'min-width')) {
     @content;
   }
 }
 
 @mixin medium {
-  @media screen and (min-width: $medium) {
+  @media screen and (min-width: map-get(map-get($breakpoints, 'medium'), 'min-width')) {
+    @content;
+  }
+}
+
+@mixin medium-only {
+  @media screen and (min-width: map-get(map-get($breakpoints, 'small'), 'min-width')) and
+  (max-width: map-get(map-get($breakpoints, 'medium'), 'max-width')) {
     @content;
   }
 }
 
 @mixin large {
-  @media screen and (min-width: $large) {
+  @media screen and (min-width: map-get(map-get($breakpoints, 'large'), 'min-width')) {
     @content;
   }
 }
 
 @mixin very-large {
-  @media screen and (min-width: $very-large) {
+  @media screen and (min-width: map-get(map-get($breakpoints, 'very-large'), 'min-width')) {
     @content;
   }
 }
 
 @mixin full {
-  @media screen and (min-width: $full) {
+  @media screen and (min-width: map-get(map-get($breakpoints, 'full'), 'min-width')) {
     @content;
   }
 }
