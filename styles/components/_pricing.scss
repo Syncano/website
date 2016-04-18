@@ -18,13 +18,18 @@
   @include medium {
     .pricing__plans {
       display: flex;
-      margin-left: -(20px + 10);
-      margin-right: -(20px + 10);
     }
 
     .pricing__footer {
       font-size: 18px;
       line-height: 1.5;
+    }
+  }
+
+  @include medium-only {
+    .pricing__plans {
+      margin-left: -20px;
+      margin-right: -20px;
     }
   }
 }
