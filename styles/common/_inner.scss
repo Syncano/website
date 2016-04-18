@@ -25,6 +25,10 @@
     }
   }
 
+  &.inner--pricing {
+    max-width: 940px;
+  }
+
   &.inner--text-columns {
     max-width: $max-width + (2 * 20px);
   }
