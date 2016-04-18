@@ -16,19 +16,25 @@
   .slick-slide {
     text-align: center;
     padding-top: 80px;
+    padding-bottom: 40px;
 
-    blockquote p {
-      color: #fff;
-      font-size: 18px;
-      line-height: 30px;
-      font-style: italic;
+    blockquote {
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+
+      p {
+        color: #fff;
+        font-size: 18px;
+        line-height: 30px;
+        font-style: italic;
+      }
     }
   }
 
   .slick-dots {
     display: flex !important;
     justify-content: center;
-    margin-top: 40px;
 
     li {
       width: 8px;
@@ -64,5 +70,24 @@
 
   @include retina {
     background-image: url("../components/testimonials/images/testimonials-background@2x.jpg");
+  }
+
+  @include medium {
+    background-image: url("../components/testimonials/images/testimonials-background-medium.jpg");
+    padding-bottom: 100px;
+
+    .slick-slide {
+      padding-top: 100px;
+      padding-bottom: 55px;
+
+      blockquote p {
+        font-size: 24px;
+        line-height: 40px;
+      }
+    }
+
+    @include retina {
+      background-image: url("../components/testimonials/images/testimonials-background-medium@2x.jpg");
+    }
   }
 }
