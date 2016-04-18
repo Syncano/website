@@ -23,7 +23,7 @@ export default () => {
         <PricingPlan
           isFeatured={true}
           title="Developer"
-          price="25"
+          price={25}
           period="per month"
           buttonText="Buy Now"
           features={[
@@ -38,7 +38,7 @@ export default () => {
         />
         <PricingPlan
           title="Business"
-          price="85"
+          price={85}
           period="per month"
           buttonText="Buy Now"
           features={[

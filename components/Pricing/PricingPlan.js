@@ -20,11 +20,10 @@ export default React.createClass({
 
   renderPrice() {
     const { price } = this.props;
-    const currency = (price != 'Free') ? <span className="pricing__plan__box__price">&#36;</span> : '';
 
     return (
       <div>
-        {currency}{price}
+        {_.isNumber(price) ? <span><span className="pricing__plan__box__price">&#36;</span>{price}</span> : price}
       </div>
     );
   },
@@ -56,6 +55,8 @@ export default React.createClass({
         </Link>
       );
     }
+
+    return null;
   },
 
   getPricingPlanClass() {
