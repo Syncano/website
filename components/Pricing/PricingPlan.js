@@ -23,7 +23,7 @@ export default React.createClass({
 
     return (
       <div>
-        {_.isNumber(price) ? <span><span className="pricing__plan__box__price">&#36;</span>{price}</span> : price}
+        {_.isNumber(price) ? <span><span className="pricing-plan__box__price">&#36;</span>{price}</span> : price}
       </div>
     );
   },
@@ -49,7 +49,7 @@ export default React.createClass({
       return (
         <Link
           to={overageRatesLinkTo}
-          className="pricing__plan__overage-rates"
+          className="pricing-plan__overage-rates"
         >
           overage rates
         </Link>
@@ -64,9 +64,9 @@ export default React.createClass({
     const { isFeatured } = this.props;
 
     return classNames({
-      'pricing__plan': true,
-      'pricing__plan--expanded': (isExpanded == true),
-      'pricing__plan--featured': (isFeatured == true)
+      'pricing-plan': true,
+      'pricing-plan--expanded': (isExpanded == true),
+      'pricing-plan--featured': (isFeatured == true)
     });
   },
 
@@ -86,17 +86,17 @@ export default React.createClass({
 
     return (
       <div className={this.getPricingPlanClass()}>
-        <div className="pricing__plan__box">
-          <h3 className="pricing__plan__box__title">
+        <div className="pricing-plan__box">
+          <h3 className="pricing-plan__box__title">
             {title}
           </h3>
-          <div className="pricing__plan__box__price">
+          <div className="pricing-plan__box__price">
             {this.renderPrice()}
           </div>
-          <div className="pricing__plan__box__period">
+          <div className="pricing-plan__box__period">
             {period}
           </div>
-          <div className="pricing__plan__box__options">
+          <div className="pricing-plan__box__options">
             <h4>Includes:</h4>
             <select>
               <option>
@@ -115,12 +115,12 @@ export default React.createClass({
           >
             {buttonText}
           </Link>
-          <div className="pricing__plan__box__more">
+          <div className="pricing-plan__box__more">
             <span onClick={this.handleClick}>
               Show More
             </span>
           </div>
-          <div className="pricing__plan__box__features">
+          <div className="pricing-plan__box__features">
             {this.renderFeatures()}
           </div>
         </div>
