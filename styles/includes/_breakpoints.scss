@@ -44,7 +44,7 @@ $breakpoints: (
 }
 
 @mixin medium-only {
-  @media screen and (min-width: map-get(map-get($breakpoints, 'small'), 'min-width')) and
+  @media screen and (min-width: map-get(map-get($breakpoints, 'medium'), 'min-width')) and
   (max-width: map-get(map-get($breakpoints, 'medium'), 'max-width')) {
     @content;
   }

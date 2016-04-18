@@ -32,4 +32,12 @@
       margin-right: -20px;
     }
   }
+
+  @include large {
+    padding-bottom: 100px;
+
+    .pricing__footer {
+      margin-top: 100px;
+    }
+  }
 }

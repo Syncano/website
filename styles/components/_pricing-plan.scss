@@ -73,6 +73,8 @@
 
     .button {
       margin-top: 30px;
+      padding-left: 0;
+      padding-right: 0;
     }
 
     .pricing-plan__box__more {
@@ -170,11 +172,6 @@
       .pricing-plan__box__options select {
         padding-left: 10px;
         padding-right: 10px;
-      }
-
-      .button {
-        padding-left: 0;
-        padding-right: 0;
       }
     }
 

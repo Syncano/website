@@ -5,7 +5,7 @@ import PricingPlan from './PricingPlan';
 export default () => {
   return (
     <div className="pricing">
-      <div className="inner">
+      <div className="inner inner--pricing">
         <div className="pricing__plans">
           <PricingPlan
             title="Starter"
