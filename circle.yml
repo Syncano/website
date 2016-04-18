@@ -1,0 +1,26 @@
+machine:
+  ruby:
+    version: 2.3.0
+  node:
+    version: 4.4.3
+  python:
+    version: 2.7.9
+
+dependencies:
+  pre:
+    - git clone -b devel git@github.com:Syncano/syncano-ansible.git
+    - cp syncano-ansible/config/ssh_config ~/.ssh/config
+    - npm install -g npm
+    - pip install -r syncano-ansible/requirements.txt
+
+test:
+  override:
+    - echo "test"
+
+deployment:
+  staging_new:
+    branch: new
+    commands:
+      - NODE_ENV=staging_new gatsby build
+      - bundle exec s3_website push --force --config-dir=./config/staging_new/
+      - cd syncano-ansible/playbooks/ && ansible-playbook www-server.yml -e 'env=stg' --tags=website
