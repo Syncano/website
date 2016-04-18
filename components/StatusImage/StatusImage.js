@@ -13,5 +13,5 @@ export default ({ className }) => {
     );
   }
 
-  return '';
+  return null;
 };
