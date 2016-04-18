@@ -90,4 +90,13 @@
       background-image: url("../components/testimonials/images/testimonials-background-medium@2x.jpg");
     }
   }
+
+  @include large {
+    padding-bottom: 118px;
+
+    .slick-slide {
+      padding-top: 114px;
+      padding-bottom: 70px;
+    }
+  }
 }
