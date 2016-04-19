@@ -65,8 +65,8 @@
   }
 
   @include large {
-    padding-top: 140px;
-    padding-bottom: 140px;
+    padding-top: 110px;
+    padding-bottom: 110px;
 
     .text-columns__column {
       margin-right: 40px;
@@ -82,6 +82,9 @@
   }
 
   @include very-large {
+    padding-top: 140px;
+    padding-bottom: 140px;
+
     .text-columns__column {
       .columns__column__headline h4 {
         font-size: 22px;

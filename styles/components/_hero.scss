@@ -22,35 +22,57 @@
 
   p {
     font-size: 18px;
-    color: $color-text-textline;
-    line-height: 1.5em;
+    color: transparentize($color-text-base, .2);
+    line-height: 1.5;
     margin-top: 30px;
     max-width: 270px;
+    font-weight: 500;
   }
 
   .button {
     margin-top: 50px;
-    box-shadow: 0 3px 5px rgba(255, 203, 0, .4);
   }
 
   &.hero--home {
-    background-image: url("../components/Hero/images/hero-home-large.jpg");
+    background-image: url("../components/Hero/images/hero-home.jpg");
   }
 
   @include small {
-    padding-top: 55px;
-    background-position: 46% 50%;
+    padding-top: 50px;
+    background-position: 40% 50%;
   }
 
   @include medium {
-    min-height: 757px;
+    min-height: 750px;
     text-align: left;
     padding-top: 300px;
-    background-position: 50% 50%;
+    background-position: 51% 50%;
 
     h2, p {
       max-width: none;
     }
+
+    h2 {
+      font-size: 40px;
+      line-height: 31px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 17px;
+    }
+
+    .button {
+      margin-top: 60px;
+    }
+
+    &.hero--home {
+      background-image: url("../components/Hero/images/hero-home-medium.jpg");
+    }
+  }
+
+  @include large {
+    background-position: 50% 50%;
 
     h2 {
       font-size: 44px;
@@ -58,10 +80,6 @@
 
     p {
       font-size: 24px;
-    }
-
-    .button {
-      margin-top: 40px;
     }
   }
 }

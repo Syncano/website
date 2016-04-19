@@ -9,6 +9,8 @@ body {
   font-size: 14px;
   background: $color-body-bg;
   color: $color-text-base;
+  min-width: 320px;
+  line-height: 1;
 
   @include medium {
     font-size: 16px;

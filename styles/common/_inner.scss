@@ -19,10 +19,7 @@
   }
 
   &.inner--platforms {
-    @include very-large {
-      padding-left: 110px + 25;
-      padding-right: 110px + 25;
-    }
+    max-width: $max-width - (2 * 25px);
   }
 
   &.inner--pricing {
