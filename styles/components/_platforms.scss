@@ -4,21 +4,26 @@
 
   .platforms__scroll {
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
   }
 
   .inner {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 100%;
     padding-top: 30px;
     padding-bottom: 30px;
-    font-size: 0;
-    white-space: nowrap;
   }
 
   .platforms__item {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-right: 35px;
 
     &:last-child {
-      margin-right: 11px;
+      margin-right: 0;
     }
 
     img {
@@ -27,24 +32,12 @@
 
     &.platforms__item--more img {
       height: 20px;
-      position: relative;
-      top: -10px;
     }
   }
 
   @include small {
-    .inner {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
     .platforms__item {
       margin-right: 0;
-
-      &.platforms__item--more img {
-        top: 10px;
-      }
     }
   }
 
@@ -56,7 +49,6 @@
 
       &.platforms__item--more img {
         height: 29px;
-        top: 16px;
       }
     }
   }

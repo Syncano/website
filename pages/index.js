@@ -24,7 +24,7 @@ export default () => (
         theme="gray"
         image={
           <img
-            src={require('../images/sample-illustration.svg')}
+            src={require('../images/illustrations/focus-on-your-app.svg')}
             alt="sample-illustration"
           />
         }
@@ -43,7 +43,7 @@ export default () => (
         theme="purple"
         image={
           <img
-            src={require('../images/sample-illustration.svg')}
+            src={require('../images/illustrations/customize-your-apis-and-features.svg')}
             alt="sample-illustration"
           />
         }
@@ -93,7 +93,7 @@ export default () => (
         variant="image-left"
         image={
           <img
-            src={require('../images/sample-illustration.svg')}
+            src={require('../images/illustrations/run-server-side-logic-in-the-cloud.svg')}
             alt="sample-illustration"
           />
         }

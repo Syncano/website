@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="375px" height="309px" viewBox="0 0 375 309" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.1 (28215) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 18</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M127.117066,153.116765 C107.562571,154.079085 92,170.240212 92,190.035714 C92,210.455014 108.549231,227 128.963742,227 L254.504673,227 C279.108426,226.826055 299,206.889491 299,182.321429 C299,157.646135 278.934407,137.642857 254.182243,137.642857 C251.754066,137.642857 249.370991,137.835359 247.047536,138.20589 C237.161904,116.273295 215.057059,101 189.373832,101 C158.194513,101 132.288959,123.50955 127.117066,153.116765 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="207" height="126" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-18" transform="translate(-2.000000, 2.000000)">
+            <g id="Group-10">
+                <path d="M114.5,181.5 L23.5,110.5" id="Line" stroke="#373D44" stroke-linecap="square" stroke-dasharray="4"></path>
+                <path d="M171.5,131.5 L136.5,25.5" id="Line" stroke="#373D44" stroke-linecap="square" stroke-dasharray="4"></path>
+                <path d="M220.5,140.5 L293.5,25.5" id="Line" stroke="#373D44" stroke-linecap="square" stroke-dasharray="4"></path>
+                <path d="M272.5,174.5 L371.5,133.5" id="Line" stroke="#373D44" stroke-linecap="square" stroke-dasharray="4"></path>
+                <path d="M361.5,137.5 L288.5,42.5" id="Line" stroke="#373D44" stroke-linecap="square" stroke-dasharray="4" opacity="0.3"></path>
+                <path d="M271.5,35.5 L130.5,29.5" id="Line" stroke="#373D44" stroke-linecap="square" stroke-dasharray="4" opacity="0.3"></path>
+                <path d="M134.5,29.5 L32.5,119.5" id="Line" stroke="#373D44" stroke-linecap="square" stroke-dasharray="4" opacity="0.3"></path>
+                <ellipse id="Oval-51" fill="#B8C0C9" opacity="0.3" cx="196.25" cy="290" rx="114.25" ry="17"></ellipse>
+                <polygon id="Polygon-1" stroke="#373D44" stroke-width="4" stroke-linejoin="round" fill="#F7F8F9" points="137 6 157.78461 18 157.78461 42 137 54 116.21539 42 116.21539 18"></polygon>
+                <polygon id="Polygon-1" stroke="#373D44" stroke-width="4" stroke-linejoin="round" fill="#FFCC01" points="280.5 0 312.975953 18.75 312.975953 56.25 280.5 75 248.024047 56.25 248.024047 18.75"></polygon>
+                <polygon id="Polygon-1" stroke="#373D44" stroke-width="4" stroke-linejoin="round" fill="#903EB9" points="36.5 79 68.1099272 97.25 68.1099272 133.75 36.5 152 4.89007276 133.75 4.89007276 97.25"></polygon>
+                <polygon id="Polygon-1" stroke="#373D44" stroke-width="4" stroke-linejoin="round" fill="#F7F8F9" points="363.5 126 374.325318 132.25 374.325318 144.75 363.5 151 352.674682 144.75 352.674682 132.25"></polygon>
+                <use id="Rectangle-227" stroke="#373D44" mask="url(#mask-2)" stroke-width="8" fill="#49B9E8" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

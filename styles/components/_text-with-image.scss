@@ -6,7 +6,7 @@
 
   .text-with-image__image {
     img {
-      max-width: 80%;
+      max-width: 100%;
       margin-left: auto;
       margin-right: auto;
     }
@@ -17,12 +17,13 @@
   }
 
   .text-with-image__text {
+    margin-top: 30px;
+
     h2 {
-      margin-top: 35px;
       font-size: 20px;
       color: $color-text-headline;
       font-weight: 700;
-      line-height: 1.5em;
+      line-height: 1.5;
     }
 
     p,
@@ -31,7 +32,8 @@
     }
 
     p {
-      line-height: 1.75em;
+      line-height: 1.75;
+      color: transparentize($color-text-base, .1);
     }
 
     .text-with-image__text__list {
@@ -69,7 +71,7 @@
     }
 
     p {
-      color: rgba(255, 255, 255, .85);
+      color: transparentize(rgba(255, 255, 255, .85), .1);
       margin-top: 40px;
     }
 
@@ -107,9 +109,11 @@
     }
 
     .text-with-image__text {
+      margin-top: 0;
+
       h2 {
         font-size: 28px;
-        margin-top: 0;
+        line-height: 1.25;
       }
     }
 
@@ -119,8 +123,8 @@
   }
 
   @include large {
-    padding-top: 140px;
-    padding-bottom: 140px;
+    padding-top: 110px;
+    padding-bottom: 110px;
 
     .text-with-image__image .text-with-image__image__inner {
       padding: 0 45px;
@@ -138,6 +142,9 @@
   }
 
   @include very-large {
+    padding-top: 140px;
+    padding-bottom: 140px;
+
     .text-with-image__image .text-with-image__image__inner {
       padding: 0 90px;
     }
