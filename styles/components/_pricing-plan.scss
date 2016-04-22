@@ -144,11 +144,21 @@
   @include medium {
     margin-bottom: 0;
 
-    .pricing-plan__box__options select,
-    .pricing-plan__box__features li {
-      font-size: 14px;
-    }
+    .pricing-plan__box {
+      .pricing-plan__box__options select,
+      .pricing-plan__box__features li {
+        font-size: 14px;
+      }
 
+      .pricing-plan__box__more {
+        display: none;
+      }
+
+      .pricing-plan__box__features {
+        display: block;
+      }
+    }
+    
     .pricing-plan__overage-rates {
       margin-top: 40px;
     }

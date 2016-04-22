@@ -1,0 +1,5 @@
+@mixin site-class($class) {
+  @at-root .site.#{$class} & {
+    @content;
+  }
+}

@@ -1,14 +1,16 @@
 .top-bar {
   overflow: hidden;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  background: #fff;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, .1);
 
   .inner {
     overflow: hidden;
+    padding-top: 22px;
+    padding-bottom: 22px;
   }
 
   .top-bar__logo {
@@ -51,8 +53,13 @@
   }
 
   @include medium {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    background: none;
+    box-shadow: none;
+
+    .inner {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
 
     .top-bar__logo img {
       height: 18px;

@@ -1,0 +1,13 @@
+.hamburger-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  height: 100vh;
+  background: transparentize($color-main-blue, .03);
+  display: none;
+
+  @include site-class('site--has-hamburger-menu-visible') {
+    display: block;
+  }
+}
