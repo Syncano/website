@@ -11,7 +11,7 @@
       margin-bottom: 0;
     }
 
-    .columns__column__headline {
+    .text-columns__column__headline {
       display: inline-flex;
 
       h4, img {
@@ -54,7 +54,7 @@
         margin-right: 0;
       }
 
-      .columns__column__headline {
+      .text-columns__column__headline {
         height: 48px;
       }
 
@@ -71,7 +71,7 @@
     .text-columns__column {
       margin-right: 40px;
 
-      .columns__column__headline {
+      .text-columns__column__headline {
         height: auto;
       }
 
@@ -86,7 +86,7 @@
     padding-bottom: 140px;
 
     .text-columns__column {
-      .columns__column__headline h4 {
+      .text-columns__column__headline h4 {
         font-size: 22px;
       }
 
@@ -97,7 +97,7 @@
   }
 
   @include full {
-    .text-columns__column .columns__column__headline h4 {
+    .text-columns__column .text-columns__column__headline h4 {
       font-size: 24px;
     }
   }
