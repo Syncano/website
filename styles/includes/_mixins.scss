@@ -1,5 +1,5 @@
-@mixin site-class($class) {
-  @at-root .site.#{$class} & {
+@mixin template-class($class) {
+  @at-root .template.#{$class} & {
     @content;
   }
 }

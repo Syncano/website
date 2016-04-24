@@ -7,7 +7,6 @@ import Hero from './Hero';
 import PageHeader from './PageHeader';
 import Platforms from './Platforms';
 import Pricing from './Pricing';
-import Site from './Site';
 import StatusImage from './StatusImage';
 import SocialProfiles from './SocialProfiles';
 import Testimonials from './Testimonials';
@@ -27,7 +26,6 @@ export default {
   PageHeader,
   Platforms,
   Pricing,
-  Site,
   StatusImage,
   SocialProfiles,
   Testimonials,

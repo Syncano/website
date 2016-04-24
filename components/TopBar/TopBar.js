@@ -1,15 +1,9 @@
 import React from 'react';
-import classNames  from 'classnames';
 import { Link } from 'react-router';
 
-export default ({ hasHamburgerMenuVisible, toggleHamburgerMenu }) => {
-  const topBarClass = classNames({
-    'top-bar': true,
-    'top-bar--in-hamburger-menu': (hasHamburgerMenuVisible == true)
-  });
-
+export default ({ toggleHamburgerMenu }) => {
   return (
-    <div className={topBarClass}>
+    <div className="top-bar">
       <div className="inner">
         <div className="top-bar__logo">
           <h1>

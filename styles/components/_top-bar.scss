@@ -61,7 +61,7 @@
     }
   }
 
-  &.top-bar--in-hamburger-menu {
+  @include template-class('template--has-hamburger-menu-visible') {
     background: none;
     box-shadow: none;
 

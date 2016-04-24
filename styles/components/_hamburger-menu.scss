@@ -9,7 +9,7 @@
   text-align: center;
   @include z-index(hamburger-menu);
 
-  @include site-class('site--has-hamburger-menu-visible') {
+  @include template-class('template--has-hamburger-menu-visible') {
     display: block;
   }
 
@@ -33,6 +33,7 @@
 
     .button {
       border-color: rgba(255, 255, 255, .5);
+      max-width: 200px;
 
       &.button--featured {
         border-color: $color-main-yellow;

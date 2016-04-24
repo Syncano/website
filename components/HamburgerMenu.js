@@ -49,7 +49,7 @@ export default ({ toggleHamburgerMenu }) => {
             <li>
               <Link
                 to="/blog/"
-                className="button"
+                className="button button--large"
                 activeClassName="is-active"
               >
                 Log In
@@ -58,7 +58,7 @@ export default ({ toggleHamburgerMenu }) => {
             <li>
               <Link
                 to="/blog/"
-                className="button button--featured"
+                className="button button--large button--featured"
                 activeClassName="is-active"
               >
                 Sign Up For Free
