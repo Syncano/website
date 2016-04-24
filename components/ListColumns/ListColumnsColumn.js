@@ -1,11 +1,11 @@
 import React from 'react';
 import _ from 'lodash';
 
-export default ({ list }) => {
+export default ({ listItems }) => {
   return (
     <div className="list-columns__columns__column">
       <ul>
-        {list.map((listItem) => (
+        {listItems.map((listItem) => (
           <li key={_.kebabCase(listItem)}>
             {listItem}
           </li>

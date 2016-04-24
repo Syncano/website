@@ -25,7 +25,7 @@ export default () => (
       />
       <ListColumns headline="Pricing that scales with your app">
         <ListColumns.Column
-          list={[
+          listItems={[
             'No credit card required to start building',
             'All major credit cards accepted through Stripe',
             'No contracts or hidden fees',
@@ -33,7 +33,7 @@ export default () => (
           ]}
         />
         <ListColumns.Column
-          list={[
+          listItems={[
             '30 day money back guarantee the first month of any paid plan',
             'Move to a paid package only when you are ready',
             'Set soft and hard limits to monitor your usuage',
