@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 export default ({ toggleHamburgerMenu }) => {
   return (
-    <div
+    <nav
       className="hamburger-menu"
       onClick={() => toggleHamburgerMenu()}
     >
@@ -67,6 +67,6 @@ export default ({ toggleHamburgerMenu }) => {
           </ul>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };

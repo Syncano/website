@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import HamburgerMenu from '../HamburgerMenu';
 
 export default ({ toggleHamburgerMenu }) => {
   return (
@@ -85,6 +86,7 @@ export default ({ toggleHamburgerMenu }) => {
           </div>
         </nav>
       </div>
+      <HamburgerMenu toggleHamburgerMenu={toggleHamburgerMenu} />
     </div>
   );
 };

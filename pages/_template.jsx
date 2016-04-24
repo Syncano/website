@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames  from 'classnames';
-import { HamburgerMenu, TopBar } from '../components';
+import { TopBar } from '../components';
 import 'normalize.css/normalize.css';
 import 'styles/styles';
 
@@ -34,7 +34,6 @@ export default React.createClass({
     return (
       <div className={this.getTemplateClass()}>
         <TopBar toggleHamburgerMenu={this.toggleHamburgerMenu} />
-        <HamburgerMenu toggleHamburgerMenu={this.toggleHamburgerMenu} />
         <div className="wrapper">
           {this.props.children}
         </div>

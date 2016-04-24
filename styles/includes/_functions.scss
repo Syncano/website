@@ -1,3 +1,12 @@
+// http://www.sitepoint.com/extra-map-functions-sass/
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+
+  @return $map;
+}
+
 // https://github.com/at-import/SassyLists
 @function sl-to-list($value, $separator: list-separator($value)) {
   @return join((), $value, $separator);
