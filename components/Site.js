@@ -19,7 +19,7 @@ export default React.createClass({
   },
 
   getSiteClass() {
-    const { hasHamburgerMenuVisible } = this.props;
+    const { hasHamburgerMenuVisible } = this.state;
 
     return classNames({
       'site': true,
@@ -28,10 +28,12 @@ export default React.createClass({
   },
 
   render() {
+    const { hasHamburgerMenuVisible } = this.state;
+    
     return (
       <div className={this.getSiteClass()}>
-        <TopBar />
-        <HamburgerMenu />
+        <TopBar hasHamburgerMenuVisible={hasHamburgerMenuVisible} toggleHamburgerMenu={this.toggleHamburgerMenu} />
+        <HamburgerMenu toggleHamburgerMenu={this.toggleHamburgerMenu} />
         <div className="wrapper">
           {this.props.children}
         </div>

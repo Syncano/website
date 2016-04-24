@@ -6,6 +6,7 @@
   right: 0;
   background: #fff;
   box-shadow: 0 3px 4px rgba(0, 0, 0, .1);
+  @include z-index(top-bar);
 
   .inner {
     overflow: hidden;
@@ -15,10 +16,18 @@
 
   .top-bar__logo {
     float: left;
+
+    .white {
+      display: none;
+    }
   }
 
   .top-bar__nav {
     float: right;
+
+    .top-bar__nav__hamburger .close {
+      display: none;
+    }
 
     .top-bar__nav__menu {
       display: none;
@@ -52,9 +61,31 @@
     }
   }
 
+  &.top-bar--in-hamburger-menu {
+    background: none;
+    box-shadow: none;
+
+    .top-bar__logo img {
+      display: none;
+
+      &.white {
+        display: block;
+      }
+    }
+
+    .top-bar__nav .top-bar__nav__hamburger img {
+      display: none;
+
+      &.close {
+        display: block;
+      }
+    }
+  }
+
   @include medium {
     background: none;
     box-shadow: none;
+    position: absolute;
 
     .inner {
       padding-top: 60px;

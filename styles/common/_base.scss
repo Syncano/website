@@ -12,6 +12,10 @@ body {
   min-width: 320px;
   line-height: 1;
 
+  @include site-class('site--has-hamburger-menu-visible') {
+    max-height: 100vh;
+  }
+
   @include medium {
     font-size: 16px;
   }

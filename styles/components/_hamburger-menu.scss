@@ -2,12 +2,49 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
   background: transparentize($color-main-blue, .03);
   display: none;
+  text-align: center;
+  @include z-index(hamburger-menu);
 
   @include site-class('site--has-hamburger-menu-visible') {
     display: block;
+  }
+
+  a {
+    color: #fff;
+  }
+
+  .hamburger-menu__menu {
+    margin-top: 85px;
+
+    li {
+      text-transform: uppercase;
+      font-size: 18px;
+      line-height: 65px;
+      font-weight: bold;
+    }
+  }
+
+  .hamburger-menu__buttons {
+    margin-top: 45px;
+
+    .button {
+      border-color: rgba(255, 255, 255, .5);
+
+      &.button--featured {
+        border-color: $color-main-yellow;
+      }
+    }
+
+    li {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }
