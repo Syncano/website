@@ -13,10 +13,6 @@ export default class TopBar extends React.Component {
     };
   }
 
-  toggleHamburgerMenu = (hasHamburgerMenuVisible) => {
-    this.setState({ hasHamburgerMenuVisible: !hasHamburgerMenuVisible });
-  }
-
   static childContextTypes = {
     hamburgerMenu: React.PropTypes.object
   }
@@ -29,9 +25,13 @@ export default class TopBar extends React.Component {
     };
   }
 
+  toggleHamburgerMenu = (hasHamburgerMenuVisible) => {
+    this.setState({ hasHamburgerMenuVisible: !hasHamburgerMenuVisible });
+  }
+
   getBodyClassName(hasHamburgerMenuVisible) {
     return classNames({
-      'has-hamburger-menu-visible': (hasHamburgerMenuVisible == true)
+      'has-hamburger-menu-visible': hasHamburgerMenuVisible
     });
   }
 
