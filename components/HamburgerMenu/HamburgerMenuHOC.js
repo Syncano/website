@@ -39,8 +39,6 @@ export default (ComposedComponent) => class extends React.Component {
   };
 
   closeHamburgerMenu = () => {
-    const { hasHamburgerMenuVisible } = this.state;
-
     this.setState({ hasHamburgerMenuVisible: false });
   };
   
