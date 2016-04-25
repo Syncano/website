@@ -18,6 +18,10 @@
     padding-right: 110px;
   }
 
+  &.inner--list-columns {
+    max-width: 875px;
+  }
+
   &.inner--platforms {
     max-width: $max-width - (2 * 25px);
   }

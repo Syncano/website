@@ -1,7 +1,7 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { CTASection, FAQ, Footer, PageHeader, Pricing, TextWithImage, TextWithBottomImage } from '../../components';
+import { CTASection, FAQ, Footer, ListColumns, PageHeader, Pricing, TextWithImage, TextWithBottomImage } from '../../components';
 
 export default () => (
   <DocumentTitle title="Pricing">
@@ -23,6 +23,24 @@ export default () => (
         headline="Pricing that scales with your app"
         textline="Pay as you grow. Every app comes in different shapes and sizes. You are in control to adjust your plan based on your needs and growth. Easily upgrade or downgrade your account at any time."
       />
+      <ListColumns headline="Pricing that scales with your app">
+        <ListColumns.Column
+          listItems={[
+            'No credit card required to start building',
+            'All major credit cards accepted through Stripe',
+            'No contracts or hidden fees',
+            'Build your app on your schedule'
+          ]}
+        />
+        <ListColumns.Column
+          listItems={[
+            '30 day money back guarantee the first month of any paid plan',
+            'Move to a paid package only when you are ready',
+            'Set soft and hard limits to monitor your usuage',
+            'Adjust to the plan that fits your needs'
+          ]}
+        />
+      </ListColumns>
       <FAQ />
       <TextWithBottomImage
         headline="Get answers from our developers"

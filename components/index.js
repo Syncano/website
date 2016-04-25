@@ -3,6 +3,7 @@ import CTASection from './CTASection';
 import FAQ from './FAQ';
 import Footer from './Footer';
 import Hero from './Hero';
+import ListColumns from './ListColumns';
 import PageHeader from './PageHeader';
 import Platforms from './Platforms';
 import Pricing from './Pricing';
@@ -21,6 +22,7 @@ export default {
   FAQ,
   Footer,
   Hero,
+  ListColumns,
   PageHeader,
   Platforms,
   Pricing,

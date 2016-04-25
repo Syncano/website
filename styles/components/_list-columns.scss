@@ -1,0 +1,71 @@
+.list-columns {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+  background: #fff;
+
+  h2 {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: bold;
+    color: $color-text-headline;
+  }
+
+  ul {
+    text-align: left;
+  }
+
+  li {
+    line-height: 2;
+    color: transparentize($color-text-base, .15);
+    position: relative;
+    padding-left: 37px;
+
+    &:before {
+      display: block;
+      content: '';
+      width: 3px;
+      height: 3px;
+      background: $color-main-blue;
+      border-radius: 50%;
+      position: absolute;
+      left: 12px;
+      top: 1em;
+      transform: translateY(-50%);
+    }
+  }
+
+  .list-columns__columns {
+    margin-top: 25px;
+  }
+
+  @include medium {
+    h2 {
+      font-size: 36px;
+    }
+
+    .list-columns__columns {
+      display: flex;
+      margin-top: 40px;
+
+      .list-columns__columns__column {
+        margin-right: 35px;
+        flex-basis: 50%;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  @include large {
+    padding-top: 110px;
+    padding-bottom: 110px;
+  }
+
+  @include very-large {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+}
