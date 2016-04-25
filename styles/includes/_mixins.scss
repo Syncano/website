@@ -1,5 +1,5 @@
-@mixin template-class($class) {
-  @at-root .template.#{$class} & {
+@mixin body-class($class) {
+  @at-root .#{$class} & {
     @content;
   }
 }

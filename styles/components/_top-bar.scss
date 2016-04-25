@@ -61,7 +61,7 @@
     }
   }
 
-  @include template-class('template--has-hamburger-menu-visible') {
+  @include body-class('has-hamburger-menu-visible') {
     background: none;
     box-shadow: none;
 

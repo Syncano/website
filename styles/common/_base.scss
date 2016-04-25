@@ -12,7 +12,7 @@ body {
   min-width: 320px;
   line-height: 1;
 
-  @include template-class('template--has-hamburger-menu-visible') {
+  @include body-class('has-hamburger-menu-visible') {
     max-height: 100vh;
   }
 

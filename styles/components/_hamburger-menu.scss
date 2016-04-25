@@ -9,7 +9,7 @@
   text-align: center;
   @include z-index(hamburger-menu);
 
-  @include template-class('template--has-hamburger-menu-visible') {
+  @include body-class('has-hamburger-menu-visible') {
     display: block;
   }
 
@@ -47,5 +47,9 @@
         margin-bottom: 0;
       }
     }
+  }
+
+  @include medium {
+    display: none !important;
   }
 }

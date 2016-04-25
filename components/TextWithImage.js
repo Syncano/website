@@ -2,7 +2,7 @@ import React from 'react';
 import classNames  from 'classnames';
 
 export default ({ variant, theme, image, headline, textline, children }) => {
-  const textWithImageClass = classNames({
+  const textWithImageClassName = classNames({
     'text-with-image': true,
     'text-with-image--image-left': (variant == 'image-left'),
     'text-with-image--image-right': (variant == 'image-right'),
@@ -11,7 +11,7 @@ export default ({ variant, theme, image, headline, textline, children }) => {
   });
 
   return (
-    <div className={textWithImageClass}>
+    <div className={textWithImageClassName}>
       <div className="inner">
         <div className="text-with-image__image">
           <div className="text-with-image__image__inner">
