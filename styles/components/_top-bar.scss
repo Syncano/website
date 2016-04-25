@@ -5,13 +5,14 @@
   right: 0;
   background: #fff;
   box-shadow: 0 3px 4px rgba(0, 0, 0, .1);
+  @include z-index(top-bar);
   
-  .inner {
+  > .inner {
     overflow: hidden;
     padding-top: 22px;
     padding-bottom: 22px;
     position: relative;
-    @include z-index(top-bar);
+    @include z-index(top-bar__inner);
   }
 
   .top-bar__logo {
@@ -95,6 +96,11 @@
     .top-bar__logo img {
       height: 18px;
       margin-top: 10px;
+      display: block !important;
+
+      &.white {
+        display: none !important;
+      }
     }
 
     .top-bar__nav {

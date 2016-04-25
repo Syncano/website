@@ -1,5 +1,5 @@
 .hamburger-menu {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
@@ -7,7 +7,6 @@
   background: transparentize($color-main-blue, .03);
   display: none;
   text-align: center;
-  @include z-index(hamburger-menu);
 
   @include body-class('has-hamburger-menu-visible') {
     display: block;

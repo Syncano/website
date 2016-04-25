@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import {HamburgerMenu, HamburgerMenuHOC} from '../HamburgerMenu';
+import { HamburgerMenu, HamburgerMenuHOC } from '../HamburgerMenu';
 
 const TopBar = (props, { hamburgerMenu }) => {
   return (
@@ -8,7 +8,10 @@ const TopBar = (props, { hamburgerMenu }) => {
       <div className="inner">
         <div className="top-bar__logo">
           <h1>
-            <Link to="/">
+            <Link
+              to="/"
+              onClick={hamburgerMenu.close}
+            >
               <img
                 src={require('./images/logo.svg')}
                 alt="Syncano Logo"

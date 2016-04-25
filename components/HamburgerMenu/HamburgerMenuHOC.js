@@ -11,7 +11,7 @@ export default (ComposedComponent) => class extends React.Component {
     this.state = {
       hasHamburgerMenuVisible: false
     };
-  }
+  };
 
   static childContextTypes = {
     hamburgerMenu: React.PropTypes.object
@@ -20,7 +20,8 @@ export default (ComposedComponent) => class extends React.Component {
   getChildContext = () => {
     return {
       hamburgerMenu: {
-        toggle: this.toggleHamburgerMenu
+        toggle: this.toggleHamburgerMenu,
+        close: this.closeHamburgerMenu
       }
     };
   };
@@ -32,9 +33,15 @@ export default (ComposedComponent) => class extends React.Component {
   };
 
   toggleHamburgerMenu = () => {
-    const {hasHamburgerMenuVisible} = this.state;
+    const { hasHamburgerMenuVisible } = this.state;
 
     this.setState({ hasHamburgerMenuVisible: !hasHamburgerMenuVisible });
+  };
+
+  closeHamburgerMenu = () => {
+    const { hasHamburgerMenuVisible } = this.state;
+
+    this.setState({ hasHamburgerMenuVisible: false });
   };
   
   render() {
@@ -45,5 +52,5 @@ export default (ComposedComponent) => class extends React.Component {
         <ComposedComponent {...this.props} {...this.state} />          
       </BodyClassName>
     )
-  }
+  };
 };
