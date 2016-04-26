@@ -17,8 +17,10 @@ export default () => (
       <PageHeader
         overHeadlineContent={<StatusImage className="page-header__status" />}
         headline="All systems operational"
-        textlineHTML="Updated about one minute ago. <br /><a href='http://syncano.statuspage.io' target='_blank'>View
-        our status page</a> for more info."
+        textlineHTML={`
+          Updated about one minute ago. <br /><a href='http://syncano.statuspage.io' target='_blank'>View our status
+          page</a> for more info.
+        `}
       >
         <Link
           to="/"
@@ -40,8 +42,10 @@ export default () => (
           />
         }
         headline="Getting started with Syncano"
-        textline="Learn Syncano basics, terms or any questions you might have. Join us on Slack, read tutorials or
-        simply for our open source code."
+        textline={`
+          Learn Syncano basics, terms or any questions you might have. Join us on Slack, read tutorials or simply for
+          our open source code.
+        `}
       >
         <Link
           to="/about/"
