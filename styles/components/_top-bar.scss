@@ -26,8 +26,12 @@
   .top-bar__nav {
     float: right;
 
-    .top-bar__nav__hamburger .close {
-      display: none;
+    .top-bar__nav__hamburger {
+      cursor: pointer;
+
+      .close {
+        display: none;
+      }
     }
 
     .top-bar__nav__menu {
