@@ -42,6 +42,10 @@
 
         a {
           color: $color-text-base;
+
+          &:hover {
+            color: $color-main-blue;
+          }
         }
       }
     }

@@ -10,7 +10,7 @@ export default ({ items }) => {
             topOffset={-10}
             className="terms-and-legal__sidebar__nav-container"
           >
-            <div className="terms-and-legal__sidebar__nav">
+            <nav className="terms-and-legal__sidebar__nav">
               <h3 className="terms-and-legal__sidebar__nav__headline">
                 Table of Content
               </h3>
@@ -23,7 +23,7 @@ export default ({ items }) => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </nav>
           </Sticky>
         </StickyContainer>
         <div className="terms-and-legal__page">
