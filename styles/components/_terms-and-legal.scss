@@ -1,0 +1,120 @@
+.terms-and-legal {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: $color-main-gray;
+
+  .terms-and-legal__sidebar {
+    display: none;
+
+    .terms-and-legal__sidebar__nav-container {
+      padding-top: 10px;
+      transform: translateY(-10px);
+
+      &.sticky {
+        transform: none;
+      }
+    }
+
+    .terms-and-legal__sidebar__nav {
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, .09);
+      padding: 25px;
+      width: 100%;
+
+      .terms-and-legal__sidebar__nav__headline {
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: bold;
+        color: transparentize($color-text-base, .5);
+        margin-bottom: 20px;
+      }
+
+      li {
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: 400;
+        margin-bottom: 20px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        a {
+          color: $color-text-base;
+        }
+      }
+    }
+  }
+
+  .terms-and-legal__page .terms-and-legal__page__entry {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    h3 {
+      font-weight: bold;
+      color: $color-text-headline;
+      font-size: 36px;
+      margin-bottom: 40px;
+      line-height: 42px;
+    }
+
+    h4 {
+      font-weight: bold;
+      margin-bottom: 20px;
+      margin-top: 40px;
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    p {
+      line-height: 1.5;
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include medium {
+    .inner {
+      display: flex;
+    }
+
+    .terms-and-legal__sidebar,
+    .terms-and-legal__page {
+      flex-flow: 1;
+    }
+
+    .terms-and-legal__sidebar {
+      display: block;
+      margin-right: 30px;
+      flex: 0 0 180px;
+    }
+
+    .terms-and-legal__page {
+      .terms-and-legal__page__entry {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  @include large {
+    padding-top: 110px;
+    padding-bottom: 110px;
+
+    .terms-and-legal__sidebar {
+      margin-right: 50px;
+      flex-basis: 250px;
+    }
+  }
+
+  @include very-large {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}

@@ -7,9 +7,10 @@ import ListColumns from './ListColumns';
 import PageHeader from './PageHeader';
 import Platforms from './Platforms';
 import Pricing from './Pricing';
-import StatusImage from './StatusImage';
-import Testimonials from './Testimonials';
 import SocialProfiles from './SocialProfiles';
+import StatusImage from './StatusImage';
+import TermsAndLegal from './TermsAndLegal';
+import Testimonials from './Testimonials';
 import TextColumns from './TextColumns';
 import TextPanels from './TextPanels';
 import TextWithBottomImage from './TextWithBottomImage';
@@ -26,9 +27,10 @@ export default {
   PageHeader,
   Platforms,
   Pricing,
-  StatusImage,
-  Testimonials,
   SocialProfiles,
+  StatusImage,
+  TermsAndLegal,
+  Testimonials,
   TextColumns,
   TextPanels,
   TextWithBottomImage,
