@@ -53,7 +53,7 @@ export default () => (
           <h4>More</h4>
           <ul>
             <li>
-              <Link to="/about/">Help</Link>
+              <Link to="/help/">Help</Link>
             </li>
             <li>
               <Link to="/about/">Tutorials</Link>
