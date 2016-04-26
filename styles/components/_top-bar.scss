@@ -1,22 +1,38 @@
 .top-bar {
-  overflow: hidden;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-
-  .inner {
+  background: #fff;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, .1);
+  @include z-index(top-bar);
+  
+  > .inner {
     overflow: hidden;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    position: relative;
+    @include z-index(top-bar__inner);
   }
 
   .top-bar__logo {
     float: left;
+
+    .white {
+      display: none;
+    }
   }
 
   .top-bar__nav {
     float: right;
+
+    .top-bar__nav__hamburger {
+      cursor: pointer;
+
+      .close {
+        display: none;
+      }
+    }
 
     .top-bar__nav__menu {
       display: none;
@@ -50,13 +66,45 @@
     }
   }
 
+  @include body-class('has-hamburger-menu-visible') {
+    background: none;
+    box-shadow: none;
+
+    .top-bar__logo img {
+      display: none;
+
+      &.white {
+        display: block;
+      }
+    }
+
+    .top-bar__nav .top-bar__nav__hamburger img {
+      display: none;
+
+      &.close {
+        display: block;
+      }
+    }
+  }
+
   @include medium {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    background: none;
+    box-shadow: none;
+    position: absolute;
+
+    .inner {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
 
     .top-bar__logo img {
       height: 18px;
       margin-top: 10px;
+      display: block !important;
+
+      &.white {
+        display: none !important;
+      }
     }
 
     .top-bar__nav {
