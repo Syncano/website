@@ -13,9 +13,7 @@ export default React.createClass({
   handleClick() {
     const { isExpanded } = this.state;
 
-    this.setState({
-      isExpanded: !isExpanded
-    });
+    this.setState({ isExpanded: !isExpanded });
   },
 
   renderPrice() {
@@ -59,7 +57,7 @@ export default React.createClass({
     return null;
   },
 
-  getPricingPlanClass() {
+  getPricingPlanClassName() {
     const { isExpanded } = this.state;
     const { isFeatured } = this.props;
 
@@ -70,7 +68,7 @@ export default React.createClass({
     });
   },
 
-  getPricingPlanButtonClass() {
+  getPricingPlanButtonClassName() {
     const { isFeatured } = this.props;
 
     return classNames({
@@ -85,7 +83,7 @@ export default React.createClass({
     const { buttonText, period, title } = this.props;
 
     return (
-      <div className={this.getPricingPlanClass()}>
+      <div className={this.getPricingPlanClassName()}>
         <div className="pricing-plan__box">
           <h3 className="pricing-plan__box__title">
             {title}
@@ -111,12 +109,15 @@ export default React.createClass({
           </div>
           <Link
             to="/about/"
-            className={this.getPricingPlanButtonClass()}
+            className={this.getPricingPlanButtonClassName()}
           >
             {buttonText}
           </Link>
           <div className="pricing-plan__box__more">
-            <span onClick={this.handleClick}>
+            <span
+              className="pricing-plan__box__more__link"
+              onClick={this.handleClick}
+            >
               Show More
             </span>
           </div>

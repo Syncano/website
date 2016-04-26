@@ -2,6 +2,7 @@ import Analytics from './Analytics';
 import CTASection from './CTASection';
 import FAQ from './FAQ';
 import Footer from './Footer';
+import HamburgerMenu from './HamburgerMenu';
 import Hero from './Hero';
 import ListColumns from './ListColumns';
 import PageHeader from './PageHeader';
@@ -22,6 +23,7 @@ export default {
   CTASection,
   FAQ,
   Footer,
+  HamburgerMenu,
   Hero,
   ListColumns,
   PageHeader,

@@ -1,25 +1,42 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { HamburgerMenu, HamburgerMenuHOC } from '../HamburgerMenu';
 
-export default () => {
+const TopBar = (props, { hamburgerMenu }) => {
   return (
     <div className="top-bar">
       <div className="inner">
         <div className="top-bar__logo">
           <h1>
-            <Link to="/">
+            <Link
+              to="/"
+              onClick={hamburgerMenu.close}
+            >
               <img
                 src={require('./images/logo.svg')}
                 alt="Syncano Logo"
+              />
+              <img
+                src={require('./images/logo-white.svg')}
+                alt="Syncano Logo"
+                className="white"
               />
             </Link>
           </h1>
         </div>
         <nav className="top-bar__nav">
-          <div className="top-bar__nav__hamburger">
+          <div
+            className="top-bar__nav__hamburger"
+            onClick={hamburgerMenu.toggle}
+          >
             <img
               src={require('./images/hamburger.svg')}
               alt="hamburger icon"
+            />
+            <img
+              src={require('./images/close.svg')}
+              alt="hamburger icon"
+              className="close"
             />
           </div>
           <div className="top-bar__nav__menu">
@@ -72,6 +89,13 @@ export default () => {
           </div>
         </nav>
       </div>
+      <HamburgerMenu />
     </div>
-  )
+  );
 };
+
+TopBar.contextTypes = {
+  hamburgerMenu: React.PropTypes.object
+};
+
+export default HamburgerMenuHOC(TopBar);

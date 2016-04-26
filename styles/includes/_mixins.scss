@@ -1,0 +1,9 @@
+@mixin body-class($class) {
+  @at-root .#{$class} & {
+    @content;
+  }
+}
+
+@mixin z-index($element) {
+  z-index: index(sl-reverse($z-indexes), $element);
+}
