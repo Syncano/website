@@ -7,6 +7,9 @@
   background: transparentize($color-main-blue, .03);
   display: none;
   text-align: center;
+  padding-top: 86px;
+  padding-bottom: 60px;
+  overflow: auto;
 
   @include body-class('has-hamburger-menu-visible') {
     display: block;
@@ -16,15 +19,11 @@
     color: #fff;
   }
 
-  .hamburger-menu__menu {
-    margin-top: 85px;
-
-    li {
-      text-transform: uppercase;
-      font-size: 18px;
-      line-height: 65px;
-      font-weight: bold;
-    }
+  .hamburger-menu__menu li {
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 65px;
+    font-weight: bold;
   }
 
   .hamburger-menu__buttons {
@@ -45,6 +44,18 @@
       &:last-child {
         margin-bottom: 0;
       }
+    }
+  }
+
+  @include small {
+    padding-top: 60px;
+
+    .hamburger-menu__menu li {
+      line-height: 50px;
+    }
+
+    .hamburger-menu__buttons {
+      margin-top: 30px;
     }
   }
 
