@@ -1,5 +1,6 @@
 .text-panels {
   background: linear-gradient(180deg, $color-main-gray 50%, #fff 50%);
+  padding-bottom: 25px;
 
   .text-panels__panel {
     padding: 80px 35px;
@@ -25,15 +26,27 @@
     .text-panels__panel__list {
       ul {
         text-align: left;
-        list-style: disc;
         display: inline-block;
-        padding-left: 25px;
       }
 
       li {
         font-size: 16px;
         line-height: 2;
-        padding-left: 5px;
+        padding-left: 25px;
+        position: relative;
+
+        &:before {
+          display: block;
+          content: '';
+          width: 3px;
+          height: 3px;
+          background: rgba(255, 255, 255, .8);
+          border-radius: 50%;
+          position: absolute;
+          left: 0;
+          top: 1em;
+          transform: translateY(-50%);
+        }
       }
 
       a {
@@ -84,7 +97,6 @@
 
       .text-panels__panel__list li {
         font-size: 12px;
-        padding-left: 0;
       }
     }
   }
