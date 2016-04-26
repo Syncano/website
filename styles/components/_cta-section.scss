@@ -2,20 +2,21 @@
   text-align: center;
   padding-top: 80px;
   padding-bottom: 80px;
-  background: url("../components/CTASection/images/cta-section-background.jpg") no-repeat 50% 50%;
+  // background: $color-main-blue url("../components/CTASection/images/cta-section-background.jpg") no-repeat 50% 50%;
+  background: $color-main-blue;
   background-size: cover;
 
-  @include retina {
-    background-image: url("../components/CTASection/images/cta-section-background@2x.jpg");
-  }
+  // @include retina {
+  //   background-image: url("../components/CTASection/images/cta-section-background@2x.jpg");
+  // }
 
   @include medium {
     padding-top: 100px;
     padding-bottom: 100px;
-    background-image: url("../components/CTASection/images/cta-section-background-medium.jpg");
+    // background-image: url("../components/CTASection/images/cta-section-background-medium.jpg");
 
-    @include retina {
-      background-image: url("../components/CTASection/images/cta-section-background-medium@2x.jpg");
-    }
+    // @include retina {
+    //   background-image: url("../components/CTASection/images/cta-section-background-medium@2x.jpg");
+    // }
   }
 }

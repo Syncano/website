@@ -81,7 +81,7 @@
       text-align: center;
       margin-top: 30px;
 
-      span {
+      .pricing-plan__box__more__link {
         font-size: 14px;
         font-weight: 700;
         color: $color-main-blue;
@@ -127,7 +127,7 @@
   }
 
   &.pricing-plan--expanded .pricing-plan__box {
-    .pricing-plan__box__more a:after {
+    .pricing-plan__box__more .pricing-plan__box__more__link:after {
       transform: rotate(180deg);
     }
 
@@ -144,11 +144,21 @@
   @include medium {
     margin-bottom: 0;
 
-    .pricing-plan__box__options select,
-    .pricing-plan__box__features li {
-      font-size: 14px;
-    }
+    .pricing-plan__box {
+      .pricing-plan__box__options select,
+      .pricing-plan__box__features li {
+        font-size: 14px;
+      }
 
+      .pricing-plan__box__more {
+        display: none;
+      }
+
+      .pricing-plan__box__features {
+        display: block;
+      }
+    }
+    
     .pricing-plan__overage-rates {
       margin-top: 40px;
     }
