@@ -1,4 +1,6 @@
 import React from 'react';
+import _ from 'lodash';
+import TermsAndLegalNavItem from './TermsAndLegalNavItem';
 
 export default ({ children }) => {
   return (
@@ -7,13 +9,18 @@ export default ({ children }) => {
         Table of Content
       </h3>
       <ul>
-        {children.map((child) => (
-          <li key={child.props.slug}>
-            <a href={"#" + child.props.slug}>
-              {child.props.title}
-            </a>
-          </li>
-        ))}
+        {children.map((child) => {
+          const { title } = child.props;
+          const slug = _.kebabCase(title);
+
+          return (
+            <TermsAndLegalNavItem
+              key={slug}
+              title={title}
+              slug={slug}
+            />
+          );
+        })}
       </ul>
     </nav>
   );

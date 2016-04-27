@@ -1,6 +1,9 @@
 import React from 'react';
+import _ from 'lodash';
 
-export default ({ slug, title, children }) => {
+export default ({ title, children }) => {
+  const slug = _.kebabCase(title);
+
   return (
     <div
       key={slug}
