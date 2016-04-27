@@ -34,8 +34,11 @@
   }
 
   .page-header__more {
-    font-size: 12px;
-    margin-top: 20px;
+    font-size: 14px;
+    margin-top: 30px;
+    line-height: 10px;
+    color: transparentize($color-text-base, .2);
+    font-weight: 400;
   }
 
   &.page-header--large-headline {
@@ -60,6 +63,10 @@
 
     p {
       margin-top: 17px;
+
+      br {
+        display: none;
+      }
     }
 
     .button {

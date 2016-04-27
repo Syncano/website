@@ -26,25 +26,36 @@
       line-height: 1.5;
     }
 
-    p,
-    .text-with-image__text__list {
-      margin-top: 25px;
-    }
-
     p {
       line-height: 1.75;
       color: transparentize($color-text-base, .1);
+      margin-top: 25px;
     }
 
     .text-with-image__text__list {
+      margin-top: 20px;
+
       ul {
-        list-style: disc;
-        padding-left: 25px;
         text-align: left;
         display: inline-block;
 
         li {
           line-height: 2;
+          position: relative;
+          padding-left: 25px;
+
+          &:before {
+            display: block;
+            content: '';
+            width: 3px;
+            height: 3px;
+            background: transparentize($color-text-base-link, .1);
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 1em;
+            transform: translateY(-50%);
+          }
         }
       }
     }
@@ -114,6 +125,10 @@
       h2 {
         font-size: 28px;
         line-height: 1.25;
+      }
+
+      .text-with-image__text__list {
+        margin-top: 30px;
       }
     }
 
