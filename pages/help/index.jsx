@@ -18,7 +18,7 @@ export default () => {
         <PageHeader
           overHeadlineContent={<StatusImage className="page-header__status" />}
           headline="All systems operational"
-          textlineHTML={`Updated about one minute ago. <br /><a href='http://syncano.statuspage.io' target='_blank'>View
+          textlineHTML={`Updated about one minute ago. <br /><a href="http://syncano.statuspage.io" target="_blank">View
           our status page</a> for more info.`}
         >
           <Link

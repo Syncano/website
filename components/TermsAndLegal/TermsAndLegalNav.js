@@ -1,5 +1,4 @@
 import React from 'react';
-import _ from 'lodash';
 import TermsAndLegalNavItem from './TermsAndLegalNavItem';
 
 export default ({ children }) => {
@@ -11,13 +10,11 @@ export default ({ children }) => {
       <ul>
         {children.map((child) => {
           const { title } = child.props;
-          const slug = _.kebabCase(title);
 
           return (
             <TermsAndLegalNavItem
-              key={slug}
+              key={title}
               title={title}
-              slug={slug}
             />
           );
         })}
