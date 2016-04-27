@@ -22,13 +22,13 @@ export default () => (
               <Link to="/about/">About Us</Link>
             </li>
             <li>
-              <Link to="/about/">Career</Link>
+              <Link to="/jobs/">Career</Link>
             </li>
             <li>
-              <Link to="/about/">Contact Us</Link>
+              <Link to="/contact/">Contact Us</Link>
             </li>
             <li>
-              <Link to="/about/">Terms and Legal</Link>
+              <Link to="/terms-of-service/">Terms and Legal</Link>
             </li>
           </ul>
         </div>
@@ -36,16 +36,16 @@ export default () => (
           <h4>Resources</h4>
           <ul>
             <li>
-              <Link to="/about/">Blog</Link>
+              <a href="https://www.syncano.io/blog/">Blog</a>
             </li>
             <li>
-              <Link to="/about/">Docs</Link>
+              <a href="http://docs.syncano.io/">Docs</a>
             </li>
             <li>
-              <Link to="/about/">Plans &amp; Pricing</Link>
+              <Link to="/pricing/">Plans &amp; Pricing</Link>
             </li>
             <li>
-              <Link to="/about/">Solutions</Link>
+              <Link to="/solutions/">Solutions</Link>
             </li>
           </ul>
         </div>
@@ -53,16 +53,21 @@ export default () => (
           <h4>More</h4>
           <ul>
             <li>
-              <Link to="/help/">Help</Link>
+              <Link to="/support/">Help</Link>
             </li>
             <li>
-              <Link to="/about/">Tutorials</Link>
+              <a href="https://www.syncano.io/blog/tag/tutorials/">Tutorials</a>
             </li>
             <li>
-              <Link to="/about/">Libraries</Link>
+              <a href="http://docs.syncano.io/docs/syncano-libraries/">Libraries</a>
             </li>
             <li>
-              <Link to="/about/">Status</Link>
+              <a
+                href="http://syncano.statuspage.io/"
+                target="_blank"
+              >
+                Status
+              </a>
             </li>
           </ul>
         </div>
@@ -70,19 +75,44 @@ export default () => (
           <h4>Social Media</h4>
           <ul>
             <li>
-              <Link to="/about/">Twitter</Link>
+              <a
+                href="https://twitter.com/Syncano/"
+                target="_blank"
+              >
+                Twitter
+              </a>
             </li>
             <li>
-              <Link to="/about/">Facebook</Link>
+              <a
+                href="https://www.facebook.com/syncano/"
+                target="_blank"
+              >
+                Facebook
+              </a>
             </li>
             <li>
-              <Link to="/about/">Github</Link>
+              <a
+                href="https://github.com/Syncano/"
+                target="_blank"
+              >
+                GitHub
+              </a>
             </li>
             <li>
-              <Link to="/about/">LinkedIn</Link>
+              <a
+                href="https://www.linkedin.com/company/syncano/"
+                target="_blank"
+              >
+                LinkedIn
+              </a>
             </li>
             <li>
-              <Link to="/about/">Dribbble</Link>
+              <a
+                href="https://dribbble.com/SYNCANO/"
+                target="_blank"
+              >
+                Dribbble
+              </a>
             </li>
           </ul>
         </div>
