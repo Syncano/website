@@ -3,14 +3,14 @@ import { Modals, ModalsHOC, TopBar } from '../components';
 import 'normalize.css/normalize.css';
 import 'styles/styles';
 
-const Template = (props, { modals }) => {
+const Template = ({ children }, { modals }) => {
   return (
     <div>
-      <Modals />
       <TopBar />
       <div className="wrapper">
-        {props.children}
+        {children}
       </div>
+      <Modals />
     </div>
   );
 };

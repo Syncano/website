@@ -7,6 +7,7 @@ const Modals = (props, { modals }) => {
   return (
     <Modal
       className="modal"
+      overlayClassName=""
       isOpen={modals.logInModalIsOpen}
     >
       <span
