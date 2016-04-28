@@ -1,8 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
 
-Modal.defaultStyles = {};
-
 const Modals = (props, { modals }) => {
   return (
     <Modal
