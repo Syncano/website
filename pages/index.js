@@ -1,7 +1,7 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { CTASection, Footer, Hero, Platforms, Testimonials, TextColumns, TextWithBottomImage, TextWithImage } from '../components';
+import { CodePreview, CTASection, Footer, Hero, Platforms, Testimonials, TextColumns, TextWithBottomImage, TextWithImage } from '../components';
 
 export default () => (
   <DocumentTitle title="Syncano">
@@ -18,6 +18,54 @@ export default () => (
           Get Started for Free
         </Link>
       </Hero>
+      <div>
+        <CodePreview>
+          <CodePreview.Item
+            title="Swift"
+            languageClassName="html"
+            code={`
+              <strong attr="text">1</strong>
+              <strong attr="text">1</strong>
+              <strong attr="text">1</strong>
+              <strong attr="text">1</strong>
+              <strong attr="text">1</strong>
+            `}
+          />
+          <CodePreview.Item
+            title="Objective-C"
+            languageClassName="html"
+            code={`
+              <strong attr="text">2</strong>
+              <strong attr="text">2</strong>
+              <strong attr="text">2</strong>
+              <strong attr="text">2</strong>
+              <strong attr="text">2</strong>
+            `}
+          />
+          <CodePreview.Item
+            title="JavaScript"
+            languageClassName="html"
+            code={`
+              <strong attr="text">3</strong>
+              <strong attr="text">3</strong>
+              <strong attr="text">3</strong>
+              <strong attr="text">3</strong>
+              <strong attr="text">3</strong>
+            `}
+          />
+          <CodePreview.Item
+            title="Java"
+            languageClassName="html"
+            code={`
+              <strong attr="text">4</strong>
+              <strong attr="text">4</strong>
+              <strong attr="text">4</strong>
+              <strong attr="text">4</strong>
+              <strong attr="text">4</strong>
+            `}
+          />
+        </CodePreview>
+      </div>
       <Platforms />
       <TextWithImage
         variant="image-left"

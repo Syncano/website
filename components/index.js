@@ -1,4 +1,5 @@
 import Analytics from './Analytics';
+import CodePreview from './CodePreview';
 import CTASection from './CTASection';
 import FAQ from './FAQ';
 import Footer from './Footer';
@@ -20,6 +21,7 @@ import TopBar from './TopBar';
 
 export default {
   Analytics,
+  CodePreview,
   CTASection,
   FAQ,
   Footer,
