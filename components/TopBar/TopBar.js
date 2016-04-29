@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import { HamburgerMenu, HamburgerMenuHOC } from '../HamburgerMenu';
 
-const TopBar = (props, { hamburgerMenu }) => {
+const TopBar = (props, { hamburgerMenu, modals }) => {
   return (
     <div className="top-bar">
       <div className="inner">
@@ -78,12 +78,12 @@ const TopBar = (props, { hamburgerMenu }) => {
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/help/"
+                <span
                   className="button button--filled"
+                  onClick={modals.openLogInModal}
                 >
                   Sign Up For Free
-                </Link>
+                </span>
               </li>
             </ul>
           </div>
@@ -95,7 +95,8 @@ const TopBar = (props, { hamburgerMenu }) => {
 };
 
 TopBar.contextTypes = {
-  hamburgerMenu: React.PropTypes.object
+  hamburgerMenu: React.PropTypes.object,
+  modals: React.PropTypes.object
 };
 
 export default HamburgerMenuHOC(TopBar);

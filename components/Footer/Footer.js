@@ -62,12 +62,7 @@ export default () => (
               <a href="http://docs.syncano.io/docs/syncano-libraries/">Libraries</a>
             </li>
             <li>
-              <a
-                href="http://syncano.statuspage.io/"
-                target="_blank"
-              >
-                Status
-              </a>
+              <Link to="/help/">Status</Link>
             </li>
           </ul>
         </div>

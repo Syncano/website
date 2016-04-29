@@ -49,6 +49,6 @@ export default (ComposedComponent) => class extends React.Component {
       <BodyClassName className={this.getBodyClassName(hasHamburgerMenuVisible)}>
         <ComposedComponent {...this.props} {...this.state} />          
       </BodyClassName>
-    )
+    );
   };
 };
