@@ -52,6 +52,7 @@
           line-height: 30px;
           padding: 0;
           color: transparentize(#5F6C7A, .5);
+          cursor: pointer;
 
           &.is-active {
             color: $color-main-blue;

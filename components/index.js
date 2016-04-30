@@ -6,6 +6,7 @@ import Footer from './Footer';
 import HamburgerMenu from './HamburgerMenu';
 import Hero from './Hero';
 import ListColumns from './ListColumns';
+import { Modals, ModalsHOC } from './Modals';
 import PageHeader from './PageHeader';
 import Platforms from './Platforms';
 import Pricing from './Pricing';
@@ -28,6 +29,8 @@ export default {
   HamburgerMenu,
   Hero,
   ListColumns,
+  Modals,
+  ModalsHOC,
   PageHeader,
   Platforms,
   Pricing,
