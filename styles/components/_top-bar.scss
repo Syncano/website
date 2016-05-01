@@ -1,11 +1,14 @@
+.headroom-wrapper {
+  height: 0 !important;
+}
+
 .top-bar {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  background: #fff;
-  box-shadow: 0 3px 4px rgba(0, 0, 0, .1);
+  width: 100%;
   @include z-index(top-bar);
+  transition: $transition-default;
   
   > .inner {
     overflow: hidden;
@@ -13,6 +16,7 @@
     padding-bottom: 22px;
     position: relative;
     @include z-index(top-bar__inner);
+    transition: inherit;
   }
 
   .top-bar__logo {
@@ -67,6 +71,15 @@
     }
   }
 
+  &.headroom--unpinned {
+    transform: translateY(-100%);
+  }
+
+  &.headroom--pinned {
+    background: #fff;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, .1);
+  }
+
   @include body-class('has-hamburger-menu-visible') {
     background: none;
     box-shadow: none;
@@ -91,16 +104,15 @@
   @include medium {
     background: none;
     box-shadow: none;
-    position: absolute;
 
-    .inner {
-      padding-top: 60px;
-      padding-bottom: 60px;
+    > .inner {
+      padding-top: 58px;
+      padding-bottom: 58px;
     }
 
     .top-bar__logo img {
       height: 18px;
-      margin-top: 10px;
+      margin-top: 8px;
       display: block !important;
 
       &.white {
@@ -117,6 +129,17 @@
         display: block;
       }
     }
+
+    &.headroom--unpinned,
+    &.headroom--pinned {
+      > .inner {
+        transform: translateY(41px);
+      }
+    }
+
+    &.headroom--pinned {
+      transform: translateY(-82px);
+    }
   }
 
   @include large {
@@ -124,8 +147,8 @@
       margin-right: 35px;
     }
   }
+}
 
-  @include full {
-    top: 30px;
-  }
+.headroom {
+  @extend .top-bar;
 }
