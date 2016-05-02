@@ -1,10 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Headroom from 'react-headroom';
 import { HamburgerMenu, HamburgerMenuHOC } from '../HamburgerMenu';
 
 const TopBar = (props, { hamburgerMenu, modals }) => {
   return (
-    <div className="top-bar">
+    <Headroom
+      disableInlineStyles
+      pinStart={1}
+    >
       <div className="inner">
         <div className="top-bar__logo">
           <h1>
@@ -90,7 +94,7 @@ const TopBar = (props, { hamburgerMenu, modals }) => {
         </nav>
       </div>
       <HamburgerMenu />
-    </div>
+    </Headroom>
   );
 };
 
