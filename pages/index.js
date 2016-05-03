@@ -19,50 +19,55 @@ export default () => (
         </Link>
       </Hero>
       <div>
-        <CodePreview>
+        <CodePreview variant="no-bottom-radius">
           <CodePreview.Item
             title="Swift"
-            languageClassName="html"
-            code={`
-              <strong attr="text">1</strong>
-              <strong attr="text">1</strong>
-              <strong attr="text">1</strong>
-              <strong attr="text">1</strong>
-              <strong attr="text">1</strong>
-            `}
+            languageClassName="swift"
+            code={`#import <Syncano.h>
+
+@interface Book : SCDataObject
+@property (nonatomic,copy) NSString *title;
+@property (nonatomic,copy) NSString *subtitle;
+@end`}
           />
           <CodePreview.Item
             title="Objective-C"
-            languageClassName="html"
-            code={`
-              <strong attr="text">2</strong>
-              <strong attr="text">2</strong>
-              <strong attr="text">2</strong>
-              <strong attr="text">2</strong>
-              <strong attr="text">2</strong>
-            `}
+            languageClassName="objectivec"
+            code={`#import <Syncano.h>
+
+@interface Book : SCDataObject
+@property (nonatomic,copy) NSString *title;
+@property (nonatomic,copy) NSString *subtitle;
+@end`}
           />
           <CodePreview.Item
             title="JavaScript"
-            languageClassName="html"
-            code={`
-              <strong attr="text">3</strong>
-              <strong attr="text">3</strong>
-              <strong attr="text">3</strong>
-              <strong attr="text">3</strong>
-              <strong attr="text">3</strong>
-            `}
+            languageClassName="javascript"
+            code={`// Create empty connection
+var connection = Syncano();
+
+// Create a connection with an account key
+var connection = Syncano({ accountKey: 'MY_ACCOUNT_KEY'});
+
+// Create a connection with a user key
+var connection = Syncano({ userKey: 'USER_KEY'});
+
+// Create a connection with a social token
+var connection = Syncano({ userKey: 'SOCIAL_TOKEN'});`}
           />
           <CodePreview.Item
             title="Java"
-            languageClassName="html"
-            code={`
-              <strong attr="text">4</strong>
-              <strong attr="text">4</strong>
-              <strong attr="text">4</strong>
-              <strong attr="text">4</strong>
-              <strong attr="text">4</strong>
-            `}
+            languageClassName="java"
+            code={`public class MyApplication extends Application
+{
+  @Override
+  public void onCreate()
+  {
+   super.onCreate();
+   new SyncanoBuilder().apiKey("YOUR API KEY").instanceName("YOUR INSTANCE")
+     .androidContext(context).setAsGlobalInstance(true).build();
+  }
+}`}
           />
         </CodePreview>
       </div>

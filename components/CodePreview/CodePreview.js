@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import './code-preview';
+import classNames  from 'classnames';
 
 class CodePreview extends React.Component {
   constructor(props) {
@@ -28,12 +28,17 @@ class CodePreview extends React.Component {
   };
 
   render() {
-    const { children } = this.props;
+    const { variant, children } = this.props;
     const { activeTab } = this.state;
+
+    const codePreviewClassName = classNames({
+      'code-preview': true,
+      'code-preview--no-bottom-radius': (variant == 'no-bottom-radius')
+    });
 
     return (
       <div className="code-preview-container">
-        <div className="code-preview">
+        <div className={codePreviewClassName}>
           <nav className="code-preview__nav">
             <ul>
               {children.map((child, index) => {

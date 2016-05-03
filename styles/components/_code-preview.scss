@@ -1,13 +1,10 @@
-@import '../../styles/includes/_breakpoints';
-
 .code-preview-container {
   padding: 10px;
   padding-bottom: 0;
 }
 
 .code-preview {
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-radius: 8px;
   max-width: 880px;
   margin-left: auto;
   margin-right: auto;
@@ -20,6 +17,7 @@
 
     ul {
       display: flex;
+      flex-wrap: wrap;
 
       li {
         height: 30px;
@@ -38,10 +36,6 @@
           margin-right: 0;
         }
 
-        &:hover {
-          color: #fff;
-        }
-
         &.is-active {
           color: #fff;
           background: #0070D3;
@@ -57,10 +51,43 @@
     .code-preview__content__item {
       display: none;
 
+      pre, code {
+        border: none;
+        background: none;
+        box-shadow: none;
+        text-shadow: none;
+      }
+
+      pre {
+        margin: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        border-radius: 0;
+        padding-left: 36px;
+      }
+
+      .line-numbers-rows {
+        border: none;
+        background: #2C3239;
+        color: #aaa;
+        left: -36px;
+        width: 26px;
+        letter-spacing: 0;
+
+        > span:before {
+          padding-right: 6px;
+        }
+      }
+
       &.code-preview__content__item--is-active {
         display: block;
       }
     }
+  }
+
+  &.code-preview--no-bottom-radius {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   @include medium {
@@ -70,6 +97,11 @@
       ul li {
         font-size: 12px;
       }
+    }
+
+    .code-preview__content {
+      padding: 10px;
+      font-size: 14px;
     }
   }
 }
