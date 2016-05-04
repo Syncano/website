@@ -26,51 +26,22 @@ export default () => (
           <CodePreview.Item
             title="Swift"
             languageClassName="swift"
-            code={`#import <Syncano.h>
-
-@interface Book : SCDataObject
-@property (nonatomic,copy) NSString *title;
-@property (nonatomic,copy) NSString *subtitle;
-@end`}
+            codeFile="realtime-sync/realtime-sync-swift.txt"
           />
           <CodePreview.Item
             title="Objective-C"
             languageClassName="objectivec"
-            code={`#import <Syncano.h>
-
-@interface Book : SCDataObject
-@property (nonatomic,copy) NSString *title;
-@property (nonatomic,copy) NSString *subtitle;
-@end`}
+            codeFile="realtime-sync/realtime-sync-objectivec.txt"
           />
           <CodePreview.Item
             title="JavaScript"
             languageClassName="javascript"
-            code={`// Create empty connection
-var connection = Syncano();
-
-// Create a connection with an account key
-var connection = Syncano({ accountKey: 'MY_ACCOUNT_KEY'});
-
-// Create a connection with a user key
-var connection = Syncano({ userKey: 'USER_KEY'});
-
-// Create a connection with a social token
-var connection = Syncano({ userKey: 'SOCIAL_TOKEN'});`}
+            codeFile="realtime-sync/realtime-sync-javascript.txt"
           />
           <CodePreview.Item
             title="Java"
             languageClassName="java"
-            code={`public class MyApplication extends Application
-{
-  @Override
-  public void onCreate()
-  {
-   super.onCreate();
-   new SyncanoBuilder().apiKey("YOUR API KEY").instanceName("YOUR INSTANCE")
-     .androidContext(context).setAsGlobalInstance(true).build();
-  }
-}`}
+            codeFile="realtime-sync/realtime-sync-java.txt"
           />
         </CodePreview>
       </div>

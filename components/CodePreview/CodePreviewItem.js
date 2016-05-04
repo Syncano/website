@@ -1,9 +1,8 @@
 import React from 'react';
 import { PrismCode } from 'react-prism';
 import classNames  from 'classnames';
-import './prism.custom.min.js';
 
-const CodePreviewItem = ({ code, languageClassName, isActive }, { codePreview }) => {
+const CodePreviewItem = ({ codeFile, languageClassName, isActive }, { codePreview }) => {
   const getCodePreviewItemClassName = () => {
     return classNames({
       'code-preview__content__item': true,
@@ -15,7 +14,7 @@ const CodePreviewItem = ({ code, languageClassName, isActive }, { codePreview })
     <div className={getCodePreviewItemClassName()}>
       <pre className="line-numbers">
         <PrismCode className={`language-${languageClassName}`}>
-          {code}
+          {require(`raw-loader!../../code-preview-files/${codeFile}`)}
         </PrismCode>
       </pre>
     </div>
