@@ -1,0 +1,101 @@
+.text-with-background {
+  background: #fff;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  .text-with-background__text {
+    margin-top: 30px;
+
+    h2 {
+      font-size: 20px;
+      color: $color-text-headline;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    p {
+      line-height: 1.75;
+      color: transparentize($color-text-base, .1);
+      margin-top: 25px;
+      max-width: 630px;
+    }
+
+    .button {
+      margin-top: 40px;
+    }
+  }
+
+  @include small {
+    &.text-with-background--image1 {
+      background-image: url("../components/TextWithBackground/images/well-support-you-every-step-of-the-way.jpg");
+      background-repeat: no-repeat;
+      background-position: right -240px bottom 0;
+      background-size: contain;
+
+      .text-with-background__text {
+        max-width: 75%;
+      }
+    }
+  }
+
+  @include medium {
+    text-align: left;
+
+    .inner {
+      display: flex;
+      align-items: center;
+    }
+
+    .text-with-background__text {
+      margin-top: 0;
+
+      h2 {
+        font-size: 28px;
+        line-height: 1.25;
+      }
+    }
+
+    &.text-with-background--image1 {
+      background-position: right -220px bottom 0;
+
+      .text-with-background__text {
+        max-width: 70%;
+      }
+    }
+  }
+
+  @include large {
+    padding-top: 110px;
+    padding-bottom: 110px;
+
+    .text-with-background__text {
+      h2 {
+        font-size: 36px;
+      }
+
+      p {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  @include very-large {
+    padding-top: 140px;
+    padding-bottom: 140px;
+
+    &.text-with-background--image1 {
+      background-position: right -100px bottom 0;
+
+      .text-with-background__text {
+        max-width: 60%;
+      }
+    }
+  }
+
+  @include full {
+    &.text-with-background--image1 {
+      background-position: right;
+    }
+  }
+}

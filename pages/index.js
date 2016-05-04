@@ -1,7 +1,7 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { CTASection, Footer, Hero, Testimonials, TextColumns, TextWithBottomImage, TextWithImage } from '../components';
+import { CTASection, Footer, Hero, Testimonials, TextColumns, TextWithBackground, TextWithBottomImage, TextWithImage } from '../components';
 
 export default () => (
   <DocumentTitle title="Syncano">
@@ -127,13 +127,29 @@ export default () => (
           Get Support
         </Link>
       </TextWithBottomImage>
+      <TextWithBackground
+        theme="image1"
+        headline="We’ll support you every step of the way"
+        textline="Mariusz is a great guy and a part of our support team. At Syncano, every team member is here to help you. When you have questions, you’ll get timely answers directly from our team members."
+      >
+        <Link
+          to="/help/"
+          className="button"
+        >
+          Get Help
+        </Link>
+      </TextWithBackground>
       <CTASection>
+        <h2>Rethink how you build apps. Go serverless!</h2>
         <Link
           to="/about/"
           className="button button--large button--featured"
         >
           Get Started for Free
         </Link>
+        <p className="cta-section__button-description">
+          (6 months free • No credit card required)
+        </p>
       </CTASection>
       <Footer />
     </div>
