@@ -2,21 +2,52 @@
   text-align: center;
   padding-top: 80px;
   padding-bottom: 80px;
-  // background: $color-main-blue url("../components/CTASection/images/cta-section-background.jpg") no-repeat 50% 50%;
   background: $color-main-blue;
   background-size: cover;
 
-  // @include retina {
-  //   background-image: url("../components/CTASection/images/cta-section-background@2x.jpg");
-  // }
+  h2 {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .button {
+    margin-top: 30px;
+  }
+
+  .cta-section__button-description {
+    color: transparentize(#fff, .3);
+    font-size: 12px;
+    margin-top: 20px;
+  }
 
   @include medium {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    // background-image: url("../components/CTASection/images/cta-section-background-medium.jpg");
+    h2 {
+      font-size: 30px;
+    }
+  }
 
-    // @include retina {
-    //   background-image: url("../components/CTASection/images/cta-section-background-medium@2x.jpg");
-    // }
+  @include large {
+    padding-top: 110px;
+    padding-bottom: 110px;
+
+    h2 {
+      font-size: 40px;
+    }
+
+    .button {
+      margin-top: 50px;
+    }
+
+    .cta-section__button-description {
+      font-size: 14px;
+      margin-top: 30px;
+    }
+  }
+
+  @include very-large {
+    padding-top: 140px;
+    padding-bottom: 140px;
   }
 }
