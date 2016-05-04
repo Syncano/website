@@ -33,6 +33,14 @@ export default React.createClass({
           href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700"
         />
         <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/plugins/line-numbers/prism-line-numbers.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/themes/prism-twilight.min.css"
+        />
+        <link
           rel="apple-touch-icon"
           sizes="57x57"
           href={require('./images/favicons/apple-touch-icon-57x57.png')}

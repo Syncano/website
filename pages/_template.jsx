@@ -2,7 +2,6 @@ import React from 'react';
 import { Modals, ModalsHOC, TopBar } from '../components';
 import 'normalize.css/normalize.css';
 import 'styles/styles';
-import 'components/CodePreview/_theme-twilight';
 
 const Template = ({ children }, { modals }) => {
   return (
