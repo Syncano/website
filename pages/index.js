@@ -1,7 +1,7 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { CTASection, Footer, Hero, Testimonials, TextColumns, TextWithBackground, TextWithBottomImage, TextWithImage } from '../components';
+import { CTASection, Footer, Hero, Testimonials, TextColumns, TextWithBackground, TextWithBottomImage, TextWithImage, TwitterSlider } from '../components';
 
 export default () => (
   <DocumentTitle title="Syncano">
@@ -21,6 +21,7 @@ export default () => (
           (6 months free &bull; No credit card required)
         </p>
       </Hero>
+      <TwitterSlider />
       <TextWithImage
         variant="image-left"
         theme="gray"

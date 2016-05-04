@@ -9,6 +9,7 @@ import { Modals, ModalsHOC } from './Modals';
 import PageHeader from './PageHeader';
 import Platforms from './Platforms';
 import Pricing from './Pricing';
+import SliderWrapper from './SliderWrapper';
 import SocialProfiles from './SocialProfiles';
 import StatusImage from './StatusImage';
 import TermsAndLegal from './TermsAndLegal';
@@ -19,6 +20,7 @@ import TextWithBackground from './TextWithBackground';
 import TextWithBottomImage from './TextWithBottomImage';
 import TextWithImage from './TextWithImage';
 import TopBar from './TopBar';
+import TwitterSlider from './TwitterSlider';
 
 export default {
   Analytics,
@@ -33,6 +35,7 @@ export default {
   PageHeader,
   Platforms,
   Pricing,
+  SliderWrapper,
   SocialProfiles,
   StatusImage,
   TermsAndLegal,
@@ -42,5 +45,6 @@ export default {
   TextWithBackground,
   TextWithBottomImage,
   TextWithImage,
-  TopBar
+  TopBar,
+  TwitterSlider
 };

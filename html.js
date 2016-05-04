@@ -124,6 +124,10 @@ export default React.createClass({
         />
         <Analytics writeKey={config.analyticsKey} />
         <script src="/bundle.js" />
+        <script
+          src="//platform.twitter.com/widgets.js"
+          charSet="utf-8" />
+          async
       </body>
       </html>
     );
