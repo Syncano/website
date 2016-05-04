@@ -1,24 +1,26 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { CTASection, Footer, Hero, Platforms, Testimonials, TextColumns, TextWithBottomImage, TextWithImage } from '../components';
+import { CTASection, Footer, Hero, Testimonials, TextColumns, TextWithBackground, TextWithBottomImage, TextWithImage } from '../components';
 
 export default () => (
   <DocumentTitle title="Syncano">
     <div>
       <Hero
         variant="home"
-        headline="Rethink how you build apps"
-        textline="A complete platform to orchestrate your app’s ecosystem."
+        headline="Build powerful apps in half the time"
+        textline="Automate the backend. Set up your own serverless architecture in minutes."
       >
         <Link
-          to="/about/"
+          to="/features/"
           className="button button--large button--featured"
         >
           Get Started for Free
         </Link>
+        <p className="hero__button-description">
+          (6 months free &bull; No credit card required)
+        </p>
       </Hero>
-      <Platforms />
       <TextWithImage
         variant="image-left"
         theme="gray"
@@ -125,13 +127,29 @@ export default () => (
           Get Support
         </Link>
       </TextWithBottomImage>
+      <TextWithBackground
+        theme="image1"
+        headline="We’ll support you every step of the way"
+        textline="Mariusz is a great guy and a part of our support team. At Syncano, every team member is here to help you. When you have questions, you’ll get timely answers directly from our team members."
+      >
+        <Link
+          to="/help/"
+          className="button"
+        >
+          Get Help
+        </Link>
+      </TextWithBackground>
       <CTASection>
+        <h2>Rethink how you build apps. Go serverless!</h2>
         <Link
           to="/about/"
           className="button button--large button--featured"
         >
           Get Started for Free
         </Link>
+        <p className="cta-section__button-description">
+          (6 months free • No credit card required)
+        </p>
       </CTASection>
       <Footer />
     </div>
