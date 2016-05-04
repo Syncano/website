@@ -15,7 +15,8 @@
     display: block;
   }
 
-  a {
+  a,
+  .button {
     color: #fff;
   }
 
@@ -35,6 +36,7 @@
 
       &.button--featured {
         border-color: $color-main-yellow;
+        color: $color-text-headline;
       }
     }
 

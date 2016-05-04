@@ -178,12 +178,13 @@
       padding-bottom: 40px;
 
       .modal__footer__column {
-        &:first-child {
-
-        }
-
         &:last-child {
           text-align: right;
+        }
+
+        &:only-child {
+          flex-basis: 100%;
+          text-align: center;
         }
 
         span {

@@ -7,7 +7,8 @@ export default (ComposedComponent) => class extends React.Component {
     super(props);
 
     this.state = {
-      logInModalIsOpen: false
+      logInModalIsOpen: false,
+      signUpModalIsOpen: false
     };
   };
 
@@ -19,18 +20,29 @@ export default (ComposedComponent) => class extends React.Component {
     return {
       modals: {
         logInModalIsOpen: this.state.logInModalIsOpen,
+        signUpModalIsOpen: this.state.signUpModalIsOpen,
         openLogInModal: this.openLogInModal,
-        closeLogInModal: this.closeLogInModal
+        openSignUpModal: this.openSignUpModal,
+        closeAllModals: this.closeAllModals
       }
     };
   };
 
+  closeAllModals = () => {
+    this.setState({
+      logInModalIsOpen: false,
+      signUpModalIsOpen: false
+    });
+  };
+
   openLogInModal = () => {
+    this.closeAllModals();
     this.setState({ logInModalIsOpen: true });
   };
 
-  closeLogInModal = () => {
-    this.setState({ logInModalIsOpen: false });
+  openSignUpModal = () => {
+    this.closeAllModals();
+    this.setState({ signUpModalIsOpen: true });
   };
   
   render() {
