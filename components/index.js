@@ -16,6 +16,7 @@ import TermsAndLegal from './TermsAndLegal';
 import Testimonials from './Testimonials';
 import TextColumns from './TextColumns';
 import TextPanels from './TextPanels';
+import TextWithBackground from './TextWithBackground';
 import TextWithBottomImage from './TextWithBottomImage';
 import TextWithImage from './TextWithImage';
 import TopBar from './TopBar';
@@ -40,6 +41,7 @@ export default {
   Testimonials,
   TextColumns,
   TextPanels,
+  TextWithBackground,
   TextWithBottomImage,
   TextWithImage,
   TopBar

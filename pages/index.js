@@ -1,22 +1,25 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { CodePreview, CTASection, Footer, Hero, Platforms, Testimonials, TextColumns, TextWithBottomImage, TextWithImage } from '../components';
+import { CodePreview, CTASection, Footer, Hero, Testimonials, TextColumns, TextWithBackground, TextWithBottomImage, TextWithImage } from '../components';
 
 export default () => (
   <DocumentTitle title="Syncano">
     <div>
       <Hero
         variant="home"
-        headline="Rethink how you build apps"
-        textline="A complete platform to orchestrate your app’s ecosystem."
+        headline="Build powerful apps in half the time"
+        textline="Automate the backend. Set up your own serverless architecture in minutes."
       >
         <Link
-          to="/about/"
+          to="/features/"
           className="button button--large button--featured"
         >
           Get Started for Free
         </Link>
+        <p className="hero__button-description">
+          (6 months free &bull; No credit card required)
+        </p>
       </Hero>
       <div>
         <CodePreview variant="no-bottom-radius">
@@ -71,7 +74,6 @@ var connection = Syncano({ userKey: 'SOCIAL_TOKEN'});`}
           />
         </CodePreview>
       </div>
-      <Platforms />
       <TextWithImage
         variant="image-left"
         theme="gray"
@@ -82,7 +84,8 @@ var connection = Syncano({ userKey: 'SOCIAL_TOKEN'});`}
           />
         }
         headline="Focus on your app"
-        textline="Forget about managing infrastructure and redundant code. Spend your time writing code specific for your app. Instantly scale to support millions of users without learning the nuts and bolts of handling servers."
+        textline="Forget about managing infrastructure and redundant code. Spend your time writing code specific for
+        your app. Instantly scale to support millions of users without learning the nuts and bolts of handling servers."
       >
         <Link
           to="/about/"
@@ -101,7 +104,9 @@ var connection = Syncano({ userKey: 'SOCIAL_TOKEN'});`}
           />
         }
         headline="Customize your APIs and features"
-        textline="Every app’s needs are different. With Sockets, we give you the flexibility to combine and configure the building blocks your application needs. The backend work is mostly done - you’ll be building stronger and better apps, faster!"
+        textline="Every app’s needs are different. With Sockets, we give you the flexibility to combine and configure
+        the building blocks your application needs. The backend work is mostly done - you’ll be building stronger and
+        better apps, faster!"
       >
         <Link
           to="/about/"
@@ -119,7 +124,8 @@ var connection = Syncano({ userKey: 'SOCIAL_TOKEN'});`}
             />
           }
           headline="Simplify your stack"
-          text="Stop writing code to connect disparate backend systems. Integrate anything, all from one place. Provide one more line of text here."
+          text="Stop writing code to connect disparate backend systems. Integrate anything, all from one place. Provide
+          one more line of text here."
         />
         <TextColumns.Column
           icon={
@@ -129,7 +135,8 @@ var connection = Syncano({ userKey: 'SOCIAL_TOKEN'});`}
             />
           }
           headline="Control your data schema"
-          text="Create sophisticated data relations and apply multiple filters. Easily manage your data from our user-friendly dashboard."
+          text="Create sophisticated data relations and apply multiple filters. Easily manage your data from our
+          user-friendly dashboard."
         />
         <TextColumns.Column
           icon={
@@ -139,7 +146,8 @@ var connection = Syncano({ userKey: 'SOCIAL_TOKEN'});`}
             />
           }
           headline="Code and prototype faster"
-          text="Write your own code snippets and prototype them in the browser with built-in traces. Get your MVP to market and save development costs."
+          text="Write your own code snippets and prototype them in the browser with built-in traces. Get your MVP to
+          market and save development costs."
         />
       </TextColumns>
       <TextWithImage
@@ -151,7 +159,8 @@ var connection = Syncano({ userKey: 'SOCIAL_TOKEN'});`}
           />
         }
         headline="Run server-side logic in the cloud"
-        textline="With Scripts, run your code in response to events, updates to data, in-app activity or by a particular schedule. Use multiple languages, integrate with anything."
+        textline="With Scripts, run your code in response to events, updates to data, in-app activity or by a particular
+        schedule. Use multiple languages, integrate with anything."
       >
         <Link
           to="/about/"
@@ -163,7 +172,8 @@ var connection = Syncano({ userKey: 'SOCIAL_TOKEN'});`}
       <Testimonials />
       <TextWithBottomImage
         headline="Get answers from our developers"
-        textline="Our engineers specialize in the tricky and technical investigations of our platform. When you have questions, you’ll get timely answers from our team."
+        textline="Our engineers specialize in the tricky and technical investigations of our platform. When you have
+        questions, you’ll get timely answers from our team."
         image={
           <img
             src={require('../images/robot.svg')}
@@ -178,13 +188,30 @@ var connection = Syncano({ userKey: 'SOCIAL_TOKEN'});`}
           Get Support
         </Link>
       </TextWithBottomImage>
+      <TextWithBackground
+        theme="image1"
+        headline="We’ll support you every step of the way"
+        textline="Mariusz is a great guy and a part of our support team. At Syncano, every team member is here to help
+        you. When you have questions, you’ll get timely answers directly from our team members."
+      >
+        <Link
+          to="/help/"
+          className="button"
+        >
+          Get Help
+        </Link>
+      </TextWithBackground>
       <CTASection>
+        <h2>Rethink how you build apps. Go serverless!</h2>
         <Link
           to="/about/"
           className="button button--large button--featured"
         >
           Get Started for Free
         </Link>
+        <p className="cta-section__button-description">
+          (6 months free &bull; No credit card required)
+        </p>
       </CTASection>
       <Footer />
     </div>

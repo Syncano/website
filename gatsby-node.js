@@ -20,5 +20,12 @@ exports.modifyWebpackConfig = function(config, env) {
     return cfg;
   });
 
+  config.removeLoader('txt');
+  config.loader('txt', function(cfg) {
+    cfg.test = /\.txt/;
+    cfg.loader = 'file-loader';
+    return cfg;
+  });
+
   return config;
 };
