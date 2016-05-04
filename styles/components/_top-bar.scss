@@ -21,9 +21,14 @@
 
   .top-bar__logo {
     float: left;
+    transition: $transition-default;
 
     .white {
       display: none;
+    }
+
+    &:hover {
+      opacity: .8;
     }
   }
 
@@ -57,6 +62,10 @@
           padding: 0;
           color: transparentize(#5F6C7A, .5);
           cursor: pointer;
+
+          &:hover {
+            color: $color-main-blue--hover;
+          }
 
           &.is-active {
             color: $color-main-blue;

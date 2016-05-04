@@ -41,6 +41,15 @@
       text-transform: uppercase;
       width: 80px;
       cursor: pointer;
+      transition: $transition-default;
+
+      &:hover {
+        background: $color-main-blue--hover;
+      }
+
+      &:active {
+        background: $color-main-blue--active;
+      }
     }
   }
 

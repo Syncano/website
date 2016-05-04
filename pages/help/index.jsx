@@ -125,7 +125,7 @@ export default () => {
             </Link>
           </TextPanels.Panel>
           <TextPanels.Panel
-            theme="graphite"
+            theme="silver"
             headline="Popular docs"
           >
             <div className="text-panels__panel__list">
@@ -194,12 +194,16 @@ export default () => {
         </TextWithImage>
         <SocialProfiles />
         <CTASection>
+          <h2>Rethink how you build apps. Go serverless!</h2>
           <Link
             to="/about/"
             className="button button--large button--featured"
           >
             Get Started for Free
           </Link>
+          <p className="cta-section__button-description">
+            (6 months free • No credit card required)
+          </p>
         </CTASection>
         <Footer />
       </div>

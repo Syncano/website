@@ -50,12 +50,16 @@ export default () => {
           </TermsAndLegal.Item>
         </TermsAndLegal>
         <CTASection>
+          <h2>Rethink how you build apps. Go serverless!</h2>
           <Link
-            to="/terms-of-service/"
+            to="/about/"
             className="button button--large button--featured"
           >
             Get Started for Free
           </Link>
+          <p className="cta-section__button-description">
+            (6 months free • No credit card required)
+          </p>
         </CTASection>
         <Footer />
       </div>

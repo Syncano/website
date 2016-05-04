@@ -1,5 +1,4 @@
 .text-with-image {
-  background: #fff;
   text-align: center;
   padding-top: 80px;
   padding-bottom: 80px;
@@ -49,7 +48,7 @@
             content: '';
             width: 3px;
             height: 3px;
-            background: transparentize($color-text-base-link, .1);
+            background: $color-main-blue;
             border-radius: 50%;
             position: absolute;
             left: 0;
@@ -58,10 +57,6 @@
           }
         }
       }
-    }
-
-    a {
-      color: transparentize($color-text-base-link, .1);
     }
 
     .button {
@@ -88,6 +83,15 @@
 
     .button {
       border-color: rgba(255, 255, 255, .5);
+
+      &:hover {
+        color: rgba(255, 255, 255, .5);
+      }
+
+      &:active {
+        color: #fff;
+        border-color: #fff;
+      }
     }
   }
 
