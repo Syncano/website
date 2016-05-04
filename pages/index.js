@@ -26,22 +26,22 @@ export default () => (
           <CodePreview.Item
             title="Swift"
             languageClassName="swift"
-            codeFile="realtime-sync/realtime-sync-swift.txt"
+            code={require('./home/realtime-sync-swift.txt')}
           />
           <CodePreview.Item
             title="Objective-C"
             languageClassName="objectivec"
-            codeFile="realtime-sync/realtime-sync-objectivec.txt"
+            code={require('./home/realtime-sync-objectivec.txt')}
           />
           <CodePreview.Item
             title="JavaScript"
             languageClassName="javascript"
-            codeFile="realtime-sync/realtime-sync-javascript.txt"
+            code={require('./home/realtime-sync-javascript.txt')}
           />
           <CodePreview.Item
             title="Java"
             languageClassName="java"
-            codeFile="realtime-sync/realtime-sync-java.txt"
+            code={require('./home/realtime-sync-java.txt')}
           />
         </CodePreview>
       </div>
