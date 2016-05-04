@@ -1,24 +1,26 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { CTASection, Footer, Hero, Platforms, Testimonials, TextColumns, TextWithBackground, TextWithBottomImage, TextWithImage } from '../components';
+import { CTASection, Footer, Hero, Testimonials, TextColumns, TextWithBackground, TextWithBottomImage, TextWithImage } from '../components';
 
 export default () => (
   <DocumentTitle title="Syncano">
     <div>
       <Hero
         variant="home"
-        headline="Rethink how you build apps"
-        textline="A complete platform to orchestrate your app’s ecosystem."
+        headline="Build powerful apps in half the time"
+        textline="Automate the backend. Set up your own serverless architecture in minutes."
       >
         <Link
-          to="/about/"
+          to="/features/"
           className="button button--large button--featured"
         >
           Get Started for Free
         </Link>
+        <p className="hero__button-description">
+          (6 months free &bull; No credit card required)
+        </p>
       </Hero>
-      <Platforms />
       <TextWithImage
         variant="image-left"
         theme="gray"

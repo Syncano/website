@@ -10,8 +10,12 @@ export default ({ variant, headline, textline, children }) => {
   return (
     <div className={heroClassName}>
       <div className="inner">
-        <h2>{headline}</h2>
-        <p>{textline}</p>
+        <h2 className="hero__headline">
+          {headline}
+        </h2>
+        <p className="hero__textline">
+          {textline}
+        </p>
         {children}
       </div>
     </div>

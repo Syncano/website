@@ -1,36 +1,43 @@
 .hero {
   min-height: 500px;
   text-align: center;
-  padding-top: 140px;
-  background-color: #eee;
+  padding-top: 120px;
+  padding-bottom: 60px;
+  background-color: #003462;
   background-repeat: no-repeat;
-  background-position: 30% 50%;
+  background-position: 76% 50%;
   background-size: cover;
 
-  h2, p {
+  .hero__headline,
+  .hero__textline {
     margin-left: auto;
     margin-right: auto;
   }
 
-  h2 {
+  .hero__headline {
     font-weight: 700;
     font-size: 28px;
-    line-height: 40px;
-    color: $color-text-headline;
-    max-width: 220px;
+    line-height: 1.4;
+    max-width: 255px;
+    color: #fff;
   }
 
-  p {
+  .hero__textline {
     font-size: 18px;
-    color: transparentize($color-text-base, .2);
     line-height: 1.5;
     margin-top: 30px;
-    max-width: 270px;
-    font-weight: 500;
+    max-width: 215px;
+    color: transparentize(#fff, .15);
   }
 
   .button {
     margin-top: 50px;
+  }
+
+  .hero__button-description {
+    color: transparentize(#fff, .3);
+    font-size: 12px;
+    margin-top: 20px;
   }
 
   &.hero--home {
@@ -38,47 +45,59 @@
   }
 
   @include small {
-    padding-top: 90px;
-    background-position: 40% 50%;
-  }
+    min-height: 375px;
+    padding-top: 80px;
+    padding-bottom: 20px;
 
-  @include medium {
-    min-height: 750px;
-    text-align: left;
-    padding-top: 300px;
-    background-position: 51% 50%;
-
-    h2, p {
+    .hero__headline {
       max-width: none;
     }
 
-    h2 {
-      font-size: 40px;
-      line-height: 31px;
+    .hero__textline {
+      max-width: 350px;
     }
 
-    p {
+    &.hero--home {
+      background-position: 45% 50%;
+    }
+  }
+
+  @include medium {
+    min-height: 800px;
+    padding-top: 280px;
+    padding-bottom: 200px;
+
+    .hero__headline {
+      font-size: 42px;
+      line-height: 1;
+    }
+
+    .hero__textline {
       font-size: 20px;
-      line-height: 17px;
+      max-width: none;
+      margin-top: 20px;
     }
 
     .button {
-      margin-top: 60px;
+      margin-top: 70px;
+    }
+
+    .hero__button-description {
+      font-size: 14px;
     }
 
     &.hero--home {
       background-image: url("../components/Hero/images/hero-home-medium.jpg");
+      background-position: 50% 50%;
     }
   }
 
   @include large {
-    background-position: 50% 50%;
-
-    h2 {
-      font-size: 44px;
+    .hero__headline {
+      font-size: 56px;
     }
 
-    p {
+    .hero__textline {
       font-size: 24px;
     }
   }
