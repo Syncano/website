@@ -90,7 +90,7 @@ const Modals = (props, { modals }) => {
         </div>
         <footer className="modal__footer">
           <div className="modal__footer__column">
-            <span onClick={modals.openSignUpModal}>
+            <span onClick={() => modals.openModal('sign-up')}>
               Don’t have an account? <strong>Sign up here!</strong>
             </span>
           </div>
@@ -178,7 +178,7 @@ const Modals = (props, { modals }) => {
         </div>
         <footer className="modal__footer">
           <div className="modal__footer__column">
-            <span onClick={modals.openLogInModal}>
+            <span onClick={() => modals.openModal('log-in')}>
               Already have an account? <strong>Log in here!</strong>
             </span>
           </div>

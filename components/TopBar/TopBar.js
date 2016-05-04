@@ -75,7 +75,7 @@ const TopBar = (props, { hamburgerMenu, modals }) => {
               <li>
                 <span
                   className="button button--noborder"
-                  onClick={modals.openLogInModal}
+                  onClick={() => modals.openModal('log-in')}
                 >
                   Log In
                 </span>
@@ -83,7 +83,7 @@ const TopBar = (props, { hamburgerMenu, modals }) => {
               <li>
                 <span
                   className="button button--filled"
-                  onClick={modals.openSignUpModal}
+                  onClick={() => modals.openModal('sign-up')}
                 >
                   Sign Up For Free
                 </span>

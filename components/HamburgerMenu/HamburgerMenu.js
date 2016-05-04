@@ -46,7 +46,7 @@ const HamburgerMenu = (props, { modals }) => {
             <li>
               <span
                 className="button button--large"
-                onClick={modals.openLogInModal}
+                onClick={() => modals.openModal('log-in')}
               >
                 Log In
               </span>
@@ -54,7 +54,7 @@ const HamburgerMenu = (props, { modals }) => {
             <li>
               <span
                 className="button button--large button--featured"
-                onClick={modals.openSignUpModal}
+                onClick={() => modals.openModal('sign-up')}
               >
                 Sign Up For Free
               </span>
