@@ -1,28 +1,10 @@
 import React from 'react';
-import Modal from 'react-modal';
+import ModalWrapper from './ModalWrapper';
 
 const Modals = (props, { modals }) => {
   return (
     <div>
-      <Modal
-        className="modal"
-        overlayClassName="modal-container"
-        isOpen={modals.logInModalIsOpen}
-      >
-        <span
-          className="modal__close"
-          onClick={modals.closeAllModals}
-        >
-          <img
-            src={require('./images/close.svg')}
-            alt="close"
-          />
-          <img
-            className="small"
-            src={require('./images/close-small.svg')}
-            alt="close"
-          />
-        </span>
+      <ModalWrapper isOpen={modals.logInModalIsOpen}>
         <div className="modal__content">
           <div className="inner">
             <h2>Log in</h2>
@@ -100,26 +82,8 @@ const Modals = (props, { modals }) => {
             </span>
           </div>
         </footer>
-      </Modal>
-      <Modal
-        className="modal"
-        overlayClassName="modal-container"
-        isOpen={modals.signUpModalIsOpen}
-      >
-        <span
-          className="modal__close"
-          onClick={modals.closeAllModals}
-        >
-          <img
-            src={require('./images/close.svg')}
-            alt="close"
-          />
-          <img
-            className="small"
-            src={require('./images/close-small.svg')}
-            alt="close"
-          />
-        </span>
+      </ModalWrapper>
+      <ModalWrapper isOpen={modals.signUpModalIsOpen}>
         <div className="modal__content">
           <div className="inner">
             <h2>Sign up for free!</h2>
@@ -183,7 +147,7 @@ const Modals = (props, { modals }) => {
             </span>
           </div>
         </footer>
-      </Modal>
+      </ModalWrapper>
     </div>
   );
 };

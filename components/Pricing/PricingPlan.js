@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames  from 'classnames';
+import classNames from 'classnames';
 import _ from 'lodash';
 import { Link } from 'react-router';
 

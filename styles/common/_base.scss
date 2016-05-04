@@ -12,8 +12,8 @@ body {
   min-width: 320px;
   line-height: 1;
 
-  &.has-hamburger-menu-visible {
-    max-height: 100vh;
+  &.has-hamburger-menu-visible,
+  &.has-modal-open {
     overflow: hidden;
   }
 
