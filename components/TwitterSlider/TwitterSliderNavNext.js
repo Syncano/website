@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export default class TwitterSliderNavNext extends React.Component {
+export default class TwitterSliderNavNext extends Component {
   render() {
     return (
       <span {...this.props}>
