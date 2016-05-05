@@ -27,9 +27,34 @@ class CodePreview extends React.Component {
     this.setState({ activeTab: index });
   };
 
+  renderNavItem = (child, index) => {
+    const { title } = child.props;
+    const { activeTab } = this.state;
+
+    return (
+      <li
+        key={_.kebabCase(title)}
+        onClick={() => this.showTab(index)}
+        className={activeTab == index ? 'is-active' : ''}
+      >
+        {title}
+      </li>
+    );
+  };
+
+  renderContentItem = (child, index) => {
+    const { title } = child.props;
+    const { activeTab } = this.state;
+
+    return (
+      <div key={index}>
+        {React.cloneElement(child, { isActive: (activeTab == index) })}
+      </div>
+    );
+  };
+
   render() {
     const { variant, children } = this.props;
-    const { activeTab } = this.state;
 
     const codePreviewClassName = classNames({
       'code-preview': true,
@@ -41,31 +66,11 @@ class CodePreview extends React.Component {
         <div className={codePreviewClassName}>
           <nav className="code-preview__nav">
             <ul>
-              {children.map((child, index) => {
-                const { title } = child.props;
-
-                return (
-                  <li
-                    key={_.kebabCase(title)}
-                    onClick={() => this.showTab(index)}
-                    className={activeTab == index ? 'is-active' : ''}
-                  >
-                    {title}
-                  </li>
-                );
-              })}
+              {children.map(this.renderNavItem)}
             </ul>
           </nav>
           <div className="code-preview__content">
-            {children.map((child, index) => {
-              const { title } = child.props;
-
-              return (
-                <div key={index}>
-                  {React.cloneElement(child, { isActive: (activeTab == index) })}
-                </div>
-              );
-            })}
+            {children.map(this.renderContentItem)}
           </div>
         </div>
       </div>
