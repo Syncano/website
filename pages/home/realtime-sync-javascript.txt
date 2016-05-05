@@ -1,0 +1,11 @@
+// Create empty connection
+var connection = Syncano();
+
+// Create a connection with an account key
+var connection = Syncano({ accountKey: 'MY_ACCOUNT_KEY'});
+
+// Create a connection with a user key
+var connection = Syncano({ userKey: 'USER_KEY'});
+
+// Create a connection with a social token
+var connection = Syncano({ userKey: 'SOCIAL_TOKEN'});

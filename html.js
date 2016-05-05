@@ -33,6 +33,14 @@ export default React.createClass({
           href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700"
         />
         <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/plugins/line-numbers/prism-line-numbers.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/themes/prism-twilight.min.css"
+        />
+        <link
           rel="apple-touch-icon"
           sizes="57x57"
           href={require('./images/favicons/apple-touch-icon-57x57.png')}
@@ -123,6 +131,7 @@ export default React.createClass({
           dangerouslySetInnerHTML={{ __html: this.props.body }}
         />
         <Analytics writeKey={config.analyticsKey} />
+        <script src="https://cdn.jsdelivr.net/g/prism@1.4.1(prism.js+components/prism-markup.min.js+components/prism-swift.min.js+components/prism-python.min.js+components/prism-css.min.js+components/prism-javascript.min.js+components/prism-clike.min.js+plugins/line-highlight/prism-line-highlight.min.js+plugins/line-numbers/prism-line-numbers.min.js)" />
         <script src="/bundle.js" />
       </body>
       </html>
