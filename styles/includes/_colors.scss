@@ -1,20 +1,24 @@
 // main
-$color-main-azure: #49B9E8;
 $color-main-blue: #0070D3;
-$color-main-graphite: #757E88;
-$color-main-gray: #f8f9f9;
+$color-main-blue--hover: #338DDC;
+$color-main-blue--active: #0568BF;
+$color-main-azure: #49B9E8;
 $color-main-purple: #642ee1;
 $color-main-yellow: #FFCC01;
+$color-main-yellow--hover: #FFDC4D;
+$color-main-yellow--active: #F1C000;
+$color-main-black: #1D2228;
+$color-main-graphite: #4D5966;
+$color-main-silver: #757E88;
+$color-main-gray: #f8f9f9;
 
 // body
-$color-body-bg: #f1f2f4;
-$color-text-base: #4D5966;
-$color-text-base-link: #006DD6;
-$color-text-headline: #1D2228;
+$color-text-base: $color-main-graphite;
+$color-text-headline: $color-main-black;
 $color-text-textline: #5F6C7A;
 
 // footer
-$color-footer-bg: #1D2228;
+$color-footer-bg: $color-main-black;
 $color-footer-headline: transparentize(#B8C0C9, .5);
 $color-footer-link: #B8C0C9;
 $color-footer-base: transparentize(#B8C0C9, .3);

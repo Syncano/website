@@ -1,7 +1,17 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { CTASection, Footer, Hero, Testimonials, TextColumns, TextWithBackground, TextWithBottomImage, TextWithImage, TwitterSlider } from '../components';
+import {
+  CTASection,
+  Footer,
+  Hero,
+  Testimonials,
+  TextColumns,
+  TextWithBackground,
+  TextWithBottomImage,
+  TextWithImage,
+  TwitterSlider
+} from '../components';
 
 export default () => (
   <DocumentTitle title="Syncano">
@@ -21,6 +31,18 @@ export default () => (
           (6 months free &bull; No credit card required)
         </p>
       </Hero>
+      <TextWithBottomImage
+        theme="gray"
+        headline="A serverless app platform to design, publish and manage your API"
+        textline={`Make your own custom API’s in the cloud. Instantly scale for the web, mobile, and the Internet of
+          Things. Support millions of users without learning the nuts and bolts of handling servers.`}
+        image={
+          <img
+            src={require('../images/illustrations/serverless-app-platform.svg')}
+            alt="serverless app platform"
+          />
+        }
+      />
       <TwitterSlider />
       <TextWithImage
         variant="image-left"
@@ -32,7 +54,9 @@ export default () => (
           />
         }
         headline="Focus on your app"
-        textline="Forget about managing infrastructure and redundant code. Spend your time writing code specific for your app. Instantly scale to support millions of users without learning the nuts and bolts of handling servers."
+        textline={`Forget about managing infrastructure and redundant code. Spend your time writing code specific for
+          your app. Instantly scale to support millions of users without learning the nuts and bolts of handling
+          servers.`}
       >
         <Link
           to="/about/"
@@ -51,7 +75,9 @@ export default () => (
           />
         }
         headline="Customize your APIs and features"
-        textline="Every app’s needs are different. With Sockets, we give you the flexibility to combine and configure the building blocks your application needs. The backend work is mostly done - you’ll be building stronger and better apps, faster!"
+        textline={`Every app’s needs are different. With Sockets, we give you the flexibility to combine and configure
+          the building blocks your application needs. The backend work is mostly done - you’ll be building stronger and
+          better apps, faster!`}
       >
         <Link
           to="/about/"
@@ -69,7 +95,8 @@ export default () => (
             />
           }
           headline="Simplify your stack"
-          text="Stop writing code to connect disparate backend systems. Integrate anything, all from one place. Provide one more line of text here."
+          text={`Stop writing code to connect disparate backend systems. Integrate anything, all from one place. Provide
+            one more line of text here.`}
         />
         <TextColumns.Column
           icon={
@@ -79,7 +106,8 @@ export default () => (
             />
           }
           headline="Control your data schema"
-          text="Create sophisticated data relations and apply multiple filters. Easily manage your data from our user-friendly dashboard."
+          text={`Create sophisticated data relations and apply multiple filters. Easily manage your data from our
+            user-friendly dashboard.`}
         />
         <TextColumns.Column
           icon={
@@ -89,7 +117,8 @@ export default () => (
             />
           }
           headline="Code and prototype faster"
-          text="Write your own code snippets and prototype them in the browser with built-in traces. Get your MVP to market and save development costs."
+          text={`Write your own code snippets and prototype them in the browser with built-in traces. Get your MVP to
+            market and save development costs.`}
         />
       </TextColumns>
       <TextWithImage
@@ -101,7 +130,8 @@ export default () => (
           />
         }
         headline="Run server-side logic in the cloud"
-        textline="With Scripts, run your code in response to events, updates to data, in-app activity or by a particular schedule. Use multiple languages, integrate with anything."
+        textline={`With Scripts, run your code in response to events, updates to data, in-app activity or by a
+          particular schedule. Use multiple languages, integrate with anything.`}
       >
         <Link
           to="/about/"
@@ -111,27 +141,11 @@ export default () => (
         </Link>
       </TextWithImage>
       <Testimonials />
-      <TextWithBottomImage
-        headline="Get answers from our developers"
-        textline="Our engineers specialize in the tricky and technical investigations of our platform. When you have questions, you’ll get timely answers from our team."
-        image={
-          <img
-            src={require('../images/robot.svg')}
-            alt="robot"
-          />
-        }
-      >
-        <Link
-          to="/about/"
-          className="button"
-        >
-          Get Support
-        </Link>
-      </TextWithBottomImage>
       <TextWithBackground
         theme="image1"
         headline="We’ll support you every step of the way"
-        textline="Mariusz is a great guy and a part of our support team. At Syncano, every team member is here to help you. When you have questions, you’ll get timely answers directly from our team members."
+        textline={`Mariusz is a great guy and a part of our support team. At Syncano, every team member is here to help
+          you. When you have questions, you’ll get timely answers directly from our team members.`}
       >
         <Link
           to="/help/"
@@ -149,7 +163,7 @@ export default () => (
           Get Started for Free
         </Link>
         <p className="cta-section__button-description">
-          (6 months free • No credit card required)
+          (6 months free &bull; No credit card required)
         </p>
       </CTASection>
       <Footer />

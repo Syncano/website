@@ -9,17 +9,47 @@
   border: 2px solid transparentize($color-main-blue, .5);
   min-width: 170px;
   text-align: center;
+  transition: $transition-default;
+
+  &:hover {
+    color: transparentize($color-main-blue, .5);
+  }
+
+  &:active {
+    border-color: $color-main-blue;
+    color: $color-main-blue;
+  }
 
   &.button--featured {
     background: $color-main-yellow;
     color: $color-text-headline;
     border-color: $color-main-yellow;
+
+    &:hover {
+      background: $color-main-yellow--hover;
+      border-color: $color-main-yellow--hover;
+    }
+
+    &:active {
+      background: $color-main-yellow--active;
+      border-color: $color-main-yellow--active;
+    }
   }
 
   &.button--filled {
     background: $color-main-blue;
     border-color: $color-main-blue;
     color: #fff;
+
+    &:hover {
+      background: $color-main-blue--hover;
+      border-color: $color-main-blue--hover;
+    }
+
+    &:active {
+      background: $color-main-blue--active;
+      border-color: $color-main-blue--active;
+    }
   }
 
   &.button--large {

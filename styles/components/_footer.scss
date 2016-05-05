@@ -21,6 +21,11 @@
 
   a {
     color: $color-footer-link;
+    transition: $transition-default;
+
+    &:hover {
+      color: #fff;
+    }
   }
 
   .footer__logo {
@@ -68,9 +73,14 @@
     li {
       display: inline-block;
       margin-right: 20px;
+      transition: $transition-default;
 
       &:last-child {
         margin-right: 0;
+      }
+
+      &:hover {
+        opacity: .8;
       }
     }
   }
