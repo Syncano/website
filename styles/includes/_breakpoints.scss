@@ -56,6 +56,12 @@ $breakpoints: (
   }
 }
 
+@mixin large-over {
+  @media screen and (min-width: map-deep-get($breakpoints, 'large', 'min-width') + 1) {
+    @content;
+  }
+}
+
 @mixin very-large {
   @media screen and (min-width: map-deep-get($breakpoints, 'very-large', 'min-width')) {
     @content;

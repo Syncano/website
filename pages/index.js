@@ -10,11 +10,12 @@ import {
   TextColumns,
   TextWithBackground,
   TextWithBottomImage,
-  TextWithImage
+  TextWithImage,
+  TwitterSlider
 } from '../components';
 
 export default () => {
-  return (
+  return(
     <DocumentTitle title="Syncano">
       <div>
         <Hero
@@ -32,6 +33,19 @@ export default () => {
             (6 months free &bull; No credit card required)
           </p>
         </Hero>
+        <TextWithBottomImage
+          theme="gray"
+          headline="A serverless app platform to design, publish and manage your API"
+          textline={`Make your own custom API’s in the cloud. Instantly scale for the web, mobile, and the Internet of
+            Things. Support millions of users without learning the nuts and bolts of handling servers.`}
+          image={
+            <img
+              src={require('../images/illustrations/serverless-app-platform.svg')}
+              alt="serverless app platform"
+            />
+          }
+        />
+        <TwitterSlider />
         <div>
           <CodePreview variant="no-bottom-radius">
             <CodePreview.Item
@@ -153,24 +167,6 @@ export default () => {
           </Link>
         </TextWithImage>
         <Testimonials />
-        <TextWithBottomImage
-          headline="Get answers from our developers"
-          textline={`Our engineers specialize in the tricky and technical investigations of our platform. When you have
-            questions, you’ll get timely answers from our team.`}
-          image={
-            <img
-              src={require('../images/robot.svg')}
-              alt="robot"
-            />
-          }
-        >
-          <Link
-            to="/about/"
-            className="button"
-          >
-            Get Support
-          </Link>
-        </TextWithBottomImage>
         <TextWithBackground
           theme="image1"
           headline="We’ll support you every step of the way"

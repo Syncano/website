@@ -133,6 +133,7 @@ export default React.createClass({
         <Analytics writeKey={config.analyticsKey} />
         <script src="https://cdn.jsdelivr.net/g/prism@1.4.1(prism.js+components/prism-markup.min.js+components/prism-swift.min.js+components/prism-python.min.js+components/prism-css.min.js+components/prism-javascript.min.js+components/prism-clike.min.js+plugins/line-highlight/prism-line-highlight.min.js+plugins/line-numbers/prism-line-numbers.min.js)" />
         <script src="/bundle.js" />
+        <script async src="//platform.twitter.com/widgets.js" charSet="utf-8" />
       </body>
       </html>
     );
