@@ -41,7 +41,7 @@ export default () => {
           </SliderWrapper>
         </div>
         <a
-          href="/about/"
+          href="https://twitter.com/Syncano/"
           className="button"
           target="_blank"
         >
