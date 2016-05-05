@@ -88,8 +88,8 @@ export default () => {
           }
           headline="Customize your APIs and features"
           textline={`Every app’s needs are different. With Sockets, we give you the flexibility to combine and configure
-            the building blocks your application needs. The backend work is mostly done - you’ll be building stronger and
-            better apps, faster!`}
+            the building blocks your application needs. The backend work is mostly done - you’ll be building stronger
+            and better apps, faster!`}
         >
           <Link
             to="/about/"
@@ -107,8 +107,8 @@ export default () => {
               />
             }
             headline="Simplify your stack"
-            text={`Stop writing code to connect disparate backend systems. Integrate anything, all from one place. Provide
-              one more line of text here.`}
+            text={`Stop writing code to connect disparate backend systems. Integrate anything, all from one place.
+              Provide one more line of text here.`}
           />
           <TextColumns.Column
             icon={
@@ -174,8 +174,8 @@ export default () => {
         <TextWithBackground
           theme="image1"
           headline="We’ll support you every step of the way"
-          textline={`Mariusz is a great guy and a part of our support team. At Syncano, every team member is here to help
-            you. When you have questions, you’ll get timely answers directly from our team members.`}
+          textline={`Mariusz is a great guy and a part of our support team. At Syncano, every team member is here to
+            help you. When you have questions, you’ll get timely answers directly from our team members.`}
         >
           <Link
             to="/help/"

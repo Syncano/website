@@ -31,9 +31,14 @@
         margin-right: 6px;
         cursor: pointer;
         white-space: nowrap;
+        transition: $transition-default;
 
         &:last-child {
           margin-right: 0;
+        }
+
+        &:hover {
+          color: #fff;
         }
 
         &.is-active {
