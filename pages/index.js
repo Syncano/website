@@ -199,5 +199,5 @@ export default () => {
         <Footer />
       </div>
     </DocumentTitle>
-  )
+  );
 };

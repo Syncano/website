@@ -20,12 +20,16 @@ export default () => {
           </Link>
         </PageHeader>
         <CTASection>
+          <h2>Rethink how you build apps. Go serverless!</h2>
           <Link
             to="/about/"
             className="button button--large button--featured"
           >
             Get Started for Free
           </Link>
+          <p className="cta-section__button-description">
+            (6 months free &bull; No credit card required)
+          </p>
         </CTASection>
         <Footer />
       </div>
