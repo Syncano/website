@@ -23,10 +23,6 @@
     color: transparentize($color-text-base, .2);
     font-weight: 500;
     font-size: 18px;
-
-    a {
-      color: transparentize($color-text-base-link, .2);
-    }
   }
 
   .button {

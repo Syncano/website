@@ -5,7 +5,7 @@ export default ({ theme, headline, children }) => {
   const textPanelsPanelClassName = classNames({
     'text-panels__panel': true,
     'text-panels__panel--azure': (theme == 'azure'),
-    'text-panels__panel--graphite': (theme == 'graphite'),
+    'text-panels__panel--silver': (theme == 'silver'),
     'text-panels__panel--purple': (theme == 'purple')
   });
 

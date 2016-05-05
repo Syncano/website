@@ -39,7 +39,7 @@
     .pricing-plan__box__period {
       font-size: 18px;
       font-weight: 500;
-      color: $color-main-graphite;
+      color: $color-main-silver;
       text-align: center;
     }
 
@@ -48,7 +48,7 @@
 
       h4 {
         font-size: 14px;
-        color: $color-main-graphite;
+        color: $color-main-silver;
         margin-bottom: 10px;
       }
 
@@ -122,8 +122,13 @@
     line-height: 1;
     text-decoration: underline;
     font-size: 14px;
-    color: $color-main-graphite;
+    color: $color-main-silver;
     display: block;
+    transition: $transition-default;
+
+    &:hover {
+      opacity: .8;
+    }
   }
 
   &.pricing-plan--expanded .pricing-plan__box {

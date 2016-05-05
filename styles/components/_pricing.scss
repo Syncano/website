@@ -1,5 +1,4 @@
 .pricing {
-  background: #fff;
   margin-top: -30px;
   padding-bottom: 80px;
 
@@ -9,10 +8,6 @@
     font-size: 14px;
     line-height: 24px;
     font-weight: 500;
-
-    a {
-      color: #0086DC;
-    }
   }
 
   @include medium {

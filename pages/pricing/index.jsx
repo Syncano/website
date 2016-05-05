@@ -1,7 +1,16 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { CTASection, FAQ, Footer, ListColumns, PageHeader, Pricing, TextWithImage, TextWithBottomImage } from '../../components';
+import {
+  CTASection,
+  FAQ,
+  Footer,
+  ListColumns,
+  PageHeader,
+  Pricing,
+  TextWithImage,
+  TextWithBottomImage
+} from '../../components';
 
 export default () => {
   return (
@@ -22,7 +31,8 @@ export default () => {
             />
           }
           headline="Pricing that scales with your app"
-          textline="Pay as you grow. Every app comes in different shapes and sizes. You are in control to adjust your plan based on your needs and growth. Easily upgrade or downgrade your account at any time."
+          textline={`Pay as you grow. Every app comes in different shapes and sizes. You are in control to adjust your
+            plan based on your needs and growth. Easily upgrade or downgrade your account at any time.`}
         />
         <ListColumns headline="Pricing that scales with your app">
           <ListColumns.Column
@@ -45,7 +55,8 @@ export default () => {
         <FAQ />
         <TextWithBottomImage
           headline="Get answers from our developers"
-          textline="Our engineers specialize in the tricky and technical investigations of our platform. When you have questions, you’ll get timely answers from our team."
+          textline={`Our engineers specialize in the tricky and technical investigations of our platform. When you have
+            questions, you’ll get timely answers from our team.`}
           image={
             <img
               src={require('../../images/robot.svg')}
@@ -61,12 +72,16 @@ export default () => {
           </Link>
         </TextWithBottomImage>
         <CTASection>
+          <h2>Rethink how you build apps. Go serverless!</h2>
           <Link
             to="/about/"
             className="button button--large button--featured"
           >
             Get Started for Free
           </Link>
+          <p className="cta-section__button-description">
+            (6 months free &bull; No credit card required)
+          </p>
         </CTASection>
         <Footer />
       </div>
