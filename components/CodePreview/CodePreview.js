@@ -2,24 +2,12 @@ import React from 'react';
 import _ from 'lodash';
 import classNames  from 'classnames';
 
-class CodePreview extends React.Component {
+export default class CodePreview extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       activeTab: 0
-    };
-  };
-
-  static childContextTypes = {
-    codePreview: React.PropTypes.object
-  };
-
-  getChildContext = () => {
-    return {
-      codePreview: {
-        activeTab: this.state.activeTab
-      }
     };
   };
 
@@ -77,5 +65,3 @@ class CodePreview extends React.Component {
     );
   };
 };
-
-export default CodePreview;
