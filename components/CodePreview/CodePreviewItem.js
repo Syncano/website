@@ -2,7 +2,7 @@ import React from 'react';
 import { PrismCode } from 'react-prism';
 import classNames from 'classnames';
 
-const CodePreviewItem = ({ code, languageClassName, isActive }, { codePreview }) => {
+const CodePreviewItem = ({ code, languageClassName, isActive }) => {
   const getCodePreviewItemClassName = () => {
     return classNames({
       'code-preview__content__item': true,
@@ -19,10 +19,6 @@ const CodePreviewItem = ({ code, languageClassName, isActive }, { codePreview })
       </pre>
     </div>
   );
-};
-
-CodePreviewItem.contextTypes = {
-  codePreview: React.PropTypes.object
 };
 
 export default CodePreviewItem;
