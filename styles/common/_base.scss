@@ -61,6 +61,7 @@ p a {
 
   &:hover {
     color: $color-main-blue--hover;
+    text-decoration: underline;
   }
 
   &:active {

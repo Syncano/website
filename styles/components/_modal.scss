@@ -185,6 +185,11 @@
         span {
           color: #fff;
           cursor: pointer;
+          transition: $transition-default;
+
+          &:hover {
+            opacity: .8;
+          }
         }
       }
     }
