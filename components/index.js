@@ -10,6 +10,7 @@ import ListColumns from './ListColumns';
 import { Modals, ModalsHOC } from './Modals';
 import PageHeader from './PageHeader';
 import Platforms from './Platforms';
+import PlatformsSection from './PlatformsSection';
 import Pricing from './Pricing';
 import SlackMessage from './SlackMessage';
 import SlackSlider from './SlackSlider';
@@ -39,6 +40,7 @@ export default {
   ModalsHOC,
   PageHeader,
   Platforms,
+  PlatformsSection,
   Pricing,
   SlackMessage,
   SlackSlider,
