@@ -63,6 +63,20 @@
     border-color: transparent;
   }
 
+  &.button--white {
+    border-color: transparentize(#fff, .5);
+    color: #fff;
+
+    &:hover {
+      color: transparentize(#fff, .5);
+    }
+
+    &:active {
+      border-color: #fff;
+      color: #fff;
+    }
+  }
+
   &.button--wide {
     display: block;
   }

@@ -11,6 +11,8 @@ import { Modals, ModalsHOC } from './Modals';
 import PageHeader from './PageHeader';
 import Platforms from './Platforms';
 import Pricing from './Pricing';
+import SlackMessage from './SlackMessage';
+import SlackSlider from './SlackSlider';
 import SliderWrapper from './SliderWrapper';
 import SocialProfiles from './SocialProfiles';
 import StatusImage from './StatusImage';
@@ -38,6 +40,8 @@ export default {
   PageHeader,
   Platforms,
   Pricing,
+  SlackMessage,
+  SlackSlider,
   SliderWrapper,
   SocialProfiles,
   StatusImage,

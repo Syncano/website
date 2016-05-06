@@ -81,7 +81,7 @@ export default () => {
         </div>
         <a
           href="https://twitter.com/Syncano/"
-          className="button"
+          className="button button--white"
           target="_blank"
         >
           More Tweets
