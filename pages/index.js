@@ -7,6 +7,7 @@ import {
   FeaturesColumns,
   Footer,
   Hero,
+  PlatformsSection,
   Testimonials,
   TextWithBackground,
   TextWithBottomImage,
@@ -46,7 +47,10 @@ export default () => {
           }
         />
         <TwitterSlider />
-        <div>
+        <PlatformsSection
+          headline="Use the frameworks and languages you already know"
+          bottomContentHeadline="Add realtime communication with a few lines of code"
+        >
           <CodePreview variant="no-bottom-radius">
             <CodePreview.Item
               title="Swift"
@@ -69,7 +73,7 @@ export default () => {
               code={require('!raw!./home/realtime-sync-java.txt')}
             />
           </CodePreview>
-        </div>
+        </PlatformsSection>
         <TextWithImage
           variant="image-left"
           theme="gray"

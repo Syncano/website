@@ -50,16 +50,14 @@ export default class CodePreview extends React.Component {
     });
 
     return (
-      <div className="code-preview-container">
-        <div className={codePreviewClassName}>
-          <nav className="code-preview__nav">
-            <ul>
-              {children.map(this.renderNavItem)}
-            </ul>
-          </nav>
-          <div className="code-preview__content">
-            {children.map(this.renderContentItem)}
-          </div>
+      <div className={codePreviewClassName}>
+        <nav className="code-preview__nav">
+          <ul>
+            {children.map(this.renderNavItem)}
+          </ul>
+        </nav>
+        <div className="code-preview__content">
+          {children.map(this.renderContentItem)}
         </div>
       </div>
     );
