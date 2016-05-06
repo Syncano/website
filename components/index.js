@@ -10,6 +10,7 @@ import ListColumns from './ListColumns';
 import { Modals, ModalsHOC } from './Modals';
 import PageHeader from './PageHeader';
 import Platforms from './Platforms';
+import PlatformsSection from './PlatformsSection';
 import Pricing from './Pricing';
 import SliderWrapper from './SliderWrapper';
 import SocialProfiles from './SocialProfiles';
@@ -37,6 +38,7 @@ export default {
   ModalsHOC,
   PageHeader,
   Platforms,
+  PlatformsSection,
   Pricing,
   SliderWrapper,
   SocialProfiles,
