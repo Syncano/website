@@ -69,7 +69,8 @@
         margin-bottom: 80px;
         padding: 0 30px;
 
-        &:nth-last-child(1), &:nth-last-child(2) {
+        &:nth-last-child(1),
+        &:nth-last-child(2) {
           margin-bottom: 0;
         }
       }
