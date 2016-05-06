@@ -2,6 +2,7 @@ import Analytics from './Analytics';
 import CodePreview from './CodePreview';
 import CTASection from './CTASection';
 import FAQ from './FAQ';
+import FeaturesColumns from './FeaturesColumns';
 import Footer from './Footer';
 import HamburgerMenu from './HamburgerMenu';
 import Hero from './Hero';
@@ -15,7 +16,6 @@ import SocialProfiles from './SocialProfiles';
 import StatusImage from './StatusImage';
 import TermsAndLegal from './TermsAndLegal';
 import Testimonials from './Testimonials';
-import TextColumns from './TextColumns';
 import TextPanels from './TextPanels';
 import TextWithBackground from './TextWithBackground';
 import TextWithBottomImage from './TextWithBottomImage';
@@ -29,6 +29,7 @@ export default {
   CTASection,
   FAQ,
   Footer,
+  FeaturesColumns,
   HamburgerMenu,
   Hero,
   ListColumns,
@@ -42,7 +43,6 @@ export default {
   StatusImage,
   TermsAndLegal,
   Testimonials,
-  TextColumns,
   TextPanels,
   TextWithBackground,
   TextWithBottomImage,
