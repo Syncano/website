@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class SlackSlider extends Component {
+export default class SlackSliderNavPrev extends Component {
   render() {
     return (
       <span {...this.props}>

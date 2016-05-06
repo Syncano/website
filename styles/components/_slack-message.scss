@@ -44,10 +44,8 @@
       flex: 0 0 50px;
     }
 
-    .slack-message__content {
-      .slack-message__content__author {
-        text-align: left;
-      }
+    .slack-message__content .slack-message__content__author {
+      text-align: left;
     }
   }
 }
