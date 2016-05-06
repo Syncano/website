@@ -4,10 +4,10 @@ import { Link } from 'react-router';
 import {
   CodePreview,
   CTASection,
+  FeaturesColumns,
   Footer,
   Hero,
   Testimonials,
-  TextColumns,
   TextWithBackground,
   TextWithBottomImage,
   TextWithImage,
@@ -112,41 +112,43 @@ export default () => {
             More About Sockets
           </Link>
         </TextWithImage>
-        <TextColumns>
-          <TextColumns.Column
-            icon={
-              <img
-                src={require('../images/icons/stack.svg')}
-                alt="stack"
-              />
-            }
-            headline="Simplify your stack"
-            text={`Stop writing code to connect disparate backend systems. Integrate anything, all from one place.
-              Provide one more line of text here.`}
+        <FeaturesColumns
+          headline="See what you can do with Syncano"
+          underColumnsContent={
+            <Link
+              to="/features/"
+              className="button"
+            >
+              View All Features
+            </Link>
+          }
+        >
+          <FeaturesColumns.Column
+            iconSrc={require('./home/polygon-index-your-data-for-search.svg')}
+            headline="Index your data for search"
+            text={`Easily search for the data you need. Create sophisticated data relations and apply multiple filters.
+              Specify your queries with your own custom endpoints.`}
           />
-          <TextColumns.Column
-            icon={
-              <img
-                src={require('../images/icons/file.svg')}
-                alt="file"
-              />
-            }
-            headline="Control your data schema"
-            text={`Create sophisticated data relations and apply multiple filters. Easily manage your data from our
-              user-friendly dashboard.`}
+          <FeaturesColumns.Column
+            iconSrc={require('./home/polygon-customize-your-output.svg')}
+            headline="Customize your output"
+            text={`Save valuable client-side resources to make your app faster. Use Templates to change the output of
+              your data to the response format you need, including JSON, XML, and HTML.`}
           />
-          <TextColumns.Column
-            icon={
-              <img
-                src={require('../images/icons/clock.svg')}
-                alt="clock"
-              />
-            }
-            headline="Code and prototype faster"
-            text={`Write your own code snippets and prototype them in the browser with built-in traces. Get your MVP to
-              market and save development costs.`}
+          <FeaturesColumns.Column
+            iconSrc={require('./home/polygon-add-push-notifications.svg')}
+            headline="Add push notifications"
+            text={`Boost your engagement. Add powerful push notifications to your app with a few clicks in your
+              Dashboard. Send relevant notifications to users.`}
           />
-        </TextColumns>
+          <FeaturesColumns.Column
+            iconSrc={require('./home/polygon-run-server-side-logic-in-the-cloud.svg')}
+            headline="Run server-side logic in the cloud"
+            text={`Execute code on API calls, in response to events, updates to data, in-app activity or by a schedule.
+              Leverage hundreds of available libraries. Write your scripts in NodeJS, Golang, Swift, Python, Ruby, and
+              PHP.`}
+          />
+        </FeaturesColumns>
         <TextWithImage
           variant="image-left"
           image={

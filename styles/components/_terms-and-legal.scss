@@ -25,7 +25,7 @@
       .terms-and-legal__sidebar__nav__headline {
         text-transform: uppercase;
         font-size: 10px;
-        font-weight: bold;
+        font-weight: 700;
         color: transparentize($color-text-base, .5);
         margin-bottom: 20px;
       }
@@ -59,7 +59,7 @@
     }
 
     h3 {
-      font-weight: bold;
+      font-weight: 700;
       color: $color-text-headline;
       margin-bottom: 30px;
       font-size: 20px;
@@ -67,7 +67,7 @@
     }
 
     h4 {
-      font-weight: bold;
+      font-weight: 700;
       margin-bottom: 20px;
       margin-top: 30px;
       font-size: 16px;
