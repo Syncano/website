@@ -20,9 +20,14 @@ export default () => {
     <DocumentTitle title="Syncano">
       <div>
         <Hero
-          variant="home"
           headline="Build powerful apps in half the time"
           textline="Automate the backend. Set up your own serverless architecture in minutes."
+          image={
+            <img
+              src={require('./home/hero.svg')}
+              alt="serverless app platform"
+            />
+          }
         >
           <Link
             to="/features/"
@@ -30,7 +35,7 @@ export default () => {
           >
             Get Started for Free
           </Link>
-          <p className="hero__button-description">
+          <p className="hero__text__button-description">
             (6 months free &bull; No credit card required)
           </p>
         </Hero>

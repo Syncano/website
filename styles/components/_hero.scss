@@ -3,102 +3,137 @@
   text-align: center;
   padding-top: 120px;
   padding-bottom: 60px;
-  background-color: #003462;
-  background-repeat: no-repeat;
-  background-position: 76% 50%;
-  background-size: cover;
 
-  .hero__headline,
-  .hero__textline {
-    margin-left: auto;
-    margin-right: auto;
+  .hero__text {
+    .hero__text__headline,
+    .hero__text__textline {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero__text__headline {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.35;
+      max-width: 255px;
+      color: $color-text-headline;
+    }
+
+    .hero__text__textline {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-top: 30px;
+      max-width: 215px;
+      color: $color-text-base;
+    }
+
+    .button {
+      margin-top: 50px;
+    }
+
+    .hero__text__button-description {
+      color: transparentize($color-text-base, .4);
+      font-size: 12px;
+      margin-top: 20px;
+    }
   }
 
-  .hero__headline {
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 1.4;
-    max-width: 255px;
-    color: #fff;
-  }
+  .hero__image {
+    margin-top: 60px;
 
-  .hero__textline {
-    font-size: 18px;
-    line-height: 1.5;
-    margin-top: 30px;
-    max-width: 215px;
-    color: transparentize(#fff, .15);
-  }
-
-  .button {
-    margin-top: 50px;
-  }
-
-  .hero__button-description {
-    color: transparentize(#fff, .3);
-    font-size: 12px;
-    margin-top: 20px;
-  }
-
-  &.hero--home {
-    background-image: url("../components/Hero/images/hero-home.jpg");
+    img {
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   @include small {
-    min-height: 375px;
     padding-top: 80px;
-    padding-bottom: 20px;
 
-    .hero__headline {
-      max-width: none;
+    .hero__text {
+      .hero__text__headline {
+        max-width: none;
+      }
+
+      .hero__text__textline {
+        max-width: 350px;
+      }
     }
 
-    .hero__textline {
-      max-width: 350px;
-    }
-
-    &.hero--home {
-      background-position: 45% 50%;
+    .hero__image img {
+      max-width: 60%;
     }
   }
 
   @include medium {
-    min-height: 800px;
-    padding-top: 280px;
+    padding-top: 220px;
     padding-bottom: 200px;
 
-    .hero__headline {
-      font-size: 42px;
-      line-height: 1;
+    .hero__text {
+      .hero__text__headline {
+        font-size: 42px;
+      }
+
+      .hero__text__textline {
+        font-size: 20px;
+        max-width: none;
+        margin-top: 30px;
+      }
+
+      .button {
+        margin-top: 60px;
+      }
+
+      .hero__text__button-description {
+        font-size: 14px;
+      }
     }
 
-    .hero__textline {
-      font-size: 20px;
-      max-width: none;
-      margin-top: 20px;
-    }
-
-    .button {
+    .hero__image {
       margin-top: 70px;
-    }
-
-    .hero__button-description {
-      font-size: 14px;
-    }
-
-    &.hero--home {
-      background-image: url("../components/Hero/images/hero-home-medium.jpg");
-      background-position: 50% 50%;
     }
   }
 
   @include large {
-    .hero__headline {
-      font-size: 56px;
+    text-align: left;
+
+    .inner {
+      display: flex;
+      align-items: center;
     }
 
-    .hero__textline {
-      font-size: 24px;
+    .hero__text,
+    .hero__image {
+      flex-basis: 0;
+      flex-grow: 1;
+    }
+
+    .hero__text {
+      margin-right: 40px;
+
+      .hero__text__headline {
+        font-size: 56px;
+      }
+
+      .hero__text__textline {
+        font-size: 24px;
+      }
+    }
+
+    .hero__image {
+      margin-top: 0;
+      flex-grow: 1.2;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  @include very-large {
+    .hero__text {
+      margin-right: 80px;
     }
   }
 }
