@@ -71,8 +71,7 @@
   &.text-with-image--purple {
     background: $color-main-purple;
 
-    h2,
-    .button {
+    h2 {
       color: #fff;
     }
 
@@ -82,16 +81,7 @@
     }
 
     .button {
-      border-color: rgba(255, 255, 255, .5);
-
-      &:hover {
-        color: rgba(255, 255, 255, .5);
-      }
-
-      &:active {
-        color: #fff;
-        border-color: #fff;
-      }
+      @extend .button--white;
     }
   }
 

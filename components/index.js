@@ -12,6 +12,8 @@ import PageHeader from './PageHeader';
 import Platforms from './Platforms';
 import PlatformsSection from './PlatformsSection';
 import Pricing from './Pricing';
+import SlackMessage from './SlackMessage';
+import SlackSlider from './SlackSlider';
 import SliderWrapper from './SliderWrapper';
 import SocialProfiles from './SocialProfiles';
 import StatusImage from './StatusImage';
@@ -40,6 +42,8 @@ export default {
   Platforms,
   PlatformsSection,
   Pricing,
+  SlackMessage,
+  SlackSlider,
   SliderWrapper,
   SocialProfiles,
   StatusImage,

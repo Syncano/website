@@ -7,6 +7,7 @@ import {
   FeaturesColumns,
   Footer,
   Hero,
+  SlackSlider,
   PlatformsSection,
   Testimonials,
   TextWithBackground,
@@ -39,6 +40,7 @@ export default () => {
             (6 months free &bull; No credit card required)
           </p>
         </Hero>
+        <SlackSlider />
         <TextWithBottomImage
           theme="gray"
           headline="A serverless app platform to design, publish and manage your API"
