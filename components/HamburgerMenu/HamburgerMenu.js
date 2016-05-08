@@ -46,7 +46,7 @@ const HamburgerMenu = (props, { modals }) => {
             <li>
               <span
                 className="button button--large"
-                onClick={() => modals.openModal('log-in')}
+                onClick={modals.logIn.open}
               >
                 Log In
               </span>
@@ -54,7 +54,7 @@ const HamburgerMenu = (props, { modals }) => {
             <li>
               <span
                 className="button button--large button--featured"
-                onClick={() => modals.openModal('sign-up')}
+                onClick={modals.signUp.open}
               >
                 Sign Up For Free
               </span>
@@ -71,4 +71,3 @@ HamburgerMenu.contextTypes = {
 };
 
 export default HamburgerMenu;
-

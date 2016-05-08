@@ -17,7 +17,7 @@ const ModalWrapper = ({ isOpen, children }, { modals }) => {
       >
         <span
           className="modal__close"
-          onClick={modals.closeAllModals}
+          onClick={modals.closeAll}
         >
           <img
             src={require('./images/close.svg')}

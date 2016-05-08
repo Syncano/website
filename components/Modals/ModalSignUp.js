@@ -1,9 +1,9 @@
 import React from 'react';
 import ModalWrapper from './ModalWrapper';
 
-const ModalSignUp = ({ slug }, { modals }) => {
+const ModalSignUp = (props, { modals }) => {
   return (
-    <ModalWrapper isOpen={modals.signUpModalIsOpen}>
+    <ModalWrapper isOpen={modals.signUp.isOpen}>
       <div className="modal__content">
         <div className="inner">
           <h2>Sign up for free!</h2>
@@ -62,7 +62,7 @@ const ModalSignUp = ({ slug }, { modals }) => {
       </div>
       <footer className="modal__footer">
         <div className="modal__footer__column">
-          <span onClick={() => modals.openModal('log-in')}>
+          <span onClick={modals.logIn.open}>
             Already have an account? <strong>Log in here!</strong>
           </span>
         </div>
