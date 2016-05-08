@@ -1,0 +1,126 @@
+.features-columns {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: $color-main-gray;
+  text-align: center;
+
+  h2 {
+    font-size: 20px;
+    color: $color-text-headline;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .features-columns__columns {
+    margin-top: 25px;
+
+    .features-columns__columns__column {
+      margin-bottom: 70px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .features-columns__columns__column__icon img {
+        margin: 0 auto;
+        width: 60px;
+      }
+
+      h3 {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: 700;
+        color: $color-text-headline;
+        line-height: 1.35;
+      }
+
+      p {
+        margin-top: 20px;
+        line-height: 2;
+      }
+    }
+  }
+
+  .features-columns__footer {
+    margin-top: 70px;
+  }
+
+  @include small {
+    .features-columns__columns .features-columns__columns__column .features-columns__columns__column__icon img {
+      width: auto;
+    }
+  }
+
+  @include medium {
+    h2 {
+      font-size: 30px;
+    }
+
+    .features-columns__columns {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 50px;
+      margin-left: -30px;
+      margin-right: -30px;
+      margin-top: 80px;
+
+      .features-columns__columns__column {
+        flex-basis: 50%;
+        margin-bottom: 80px;
+        padding: 0 30px;
+
+        &:nth-last-child(1),
+        &:nth-last-child(2) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .features-columns__footer {
+      margin-top: 80px;
+    }
+  }
+
+  @include large {
+    padding-top: 110px;
+    padding-bottom: 110px;
+
+    h2 {
+      font-size: 40px;
+    }
+
+    .features-columns__columns {
+      margin-top: 80px;
+
+      .features-columns__columns__column {
+        h3 {
+          font-size: 21px;
+          margin-top: 30px;
+        }
+
+        p {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+
+  @include very-large {
+    padding-top: 140px;
+    padding-bottom: 120px;
+
+    .features-columns__columns {
+      padding: 0 160px;
+      margin-left: -70px;
+      margin-right: -70px;
+
+      .features-columns__columns__column {
+        padding: 0 70px;
+
+        h3 {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}

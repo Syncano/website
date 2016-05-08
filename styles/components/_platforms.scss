@@ -1,54 +1,72 @@
 .platforms {
-  background: #fff;
-  border: 1px solid transparentize(#B8C0C9, .8);
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
 
-  .platforms__scroll {
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-    display: flex;
-  }
-
-  .inner {
+  .platforms__row {
     display: flex;
     justify-content: space-between;
-    flex-basis: 100%;
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-
-  .platforms__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 35px;
+    margin-bottom: 10px;
 
     &:last-child {
-      margin-right: 0;
+      margin-bottom: 0;
     }
 
-    img {
-      height: 40px;
-    }
+    .platforms__row__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: (105px / 1.6);
+      height: (105px / 1.6);
+      border: 2px solid transparentize(#B8C0C9, .8);
+      border-radius: 50%;
 
-    &.platforms__item--more img {
-      height: 20px;
-    }
-  }
+      &.javascript img,
+      &.python img,
+      &.android img,
+      &.swift img,
+      &.angularjs img,
+      &.ruby img {
+        height: (44px / 1.5);
+      }
 
-  @include small {
-    .platforms__item {
-      margin-right: 0;
+      &.emberjs img {
+        height: (21px / 1.5);
+      }
+
+      &.arduino img {
+        height: (31px / 1.5);
+      }
     }
   }
 
   @include medium {
-    .platforms__item {
-      img {
-        height: 60px;
-      }
+    max-width: 670px;
 
-      &.platforms__item--more img {
-        height: 29px;
+    .platforms__row {
+      margin-bottom: 30px;
+
+      .platforms__row__item {
+        width: 105px;
+        height: 105px;
+        border-width: 3px;
+
+        &.javascript img,
+        &.python img,
+        &.android img,
+        &.swift img,
+        &.angularjs img,
+        &.ruby img {
+          height: 44px;
+        }
+
+        &.emberjs img {
+          height: 21px;
+        }
+        
+        &.arduino img {
+          height: 31px;
+        }
       }
     }
   }

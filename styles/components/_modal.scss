@@ -28,7 +28,7 @@
     h2 {
       font-size: 28px;
       line-height: 33px;
-      font-weight: bold;
+      font-weight: 700;
       color: $color-text-headline;
     }
 
@@ -64,7 +64,7 @@
 
     .modal__content__login-options__headline {
       border-top: 1px solid #DBDEE3;
-      font-weight: bold;
+      font-weight: 700;
       text-transform: uppercase;
       color: #B8C0C9;
       font-size: 12px;
@@ -190,6 +190,11 @@
         span {
           color: #fff;
           cursor: pointer;
+          transition: $transition-default;
+
+          &:hover {
+            opacity: .8;
+          }
         }
       }
     }

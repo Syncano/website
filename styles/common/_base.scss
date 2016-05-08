@@ -7,7 +7,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
-  background: $color-body-bg;
+  background: #fff;
   color: $color-text-base;
   min-width: 320px;
   line-height: 1;
@@ -53,6 +53,20 @@ img {
 
 a {
   text-decoration: none;
+}
+
+p a {
+  transition: $transition-default;
+  color: $color-main-blue;
+
+  &:hover {
+    color: $color-main-blue--hover;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $color-main-blue--active;
+  }
 }
 
 button, input, select {

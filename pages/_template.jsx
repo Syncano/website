@@ -1,9 +1,9 @@
 import React from 'react';
 import { Modals, ModalsHOC, TopBar } from '../components';
-import 'normalize.css/normalize.css';
+import 'normalize.css';
 import 'styles/styles';
 
-const Template = ({ children }, { modals }) => {
+const Template = ({ children }) => {
   return (
     <div>
       <TopBar />
@@ -13,10 +13,6 @@ const Template = ({ children }, { modals }) => {
       <Modals />
     </div>
   );
-};
-
-Template.contextTypes = {
-  modals: React.PropTypes.object
 };
 
 export default ModalsHOC(Template);
