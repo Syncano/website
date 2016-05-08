@@ -12,8 +12,8 @@ export default () => {
           <SliderWrapper
             arrows={true}
             slidesToShow={3}
-            prevArrow={TwitterSliderNavPrev}
-            nextArrow={TwitterSliderNavNext}
+            prevArrow={<TwitterSliderNavPrev />}
+            nextArrow={<TwitterSliderNavNext />}
             responsive={[
               {
                 breakpoint: 768,

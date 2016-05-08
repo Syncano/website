@@ -17,8 +17,8 @@ export default () => {
           <SliderWrapper
             arrows={true}
             fade={true}
-            prevArrow={SlackSliderNavPrev}
-            nextArrow={SlackSliderNavNext}
+            prevArrow={<SlackSliderNavPrev />}
+            nextArrow={<SlackSliderNavNext />}
           >
             <div>
               <SlackMessage
