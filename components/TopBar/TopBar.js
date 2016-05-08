@@ -73,18 +73,17 @@ const TopBar = (props, { hamburgerMenu, modals }) => {
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/login/"
+                <span
                   className="button button--noborder"
-                  activeClassName="is-active"
+                  onClick={modals.logIn.open}
                 >
                   Log In
-                </Link>
+                </span>
               </li>
               <li>
                 <span
                   className="button button--filled"
-                  onClick={modals.openLogInModal}
+                  onClick={modals.signUp.open}
                 >
                   Sign Up For Free
                 </span>
