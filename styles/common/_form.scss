@@ -8,6 +8,10 @@
     line-height: 24px;
     padding: 9px 20px;
     color: transparentize(#4D5967, .5);
+
+    &.is-invalid {
+      box-shadow: 0 0 10px rgba(255, 0, 0, .5) inset;
+    }
   }
 
   .form__textarea {

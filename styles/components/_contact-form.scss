@@ -7,6 +7,10 @@
 
     p {
       line-height: 1.75;
+
+      strong {
+        color: $color-text-headline;
+      }
     }
   }
 }
