@@ -69,9 +69,14 @@ p a {
   }
 }
 
-button, input, select {
+button, input, select, textarea {
   background: none;
   border: none;
   border-radius: 0;
   padding: 0;
+  max-width: 100%;
+}
+
+textarea {
+  resize: none;
 }
