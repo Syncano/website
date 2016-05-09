@@ -9,7 +9,6 @@ import {
   Hero,
   SlackSlider,
   PlatformsSection,
-  Testimonials,
   TextWithBackground,
   TextWithBottomImage,
   TextWithImage,
@@ -40,7 +39,6 @@ export default () => {
             (6 months free &bull; No credit card required)
           </p>
         </Hero>
-        <SlackSlider />
         <TextWithBottomImage
           theme="gray"
           headline="A serverless app platform to design, publish and manage your API"
@@ -48,81 +46,24 @@ export default () => {
             Things. Support millions of users without learning the nuts and bolts of handling servers.`}
           image={
             <img
-              src={require('../images/illustrations/serverless-app-platform.svg')}
+              src={require('./home/serverless-app-platform.svg')}
               alt="serverless app platform"
             />
           }
         />
         <TwitterSlider />
-        <PlatformsSection
-          headline="Use the frameworks and languages you already know"
-          bottomContentHeadline="Add realtime communication with a few lines of code"
-        >
-          <CodePreview variant="no-bottom-radius">
-            <CodePreview.Item
-              title="Swift"
-              languageClassName="swift"
-              code={require('!raw!./home/realtime-sync-swift.txt')}
-            />
-            <CodePreview.Item
-              title="Objective-C"
-              languageClassName="objectivec"
-              code={require('!raw!./home/realtime-sync-objectivec.txt')}
-            />
-            <CodePreview.Item
-              title="JavaScript"
-              languageClassName="javascript"
-              code={require('!raw!./home/realtime-sync-javascript.txt')}
-            />
-            <CodePreview.Item
-              title="Java"
-              languageClassName="java"
-              code={require('!raw!./home/realtime-sync-java.txt')}
-            />
-          </CodePreview>
-        </PlatformsSection>
         <TextWithImage
           variant="image-left"
-          theme="gray"
+          headline="Assemble your backend with building blocks"
+          textline={`Simplify your stack. Piece together one or multiple features as building blocks for your app. Use
+            Syncano as a data hub and easily connect disparate backend systems.`}
           image={
             <img
-              src={require('../images/illustrations/focus-on-your-app.svg')}
+              src={require('./home/assemble-your-backend-with-building-blocks.svg')}
               alt="sample-illustration"
             />
           }
-          headline="Focus on your app"
-          textline={`Forget about managing infrastructure and redundant code. Spend your time writing code specific for
-            your app. Instantly scale to support millions of users without learning the nuts and bolts of handling
-            servers.`}
-        >
-          <Link
-            to="/about/"
-            className="button"
-          >
-            View All Features
-          </Link>
-        </TextWithImage>
-        <TextWithImage
-          variant="image-right"
-          theme="purple"
-          image={
-            <img
-              src={require('../images/illustrations/customize-your-apis-and-features.svg')}
-              alt="sample-illustration"
-            />
-          }
-          headline="Customize your APIs and features"
-          textline={`Every app’s needs are different. With Sockets, we give you the flexibility to combine and configure
-            the building blocks your application needs. The backend work is mostly done - you’ll be building stronger
-            and better apps, faster!`}
-        >
-          <Link
-            to="/about/"
-            className="button"
-          >
-            More About Sockets
-          </Link>
-        </TextWithImage>
+        />
         <FeaturesColumns
           headline="See what you can do with Syncano"
           underColumnsContent={
@@ -160,26 +101,34 @@ export default () => {
               PHP.`}
           />
         </FeaturesColumns>
-        <TextWithImage
-          variant="image-left"
-          image={
-            <img
-              src={require('../images/illustrations/run-server-side-logic-in-the-cloud.svg')}
-              alt="sample-illustration"
-            />
-          }
-          headline="Run server-side logic in the cloud"
-          textline={`With Scripts, run your code in response to events, updates to data, in-app activity or by a
-            particular schedule. Use multiple languages, integrate with anything.`}
+        <PlatformsSection
+          headline="Use the frameworks and languages you already know"
+          bottomContentHeadline="Add realtime communication with a few lines of code"
         >
-          <Link
-            to="/about/"
-            className="button"
-          >
-            More About Scripts
-          </Link>
-        </TextWithImage>
-        <Testimonials />
+          <CodePreview variant="no-bottom-radius">
+            <CodePreview.Item
+              title="Swift"
+              languageClassName="swift"
+              code={require('!raw!./home/realtime-sync-swift.txt')}
+            />
+            <CodePreview.Item
+              title="Objective-C"
+              languageClassName="objectivec"
+              code={require('!raw!./home/realtime-sync-objectivec.txt')}
+            />
+            <CodePreview.Item
+              title="JavaScript"
+              languageClassName="javascript"
+              code={require('!raw!./home/realtime-sync-javascript.txt')}
+            />
+            <CodePreview.Item
+              title="Java"
+              languageClassName="java"
+              code={require('!raw!./home/realtime-sync-java.txt')}
+            />
+          </CodePreview>
+        </PlatformsSection>
+        <SlackSlider />
         <TextWithBackground
           theme="image1"
           headline="We’ll support you every step of the way"

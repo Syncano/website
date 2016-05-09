@@ -111,14 +111,19 @@
 
     .features-columns__columns {
       padding: 0 160px;
-      margin-left: -70px;
-      margin-right: -70px;
+      margin-left: -65px;
+      margin-right: -65px;
 
       .features-columns__columns__column {
-        padding: 0 70px;
+        padding: 0 65px;
 
         h3 {
           font-size: 24px;
+        }
+
+        p {
+          padding-left: 8px;
+          padding-right: 8px;
         }
       }
     }
