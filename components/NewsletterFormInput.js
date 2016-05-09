@@ -10,10 +10,9 @@ export default React.createClass({
     return (
       <input
         className={`newsletter-form__field__input ${className}`}
-        type="email"
-        placeholder="E-mail address"
         onChange={(event) => this.setValue(event.currentTarget.value)}
+        {...this.props}
       />
-    )
+    );
   }
 });
