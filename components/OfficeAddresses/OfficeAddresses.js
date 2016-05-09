@@ -21,7 +21,7 @@ export default () => {
           address={<p>Al. Jerozolimskie 81<br />02-001 Warsaw Poland</p>}
         />
         <OfficeAddressesItem
-          imageSrc={require('./images/flag-us.svg')}
+          imageSrc={require('./images/flag-no.svg')}
           title="Norway"
           address={<p>Stortingsgata 30<br />0161 Oslo Norway</p>}
         />
