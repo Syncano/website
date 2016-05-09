@@ -22,23 +22,17 @@ body {
   }
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-weight: normal;
   line-height: 1;
   margin: 0;
 }
 
-ul, ol {
-  padding: 0;
-  list-style: none;
-}
-
-ul, ol {
-  padding: 0;
-  list-style: none;
-}
-
-ul, ol {
+ul,
+ol {
   padding: 0;
   list-style: none;
 }
@@ -69,14 +63,14 @@ p a {
   }
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   background: none;
   border: none;
   border-radius: 0;
   padding: 0;
   max-width: 100%;
-}
-
-textarea {
   resize: none;
 }
