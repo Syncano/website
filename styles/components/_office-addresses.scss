@@ -1,0 +1,76 @@
+.office-addresses {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: $color-main-gray;
+
+  .office-addresses__item {
+    margin-bottom: 60px;
+    text-align: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .office-addresses__item__flag {
+      margin-bottom: 30px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .office-addresses__item__title {
+      font-size: 20px;
+      color: $color-text-headline;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .office-addresses__item__address p {
+      font-size: 14px;
+      line-height: 24px;
+      color: transparentize($color-text-base, .1);
+    }
+  }
+
+  @include medium {
+    .inner {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .office-addresses__item {
+      flex: 0 0 50%;
+
+      &:nth-last-child(2) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include large {
+    padding-top: 110px;
+    padding-bottom: 100px;
+
+    .office-addresses__item {
+      flex-basis: 25%;
+      margin-bottom: 0;
+    }
+  }
+
+  @include very-large {
+    padding-top: 130px;
+
+    .office-addresses__item {
+      .office-addresses__item__title {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 30px;
+      }
+
+      .office-addresses__item__address p {
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+  }
+}

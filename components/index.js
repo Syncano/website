@@ -8,6 +8,7 @@ import HamburgerMenu from './HamburgerMenu';
 import Hero from './Hero';
 import ListColumns from './ListColumns';
 import { Modals, ModalsHOC } from './Modals';
+import OfficeAddresses from './OfficeAddresses';
 import PageHeader from './PageHeader';
 import Platforms from './Platforms';
 import PlatformsSection from './PlatformsSection';
@@ -38,6 +39,7 @@ export default {
   ListColumns,
   Modals,
   ModalsHOC,
+  OfficeAddresses,
   PageHeader,
   Platforms,
   PlatformsSection,
