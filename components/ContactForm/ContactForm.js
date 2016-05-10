@@ -12,60 +12,58 @@ export default class ContactForm extends Component {
     this.state = {
       status: ''
     };
-
-    this.submit = this.submit.bind(this);
   };
 
-  submit(model) {
+  submit = (model) => {
     const { contactFormEmail } = config;
     const action = `//formspree.io/${contactFormEmail}`;
 
     axios.post(action, model)
-      .then(({ statusText }) => {
-        if (statusText == 'OK') {
-          this.showThankYou();
-        } else {
-          this.showError();
-        }
-      })
-      .catch(() => this.showError());
+      .then((response) => this.onSubmitSuccess(response))
+      .catch(this.showError);
   };
 
-  showError() {
+  onSubmitSuccess = ({ statusText }) => {
+    if (statusText == 'OK') {
+      this.showThankYou();
+    } else {
+      this.showError();
+    }
+  };
+
+  showError = () => {
     this.setState({ status: 'error' });
   };
 
-  showThankYou() {
+  showThankYou = () => {
     this.setState({ status: 'done' });
   };
 
-  renderStatus(status) {
-    let message = (
-      <div>
-        <p><strong>There was an error sending your message.</strong></p>
-        <p>Please try again later or <a href="https://syncano-community.slack.com/" target="_blank">join the
-        community</a> on Slack.</p>
-      </div>
-    );
+  getErrorMessage = () => (
+    <div>
+      <p><strong>There was an error sending your message.</strong></p>
+      <p>Please try again later or <a href="https://syncano-community.slack.com/" target="_blank">join the community</a>
+      on Slack.</p>
+    </div>
+  );
 
-    if (status == 'done') {
-      message = (
-        <div>
-          <p><strong>Thank you! Your message has been received.</strong></p>
-          <p>We’ll get back to you soon. In the mean time, check out some of our
-          recent <a href="https://www.syncano.io/blog/">blog articles</a>.</p>
-        </div>
-      );
-    }
+  getThankYouMessage = () => (
+    <div>
+      <p><strong>Thank you! Your message has been received.</strong></p>
+      <p>We’ll get back to you soon. In the mean time, check out some of our
+      recent <a href="https://www.syncano.io/blog/">blog articles</a>.</p>
+    </div>
+  );
 
+  renderStatus = (status) => {
     return (
       <div className="contact-form__box__message">
-        {message}
+        {status == 'done' ? this.getThankYouMessage() : this.getErrorMessage() }
       </div>
     );
   };
 
-  renderForm() {
+  renderForm = () => {
     return (
       <div className="contact-form__box__form form">
         <Formsy.Form onValidSubmit={this.submit}>
@@ -104,7 +102,7 @@ export default class ContactForm extends Component {
     );
   };
 
-  render() {
+  render = () => {
     const { status } = this.state;
 
     return (

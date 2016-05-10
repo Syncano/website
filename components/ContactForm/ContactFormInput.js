@@ -1,15 +1,25 @@
 import React, { Component } from 'react';
 import { HOC } from 'formsy-react';
+import classNames  from 'classnames';
 
 class ContactFormInput extends Component {
-  render() {
-    const className = this.props.showError() ? 'is-invalid' : null;
+  getClassName = () => {
+    const { showError } = this.props;
+
+    return classNames({
+      'form__input': true,
+      'is-invalid': (showError()),
+    });
+  };
+
+  render = () => {
+    const { getValue, setValue } = this.props;
 
     return (
       <input
-        className={`form__input ${className}`}
-        value={this.props.getValue()}
-        onChange={(e) => this.props.setValue(e.target.value)}
+        className={this.getClassName()}
+        value={getValue() || ''}
+        onChange={(e) => setValue(e.target.value)}
         {...this.props}
       />
     );
