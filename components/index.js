@@ -1,5 +1,6 @@
 import Analytics from './Analytics';
 import CodePreview from './CodePreview';
+import CounterBoxes from './CounterBoxes';
 import CTASection from './CTASection';
 import FAQ from './FAQ';
 import FeaturesColumns from './FeaturesColumns';
@@ -30,6 +31,7 @@ import TwitterSlider from './TwitterSlider';
 export default {
   Analytics,
   CodePreview,
+  CounterBoxes,
   CTASection,
   FAQ,
   Footer,
