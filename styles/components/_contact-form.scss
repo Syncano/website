@@ -17,6 +17,7 @@
   @include medium {
     background: #fff url("../components/ContactForm/images/background.svg") no-repeat left 50% bottom 75px;
     min-height: (457px + 75);
+    margin-top: -110px;
 
     .contact-form__box {
       max-width: 520px;
