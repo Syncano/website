@@ -11,12 +11,10 @@ export default () => {
           headline="About"
           textlineHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         />
-        <BlockquoteSection
-          quote={
-            <p>„What used to take 5 weeks now takes just 1 week with Syncano. You let developers be developers and not
-            get stuck being middleware or database engineers.”</p>
-          }
-        />
+        <BlockquoteSection>
+          <p>„What used to take 5 weeks now takes just 1 week with Syncano. You let developers be developers and not get
+          stuck being middleware or database engineers.”</p>
+        </BlockquoteSection>
         <CTASection>
           <h2>Rethink how you build apps. Go serverless!</h2>
           <Link

@@ -1,11 +1,11 @@
 import React from 'react';
 
-export default ({ quote }) => {
+export default ({ children }) => {
   return (
     <div className="blockquote-section">
       <div className="inner">
         <blockquote className="blockquote-section__blockquote">
-          {quote}
+          {children}
         </blockquote>
       </div>
     </div>
