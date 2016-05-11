@@ -19,16 +19,12 @@ export default class ContactForm extends Component {
     const action = `//formspree.io/${contactFormEmail}`;
 
     axios.post(action, model)
-      .then((response) => this.onSubmitSuccess(response))
+      .then(this.onSubmitSuccess)
       .catch(this.showError);
   };
 
   onSubmitSuccess = ({ statusText }) => {
-    if (statusText == 'OK') {
-      this.showThankYou();
-    } else {
-      this.showError();
-    }
+    statusText == 'OK' ? this.showThankYou() : this.showError();
   };
 
   showError = () => {
