@@ -36,7 +36,7 @@ export default class ModalSignUp extends Component {
             <div className="modal__content_form form">
               <Formsy.Form onValidSubmit={this.submit}>
                 <ModalSignUpInput
-                  className="modal__content_form__input"
+                  className="form__input"
                   name="email"
                   validations="isEmail"
                   type="email"
@@ -44,7 +44,7 @@ export default class ModalSignUp extends Component {
                   required
                 />
                 <ModalSignUpInput
-                  className="modal__content_form__input"
+                  className="form__input"
                   type="password"
                   name="password"
                   placeholder="Password"

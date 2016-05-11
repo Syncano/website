@@ -17,7 +17,7 @@ export default (ComposedComponent) => (
     getChildContext = () => {
       const childContext = {...this.state, ...this.getModalMethods()};
 
-      return {modals: childContext};
+      return { modals: childContext };
     };
 
     closeAll = () => {
@@ -31,15 +31,16 @@ export default (ComposedComponent) => (
     };
 
     closeModal = (modalName) => {
-      const newState = _.merge({}, this.state[modalName], {isOpen: false});
+      const newState = _.merge({}, this.state[modalName], { isOpen: false });
 
-      this.setState({[modalName]: newState});
+      this.setState({ [modalName]: newState });
     };
 
     openModal = (modalName) => {
-      const newState = _.merge({}, this.state[modalName], {isOpen: true});
+      const newState = _.merge({}, this.state[modalName], { isOpen: true });
 
-      this.setState({[modalName]: newState});
+      this.closeAll();
+      this.setState({ [modalName]: newState });
     };
 
     getInitialModalsState = () => {

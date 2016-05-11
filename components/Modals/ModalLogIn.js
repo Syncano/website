@@ -10,16 +10,16 @@ const ModalLogIn = (props, { modals }) => {
           <p>Syncano is a lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum required libero
           cursus.</p>
 
-          <div className="modal__content_form">
+          <div className="modal__content_form form">
             <form>
               <input
-                className="modal__content_form__input"
+                className="form__input"
                 type="email"
                 placeholder="E-mail address"
                 required
               />
               <input
-                className="modal__content_form__input"
+                className="form__input"
                 type="password"
                 placeholder="Password"
                 required
