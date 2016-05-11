@@ -16,7 +16,7 @@ import {
 } from '../components';
 
 export default () => {
-  return(
+  return (
     <DocumentTitle title="Syncano">
       <div>
         <Hero

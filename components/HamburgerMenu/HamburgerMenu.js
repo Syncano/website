@@ -1,7 +1,7 @@
 import React from 'react';
 import { HamburgerMenuLink } from '../HamburgerMenu';
 
-export default () => {
+const HamburgerMenu = (props, { modals }) => {
   return (
     <nav className="hamburger-menu">
       <div className="inner">
@@ -44,22 +44,20 @@ export default () => {
         <div className="hamburger-menu__buttons">
           <ul>
             <li>
-              <HamburgerMenuLink
-                to="/blog/"
+              <span
                 className="button button--large"
-                activeClassName="is-active"
+                onClick={modals.logIn.open}
               >
                 Log In
-              </HamburgerMenuLink>
+              </span>
             </li>
             <li>
-              <HamburgerMenuLink
-                to="/blog/"
+              <span
                 className="button button--large button--featured"
-                activeClassName="is-active"
+                onClick={modals.signUp.open}
               >
                 Sign Up For Free
-              </HamburgerMenuLink>
+              </span>
             </li>
           </ul>
         </div>
@@ -67,3 +65,9 @@ export default () => {
     </nav>
   );
 };
+
+HamburgerMenu.contextTypes = {
+  modals: React.PropTypes.object
+};
+
+export default HamburgerMenu;

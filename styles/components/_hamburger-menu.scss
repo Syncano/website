@@ -15,8 +15,10 @@
     display: block;
   }
 
-  a {
+  a,
+  .button {
     color: #fff;
+    cursor: pointer;
   }
 
   .hamburger-menu__menu li {
@@ -35,6 +37,7 @@
 
       &.button--featured {
         border-color: $color-main-yellow;
+        color: $color-text-headline;
       }
     }
 

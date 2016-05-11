@@ -12,8 +12,8 @@ body {
   min-width: 320px;
   line-height: 1;
 
-  &.has-hamburger-menu-visible {
-    max-height: 100vh;
+  &.has-hamburger-menu-visible,
+  &.has-modal-open {
     overflow: hidden;
   }
 
@@ -22,23 +22,17 @@ body {
   }
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-weight: normal;
   line-height: 1;
   margin: 0;
 }
 
-ul, ol {
-  padding: 0;
-  list-style: none;
-}
-
-ul, ol {
-  padding: 0;
-  list-style: none;
-}
-
-ul, ol {
+ul,
+ol {
   padding: 0;
   list-style: none;
 }
@@ -69,9 +63,14 @@ p a {
   }
 }
 
-button, input, select {
+button,
+input,
+select,
+textarea {
   background: none;
   border: none;
   border-radius: 0;
   padding: 0;
+  max-width: 100%;
+  resize: none;
 }

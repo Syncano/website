@@ -1,16 +1,19 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { CTASection, Footer, PageHeader } from '../../components';
+import { ContactForm, CTASection, Footer, OfficeAddresses, PageHeader } from '../../components';
 
 export default () => {
   return (
-    <DocumentTitle title="Contact">
+    <DocumentTitle title="Contact us">
       <div>
         <PageHeader
-          headline="Contact"
-          textlineHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          headline="Contact us"
+          textlineHTML={`Use the form below or drop us an email at <a href="mailto:build@syncano.io" target="_blank">
+          build@syncano.io</a>`}
         />
+        <ContactForm />
+        <OfficeAddresses />
         <CTASection>
           <h2>Rethink how you build apps. Go serverless!</h2>
           <Link

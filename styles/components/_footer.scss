@@ -16,7 +16,7 @@
   }
 
   p {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   a {
@@ -38,7 +38,11 @@
 
     .footer__logo__copyright {
       display: none;
-      margin-top: 12px
+      margin-top: 12px;
+
+      p {
+        font-size: 12px;
+      }
     }
   }
 
