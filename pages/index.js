@@ -20,7 +20,7 @@ export default () => {
     <DocumentTitle title="Syncano">
       <div>
         <Hero
-          headline="Build powerful apps in half the time"
+          headline={<span>Build powerful apps<br />in half the time</span>}
           textline="Automate the backend. Set up your own serverless architecture in minutes."
           image={
             <img

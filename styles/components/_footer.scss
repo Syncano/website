@@ -77,14 +77,19 @@
     li {
       display: inline-block;
       margin-right: 20px;
-      transition: $transition-default;
+      
 
       &:last-child {
         margin-right: 0;
       }
 
-      &:hover {
-        opacity: .8;
+      a {
+        display: block;
+        transition: $transition-default;
+
+        &:hover {
+          opacity: .5;
+        }
       }
     }
   }
