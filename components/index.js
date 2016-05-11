@@ -1,4 +1,5 @@
 import Analytics from './Analytics';
+import BlockquoteSection from './BlockquoteSection';
 import CodePreview from './CodePreview';
 import ContactForm from './ContactForm';
 import CTASection from './CTASection';
@@ -30,6 +31,7 @@ import TwitterSlider from './TwitterSlider';
 
 export default {
   Analytics,
+  BlockquoteSection,
   CodePreview,
   ContactForm,
   CTASection,
