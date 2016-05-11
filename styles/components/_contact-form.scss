@@ -13,4 +13,19 @@
       }
     }
   }
+
+  @include medium {
+    background: #fff url("../components/ContactForm/images/background.svg") no-repeat left 50% bottom 75px;
+    min-height: (457px + 75);
+
+    .contact-form__box {
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 70px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, .27);
+      background: #fff;
+      transform: translateY(100px);
+    }
+  }
 }
