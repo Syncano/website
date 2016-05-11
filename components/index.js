@@ -1,5 +1,6 @@
 import Analytics from './Analytics';
 import CodePreview from './CodePreview';
+import ContactForm from './ContactForm';
 import CTASection from './CTASection';
 import FAQ from './FAQ';
 import FeaturesColumns from './FeaturesColumns';
@@ -8,6 +9,7 @@ import HamburgerMenu from './HamburgerMenu';
 import Hero from './Hero';
 import ListColumns from './ListColumns';
 import { Modals, ModalsHOC } from './Modals';
+import OfficeAddresses from './OfficeAddresses';
 import PageHeader from './PageHeader';
 import Platforms from './Platforms';
 import PlatformsSection from './PlatformsSection';
@@ -29,6 +31,7 @@ import TwitterSlider from './TwitterSlider';
 export default {
   Analytics,
   CodePreview,
+  ContactForm,
   CTASection,
   FAQ,
   Footer,
@@ -38,6 +41,7 @@ export default {
   ListColumns,
   Modals,
   ModalsHOC,
+  OfficeAddresses,
   PageHeader,
   Platforms,
   PlatformsSection,

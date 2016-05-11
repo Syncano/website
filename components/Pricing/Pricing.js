@@ -62,4 +62,4 @@ export default () => {
       </div>
     </div>
   );
-}
+};
