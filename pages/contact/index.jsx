@@ -1,7 +1,7 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { CTASection, Footer, OfficeAddresses, PageHeader } from '../../components';
+import { ContactForm, CTASection, Footer, OfficeAddresses, PageHeader } from '../../components';
 
 export default () => {
   return (
@@ -11,6 +11,7 @@ export default () => {
           headline="Contact"
           textlineHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         />
+        <ContactForm />
         <OfficeAddresses />
         <CTASection>
           <h2>Rethink how you build apps. Go serverless!</h2>

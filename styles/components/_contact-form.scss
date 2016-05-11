@@ -1,0 +1,16 @@
+.contact-form {
+  padding-bottom: 80px;
+  margin-top: -30px;
+
+  .contact-form__box .contact-form__box__message {
+    text-align: center;
+
+    p {
+      line-height: 1.75;
+
+      strong {
+        color: $color-text-headline;
+      }
+    }
+  }
+}
