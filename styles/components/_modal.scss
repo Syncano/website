@@ -153,6 +153,11 @@
           text-align: right;
         }
 
+        &:only-child {
+          flex-basis: 100%;
+          text-align: center;
+        }
+
         span {
           color: #fff;
           cursor: pointer;
