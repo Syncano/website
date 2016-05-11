@@ -7,17 +7,16 @@ import config from '../../config/';
 
 export default class ModalSignUp extends Component {
   submit = (model) => {
-    const { Account } = Syncano({ accountKey: '994a2d35a1459d248aa7982563adeeb4890cb602'});
+    const { accountKey } = config;
+    const { Account } = Syncano({ accountKey: accountKey });
     const { email, password } = model;
 
     Account.register({ email: email, password: password }).then((data) => {
       const { dashboardUrl } = config;
       const { account_key } = data;
-      
-      setTimeout(() => {
-        const redirectUrl = `${dashboardUrl}?token=${account_key}`;
-        window.location.href = redirectUrl;
-      }, 3000);
+      const redirectUrl = `${dashboardUrl}?token=${account_key}`;
+
+      window.location.href = redirectUrl;
     }).catch((error) => {
       // error message here
     });
