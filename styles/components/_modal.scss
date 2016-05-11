@@ -39,23 +39,6 @@
 
     .modal__content_form {
       margin-top: 40px;
-
-      .modal__content_form__input {
-        margin-bottom: 10px;
-        width: 100%;
-        border: solid 1px #DBDEE3;
-        border-radius: 4px;
-        height: 44px;
-        line-height: 44px;
-        padding: 0 20px;
-        color: transparentize(#4D5967, .5);
-      }
-
-      .button {
-        width: 100%;
-        margin-top: 20px;
-        cursor: pointer;
-      }
     }
   }
 
@@ -148,18 +131,6 @@
       .inner {
         padding-left: 70px;
         padding-right: 70px;
-      }
-
-      .modal__content_form {
-        .modal__content_form__input {
-          height: 54px;
-          line-height: 54px;
-          margin-bottom: 20px;
-        }
-        
-        .button {
-          margin-top: 0;
-        }
       }
     }
 
