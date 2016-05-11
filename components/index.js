@@ -2,6 +2,7 @@ import Analytics from './Analytics';
 import BlockquoteSection from './BlockquoteSection';
 import CodePreview from './CodePreview';
 import ContactForm from './ContactForm';
+import CounterBoxes from './CounterBoxes';
 import CTASection from './CTASection';
 import FAQ from './FAQ';
 import FeaturesColumns from './FeaturesColumns';
@@ -34,6 +35,7 @@ export default {
   BlockquoteSection,
   CodePreview,
   ContactForm,
+  CounterBoxes,
   CTASection,
   FAQ,
   Footer,
