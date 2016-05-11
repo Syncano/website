@@ -7,9 +7,9 @@ import config from '../../config/';
 
 export default class ModalSignUp extends Component {
   submit = (model) => {
-    const { accountKey } = config;
-    const { Account } = Syncano({ accountKey: accountKey });
+    const { syncanoAPIBaseUrl } = config;
     const { email, password } = model;
+    const { Account } = Syncano({ baseUrl: syncanoAPIBaseUrl });
 
     Account.register({ email: email, password: password }).then((data) => {
       const { dashboardUrl } = config;
