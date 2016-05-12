@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default ({ className, alt, indicator = 'loading' }) => {
+export default ({ className, alt, indicator }) => {
   return (
     <img
       className={className}

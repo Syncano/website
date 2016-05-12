@@ -9,7 +9,15 @@ export default class StatusPageHeader extends Component {
     super(props);
 
     this.state = {
-      status: {}
+      status: {
+        page: {
+          url: 'http://status.syncano.com/'
+        },
+        status: {
+          description: 'Fetching current status...',
+          indicator: 'loading'
+        }
+      }
     };
   };
 
