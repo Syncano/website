@@ -9,10 +9,7 @@ export default class StatusPageHeader extends Component {
     super(props);
 
     this.state = {
-      status: {
-        page: {},
-        status: {}
-      }
+      status: {}
     };
   };
 

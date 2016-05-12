@@ -1,11 +1,11 @@
 import React from 'react';
 
-export default ({ className, indicator = 'loading', alt }) => {
+export default ({ className, alt, indicator = 'loading' }) => {
   return (
     <img
       className={className}
       src={require(`./images/status-${indicator}.svg`)}
-      alt={`status ${alt}`}
+      alt={alt}
     />
   );
 };
