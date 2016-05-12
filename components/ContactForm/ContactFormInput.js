@@ -8,7 +8,7 @@ class ContactFormInput extends Component {
 
     return classNames({
       'form__input': true,
-      'is-invalid': (showError()),
+      'is-invalid': (showError())
     });
   };
 

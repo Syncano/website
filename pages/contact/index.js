@@ -9,8 +9,7 @@ export default () => {
       <div>
         <PageHeader
           headline="Contact us"
-          textlineHTML={`Use the form below or drop us an email at <a href="mailto:build@syncano.io" target="_blank">
-          build@syncano.io</a>`}
+          textline={<span>Use the form below or drop us an email at <a href="mailto:build@syncano.io" target="_blank">build@syncano.io</a></span>}
         />
         <ContactForm />
         <OfficeAddresses />

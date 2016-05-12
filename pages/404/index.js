@@ -5,12 +5,20 @@ import { CTASection, Footer, PageHeader } from '../../components';
 
 export default () => {
   return (
-    <DocumentTitle title="Features">
+    <DocumentTitle title="404">
       <div>
         <PageHeader
-          headline="Features"
-          textlineHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        />
+          variant="large-headline"
+          headline="404"
+          textline="The page your were looking for doesn't exist"
+        >
+          <Link
+            to="/"
+            className="button button--large"
+          >
+            Go Back
+          </Link>
+        </PageHeader>
         <CTASection>
           <h2>Rethink how you build apps. Go serverless!</h2>
           <Link
