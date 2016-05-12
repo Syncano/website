@@ -10,7 +10,7 @@ export default () => {
         <PageHeader
           variant="large-headline"
           headline="404"
-          textlineHTML="The page your were looking for doesn't exist"
+          textline="The page your were looking for doesn't exist"
         >
           <Link
             to="/"
