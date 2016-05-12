@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import PricingPlan from './PricingPlan';
-import config from '../../config/';
 import axios from 'axios';
 import _ from 'lodash';
+import PricingPlan from './PricingPlan';
+import config from '../../config/';
 
 export default class Pricing extends Component {
   constructor(props) {
@@ -107,6 +107,12 @@ export default class Pricing extends Component {
             />
           </div>
           <footer className="pricing__footer">
+            <Link
+              to="/about/"
+              className="button button--large button--featured"
+            >
+              Get Started for Free
+            </Link>
             <p>
               Premium support? Custom SLA? We’ve got you covered. <Link to="/contact/">Contact us</Link> and we’ll 
               configure a plan that’s best for you.

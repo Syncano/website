@@ -16,7 +16,7 @@ export default class PricingPlan extends Component {
     }
   };
 
-  handleClick() {
+  handleClick = () => {
     const { isExpanded } = this.state;
 
     this.setState({ isExpanded: !isExpanded });
@@ -31,12 +31,12 @@ export default class PricingPlan extends Component {
         <div>
           {this.props.price}
         </div>
-      )
+      );
     }
     
     return (
       <div>
-        <span><span className="pricing-plan__box__price">&#36;</span>{value}</span>
+        <span className="pricing-plan__box__price">&#36;</span>{value}
       </div>
     );
   };
@@ -89,11 +89,13 @@ export default class PricingPlan extends Component {
       apiCalls: 'API calls',
       scripts: 'Script seconds'
     };
+    const count = options[field].length;
 
     return (
       <select
         key={field}
         onChange={(event) => this.handleSelectChange(event, field)}
+        disabled={count < 2}
       >
         {_.map(options[field], (option) => {
           return (
