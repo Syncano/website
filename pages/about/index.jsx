@@ -9,7 +9,7 @@ export default () => {
       <div>
         <PageHeader
           headline="About"
-          textlineHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          textline="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         />
         <CounterBoxes />
         <BlockquoteSection>

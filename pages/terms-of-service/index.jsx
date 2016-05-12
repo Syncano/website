@@ -9,7 +9,7 @@ export default () => {
       <div>
         <PageHeader
           headline="Terms and Legal"
-          textlineHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          textline="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         />
         <TermsAndLegal>
           <TermsAndLegal.Item title="Terms of Service">

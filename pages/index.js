@@ -9,7 +9,6 @@ import {
   Hero,
   SlackSlider,
   PlatformsSection,
-  Testimonials,
   TextWithBackground,
   TextWithBottomImage,
   TextWithImage,
@@ -179,7 +178,6 @@ export default () => {
             More About Scripts
           </Link>
         </TextWithImage>
-        <Testimonials />
         <TextWithBackground
           theme="image1"
           headline="We’ll support you every step of the way"

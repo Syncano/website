@@ -21,6 +21,7 @@ import SlackSlider from './SlackSlider';
 import SliderWrapper from './SliderWrapper';
 import SocialProfiles from './SocialProfiles';
 import StatusImage from './StatusImage';
+import StatusPageHeader from './StatusPageHeader';
 import TermsAndLegal from './TermsAndLegal';
 import Testimonials from './Testimonials';
 import TextPanels from './TextPanels';
@@ -55,6 +56,7 @@ export default {
   SliderWrapper,
   SocialProfiles,
   StatusImage,
+  StatusPageHeader,
   TermsAndLegal,
   Testimonials,
   TextPanels,

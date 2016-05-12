@@ -34,6 +34,11 @@
         border-radius: 50%;
         margin-right: 28px;
         position: relative;
+        transition: $transition-default;
+
+        &:hover {
+          opacity: .8;
+        }
 
         &:last-child {
           margin-right: 0;
