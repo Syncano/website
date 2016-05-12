@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="375px" height="301px" viewBox="0 0 375 301" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 10</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="233.270408 105.5 167.429592 105.5 134.392857 162.5 167.429592 219.5 233.270408 219.5 266.307143 162.5"></polygon>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="131.914286" height="114" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-10" transform="translate(-2.000000, 2.000000)">
+            <path d="M164.5,181.5 L23.5,110.5" id="Line" stroke="#373D44" stroke-linecap="square" stroke-dasharray="4"></path>
+            <path d="M171.5,131.5 L136.5,25.5" id="Line" stroke="#373D44" stroke-linecap="square" stroke-dasharray="4"></path>
+            <path d="M220.5,140.5 L293.5,25.5" id="Line" stroke="#373D44" stroke-linecap="square" stroke-dasharray="4"></path>
+            <path d="M232.5,174.5 L371.5,133.5" id="Line" stroke="#373D44" stroke-linecap="square" stroke-dasharray="4"></path>
+            <path d="M361.5,137.5 L288.5,42.5" id="Line" stroke="#373D44" stroke-linecap="square" stroke-dasharray="4" opacity="0.3"></path>
+            <path d="M271.5,35.5 L130.5,29.5" id="Line" stroke="#373D44" stroke-linecap="square" stroke-dasharray="4" opacity="0.3"></path>
+            <path d="M134.5,29.5 L32.5,119.5" id="Line" stroke="#373D44" stroke-linecap="square" stroke-dasharray="4" opacity="0.3"></path>
+            <ellipse id="Oval-51" fill="#B8C0C9" opacity="0.2" cx="196.25" cy="286.5" rx="97.875" ry="12.5"></ellipse>
+            <polygon id="Polygon-1" stroke="#373D44" stroke-width="4" stroke-linejoin="round" fill="#F7F8F9" points="137 6 157.78461 18 157.78461 42 137 54 116.21539 42 116.21539 18"></polygon>
+            <polygon id="Polygon-1" stroke="#373D44" stroke-width="4" stroke-linejoin="round" fill="#FFCC01" points="280.5 0 312.975953 18.75 312.975953 56.25 280.5 75 248.024047 56.25 248.024047 18.75"></polygon>
+            <polygon id="Polygon-1" stroke="#373D44" stroke-width="4" stroke-linejoin="round" fill="#903EB9" points="36.5 79 68.1099272 97.25 68.1099272 133.75 36.5 152 4.89007276 133.75 4.89007276 97.25"></polygon>
+            <polygon id="Polygon-1" stroke="#373D44" stroke-width="4" stroke-linejoin="round" fill="#F7F8F9" points="363.5 126 374.325318 132.25 374.325318 144.75 363.5 151 352.674682 144.75 352.674682 132.25"></polygon>
+            <use id="Page-1" stroke="#373D44" mask="url(#mask-2)" stroke-width="8" fill="#0070D3" xlink:href="#path-1"></use>
+            <path d="M200.984872,197.721292 C192.925692,197.721292 185.456207,195.559072 178.576419,191.431199 L184.080249,181.799495 C189.190949,185.337672 194.69478,187.303326 201.181438,187.303326 C208.650923,187.303326 213.171926,183.961715 213.171926,178.654449 C213.171926,173.740315 210.420011,170.988399 197.839826,168.039918 C183.293988,164.501742 175.038242,160.177303 175.038242,147.597118 C175.038242,135.803195 184.866511,127.744014 198.429522,127.744014 C206.685269,127.744014 213.565057,129.906234 219.462019,133.640976 L213.761623,143.27268 C208.650923,139.931068 203.343657,138.16198 198.036392,138.16198 C190.960038,138.16198 186.832165,141.700157 186.832165,146.417726 C186.832165,151.724991 189.977211,154.083776 202.950526,157.228822 C217.299799,160.766999 224.965849,165.877699 224.965849,177.278492 C225.35898,190.055242 215.334146,197.721292 200.984872,197.721292 L200.984872,197.721292 Z" id="Path" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

@@ -5,13 +5,21 @@
   position: relative;
 
   .modal__close {
+    display: block;
     position: absolute;
     top: 22px;
     right: 10px;
     cursor: pointer;
+    padding: 10px;
+    margin: -10px;
+    transition: transition-default;
 
     .small {
       display: none;
+    }
+
+    &:hover {
+      opacity: .8;
     }
   }
 

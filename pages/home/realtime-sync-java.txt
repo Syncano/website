@@ -8,3 +8,4 @@ public class MyApplication extends Application
      .androidContext(context).setAsGlobalInstance(true).build();
   }
 }
+

@@ -18,7 +18,9 @@
   }
 
   @include medium {
-    margin-bottom: 50px;
+    margin-bottom: 0;
+    flex: 0 0 50%;
+    padding: 25px;
 
     .faq-item__title,
     .faq-item__content p {

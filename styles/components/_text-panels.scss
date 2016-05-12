@@ -60,17 +60,9 @@
       color: #fff;
     }
 
-    &.text-panels__panel--purple {
-      background: $color-main-purple;
-    }
-
-    &.text-panels__panel--azure {
-      background: $color-main-azure;
-    }
-
-    &.text-panels__panel--silver {
-      background: $color-main-silver;
-    }
+    &.text-panels__panel--azure { background: $color-main-azure; }
+    &.text-panels__panel--purple { background: $color-main-purple; }
+    &.text-panels__panel--silver { background: $color-main-silver; }
   }
 
   @include medium {
