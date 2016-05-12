@@ -1,8 +1,6 @@
 import React from 'react';
 
-export default ({ className }) => {
-  const status = 'ok';
-
+export default ({ className, status = 'ok' }) => {
   if (status === 'ok' || status === 'warning' || status === 'error') {
     return (
       <img
