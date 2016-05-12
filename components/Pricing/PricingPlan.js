@@ -1,30 +1,45 @@
-import React from 'react';
+import React, { Component } from 'react';
 import classNames from 'classnames';
 import _ from 'lodash';
 import { Link } from 'react-router';
 
-export default React.createClass({
-  getInitialState() {
-    return {
-      isExpanded: false
+export default class PricingPlan extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isExpanded: false,
+      price: {
+        apiCalls: props.apiCallsOptions[0].price,
+        scripts: props.scriptsOptions[0].price
+      }
     }
-  },
+  };
 
   handleClick() {
     const { isExpanded } = this.state;
 
     this.setState({ isExpanded: !isExpanded });
-  },
+  };
 
   renderPrice() {
-    const { price } = this.props;
-
+    const { price } = this.state;
+    const value = price.apiCalls + price.scripts;
+    
+    if (this.props.price) {
+      return (
+        <div>
+          {this.props.price}
+        </div>
+      )
+    }
+    
     return (
       <div>
-        {_.isNumber(price) ? <span><span className="pricing-plan__box__price">&#36;</span>{price}</span> : price}
+        <span><span className="pricing-plan__box__price">&#36;</span>{value}</span>
       </div>
     );
-  },
+  };
 
   renderFeatures() {
     const { features } = this.props;
@@ -38,7 +53,7 @@ export default React.createClass({
         ))}
       </ul>
     );
-  },
+  };
 
   renderOverageRatesLink() {
     const { overageRatesLinkTo } = this.props;
@@ -55,7 +70,64 @@ export default React.createClass({
     }
 
     return null;
-  },
+  };
+
+  handleSelectChange(event, field) {
+    const { price } = this.state;
+    const value = parseInt(event.target.value);
+
+    this.setState({ price: _.merge({}, price, {[field]: value})})
+  };
+
+  renderSelect(field) {
+    const { apiCallsOptions, scriptsOptions } = this.props;
+    const options = {
+      apiCalls: apiCallsOptions,
+      scripts: scriptsOptions
+    };
+    const label = {
+      apiCalls: 'API calls',
+      scripts: 'Script seconds'
+    };
+
+    return (
+      <select
+        key={field}
+        onChange={(event) => this.handleSelectChange(event, field)}
+      >
+        {_.map(options[field], (option) => {
+          return (
+            <option key={option.price} value={option.price}>
+              {option.included} {label[field]} {option.price > 0 && `- $${option.price}`}
+            </option>
+          )
+        })}
+      </select>
+    );
+  };
+
+  renderButton() {
+    const { buttonText, isFeatured } = this.props;
+    const className = classNames({
+      'button': true,
+      'button--featured': (isFeatured == true),
+      'button--large': true,
+      'button--wide': true
+    });
+
+    if (buttonText) {
+      return (
+        <Link
+          to="/about/"
+          className={className}
+        >
+          {buttonText}
+        </Link>
+      );
+    }
+
+    return null;
+  };
 
   getPricingPlanClassName() {
     const { isExpanded } = this.state;
@@ -66,21 +138,10 @@ export default React.createClass({
       'pricing-plan--expanded': (isExpanded == true),
       'pricing-plan--featured': (isFeatured == true)
     });
-  },
-
-  getPricingPlanButtonClassName() {
-    const { isFeatured } = this.props;
-
-    return classNames({
-      'button': true,
-      'button--featured': (isFeatured == true),
-      'button--large': true,
-      'button--wide': true
-    });
-  },
+  };
 
   render() {
-    const { buttonText, period, title } = this.props;
+    const { period, title } = this.props;
 
     return (
       <div className={this.getPricingPlanClassName()}>
@@ -96,23 +157,10 @@ export default React.createClass({
           </div>
           <div className="pricing-plan__box__options">
             <h4>Includes:</h4>
-            <select>
-              <option>
-                100,000 API calls / month - $0
-              </option>
-            </select>
-            <select>
-              <option>
-                10,000 Script runs / month - $0
-              </option>
-            </select>
+            {this.renderSelect('apiCalls')}
+            {this.renderSelect('scripts')}
           </div>
-          <Link
-            to="/about/"
-            className={this.getPricingPlanButtonClassName()}
-          >
-            {buttonText}
-          </Link>
+          {this.renderButton()}
           <div className="pricing-plan__box__more">
             <span
               className="pricing-plan__box__more__link"
@@ -129,4 +177,4 @@ export default React.createClass({
       </div>
     );
   }
-});
+}
