@@ -7,10 +7,12 @@ export default () => {
     <div className="faq">
       <div className="inner">
         <h2>
-          <acronym title="Frequently Asked Questions">FAQ</acronym>
+          <acronym title="Frequently Asked Questions">
+            FAQ
+          </acronym>
         </h2>
-        <div className="faq__items">
-          <div className="faq__items__column">
+        <div className="faq__items-container">
+          <div className="faq__items">
             <FAQItem
               question="What happens if I exceed my usage?"
               answer={
@@ -26,8 +28,6 @@ export default () => {
                 Scripts is run. These are all explained in detail here.</p>
               }
             />
-          </div>
-          <div className="faq__items__column">
             <FAQItem
               question="When will I be billed?"
               answer={

@@ -20,6 +20,7 @@
       height: (105px / 1.6);
       border: 2px solid transparentize(#B8C0C9, .8);
       border-radius: 50%;
+      transition: $transition-default;
 
       &.javascript img,
       &.python img,
@@ -36,6 +37,10 @@
 
       &.arduino img {
         height: (31px / 1.5);
+      }
+
+      &:hover {
+        opacity: .8;
       }
     }
   }

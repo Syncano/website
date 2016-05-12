@@ -1,7 +1,7 @@
 .text-with-background {
-  text-align: center;
   padding-top: 80px;
   padding-bottom: 80px;
+  text-align: center;
 
   .text-with-background__text {
     margin-top: 30px;
@@ -26,6 +26,8 @@
   }
 
   @include small {
+    text-align: left;
+
     &.text-with-background--image1 {
       background-image: url("../components/TextWithBackground/images/well-support-you-every-step-of-the-way.jpg");
       background-repeat: no-repeat;
@@ -39,8 +41,6 @@
   }
 
   @include medium {
-    text-align: left;
-
     .inner {
       display: flex;
       align-items: center;

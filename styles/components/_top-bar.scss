@@ -21,14 +21,20 @@
 
   .top-bar__logo {
     float: left;
-    transition: $transition-default;
 
-    .white {
-      display: none;
-    }
+    a {
+      display: block;
+      transition: $transition-default;
+      padding: 10px;
+      margin: -10px;
 
-    &:hover {
-      opacity: .8;
+      .white {
+        display: none;
+      }
+
+      &:hover {
+        opacity: .8;
+      }
     }
   }
 
@@ -37,6 +43,8 @@
 
     .top-bar__nav__hamburger {
       cursor: pointer;
+      padding: 10px;
+      margin: -10px;
 
       .close {
         display: none;
@@ -111,7 +119,6 @@
   }
 
   @include medium {
-    background: none;
     box-shadow: none;
 
     > .inner {

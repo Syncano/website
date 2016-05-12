@@ -11,12 +11,12 @@
     line-height: 1.5;
   }
 
-  .faq__items {
+  .faq__items-container {
     margin-top: 25px;
+  }
 
-    .faq__items__column:last-child .faq-item:last-child {
-      margin-bottom: 0;
-    }
+  .faq__items .faq__items__column:last-child .faq-item:last-child {
+    margin-bottom: 0;
   }
 
   .faq__footer {
@@ -28,25 +28,17 @@
       font-size: 36px;
     }
 
+    .faq__items-container {
+      margin: -25px;
+      margin-top: (40px - 25px);
+    }
+
     .faq__items {
       display: flex;
-      margin-top: 40px;
+      flex-wrap: wrap;
       max-width: 1030px;
       margin-left: auto;
       margin-right: auto;
-
-      .faq__items__column {
-        flex: 1;
-        margin-right: 50px;
-
-        &:last-child {
-          margin-right: 0;
-        }
-
-        .faq-item:last-child {
-          margin-bottom: 0;
-        }
-      }
     }
 
     .faq__footer {

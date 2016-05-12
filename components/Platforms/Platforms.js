@@ -1,67 +1,60 @@
 import React from 'react';
+import PlatformsItem from './PlatformsItem';
 
 export default () => {
   return (
     <div className="platforms">
       <div className="platforms__row">
-        <div className="platforms__row__item javascript">
-          <img
-            src={require('./images/javascript.svg')}
-            alt="JavaScript"
-            title="JavaScript"
-          />
-        </div>
-        <div className="platforms__row__item python">
-          <img
-            src={require('./images/python.svg')}
-            alt="Python"
-            title="Python"
-          />
-        </div>
-        <div className="platforms__row__item android">
-          <img
-            src={require('./images/android.svg')}
-            alt="Android"
-            title="Android"
-          />
-        </div>
-        <div className="platforms__row__item swift">
-          <img
-            src={require('./images/swift.svg')}
-            alt="Swift"
-            title="Swift"
-          />
-        </div>
+        <PlatformsItem
+          className="javascript"
+          imgSrc={require('./images/javascript.svg')}
+          title="JavaScript"
+          href="https://github.com/Syncano/syncano-js/"
+        />
+        <PlatformsItem
+          className="python"
+          imgSrc={require('./images/python.svg')}
+          title="Python"
+          href="https://github.com/Syncano/syncano-python/"
+        />
+        <PlatformsItem
+          className="android"
+          imgSrc={require('./images/android.svg')}
+          title="Android"
+          href="https://github.com/Syncano/syncano-android/"
+        />
+        <PlatformsItem
+          className="swift"
+          imgSrc={require('./images/swift.svg')}
+          title="Swift"
+          href="https://github.com/Syncano/syncano-ios/"
+        />
       </div>
       <div className="platforms__row">
-        <div className="platforms__row__item angularjs">
-          <img
-            src={require('./images/angularjs.svg')}
-            alt="AngularJS"
-            title="AngularJS"
-          />
-        </div>
-        <div className="platforms__row__item ruby">
-          <img
-            src={require('./images/ruby.svg')}
-            alt="Ruby"
-            title="Ruby"
-          />
-        </div>
-        <div className="platforms__row__item emberjs">
-          <img
-            src={require('./images/emberjs.svg')}
-            alt="Ember.js"
-            title="Ember.js"
-          />
-        </div>
-        <div className="platforms__row__item arduino">
-          <img
-            src={require('./images/arduino.svg')}
-            alt="Arduino"
-            title="Arduino"
-          />
-        </div>
+        <PlatformsItem
+          className="angularjs"
+          imgSrc={require('./images/angularjs.svg')}
+          title="AngularJS"
+          href="https://github.com/Syncano/ng-syncano/"
+        />
+        <PlatformsItem
+          className="ruby"
+          imgSrc={require('./images/ruby.svg')}
+          title="Ruby"
+          href="https://github.com/Syncano/syncano-ruby/"
+        />
+        <PlatformsItem
+          className="emberjs"
+          imgSrc={require('./images/emberjs.svg')}
+          title="Ember.js"
+          href="https://github.com/Syncano/ember-syncano/"
+        />
+        <PlatformsItem
+          className="arduino"
+          imgSrc={require('./images/arduino.svg')}
+          title="Arduino"
+          href="https://github.com/Syncano/syncano-arduino/"
+        />
       </div>
     </div>
   );

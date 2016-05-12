@@ -17,6 +17,7 @@
       line-height: 1.35;
       max-width: 255px;
       color: $color-text-headline;
+      white-space: nowrap;
     }
 
     .hero__text__textline {
@@ -49,7 +50,7 @@
   }
 
   @include small {
-    padding-top: 80px;
+    padding-top: 100px;
 
     .hero__text {
       .hero__text__headline {
@@ -58,6 +59,10 @@
 
       .hero__text__textline {
         max-width: 350px;
+      }
+
+      .button {
+        margin-top: 30px;
       }
     }
 
@@ -72,7 +77,7 @@
 
     .hero__text {
       .hero__text__headline {
-        font-size: 42px;
+        font-size: 50px;
       }
 
       .hero__text__textline {
@@ -112,10 +117,6 @@
     .hero__text {
       margin-right: 40px;
 
-      .hero__text__headline {
-        font-size: 56px;
-      }
-
       .hero__text__textline {
         font-size: 24px;
       }
@@ -134,6 +135,10 @@
   @include very-large {
     .hero__text {
       margin-right: 80px;
+
+      .hero__text__headline {
+        font-size: 56px;
+      }
     }
   }
 }
