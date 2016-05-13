@@ -18,7 +18,7 @@ export default () => {
       <div>
         <PageHeader
           headline="Build apps without managing a server"
-          textlineHTML="30 day money back guarantee. No contracts. Upgrade, downgrade or cancel at any time."
+          textline="30 day money back guarantee. No contracts. Upgrade, downgrade or cancel at any time."
         />
         <Pricing />
         <TextWithImage

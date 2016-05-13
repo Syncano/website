@@ -9,24 +9,22 @@ export default () => {
       <div>
         <PageHeader
           headline="About"
-          textlineHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          textline="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         />
         <CounterBoxes />
         <BlockquoteSection>
           <p>„What used to take 5 weeks now takes just 1 week with Syncano. You let developers be developers and not get
           stuck being middleware or database engineers.”</p>
         </BlockquoteSection>
-        <CTASection>
-          <h2>Rethink how you build apps. Go serverless!</h2>
+        <CTASection theme="gray">
+          <h2>Join Us</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           <Link
-            to="/about/"
+            to="/jobs/"
             className="button button--large button--featured"
           >
-            Get Started for Free
+            View Jobs at Syncano
           </Link>
-          <p className="cta-section__button-description">
-            (6 months free &bull; No credit card required)
-          </p>
         </CTASection>
         <Footer />
       </div>

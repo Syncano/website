@@ -1,7 +1,7 @@
 import React from 'react';
-import classNames  from 'classnames';
+import classNames from 'classnames';
 
-export default ({ variant, overHeadlineContent, headline, textlineHTML, children }) => {
+export default ({ variant, headline, textline, children }) => {
   const pageHeaderClassName = classNames({
     'page-header': true,
     'page-header--large-headline': (variant == 'large-headline')
@@ -10,9 +10,8 @@ export default ({ variant, overHeadlineContent, headline, textlineHTML, children
   return (
     <header className={pageHeaderClassName}>
       <div className="inner">
-      {overHeadlineContent}
         <h2>{headline}</h2>
-        <p dangerouslySetInnerHTML={{__html: textlineHTML}}></p>
+        <p>{textline}</p>
         {children}
       </div>
     </header>

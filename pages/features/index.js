@@ -9,7 +9,7 @@ export default () => {
       <div>
         <PageHeader
           headline="Features"
-          textlineHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          textline="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         />
         <CTASection>
           <h2>Rethink how you build apps. Go serverless!</h2>

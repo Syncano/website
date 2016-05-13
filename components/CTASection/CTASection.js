@@ -1,11 +1,18 @@
 import React from 'react';
+import classNames  from 'classnames';
 
-export default ({ children }) => {
+export default ({ variant, theme, children }) => {
+  const CTASectionClassName = classNames({
+    'cta-section': true,
+    'cta-section--small-button-only': (variant == 'small-button-only'),
+    'cta-section--gray': (theme == 'gray')
+  });
+
   return (
-    <div className="cta-section">
+    <div className={CTASectionClassName}>
       <div className="inner">
         {children}
       </div>
     </div>
   );
-}
+};
