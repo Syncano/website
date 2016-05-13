@@ -22,7 +22,7 @@ export default () => {
             Create Support Ticket
           </Link>
           <p className="page-header__more">
-            or <a href="https://syncano-community.slack.com/" target="_blank">chat with us on Slack</a>
+            or <a href="http://syncano-community.github.io/slack-invite/" target="_blank">chat with us on Slack</a>
           </p>
         </StatusPageHeader>
         <TextWithImage
@@ -52,21 +52,22 @@ export default () => {
           >
             <div className="text-panels__panel__list">
               <ul>
-                <li><a href="https://www.syncano.io/blog/queries-with-ember-syncano/">JavaScript</a></li>
-                <li><a href="https://www.syncano.io/blog/queries-with-ember-syncano/">iOS</a></li>
-                <li><a href="https://www.syncano.io/blog/queries-with-ember-syncano/">Android</a></li>
-                <li><a href="https://www.syncano.io/blog/queries-with-ember-syncano/">Python</a></li>
-                <li><a href="https://www.syncano.io/blog/queries-with-ember-syncano/">Ruby</a></li>
-                <li><a href="https://www.syncano.io/blog/queries-with-ember-syncano/">Arduino</a></li>
-                <li><a href="https://www.syncano.io/blog/queries-with-ember-syncano/">Angular</a></li>
+                <li><a href="http://docs.syncano.io/docs/javascript/">JavaScript</a></li>
+                <li><a href="http://docs.syncano.io/docs/ng-syncano/">AngularJS</a></li>
+                <li><a href="http://docs.syncano.io/docs/ember-syncano/">Ember.js</a></li>
+                <li><a href="http://docs.syncano.io/docs/ios/">iOS</a></li>
+                <li><a href="http://docs.syncano.io/docs/android/">Android</a></li>
+                <li><a href="http://docs.syncano.io/docs/python/">Python</a></li>
+                <li><a href="http://docs.syncano.io/docs/ruby/">Ruby</a></li>
+                <li><a href="http://docs.syncano.io/docs/arduino/">Arduino</a></li>
               </ul>
             </div>
-            <Link
-              to="/about/"
+            <a
+              href="http://docs.syncano.io/docs/syncano-libraries/"
               className="button"
             >
               Libraries Overview
-            </Link>
+            </a>
           </TextPanels.Panel>
           <TextPanels.Panel
             theme="azure"
@@ -74,21 +75,19 @@ export default () => {
           >
             <div className="text-panels__panel__list">
               <ul>
-                <li><a href="https://www.syncano.io/blog/queries-with-ember-syncano/">Create iOS chat app</a></li>
-                <li><a href="https://www.syncano.io/blog/queries-with-ember-syncano/">Getting started with React</a></li>
-                <li><a href="https://www.syncano.io/blog/queries-with-ember-syncano/">Intro to Flask</a></li>
-                <li><a href="https://www.syncano.io/blog/queries-with-ember-syncano/">Getting started with Docker</a></li>
-                <li><a href="https://www.syncano.io/blog/queries-with-ember-syncano/">Getting started with Swift</a></li>
-                <li><a href="https://www.syncano.io/blog/queries-with-ember-syncano/">Getting started with Docker</a></li>
-                <li><a href="https://www.syncano.io/blog/queries-with-ember-syncano/">Getting started with Swift</a></li>
+                <li><a href="https://www.syncano.io/blog/create-ios-chat-app-part1/">Create iOS chat app</a></li>
+                <li><a href="https://www.syncano.io/blog/getting-started-reactjs-tutorial/">Getting started with React</a></li>
+                <li><a href="https://www.syncano.io/blog/flask-micro-framework-introduction/">Intro to Flask</a></li>
+                <li><a href="https://www.syncano.io/blog/getting-started-with-docker/">Getting started with Docker</a></li>
+                <li><a href="https://www.syncano.io/blog/getting-started-swift-playground/">Getting started with Swift</a></li>
               </ul>
             </div>
-            <Link
-              to="/about/"
+            <a
+              href="https://www.syncano.io/blog/tag/tutorials/"
               className="button"
             >
               View All Tutorials
-            </Link>
+            </a>
           </TextPanels.Panel>
           <TextPanels.Panel
             theme="silver"
@@ -96,21 +95,20 @@ export default () => {
           >
             <div className="text-panels__panel__list">
               <ul>
-                <li><a href="https://www.syncano.io/blog/queries-with-ember-syncano/">CodeBox overview</a></li>
-                <li><a href="https://www.syncano.io/blog/queries-with-ember-syncano/">Data Objects</a></li>
-                <li><a href="https://www.syncano.io/blog/queries-with-ember-syncano/">Classes</a></li>
-                <li><a href="https://www.syncano.io/blog/queries-with-ember-syncano/">User management</a></li>
-                <li><a href="https://www.syncano.io/blog/queries-with-ember-syncano/">Data Objects filtering</a></li>
-                <li><a href="https://www.syncano.io/blog/queries-with-ember-syncano/">REST API</a></li>
-                <li><a href="https://www.syncano.io/blog/queries-with-ember-syncano/">Data Objects</a></li>
+                <li><a href="http://docs.syncano.io/v1.0/docs/codebox-overview/">CodeBox overview</a></li>
+                <li><a href="http://docs.syncano.io/docs/data-objects/">Data Objects</a></li>
+                <li><a href="http://docs.syncano.io/docs/classes/">Classes</a></li>
+                <li><a href="http://docs.syncano.io/docs/user-management/">User management</a></li>
+                <li><a href="http://docs.syncano.io/docs/data-objects-filtering/">Data Objects Filtering & Ordering</a></li>
+                <li><a href="http://docs.syncano.io/v0.1.1/docs/general-information/">REST API</a></li>
               </ul>
             </div>
-            <Link
-              to="/about/"
+            <a
+              href="http://docs.syncano.io/"
               className="button"
             >
               Browse All Docs
-            </Link>
+            </a>
           </TextPanels.Panel>
         </TextPanels>
         <TextWithImage
@@ -131,12 +129,12 @@ export default () => {
               <li><Link to="/about/">Pricing/Billing answers</Link></li>
             </ul>
           </div>
-          <Link
-            to="/about/"
+          <a
+            href="http://docs.syncano.io/docs/faq"
             className="button"
           >
             View FAQ
-          </Link>
+          </a>
         </TextWithImage>
         <SocialProfiles />
         <CTASection>

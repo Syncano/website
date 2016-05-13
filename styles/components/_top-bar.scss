@@ -45,9 +45,14 @@
       cursor: pointer;
       padding: 10px;
       margin: -10px;
+      transition: $transition-default;
 
       .close {
         display: none;
+      }
+
+      &:hover {
+        opacity: .8;
       }
     }
 
@@ -70,6 +75,7 @@
           padding: 0;
           color: transparentize(#5F6C7A, .5);
           cursor: pointer;
+          text-decoration: none;
 
           &:hover {
             color: $color-main-blue--hover;

@@ -10,6 +10,7 @@
   min-width: 170px;
   text-align: center;
   transition: $transition-default;
+  cursor: pointer;
 
   &:hover {
     color: transparentize($color-main-blue, .5);

@@ -1,5 +1,6 @@
 .pricing-plan {
   $border-radius: 4px;
+  $tooltip-offset: 15px;
 
   flex: 1;
   margin-bottom: 30px;
@@ -125,16 +126,65 @@
 
   .pricing-plan__overage-rates {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 30px - $tooltip-offset;
+    padding-top: $tooltip-offset;
     line-height: 1;
     text-decoration: underline;
     font-size: 14px;
     color: $color-main-silver;
     display: block;
     transition: $transition-default;
+    position: relative;
+    cursor: default;
+
+    .pricing-plan__overage-rates__tooltip {
+      display: inline-block;
+      content: attr(data-tooltip-text);
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(10%);
+      background: #fff;
+      color: $color-text-base;
+      border: 1px solid #DBDFE4;
+      border-radius: $border-radius;
+      padding: 10px 15px;
+      font-size: 14px;
+      white-space: nowrap;
+      text-align: left;
+      line-height: 1.5;
+      opacity: 0;
+      transition: $transition-default;
+      box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+
+      strong {
+        margin-bottom: 5px;
+        color: $color-text-headline;
+        display: block;
+      }
+
+      &:after {
+        display: block;
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 4px 6px 0 6px;
+        border-color: #dbdfe4 transparent transparent transparent;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
 
     &:hover {
-      opacity: .8;
+      color: transparentize($color-main-silver, .2);
+
+      .pricing-plan__overage-rates__tooltip {
+        opacity: 1;
+        transform: translateX(-50%);
+      }
     }
   }
 
@@ -172,7 +222,7 @@
     }
     
     .pricing-plan__overage-rates {
-      margin-top: 40px;
+      margin-top: 40px - $tooltip-offset;
     }
   }
 

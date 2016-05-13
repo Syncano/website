@@ -5,7 +5,7 @@ import _ from 'lodash';
 import PricingPlan from './PricingPlan';
 import config from '../../config/';
 
-export default class Pricing extends Component {
+class Pricing extends Component {
   constructor(props) {
     super(props);
 
@@ -73,6 +73,7 @@ export default class Pricing extends Component {
                 '2 concurrent Scripts',
                 'Unlimited users'
               ]}
+              isFreePlan={true}
             />
             <PricingPlan
               isFeatured={true}
@@ -88,7 +89,6 @@ export default class Pricing extends Component {
                 '8 concurrent Scripts',
                 'Unlimited users'
               ]}
-              overageRatesLinkTo="/pricing/"
             />
             <PricingPlan
               title="Business"
@@ -103,16 +103,15 @@ export default class Pricing extends Component {
                 '8 concurrent Scripts',
                 'Unlimited users'
               ]}
-              overageRatesLinkTo="/pricing/"
             />
           </div>
           <footer className="pricing__footer">
-            <Link
-              to="/about/"
+            <span
               className="button button--large button--featured"
+              onClick={this.context.modals.signUp.open}
             >
               Get Started for Free
-            </Link>
+            </span>
             <p>
               Premium support? Custom SLA? We’ve got you covered. <Link to="/contact/">Contact us</Link> and we’ll 
               configure a plan that’s best for you.
@@ -121,5 +120,11 @@ export default class Pricing extends Component {
         </div>
       </div>
     );
-  }
+  };
 };
+
+Pricing.contextTypes = {
+  modals: React.PropTypes.object
+};
+
+export default Pricing;

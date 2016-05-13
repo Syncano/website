@@ -11,7 +11,9 @@ export default class PricingPlan extends Component {
       isExpanded: false,
       price: {
         apiCalls: props.apiCallsOptions[0].price,
-        scripts: props.scriptsOptions[0].price
+        scripts: props.scriptsOptions[0].price,
+        apiCallsOverage: props.apiCallsOptions[0].overage,
+        scriptsOverage: props.scriptsOptions[0].overage
       }
     }
   };
@@ -56,16 +58,21 @@ export default class PricingPlan extends Component {
   };
 
   renderOverageRatesLink() {
-    const { overageRatesLinkTo } = this.props;
+    const { isFreePlan } = this.props;
+    const { apiCallsOverage, scriptsOverage } = this.state.price;
 
-    if (overageRatesLinkTo) {
+    if (!isFreePlan) {
       return (
-        <Link
-          to={overageRatesLinkTo}
-          className="pricing-plan__overage-rates"
-        >
+        <span className="pricing-plan__overage-rates">
           overage rates
-        </Link>
+          <span className="pricing-plan__overage-rates__tooltip">
+            <strong>Overage Unit Price</strong>
+            <ul>
+              <li>API Calls: &#36;{apiCallsOverage}</li>
+              <li>Scripts seconds: &#36;{scriptsOverage}</li>
+            </ul>
+          </span>
+        </span>
       );
     }
 
@@ -74,9 +81,9 @@ export default class PricingPlan extends Component {
 
   handleSelectChange(event, field) {
     const { price } = this.state;
-    const value = parseInt(event.target.value);
+    const value = JSON.parse(event.target.value.toString());
 
-    this.setState({ price: _.merge({}, price, {[field]: value})})
+    this.setState({ price: _.merge({}, price, { [field]: value.price, [field + 'Overage']: value.overage }) })
   };
 
   renderSelect(field) {
@@ -99,7 +106,10 @@ export default class PricingPlan extends Component {
       >
         {_.map(options[field], (option) => {
           return (
-            <option key={option.price} value={option.price}>
+            <option
+              key={option.price}
+              value={`{ "price": ${option.price}, "overage": ${option.overage} }`}
+            >
               {option.included} {label[field]} {option.price > 0 && `- $${option.price}`}
             </option>
           )
