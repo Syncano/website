@@ -8,14 +8,13 @@ export default class PricingPlan extends Component {
     super(props);
 
     this.state = {
+      hasOverageRatesLinkTooltipVisible: false,
       isExpanded: false,
-      price: {
-        apiCalls: props.apiCallsOptions[0].price,
-        scripts: props.scriptsOptions[0].price,
-        apiCallsOverage: props.apiCallsOptions[0].overage,
-        scriptsOverage: props.scriptsOptions[0].overage
+      prices: {
+        apiCalls: props.apiCallsOptions[0],
+        scripts: props.scriptsOptions[0]
       }
-    }
+    };
   };
 
   handleClick = () => {
@@ -25,8 +24,8 @@ export default class PricingPlan extends Component {
   };
 
   renderPrice() {
-    const { price } = this.state;
-    const value = price.apiCalls + price.scripts;
+    const { prices } = this.state;
+    const value = prices.apiCalls.price + prices.scripts.price;
     
     if (this.props.price) {
       return (
@@ -57,13 +56,27 @@ export default class PricingPlan extends Component {
     );
   };
 
-  renderOverageRatesLink() {
-    const { isFreePlan } = this.props;
-    const { apiCallsOverage, scriptsOverage } = this.state.price;
+  toggleOverageRatesLinkTooltip = () => {
+    const { hasOverageRatesLinkTooltipVisible } = this.state;
 
-    if (!isFreePlan) {
+    this.setState({ hasOverageRatesLinkTooltipVisible: !hasOverageRatesLinkTooltipVisible });
+  };
+
+  renderOverageRatesLink() {
+    const { prices, hasOverageRatesLinkTooltipVisible } = this.state;
+    const className = classNames({
+      'pricing-plan__overage-rates': true,
+      'pricing-plan__overage-rates--has-tooltip-visible': hasOverageRatesLinkTooltipVisible
+    });
+    const apiCallsOverage = prices.apiCalls.overage;
+    const scriptsOverage = prices.scripts.overage;
+
+    if (apiCallsOverage && scriptsOverage) {
       return (
-        <span className="pricing-plan__overage-rates">
+        <span
+          className={className}
+          onClick={this.toggleOverageRatesLinkTooltip}
+        >
           overage rates
           <span className="pricing-plan__overage-rates__tooltip">
             <strong>Overage Unit Price</strong>
@@ -80,10 +93,10 @@ export default class PricingPlan extends Component {
   };
 
   handleSelectChange(event, field) {
-    const { price } = this.state;
-    const value = JSON.parse(event.target.value.toString());
+    const { prices } = this.state;
+    const value = JSON.parse(event.target.value);
 
-    this.setState({ price: _.merge({}, price, { [field]: value.price, [field + 'Overage']: value.overage }) })
+    this.setState({ prices: _.merge({}, prices, { [field]: value }) })
   };
 
   renderSelect(field) {
@@ -108,7 +121,7 @@ export default class PricingPlan extends Component {
           return (
             <option
               key={option.price}
-              value={`{ "price": ${option.price}, "overage": ${option.overage} }`}
+              value={JSON.stringify(option)}
             >
               {option.included} {label[field]} {option.price > 0 && `- $${option.price}`}
             </option>
@@ -188,5 +201,5 @@ export default class PricingPlan extends Component {
         {this.renderOverageRatesLink()}
       </div>
     );
-  }
-}
+  };
+};

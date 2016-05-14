@@ -73,7 +73,6 @@ class Pricing extends Component {
                 '2 concurrent Scripts',
                 'Unlimited users'
               ]}
-              isFreePlan={true}
             />
             <PricingPlan
               isFeatured={true}

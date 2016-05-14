@@ -136,6 +136,7 @@
     transition: $transition-default;
     position: relative;
     cursor: default;
+    -webkit-tap-highlight-color: transparent;
 
     .pricing-plan__overage-rates__tooltip {
       display: inline-block;
@@ -156,6 +157,7 @@
       opacity: 0;
       transition: $transition-default;
       box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+      visibility: hidden;
 
       strong {
         margin-bottom: 5px;
@@ -178,12 +180,25 @@
       }
     }
 
-    &:hover {
+    @mixin hover {
       color: transparentize($color-main-silver, .2);
 
       .pricing-plan__overage-rates__tooltip {
         opacity: 1;
         transform: translateX(-50%);
+        visibility: visible;
+      }
+    }
+
+    @include large-max {
+      &.pricing-plan__overage-rates--has-tooltip-visible {
+        @include hover();
+      }
+    }
+
+    @include large-over {
+      &:hover {
+        @include hover();
       }
     }
   }
