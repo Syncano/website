@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import _ from 'lodash';
 import { Link } from 'react-router';
+import PricingPlanOverageRatesLink from './PricingPlanOverageRatesLink';
 
 export default class PricingPlan extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      hasOverageRatesLinkTooltipVisible: false,
       isExpanded: false,
       prices: {
         apiCalls: props.apiCallsOptions[0],
@@ -54,42 +54,6 @@ export default class PricingPlan extends Component {
         ))}
       </ul>
     );
-  };
-
-  toggleOverageRatesLinkTooltip = () => {
-    const { hasOverageRatesLinkTooltipVisible } = this.state;
-
-    this.setState({ hasOverageRatesLinkTooltipVisible: !hasOverageRatesLinkTooltipVisible });
-  };
-
-  renderOverageRatesLink() {
-    const { prices, hasOverageRatesLinkTooltipVisible } = this.state;
-    const className = classNames({
-      'pricing-plan__overage-rates': true,
-      'pricing-plan__overage-rates--has-tooltip-visible': hasOverageRatesLinkTooltipVisible
-    });
-    const apiCallsOverage = prices.apiCalls.overage;
-    const scriptsOverage = prices.scripts.overage;
-
-    if (apiCallsOverage && scriptsOverage) {
-      return (
-        <span
-          className={className}
-          onClick={this.toggleOverageRatesLinkTooltip}
-        >
-          overage rates
-          <span className="pricing-plan__overage-rates__tooltip">
-            <strong>Overage Unit Price</strong>
-            <ul>
-              <li>API Calls: &#36;{apiCallsOverage}</li>
-              <li>Scripts seconds: &#36;{scriptsOverage}</li>
-            </ul>
-          </span>
-        </span>
-      );
-    }
-
-    return null;
   };
 
   handleSelectChange(event, field) {
@@ -167,6 +131,7 @@ export default class PricingPlan extends Component {
 
   render() {
     const { period, title } = this.props;
+    const { prices } = this.state;
 
     return (
       <div className={this.getPricingPlanClassName()}>
@@ -198,7 +163,7 @@ export default class PricingPlan extends Component {
             {this.renderFeatures()}
           </div>
         </div>
-        {this.renderOverageRatesLink()}
+        <PricingPlanOverageRatesLink prices={prices} />
       </div>
     );
   };
