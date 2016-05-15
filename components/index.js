@@ -22,6 +22,7 @@ import SliderWrapper from './SliderWrapper';
 import SocialProfiles from './SocialProfiles';
 import StatusImage from './StatusImage';
 import StatusPageHeader from './StatusPageHeader';
+import Team from './Team';
 import TermsAndLegal from './TermsAndLegal';
 import Testimonials from './Testimonials';
 import TextPanels from './TextPanels';
@@ -57,6 +58,7 @@ export default {
   SocialProfiles,
   StatusImage,
   StatusPageHeader,
+  Team,
   TermsAndLegal,
   Testimonials,
   TextPanels,
