@@ -1,0 +1,43 @@
+.about-us {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+
+  h2 {
+    font-size: 20px;
+    color: $color-text-headline;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  p {
+    line-height: 1.875;
+    color: transparentize($color-text-base, .25);
+    margin-top: 25px;
+  }
+
+  @include medium {
+    h2 {
+      font-size: 30px;
+    }
+  }
+
+  @include large {
+    padding-top: 110px;
+    padding-bottom: 110px;
+    text-align: left;
+
+    h2 {
+      font-size: 40px;
+    }
+
+    p {
+      margin-top: 40px;
+    }
+  }
+
+  @include very-large {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
