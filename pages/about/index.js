@@ -1,7 +1,7 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { BlockquoteSection, CounterBoxes, CTASection, Footer, PageHeader } from '../../components';
+import { AboutUsHeaderImage, BlockquoteSection, CounterBoxes, CTASection, Footer, PageHeader } from '../../components';
 
 export default () => {
   return (
@@ -10,6 +10,13 @@ export default () => {
         <PageHeader
           headline="About"
           textline="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        />
+        <AboutUsHeaderImage
+          imageSrc={require('./header-image.jpg')}
+          image2xSrc={require('./header-image@2x.jpg')}
+          imageSmall2xSrc={require('./header-image-small.jpg')}
+          imageSmall2xSrc={require('./header-image-small@2x.jpg')}
+          imageMediumSrc={require('./header-image-medium.jpg')}
         />
         <CounterBoxes />
         <BlockquoteSection>

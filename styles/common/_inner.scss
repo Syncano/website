@@ -8,14 +8,9 @@
   margin-right: auto;
   box-sizing: content-box;
 
-  @include medium {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  @include very-large {
-    padding-left: 110px;
-    padding-right: 110px;
+  &.inner--about-us-header-image {
+    max-width: 1360px;
+    padding: 0;
   }
 
   &.inner--list-columns {
@@ -32,5 +27,25 @@
 
   &.inner--text-with-bottom-image {
     max-width: 780px;
+  }
+
+  @include medium {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    &.inner--about-us-header-image {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  @include very-large {
+    padding-left: 110px;
+    padding-right: 110px;
+
+    &.inner--about-us-header-image {
+      padding-left: 110px;
+      padding-right: 110px;
+    }
   }
 }
