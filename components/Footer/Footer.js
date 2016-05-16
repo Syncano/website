@@ -22,13 +22,33 @@ export default () => (
               <Link to="/about/">About Us</Link>
             </li>
             <li>
-              <Link to="/jobs/">Career</Link>
+              <a href="https://syncano.workable.com/">Jobs</a>
+            </li>
+            <li>
+              <Link to="/terms-of-service/">Terms of Service</Link>
+            </li>
+            <li>
+              <Link to="/terms-of-service/#privacy-policy">Privacy Policy</Link>
             </li>
             <li>
               <Link to="/contact/">Contact Us</Link>
             </li>
+          </ul>
+        </div>
+        <div className="footer__column">
+          <h4>Product</h4>
+          <ul>
             <li>
-              <Link to="/terms-of-service/">Terms and Legal</Link>
+              <Link to="/features/">Features</Link>
+            </li>
+            <li>
+              <Link to="/pricing/">Plans &amp; Pricing</Link>
+            </li>
+            <li>
+              <Link to="/help/">Help &amp; Status</Link>
+            </li>
+            <li>
+              <a href="https://www.syncano.io/blog/">Blog</a>
             </li>
           </ul>
         </div>
@@ -36,33 +56,19 @@ export default () => (
           <h4>Resources</h4>
           <ul>
             <li>
-              <a href="https://www.syncano.io/blog/">Blog</a>
+              <a href="http://docs.syncano.io/docs/getting-started-with-syncano/">Getting Started</a>
             </li>
             <li>
-              <a href="http://docs.syncano.io/">Docs</a>
-            </li>
-            <li>
-              <Link to="/pricing/">Plans &amp; Pricing</Link>
-            </li>
-            <li>
-              <Link to="/solutions/">Solutions</Link>
-            </li>
-          </ul>
-        </div>
-        <div className="footer__column">
-          <h4>More</h4>
-          <ul>
-            <li>
-              <Link to="/support/">Help</Link>
-            </li>
-            <li>
-              <a href="https://www.syncano.io/blog/tag/tutorials/">Tutorials</a>
+              <a href="http://docs.syncano.io/">Documentation</a>
             </li>
             <li>
               <a href="http://docs.syncano.io/docs/syncano-libraries/">Libraries</a>
             </li>
             <li>
-              <Link to="/help/">Status</Link>
+              <a href="https://www.syncano.io/blog/tag/tutorials/">Tutorials</a>
+            </li>
+            <li>
+              <a href="http://docs.syncano.io/v0.1.1/docs/">API Reference</a>
             </li>
           </ul>
         </div>
@@ -113,10 +119,10 @@ export default () => (
         </div>
       </div>
       <div className="footer__newsletter">
-        <h4>Join Our Newsletter</h4>
+        <h4>Get our serverless digest</h4>
         <NewsletterForm />
         <div className="footer__newsletter__social">
-          <h4>Syncano in Social Media</h4>
+          <h4>Let’s connect</h4>
           <ul>
             <li>
               <a
