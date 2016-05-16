@@ -91,7 +91,7 @@ export default class ContactForm extends Component {
             style={{ display: 'none' }}
           />
           <button className="button button--large button--featured">
-            Send
+            Send message
           </button>
         </Formsy.Form>
       </div>
