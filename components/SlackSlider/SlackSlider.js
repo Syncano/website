@@ -22,8 +22,8 @@ export default () => {
           >
             <div>
               <SlackMessage
-                avatarSrc={require('./images/avatar@2x.jpg')}
-                author="John Doe"
+                avatarSrc={require('./images/photo-reventadorgames@2x.png')}
+                author="reventadorgames"
               >
                 <p>I'm an indie mobile game developer and have just started using syncano, it's working great -
                 remarkably fast even over 3G connections.</p>
@@ -31,53 +31,19 @@ export default () => {
             </div>
             <div>
               <SlackMessage
-                avatarSrc={require('./images/avatar@2x.jpg')}
-                author="John Doe"
+                avatarSrc={require('./images/photo-devjoshlopez@2x.jpg')}
+                author="devjoshlopez"
               >
-                <p>I'm an indie mobile game developer and have just started using syncano, it's working great -
-                remarkably fast even over 3G connections.</p>
-                <p>I'm an indie mobile game developer and have just started using syncano, it's working great -
-                remarkably fast even over 3G connections.</p>
+                <p>I am new here too and coming from Parse. The people at Syncano are amazing and I think i made a good
+                choice.</p>
               </SlackMessage>
             </div>
             <div>
               <SlackMessage
-                avatarSrc={require('./images/avatar@2x.jpg')}
-                author="John Doe"
+                avatarSrc={require('./images/photo-hoco@2x.png')}
+                author="hoco"
               >
-                <p>I'm an indie mobile game developer and have just started using syncano, it's working great -
-                remarkably fast even over 3G connections.</p>
-              </SlackMessage>
-            </div>
-            <div>
-              <SlackMessage
-                avatarSrc={require('./images/avatar@2x.jpg')}
-                author="John Doe"
-              >
-                <p>I'm an indie mobile game developer and have just started using syncano, it's working great -
-                remarkably fast even over 3G connections.</p>
-                <p>I'm an indie mobile game developer and have just started using syncano, it's working great -
-                remarkably fast even over 3G connections.</p>
-              </SlackMessage>
-            </div>
-            <div>
-              <SlackMessage
-                avatarSrc={require('./images/avatar@2x.jpg')}
-                author="John Doe"
-              >
-                <p>I'm an indie mobile game developer and have just started using syncano, it's working great -
-                remarkably fast even over 3G connections.</p>
-              </SlackMessage>
-            </div>
-            <div>
-              <SlackMessage
-                avatarSrc={require('./images/avatar@2x.jpg')}
-                author="John Doe"
-              >
-                <p>I'm an indie mobile game developer and have just started using syncano, it's working great -
-                remarkably fast even over 3G connections.</p>
-                <p>I'm an indie mobile game developer and have just started using syncano, it's working great -
-                remarkably fast even over 3G connections.</p>
+                <p>Hey, my app that used to be based on Parse.com and is now based on Syncano is in beta test!</p>
               </SlackMessage>
             </div>
           </SliderWrapper>
