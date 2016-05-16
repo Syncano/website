@@ -22,13 +22,33 @@ export default () => (
               <Link to="/about/">About Us</Link>
             </li>
             <li>
-              <Link to="/jobs/">Career</Link>
+              <a href="https://syncano.workable.com/" target="_blank">Jobs</a>
+            </li>
+            <li>
+              <Link to="/terms-of-service/">Terms of Service</Link>
+            </li>
+            <li>
+              <Link to="/terms-of-service/#privacy-policy">Privacy Policy</Link>
             </li>
             <li>
               <Link to="/contact/">Contact Us</Link>
             </li>
+          </ul>
+        </div>
+        <div className="footer__column">
+          <h4>Product</h4>
+          <ul>
             <li>
-              <Link to="/terms-of-service/">Terms and Legal</Link>
+              <Link to="/features/">Features</Link>
+            </li>
+            <li>
+              <Link to="/pricing/">Plans &amp; Pricing</Link>
+            </li>
+            <li>
+              <Link to="/help/">Help &amp; Status</Link>
+            </li>
+            <li>
+              <a href="https://www.syncano.io/blog/" target="_blank">Blog</a>
             </li>
           </ul>
         </div>
@@ -36,87 +56,48 @@ export default () => (
           <h4>Resources</h4>
           <ul>
             <li>
-              <a href="https://www.syncano.io/blog/">Blog</a>
+              <a href="http://docs.syncano.io/docs/getting-started-with-syncano/" target="_blank">Getting Started</a>
             </li>
             <li>
-              <a href="http://docs.syncano.io/">Docs</a>
+              <a href="http://docs.syncano.io/" target="_blank">Documentation</a>
             </li>
             <li>
-              <Link to="/pricing/">Plans &amp; Pricing</Link>
+              <a href="http://docs.syncano.io/docs/syncano-libraries/" target="_blank">Libraries</a>
             </li>
             <li>
-              <Link to="/solutions/">Solutions</Link>
-            </li>
-          </ul>
-        </div>
-        <div className="footer__column">
-          <h4>More</h4>
-          <ul>
-            <li>
-              <Link to="/support/">Help</Link>
+              <a href="https://www.syncano.io/blog/tag/tutorials/" target="_blank">Tutorials</a>
             </li>
             <li>
-              <a href="https://www.syncano.io/blog/tag/tutorials/">Tutorials</a>
-            </li>
-            <li>
-              <a href="http://docs.syncano.io/docs/syncano-libraries/">Libraries</a>
-            </li>
-            <li>
-              <Link to="/help/">Status</Link>
+              <a href="http://docs.syncano.io/v0.1.1/docs/" target="_blank">API Reference</a>
             </li>
           </ul>
         </div>
         <div className="footer__column">
-          <h4>Social Media</h4>
+          <h4>Let’s connect</h4>
           <ul>
             <li>
-              <a
-                href="https://twitter.com/Syncano/"
-                target="_blank"
-              >
-                Twitter
-              </a>
+              <a href="https://twitter.com/Syncano/" target="_blank">Twitter</a>
             </li>
             <li>
-              <a
-                href="https://www.facebook.com/syncano/"
-                target="_blank"
-              >
-                Facebook
-              </a>
+              <a href="https://www.facebook.com/syncano/" target="_blank">Facebook</a>
             </li>
             <li>
-              <a
-                href="https://github.com/Syncano/"
-                target="_blank"
-              >
-                GitHub
-              </a>
+              <a href="https://github.com/Syncano/" target="_blank">GitHub</a>
             </li>
             <li>
-              <a
-                href="https://www.linkedin.com/company/syncano/"
-                target="_blank"
-              >
-                LinkedIn
-              </a>
+              <a href="https://www.linkedin.com/company/syncano/" target="_blank">LinkedIn</a>
             </li>
             <li>
-              <a
-                href="https://dribbble.com/SYNCANO/"
-                target="_blank"
-              >
-                Dribbble
-              </a>
+              <a href="https://dribbble.com/SYNCANO/" target="_blank">Dribbble</a>
             </li>
           </ul>
         </div>
       </div>
       <div className="footer__newsletter">
-        <h4>Join Our Newsletter</h4>
+        <h4>Get our serverless digest</h4>
         <NewsletterForm />
         <div className="footer__newsletter__social">
-          <h4>Syncano in Social Media</h4>
+          <h4>Let’s connect</h4>
           <ul>
             <li>
               <a
