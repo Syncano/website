@@ -1,56 +1,60 @@
 .counter-boxes {
-  margin-left: -10px;
-  margin-right: -10px;
   background: linear-gradient(180deg, #fff 50%, $color-main-gray 50%);
 
-  .counter-boxes__box {
-    padding-top: 48px;
-    padding-bottom: 48px;
-    text-align: center;
+  .counter-boxes__boxes {
+    margin-left: -10px;
+    margin-right: -10px;
 
-    .counter-boxes__box__headline {
-      font-size: 36px;
-      line-height: 42px;
-      font-weight: 700;
-      color: #fff;
+    .counter-boxes__boxes__box {
+      padding-top: 48px;
+      padding-bottom: 48px;
+      text-align: center;
+
+      .counter-boxes__boxes__box__headline {
+        font-size: 36px;
+        line-height: 42px;
+        font-weight: 700;
+        color: #fff;
+      }
+
+      .counter-boxes__boxes__box__textline {
+        margin-top: 7px;
+        font-weight: 500;
+        font-size: 18px;
+        color: transparentize(#fff, .2);
+      }
+
+      &.counter-boxes__boxes__box--azure { background: $color-main-azure; }
+      &.counter-boxes__boxes__box--purple { background: $color-main-purple; }
+      &.counter-boxes__boxes__box--silver { background: $color-main-silver; }
     }
-
-    .counter-boxes__box__textline {
-      margin-top: 7px;
-      font-weight: 500;
-      font-size: 18px;
-      color: transparentize(#fff, .2);
-    }
-
-    &.counter-boxes__box--azure { background: $color-main-azure; }
-    &.counter-boxes__box--purple { background: $color-main-purple; }
-    &.counter-boxes__box--silver { background: $color-main-silver; }
   }
 
   @include medium {
-    margin-left: -30px;
-    margin-right: -30px;
-
-    .inner {
+    .counter-boxes__boxes {
+      margin-left: -30px;
+      margin-right: -30px;
       display: flex;
-    }
 
-    .counter-boxes__box {
-      flex-grow: 1;
-      flex-basis: 0;
+      .counter-boxes__boxes__box {
+        flex-grow: 1;
+        flex-basis: 0;
+      }
     }
   }
 
   @include large {
-    margin-left: auto;
-    margin-right: auto;
+    .counter-boxes__boxes {
+      margin-left: auto;
+      margin-right: auto;
 
-    .counter-boxes__box {
-      margin-right: 20px;
-      box-shadow: 0 12px 25px rgba(0, 0, 0, .27);
+      .counter-boxes__boxes__box {
+        margin-right: 20px;
+        box-shadow: 0 12px 25px rgba(0, 0, 0, .27);
 
-      &:last-child {
-        margin-right: 0;
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
   }
