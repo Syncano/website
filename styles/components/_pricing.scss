@@ -33,6 +33,7 @@
   }
 
   @include large {
+    margin-top: -100px;
     padding-bottom: 100px;
 
     .pricing__footer .button {

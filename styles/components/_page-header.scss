@@ -59,7 +59,7 @@
     }
 
     p {
-      margin-top: 17px;
+      margin-top: 20px;
 
       br {
         display: none;
@@ -89,6 +89,9 @@
   }
 
   @include large {
+    padding-top: 200px;
+    padding-bottom: 190px;
+
     h2 {
       font-size: 42px;
     }
