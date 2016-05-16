@@ -5,10 +5,10 @@ import { ContactForm, CTASection, Footer, OfficeAddresses, PageHeader } from '..
 
 export default () => {
   return (
-    <DocumentTitle title="Contact us">
+    <DocumentTitle title="Get in touch with us">
       <div>
         <PageHeader
-          headline="Contact us"
+          headline="Get in touch with us"
           textline={<span>Use the form below or drop us an email at <a href="mailto:build@syncano.io" target="_blank">build@syncano.io</a></span>}
         />
         <ContactForm />
