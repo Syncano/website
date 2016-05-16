@@ -1,0 +1,19 @@
+.travolta {
+  margin-top: 30px;
+
+  video {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include medium {
+    margin-top: 50px;
+  }
+
+  @include large {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(calc(-50% - 300px));
+  }
+}

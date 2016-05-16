@@ -3,6 +3,7 @@
   padding-top: 100px;
   padding-bottom: 80px;
   background: #fff;
+  position: relative;
 
   .page-header__status {
     margin-left: auto;
@@ -38,7 +39,9 @@
     font-weight: 400;
   }
 
-  &.page-header--large-headline {
+  &.page-header--error-404 {
+    padding-bottom: 0;
+    
     h2 {
       font-size: 80px;
       line-height: 1.2;
@@ -74,9 +77,8 @@
       font-size: 14px;
     }
 
-    &.page-header--large-headline {
+    &.page-header--error-404 {
       padding-top: 190px;
-      padding-bottom: 150px;
 
       h2 {
         font-size: 100px;
@@ -96,8 +98,12 @@
       font-size: 42px;
     }
 
-    &.page-header--large-headline h2 {
-      font-size: 120px;
+    &.page-header--error-404 {
+      padding-bottom: 150px;
+
+      h2 {
+        font-size: 120px;
+      }
     }
   }
 }

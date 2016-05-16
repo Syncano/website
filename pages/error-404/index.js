@@ -1,14 +1,14 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { CTASection, Footer, PageHeader } from '../../components';
+import { CTASection, Footer, PageHeader, Travolta } from '../../components';
 
 export default () => {
   return (
     <DocumentTitle title="404">
       <div>
         <PageHeader
-          variant="large-headline"
+          variant="error-404"
           headline="404"
           textline="The page your were looking for doesn't exist"
         >
@@ -18,6 +18,7 @@ export default () => {
           >
             Go Back
           </Link>
+          <Travolta />
         </PageHeader>
         <CTASection>
           <h2>Rethink how you build apps. Go serverless!</h2>
