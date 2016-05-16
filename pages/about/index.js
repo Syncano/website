@@ -5,11 +5,11 @@ import { AboutUs, AboutUsHeaderImage, BlockquoteSection, CounterBoxes, CTASectio
 
 export default () => {
   return (
-    <DocumentTitle title="About">
+    <DocumentTitle title="About us">
       <div>
         <PageHeader
-          headline="About"
-          textline="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          headline="About us"
+          textline="We help developers build amazing apps"
         />
         <AboutUsHeaderImage
           imageSrc={require('./header-image.jpg')}
