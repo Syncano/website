@@ -1,0 +1,14 @@
+.about-us-header-image {
+  background: $color-main-gray;
+
+  img,
+  picture {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  @include medium {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
