@@ -53,7 +53,6 @@ export default () => {
         />
         <TwitterSlider />
         <TextWithImage
-          variant="image-left"
           headline="Assemble your backend with building blocks"
           textline={`Simplify your stack. Piece together one or multiple features as building blocks for your app. Use
             Syncano as a data hub and easily connect disparate backend systems.`}

@@ -112,7 +112,6 @@ export default () => {
           </TextPanels.Panel>
         </TextPanels>
         <TextWithImage
-          variant="image-left"
           image={
             <img
               src={require('../../images/illustrations/get-answers-to-common-questions.svg')}

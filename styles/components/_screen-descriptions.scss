@@ -1,0 +1,122 @@
+.screen-descriptions {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+  background: $color-main-azure;
+  color: #fff;
+
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .screen-descriptions__screens {
+    margin-top: 60px;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .screen-descriptions__screens__screen {
+      margin-bottom: 60px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .screen-descriptions__screens__screen__image {
+        img,
+        picture {
+          border-radius: 8px;
+          box-shadow: 0 5px 30px rgba(34, 131, 172, .4);
+          max-width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .screen-descriptions__screens__screen__text {
+        h3 {
+          font-weight: bold;
+          margin-top: 50px;
+          font-size: 20px;
+        }
+
+        p {
+          margin-top: 30px;
+          line-height: 1.625;
+          color: transparentize(#fff, .15);
+        }
+      }
+    }
+  }
+
+  @include medium {
+    h2 {
+      font-size: 30px;
+    }
+
+    .screen-descriptions__screens {
+      margin-top: 100px;
+
+      .screen-descriptions__screens__screen {
+        margin-bottom: 100px;
+        display: flex;
+        text-align: left;
+        align-items: center;
+
+        .screen-descriptions__screens__screen__image,
+        .screen-descriptions__screens__screen__text {
+          flex: 1;
+        }
+
+        .screen-descriptions__screens__screen__image {
+          margin-right: 30px;
+        }
+
+        .screen-descriptions__screens__screen__text h3 {
+          margin-top: 0;
+          font-size: 24px;
+        }
+
+        &.screen-descriptions__screens__screen--image-right {
+          .screen-descriptions__screens__screen__image {
+            order: 1;
+            margin-right: 0;
+          }
+
+          .screen-descriptions__screens__screen__text {
+            margin-right: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  @include large {
+    h2 {
+      font-size: 40px;
+    }
+
+    .screen-descriptions__screens .screen-descriptions__screens__screen {
+      .screen-descriptions__screens__screen__image {
+        margin-right: 60px;
+      }
+
+      .screen-descriptions__screens__screen__text {
+        padding-left: 30px;
+      }
+
+      &.screen-descriptions__screens__screen--image-right {
+        .screen-descriptions__screens__screen__image {
+          margin-right: 0;
+        }
+
+        .screen-descriptions__screens__screen__text {
+          margin-right: 60px;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
