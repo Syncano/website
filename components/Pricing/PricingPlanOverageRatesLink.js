@@ -26,9 +26,9 @@ export default class PricingPlanOverageRatesLink extends Component {
   };
 
   render = () => {
-    const { prices } = this.props;
-    const apiCallsOverage = prices.apiCalls.overage;
-    const scriptsOverage = prices.scripts.overage;
+    const { apiCalls, scripts } = this.props;
+    const apiCallsOverage = apiCalls.overage;
+    const scriptsOverage = scripts.overage;
 
     if (apiCallsOverage && scriptsOverage) {
       return (

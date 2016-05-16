@@ -9,11 +9,9 @@ export default class PricingPlan extends Component {
     super(props);
 
     this.state = {
-      isExpanded: false,
-      prices: {
-        apiCalls: props.apiCallsOptions[0],
-        scripts: props.scriptsOptions[0]
-      }
+      apiCalls: props.apiCallsOptions[0],
+      scripts: props.scriptsOptions[0],
+      isExpanded: false
     };
   };
 
@@ -24,8 +22,8 @@ export default class PricingPlan extends Component {
   };
 
   renderPrice() {
-    const { prices } = this.state;
-    const value = prices.apiCalls.price + prices.scripts.price;
+    const { apiCalls, scripts } = this.state;
+    const value = apiCalls.price + scripts.price;
     
     if (this.props.price) {
       return (
@@ -57,10 +55,10 @@ export default class PricingPlan extends Component {
   };
 
   handleSelectChange(event, field) {
-    const { prices } = this.state;
+    const { apiCalls, scripts } = this.state;
     const value = JSON.parse(event.target.value);
 
-    this.setState({ prices: _.merge({}, prices, { [field]: value }) })
+    this.setState({ [field]: value })
   };
 
   renderSelect(field) {
@@ -131,7 +129,7 @@ export default class PricingPlan extends Component {
 
   render() {
     const { period, title } = this.props;
-    const { prices } = this.state;
+    const { apiCalls, scripts } = this.state;
 
     return (
       <div className={this.getPricingPlanClassName()}>
@@ -163,7 +161,10 @@ export default class PricingPlan extends Component {
             {this.renderFeatures()}
           </div>
         </div>
-        <PricingPlanOverageRatesLink prices={prices} />
+        <PricingPlanOverageRatesLink
+          apiCalls={apiCalls}
+          scripts={scripts}
+        />
       </div>
     );
   };
