@@ -6,13 +6,13 @@ const ModalLogIn = (props, { modals }) => {
     <ModalWrapper isOpen={modals.logIn.isOpen}>
       <div className="modal__content">
         <div className="inner">
-          <h2>Log in</h2>
-          <p>Syncano is a lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum required libero
-          cursus.</p>
+          <h2>Welcome back!</h2>
+          <p>Log in to the Syncano dashboard below:</p>
 
           <div className="modal__content_form form">
             <form>
               <input
+                ref={(component) => console.log(component)}
                 className="form__input"
                 type="email"
                 placeholder="E-mail address"
@@ -25,7 +25,7 @@ const ModalLogIn = (props, { modals }) => {
                 required
               />
               <button className="button button--large button--featured">
-                Log In
+                Take me to dashboard
               </button>
             </form>
           </div>
@@ -72,7 +72,7 @@ const ModalLogIn = (props, { modals }) => {
       <footer className="modal__footer">
         <div className="modal__footer__column">
           <span onClick={modals.signUp.open}>
-            Don’t have an account? <strong>Sign up here!</strong>
+            Don’t have an account? <strong>Sign up</strong>
           </span>
         </div>
         <div className="modal__footer__column">
