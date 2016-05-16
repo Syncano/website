@@ -26,56 +26,41 @@ $breakpoints: (
 );
 
 @mixin very-small {
-  @media screen and (min-width: map-deep-get($breakpoints, 'very-small', 'min-width')) {
-    @content;
-  }
+  @media screen and (min-width: map-deep-get($breakpoints, 'very-small', 'min-width')) { @content; }
 }
 
 @mixin small {
-  @media screen and (min-width: map-deep-get($breakpoints, 'small', 'min-width')) {
-    @content;
-  }
+  @media screen and (min-width: map-deep-get($breakpoints, 'small', 'min-width')) { @content; }
 }
 
 @mixin medium {
-  @media screen and (min-width: map-deep-get($breakpoints, 'medium', 'min-width')) {
-    @content;
-  }
+  @media screen and (min-width: map-deep-get($breakpoints, 'medium', 'min-width')) { @content; }
 }
 
 @mixin medium-only {
-  @media screen and (min-width: map-deep-get($breakpoints, 'medium', 'min-width')) and
-  (max-width: map-deep-get($breakpoints, 'medium', 'max-width')) {
-    @content;
-  }
+  @media screen and (min-width: map-deep-get($breakpoints, 'medium', 'min-width')) and (max-width: map-deep-get($breakpoints, 'medium', 'max-width')) { @content; }
 }
 
 @mixin large {
-  @media screen and (min-width: map-deep-get($breakpoints, 'large', 'min-width')) {
-    @content;
-  }
+  @media screen and (min-width: map-deep-get($breakpoints, 'large', 'min-width')) { @content; }
+}
+
+@mixin large-max {
+  @media screen and (max-width: map-deep-get($breakpoints, 'large', 'min-width')) { @content; }
 }
 
 @mixin large-over {
-  @media screen and (min-width: map-deep-get($breakpoints, 'large', 'min-width') + 1) {
-    @content;
-  }
+  @media screen and (min-width: map-deep-get($breakpoints, 'large', 'min-width') + 1) { @content; }
 }
 
 @mixin very-large {
-  @media screen and (min-width: map-deep-get($breakpoints, 'very-large', 'min-width')) {
-    @content;
-  }
+  @media screen and (min-width: map-deep-get($breakpoints, 'very-large', 'min-width')) { @content; }
 }
 
 @mixin full {
-  @media screen and (min-width: map-deep-get($breakpoints, 'full', 'min-width')) {
-    @content;
-  }
+  @media screen and (min-width: map-deep-get($breakpoints, 'full', 'min-width')) { @content; }
 }
 
 @mixin retina {
-  @media  only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-    @content;
-  }
+  @media  only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) { @content; }
 }

@@ -1,6 +1,8 @@
 .pricing-plan {
   $border-radius: 4px;
+  $tooltip-offset: 15px;
 
+  flex: 1;
   margin-bottom: 30px;
 
   &:last-child {
@@ -10,7 +12,7 @@
   .pricing-plan__box {
     border: 1px solid #DBDFE4;
     border-radius: $border-radius;
-    padding: 30px;
+    padding: 20px;
     padding-bottom: 40px;
 
     .pricing-plan__box__title {
@@ -19,7 +21,7 @@
       font-size: 16px;
       text-align: center;
       font-weight: 500;
-      margin: -30px;
+      margin: -20px;
       margin-bottom: 0;
     }
 
@@ -57,16 +59,23 @@
         width: 100%;
         -webkit-appearance: none;
         -moz-appearance: none;
-        line-height: 44px;
+        line-height: 42px;
+        height: 44px;
         border-radius: $border-radius;
         border: 1px solid transparentize(#DBDEE3, .5);
         font-weight: 500;
         color: $color-text-base;
-        padding: 0 20px;
-        background: #fff;
+        padding: 0 15px;
+        padding-right: 30px;
+        background: #fff url("../components/Pricing/images/select-arrows.svg") no-repeat;
+        background-position: top 50% right 15px;
 
         &:last-child {
           margin-bottom: 0;
+        }
+
+        &[disabled] {
+          background-image: none;
         }
       }
     }
@@ -118,16 +127,80 @@
 
   .pricing-plan__overage-rates {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 30px - $tooltip-offset;
+    padding-top: $tooltip-offset;
     line-height: 1;
     text-decoration: underline;
     font-size: 14px;
     color: $color-main-silver;
     display: block;
     transition: $transition-default;
+    position: relative;
+    cursor: default;
+    -webkit-tap-highlight-color: transparent;
 
-    &:hover {
-      opacity: .8;
+    .pricing-plan__overage-rates__tooltip {
+      display: inline-block;
+      content: attr(data-tooltip-text);
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(10%);
+      background: #fff;
+      color: $color-text-base;
+      border: 1px solid #DBDFE4;
+      border-radius: $border-radius;
+      padding: 10px 15px;
+      font-size: 14px;
+      white-space: nowrap;
+      text-align: left;
+      line-height: 1.5;
+      opacity: 0;
+      transition: $transition-default;
+      box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+      visibility: hidden;
+
+      strong {
+        margin-bottom: 5px;
+        color: $color-text-headline;
+        display: block;
+      }
+
+      &:after {
+        display: block;
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 4px 6px 0 6px;
+        border-color: #dbdfe4 transparent transparent transparent;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    @mixin hover {
+      color: transparentize($color-main-silver, .2);
+
+      .pricing-plan__overage-rates__tooltip {
+        opacity: 1;
+        transform: translateX(-50%);
+        visibility: visible;
+      }
+    }
+
+    @include large-max {
+      &.pricing-plan__overage-rates--has-tooltip-visible {
+        @include hover();
+      }
+    }
+
+    @include large-over {
+      &:hover {
+        @include hover();
+      }
     }
   }
 
@@ -165,7 +238,7 @@
     }
     
     .pricing-plan__overage-rates {
-      margin-top: 40px;
+      margin-top: 40px - $tooltip-offset;
     }
   }
 
@@ -175,18 +248,20 @@
     }
 
     .pricing-plan__box {
-      padding-left: 15px;
-      padding-right: 15px;
+      padding-left: 10px;
+      padding-right: 10px;
       border-radius: 0;
 
       .pricing-plan__box__title {
-        margin-left: -15px;
-        margin-right: -15px;
+        margin-left: -10px;
+        margin-right: -10px;
       }
 
       .pricing-plan__box__options select {
-        padding-left: 10px;
-        padding-right: 10px;
+        font-size: 13px;
+        padding: 0 10px;
+        padding-right: 25px;
+        background-position: top 50% right 10px;
       }
     }
 

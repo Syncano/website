@@ -48,8 +48,8 @@ export default () => {
           </div>
         </div>
         <footer className="faq__footer">
-          <p><Link to="/pricing/">Visit our FAQ</Link> or <Link to="/pricing/">Contact support</Link> for other
-          unanswered questions.</p>
+          <p><a href="http://docs.syncano.io/docs/faq/">Visit our FAQ</a> or <Link to="/contact/">Contact support</Link> for
+          other unanswered questions.</p>
         </footer>
       </div>
     </div>

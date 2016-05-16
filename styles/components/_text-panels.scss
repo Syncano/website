@@ -51,6 +51,12 @@
 
       a {
         color: rgba(255, 255, 255, .8);
+        text-decoration: none;
+        transition: $transition-default;
+
+        &:hover {
+          opacity: .8;
+        }
       }
     }
 
