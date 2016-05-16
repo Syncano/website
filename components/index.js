@@ -1,3 +1,4 @@
+import AboutUs from './AboutUs';
 import AboutUsHeaderImage from './AboutUsHeaderImage';
 import Analytics from './Analytics';
 import BlockquoteSection from './BlockquoteSection';
@@ -35,6 +36,7 @@ import TopBar from './TopBar';
 import TwitterSlider from './TwitterSlider';
 
 export default {
+  AboutUs,
   AboutUsHeaderImage,
   Analytics,
   BlockquoteSection,
