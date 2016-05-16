@@ -22,7 +22,7 @@ export default () => (
               <Link to="/about/">About Us</Link>
             </li>
             <li>
-              <a href="https://syncano.workable.com/">Jobs</a>
+              <a href="https://syncano.workable.com/" target="_blank">Jobs</a>
             </li>
             <li>
               <Link to="/terms-of-service/">Terms of Service</Link>
@@ -48,7 +48,7 @@ export default () => (
               <Link to="/help/">Help &amp; Status</Link>
             </li>
             <li>
-              <a href="https://www.syncano.io/blog/">Blog</a>
+              <a href="https://www.syncano.io/blog/" target="_blank">Blog</a>
             </li>
           </ul>
         </div>
@@ -56,64 +56,39 @@ export default () => (
           <h4>Resources</h4>
           <ul>
             <li>
-              <a href="http://docs.syncano.io/docs/getting-started-with-syncano/">Getting Started</a>
+              <a href="http://docs.syncano.io/docs/getting-started-with-syncano/" target="_blank">Getting Started</a>
             </li>
             <li>
-              <a href="http://docs.syncano.io/">Documentation</a>
+              <a href="http://docs.syncano.io/" target="_blank">Documentation</a>
             </li>
             <li>
-              <a href="http://docs.syncano.io/docs/syncano-libraries/">Libraries</a>
+              <a href="http://docs.syncano.io/docs/syncano-libraries/" target="_blank">Libraries</a>
             </li>
             <li>
-              <a href="https://www.syncano.io/blog/tag/tutorials/">Tutorials</a>
+              <a href="https://www.syncano.io/blog/tag/tutorials/" target="_blank">Tutorials</a>
             </li>
             <li>
-              <a href="http://docs.syncano.io/v0.1.1/docs/">API Reference</a>
+              <a href="http://docs.syncano.io/v0.1.1/docs/" target="_blank">API Reference</a>
             </li>
           </ul>
         </div>
         <div className="footer__column">
-          <h4>Social Media</h4>
+          <h4>Let’s connect</h4>
           <ul>
             <li>
-              <a
-                href="https://twitter.com/Syncano/"
-                target="_blank"
-              >
-                Twitter
-              </a>
+              <a href="https://twitter.com/Syncano/" target="_blank">Twitter</a>
             </li>
             <li>
-              <a
-                href="https://www.facebook.com/syncano/"
-                target="_blank"
-              >
-                Facebook
-              </a>
+              <a href="https://www.facebook.com/syncano/" target="_blank">Facebook</a>
             </li>
             <li>
-              <a
-                href="https://github.com/Syncano/"
-                target="_blank"
-              >
-                GitHub
-              </a>
+              <a href="https://github.com/Syncano/" target="_blank">GitHub</a>
             </li>
             <li>
-              <a
-                href="https://www.linkedin.com/company/syncano/"
-                target="_blank"
-              >
-                LinkedIn
-              </a>
+              <a href="https://www.linkedin.com/company/syncano/" target="_blank">LinkedIn</a>
             </li>
             <li>
-              <a
-                href="https://dribbble.com/SYNCANO/"
-                target="_blank"
-              >
-                Dribbble
-              </a>
+              <a href="https://dribbble.com/SYNCANO/" target="_blank">Dribbble</a>
             </li>
           </ul>
         </div>
