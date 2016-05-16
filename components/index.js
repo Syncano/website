@@ -13,6 +13,7 @@ import Hero from './Hero';
 import ListColumns from './ListColumns';
 import { Modals, ModalsHOC } from './Modals';
 import OfficeAddresses from './OfficeAddresses';
+import OfficesMap from './OfficesMap';
 import PageHeader from './PageHeader';
 import Platforms from './Platforms';
 import PlatformsSection from './PlatformsSection';
@@ -23,6 +24,7 @@ import SliderWrapper from './SliderWrapper';
 import SocialProfiles from './SocialProfiles';
 import StatusImage from './StatusImage';
 import StatusPageHeader from './StatusPageHeader';
+import Team from './Team';
 import TermsAndLegal from './TermsAndLegal';
 import Testimonials from './Testimonials';
 import TextPanels from './TextPanels';
@@ -49,6 +51,7 @@ export default {
   Modals,
   ModalsHOC,
   OfficeAddresses,
+  OfficesMap,
   PageHeader,
   Platforms,
   PlatformsSection,
@@ -59,6 +62,7 @@ export default {
   SocialProfiles,
   StatusImage,
   StatusPageHeader,
+  Team,
   TermsAndLegal,
   Testimonials,
   TextPanels,
