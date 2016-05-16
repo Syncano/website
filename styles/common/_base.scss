@@ -41,8 +41,13 @@ strong {
   font-weight: 500;
 }
 
-img {
+img,
+video {
   display: block;
+}
+
+video {
+  max-width: 100%;
 }
 
 a {
