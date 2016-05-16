@@ -19,6 +19,7 @@ import PageHeader from './PageHeader';
 import Platforms from './Platforms';
 import PlatformsSection from './PlatformsSection';
 import Pricing from './Pricing';
+import ScreenDescriptions from './ScreenDescriptions';
 import SlackMessage from './SlackMessage';
 import SlackSlider from './SlackSlider';
 import SliderWrapper from './SliderWrapper';
@@ -58,6 +59,7 @@ export default {
   Platforms,
   PlatformsSection,
   Pricing,
+  ScreenDescriptions,
   SlackMessage,
   SlackSlider,
   SliderWrapper,
