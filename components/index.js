@@ -12,6 +12,7 @@ import Hero from './Hero';
 import ListColumns from './ListColumns';
 import { Modals, ModalsHOC } from './Modals';
 import OfficeAddresses from './OfficeAddresses';
+import OfficesMap from './OfficesMap';
 import PageHeader from './PageHeader';
 import Platforms from './Platforms';
 import PlatformsSection from './PlatformsSection';
@@ -48,6 +49,7 @@ export default {
   Modals,
   ModalsHOC,
   OfficeAddresses,
+  OfficesMap,
   PageHeader,
   Platforms,
   PlatformsSection,
