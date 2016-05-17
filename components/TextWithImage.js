@@ -19,7 +19,7 @@ export default ({ variant, theme, image, headline, textline, children }) => {
         </div>
         <div className="text-with-image__text">
           <h2>{headline}</h2>
-          {textline ? <p>{textline}</p> : null}
+          {textline && <p>{textline}</p>}
           {children}
         </div>
       </div>
