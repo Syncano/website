@@ -14,10 +14,10 @@ export default () => {
         <ContactForm />
         <OfficeAddresses />
         <CTASection>
-          <h2>Rethink how you build apps. Go serverless!</h2>
+          <h2>Set up your backend in minutes</h2>
           <Link
-            to="/about/"
             className="button button--large button--featured"
+            to="/about/"
           >
             Get Started for Free
           </Link>

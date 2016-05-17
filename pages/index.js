@@ -21,7 +21,7 @@ export default () => {
       <div>
         <Hero
           headline={<span>Build powerful apps<br />in half the time</span>}
-          textline="Automate the backend. Set up your own serverless architecture in minutes."
+          textline="Use our serverless platform to set up your backend in minutes."
           image={
             <img
               src={require('./home/hero.svg')}
@@ -41,7 +41,7 @@ export default () => {
         </Hero>
         <TextWithBottomImage
           theme="gray"
-          headline="A serverless app platform to create and manage your API"
+          headline="Create and manage your API from the dashboard"
           textline={`Make your own custom API’s in the cloud. Instantly scale for the web, mobile, and the internet of
             things. Support millions of users without learning the nuts and bolts of handling servers.`}
           image={
@@ -55,7 +55,7 @@ export default () => {
         <TextWithImage
           headline="Assemble your backend with building blocks"
           textline={`Simplify your stack. Piece together one or multiple features as building blocks for your app. Use
-            Syncano as a data hub and easily connect disparate backend systems.`}
+            Syncano Sockets as a data hub and easily connect disparate backend systems.`}
           image={
             <img
               src={require('./home/assemble-your-backend-with-building-blocks.svg')}
@@ -167,10 +167,10 @@ export default () => {
           </Link>
         </TextWithBackground>
         <CTASection>
-          <h2>Rethink how you build apps. Go serverless!</h2>
+          <h2>Set up your backend in minutes</h2>
           <Link
-            to="/about/"
             className="button button--large button--featured"
+            to="/about/"
           >
             Get Started for Free
           </Link>
