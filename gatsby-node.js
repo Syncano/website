@@ -1,3 +1,17 @@
+import _ from 'lodash';
+import CONSTANS from './circle-constans';
+import webpack from 'webpack';
+
+const generateEnvVariables = () => {
+  const variables = {};
+
+  _.forEach(CONSTANS, (variable) => {
+    variables[variable] = JSON.stringify(process.env[variable]);
+  });
+
+  return variables;
+};
+
 exports.modifyWebpackConfig = function(config, env) {
   const imageLoader = env !== 'develop' ? 'file-loader?name=/[hash].[ext]' : 'file-loader';
 
@@ -56,6 +70,8 @@ exports.modifyWebpackConfig = function(config, env) {
     cfg.loader = 'raw-loader';
     return cfg;
   });
+
+  config.plugin('webpack-define', webpack.DefinePlugin, [generateEnvVariables()]);
 
   return config;
 };
