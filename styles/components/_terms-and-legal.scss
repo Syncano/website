@@ -1,14 +1,13 @@
 .terms-and-legal {
-  padding-top: 80px;
+  padding-top: 100px;
   padding-bottom: 80px;
-  background: $color-main-gray;
 
   .terms-and-legal__sidebar {
     display: none;
 
     .terms-and-legal__sidebar__nav-container {
-      padding-top: 10px;
-      transform: translateY(-10px);
+      padding-top: 100px;
+      transform: translateY(-100px);
 
       &.sticky {
         transform: none;
@@ -42,6 +41,7 @@
 
         a {
           color: $color-text-base;
+          text-decoration: none;
 
           &:hover {
             color: $color-main-blue;
@@ -74,18 +74,43 @@
       line-height: 21px;
     }
 
-    p {
+    p,
+    li {
       line-height: 1.5;
+      color: $color-text-base;
+    }
+
+    p,
+    ul {
       margin-bottom: 30px;
-      color: transparentize($color-text-base, .25);
 
       &:last-child {
         margin-bottom: 0;
       }
     }
+
+    li {
+      position: relative;
+      padding-left: 25px;
+
+      &:before {
+        display: block;
+        content: '';
+        width: 3px;
+        height: 3px;
+        background: $color-text-base;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: .75em;
+        transform: translateY(-50%);
+      }
+    }
   }
 
   @include medium {
+    padding-top: 170px;
+
     .inner {
       display: flex;
     }
@@ -110,15 +135,11 @@
       h4 {
         font-size: 18px;
       }
-
-      p {
-        color: $color-text-base;
-      }
     }
   }
 
   @include large {
-    padding-top: 110px;
+    padding-top: 200px;
     padding-bottom: 110px;
 
     .terms-and-legal__sidebar {
@@ -138,14 +159,14 @@
         margin-top: 40px;
       }
 
-      p {
+      p,
+      ul {
         margin-bottom: 40px;
       }
     }
   }
 
   @include very-large {
-    padding-top: 120px;
     padding-bottom: 120px;
   }
 }
