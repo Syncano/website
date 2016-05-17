@@ -10,7 +10,7 @@ const ModalSignUp = (props, { auth, modals }) => {
       <div className="modal__content">
         <div className="inner">
           <h2>Sign up and start building apps</h2>
-          <p>Syncano is a serverless platform to publish and manage your app. Free usage for 6 months, no credit card
+          <p>Syncano is a serverless platform to setup your backend in minutes. Free usage for 6 months, no credit card
           required.</p>
 
           <div className="modal__content_form form">
