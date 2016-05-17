@@ -1,7 +1,10 @@
 import React from 'react';
+import Formsy from 'formsy-react';
 import ModalWrapper from './ModalWrapper';
+import ModalTextField from './ModalTextField';
+import AuthHOC from '../AuthHOC';
 
-const ModalLogIn = (props, { modals }) => {
+const ModalLogIn = (props, { auth, modals }) => {
   return (
     <ModalWrapper isOpen={modals.logIn.isOpen}>
       <div className="modal__content">
@@ -10,25 +13,27 @@ const ModalLogIn = (props, { modals }) => {
           <p>Log in to the Syncano dashboard below:</p>
 
           <div className="modal__content_form form">
-            <form>
-              <input
+            <Formsy.Form onValidSubmit={(model) => auth.handlePasswordAuth('login', model)}>
+              <ModalTextField
                 className="form__input"
+                name="email"
+                validations="isEmail"
                 type="email"
                 placeholder="E-mail address"
                 required
               />
-              <input
+              <ModalTextField
                 className="form__input"
                 type="password"
+                name="password"
                 placeholder="Password"
                 required
               />
               <button className="button button--large button--featured">
                 Take me to dashboard
               </button>
-            </form>
+            </Formsy.Form>
           </div>
-
           <div className="modal__content__login-options">
             <h3 className="modal__content__login-options__headline">
               <span>or Log in with</span>
@@ -36,7 +41,10 @@ const ModalLogIn = (props, { modals }) => {
             <div className="modal__content__login-options__buttons">
               <ul>
                 <li>
-                  <span className="button">
+                  <span
+                    className="button"
+                    onClick={() => auth.handleSocialAuth('google')}
+                  >
                     <img
                       src={require('./images/google.svg')}
                       alt="Log in with Google"
@@ -45,7 +53,10 @@ const ModalLogIn = (props, { modals }) => {
                   </span>
                 </li>
                 <li>
-                  <span className="button">
+                  <span
+                    className="button"
+                    onClick={() => auth.handleSocialAuth('github')}
+                  >
                     <img
                       className="github"
                       src={require('./images/github.svg')}
@@ -55,7 +66,10 @@ const ModalLogIn = (props, { modals }) => {
                   </span>
                 </li>
                 <li>
-                  <span className="button">
+                  <span
+                    className="button"
+                    onClick={() => auth.handleSocialAuth('facebook')}
+                  >
                     <img
                       src={require('./images/facebook.svg')}
                       alt="Log in with Facebook"
@@ -85,7 +99,8 @@ const ModalLogIn = (props, { modals }) => {
 };
 
 ModalLogIn.contextTypes = {
+  auth: React.PropTypes.object,
   modals: React.PropTypes.object
 };
 
-export default ModalLogIn;
+export default AuthHOC(ModalLogIn);

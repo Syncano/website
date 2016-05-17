@@ -1,6 +1,7 @@
 import AboutUs from './AboutUs';
 import AboutUsHeaderImage from './AboutUsHeaderImage';
 import Analytics from './Analytics';
+import AuthHOC from './AuthHOC';
 import BlockquoteSection from './BlockquoteSection';
 import CodePreview from './CodePreview';
 import ContactForm from './ContactForm';
@@ -41,6 +42,7 @@ export default {
   AboutUs,
   AboutUsHeaderImage,
   Analytics,
+  AuthHOC,
   BlockquoteSection,
   CodePreview,
   ContactForm,
