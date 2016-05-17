@@ -10,7 +10,7 @@ import {
   Pricing,
   TextWithImage,
   TextWithBottomImage,
-  TwitterPricingSlider
+  TwitterSlider
 } from '../../components';
 
 export default () => {
@@ -54,7 +54,7 @@ export default () => {
             ]}
           />
         </ListColumns>
-        <TwitterPricingSlider />
+        <TwitterSlider />
         <FAQ />
         <TextWithBottomImage
           variant="no-bottom-margin"
