@@ -108,22 +108,22 @@ export default () => {
             <CodePreview.Item
               title="Swift"
               languageClassName="swift"
-              code={require('!raw!./home/realtime-sync-swift.txt')}
+              code={require('./home/realtime-sync-swift.txt')}
             />
             <CodePreview.Item
               title="Objective-C"
               languageClassName="objectivec"
-              code={require('!raw!./home/realtime-sync-objectivec.txt')}
+              code={require('./home/realtime-sync-objectivec.txt')}
             />
             <CodePreview.Item
               title="JavaScript"
               languageClassName="javascript"
-              code={require('!raw!./home/realtime-sync-javascript.txt')}
+              code={require('./home/realtime-sync-javascript.txt')}
             />
             <CodePreview.Item
               title="Java"
               languageClassName="java"
-              code={require('!raw!./home/realtime-sync-java.txt')}
+              code={require('./home/realtime-sync-java.txt')}
             />
           </CodePreview>
         </PlatformsSection>
