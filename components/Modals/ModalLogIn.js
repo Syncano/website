@@ -44,7 +44,8 @@ const ModalLogIn = (props, { auth, modals }) => {
                 <li>
                   <span
                     className="button"
-                    onClick={() => auth.handleSocialAuth('google')}>
+                    onClick={() => auth.handleSocialAuth('google')}
+                  >
                     <img
                       src={require('./images/google.svg')}
                       alt="Log in with Google"
@@ -55,7 +56,8 @@ const ModalLogIn = (props, { auth, modals }) => {
                 <li>
                   <span
                     className="button"
-                    onClick={() => auth.handleSocialAuth('github')}>
+                    onClick={() => auth.handleSocialAuth('github')}
+                  >
                     <img
                       className="github"
                       src={require('./images/github.svg')}
@@ -67,7 +69,8 @@ const ModalLogIn = (props, { auth, modals }) => {
                 <li>
                   <span
                     className="button"
-                    onClick={() => auth.handleSocialAuth('facebook')}>
+                    onClick={() => auth.handleSocialAuth('facebook')}
+                  >
                     <img
                       src={require('./images/facebook.svg')}
                       alt="Log in with Facebook"

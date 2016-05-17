@@ -43,7 +43,10 @@ const ModalSignUp = (props, { auth, modals }) => {
             <div className="modal__content__login-options__buttons">
               <ul>
                 <li>
-                  <span className="button" onClick={() => auth.handleSocialAuth('google')}>
+                  <span
+                    className="button"
+                    onClick={() => auth.handleSocialAuth('google')}
+                  >
                     <img
                       src={require('./images/google.svg')}
                       alt="Sign up with Google"
@@ -52,7 +55,10 @@ const ModalSignUp = (props, { auth, modals }) => {
                   </span>
                 </li>
                 <li>
-                  <span className="button" onClick={() => auth.handleSocialAuth('github')}>
+                  <span
+                    className="button"
+                    onClick={() => auth.handleSocialAuth('github')}
+                  >
                     <img
                       className="github"
                       src={require('./images/github.svg')}
