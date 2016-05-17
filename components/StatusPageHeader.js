@@ -46,7 +46,7 @@ export default class StatusPageHeader extends Component {
       return 'Partial Outage';
     }
 
-    return null;
+    return status.status.description;
   };
 
   render = () => {
@@ -61,7 +61,7 @@ export default class StatusPageHeader extends Component {
             indicator={status.status.indicator}
             alt={status.status.description}
           />
-          <h2>{this.getHeadlineText(status) ? this.getHeadlineText(status) : status.status.description}</h2>
+          <h2>{this.getHeadlineText(status)}</h2>
           <p>Updated about {moment(status.page.updated_at).fromNow()}. <br /><a href={status.page.url} target="_blank">
           View our status page</a> for more info.</p>
           {children}
