@@ -18,14 +18,14 @@ exports.modifyWebpackConfig = function(config, env) {
   config.removeLoader('mp4');
   config.loader('mp4', function(cfg) {
     cfg.test = /\.mp4/;
-    cfg.loader = 'file-loader';
+    cfg.loader = imageLoader;
     return cfg;
   });
 
   config.removeLoader('ogg');
   config.loader('ogg', function(cfg) {
     cfg.test = /\.ogg/;
-    cfg.loader = 'file-loader';
+    cfg.loader = imageLoader;
     return cfg;
   });
 
@@ -46,14 +46,14 @@ exports.modifyWebpackConfig = function(config, env) {
   config.removeLoader('txt');
   config.loader('txt', function(cfg) {
     cfg.test = /\.txt/;
-    cfg.loader = 'file-loader';
+    cfg.loader = imageLoader;
     return cfg;
   });
 
   config.removeLoader('webm');
   config.loader('webm', function(cfg) {
     cfg.test = /\.webm/;
-    cfg.loader = 'file-loader';
+    cfg.loader = imageLoader;
     return cfg;
   });
 
