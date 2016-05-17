@@ -89,7 +89,7 @@ export default class ModalSignUp extends Component {
         <footer className="modal__footer">
           <div className="modal__footer__column">
             <span onClick={modals.logIn.open}>
-              Already have an account? <strong>Log in</strong>
+              Already have an account? <strong>Log in</strong> to your dashboard.
             </span>
           </div>
         </footer>
