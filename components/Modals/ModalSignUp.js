@@ -29,9 +29,9 @@ export default class ModalSignUp extends Component {
       <ModalWrapper isOpen={modals.signUp.isOpen}>
         <div className="modal__content">
           <div className="inner">
-            <h2>Sign up for free!</h2>
-            <p>Syncano is a lorem ipsum dolor sit amet, consectetur adipiscing elit. No credit card required libero
-            cursus.</p>
+            <h2>Sign up and start building apps</h2>
+            <p>Syncano is a serverless platform to publish and manage your app. Free usage for 6 months, no credit card
+            required.</p>
 
             <div className="modal__content_form form">
               <Formsy.Form onValidSubmit={this.submit}>
@@ -89,7 +89,7 @@ export default class ModalSignUp extends Component {
         <footer className="modal__footer">
           <div className="modal__footer__column">
             <span onClick={modals.logIn.open}>
-              Already have an account? <strong>Log in here!</strong>
+              Already have an account? <strong>Log in</strong> to your dashboard.
             </span>
           </div>
         </footer>
