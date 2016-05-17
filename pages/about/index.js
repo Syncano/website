@@ -18,7 +18,13 @@ export default () => {
           imageSmall2xSrc={require('./header-image-small@2x.jpg')}
           imageMediumSrc={require('./header-image-medium.jpg')}
         />
-        <AboutUs headline="Made for developers, by developers">
+        <AboutUs
+          headline="Made for developers, by developers"
+          imageSrc={require('./about-us.png')}
+          image2xSrc={require('./about-us@2x.png')}
+          imageSmallSrc={require('./about-us-small.png')}
+          imageSmall2xSrc={require('./about-us-small@2x.png')}
+        >
           <p>We believe in the world-changing power of apps and in the developers who build them. And the
           ever-increasing complexity of these apps demanded a new platform made by developers, for developers.</p>
           <p>Syncano eliminates the need for backend development - but unlike other BaaS systems, we’re just getting you
