@@ -37,6 +37,18 @@ export default class StatusPageHeader extends Component {
     axios.get(statusPageStatusUrl).then((response) => this.setState({ status: response.data }));
   };
 
+  getHeadlineText = (status) => {
+    if (status == 'minor' || status == 'major') {
+      return 'Degraded Performance';
+    }
+
+    if (status == 'critical') {
+      return 'Partial Outage';
+    }
+
+    return status.status.description;
+  };
+
   render = () => {
     const { status } = this.state;
     const { children } = this.props;
@@ -49,7 +61,7 @@ export default class StatusPageHeader extends Component {
             indicator={status.status.indicator}
             alt={status.status.description}
           />
-          <h2>{status.status.description}</h2>
+          <h2>{this.getHeadlineText(status)}</h2>
           <p>Updated about {moment(status.page.updated_at).fromNow()}. <br /><a href={status.page.url} target="_blank">
           View our status page</a> for more info.</p>
           {children}
