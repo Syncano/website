@@ -8,7 +8,7 @@
   margin-right: auto;
 
   .slack-message__avatar {
-    width: 50px;
+    width: 36px;
     overflow: hidden;
     margin-bottom: 10px;
     margin-left: auto;
@@ -41,11 +41,15 @@
     .slack-message__avatar {
       margin-bottom: 0;
       margin-right: 15px;
-      flex: 0 0 50px;
+      flex: 0 0 36px;
     }
 
-    .slack-message__content .slack-message__content__author {
-      text-align: left;
+    .slack-message__content {
+      flex: 1;
+
+      .slack-message__content__author {
+        text-align: left;
+      }
     }
   }
 }

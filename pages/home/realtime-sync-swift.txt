@@ -1,11 +1,11 @@
-#import <Syncano.h>
+// Create empty connection
+var connection = Syncano();
 
-@interface Book : SCDataObject
-@property (nonatomic,copy) NSString *title;
-@property (nonatomic,copy) NSString *subtitle;
-@end
+// Create a connection with an account key
+var connection = Syncano({ accountKey: 'MY_ACCOUNT_KEY'});
 
+// Create a connection with a user key
+var connection = Syncano({ userKey: 'USER_KEY'});
 
-
-
-
+// Create a connection with a social token
+var connection = Syncano({ userKey: 'SOCIAL_TOKEN'});

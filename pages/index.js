@@ -41,9 +41,9 @@ export default () => {
         </Hero>
         <TextWithBottomImage
           theme="gray"
-          headline="A serverless app platform to design, publish and manage your API"
-          textline={`Make your own custom API’s in the cloud. Instantly scale for the web, mobile, and the Internet of
-            Things. Support millions of users without learning the nuts and bolts of handling servers.`}
+          headline="A serverless app platform to create and manage your API"
+          textline={`Make your own custom API’s in the cloud. Instantly scale for the web, mobile, and the internet of
+            things. Support millions of users without learning the nuts and bolts of handling servers.`}
           image={
             <img
               src={require('./home/serverless-app-platform.svg')}
@@ -101,14 +101,24 @@ export default () => {
           />
         </FeaturesColumns>
         <PlatformsSection
-          headline="Use the frameworks and languages you already know"
+          headline="Use the frameworks and languages you like"
           bottomContentHeadline="Add realtime communication with a few lines of code"
         >
           <CodePreview variant="no-bottom-radius">
             <CodePreview.Item
-              title="Swift"
-              languageClassName="swift"
-              code={require('./home/realtime-sync-swift.txt')}
+              title="Javascript"
+              languageClassName="javascript"
+              code={require('./home/realtime-sync-javascript.txt')}
+            />
+            <CodePreview.Item
+              title="Python"
+              languageClassName="python"
+              code={require('./home/realtime-sync-python.txt')}
+            />
+            <CodePreview.Item
+              title="Android"
+              languageClassName="java"
+              code={require('./home/realtime-sync-android.txt')}
             />
             <CodePreview.Item
               title="Objective-C"
@@ -116,14 +126,29 @@ export default () => {
               code={require('./home/realtime-sync-objectivec.txt')}
             />
             <CodePreview.Item
-              title="JavaScript"
-              languageClassName="javascript"
-              code={require('./home/realtime-sync-javascript.txt')}
+              title="Swift"
+              languageClassName="swift"
+              code={require('./home/realtime-sync-swift.txt')}
             />
             <CodePreview.Item
-              title="Java"
-              languageClassName="java"
-              code={require('./home/realtime-sync-java.txt')}
+              title="Angular"
+              languageClassName="javascript"
+              code={require('./home/realtime-sync-angular.txt')}
+            />
+            <CodePreview.Item
+              title="Ruby"
+              languageClassName="ruby"
+              code={require('./home/realtime-sync-ruby.txt')}
+            />
+            <CodePreview.Item
+              title="Ember"
+              languageClassName="javascript"
+              code={require('./home/realtime-sync-ember.txt')}
+            />
+            <CodePreview.Item
+              title="Arduino"
+              languageClassName="cpp"
+              code={require('./home/realtime-sync-arduino.txt')}
             />
           </CodePreview>
         </PlatformsSection>
@@ -138,7 +163,7 @@ export default () => {
             to="/help/"
             className="button"
           >
-            Get Help
+            Get support
           </Link>
         </TextWithBackground>
         <CTASection>

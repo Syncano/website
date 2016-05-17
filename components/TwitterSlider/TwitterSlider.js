@@ -52,40 +52,19 @@ export default class TwitterSlider extends Component {
               ]}
             >
               <div>
-                <blockquote className="twitter-tweet" data-conversation="none" data-lang="pl">
-                  <p lang="en" dir="ltr"><a href="https://twitter.com/FawazShak">@FawazShak</a> I&#39;m liking <a href="https://twitter.com/Syncano">@Syncano</a>. Their support exceeds everyone I&#39;ve ever dealt with.</p>
-                  &mdash; Josh Lopez (@DevJoshLopez) <a href="https://twitter.com/DevJoshLopez/status/727236023298625537">2 maja 2016</a>
-                </blockquote>
+                <blockquote className="twitter-tweet" data-lang="pl"><p lang="en" dir="ltr">It&#39;s great to see this platform growing - it&#39;s really worth some minutes of your time to investigate. <a href="https://t.co/pMW4qn1Ly6">https://t.co/pMW4qn1Ly6</a></p>&mdash; Bizzi Body (@BizziBodyDotCom) <a href="https://twitter.com/BizziBodyDotCom/status/712734440062074883">23 marca 2016</a></blockquote>
               </div>
               <div>
-                <blockquote className="twitter-tweet" data-lang="pl">
-                  <p lang="en" dir="ltr">Been using <a href="https://twitter.com/Syncano">@Syncano</a> for a while for all my backend needs. All you <a href="https://twitter.com/hashtag/developer?src=hash">#developer</a> peeps check it out! <a href="https://twitter.com/hashtag/javascript?src=hash">#javascript</a> <a href="https://twitter.com/hashtag/nodejs?src=hash">#nodejs</a> <a href="https://t.co/dr0n68uA82">https://t.co/dr0n68uA82</a></p>
-                  &mdash; Devin Visslailli (@DevinViss) <a href="https://twitter.com/DevinViss/status/723543598843744258">22 kwietnia 2016</a>
-                </blockquote>
+                <blockquote className="twitter-tweet" data-lang="pl"><p lang="en" dir="ltr">Just spent a few minutes trying out <a href="https://twitter.com/Syncano">@syncano</a> . Nice! <a href="https://twitter.com/hashtag/MBaaS?src=hash">#MBaaS</a> <a href="https://twitter.com/hashtag/BaaS?src=hash">#BaaS</a> <a href="https://twitter.com/hashtag/cloud?src=hash">#cloud</a> <a href="https://twitter.com/hashtag/mobile?src=hash">#mobile</a> <a href="https://twitter.com/hashtag/iOS?src=hash">#iOS</a> <a href="https://twitter.com/hashtag/android?src=hash">#android</a></p>&mdash; Karthik Jayakumar (@karthikjai) <a href="https://twitter.com/karthikjai/status/667455738139320320">19 listopada 2015</a></blockquote>
               </div>
               <div>
-                <blockquote className="twitter-tweet" data-lang="pl">
-                  <p lang="en" dir="ltr">Congrats to Forbes Technology Council company <a href="https://twitter.com/Syncano">@Syncano</a> on the launch of Sockets. Great news <a href="https://twitter.com/nikf2001">@Nikf2001</a>! <a href="https://t.co/A5KASS66m8">https://t.co/A5KASS66m8</a></p>
-                  &mdash; Forbes Tech Council (@ForbesTechCncl) <a href="https://twitter.com/ForbesTechCncl/status/721009609604014080">15 kwietnia 2016</a>
-                </blockquote>
+                <blockquote className="twitter-tweet" data-lang="pl"><p lang="en" dir="ltr">damn <a href="https://twitter.com/Syncano">@syncano</a> yall bout to make me flip up alot of my apps backend infrastructure...this service looks sexy!</p>&mdash; SIRVON (@sirvonthomas) <a href="https://twitter.com/sirvonthomas/status/650071291634946048">2 października 2015</a></blockquote>
               </div>
               <div>
-                <blockquote className="twitter-tweet" data-conversation="none" data-lang="pl">
-                  <p lang="en" dir="ltr"><a href="https://twitter.com/FawazShak">@FawazShak</a> I&#39;m liking <a href="https://twitter.com/Syncano">@Syncano</a>. Their support exceeds everyone I&#39;ve ever dealt with.</p>
-                  &mdash; Josh Lopez (@DevJoshLopez) <a href="https://twitter.com/DevJoshLopez/status/727236023298625537">2 maja 2016</a>
-                </blockquote>
+                <blockquote className="twitter-tweet" data-conversation="none" data-lang="pl"><p lang="en" dir="ltr"><a href="https://twitter.com/FawazShak">@FawazShak</a> I&#39;m liking <a href="https://twitter.com/Syncano">@Syncano</a>. Their support exceeds everyone I&#39;ve ever dealt with.</p>&mdash; Josh Lopez (@DevJoshLopez) <a href="https://twitter.com/DevJoshLopez/status/727236023298625537">2 maja 2016</a></blockquote>
               </div>
               <div>
-                <blockquote className="twitter-tweet" data-lang="pl">
-                  <p lang="en" dir="ltr">Been using <a href="https://twitter.com/Syncano">@Syncano</a> for a while for all my backend needs. All you <a href="https://twitter.com/hashtag/developer?src=hash">#developer</a> peeps check it out! <a href="https://twitter.com/hashtag/javascript?src=hash">#javascript</a> <a href="https://twitter.com/hashtag/nodejs?src=hash">#nodejs</a> <a href="https://t.co/dr0n68uA82">https://t.co/dr0n68uA82</a></p>
-                  &mdash; Devin Visslailli (@DevinViss) <a href="https://twitter.com/DevinViss/status/723543598843744258">22 kwietnia 2016</a>
-                </blockquote>
-              </div>
-              <div>
-                <blockquote className="twitter-tweet" data-lang="pl">
-                  <p lang="en" dir="ltr">Congrats to Forbes Technology Council company <a href="https://twitter.com/Syncano">@Syncano</a> on the launch of Sockets. Great news <a href="https://twitter.com/nikf2001">@Nikf2001</a>! <a href="https://t.co/A5KASS66m8">https://t.co/A5KASS66m8</a></p>
-                  &mdash; Forbes Tech Council (@ForbesTechCncl) <a href="https://twitter.com/ForbesTechCncl/status/721009609604014080">15 kwietnia 2016</a>
-                </blockquote>
+                <blockquote className="twitter-tweet" data-lang="pl"><p lang="en" dir="ltr">So awesome, moved all my in game variables onto the <a href="https://twitter.com/Syncano">@Syncano</a> real-time platform. Can edit all game variables on the fly <a href="https://twitter.com/hashtag/GameMaker?src=hash">#GameMaker</a> <a href="https://twitter.com/hashtag/GameDev?src=hash">#GameDev</a></p>&mdash; Thomas Webb (@ReventadorGames) <a href="https://twitter.com/ReventadorGames/status/717796429251497985">6 kwietnia 2016</a></blockquote>
               </div>
             </SliderWrapper>
           </div>

@@ -1,0 +1,11 @@
+>>> import syncano
+>>> connection = syncano.connect(api_key='abcd')
+>>> instance = connection.instances.create(name='dummy_test', description='test')
+>>> instance
+<Instance: dummy_test>
+
+>>> api_key = instance.api_keys.create()
+>>> api_key
+<ApiKey: 47>
+>>> api_key.api_key
+u'aad17f86d41483db7088ad2549ccb87902d60e45'
