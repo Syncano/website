@@ -35,6 +35,7 @@ import TextWithBottomImage from './TextWithBottomImage';
 import TextWithImage from './TextWithImage';
 import TopBar from './TopBar';
 import Travolta from './Travolta';
+import TwitterPricingSlider from './TwitterPricingSlider';
 import TwitterSlider from './TwitterSlider';
 
 export default {
@@ -76,5 +77,6 @@ export default {
   TextWithImage,
   TopBar,
   Travolta,
+  TwitterPricingSlider,
   TwitterSlider
 };

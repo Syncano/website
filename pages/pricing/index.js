@@ -9,7 +9,8 @@ import {
   PageHeader,
   Pricing,
   TextWithImage,
-  TextWithBottomImage
+  TextWithBottomImage,
+  TwitterPricingSlider
 } from '../../components';
 
 export default () => {
@@ -26,15 +27,16 @@ export default () => {
           theme="gray"
           image={
             <img
-              src={require('../../images/illustrations/pricing.svg')}
+              src={require('./pricing-that-scales-with-your-app.svg')}
               alt="pricing"
             />
           }
           headline="Pricing that scales with your app"
-          textline={`Pay as you grow. Every app comes in different shapes and sizes. You are in control to adjust your
-            plan based on your needs and growth. Easily upgrade or downgrade your account at any time.`}
+          textline={`Every app comes in different shapes and sizes. We’re here for you every step of the way - from beta
+            to top ten app store ranking. Pay as you grow and adjust your plan based on your needs. Easily upgrade,
+            downgrade, or cancel your account at any time.`}
         />
-        <ListColumns headline="Pricing that scales with your app">
+        <ListColumns headline="No hidden fees. You're in control.">
           <ListColumns.Column
             listItems={[
               'No credit card required to start building',
@@ -52,6 +54,7 @@ export default () => {
             ]}
           />
         </ListColumns>
+        <TwitterPricingSlider />
         <FAQ />
         <TextWithBottomImage
           variant="no-bottom-margin"
