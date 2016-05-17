@@ -49,11 +49,11 @@ export default () => {
               className="social-profiles__group__profiles__icon"
               href="https://twitter.com/SyncanoStatus/"
               target="_blank"
-              title="Twitter"
+              title="Twitter Status"
             >
               <img
                 src={require('./images/twitter.svg')}
-                alt="Twitter"
+                alt="Twitter Status"
               />
               <div className="social-profiles__group__profiles__icon__dot">
                 <img

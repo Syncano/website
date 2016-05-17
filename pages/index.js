@@ -36,7 +36,7 @@ export default () => {
             Get Started for Free
           </Link>
           <p className="hero__text__button-description">
-            (6 months free &bull; No credit card required)
+            6 months free &bull; No credit card required
           </p>
         </Hero>
         <TextWithBottomImage
@@ -150,7 +150,7 @@ export default () => {
             Get Started for Free
           </Link>
           <p className="cta-section__button-description">
-            (6 months free &bull; No credit card required)
+            6 months free &bull; No credit card required
           </p>
         </CTASection>
         <Footer />
