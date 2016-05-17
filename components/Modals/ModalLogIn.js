@@ -12,7 +12,6 @@ const ModalLogIn = (props, { modals }) => {
           <div className="modal__content_form form">
             <form>
               <input
-                ref={(component) => console.log(component)}
                 className="form__input"
                 type="email"
                 placeholder="E-mail address"
