@@ -67,6 +67,14 @@
     margin-top: 40px;
   }
 
+  &.twitter-slider--pricing {
+    background: $color-main-azure;
+
+    .twitter-slider__slider {
+      margin-top: 0;
+    }
+  }
+
   @include medium {
     h2 {
       font-size: 30px;
@@ -99,5 +107,10 @@
   @include very-large {
     padding-top: 140px;
     padding-bottom: 140px;
+
+    &.twitter-slider--pricing {
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
   }
 }
