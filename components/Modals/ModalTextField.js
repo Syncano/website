@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { HOC } from 'formsy-react';
 import classNames  from 'classnames';
 
-class ModalSignUpInput extends Component {
+class ModalTextField extends Component {
   getClassName = () => {
     const { showError } = this.props;
 
     return classNames({
       'modal__content_form__input': true,
-      'is-invalid': (showError()),
+      'is-invalid': (showError())
     });
   };
 
@@ -24,6 +24,6 @@ class ModalSignUpInput extends Component {
       />
     );
   };
-};
+}
 
-export default HOC(ModalSignUpInput);
+export default HOC(ModalTextField);
