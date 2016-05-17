@@ -6,8 +6,8 @@ import { HamburgerMenu, HamburgerMenuHOC } from '../HamburgerMenu';
 const TopBar = (props, { hamburgerMenu, modals }) => {
   return (
     <Headroom
-      disableInlineStyles
       pinStart={1}
+      disableInlineStyles
     >
       <div className="inner">
         <div className="top-bar__logo">
@@ -21,9 +21,9 @@ const TopBar = (props, { hamburgerMenu, modals }) => {
                 alt="Syncano Logo"
               />
               <img
+                className="white"
                 src={require('./images/logo-white.svg')}
                 alt="Syncano Logo"
-                className="white"
               />
             </Link>
           </h1>
@@ -38,39 +38,39 @@ const TopBar = (props, { hamburgerMenu, modals }) => {
               alt="hamburger icon"
             />
             <img
+              className="close"
               src={require('./images/close.svg')}
               alt="hamburger icon"
-              className="close"
             />
           </div>
           <div className="top-bar__nav__menu">
             <ul>
               <li>
                 <Link
-                  to="/features/"
                   className="button button--noborder"
                   activeClassName="is-active"
+                  to="/features/"
                 >
                   Features
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/pricing/"
                   className="button button--noborder"
                   activeClassName="is-active"
+                  to="/pricing/"
                 >
                   Pricing
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/blog/"
+                <a
                   className="button button--noborder"
-                  activeClassName="is-active"
+                  href="https://www.syncano.io/blog/"
+                  target="_blank"
                 >
                   Blog
-                </Link>
+                </a>
               </li>
               <li>
                 <span
