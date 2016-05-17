@@ -1,11 +1,11 @@
-// Create empty connection
-var connection = Syncano();
+>>> import syncano
+>>> connection = syncano.connect(api_key='abcd')
+>>> instance = connection.instances.create(name='dummy_test', description='test')
+>>> instance
+<Instance: dummy_test>
 
-// Create a connection with an account key
-var connection = Syncano({ accountKey: 'MY_ACCOUNT_KEY'});
-
-// Create a connection with a user key
-var connection = Syncano({ userKey: 'USER_KEY'});
-
-// Create a connection with a social token
-var connection = Syncano({ userKey: 'SOCIAL_TOKEN'});
+>>> api_key = instance.api_keys.create()
+>>> api_key
+<ApiKey: 47>
+>>> api_key.api_key
+u'aad17f86d41483db7088ad2549ccb87902d60e45'

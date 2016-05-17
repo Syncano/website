@@ -108,47 +108,47 @@ export default () => {
             <CodePreview.Item
               title="Javascript"
               languageClassName="javascript"
-              code={require('!raw!./home/realtime-sync-javascript.txt')}
+              code={require('./home/realtime-sync-javascript.txt')}
             />
             <CodePreview.Item
               title="Python"
               languageClassName="python"
-              code={require('!raw!./home/realtime-sync-python.txt')}
+              code={require('./home/realtime-sync-python.txt')}
             />
             <CodePreview.Item
               title="Android"
               languageClassName="java"
-              code={require('!raw!./home/realtime-sync-android.txt')}
+              code={require('./home/realtime-sync-android.txt')}
             />
             <CodePreview.Item
               title="Objective-C"
               languageClassName="objectivec"
-              code={require('!raw!./home/realtime-sync-objectivec.txt')}
+              code={require('./home/realtime-sync-objectivec.txt')}
             />
             <CodePreview.Item
               title="Swift"
               languageClassName="swift"
-              code={require('!raw!./home/realtime-sync-swift.txt')}
+              code={require('./home/realtime-sync-swift.txt')}
             />
             <CodePreview.Item
               title="Angular"
               languageClassName="javascript"
-              code={require('!raw!./home/realtime-sync-angular.txt')}
+              code={require('./home/realtime-sync-angular.txt')}
             />
             <CodePreview.Item
               title="Ruby"
               languageClassName="ruby"
-              code={require('!raw!./home/realtime-sync-ruby.txt')}
+              code={require('./home/realtime-sync-ruby.txt')}
             />
             <CodePreview.Item
               title="Ember"
               languageClassName="javascript"
-              code={require('!raw!./home/realtime-sync-ember.txt')}
+              code={require('./home/realtime-sync-ember.txt')}
             />
             <CodePreview.Item
               title="Arduino"
               languageClassName="cpp"
-              code={require('!raw!./home/realtime-sync-arduino.txt')}
+              code={require('./home/realtime-sync-arduino.txt')}
             />
           </CodePreview>
         </PlatformsSection>
