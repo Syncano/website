@@ -14,7 +14,6 @@ import FeaturesColumns from './FeaturesColumns';
 import Footer from './Footer';
 import HamburgerMenu from './HamburgerMenu';
 import Hero from './Hero';
-import HexagonleIconColumns from './HexagonleIconColumns';
 import ListColumns from './ListColumns';
 import { Modals, ModalsHOC } from './Modals';
 import OfficeAddresses from './OfficeAddresses';
@@ -58,7 +57,6 @@ export default {
   FeaturesColumns,
   HamburgerMenu,
   Hero,
-  HexagonleIconColumns,
   ListColumns,
   Modals,
   ModalsHOC,
