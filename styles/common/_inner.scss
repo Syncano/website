@@ -13,6 +13,10 @@
     padding: 0;
   }
 
+  &.inner--column-paragraphs {
+    max-width: 980px;
+  }
+
   &.inner--list-columns {
     max-width: 875px;
   }
