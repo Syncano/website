@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="78px" height="88px" viewBox="0 0 78 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 14</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop-design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Features" transform="translate(-463.000000, -6059.000000)">
+            <g id="Group-13" transform="translate(0.000000, 5396.000000)">
+                <g id="Group-14" transform="translate(463.000000, 663.000000)">
+                    <path d="M35.5238347,0.829552857 C37.4344704,-0.277494758 40.5369227,-0.275540049 42.4458143,0.829552857 L74.5375323,19.4080459 C76.4498004,20.5150935 78,23.2113212 78,25.421507 L78,62.578493 C78,64.7925883 76.4464239,67.4868612 74.5375323,68.5919541 L42.4458143,87.1704471 C40.5335462,88.2774948 37.4310968,88.27554 35.5238347,87.1704471 L3.45951196,68.5919541 C1.54887626,67.4849065 3.54160159e-14,64.7886788 3.41998186e-14,62.578493 L1.37534723e-14,25.421507 C1.25351238e-14,23.2074117 1.55224986,20.5131388 3.45951196,19.4080459 L35.5238347,0.829552857 Z" id="Polygon-16" fill="#FFCC01"></path>
+                    <polygon id="Shape" fill="#FFFFFF" points="42 31 56 44 42 57 42 51 28 51 28 37 42 37"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

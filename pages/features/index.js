@@ -1,7 +1,7 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { CircleIconColumns, CTASection, ColumnParagraphs, Footer, PageHeader, ScreenDescriptions } from '../../components';
+import { CircleIconColumns, CTASection, ColumnParagraphs, Footer, HexagonleIconColumns, PageHeader, ScreenDescriptions } from '../../components';
 
 export default () => {
   return (
@@ -86,6 +86,34 @@ export default () => {
               with new integrations, keeping your app up-to-speed with the rest of the world.`}
           />
         </ColumnParagraphs>
+        <HexagonleIconColumns headline="Automations">
+          <HexagonleIconColumns.Column
+            iconSrc={require('./realtime-communication.svg')}
+            headline="Realtime Communication"
+            text={`Add realtime functionality to your app with Channels. Users can subscribe to Channels to get
+              notifications of changes that happen to Objects connected to those Channels. Grant your users the ability
+              to send custom notification messages.`}
+          />
+          <HexagonleIconColumns.Column
+            iconSrc={require('./set-schedules.svg')}
+            headline="Set Schedules"
+            text={`Execute your Scripts at a desired date and/or time interval by setting the desired time interval to
+              interval_sec or crontab. We even support timezones so you can launch different schedules at different
+              times!`}
+          />
+          <HexagonleIconColumns.Column
+            iconSrc={require('./create-triggers.svg')}
+            headline="Create Triggers"
+            text={`Execute a Server-Side Script when a Data Object inside a selected Class is created, updated or
+              deleted. Each Trigger is customizable to fit your app’s needs.`}
+          />
+          <HexagonleIconColumns.Column
+            iconSrc={require('./push-notifications.svg')}
+            headline="Push Notifications"
+            text={`Instantly message your Android or iPhone users with timely and relevant content instead of
+              programming it yourself.`}
+          />
+        </HexagonleIconColumns>
         <CircleIconColumns headline="User Authentication">
           <CircleIconColumns.Column
             iconSrc={require('./create-custom-users.svg')}

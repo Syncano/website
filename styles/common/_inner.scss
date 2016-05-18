@@ -13,7 +13,8 @@
     padding: 0;
   }
 
-  &.inner--column-paragraphs {
+  &.inner--column-paragraphs,
+  &.inner--hexagon-icon-columns {
     max-width: 980px;
   }
 
