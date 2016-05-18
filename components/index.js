@@ -4,6 +4,7 @@ import Analytics from './Analytics';
 import AuthHOC from './AuthHOC';
 import BlockquoteSection from './BlockquoteSection';
 import CodePreview from './CodePreview';
+import ColumnParagraphs from './ColumnParagraphs';
 import ContactForm from './ContactForm';
 import CounterBoxes from './CounterBoxes';
 import CTASection from './CTASection';
@@ -45,6 +46,7 @@ export default {
   AuthHOC,
   BlockquoteSection,
   CodePreview,
+  ColumnParagraphs,
   ContactForm,
   CounterBoxes,
   CTASection,
