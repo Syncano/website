@@ -1,7 +1,7 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { CTASection, ColumnParagraphs, Footer, PageHeader, ScreenDescriptions } from '../../components';
+import { CircleIconColumns, CTASection, ColumnParagraphs, Footer, PageHeader, ScreenDescriptions } from '../../components';
 
 export default () => {
   return (
@@ -86,6 +86,26 @@ export default () => {
               with new integrations, keeping your app up-to-speed with the rest of the world.`}
           />
         </ColumnParagraphs>
+        <CircleIconColumns headline="User Authentication">
+          <CircleIconColumns.Column
+            iconSrc={require('./create-custom-users.svg')}
+            headline="Create Custom Users"
+            text={`Allow users to register and sign into your app instantly and securely. Customize your users with User
+              Profiles - define custom fields to segment your users with data Classes.`}
+          />
+          <CircleIconColumns.Column
+            iconSrc={require('./adding-users-with-groups.svg')}
+            headline="Adding Users with Groups"
+            text={`Construct different levels of permission to data stored on Syncano. With groups, you control the data
+              that your users have control over.`}
+          />
+          <CircleIconColumns.Column
+            iconSrc={require('./instant-social-authentication.svg')}
+            headline="Instant Social Authentication"
+            text={`Allow your users to sign up with Facebook, Google, Twitter and Linkedin, and we’ll automatically
+              create their account in Syncano in the same format as a traditional username/password login`}
+          />
+        </CircleIconColumns>
         <CTASection>
           <h2>Set up your backend in minutes</h2>
           <Link

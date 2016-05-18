@@ -3,6 +3,7 @@ import AboutUsHeaderImage from './AboutUsHeaderImage';
 import Analytics from './Analytics';
 import AuthHOC from './AuthHOC';
 import BlockquoteSection from './BlockquoteSection';
+import CircleIconColumns from './CircleIconColumns';
 import CodePreview from './CodePreview';
 import ColumnParagraphs from './ColumnParagraphs';
 import ContactForm from './ContactForm';
@@ -45,6 +46,7 @@ export default {
   Analytics,
   AuthHOC,
   BlockquoteSection,
+  CircleIconColumns,
   CodePreview,
   ColumnParagraphs,
   ContactForm,
