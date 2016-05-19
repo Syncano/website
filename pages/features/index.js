@@ -102,14 +102,14 @@ export default () => {
         <ColumnParagraphs headline="Server-side Code">
           <ColumnParagraphs.Paragraph
             iconSrc={require('./snippets.svg')}
-            headline="Snippets (Scripts)"
+            headline="Scripts"
             text={`Scripts are snippets of code that allow you to run complex code on Syncano’s servers. We support a
               wide range of languages including NodeJS, Python, Swift, Golang, PHP or Ruby. Learn about all the ways you
               can run them under Automations.`}
           />
           <ColumnParagraphs.Paragraph
-            iconSrc={require('./snippet-endpoint.svg')}
-            headline="Snippet Endpoint"
+            iconSrc={require('./script-endpoint.svg')}
+            headline="Script Endpoint"
             text={`Each Snippet comes with the ability to enable or disable their public endpoint. Make POST or GET
               requests to your Snippet and open up the possibility of how and where to run your Snippet Script.`}
           />
