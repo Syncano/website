@@ -34,10 +34,17 @@
 
   .footer__logo {
     margin-bottom: 46px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    img {
-      display: inline-block;
+    a {
+      display: block;
+      transition: $transition-default;
+
+      &:hover {
+        opacity: .8;
+      }
     }
 
     .footer__logo__copyright {
@@ -134,8 +141,12 @@
       text-align: left;
     }
 
-    .footer__logo .footer__logo__copyright {
-      display: block;
+    .footer__logo {
+      align-items: flex-start;
+
+      .footer__logo__copyright {
+        display: block;
+      }
     }
 
     .footer__columns {

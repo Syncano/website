@@ -29,15 +29,17 @@ export default () => {
             />
           }
         >
-          <Link
-            to="/features/"
-            className="button button--large button--featured"
-          >
-            Get Started for Free
-          </Link>
-          <p className="hero__text__button-description">
-            6 months free &bull; No credit card required
-          </p>
+          <div className="hero__text__button-container">
+            <Link
+              to="/features/"
+              className="button button--large button--featured"
+            >
+              Get Started for Free
+            </Link>
+            <p className="hero__text__button-description">
+              6 months free &bull; No credit card required
+            </p>
+          </div>
         </Hero>
         <TextWithBottomImage
           theme="gray"
@@ -102,7 +104,7 @@ export default () => {
         </FeaturesColumns>
         <PlatformsSection
           headline="Use the frameworks and languages you like"
-          bottomContentHeadline="Add realtime communication with a few lines of code"
+          bottomContentHeadline="Add social authentication with a few lines of code"
         >
           <CodePreview variant="no-bottom-radius">
             <CodePreview.Item

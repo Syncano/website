@@ -28,14 +28,19 @@
       color: $color-text-base;
     }
 
-    .button {
-      margin-top: 50px;
-    }
+    .hero__text__button-container {
+      display: inline-block;
+      text-align: center;
 
-    .hero__text__button-description {
-      color: transparentize($color-text-base, .4);
-      font-size: 12px;
-      margin-top: 20px;
+      .button {
+        margin-top: 50px;
+      }
+
+      .hero__text__button-description {
+        color: transparentize($color-text-base, .4);
+        font-size: 12px;
+        margin-top: 20px;
+      }
     }
   }
 
@@ -61,7 +66,7 @@
         max-width: 350px;
       }
 
-      .button {
+      .hero__text__button-container .button {
         margin-top: 30px;
       }
     }
@@ -86,12 +91,14 @@
         margin-top: 30px;
       }
 
-      .button {
-        margin-top: 60px;
-      }
+      .hero__text__button-container {
+        .button {
+          margin-top: 60px;
+        }
 
-      .hero__text__button-description {
-        font-size: 14px;
+        .hero__text__button-description {
+          font-size: 14px;
+        }
       }
     }
 

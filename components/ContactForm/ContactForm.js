@@ -90,7 +90,7 @@ export default class ContactForm extends Component {
             name="_gotcha"
             style={{ display: 'none' }}
           />
-          <button className="button button--large button--featured">
+          <button className="button button--large button--filled">
             Send message
           </button>
         </Formsy.Form>

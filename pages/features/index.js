@@ -18,7 +18,7 @@ export default () => {
       <div>
         <PageHeader
           headline="Features"
-          textline="Rapidly assemble and orchestrate building blocks for your app without a backend or server."
+          textline="Rapidly assemble building blocks for your app without a backend or server"
         />
         <TextWithBottomImage
           theme="gray"
@@ -99,7 +99,7 @@ export default () => {
               the data you need with complex filtering and ordering! `}
           />
         </ScreenDescriptions>
-        <ColumnParagraphs headline="Server-side Code">
+        <ColumnParagraphs headline="Server-side code">
           <ColumnParagraphs.Paragraph
             iconSrc={require('./snippets.svg')}
             headline="Scripts"
@@ -114,22 +114,16 @@ export default () => {
               requests to your Snippet and open up the possibility of how and where to run your Snippet Script.`}
           />
           <ColumnParagraphs.Paragraph
-            iconSrc={require('./cloud-code-editor.svg')}
-            headline="Cloud Code Editor"
-            text={`Edit your Snippet Script with our Dashboard. Our code editor allows you to write, run and trace your
-              code right inside our Dashboard. Now you can work on your app all in one place.`}
+            iconSrc={require('./integrate.svg')}
+            headline="Integrate"
+            text={`Connect your app with our constantly updating list of integrations. We’ll help you stay up-to-date
+              with new integrations, keeping your app up-to-speed with the rest of the world.`}
           />
           <ColumnParagraphs.Paragraph
             iconSrc={require('./environmental-variables.svg')}
             headline="Environmental Variables"
             text={`Each Snippet can be set to environmental variables stored in your configuration settings. Store API
               keys and frequently used variables in a more permanent way!`}
-          />
-          <ColumnParagraphs.Paragraph
-            iconSrc={require('./integrate.svg')}
-            headline="Integrate"
-            text={`Connect your app with our constantly updating list of integrations. We’ll help you stay up-to-date
-              with new integrations, keeping your app up-to-speed with the rest of the world.`}
           />
         </ColumnParagraphs>
         <FeaturesColumns headline="Automations">
