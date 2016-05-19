@@ -1,5 +1,5 @@
 .screen-descriptions {
-  padding-top: 80px;
+  padding-top: (80px + 25px);
   padding-bottom: 80px;
   text-align: center;
   background: $color-main-azure;
@@ -27,8 +27,6 @@
       .screen-descriptions__screens__screen__image {
         img,
         picture {
-          border-radius: 8px;
-          box-shadow: 0 5px 30px rgba(34, 131, 172, .4);
           max-width: 100%;
           margin-left: auto;
           margin-right: auto;
@@ -52,6 +50,8 @@
   }
 
   @include medium {
+    padding-top: (80px + 50px);
+
     h2 {
       font-size: 30px;
     }
@@ -94,6 +94,9 @@
   }
 
   @include large {
+    padding-top: (110px + 75px);
+    padding-bottom: 110px;
+
     h2 {
       font-size: 40px;
     }
@@ -118,5 +121,10 @@
         }
       }
     }
+  }
+
+  @include very-large {
+    padding-top: (140px + 75px);
+    padding-bottom: 140px;
   }
 }

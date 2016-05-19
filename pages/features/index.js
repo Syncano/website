@@ -1,7 +1,16 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { CircleIconColumns, CTASection, ColumnParagraphs, FeaturesColumns, Footer, PageHeader, ScreenDescriptions } from '../../components';
+import {
+  CircleIconColumns,
+  CTASection,
+  ColumnParagraphs,
+  FeaturesColumns,
+  Footer,
+  PageHeader,
+  ScreenDescriptions,
+  TextWithBottomImage
+} from '../../components';
 
 export default () => {
   return (
@@ -9,7 +18,44 @@ export default () => {
       <div>
         <PageHeader
           headline="Features"
-          textline="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          textline="Rapidly assemble and orchestrate building blocks for your app without a backend or server."
+        />
+        <TextWithBottomImage
+          theme="gray"
+          headline="Customize individual features as Sockets"
+          textline={`Sockets are the layer stacked between Syncano’s infrastructure and core, and your application.
+            Easily configure, combine and create your own Sockets for your app. Instantly add new functionality to your
+            applications exactly the way you want. `}
+          image={
+            <img
+              src={require('./customize-individual-features-as-sockets.svg')}
+              alt="Customize individual features as Sockets"
+            />
+          }
+        />
+        <TextWithBottomImage
+          variant="no-bottom-padding minus-bottom-margin"
+          theme="purple"
+          headline="Collaborate better with our Dashboard"
+          textline={`Visualize your data in our Dashboard instead of building out your own UI. Edit and test your
+            scripts, manage all of your apps and users in one place, collaborate with multiple admins, and more - all
+            from one place.`}
+          image={
+            <picture>
+              <source
+                media="(min-width: 321px)"
+                srcSet={`${require('./collaborate-better-with-our-dashboard-small.jpg')} 1x, ${require('./collaborate-better-with-our-dashboard-small@2x.jpg')} 2x`}
+              />
+              <source
+                srcSet={`${require('./collaborate-better-with-our-dashboard.jpg')} 1x, ${require('./collaborate-better-with-our-dashboard@2x.jpg')} 2x`}
+              />
+              <img
+                className="browser-image"
+                src={require('./collaborate-better-with-our-dashboard-small@2x.jpg')}
+                alt="Collaborate better with our Dashboard"
+              />
+            </picture>
+          }
         />
         <ScreenDescriptions headline="Data Management">
           <ScreenDescriptions.Screen

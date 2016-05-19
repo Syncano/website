@@ -19,6 +19,7 @@ export default ({ variant, imageSrc, image2xSrc, imageSmallSrc, imageSmall2xSrc,
             srcSet={`${imageSrc} 1x, ${image2xSrc} 2x`}
           />
           <img
+            className="browser-image"
             src={imageSmall2xSrc}
             alt={headline}
           />
