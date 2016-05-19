@@ -13,7 +13,8 @@
     padding: 0;
   }
 
-  &.inner--column-paragraphs {
+  &.inner--column-paragraphs,
+  &.inner--features-columns {
     max-width: 980px;
   }
 
