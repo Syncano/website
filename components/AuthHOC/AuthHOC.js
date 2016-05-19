@@ -17,6 +17,7 @@ export default (ComposedComponent) => (
     getChildContext = () => {
       const auth = {
         handlePasswordAuth: this.handlePasswordAuth,
+        handlePasswordReset: this.handlePasswordReset,
         handleSocialAuth: this.handleSocialAuth
       };
 
@@ -30,12 +31,26 @@ export default (ComposedComponent) => (
       Account[type]({ email, password })
         .then((data) => this.redirectToDashboard(data.account_key))
         .catch((error) => {
-        // error message here
-      });
+          // error message here
+        });
+    };
+
+    handlePasswordReset = (type, { email }) => {
+      const { syncanoAPIBaseUrl } = config;
+      const { Account } = Syncano({ baseUrl: syncanoAPIBaseUrl });
+
+      Account[type]({ email })
+        .then((data) => {
+
+        })
+        .catch((error) => {
+          // error message here
+        });
     };
 
     handleSocialAuth = (network) => {
       Hello(network).login().then((data) => {
+        const { syncanoAPIBaseUrl } = config;
         const { access_token } = data.authResponse;
 
         if (data.network === 'google') {
@@ -43,7 +58,7 @@ export default (ComposedComponent) => (
         }
 
         axios
-          .post(`${config.syncanoAPIBaseUrl}v1/account/auth/${data.network}/`, { access_token })
+          .post(`${syncanoAPIBaseUrl}v1/account/auth/${data.network}/`, { access_token })
           .then((response) => this.redirectToDashboard(response.data.account_key))
           .catch((error) => {
             // error message here
