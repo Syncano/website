@@ -27,8 +27,8 @@ export default () => {
           theme="gray"
           image={
             <img
-              src={require('./pricing-that-scales-with-your-app.svg')}
-              alt="pricing"
+              src={require('./pricing-that-scales-with-your-users.svg')}
+              alt="pricing chart"
             />
           }
           headline="Pricing that scales with your users"

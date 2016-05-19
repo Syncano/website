@@ -31,6 +31,10 @@
   }
 
   @include medium {
+    margin-top: -80px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
     .counter-boxes__boxes {
       margin-left: -30px;
       margin-right: -30px;

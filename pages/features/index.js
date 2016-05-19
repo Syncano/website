@@ -9,7 +9,8 @@ import {
   Footer,
   PageHeader,
   ScreenDescriptions,
-  TextWithBottomImage
+  TextWithBottomImage,
+  TextWithImage
 } from '../../components';
 
 export default () => {
@@ -20,12 +21,13 @@ export default () => {
           headline="Features"
           textline="Rapidly assemble building blocks for your app without a backend or server"
         />
-        <TextWithBottomImage
+        <TextWithImage
+          variant="image-right"
           theme="gray"
-          headline="Customize individual features as Sockets"
-          textline={`Sockets are the layer stacked between Syncano’s infrastructure and core, and your application.
-            Easily configure, combine and create your own Sockets for your app. Instantly add new functionality to your
-            applications exactly the way you want. `}
+          headline="Customize features as Sockets"
+          textline={`Sockets are the layer stacked between Syncano’s core and your application. Easily configure,
+            combine and create Sockets for your app. Instantly add new functionality to your applications exactly the
+            way you want.`}
           image={
             <img
               src={require('./customize-individual-features-as-sockets.svg')}
@@ -37,9 +39,8 @@ export default () => {
           variant="no-bottom-padding minus-bottom-margin"
           theme="purple"
           headline="Collaborate better with our Dashboard"
-          textline={`Visualize your data in our Dashboard instead of building out your own UI. Edit and test your
-            scripts, manage all of your apps and users in one place, collaborate with multiple admins, and more - all
-            from one place.`}
+          textline={`Visualize your data in our Dashboard to have a complete overview of your applications. Edit and
+            test your scripts, manage users, collaborate with multiple admins, and more - all from one place.`}
           image={
             <picture>
               <source
@@ -63,9 +64,9 @@ export default () => {
             image2xSrc={require('./screen-1@2x.jpg')}
             imageSmallSrc={require('./screen-1-small.jpg')}
             imageSmall2xSrc={require('./screen-1-small@2x.jpg')}
-            headline="Define Your Classes"
-            text={`Control how you define the templates for each of your data objects. Every data object you create will
-              be defined by your own customized class.`}
+            headline="Define your classes"
+            text={`Control how you define the structure for each of your data objects. Every data object you create will
+              inherit the properties of own customized class.`}
           />
           <ScreenDescriptions.Screen
             variant="image-right"
@@ -73,20 +74,19 @@ export default () => {
             image2xSrc={require('./screen-2@2x.jpg')}
             imageSmallSrc={require('./screen-2-small.jpg')}
             imageSmall2xSrc={require('./screen-2-small@2x.jpg')}
-            headline="Customize Class Schemas"
-            text={`Create fields with specific types to give you complete flexibility with no loss in complexity. Our
-              pre-set custom fields supporting several different data types include string, text, integer, float,
-              boolean, datetime, file and reference. Arrays are coming soon!`}
+            headline="Customize class schemas"
+            text={`Create fields with specific types to get a flexible architecture. Our pre-set custom fields include
+              string, text, integer, float, boolean, datetime, file, object, array and reference.`}
           />
           <ScreenDescriptions.Screen
             imageSrc={require('./screen-3.jpg')}
             image2xSrc={require('./screen-3@2x.jpg')}
             imageSmallSrc={require('./screen-3-small.jpg')}
             imageSmall2xSrc={require('./screen-3-small@2x.jpg')}
-            headline="Objects"
-            text={`Store your data on Syncano’s relational database as JSON objects that contain key-value pairs that
-              you define. Control what your users have access to. Define your own data views on the backend instead of
-              updating every client-side application.`}
+            headline="Create data objects"
+            text={`Store your data as JSON objects that contain key-value pairs that you define. Control what your users
+              have access to. Define your own data views on the backend instead of updating every client-side
+              application.`}
           />
           <ScreenDescriptions.Screen
             variant="image-right"
@@ -94,84 +94,88 @@ export default () => {
             image2xSrc={require('./screen-4@2x.jpg')}
             imageSmallSrc={require('./screen-4-small.jpg')}
             imageSmall2xSrc={require('./screen-4-small@2x.jpg')}
-            headline="Query Away!"
-            text={`Query your data based on any existing field or customized field for each of your objects. Get back
-              the data you need with complex filtering and ordering! `}
+            headline="Query away!"
+            text={`Query your data based on built-in or customized fields for each of your objects. Get back the data
+              you need with advanced filtering and ordering.`}
           />
         </ScreenDescriptions>
-        <ColumnParagraphs headline="Server-side code">
+        <ColumnParagraphs 
+          headline="Server-side code"
+          imageSrc={require('./server-side-code.jpg')}
+          image2xSrc={require('./server-side-code@2x.jpg')}
+          imageSmallSrc={require('./server-side-code-small.jpg')}
+          imageSmall2xSrc={require('./server-side-code-small@2x.jpg')}
+        >
           <ColumnParagraphs.Paragraph
-            iconSrc={require('./snippets.svg')}
+            iconSrc={require('./scripts.svg')}
             headline="Scripts"
             text={`Scripts are snippets of code that allow you to run complex code on Syncano’s servers. We support a
-              wide range of languages including NodeJS, Python, Swift, Golang, PHP or Ruby. Learn about all the ways you
-              can run them under Automations.`}
+              wide range of environments including NodeJS, Python, Swift, Golang, PHP and Ruby.`}
           />
           <ColumnParagraphs.Paragraph
             iconSrc={require('./script-endpoint.svg')}
             headline="Script Endpoint"
-            text={`Each Snippet comes with the ability to enable or disable their public endpoint. Make POST or GET
-              requests to your Snippet and open up the possibility of how and where to run your Snippet Script.`}
-          />
-          <ColumnParagraphs.Paragraph
-            iconSrc={require('./integrate.svg')}
-            headline="Integrate"
-            text={`Connect your app with our constantly updating list of integrations. We’ll help you stay up-to-date
-              with new integrations, keeping your app up-to-speed with the rest of the world.`}
+            text={`Make Scripts public or private, it’s up to you. Send POST or GET requests to your Script and open up
+              the possibility of how and where to run it.`}
           />
           <ColumnParagraphs.Paragraph
             iconSrc={require('./environmental-variables.svg')}
-            headline="Environmental Variables"
-            text={`Each Snippet can be set to environmental variables stored in your configuration settings. Store API
-              keys and frequently used variables in a more permanent way!`}
+            headline="Environmental variables"
+            text={`Each Snippet can be set to use environmental variables stored in your configuration settings. You can
+              store API keys and frequently used variables in a more permanent way.`}
+          />
+          <ColumnParagraphs.Paragraph
+            iconSrc={require('./integrations.svg')}
+            headline="Integrations"
+            text={`Connect your app with our constantly growing list of integrations. We’ll help you stay up-to-date
+              with new addons, keeping your application ahead of the crowd.`}
           />
         </ColumnParagraphs>
         <FeaturesColumns headline="Automations">
           <FeaturesColumns.Column
             iconSrc={require('./realtime-communication.svg')}
-            headline="Realtime Communication"
-            text={`Add realtime functionality to your app with Channels. Users can subscribe to Channels to get
-              notifications of changes that happen to Objects connected to those Channels. Grant your users the ability
-              to send custom notification messages.`}
+            headline="Realtime communication"
+            text={`Add realtime functionality to your app with Channels. Users can subscribe to Channels and get
+              notifications of changes to data objects. You can grant users the ability to send custom notification
+              messages.`}
           />
           <FeaturesColumns.Column
-            iconSrc={require('./set-schedules.svg')}
-            headline="Set Schedules"
-            text={`Execute your Scripts at a desired date and/or time interval by setting the desired time interval to
-              interval_sec or crontab. We even support timezones so you can launch different schedules at different
-              times!`}
+            iconSrc={require('./schedules.svg')}
+            headline="Schedules"
+            text={`Execute your Scripts at a desired date and time interval. Choose from crontabs and seconds as
+              scheduling options. We support timezones so you can launch Scripts in around the globe.`}
           />
           <FeaturesColumns.Column
-            iconSrc={require('./create-triggers.svg')}
-            headline="Create Triggers"
+            iconSrc={require('./triggers.svg')}
+            headline="Triggers"
             text={`Execute a Server-Side Script when a Data Object inside a selected Class is created, updated or
               deleted. Each Trigger is customizable to fit your app’s needs.`}
           />
           <FeaturesColumns.Column
             iconSrc={require('./push-notifications.svg')}
             headline="Push Notifications"
-            text={`Instantly message your Android or iPhone users with timely and relevant content instead of
-              programming it yourself.`}
+            text={`Instantly message your iOS or Android users with timely and relevant content. Use our dashboard to
+              configure and send push notifications with ease.`}
           />
         </FeaturesColumns>
         <CircleIconColumns headline="User Authentication">
           <CircleIconColumns.Column
-            iconSrc={require('./create-custom-users.svg')}
-            headline="Create Custom Users"
-            text={`Allow users to register and sign into your app instantly and securely. Customize your users with User
-              Profiles - define custom fields to segment your users with data Classes.`}
+            iconSrc={require('./add-users.svg')}
+            headline="Add Users"
+            text={`Allow users to register and sign into your app instantly and securely. Customize them with User
+              Profiles - add avatars, files and relevant information.`}
           />
           <CircleIconColumns.Column
-            iconSrc={require('./adding-users-with-groups.svg')}
-            headline="Adding Users with Groups"
-            text={`Construct different levels of permission to data stored on Syncano. With groups, you control the data
-              that your users have control over.`}
+            iconSrc={require('./group-users.svg')}
+            headline="Group users"
+            text={`Construct different levels of permissions to data stored on Syncano. With groups, you can better
+              manage user’s access control.`}
           />
           <CircleIconColumns.Column
-            iconSrc={require('./instant-social-authentication.svg')}
-            headline="Instant Social Authentication"
-            text={`Allow your users to sign up with Facebook, Google, Twitter and Linkedin, and we’ll automatically
-              create their account in Syncano in the same format as a traditional username/password login`}
+            iconSrc={require('./social-authentication.svg')}
+            headline="Social authentication"
+            text={`Allow your users to sign up with Facebook, Google, Twitter and Linkedin. We’ll automatically create
+              their account in Syncano in the same format as with the traditional login.`}
           />
         </CircleIconColumns>
         <CTASection>

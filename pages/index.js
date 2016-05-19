@@ -24,7 +24,7 @@ export default () => {
           textline="Use our serverless platform to set up your backend in minutes."
           image={
             <img
-              src={require('./home/hero.svg')}
+              src={require('./home/build-powerful-apps-in-half-the-time.svg')}
               alt="serverless app platform"
             />
           }
@@ -42,15 +42,26 @@ export default () => {
           </div>
         </Hero>
         <TextWithBottomImage
+          variant="no-bottom-padding"
           theme="gray"
           headline="Create and manage your API from the dashboard"
           textline={`Make your own custom API’s in the cloud. Instantly scale for the web, mobile, and the internet of
             things. Support millions of users without learning the nuts and bolts of handling servers.`}
           image={
-            <img
-              src={require('./home/serverless-app-platform.svg')}
-              alt="serverless app platform"
-            />
+            <picture>
+              <source
+                media="(min-width: 321px)"
+                srcSet={`${require('./home/a-serverless-app-platform-to-design-publish-and-manage-your-api-small.jpg')} 1x, ${require('./home/a-serverless-app-platform-to-design-publish-and-manage-your-api-small@2x.jpg')} 2x`}
+              />
+              <source
+                srcSet={`${require('./home/a-serverless-app-platform-to-design-publish-and-manage-your-api.jpg')} 1x, ${require('./home/a-serverless-app-platform-to-design-publish-and-manage-your-api@2x.jpg')} 2x`}
+              />
+              <img
+                className="browser-image browser-image--dark"
+                src={require('./home/a-serverless-app-platform-to-design-publish-and-manage-your-api-small@2x.jpg')}
+                alt="Create and manage your API from the dashboard"
+              />
+            </picture>
           }
         />
         <TwitterSlider />
@@ -104,7 +115,7 @@ export default () => {
         </FeaturesColumns>
         <PlatformsSection
           headline="Use the frameworks and languages you like"
-          bottomContentHeadline="Add social authentication with a few lines of code"
+          bottomContentHeadline="Add data with a few lines of code"
         >
           <CodePreview variant="no-bottom-radius">
             <CodePreview.Item

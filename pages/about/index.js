@@ -17,6 +17,7 @@ export default () => {
           imageSmall2xSrc={require('./header-image-small.jpg')}
           imageSmall2xSrc={require('./header-image-small@2x.jpg')}
           imageMediumSrc={require('./header-image-medium.jpg')}
+          imageAlt="our meeting"
         />
         <AboutUs
           headline="Empowering developers worldwide"
