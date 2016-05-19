@@ -4,18 +4,17 @@ import ModalWrapper from './ModalWrapper';
 import ModalTextField from './ModalTextField';
 import AuthHOC from '../AuthHOC';
 
-const ModalSignUp = (props, { auth, modals }) => {
+const ModalLogIn = (props, { auth, modals }) => {
   return (
-    <ModalWrapper isOpen={modals.signUp.isOpen}>
+    <ModalWrapper isOpen={modals.resetPassword.isOpen}>
       <div className="modal__content-scroll">
         <div className="modal__content">
           <div className="inner">
-            <h2>Sign up and start building apps</h2>
-            <p>Syncano is a serverless platform to setup your backend in minutes. Free usage for 6 months, no credit card
-            required.</p>
+            <h2>Reset your password</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
 
             <div className="modal__content_form form">
-              <Formsy.Form onValidSubmit={(model) => auth.handlePasswordAuth('register', model)}>
+              <Formsy.Form onValidSubmit={(model) => auth.handlePasswordReset(model)}>
                 <ModalTextField
                   className="form__input"
                   name="email"
@@ -24,22 +23,14 @@ const ModalSignUp = (props, { auth, modals }) => {
                   placeholder="E-mail address"
                   required
                 />
-                <ModalTextField
-                  className="form__input"
-                  type="password"
-                  name="password"
-                  placeholder="Password"
-                  required
-                />
                 <button className="button button--large button--featured">
-                  Start Building for Free
+                  Reset password
                 </button>
               </Formsy.Form>
             </div>
-
             <div className="modal__content__login-options">
               <h3 className="modal__content__login-options__headline">
-                <span>or Sign up with</span>
+                <span>or Log in with</span>
               </h3>
               <div className="modal__content__login-options__buttons">
                 <ul>
@@ -50,7 +41,7 @@ const ModalSignUp = (props, { auth, modals }) => {
                     >
                       <img
                         src={require('./images/google.svg')}
-                        alt="Sign up with Google"
+                        alt="Log in with Google"
                       />
                       <span>Google</span>
                     </span>
@@ -63,9 +54,21 @@ const ModalSignUp = (props, { auth, modals }) => {
                       <img
                         className="github"
                         src={require('./images/github.svg')}
-                        alt="Sign up with GitHub"
+                        alt="Log in with GitHub"
                       />
                       <span>GitHub</span>
+                    </span>
+                  </li>
+                  <li>
+                    <span
+                      className="button"
+                      onClick={() => auth.handleSocialAuth('facebook')}
+                    >
+                      <img
+                        src={require('./images/facebook.svg')}
+                        alt="Log in with Facebook"
+                      />
+                      <span>Facebook</span>
                     </span>
                   </li>
                 </ul>
@@ -76,8 +79,8 @@ const ModalSignUp = (props, { auth, modals }) => {
       </div>
       <footer className="modal__footer">
         <div className="modal__footer__column">
-          <span onClick={modals.logIn.open}>
-            Already have an account? <strong>Log in</strong> to your dashboard.
+          <span onClick={modals.signUp.open}>
+            Don’t have an account? <strong>Sign up</strong>
           </span>
         </div>
       </footer>
@@ -85,9 +88,9 @@ const ModalSignUp = (props, { auth, modals }) => {
   );
 };
 
-ModalSignUp.contextTypes = {
+ModalLogIn.contextTypes = {
   auth: React.PropTypes.object,
   modals: React.PropTypes.object
 };
 
-export default AuthHOC(ModalSignUp);
+export default AuthHOC(ModalLogIn);

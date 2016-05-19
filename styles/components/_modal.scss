@@ -130,6 +130,11 @@
       }
     }
 
+    .modal__content-scroll {
+      max-height: calc(100vh - 96px);
+      overflow: auto;
+    }
+
     .modal__content {
       padding-top: 60px;
       padding-bottom: 60px;
