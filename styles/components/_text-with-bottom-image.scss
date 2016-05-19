@@ -3,12 +3,28 @@
   padding-top: 80px;
   padding-bottom: 80px;
 
-  &.text-with-bottom-image--no-bottom-margin {
+  &.text-with-bottom-image--no-bottom-padding {
     padding-bottom: 0 !important;
+  }
+
+  &.text-with-bottom-image--minus-bottom-margin {
+    margin-bottom: -25px;
   }
 
   &.text-with-bottom-image--gray {
     background: $color-main-gray;
+  }
+
+  &.text-with-bottom-image--purple {
+    background: $color-main-purple;
+
+    h2 {
+      color: #fff;
+    }
+
+    p {
+      color: transparentize(#fff, .15);
+    }
   }
 
   h2 {
@@ -27,6 +43,7 @@
     margin-top: 40px;
   }
 
+  picture,
   img {
     max-width: 80%;
     margin-left: auto;
@@ -35,6 +52,10 @@
   }
 
   @include medium {
+    &.text-with-bottom-image--minus-bottom-margin {
+      margin-bottom: -50px;
+    }
+
     h2 {
       font-size: 30px;
     }
@@ -43,6 +64,7 @@
       line-height: 1.75;
     }
 
+    picture,
     img {
       margin-top: 80px;
       max-width: 80%;
@@ -53,6 +75,10 @@
     padding-top: 110px;
     padding-bottom: 110px;
 
+    &.text-with-bottom-image--minus-bottom-margin {
+      margin-bottom: -75px;
+    }
+
     h2 {
       font-size: 40px;
     }
@@ -61,8 +87,8 @@
       margin-top: 40px;
     }
 
+    picture,
     img {
-      margin-top: 100px;
       max-width: 100%;
     }
   }

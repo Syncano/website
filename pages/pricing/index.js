@@ -57,7 +57,7 @@ export default () => {
         <TwitterSlider />
         <FAQ />
         <TextWithBottomImage
-          variant="no-bottom-margin"
+          variant="no-bottom-padding"
           headline="Get answers from our developers"
           textline={`Our engineers specialize in the tricky and technical investigations of our platform. When you have
             questions, you’ll get timely answers from our team.`}
