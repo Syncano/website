@@ -41,11 +41,10 @@ export default (ComposedComponent) => (
 
       Account.resetPassword(email)
         .then((data) => {
-          console.log(data);
+          // success / error message here
         })
         .catch((error) => {
           // error message here
-          console.log(error);
         });
     };
 
