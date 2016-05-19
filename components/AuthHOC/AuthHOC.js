@@ -58,7 +58,7 @@ export default (ComposedComponent) => (
         }
 
         axios
-          .post(`${syncanoAPIBaseUrl}v1/account/auth/${data.network}/`, { access_token })
+          .post(`${syncanoAPIBaseUrl}account/auth/${data.network}/`, { access_token })
           .then((response) => this.redirectToDashboard(response.data.account_key))
           .catch((error) => {
             // error message here
