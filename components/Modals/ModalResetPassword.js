@@ -14,7 +14,7 @@ const ModalLogIn = (props, { auth, modals }) => {
             <p>Lorem ipsum dolor sit amet.</p>
 
             <div className="modal__content_form form">
-              <Formsy.Form onValidSubmit={(model) => auth.handlePasswordReset('resetPassword', model)}>
+              <Formsy.Form onValidSubmit={(model) => auth.handlePasswordReset(model)}>
                 <ModalTextField
                   className="form__input"
                   name="email"

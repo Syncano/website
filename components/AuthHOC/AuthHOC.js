@@ -35,16 +35,17 @@ export default (ComposedComponent) => (
         });
     };
 
-    handlePasswordReset = (type, { email }) => {
+    handlePasswordReset = ({ email }) => {
       const { syncanoAPIBaseUrl } = config;
       const { Account } = Syncano({ baseUrl: syncanoAPIBaseUrl });
 
-      Account[type]({ email })
+      Account.resetPassword(email)
         .then((data) => {
-
+          console.log(data);
         })
         .catch((error) => {
           // error message here
+          console.log(error);
         });
     };
 
