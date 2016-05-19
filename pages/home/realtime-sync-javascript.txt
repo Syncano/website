@@ -1,11 +1,16 @@
-// Create empty connection
-var connection = Syncano();
+var Syncano = require("syncano");  // CommonJS
+var connection = Syncano({ accountKey: "ACCOUNT_KEY" });
+var DataObject = connection.DataObject;
 
-// Create a connection with an account key
-var connection = Syncano({ accountKey: 'MY_ACCOUNT_KEY'});
+var book = {
+  title: "The Old Man and the Sea", 
+  author: "Ernest Hemingway",
+  instanceName: "INSTANCE_NAME",
+  className: "CLASS_name"
+};
 
-// Create a connection with a user key
-var connection = Syncano({ userKey: 'USER_KEY'});
+DataObject.please().create(book).then(function(book) {
+  console.log("book", book);
+});
 
-// Create a connection with a social token
-var connection = Syncano({ userKey: 'SOCIAL_TOKEN'});
+

@@ -1,11 +1,16 @@
-// Create empty connection
-var connection = Syncano();
+Book newBook = new Book();
+newBook.author = "Ernest Hemingway";
+newBook.title = "The Old Man and the Sea";
 
-// Create a connection with an account key
-var connection = Syncano({ accountKey: 'MY_ACCOUNT_KEY'});
+Response<Book> response = newBook.save();
 
-// Create a connection with a user key
-var connection = Syncano({ userKey: 'USER_KEY'});
 
-// Create a connection with a social token
-var connection = Syncano({ userKey: 'SOCIAL_TOKEN'});
+
+
+
+
+
+
+
+
+

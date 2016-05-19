@@ -1,11 +1,24 @@
-// Create empty connection
-var connection = Syncano();
+myApp.controller('SyncanoController', function ($scope, syncanoService) {
+  var syncano = null; // will be used for API calls
+  $scope.data = null;
+  $scope.error = null;
+  ​
+  syncanoService.getSyncano() // gets the current Syncano object
+    .then(function(res) { // uses promises
+      syncano = res; // set to current Syncano Object
+      var DataObject = syncano.DataObject;
+      var book = {
+        title: "The Old Man and the Sea", 
+        author: "Ernest Hemingway",
+        instanceName: "INSTANCE_NAME",
+        className: "CLASS_NAME"
+      };
 
-// Create a connection with an account key
-var connection = Syncano({ accountKey: 'MY_ACCOUNT_KEY'});
-
-// Create a connection with a user key
-var connection = Syncano({ userKey: 'USER_KEY'});
-
-// Create a connection with a social token
-var connection = Syncano({ userKey: 'SOCIAL_TOKEN'});
+      DataObject.please().create(book).then(function(book) {
+        $scope.data = book;
+      });
+    })
+    .catch(function(err) {
+      console.log(err);
+    });
+});
