@@ -123,7 +123,7 @@ export default () => {
         <TextWithImage
           image={
             <img
-              src={require('../../images/illustrations/get-answers-to-common-questions.svg')}
+              src={require('./get-answers-to-common-questions.svg')}
               alt="lifebuoy"
             />
           }

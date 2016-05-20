@@ -1,13 +1,14 @@
 .terms-and-legal {
   padding-top: 100px;
   padding-bottom: 80px;
+  background: $color-main-gray;
 
   .terms-and-legal__sidebar {
     display: none;
 
     .terms-and-legal__sidebar__nav-container {
-      padding-top: 100px;
-      transform: translateY(-100px);
+      padding-top: 20px;
+      transform: translateY(-20px);
 
       &.sticky {
         transform: none;

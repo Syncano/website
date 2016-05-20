@@ -128,8 +128,8 @@
     box-shadow: none;
 
     > .inner {
-      padding-top: 58px;
-      padding-bottom: 58px;
+      padding-top: 40px;
+      padding-bottom: 40px;
     }
 
     .top-bar__logo img {
@@ -155,12 +155,12 @@
     &.headroom--unpinned,
     &.headroom--pinned {
       > .inner {
-        transform: translateY(41px);
+        transform: translateY(23px);
       }
     }
 
     &.headroom--pinned {
-      transform: translateY(-82px);
+      transform: translateY(-46px);
     }
   }
 
