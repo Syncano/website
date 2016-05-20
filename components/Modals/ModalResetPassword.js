@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Formsy from 'formsy-react';
 import ModalWrapper from './ModalWrapper';
 import ModalTextField from './ModalTextField';
