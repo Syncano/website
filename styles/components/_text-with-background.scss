@@ -77,6 +77,10 @@
         margin-top: 40px;
       }
     }
+
+    &.text-with-background--image1 {
+      background-position: right -75px bottom 0;
+    }
   }
 
   @include very-large {
