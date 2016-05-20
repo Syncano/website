@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import BodyClassName from 'react-body-classname';
 import classNames  from 'classnames';
 import { mouseTrap } from 'react-mousetrap';
+const isBrowser = typeof window !== 'undefined';
 
 class ModalWrapper extends Component {
   componentWillReceiveProps(nextProps, nextContext) {
@@ -71,4 +72,4 @@ ModalWrapper.contextTypes = {
   modals: React.PropTypes.object
 };
 
-export default mouseTrap(ModalWrapper);
+export default isBrowser ? mouseTrap(ModalWrapper) : ModalWrapper;
