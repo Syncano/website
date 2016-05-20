@@ -17,7 +17,7 @@ export default React.createClass({
 
     let cssLink;
     if (process.env.NODE_ENV !== 'development') {
-      cssLink = <link rel="stylesheet" href="/styles.css" />;
+      cssLink = <link rel="stylesheet" href={`/styles.css?t=${BUILD_TIME}`} />;
     }
 
     return (
