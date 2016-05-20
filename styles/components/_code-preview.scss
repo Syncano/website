@@ -5,6 +5,8 @@
   margin-right: auto;
   background: #1D2228;
   overflow: hidden;
+  position: relative;
+  z-index: 0;
 
   .code-preview__nav {
     background: #303841;
