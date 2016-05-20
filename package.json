@@ -26,6 +26,7 @@
     "markdown-it-sub": "1.0.0",
     "moment": "2.13.0",
     "normalize.css": "4.1.1",
+    "numeral": "1.5.3",
     "object-assign": "4.1.0",
     "react-body-classname": "1.0.1",
     "react-document-title": "2.0.1",

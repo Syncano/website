@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import _ from 'lodash';
 import { Link } from 'react-router';
 import PricingPlanOverageRatesLink from './PricingPlanOverageRatesLink';
+import numeral from 'numeral';
 
 export default class PricingPlan extends Component {
   constructor(props) {
@@ -85,7 +86,7 @@ export default class PricingPlan extends Component {
               key={option.price}
               value={JSON.stringify(option)}
             >
-              {option.included} {label[field]} {option.price > 0 && `- $${option.price}`}
+              {_.toUpper(numeral(option.included).format('0 a'))} {label[field]} {option.price > 0 && `- $${option.price}`}
             </option>
           )
         })}

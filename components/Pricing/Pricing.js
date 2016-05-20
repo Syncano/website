@@ -50,6 +50,7 @@ class Pricing extends Component {
 
   render() {
     const { plan } = this.state;
+    const { modals } = this.context;
 
     if (!plan) {
       return null;
@@ -107,20 +108,20 @@ class Pricing extends Component {
           <footer className="pricing__footer">
             <span
               className="button button--large button--featured"
-              onClick={this.context.modals.signUp.open}
+              onClick={modals.signUp.open}
             >
               Get Started for Free
             </span>
             <p>
-              Premium support? Custom SLA? We’ve got you covered. <Link to="/contact/">Contact us</Link> and we’ll 
-              configure a plan that’s best for you.
+              Premium support? Custom SLA? <Link to="/contact/">Contact us</Link> and we’ll configure a plan that’s best
+              for you.
             </p>
           </footer>
         </div>
       </div>
     );
   };
-};
+}
 
 Pricing.contextTypes = {
   modals: React.PropTypes.object
