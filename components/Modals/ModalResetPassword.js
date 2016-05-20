@@ -10,8 +10,8 @@ const ModalResetPassword = (props, { auth, modals }) => {
       <div className="modal__content-scroll">
         <div className="modal__content">
           <div className="inner">
-            <h2>Reset your password</h2>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <h2>Forgot your password?</h2>
+            <p>We’ll email you instructions on how to reset it.</p>
 
             <div className="modal__content_form form">
               <Formsy.Form onValidSubmit={(model) => auth.handlePasswordReset(model)}>

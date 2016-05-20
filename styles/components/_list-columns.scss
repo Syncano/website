@@ -57,8 +57,9 @@
         }
 
         &:only-child {
-          margin-left: auto;
-          margin-right: auto;
+          display: flex;
+          justify-content: center;
+          flex-basis: 100%;
         }
       }
     }

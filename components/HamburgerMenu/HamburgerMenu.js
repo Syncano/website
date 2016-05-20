@@ -9,34 +9,34 @@ const HamburgerMenu = (props, { modals }) => {
           <ul>
             <li>
               <HamburgerMenuLink
-                to="/features/"
                 activeClassName="is-active"
+                to="/features/"
               >
                 Features
               </HamburgerMenuLink>
             </li>
             <li>
               <HamburgerMenuLink
-                to="/pricing/"
                 activeClassName="is-active"
+                to="/pricing/"
               >
                 Pricing
               </HamburgerMenuLink>
             </li>
             <li>
               <HamburgerMenuLink
-                to="/docs/"
-                activeClassName="is-active"
+                href="http://docs.syncano.io/"
+                target="_blank"
               >
                 Docs
               </HamburgerMenuLink>
             </li>
             <li>
               <HamburgerMenuLink
-                to="/blog/"
                 activeClassName="is-active"
+                to="/help/"
               >
-                Blog
+                Help
               </HamburgerMenuLink>
             </li>
           </ul>
