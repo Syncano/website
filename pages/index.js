@@ -44,7 +44,7 @@ const Homepage = (props, { modals }) => {
         <TextWithBottomImage
           variant="no-bottom-padding"
           theme="gray"
-          headline="Create and manage your API from the dashboard"
+          headline={<span>Create and manage your API from<br />the dashboard</span>}
           textline={`Make your own custom API’s in the cloud. Instantly scale for the web, mobile, and the internet of
             things. Support millions of users without learning the nuts and bolts of handling servers.`}
           image={
@@ -72,7 +72,7 @@ const Homepage = (props, { modals }) => {
           image={
             <img
               src={require('./home/assemble-your-backend-with-building-blocks.svg')}
-              alt="sample-illustration"
+              alt="Assemble your backend with building blocks"
             />
           }
         />
@@ -88,25 +88,25 @@ const Homepage = (props, { modals }) => {
           }
         >
           <FeaturesColumns.Column
-            iconSrc={require('./home/polygon-index-your-data-for-search.svg')}
+            iconSrc={require('./home/index-your-data-for-search.svg')}
             headline="Index your data for search"
             text={`Easily search for the data you need. Create sophisticated data relations and apply multiple filters.
               Specify your queries with your own custom endpoints.`}
           />
           <FeaturesColumns.Column
-            iconSrc={require('./home/polygon-customize-your-output.svg')}
+            iconSrc={require('./home/customize-your-output.svg')}
             headline="Customize your output"
             text={`Save valuable client-side resources to make your app faster. Use Templates to change the output of
               your data to the response format you need, including JSON, XML, and HTML.`}
           />
           <FeaturesColumns.Column
-            iconSrc={require('./home/polygon-add-push-notifications.svg')}
+            iconSrc={require('./home/add-push-notifications.svg')}
             headline="Add push notifications"
             text={`Boost your engagement. Add powerful push notifications to your app with a few clicks in your
               Dashboard. Send relevant notifications to users.`}
           />
           <FeaturesColumns.Column
-            iconSrc={require('./home/polygon-run-server-side-logic-in-the-cloud.svg')}
+            iconSrc={require('./home/run-server-side-logic-in-the-cloud.svg')}
             headline="Run server-side logic in the cloud"
             text={`Execute code on API calls, in response to events, updates to data, in-app activity or by a schedule.
               Leverage hundreds of available libraries. Write your scripts in NodeJS, Golang, Swift, Python, Ruby, and
@@ -169,7 +169,7 @@ const Homepage = (props, { modals }) => {
         <TextWithBackground
           theme="image1"
           headline="We’ll support you every step of the way"
-          textline={`Mariusz is a great guy and a part of our support team. At Syncano, every team member is here to
+          textline={`Adam is a great guy and a part of our support team. At Syncano, every team member is here to
             help you. When you have questions, you’ll get timely answers directly from our team members.`}
         >
           <Link

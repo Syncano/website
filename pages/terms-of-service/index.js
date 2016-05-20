@@ -1,12 +1,16 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
-import { CTASection, Footer, TermsAndLegal } from '../../components';
+import { CTASection, Footer, PageHeader, TermsAndLegal } from '../../components';
 
 export default () => {
   return (
     <DocumentTitle title="Terms and Legal">
       <div>
+        <PageHeader
+          headline="Terms and Legal"
+          textline="Learn more about our terms and policies"
+        />
         <TermsAndLegal>
           <TermsAndLegal.Item title="Terms of Service">
             <p>In order to use the Syncano API (the “Syncano API” or “API”), access the information contained on the Syncano website (the “Website”) or make use of the services provided by Syncano (the “Service” or “Services”), you (hereinafter referred to as “You”) must first read this agreement (the “Agreement”) and accept it. You may not make use of the Syncano API, Website or Services if You do not accept this Agreement and the terms therein. You accept the terms of the Agreement by clicking accept, by agreeing to the terms of the Agreement in the user interface for any Syncano Service, or by using the Syncano API or Services. In the latter case, You understand and agree that we will treat Your use of the Services as acceptance of the terms from that point onwards. BY USING THE SERVICE AND THE WEBSITE, YOU CONSENT TO THE TERMS AND CONDITIONS OF THESE TERMS OF SERVICE. IF YOU DO NOT AGREE TO THESE TERMS OF SERVICE PLEASE DO NOT USE THE WEBSITE AND/OR SERVICES. By putting a check mark next to I AGREE and clicking on SUBMIT or using the API or Services, You represent that You have read and agree to the terms and conditions of this Agreement which also include and incorporate Syncano’s Acceptable Use Policy, General Terms and Conditions and Privacy Policy. These terms and conditions will remain in effect throughout Your use of the Services and continue after this Agreement expires, cancels or is terminated. These terms and conditions are legally binding should You choose to register for the Service. You may not use the API or Services and may not accept the terms if (a) You are not of legal age to form a binding contract with us, or (b) You are a person barred from receiving the Services under the laws of the United States or other countries including the country in which You are resident or from which You use the Services. You agree to incorporate these Syncano policies into Your own products and policies and ensure that Your customers adhere to Syncano’s Terms. If You are accepting on behalf of Your employer or another entity, You represent and warrant that: (i) You have full legal authority to bind your employer, or the applicable entity, to these terms of service; (ii) You have read and understand this Agreement; and (iii) You agree, on behalf of the party that You represent, to this Agreement. If You don’t have the legal authority to bind Your employer or the applicable entity, please DO NOT put a check mark next to I AGREE and DO NOT click on SUBMIT or use the Services. We reserve the right to change these Terms of Service from time to time without notice by posting them on Syncano’s Website. When we do, we will also revise the “last update” date of these Terms of Service. Your continued use of the Service after such posting will constitute acceptance by You of such amendments.</p>

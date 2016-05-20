@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="78px" height="88px" viewBox="0 0 78 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 33</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M36,49 C31,49 27,45 27,40 C27,35 31,31 36,31 C41,31 45,35 45,40 C45,45 41,49 36,49 L36,49 Z M36,33 C32.1,33 29,36.1 29,40 C29,43.9 32.1,47 36,47 C39.9,47 43,43.9 43,40 C43,36.1 39.9,33 36,33 L36,33 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-0.5" y="-0.5" width="19" height="19">
+            <rect x="26.5" y="30.5" width="19" height="19" fill="white"></rect>
+            <use xlink:href="#path-1" fill="black"></use>
+        </mask>
+        <path d="M50,55 C49.7,55 49.5,54.9 49.3,54.7 L41.3,46.7 C40.9,46.3 40.9,45.7 41.3,45.3 C41.7,44.9 42.3,44.9 42.7,45.3 L50.7,53.3 C51.1,53.7 51.1,54.3 50.7,54.7 C50.5,54.9 50.3,55 50,55 L50,55 Z" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-0.5" y="-0.5" width="11" height="11">
+            <rect x="40.5" y="44.5" width="11" height="11" fill="white"></rect>
+            <use xlink:href="#path-3" fill="black"></use>
+        </mask>
+    </defs>
+    <g id="Desktop-design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-page-v1" transform="translate(-635.000000, -3285.000000)">
+            <g id="Group-13" transform="translate(373.000000, 3285.000000)">
+                <g id="Group-33" transform="translate(262.000000, 0.000000)">
+                    <path d="M35.5238347,0.829552857 C37.4344704,-0.277494758 40.5369227,-0.275540049 42.4458143,0.829552857 L74.5375323,19.4080459 C76.4498004,20.5150935 78,23.2113212 78,25.421507 L78,62.578493 C78,64.7925883 76.4464239,67.4868612 74.5375323,68.5919541 L42.4458143,87.1704471 C40.5335462,88.2774948 37.4310968,88.27554 35.5238347,87.1704471 L3.45951196,68.5919541 C1.54887626,67.4849065 2.12051611e-14,64.7886788 1.99889639e-14,62.578493 L-4.57382396e-16,25.421507 C-1.67573088e-15,23.2074117 1.55224986,20.5131388 3.45951196,19.4080459 L35.5238347,0.829552857 Z" id="Polygon-16-Copy-2" fill="#0070D3"></path>
+                    <g id="Shape">
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <use stroke="#FFFFFF" mask="url(#mask-2)" stroke-width="1" xlink:href="#path-1"></use>
+                    </g>
+                    <g id="Shape">
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                        <use stroke="#FFFFFF" mask="url(#mask-4)" stroke-width="1" xlink:href="#path-3"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
