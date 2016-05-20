@@ -1,10 +1,36 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  @include z-index(modal-overlay);
+  background: transparentize($color-main-blue, .1);
+}
+
+.modal-scroll {
+  @include medium {
+    max-height: 100vh;
+    overflow: auto;
+  }
+}
+
 .modal {
+  @include medium {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+}
+
+.modal-box {
   width: 100%;
   height: 100%;
   overflow: auto;
   position: relative;
 
-  .modal__close {
+  .modal-box__close {
     display: block;
     position: absolute;
     top: 22px;
@@ -23,7 +49,7 @@
     }
   }
 
-  .modal__content {
+  .modal-box__content {
     padding-top: 50px;
     padding-bottom: 50px;
     background: #fff;
@@ -45,15 +71,15 @@
       line-height: 24px;
     }
 
-    .modal__content_form {
+    .modal-box__content_form {
       margin-top: 40px;
     }
   }
 
-  .modal__content__login-options {
+  .modal-box__content__login-options {
     margin-top: 45px;
 
-    .modal__content__login-options__headline {
+    .modal-box__content__login-options__headline {
       border-top: 1px solid #DBDEE3;
       font-weight: 700;
       text-transform: uppercase;
@@ -69,7 +95,7 @@
       }
     }
 
-    .modal__content__login-options__buttons {
+    .modal-box__content__login-options__buttons {
       margin-top: 30px;
 
       ul {
@@ -106,7 +132,7 @@
     }
   }
 
-  .modal__footer {
+  .modal-box__footer {
     display: none;
   }
 
@@ -117,7 +143,7 @@
     border-radius: 4px;
     overflow: visible;
 
-    .modal__close {
+    .modal-box__close {
       top: 20px;
       right: 20px;
 
@@ -130,12 +156,7 @@
       }
     }
 
-    .modal__content-scroll {
-      max-height: calc(100vh - 96px);
-      overflow: auto;
-    }
-
-    .modal__content {
+    .modal-box__content {
       padding-top: 60px;
       padding-bottom: 60px;
       box-shadow: 0 0 50px rgba(0, 0, 0, .37);
@@ -147,7 +168,7 @@
       }
     }
 
-    .modal__content__login-options .modal__content__login-options__buttons .button {
+    .modal-box__content__login-options .modal-box__content__login-options__buttons .button {
       border-color: $color-main-blue;
 
       img {
@@ -155,13 +176,13 @@
       }
     }
 
-    .modal__footer {
+    .modal-box__footer {
       display: flex;
       justify-content: space-between;
       padding-top: 40px;
       padding-bottom: 40px;
 
-      .modal__footer__column {
+      .modal-box__footer__column {
         &:last-child {
           text-align: right;
         }
