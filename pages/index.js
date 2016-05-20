@@ -15,7 +15,7 @@ import {
   TwitterSlider
 } from '../components';
 
-export default () => {
+const Homepage = (props, { modals }) => {
   return (
     <DocumentTitle title="Syncano">
       <div>
@@ -30,12 +30,12 @@ export default () => {
           }
         >
           <div className="hero__text__button-container">
-            <Link
-              to="/features/"
+            <span
               className="button button--large button--featured"
+              onClick={modals.signUp.open}
             >
               Get Started for Free
-            </Link>
+            </span>
             <p className="hero__text__button-description">
               6 months free &bull; No credit card required
             </p>
@@ -185,3 +185,9 @@ export default () => {
     </DocumentTitle>
   );
 };
+
+Homepage.contextTypes = {
+  modals: React.PropTypes.object
+};
+
+export default Homepage;
