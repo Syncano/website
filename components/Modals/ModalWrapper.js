@@ -50,25 +50,29 @@ class ModalWrapper extends Component {
     return (
       <BodyClassName className={this.getBodyClassName()}>
         <Modal
-          className="modal"
-          overlayClassName="modal-container"
+          className="modal-scroll"
+          overlayClassName="modal-overlay"
           isOpen={this.getCurrentOpenState()}
         >
-        <span
-          className="modal__close"
-          onClick={modals.closeAll}
-        >
-          <img
-            src={require('./images/close.svg')}
-            alt="close"
-          />
-          <img
-            className="small"
-            src={require('./images/close-small.svg')}
-            alt="close"
-          />
-        </span>
-          {children}
+          <div className="modal">
+            <div className="modal-box">
+              <span
+                className="modal-box__close"
+                onClick={modals.closeAll}
+              >
+                <img
+                  src={require('./images/close.svg')}
+                  alt="close"
+                />
+                <img
+                  className="small"
+                  src={require('./images/close-small.svg')}
+                  alt="close"
+                />
+              </span>
+              {children}
+            </div>
+          </div>
         </Modal>
       </BodyClassName>
     );

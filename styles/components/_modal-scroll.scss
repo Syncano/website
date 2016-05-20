@@ -1,0 +1,6 @@
+.modal-scroll {
+  @include medium {
+    max-height: 100vh;
+    overflow: auto;
+  }
+}
