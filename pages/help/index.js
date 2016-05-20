@@ -106,7 +106,7 @@ export default () => {
                 <li><a href="http://docs.syncano.io/docs/classes/" target="_blank">Classes</a></li>
                 <li><a href="http://docs.syncano.io/docs/authentication/" target="_blank">Authentication</a></li>
                 <li><a href="http://docs.syncano.io/docs/realtime-communication/" target="_blank">Realtime communication</a></li>
-                <li><a href="http://docs.syncano.io/docs/data-objects-filtering/" target="_blank">Data objects filtering</a></li>
+                <li><a href="http://docs.syncano.io/docs/data-objects-filtering-ordering/" target="_blank">Data objects filtering</a></li>
                 <li><a href="http://docs.syncano.io/docs/endpoints-data/" target="_blank">Data Endpoints</a></li>
                 <li><a href="http://docs.syncano.io/docs/snippets-scripts/" target="_blank">Snippet Scripts</a></li>
               </ul>
