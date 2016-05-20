@@ -214,18 +214,7 @@ export default () => {
             <p><strong>Last updated 4. feb 2014</strong></p>
           </TermsAndLegal.Item>
         </TermsAndLegal>
-        <CTASection>
-          <h2>Set up your backend in minutes</h2>
-          <Link
-            className="button button--large button--featured"
-            to="/about/"
-          >
-            Get Started for Free
-          </Link>
-          <p className="cta-section__button-description">
-            6 months free &bull; No credit card required
-          </p>
-        </CTASection>
+        <CTASection />
         <Footer />
       </div>
     </DocumentTitle>
