@@ -1,7 +1,10 @@
 .text-with-background {
-  padding-top: 80px;
-  padding-bottom: 80px;
   text-align: center;
+
+  .inner {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 
   .text-with-background__text {
     margin-top: 30px;
@@ -29,11 +32,13 @@
     text-align: left;
 
     &.text-with-background--image1 {
-      background-image: url("../components/TextWithBackground/images/well-support-you-every-step-of-the-way.jpg");
-      background-repeat: no-repeat;
-      background-position: right -210px bottom 0;
-      background-size: contain;
-
+      .inner {
+        background-image: url("../components/TextWithBackground/images/well-support-you-every-step-of-the-way.jpg");
+        background-repeat: no-repeat;
+        background-position: right -210px bottom 0;
+        background-size: contain;
+      }
+      
       .text-with-background__text {
         max-width: 75%;
       }
@@ -56,7 +61,9 @@
     }
 
     &.text-with-background--image1 {
-      background-position: right -145px bottom 0;
+      .inner {
+        background-position: right -145px bottom 0;
+      }
 
       .text-with-background__text {
         max-width: 70%;
@@ -65,8 +72,10 @@
   }
 
   @include large {
-    padding-top: 110px;
-    padding-bottom: 110px;
+    .inner {
+      padding-top: 110px;
+      padding-bottom: 110px;
+    }
 
     .text-with-background__text {
       h2 {
@@ -78,17 +87,21 @@
       }
     }
 
-    &.text-with-background--image1 {
+    &.text-with-background--image1 .inner {
       background-position: right -75px bottom 0;
     }
   }
 
   @include very-large {
-    padding-top: 140px;
-    padding-bottom: 140px;
+    .inner {
+      padding-top: 140px;
+      padding-bottom: 140px;
+    }
 
     &.text-with-background--image1 {
-      background-position: right 0 bottom 0;
+      .inner {
+        background-position: right 0 bottom 0;
+      }
 
       .text-with-background__text {
         max-width: 60%;
@@ -97,7 +110,7 @@
   }
 
   @include full {
-    &.text-with-background--image1 {
+    &.text-with-background--image1 .inner {
       background-position: right;
     }
   }
