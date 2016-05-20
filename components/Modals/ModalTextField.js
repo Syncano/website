@@ -22,15 +22,15 @@ class ModalTextField extends Component {
   };
 
   render = () => {
-    const { getValue, setValue } = this.props;
+    const { getValue, setValue, className, ...other } = this.props;
 
     return (
       <input
-        {...this.props}
         ref="input"
         className={this.getClassName()}
         value={getValue() || ''}
         onChange={(e) => setValue(e.target.value)}
+        {...other}
       />
     );
   };
