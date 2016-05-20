@@ -4,7 +4,7 @@ import classNames from 'classnames';
 export default ({ variant, headline, textline, children }) => {
   const pageHeaderClassName = classNames({
     'page-header': true,
-    'page-header--error-404': (variant == 'error-404')
+    'page-header--error-404': (variant === 'error-404')
   });
 
   return (

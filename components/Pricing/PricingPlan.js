@@ -97,7 +97,7 @@ export default class PricingPlan extends Component {
     const { buttonText, isFeatured } = this.props;
     const className = classNames({
       'button': true,
-      'button--featured': (isFeatured == true),
+      'button--featured': (isFeatured === true),
       'button--large': true,
       'button--wide': true
     });
@@ -122,8 +122,8 @@ export default class PricingPlan extends Component {
 
     return classNames({
       'pricing-plan': true,
-      'pricing-plan--expanded': (isExpanded == true),
-      'pricing-plan--featured': (isFeatured == true)
+      'pricing-plan--expanded': (isExpanded === true),
+      'pricing-plan--featured': (isFeatured === true)
     });
   };
 

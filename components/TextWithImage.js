@@ -4,9 +4,9 @@ import classNames  from 'classnames';
 export default ({ variant, theme, image, headline, textline, children }) => {
   const className = classNames({
     'text-with-image': true,
-    'text-with-image--image-right': (variant == 'image-right'),
-    'text-with-image--gray': (theme == 'gray'),
-    'text-with-image--purple': (theme == 'purple')
+    'text-with-image--image-right': (variant === 'image-right'),
+    'text-with-image--gray': (theme === 'gray'),
+    'text-with-image--purple': (theme === 'purple')
   });
 
   return (

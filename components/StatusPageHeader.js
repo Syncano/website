@@ -38,11 +38,11 @@ export default class StatusPageHeader extends Component {
   };
 
   getHeadlineText = (status) => {
-    if (status == 'minor' || status == 'major') {
+    if (status === 'minor' || status === 'major') {
       return 'Degraded Performance';
     }
 
-    if (status == 'critical') {
+    if (status === 'critical') {
       return 'Partial Outage';
     }
 

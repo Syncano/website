@@ -4,9 +4,9 @@ import ModalWrapper from './ModalWrapper';
 import ModalTextField from './ModalTextField';
 import AuthHOC from '../AuthHOC';
 
-const ModalLogIn = (props, { auth, modals }) => {
+const ModalResetPassword = (props, { auth, modals }) => {
   return (
-    <ModalWrapper isOpen={modals.resetPassword.isOpen}>
+    <ModalWrapper modalName="resetPassword">
       <div className="modal__content-scroll">
         <div className="modal__content">
           <div className="inner">
@@ -21,6 +21,7 @@ const ModalLogIn = (props, { auth, modals }) => {
                   validations="isEmail"
                   type="email"
                   placeholder="E-mail address"
+                  autofocus
                   required
                 />
                 <button className="button button--large button--featured">
@@ -88,9 +89,9 @@ const ModalLogIn = (props, { auth, modals }) => {
   );
 };
 
-ModalLogIn.contextTypes = {
+ModalResetPassword.contextTypes = {
   auth: React.PropTypes.object,
   modals: React.PropTypes.object
 };
 
-export default AuthHOC(ModalLogIn);
+export default AuthHOC(ModalResetPassword);

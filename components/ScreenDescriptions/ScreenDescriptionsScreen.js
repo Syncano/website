@@ -4,7 +4,7 @@ import classNames  from 'classnames';
 export default ({ variant, imageSrc, image2xSrc, imageSmallSrc, imageSmall2xSrc, headline, text }) => {
   const className = classNames({
     'screen-descriptions__screens__screen': true,
-    'screen-descriptions__screens__screen--image-right': (variant == 'image-right')
+    'screen-descriptions__screens__screen--image-right': (variant === 'image-right')
   });
 
   return (

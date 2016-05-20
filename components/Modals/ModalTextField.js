@@ -4,23 +4,33 @@ import classNames  from 'classnames';
 
 class ModalTextField extends Component {
   getClassName = () => {
-    const { showError } = this.props;
+    const { showError, className } = this.props;
 
-    return classNames({
+    return classNames(className, {
       'modal__content_form__input': true,
+      'mousetrap': true,
       'is-invalid': (showError())
     });
   };
 
+  componentDidMount() {
+    const { autofocus } = this.props;
+
+    if (autofocus) {
+      setTimeout(() => this.refs.input.focus(), 0);
+    }
+  };
+
   render = () => {
-    const { getValue, setValue } = this.props;
+    const { getValue, setValue, className, ...other } = this.props;
 
     return (
       <input
+        ref="input"
         className={this.getClassName()}
         value={getValue() || ''}
         onChange={(e) => setValue(e.target.value)}
-        {...this.props}
+        {...other}
       />
     );
   };

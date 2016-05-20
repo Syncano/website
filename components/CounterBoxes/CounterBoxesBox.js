@@ -4,9 +4,9 @@ import classNames  from 'classnames';
 export default ({ theme, headline, textline }) => {
   const className = classNames({
     'counter-boxes__boxes__box': true,
-    'counter-boxes__boxes__box--azure': (theme == 'azure'),
-    'counter-boxes__boxes__box--purple': (theme == 'purple'),
-    'counter-boxes__boxes__box--silver': (theme == 'silver')
+    'counter-boxes__boxes__box--azure': (theme === 'azure'),
+    'counter-boxes__boxes__box--purple': (theme === 'purple'),
+    'counter-boxes__boxes__box--silver': (theme === 'silver')
   });
 
   return (
