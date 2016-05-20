@@ -1,11 +1,16 @@
-// Create empty connection
-var connection = Syncano();
+require 'syncano'
 
-// Create a connection with an account key
-var connection = Syncano({ accountKey: 'MY_ACCOUNT_KEY'});
+book_class = instance.classes.find('book')
+book_class.objects.create(title: 'The Old Man and the Sea', author: 'Ernest Hemingway')
 
-// Create a connection with a user key
-var connection = Syncano({ userKey: 'USER_KEY'});
 
-// Create a connection with a social token
-var connection = Syncano({ userKey: 'SOCIAL_TOKEN'});
+
+
+
+
+
+
+
+
+
+

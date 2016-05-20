@@ -1,11 +1,16 @@
-// Create empty connection
-var connection = Syncano();
+saveNewItem() {
+  this.store.createRecord('todo', { 'title': this.get('newItem'), 'is_completed': false }).save();
+  this.set('newItem', null);
+},
 
-// Create a connection with an account key
-var connection = Syncano({ accountKey: 'MY_ACCOUNT_KEY'});
 
-// Create a connection with a user key
-var connection = Syncano({ userKey: 'USER_KEY'});
 
-// Create a connection with a social token
-var connection = Syncano({ userKey: 'SOCIAL_TOKEN'});
+
+
+
+
+
+
+
+
+

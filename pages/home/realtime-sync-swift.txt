@@ -1,11 +1,16 @@
-// Create empty connection
-var connection = Syncano();
+// define Class of an object
+class Book : SCDataObject {
+    var title = ""
+    var subtitle = ""
+}
 
-// Create a connection with an account key
-var connection = Syncano({ accountKey: 'MY_ACCOUNT_KEY'});
+// creating a book using Book class
+let book = Book()
+book.title = "How to be a Pirate"
+book.subtitle = "10 tips that will change your life."
+book.saveWithCompletionBlock { error in
+  // process saved book and handle error
+}
 
-// Create a connection with a user key
-var connection = Syncano({ userKey: 'USER_KEY'});
 
-// Create a connection with a social token
-var connection = Syncano({ userKey: 'SOCIAL_TOKEN'});
+

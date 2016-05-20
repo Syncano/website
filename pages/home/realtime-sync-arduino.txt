@@ -1,11 +1,34 @@
-// Create empty connection
-var connection = Syncano();
-
-// Create a connection with an account key
-var connection = Syncano({ accountKey: 'MY_ACCOUNT_KEY'});
-
-// Create a connection with a user key
-var connection = Syncano({ userKey: 'USER_KEY'});
-
-// Create a connection with a social token
-var connection = Syncano({ userKey: 'SOCIAL_TOKEN'});
+/*
+ * In this example we will fetch data from Syncano and create Syncano Data Objects based on it
+ * To use this example you need Syncano class
+*/
+#include <Syncano.h>
+#include <Bridge.h>
+​
+SyncanoClient* syncano;
+SyncanoClass* classHolder;
+SyncanoDataObject* object;
+​
+void setup() {
+  initSyncanoClient("ACCOUNT_KEY");
+  Bridge.begin();
+  
+  // setup Syncano client used to connect
+  syncano = getSyncanoClient();
+  syncano->setInstanceName("INSTANCE_NAME");
+  
+  // create local class and fetch fields from Syncano
+  classHolder = new SyncanoClass("CLASS_NAME");
+  classHolder->details();
+  
+  // initialize empty local object based on class
+  object = classHolder->initObject();
+}
+​
+void loop() {
+  // Set value in local object
+  object->setFieldValue("firstname", "john");
+  
+  // Create Data Object in Syncano
+  object->add();
+}
