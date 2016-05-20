@@ -25,8 +25,8 @@ export default () => {
         />
         <PlatformsItem
           className="swift"
-          imgSrc={require('./images/swift.svg')}
-          title="Swift"
+          imgSrc={require('./images/ios@2x.png')}
+          title="iOS"
           href="https://github.com/Syncano/syncano-ios/"
         />
       </div>
