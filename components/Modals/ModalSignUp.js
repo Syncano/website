@@ -6,13 +6,12 @@ import AuthHOC from '../AuthHOC';
 
 const ModalSignUp = (props, { auth, modals }) => {
   return (
-    <ModalWrapper isOpen={modals.signUp.isOpen}>
+    <ModalWrapper modalName="signUp">
       <div className="modal__content-scroll">
         <div className="modal__content">
           <div className="inner">
-            <h2>Sign up and start building apps</h2>
-            <p>Syncano is a serverless platform to setup your backend in minutes. Free usage for 6 months, no credit card
-            required.</p>
+            <h2>Sign up and start building</h2>
+            <p>Build serverless apps on Syncano for free.<br/>Setup your backend in minutes!</p>
 
             <div className="modal__content_form form">
               <Formsy.Form onValidSubmit={(model) => auth.handlePasswordAuth('register', model)}>
@@ -22,6 +21,7 @@ const ModalSignUp = (props, { auth, modals }) => {
                   validations="isEmail"
                   type="email"
                   placeholder="E-mail address"
+                  autofocus
                   required
                 />
                 <ModalTextField

@@ -6,7 +6,7 @@ import AuthHOC from '../AuthHOC';
 
 const ModalLogIn = (props, { auth, modals }) => {
   return (
-    <ModalWrapper isOpen={modals.logIn.isOpen}>
+    <ModalWrapper modalName="logIn">
       <div className="modal__content-scroll">
         <div className="modal__content">
           <div className="inner">
@@ -21,6 +21,7 @@ const ModalLogIn = (props, { auth, modals }) => {
                   validations="isEmail"
                   type="email"
                   placeholder="E-mail address"
+                  autofocus
                   required
                 />
                 <ModalTextField

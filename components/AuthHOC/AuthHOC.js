@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Syncano from 'syncano';
-import axios from 'axios';
 import Hello from './Hello';
 import config from '../../config/';
 
@@ -49,17 +48,18 @@ export default (ComposedComponent) => (
     };
 
     handleSocialAuth = (network) => {
+      const { syncanoAPIBaseUrl } = config;
+      const { Account } = Syncano({ baseUrl: syncanoAPIBaseUrl });
+
       Hello(network).login().then((data) => {
-        const { syncanoAPIBaseUrl } = config;
         const { access_token } = data.authResponse;
 
         if (data.network === 'google') {
           data.network = 'google-oauth2';
         }
 
-        axios
-          .post(`${syncanoAPIBaseUrl}account/auth/${data.network}/`, { access_token })
-          .then((response) => this.redirectToDashboard(response.data.account_key))
+        Account.socialLogin(data.network, access_token)
+          .then((data) => this.redirectToDashboard(data.account_key))
           .catch((error) => {
             // error message here
           });

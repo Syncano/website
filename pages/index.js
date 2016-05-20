@@ -144,7 +144,7 @@ export default () => {
               code={require('./home/realtime-sync-swift.txt')}
             />
             <CodePreview.Item
-              title="Angular"
+              title="AngularJS"
               languageClassName="javascript"
               code={require('./home/realtime-sync-angular.txt')}
             />

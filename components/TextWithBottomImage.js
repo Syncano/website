@@ -7,8 +7,8 @@ export default ({ variant, theme, headline, textline, children, image }) => {
     'text-with-bottom-image': true,
     'text-with-bottom-image--minus-bottom-margin': _.includes(variant, 'minus-bottom-margin'),
     'text-with-bottom-image--no-bottom-padding': _.includes(variant, 'no-bottom-padding'),
-    'text-with-bottom-image--gray': (theme == 'gray'),
-    'text-with-bottom-image--purple': (theme == 'purple')
+    'text-with-bottom-image--gray': (theme === 'gray'),
+    'text-with-bottom-image--purple': (theme === 'purple')
   });
 
   return (

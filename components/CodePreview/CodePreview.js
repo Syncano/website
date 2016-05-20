@@ -23,7 +23,7 @@ export default class CodePreview extends React.Component {
       <li
         key={_.kebabCase(title)}
         onClick={() => this.showTab(index)}
-        className={activeTab == index ? 'is-active' : ''}
+        className={activeTab === index ? 'is-active' : ''}
       >
         {title}
       </li>
@@ -36,7 +36,7 @@ export default class CodePreview extends React.Component {
 
     return (
       <div key={index}>
-        {React.cloneElement(child, { isActive: (activeTab == index) })}
+        {React.cloneElement(child, { isActive: (activeTab === index) })}
       </div>
     );
   };
@@ -46,7 +46,7 @@ export default class CodePreview extends React.Component {
 
     const codePreviewClassName = classNames({
       'code-preview': true,
-      'code-preview--no-bottom-radius': (variant == 'no-bottom-radius')
+      'code-preview--no-bottom-radius': (variant === 'no-bottom-radius')
     });
 
     return (
