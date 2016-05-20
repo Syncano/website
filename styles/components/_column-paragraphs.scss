@@ -1,6 +1,5 @@
 .column-paragraphs {
   padding-top: 80px;
-  padding-bottom: 80px;
   text-align: center;
 
   h2 {
@@ -12,6 +11,7 @@
 
   .column-paragraphs__paragraphs {
     margin-top: 60px;
+    margin-bottom: 60px;
 
     .column-paragraphs__paragraphs__paragraph {
       margin-bottom: 60px;
@@ -44,6 +44,26 @@
     }
   }
 
+  .column-paragraphs__image {
+    overflow: hidden;
+    padding: 30px;
+    padding-bottom: 0;
+    margin: -30px;
+    margin-bottom: 0;
+
+    .browser-image {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    picture,
+    img {
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
   @include medium {
     h2 {
       font-size: 30px;
@@ -54,6 +74,7 @@
       flex-wrap: wrap;
       margin: -20px;
       margin-top: (80px - 20px);
+      margin-bottom: (100px - 20px);
 
       .column-paragraphs__paragraphs__paragraph {
         margin-bottom: 80px;
@@ -79,7 +100,6 @@
 
   @include large {
     padding-top: 110px;
-    padding-bottom: 110px;
 
     h2 {
       font-size: 40px;
@@ -88,6 +108,7 @@
     .column-paragraphs__paragraphs {
       margin: -40px;
       margin-top: (80px - 40px);
+      margin-bottom: (100px - 40px);
 
       .column-paragraphs__paragraphs__paragraph {
         padding: 40px;
@@ -98,10 +119,18 @@
         }
       }
     }
+
+    .column-paragraphs__image {
+      picture,
+      img {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
   }
 
   @include very-large {
     padding-top: 120px;
-    padding-bottom: 140px;
   }
 }

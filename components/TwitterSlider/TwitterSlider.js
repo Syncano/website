@@ -69,7 +69,7 @@ export default class TwitterSlider extends Component {
             </SliderWrapper>
           </div>
           <a
-            href="https://twitter.com/Syncano/"
+            href="https://twitter.com/syncanolove/"
             className="button button--white"
             target="_blank"
           >

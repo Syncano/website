@@ -24,8 +24,8 @@
     &:before {
       display: block;
       content: '';
-      width: 3px;
-      height: 3px;
+      width: 6px;
+      height: 6px;
       background: $color-main-blue;
       border-radius: 50%;
       position: absolute;
@@ -54,6 +54,11 @@
 
         &:last-child {
           margin-right: 0;
+        }
+
+        &:only-child {
+          margin-left: auto;
+          margin-right: auto;
         }
       }
     }

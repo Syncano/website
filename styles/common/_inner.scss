@@ -8,11 +8,6 @@
   margin-right: auto;
   box-sizing: content-box;
 
-  &.inner--about-us-header-image {
-    max-width: 1360px;
-    padding: 0;
-  }
-
   &.inner--column-paragraphs,
   &.inner--features-columns {
     max-width: 980px;
@@ -37,20 +32,10 @@
   @include medium {
     padding-left: 30px;
     padding-right: 30px;
-
-    &.inner--about-us-header-image {
-      padding-left: 30px;
-      padding-right: 30px;
-    }
   }
 
   @include very-large {
     padding-left: 110px;
     padding-right: 110px;
-
-    &.inner--about-us-header-image {
-      padding-left: 110px;
-      padding-right: 110px;
-    }
   }
 }

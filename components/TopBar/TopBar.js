@@ -66,11 +66,20 @@ const TopBar = (props, { hamburgerMenu, modals }) => {
               <li>
                 <a
                   className="button button--noborder"
-                  href="https://www.syncano.io/blog/"
+                  href="http://docs.syncano.io/"
                   target="_blank"
                 >
-                  Blog
+                  Docs
                 </a>
+              </li>
+              <li>
+                <Link
+                  className="button button--noborder"
+                  activeClassName="is-active"
+                  to="/help/"
+                >
+                  Help
+                </Link>
               </li>
               <li>
                 <span

@@ -1,4 +1,8 @@
 .browser-image {
   border-radius: 8px;
   box-shadow: 0 5px 30px rgba(34, 131, 172, .4);
+
+  &.browser-image--dark {
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .16);
+  }
 }

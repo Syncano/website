@@ -6,10 +6,12 @@ export default () => (
   <footer className="footer">
     <div className="inner">
       <div className="footer__logo">
-        <img
-          src={require('./images/logo.svg')}
-          alt="Syncano"
-        />
+        <Link to="/">
+          <img
+            src={require('./images/logo.svg')}
+            alt="Syncano"
+          />
+        </Link>
         <div className="footer__logo__copyright">
           <p>&copy; 2016 Syncano. All Rights Reserved.</p>
         </div>
