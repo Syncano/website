@@ -29,4 +29,8 @@
       transform: translateY(100px);
     }
   }
+
+  @include large {
+    margin-top: -190px;
+  }
 }

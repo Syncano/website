@@ -126,6 +126,7 @@
 
   @include medium {
     box-shadow: none;
+    overflow: hidden;
 
     > .inner {
       padding-top: 40px;

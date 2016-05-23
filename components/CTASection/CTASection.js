@@ -10,7 +10,7 @@ const CTASection = ({ variant, theme, children }, { modals }) => {
 
   const getDefaultContent = () => (
     <div>
-      <h2>Set up your backend in minutes</h2>
+      <h2>Rethink how you build apps. Go serverless!</h2>
       <span
         className="button button--large button--featured"
         onClick={modals.signUp.open}

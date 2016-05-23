@@ -57,14 +57,13 @@ const Homepage = (props, { modals }) => {
                 srcSet={`${require('./home/a-serverless-app-platform-to-design-publish-and-manage-your-api.jpg')} 1x, ${require('./home/a-serverless-app-platform-to-design-publish-and-manage-your-api@2x.jpg')} 2x`}
               />
               <img
-                className="browser-image browser-image--dark"
+                className="browser-image browser-image--no-bottom-radius browser-image--dark"
                 src={require('./home/a-serverless-app-platform-to-design-publish-and-manage-your-api-small@2x.jpg')}
-                alt="Create and manage your API from the dashboard"
+                alt="Create and manage your API from our dashboard"
               />
             </picture>
           }
         />
-        <TwitterSlider />
         <TextWithImage
           headline="Assemble your backend with building blocks"
           textline={`Simplify your stack. Piece together one or multiple features as building blocks for your app. Use
@@ -88,22 +87,11 @@ const Homepage = (props, { modals }) => {
           }
         >
           <FeaturesColumns.Column
-            iconSrc={require('./home/index-your-data-for-search.svg')}
-            headline="Index your data for search"
-            text={`Easily search for the data you need. Create sophisticated data relations and apply multiple filters.
-              Specify your queries with your own custom endpoints.`}
-          />
-          <FeaturesColumns.Column
-            iconSrc={require('./home/customize-your-output.svg')}
-            headline="Customize your output"
-            text={`Save valuable client-side resources to make your app faster. Use Templates to change the output of
-              your data to the response format you need, including JSON, XML, and HTML.`}
-          />
-          <FeaturesColumns.Column
-            iconSrc={require('./home/add-push-notifications.svg')}
-            headline="Add push notifications"
-            text={`Boost your engagement. Add powerful push notifications to your app with a few clicks in your
-              Dashboard. Send relevant notifications to users.`}
+            iconSrc={require('./home/realtime-communication.svg')}
+            headline="Realtime communication"
+            text={`Add realtime functionality to your app with Channels. Users can subscribe to Channels and get
+              notifications of changes to data objects. You can grant users the ability to send custom notification
+              messages.`}
           />
           <FeaturesColumns.Column
             iconSrc={require('./home/run-server-side-logic-in-the-cloud.svg')}
@@ -112,7 +100,20 @@ const Homepage = (props, { modals }) => {
               Leverage hundreds of available libraries. Write your scripts in NodeJS, Golang, Swift, Python, Ruby, and
               PHP.`}
           />
+          <FeaturesColumns.Column
+            iconSrc={require('./home/add-push-notifications.svg')}
+            headline="Add push notifications"
+            text={`Boost your engagement. Add powerful push notifications to your app with a few clicks in your
+              Dashboard. Send relevant notifications to users.`}
+          />
+          <FeaturesColumns.Column
+            iconSrc={require('./home/customize-your-output.svg')}
+            headline="Customize your output"
+            text={`Save valuable client-side resources to make your app faster. Use Templates to change the output of
+              your data to the response format you need, including JSON, XML, and HTML.`}
+          />
         </FeaturesColumns>
+        <TwitterSlider />
         <PlatformsSection
           headline="Use the frameworks and languages you like"
           bottomContentHeadline="Add data with a few lines of code"

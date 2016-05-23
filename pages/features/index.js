@@ -38,7 +38,7 @@ export default () => {
         <TextWithBottomImage
           variant="no-bottom-padding minus-bottom-margin"
           theme="purple"
-          headline="Collaborate better with our Dashboard"
+          headline="Collaborate better with our dashboard"
           textline={`Visualize your data in our Dashboard to have a complete overview of your applications. Edit and
             test your scripts, manage users, collaborate with multiple admins, and more - all from one place.`}
           image={
@@ -58,7 +58,7 @@ export default () => {
             </picture>
           }
         />
-        <ScreenDescriptions headline="Data Management">
+        <ScreenDescriptions headline="Data management">
           <ScreenDescriptions.Screen
             imageSrc={require('./screen-1.jpg')}
             image2xSrc={require('./screen-1@2x.jpg')}
@@ -158,7 +158,7 @@ export default () => {
               configure and send push notifications with ease.`}
           />
         </FeaturesColumns>
-        <CircleIconColumns headline="User Authentication">
+        <CircleIconColumns headline="User authentication">
           <CircleIconColumns.Column
             iconSrc={require('./add-users.svg')}
             headline="Add Users"

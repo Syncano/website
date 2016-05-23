@@ -5,4 +5,9 @@
   &.browser-image--dark {
     box-shadow: 0 5px 30px rgba(0, 0, 0, .16);
   }
+
+  &.browser-image--no-bottom-radius {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }
