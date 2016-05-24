@@ -12,6 +12,7 @@
     "classnames": "2.2.5",
     "formsy-react": "0.18.0",
     "front-matter": "2.0.8",
+    "fs": "0.0.2",
     "gatsby": "0.10.2",
     "hellojs": "1.13.1",
     "highlight.js": "9.4.0",
@@ -37,6 +38,7 @@
     "react-router": "2.4.1",
     "react-slick": "0.12.2",
     "react-sticky": "5.0.1",
+    "sitemap": "1.6.0",
     "syncano": "1.0.11",
     "toml-js": "0.0.8",
     "typography": "0.7.0"
