@@ -91,7 +91,7 @@ const TopBar = (props, { hamburgerMenu, modals }) => {
               </li>
               <li>
                 <span
-                  className="button button--filled"
+                  className="button top-bar__nav__menu__cta"
                   onClick={modals.signUp.open}
                 >
                   Sign Up For Free

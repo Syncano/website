@@ -72,10 +72,10 @@
           min-width: 0;
           height: 34px;
           line-height: 30px;
-          padding: 0;
-          color: transparentize(#5F6C7A, .5);
           cursor: pointer;
           text-decoration: none;
+          padding-top: 0;
+          padding-bottom: 0;
 
           &:hover {
             color: $color-main-blue--hover;
@@ -85,22 +85,23 @@
             color: $color-main-blue;
           }
 
-          &.button--filled {
-            padding: 0 18px;
-            color: #fff;
+          &.button--noborder {
+            padding: 0;
+            color: transparentize(#5F6C7A, .5);
           }
         }
       }
     }
   }
 
+  &.headroom--pinned,
   &.headroom--unpinned {
-    transform: translateY(-100%);
-  }
-
-  &.headroom--pinned {
     background: #fff;
     box-shadow: 0 3px 4px rgba(0, 0, 0, .1);
+
+    .top-bar__nav__menu__cta {
+      @extend .button--featured;
+    }
   }
 
   @include body-class('has-hamburger-menu-visible') {
@@ -153,15 +154,13 @@
       }
     }
 
-    &.headroom--unpinned,
-    &.headroom--pinned {
+    &.headroom--pinned,
+    &.headroom--unpinned {
+      transform: translateY(-46px);
+
       > .inner {
         transform: translateY(23px);
       }
-    }
-
-    &.headroom--pinned {
-      transform: translateY(-46px);
     }
   }
 
