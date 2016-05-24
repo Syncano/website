@@ -73,14 +73,6 @@ export default ({ headline, children }) => {
               position="Software Engineer"
             />
             <TeamMember
-              photoSrc={require('./images/devin-visslailli.jpg')}
-              photo2xSrc={require('./images/devin-visslailli@2x.jpg')}
-              photoMediumSrc={require('./images/devin-visslailli-medium.jpg')}
-              photoMedium2xSrc={require('./images/devin-visslailli-medium@2x.jpg')}
-              name="Devin Visslailli"
-              position="Developer Evangelist"
-            />
-            <TeamMember
               photoSrc={require('./images/marcin-godlewski.jpg')}
               photo2xSrc={require('./images/marcin-godlewski@2x.jpg')}
               photoMediumSrc={require('./images/marcin-godlewski-medium.jpg')}
@@ -159,6 +151,14 @@ export default ({ headline, children }) => {
               photoMedium2xSrc={require('./images/marcin-swiderski-medium@2x.jpg')}
               name="Marcin Świderski"
               position="Software Engineer"
+            />
+            <TeamMember
+              photoSrc={require('./images/devin-visslailli.jpg')}
+              photo2xSrc={require('./images/devin-visslailli@2x.jpg')}
+              photoMediumSrc={require('./images/devin-visslailli-medium.jpg')}
+              photoMedium2xSrc={require('./images/devin-visslailli-medium@2x.jpg')}
+              name="Devin Visslailli"
+              position="Developer Evangelist"
             />
             <TeamMember
               photoSrc={require('./images/todd-wacker.jpg')}
