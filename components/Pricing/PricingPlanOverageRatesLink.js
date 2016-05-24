@@ -41,7 +41,7 @@ export default class PricingPlanOverageRatesLink extends Component {
             <strong>Overage Unit Price</strong>
             <ul>
               <li>API Calls: &#36;{apiCallsOverage}</li>
-              <li>Scripts seconds: &#36;{scriptsOverage}</li>
+              <li>Script Seconds: &#36;{scriptsOverage}</li>
             </ul>
           </span>
         </span>

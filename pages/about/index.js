@@ -36,7 +36,7 @@ export default () => {
         <Team headline="Meet the Syncano team" />
         <CTASection theme="gray">
           <h2>Working at Syncano</h2>
-          <p>Join us and help create a unique serverless platform for developers worldwide</p>
+          <p>Join us and help create a unique serverless platform for developers worldwide.</p>
           <a
             href="https://syncano.workable.com/"
             className="button button--large button--filled"

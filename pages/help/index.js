@@ -36,7 +36,7 @@ export default () => {
           }
           headline="Get started with Syncano"
           textline={`Learn the basic steps of how to get up and running on Syncano. Get answers to your questions. Join
-            us on Slack, read tutorials or simply fork our open source code.`}
+            us on Slack, read tutorials, or simply fork our open source code.`}
         >
           <a
             className="button"
@@ -78,7 +78,7 @@ export default () => {
             <div className="text-panels__panel__list">
               <ul>
                 <li><a href="https://www.syncano.io/blog/create-ios-chat-app-part1/" target="_blank">Create iOS chat app</a></li>
-                <li><a href="https://www.syncano.io/blog/ember-syncano-addon/" target="_blank">Build an Ember To-do app</a></li>
+                <li><a href="https://www.syncano.io/blog/ember-syncano-addon/" target="_blank">Build an Ember Todo app</a></li>
                 <li><a href="https://www.syncano.io/blog/sendgrid-integration/" target="_blank">Add SendGrid integration</a></li>
                 <li><a href="http://docs.syncano.io/docs/weather-app-js/" target="_blank">Make a JavaScript weather app</a></li>
                 <li><a href="https://www.syncano.io/blog/intro-iot-with-syncano/" target="_blank">Build an Arduino weather station</a></li>
@@ -97,16 +97,16 @@ export default () => {
           </TextPanels.Panel>
           <TextPanels.Panel
             theme="silver"
-            headline="Most read docs"
+            headline="Most-read docs"
           >
             <div className="text-panels__panel__list">
               <ul>
-                <li><a href="http://docs.syncano.io/docs/data-objects/" target="_blank">Data objects</a></li>
+                <li><a href="http://docs.syncano.io/docs/data-objects/" target="_blank">Data Objects</a></li>
                 <li><a href="http://docs.syncano.io/docs/user-management/" target="_blank">User management</a></li>
                 <li><a href="http://docs.syncano.io/docs/classes/" target="_blank">Classes</a></li>
                 <li><a href="http://docs.syncano.io/docs/authentication/" target="_blank">Authentication</a></li>
                 <li><a href="http://docs.syncano.io/docs/realtime-communication/" target="_blank">Realtime communication</a></li>
-                <li><a href="http://docs.syncano.io/docs/data-objects-filtering-ordering/" target="_blank">Data objects filtering</a></li>
+                <li><a href="http://docs.syncano.io/docs/data-objects-filtering-ordering/" target="_blank">Data Objects filtering</a></li>
                 <li><a href="http://docs.syncano.io/docs/endpoints-data/" target="_blank">Data Endpoints</a></li>
                 <li><a href="http://docs.syncano.io/docs/snippets-scripts/" target="_blank">Snippet Scripts</a></li>
               </ul>
@@ -132,7 +132,7 @@ export default () => {
           <div className="text-with-image__text__list">
             <ul>
               <li><a href="http://docs.syncano.io/docs/faq#general-questions" target="_blank">General answers</a></li>
-              <li><a href="http://docs.syncano.io/docs/faq#platform-specific-questions" target="_blank">Platform specific answers</a></li>
+              <li><a href="http://docs.syncano.io/docs/faq#platform-specific-questions" target="_blank">Platform-specific answers</a></li>
               <li><a href="http://docs.syncano.io/docs/faq#pricingbilling-questions" target="_blank">Pricing/Billing answers</a></li>
             </ul>
           </div>

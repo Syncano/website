@@ -7,7 +7,6 @@ import {
   FeaturesColumns,
   Footer,
   Hero,
-  SlackSlider,
   PlatformsSection,
   TextWithBackground,
   TextWithBottomImage,
@@ -44,9 +43,9 @@ const Homepage = (props, { modals }) => {
         <TextWithBottomImage
           variant="no-bottom-padding"
           theme="gray"
-          headline={<span>Create and manage your API from<br />the dashboard</span>}
-          textline={`Make your own custom API’s in the cloud. Instantly scale for the web, mobile, and the internet of
-            things. Support millions of users without learning the nuts and bolts of handling servers.`}
+          headline={<span>Create and manage your API from<br />the Dashboard</span>}
+          textline={`Make your own custom APIs in the cloud. Instantly scale for the web, mobile, and the Internet of
+            Things. Support millions of users without learning the nuts and bolts of handling servers.`}
           image={
             <picture>
               <source
@@ -57,14 +56,13 @@ const Homepage = (props, { modals }) => {
                 srcSet={`${require('./home/a-serverless-app-platform-to-design-publish-and-manage-your-api.jpg')} 1x, ${require('./home/a-serverless-app-platform-to-design-publish-and-manage-your-api@2x.jpg')} 2x`}
               />
               <img
-                className="browser-image browser-image--dark"
+                className="browser-image browser-image--no-bottom-radius browser-image--dark"
                 src={require('./home/a-serverless-app-platform-to-design-publish-and-manage-your-api-small@2x.jpg')}
-                alt="Create and manage your API from the dashboard"
+                alt="Create and manage your API from our dashboard"
               />
             </picture>
           }
         />
-        <TwitterSlider />
         <TextWithImage
           headline="Assemble your backend with building blocks"
           textline={`Simplify your stack. Piece together one or multiple features as building blocks for your app. Use
@@ -88,16 +86,18 @@ const Homepage = (props, { modals }) => {
           }
         >
           <FeaturesColumns.Column
-            iconSrc={require('./home/index-your-data-for-search.svg')}
-            headline="Index your data for search"
-            text={`Easily search for the data you need. Create sophisticated data relations and apply multiple filters.
-              Specify your queries with your own custom endpoints.`}
+            iconSrc={require('./home/real-time-communication.svg')}
+            headline="Real-Time Communication"
+            text={`Add real-Time functionality to your app with Channels. Users can subscribe to Channels and get
+              notifications of changes to Data Objects. You can grant users the ability to send custom notification
+              messages.`}
           />
           <FeaturesColumns.Column
-            iconSrc={require('./home/customize-your-output.svg')}
-            headline="Customize your output"
-            text={`Save valuable client-side resources to make your app faster. Use Templates to change the output of
-              your data to the response format you need, including JSON, XML, and HTML.`}
+            iconSrc={require('./home/run-server-side-logic-in-the-cloud.svg')}
+            headline="Run server-side logic in the cloud"
+            text={`Execute code on API calls, in response to events, updates to data, in-app activity, or by a schedule.
+              Leverage hundreds of available libraries. Write your scripts in Node.js, Go, Swift, Python, Ruby, and
+              PHP.`}
           />
           <FeaturesColumns.Column
             iconSrc={require('./home/add-push-notifications.svg')}
@@ -106,13 +106,13 @@ const Homepage = (props, { modals }) => {
               Dashboard. Send relevant notifications to users.`}
           />
           <FeaturesColumns.Column
-            iconSrc={require('./home/run-server-side-logic-in-the-cloud.svg')}
-            headline="Run server-side logic in the cloud"
-            text={`Execute code on API calls, in response to events, updates to data, in-app activity or by a schedule.
-              Leverage hundreds of available libraries. Write your scripts in NodeJS, Golang, Swift, Python, Ruby, and
-              PHP.`}
+            iconSrc={require('./home/customize-your-output.svg')}
+            headline="Customize your output"
+            text={`Save valuable client-side resources to make your app faster. Use Templates to change the output of
+              your data to the response format you need, including JSON, XML, and HTML.`}
           />
         </FeaturesColumns>
+        <TwitterSlider />
         <PlatformsSection
           headline="Use the frameworks and languages you like"
           bottomContentHeadline="Add data with a few lines of code"
@@ -165,7 +165,6 @@ const Homepage = (props, { modals }) => {
             />
           </CodePreview>
         </PlatformsSection>
-        <SlackSlider />
         <TextWithBackground
           theme="image1"
           headline="We’ll support you every step of the way"

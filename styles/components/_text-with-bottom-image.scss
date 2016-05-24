@@ -5,10 +5,12 @@
 
   &.text-with-bottom-image--no-bottom-padding {
     padding-bottom: 0 !important;
+    overflow: hidden;
   }
 
   &.text-with-bottom-image--minus-bottom-margin {
     margin-bottom: -25px;
+    overflow: visible;
   }
 
   &.text-with-bottom-image--gray {

@@ -8,12 +8,12 @@ export default () => {
         <OfficeAddressesItem
           imageSrc={require('./images/flag-us.svg')}
           title="USA East Coast"
-          address={<p>60 Madison Avenue, 12th Floor<br />10010, New York, NY</p>}
+          address={<p>60 Madison Avenue, 12th Floor<br />New York, NY 10010<br />USA</p>}
         />
         <OfficeAddressesItem
           imageSrc={require('./images/flag-us.svg')}
           title="USA West Coast"
-          address={<p>1933 Davis St. #249<br />94577, San Leandro, CA</p>}
+          address={<p>1933 Davis St. #249<br />San Leandro, CA 94577<br />USA</p>}
         />
         <OfficeAddressesItem
           imageSrc={require('./images/flag-pl.svg')}

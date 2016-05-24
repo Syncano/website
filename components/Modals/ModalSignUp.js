@@ -10,7 +10,7 @@ const ModalSignUp = (props, { auth, modals }) => {
       <div className="modal-box__content">
         <div className="inner">
           <h2>Sign up and start building</h2>
-          <p>Build serverless apps on Syncano for free.<br/>Setup your backend in minutes!</p>
+          <p>Build serverless apps on Syncano for free.<br/>Set up your backend in minutes!</p>
 
           <div className="modal-box__content_form form">
             <Formsy.Form onValidSubmit={(model) => auth.handlePasswordAuth('register', model)}>
@@ -75,7 +75,7 @@ const ModalSignUp = (props, { auth, modals }) => {
       <footer className="modal-box__footer">
         <div className="modal-box__footer__column">
           <span onClick={modals.logIn.open}>
-            Already have an account? <strong>Log in</strong> to your dashboard.
+            Already have an account? <strong>Log in</strong> to your Dashboard.
           </span>
         </div>
       </footer>
