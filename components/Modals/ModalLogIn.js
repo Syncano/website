@@ -31,7 +31,7 @@ const ModalLogIn = (props, { auth, modals }) => {
                 required
               />
               <button className="button button--large button--featured">
-                Take me to the dashboard
+                Take me to the Dashboard
               </button>
             </Formsy.Form>
           </div>
