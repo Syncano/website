@@ -5,10 +5,7 @@ import { HamburgerMenu, HamburgerMenuHOC } from '../HamburgerMenu';
 
 const TopBar = (props, { hamburgerMenu, modals }) => {
   return (
-    <Headroom
-      pinStart={1}
-      disableInlineStyles
-    >
+    <Headroom disableInlineStyles>
       <div className="inner">
         <div className="top-bar__logo">
           <h1>

@@ -9,6 +9,7 @@
   width: 100%;
   @include z-index(top-bar);
   transition: $transition-default;
+  background: #fff;
   
   > .inner {
     overflow: hidden;
@@ -77,17 +78,17 @@
           padding-top: 0;
           padding-bottom: 0;
 
-          &:hover {
-            color: $color-main-blue--hover;
+          &.button--noborder {
+            padding: 0;
+            color: transparentize(#5F6C7A, .5);
+
+            &:hover {
+              color: $color-main-blue--hover;
+            }
           }
 
           &.is-active {
             color: $color-main-blue;
-          }
-
-          &.button--noborder {
-            padding: 0;
-            color: transparentize(#5F6C7A, .5);
           }
         }
       }
@@ -96,7 +97,6 @@
 
   &.headroom--pinned,
   &.headroom--unpinned {
-    background: #fff;
     box-shadow: 0 3px 4px rgba(0, 0, 0, .1);
 
     .top-bar__nav__menu__cta {
