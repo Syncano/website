@@ -7,7 +7,6 @@ import {
   FeaturesColumns,
   Footer,
   Hero,
-  SlackSlider,
   PlatformsSection,
   TextWithBackground,
   TextWithBottomImage,
@@ -44,9 +43,9 @@ const Homepage = (props, { modals }) => {
         <TextWithBottomImage
           variant="no-bottom-padding"
           theme="gray"
-          headline={<span>Create and manage your API from<br />the dashboard</span>}
-          textline={`Make your own custom API’s in the cloud. Instantly scale for the web, mobile, and the internet of
-            things. Support millions of users without learning the nuts and bolts of handling servers.`}
+          headline={<span>Create and manage your API from<br />the Dashboard</span>}
+          textline={`Make your own custom APIs in the cloud. Instantly scale for the web, mobile, and the Internet of
+            Things. Support millions of users without learning the nuts and bolts of handling servers.`}
           image={
             <picture>
               <source
@@ -87,17 +86,17 @@ const Homepage = (props, { modals }) => {
           }
         >
           <FeaturesColumns.Column
-            iconSrc={require('./home/realtime-communication.svg')}
-            headline="Realtime communication"
-            text={`Add realtime functionality to your app with Channels. Users can subscribe to Channels and get
-              notifications of changes to data objects. You can grant users the ability to send custom notification
+            iconSrc={require('./home/real-time-communication.svg')}
+            headline="Real-Time Communication"
+            text={`Add real-Time functionality to your app with Channels. Users can subscribe to Channels and get
+              notifications of changes to Data Objects. You can grant users the ability to send custom notification
               messages.`}
           />
           <FeaturesColumns.Column
             iconSrc={require('./home/run-server-side-logic-in-the-cloud.svg')}
             headline="Run server-side logic in the cloud"
-            text={`Execute code on API calls, in response to events, updates to data, in-app activity or by a schedule.
-              Leverage hundreds of available libraries. Write your scripts in NodeJS, Golang, Swift, Python, Ruby, and
+            text={`Execute code on API calls, in response to events, updates to data, in-app activity, or by a schedule.
+              Leverage hundreds of available libraries. Write your scripts in Node.js, Go, Swift, Python, Ruby, and
               PHP.`}
           />
           <FeaturesColumns.Column
@@ -166,7 +165,6 @@ const Homepage = (props, { modals }) => {
             />
           </CodePreview>
         </PlatformsSection>
-        <SlackSlider />
         <TextWithBackground
           theme="image1"
           headline="We’ll support you every step of the way"
