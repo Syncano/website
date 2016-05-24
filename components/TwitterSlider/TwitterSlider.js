@@ -17,7 +17,7 @@ export default class TwitterSlider extends Component {
         ref={(ref) => this.twitterSlider = ref}
       >
         <div className="inner">
-          <h2>&lt;3 From our users</h2>
+          <h2>&lt;3 from our users</h2>
           <div className="twitter-slider__slider">
             <SliderWrapper
               arrows={true}

@@ -67,6 +67,10 @@
         margin-bottom: 80px;
         padding: 0 30px;
 
+        h3 {
+          font-size: 24px;
+        }
+
         &:nth-last-child(1),
         &:nth-last-child(2) {
           margin-bottom: 0;
@@ -92,7 +96,6 @@
 
       .features-columns__columns__column {
         h3 {
-          font-size: 21px;
           margin-top: 30px;
         }
 
@@ -113,10 +116,6 @@
 
       .features-columns__columns__column {
         padding: 0 100px;
-
-        h3 {
-          font-size: 24px;
-        }
       }
     }
   }

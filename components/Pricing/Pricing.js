@@ -70,7 +70,7 @@ class Pricing extends Component {
                 'Full access to all features',
                 '15 requests per second',
                 '10GB of storage',
-                '4 instances (apps)',
+                '4 Instances (apps)',
                 '2 concurrent Scripts',
                 'Unlimited users'
               ]}
@@ -85,7 +85,7 @@ class Pricing extends Component {
                 'Full access to all features',
                 '60 requests per second',
                 'Unlimited storage',
-                '16 instances (apps)',
+                '16 Instances (apps)',
                 '8 concurrent Scripts',
                 'Unlimited users'
               ]}
@@ -99,7 +99,7 @@ class Pricing extends Component {
                 'Full access to all features',
                 '60 requests per second',
                 'Unlimited storage',
-                '16 instances (apps)',
+                '16 Instances (apps)',
                 '8 concurrent Scripts',
                 'Unlimited users'
               ]}

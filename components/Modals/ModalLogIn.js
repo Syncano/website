@@ -10,7 +10,7 @@ const ModalLogIn = (props, { auth, modals }) => {
       <div className="modal-box__content">
         <div className="inner">
           <h2>Welcome back!</h2>
-          <p>Log in to the Syncano dashboard below:</p>
+          <p>Log in to the Syncano Dashboard below:</p>
 
           <div className="modal-box__content_form form">
             <Formsy.Form onValidSubmit={(model) => auth.handlePasswordAuth('login', model)}>
@@ -31,7 +31,7 @@ const ModalLogIn = (props, { auth, modals }) => {
                 required
               />
               <button className="button button--large button--featured">
-                Take me to dashboard
+                Take me to the Dashboard
               </button>
             </Formsy.Form>
           </div>
@@ -86,7 +86,7 @@ const ModalLogIn = (props, { auth, modals }) => {
       <footer className="modal-box__footer">
         <div className="modal-box__footer__column">
           <span onClick={modals.signUp.open}>
-            Don’t have an account? <strong>Sign up</strong>
+            Don’t have an account? <strong>Sign up.</strong>
           </span>
         </div>
         <div className="modal-box__footer__column">

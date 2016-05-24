@@ -79,7 +79,7 @@ const ModalResetPassword = (props, { auth, modals }) => {
       <footer className="modal-box__footer">
         <div className="modal-box__footer__column">
           <span onClick={modals.signUp.open}>
-            Don’t have an account? <strong>Sign up</strong>
+            Don’t have an account? <strong>Sign up.</strong>
           </span>
         </div>
       </footer>
