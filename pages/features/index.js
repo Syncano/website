@@ -45,14 +45,14 @@ export default () => {
             <picture>
               <source
                 media="(min-width: 321px)"
-                srcSet={`${require('./collaborate-better-with-our-dashboard-small.jpg')} 1x, ${require('./collaborate-better-with-our-dashboard-small@2x.jpg')} 2x`}
+                srcSet={`${require('./collaborate-better-with-our-dashboard-small.png')} 1x, ${require('./collaborate-better-with-our-dashboard-small@2x.png')} 2x`}
               />
               <source
-                srcSet={`${require('./collaborate-better-with-our-dashboard.jpg')} 1x, ${require('./collaborate-better-with-our-dashboard@2x.jpg')} 2x`}
+                srcSet={`${require('./collaborate-better-with-our-dashboard.png')} 1x, ${require('./collaborate-better-with-our-dashboard@2x.png')} 2x`}
               />
               <img
                 className="browser-image"
-                src={require('./collaborate-better-with-our-dashboard-small@2x.jpg')}
+                src={require('./collaborate-better-with-our-dashboard-small@2x.png')}
                 alt="Collaborate better with our Dashboard"
               />
             </picture>
@@ -60,29 +60,29 @@ export default () => {
         />
         <ScreenDescriptions headline="Data management">
           <ScreenDescriptions.Screen
-            imageSrc={require('./screen-1.jpg')}
-            image2xSrc={require('./screen-1@2x.jpg')}
-            imageSmallSrc={require('./screen-1-small.jpg')}
-            imageSmall2xSrc={require('./screen-1-small@2x.jpg')}
+            imageSrc={require('./define-your-classes.png')}
+            image2xSrc={require('./define-your-classes@2x.png')}
+            imageSmallSrc={require('./define-your-classes-small.png')}
+            imageSmall2xSrc={require('./define-your-classes-small@2x.png')}
             headline="Define your Classes"
             text={`Control how you define the structure for each of your Data Objects. Every Data Object you create will
               inherit the properties of its own customized Class.`}
           />
           <ScreenDescriptions.Screen
             variant="image-right"
-            imageSrc={require('./screen-2.jpg')}
-            image2xSrc={require('./screen-2@2x.jpg')}
-            imageSmallSrc={require('./screen-2-small.jpg')}
-            imageSmall2xSrc={require('./screen-2-small@2x.jpg')}
+            imageSrc={require('./customize-class-schemas.png')}
+            image2xSrc={require('./customize-class-schemas@2x.png')}
+            imageSmallSrc={require('./customize-class-schemas-small.png')}
+            imageSmall2xSrc={require('./customize-class-schemas-small@2x.png')}
             headline="Customize Class schemas"
             text={`Create fields with specific types to get a flexible architecture. Our pre-set custom fields include
               string, text, integer, float, Boolean, datetime, file, object, array, and reference.`}
           />
           <ScreenDescriptions.Screen
-            imageSrc={require('./screen-3.jpg')}
-            image2xSrc={require('./screen-3@2x.jpg')}
-            imageSmallSrc={require('./screen-3-small.jpg')}
-            imageSmall2xSrc={require('./screen-3-small@2x.jpg')}
+            imageSrc={require('./create-data-objects.png')}
+            image2xSrc={require('./create-data-objects@2x.png')}
+            imageSmallSrc={require('./create-data-objects-small.png')}
+            imageSmall2xSrc={require('./create-data-objects-small@2x.png')}
             headline="Create Data Objects"
             text={`Store your data as JSON objects that contain key-value pairs that you define. Control what your users
               have access to. Define your own data views on the backend instead of updating every client-side
@@ -90,10 +90,10 @@ export default () => {
           />
           <ScreenDescriptions.Screen
             variant="image-right"
-            imageSrc={require('./screen-4.jpg')}
-            image2xSrc={require('./screen-4@2x.jpg')}
-            imageSmallSrc={require('./screen-4-small.jpg')}
-            imageSmall2xSrc={require('./screen-4-small@2x.jpg')}
+            imageSrc={require('./query-away.png')}
+            image2xSrc={require('./query-away@2x.png')}
+            imageSmallSrc={require('./query-away-small.png')}
+            imageSmall2xSrc={require('./query-away-small@2x.png')}
             headline="Query away!"
             text={`Query your data based on built-in or customized fields for each of your objects. Get back the data
               you need with advanced filtering and ordering.`}
