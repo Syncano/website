@@ -7,6 +7,10 @@ export default (ComposedComponent) => (
   class AuthHOC extends Component {
     constructor(props) {
       super(props);
+
+      this.state = {
+        status: null
+      };
     };
 
     static childContextTypes = {
@@ -15,6 +19,7 @@ export default (ComposedComponent) => (
 
     getChildContext = () => {
       const auth = {
+        status: this.state.status,
         handlePasswordAuth: this.handlePasswordAuth,
         handlePasswordReset: this.handlePasswordReset,
         handleSocialAuth: this.handleSocialAuth
@@ -30,7 +35,11 @@ export default (ComposedComponent) => (
       Account[type]({ email, password })
         .then((data) => this.redirectToDashboard(data.account_key))
         .catch((error) => {
-          // error message here
+          const { status } = error;
+
+          console.log(error);
+
+          this.setState({ status: status });
         });
     };
 
@@ -40,10 +49,12 @@ export default (ComposedComponent) => (
 
       Account.resetPassword(email)
         .then((data) => {
-          // success / error message here
+          this.setState({ status: 'done' });
         })
         .catch((error) => {
-          // error message here
+          const { status } = error;
+
+          this.setState({ status: status });
         });
     };
 

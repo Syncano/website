@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { HOC } from 'formsy-react';
-import classNames  from 'classnames';
+import classNames from 'classnames';
 
 class ContactFormInput extends Component {
   getClassName = () => {

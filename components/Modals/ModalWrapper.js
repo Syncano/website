@@ -76,8 +76,8 @@ class ModalWrapper extends Component {
         </Modal>
       </BodyClassName>
     );
-  }
-}
+  };
+};
 
 ModalWrapper.contextTypes = {
   modals: React.PropTypes.object
