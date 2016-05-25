@@ -9,7 +9,14 @@ export default () => {
       <Helmet
         title="404 Error - Page does not exist | Syncano"
         meta={[
-          { name: 'description', content: `The age you were looking for doesn't exist.` }
+          {
+            name: 'description',
+            content: `The age you were looking for doesn't exist.`
+          },
+          {
+            name: 'mixpanelTitle',
+            content: '404'
+          }
         ]}
       />
       <PageHeader

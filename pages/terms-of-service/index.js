@@ -7,10 +7,16 @@ export default () => {
     <div>
       <Helmet
         title="Terms and Legal | Syncano"
-        meta={[{
-          name: 'description',
-          content: 'Learn more about our terms and policies.'
-        }]}
+        meta={[
+          {
+            name: 'description',
+            content: 'Learn more about our terms and policies.'
+          },
+          {
+            name: 'mixpanelTitle',
+            content: 'Terms of Service'
+          }
+        ]}
       />
       <PageHeader
         headline="Terms and Legal"

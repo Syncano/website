@@ -7,10 +7,16 @@ export default () => {
     <div>
       <Helmet
         title="Get in touch with us | Syncano"
-        meta={[{
-          name: 'description',
-          content: 'Get in touch with us, write your feedback or just say hi! Use the form or just drop us an email.'
-        }]}
+        meta={[
+          {
+            name: 'description',
+            content: 'Get in touch with us, write your feedback or just say hi! Use the form or just drop us an email.'
+          },
+          {
+            name: 'mixpanelTitle',
+            content: 'Contact Us'
+          }
+        ]}
       />
       <PageHeader
         headline="Get in touch with us"

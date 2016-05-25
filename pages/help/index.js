@@ -15,11 +15,17 @@ export default () => {
     <div>
       <Helmet
         title="Help & Status | Syncano"
-        meta={[{
-          name: 'description',
-          content: `Learn the basics of how to get up and running on Syncano. Get answers to your questions. Join us on
-           Slack, read tutorials or simply fork our open source code.`
-        }]}
+        meta={[
+          {
+            name: 'description',
+            content: `Learn the basics of how to get up and running on Syncano. Get answers to your questions. Join us
+             on Slack, read tutorials or simply fork our open source code.`
+          },
+          {
+            name: 'mixpanelTitle',
+            content: 'Help'
+          }
+        ]}
       />
       <StatusPageHeader>
         <Link

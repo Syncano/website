@@ -19,11 +19,17 @@ const Homepage = (props, { modals }) => {
     <div>
       <Helmet
         title="Build powerful realtime apps in half the time | Syncano"
-        meta={[{
-          name: 'description',
-          content: `Create and manage your API from our dashboard. Use our serverless platform to set up your backend and
-           support millions of users without handling servers!`
-        }]}
+        meta={[
+          {
+            name: 'description',
+            content: `Create and manage your API from our dashboard. Use our serverless platform to set up your backend
+             and support millions of users without handling servers!`
+          },
+          {
+            name: 'mixpanelTitle',
+            content: 'Home'
+          }
+        ]}
       />
       <Hero
         headline={<span>Build powerful apps<br />in half the time</span>}
