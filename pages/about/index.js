@@ -7,11 +7,17 @@ export default () => {
     <div>
       <Helmet
         title="About Syncano and the team"
-        meta={[{
-          name: 'description',
-          content: `Changing the way the world thinks about app development. We want to help developers focus on strategic
-           initiatives, and not worry about heavy lifting.`
-        }]}
+        meta={[
+          {
+            name: 'description',
+            content: `Changing the way the world thinks about app development. We want to help developers focus on
+             strategic initiatives, and not worry about heavy lifting.`
+          },
+          {
+            name: 'mixpanelTitle',
+            content: 'About Us'
+          }
+        ]}
       />
       <PageHeader
         headline="About us"

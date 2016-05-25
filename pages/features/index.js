@@ -18,11 +18,17 @@ export default () => {
     <div>
       <Helmet
         title="Features - Syncano Sockets, Data management, Automations"
-        meta={[{
-          name: 'description',
-          content: `Rapidly assemble building blocks for your app without a backend or server. Learn more about what you
-           can do with Syncano.`
-        }]}
+        meta={[
+          {
+            name: 'description',
+            content: `Rapidly assemble building blocks for your app without a backend or server. Learn more about what
+             you can do with Syncano.`
+          },
+          {
+            name: 'mixpanelTitle',
+            content: 'Features'
+          }
+        ]}
       />
       <PageHeader
         headline="Features"

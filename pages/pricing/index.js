@@ -17,11 +17,17 @@ export default () => {
     <div>
       <Helmet
         title="Plans & Pricing at Syncano"
-        meta={[{
-          name: 'description',
-          content: `Get started with Syncano for free and scale to millions of users. Upgrade, downgrade or cancel at any
-           time. 30 day money back guarantee. Read more...`
-        }]}
+        meta={[
+          {
+            name: 'description',
+            content: `Get started with Syncano for free and scale to millions of users. Upgrade, downgrade or cancel at any
+             time. 30 day money back guarantee. Read more...`
+          },
+          {
+            name: 'mixpanelTitle',
+            content: 'Pricing'
+          }
+        ]}
       />
       <PageHeader
         headline="Build secure, scalable apps in half the time"

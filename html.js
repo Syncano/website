@@ -42,7 +42,6 @@ export default React.createClass({
           <meta name="msapplication-TileColor" content="#0070d3" />
           <meta name="msapplication-TileImage" content={require('./images/favicons/mstile-144x144.png')} />
           <meta name="theme-color" content="#ffffff" />
-          <!-- Hotjar Tracking Code for www.syncano.io -->
           <script>
             (function(h,o,t,j,a,r){
             h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
