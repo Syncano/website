@@ -43,6 +43,7 @@
         a {
           color: $color-text-base;
           text-decoration: none;
+          cursor: pointer;
 
           &:hover {
             color: $color-main-blue;
