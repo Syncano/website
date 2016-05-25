@@ -4,7 +4,7 @@ import fs from 'fs';
 
 const generateSitemapUrl = (page) => {
   const pagePath = page.path;
-  const nonIndexedPages = ['/documentation/', '/lp/'];
+  const nonIndexedPages = ['/404/'];
   const importantPages = ['/', '/pricing/'];
   const isRootPath = pagePath === '/';
   const isNonInedexedPage = _.includes(nonIndexedPages, pagePath) || _.some(nonIndexedPages, (nonIndexedPage) => _.startsWith(pagePath, nonIndexedPage));

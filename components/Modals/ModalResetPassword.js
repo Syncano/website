@@ -6,6 +6,21 @@ import ModalTextField from './ModalTextField';
 import AuthHOC from '../AuthHOC';
 
 class ModalResetPassword extends Component {
+  componentDidUpdate(props, state, context) {
+    const isOpen = this.context.modals.signUp.isOpen;
+    const wasOpen = context.modals.signUp.isOpen;
+
+    if (isOpen !== wasOpen && isOpen) {
+      this.trackPageView();
+    }
+  }
+
+  trackPageView() {
+    analytics.page('Website', {
+      Page: 'Reset Password'
+    });
+  }
+
   getInputClassName = () => {
     const { status } = this.context.auth;
 
@@ -123,7 +138,7 @@ class ModalResetPassword extends Component {
       </ModalWrapper>
     );
   };
-};
+}
 
 ModalResetPassword.contextTypes = {
   auth: React.PropTypes.object,

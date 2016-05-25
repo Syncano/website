@@ -14,7 +14,7 @@ export default () => {
           },
           {
             name: 'mixpanelTitle',
-            content: 'Terms of Service'
+            content: 'Terms and Legal'
           }
         ]}
       />

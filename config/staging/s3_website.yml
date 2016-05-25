@@ -1,6 +1,6 @@
 s3_id: <%= ENV['STAGING_AWS_S3_ACCESS_KEY_ID'] %>
 s3_secret: <%= ENV['STAGING_AWS_S3_SECRET_ACCESS_KEY'] %>
-s3_bucket: <%= ENV['STAGING_NEW_AWS_S3_BUCKET'] %>
+s3_bucket: <%= ENV['STAGING_AWS_S3_BUCKET'] %>
 s3_endpoint: us-east-1
 cache_control:
   "index.html": "no-cache, no-store, must-revalidate"

@@ -23,7 +23,7 @@ export default () => {
           },
           {
             name: 'mixpanelTitle',
-            content: 'Help'
+            content: 'Help & Status'
           }
         ]}
       />
