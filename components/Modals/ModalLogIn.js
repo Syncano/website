@@ -91,7 +91,6 @@ class ModalLogIn extends Component {
                     onClick={() => auth.handleSocialAuth('github')}
                   >
                     <img
-                      className="github"
                       src={require('./images/github.svg')}
                       alt="Log in with GitHub"
                     />
@@ -104,6 +103,7 @@ class ModalLogIn extends Component {
                     onClick={() => auth.handleSocialAuth('facebook')}
                   >
                     <img
+                      className="facebook"
                       src={require('./images/facebook.svg')}
                       alt="Log in with Facebook"
                     />
