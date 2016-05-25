@@ -7,8 +7,8 @@ import AuthHOC from '../AuthHOC';
 
 class ModalResetPassword extends Component {
   componentDidUpdate(props, state, context) {
-    const isOpen = this.context.modals.signUp.isOpen;
-    const wasOpen = context.modals.signUp.isOpen;
+    const isOpen = this.context.modals.resetPassword.isOpen;
+    const wasOpen = context.modals.resetPassword.isOpen;
 
     if (isOpen !== wasOpen && isOpen) {
       this.trackPageView();

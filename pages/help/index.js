@@ -28,12 +28,13 @@ export default () => {
         ]}
       />
       <StatusPageHeader>
-        <Link
-          to="/"
+        <a
+          href="http://syncano.statuspage.io/"
           className="button button--large button--filled"
+          target="_blank"
         >
-          Create Support Ticket
-        </Link>
+          View our status page
+        </a>
         <p className="page-header__more">
           or <a href="http://syncano-community.github.io/slack-invite/" target="_blank">chat with us on Slack</a>
         </p>
