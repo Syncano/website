@@ -7,6 +7,11 @@ export default (ComposedComponent) => (
   class AuthHOC extends Component {
     constructor(props) {
       super(props);
+
+      this.state = {
+        status: null,
+        message: null
+      };
     };
 
     static childContextTypes = {
@@ -15,6 +20,8 @@ export default (ComposedComponent) => (
 
     getChildContext = () => {
       const auth = {
+        status: this.state.status,
+        message: this.state.message,
         handlePasswordAuth: this.handlePasswordAuth,
         handlePasswordReset: this.handlePasswordReset,
         handleSocialAuth: this.handleSocialAuth
@@ -30,7 +37,10 @@ export default (ComposedComponent) => (
       Account[type]({ email, password })
         .then((data) => this.redirectToDashboard(data.account_key))
         .catch((error) => {
-          // error message here
+          this.setState({
+            status: error.status,
+            message: error.message
+          })
         });
     };
 
@@ -39,12 +49,11 @@ export default (ComposedComponent) => (
       const { Account } = Syncano({ baseUrl: syncanoAPIBaseUrl });
 
       Account.resetPassword(email)
-        .then((data) => {
-          // success / error message here
-        })
-        .catch((error) => {
-          // error message here
-        });
+        .then((data) => this.setState({ status: 'done' }))
+        .catch((error) => this.setState({
+          status: error.status,
+          message: error.message
+        }));
     };
 
     handleSocialAuth = (network) => {
@@ -60,10 +69,13 @@ export default (ComposedComponent) => (
 
         Account.socialLogin(data.network, access_token)
           .then((data) => this.redirectToDashboard(data.account_key))
-          .catch((error) => {
-            // error message here
-          });
-      });
+          .catch((error) => this.setState({
+            status: error.status,
+            message: error.message
+          }));
+      }, (error) => this.setState({
+        message: error.error.message
+      }));
     };
 
     redirectToDashboard = (token) => {

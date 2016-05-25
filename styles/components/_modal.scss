@@ -9,6 +9,8 @@
 }
 
 .modal-scroll {
+  height: 100%;
+
   @include medium {
     max-height: 100vh;
     overflow: auto;
@@ -16,6 +18,8 @@
 }
 
 .modal {
+  height: 100%;
+
   @include medium {
     display: flex;
     align-items: center;
@@ -73,6 +77,11 @@
 
     .modal-box__content_form {
       margin-top: 40px;
+    }
+
+    .modal-box__content_form__success-message {
+      font-weight: bold;
+      color: $color-main-green;
     }
   }
 
