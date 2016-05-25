@@ -18,9 +18,9 @@ test:
     - echo "test"
 
 deployment:
-  staging_new:
-    branch: new
+  staging:
+    branch: devel
     commands:
-      - NODE_ENV=staging_new gatsby build
-      - bundle exec s3_website push --force --config-dir=./config/staging_new/
+      - NODE_ENV=staging gatsby build
+      - bundle exec s3_website push --force --config-dir=./config/staging/
       - cd syncano-ansible/playbooks/ && ansible-playbook www-server.yml -e 'env=stg' --tags=website
