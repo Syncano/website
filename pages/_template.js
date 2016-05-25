@@ -10,8 +10,10 @@ class Template extends Component {
     this.trackPageView();
   }
 
-  componentDidUpdate() {
-    this.trackPageView();
+  componentDidUpdate(prevProps) {
+    if (this.props.route.path !== prevProps.route.path) {
+      this.trackPageView();
+    }
   }
 
   trackPageView() {
