@@ -11,7 +11,9 @@ class Template extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.route.path !== prevProps.route.path) {
+    const currentPath = this.props.location.pathname;
+    const previousPath = prevProps.children.props.location.pathname;
+    if (currentPath !== previousPath) {
       this.trackPageView();
     }
   }

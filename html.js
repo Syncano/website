@@ -42,10 +42,8 @@ export default React.createClass({
           <meta name="msapplication-TileColor" content="#0070d3" />
           <meta name="msapplication-TileImage" content={require('./images/favicons/mstile-144x144.png')} />
           <meta name="theme-color" content="#ffffff" />
-          {`
-            <!-- Hotjar Tracking Code for www.syncano.io -->
-            <script>
-              (function(h,o,t,j,a,r){
+          <script dangerouslySetInnerHTML={{__html:`
+            (function(h,o,t,j,a,r){
               h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
               h._hjSettings={hjid:108213,hjsv:5};
               a=o.getElementsByTagName('head')[0];
@@ -53,8 +51,7 @@ export default React.createClass({
               r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
               a.appendChild(r);
             })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-            </script>
-          `}
+          `}}></script>
         </head>
         <body>
           <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />

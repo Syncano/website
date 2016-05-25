@@ -18,6 +18,12 @@ test:
     - echo "test"
 
 deployment:
+  production:
+    branch: master
+    commands:
+      - NODE_ENV=production gatsby build
+      - bundle exec s3_website push --config-dir=./config/production/
+      - cd syncano-ansible/playbooks/ && ansible-playbook www-server.yml -e 'env=prd' --tags=website
   staging:
     branch: devel
     commands:
