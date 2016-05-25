@@ -20,6 +20,7 @@ import OfficeAddresses from './OfficeAddresses';
 import OfficesMap from './OfficesMap';
 import PageHeader from './PageHeader';
 import Platforms from './Platforms';
+import PlatformsBar from './PlatformsBar';
 import PlatformsSection from './PlatformsSection';
 import Pricing from './Pricing';
 import ScreenDescriptions from './ScreenDescriptions';
@@ -64,6 +65,7 @@ export default {
   OfficesMap,
   PageHeader,
   Platforms,
+  PlatformsBar,
   PlatformsSection,
   Pricing,
   ScreenDescriptions,

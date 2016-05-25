@@ -28,15 +28,23 @@
     }
   }
 
+  &.text-with-background--image1 {
+    .inner {
+      background-image: url("../components/TextWithBackground/images/well-support-you-every-step-of-the-way.jpg");
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: contain;
+      padding-bottom: 75vw;
+    }
+  }
+
   @include small {
     text-align: left;
 
     &.text-with-background--image1 {
       .inner {
-        background-image: url("../components/TextWithBackground/images/well-support-you-every-step-of-the-way.jpg");
-        background-repeat: no-repeat;
         background-position: right -210px bottom 0;
-        background-size: contain;
+        padding-bottom: 80px;
       }
       
       .text-with-background__text {
@@ -72,7 +80,8 @@
   }
 
   @include large {
-    .inner {
+    .inner,
+    &.text-with-background--image1 .inner {
       padding-top: 110px;
       padding-bottom: 110px;
     }
@@ -93,7 +102,8 @@
   }
 
   @include very-large {
-    .inner {
+    .inner,
+    &.text-with-background--image1 .inner {
       padding-top: 140px;
       padding-bottom: 140px;
     }

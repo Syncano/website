@@ -21,6 +21,10 @@
     max-width: $max-width - (2 * 25px);
   }
 
+  &.inner--platforms-bar {
+    max-width: $max-width - (2 * 50px);
+  }
+
   &.inner--pricing {
     max-width: 940px;
   }
