@@ -19,16 +19,23 @@
     height: 160px;
   }
 
-  .form__error-message {
+  .form__message {
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
 
     p {
       margin: 0 !important;
-      color: $color-main-red;
       font-size: 10px;
     }
+  }
+
+  .form__success-message p {
+    color: $color-main-green;
+  }
+
+  .form__error-message p {
+    color: $color-main-red;
   }
 
   .button {
@@ -38,7 +45,7 @@
   }
 
   @include small {
-    .form__error-message p {
+    .form__message p {
       font-size: 12px;
     }
   }
@@ -50,7 +57,7 @@
       margin-bottom: 20px;
     }
 
-    .form__error-message {
+    .form__message {
       margin-bottom: 20px;
 
       p {

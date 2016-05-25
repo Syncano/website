@@ -11,18 +11,18 @@ class ModalResetPassword extends Component {
 
     return classNames({
       'form__input': true,
-      'is-invalid': (status === 400),
+      'is-invalid': (status === 400)
     });
   };
 
   renderErrorMessage = () => (
-    <div className="form__error-message">
+    <div className="form__message form__error-message">
       <p>Oops! That email was not found.</p>
     </div>
   );
 
-  renderDoneMessage = () => (
-    <div className="modal-box__content_form__done-message">
+  renderSuccessMessage = () => (
+    <div className="modal-box__content_form__success-message">
       <p>Check your inbox. We've sent instructions on how to reset your password.</p>
     </div>
   );
@@ -43,7 +43,7 @@ class ModalResetPassword extends Component {
             autofocus
             required
           />
-          {status === 400 ? this.renderErrorMessage() : null}
+          {status === 400 && this.renderErrorMessage()}
           <button className="button button--large button--featured">
             Reset password
           </button>
@@ -63,7 +63,7 @@ class ModalResetPassword extends Component {
             <h2>Forgot your password?</h2>
             <p>We’ll email you instructions on how to reset it.</p>
 
-            {status === 'done' ? this.renderDoneMessage() : this.renderForm()}
+            {status === 'success' ? this.renderSuccessMessage() : this.renderForm()}
 
             <div className="modal-box__content__login-options">
               <h3 className="modal-box__content__login-options__headline">

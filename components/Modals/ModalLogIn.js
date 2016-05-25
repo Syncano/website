@@ -6,16 +6,16 @@ import ModalTextField from './ModalTextField';
 import AuthHOC from '../AuthHOC';
 
 const ModalLogIn = (props, { auth, modals }) => {
-  const { status } = auth;
+  const isFormInvalid = auth.status !== 'done' && auth.message;
 
   const inputClassName = classNames({
     'form__input': true,
-    'is-invalid': (status === 401),
+    'is-invalid': isFormInvalid
   });
 
-  const renderErrorMessage = () => (
-    <div className="form__error-message">
-      <p>Oops! That email / password combination is not valid.</p>
+  const renderErrorMessage = (message = 'Oops! That email / password combination is not valid.') => (
+    <div className="form__message form__error-message">
+      <p>{message}</p>
     </div>
   );
 
@@ -44,7 +44,7 @@ const ModalLogIn = (props, { auth, modals }) => {
                 placeholder="Password"
                 required
               />
-              {status === 401 ? renderErrorMessage() : null}
+              {isFormInvalid && renderErrorMessage(auth.message)}
               <button className="button button--large button--featured">
                 Take me to the Dashboard
               </button>
