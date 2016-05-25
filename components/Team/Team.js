@@ -149,7 +149,7 @@ export default ({ headline, children }) => {
               photo2xSrc={require('./images/marcin-swiderski@2x.jpg')}
               photoMediumSrc={require('./images/marcin-swiderski-medium.jpg')}
               photoMedium2xSrc={require('./images/marcin-swiderski-medium@2x.jpg')}
-              name="Marcin Świderski"
+              name="Marcin Swiderski"
               position="Software Engineer"
             />
             <TeamMember
@@ -206,7 +206,7 @@ export default ({ headline, children }) => {
               photoMediumSrc={require('./images/harald-lervik-medium.jpg')}
               photoMedium2xSrc={require('./images/harald-lervik-medium@2x.jpg')}
               name="Harald Lervik"
-              position="Chairman of the Board"
+              position="Board Member"
             />
             <TeamMember
               photoSrc={require('./images/jeff-driskill.jpg')}

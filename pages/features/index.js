@@ -7,6 +7,7 @@ import {
   FeaturesColumns,
   Footer,
   PageHeader,
+  PlatformsBar,
   ScreenDescriptions,
   TextWithBottomImage,
   TextWithImage
@@ -27,9 +28,9 @@ export default () => {
         headline="Features"
         textline="Rapidly assemble building blocks for your app without a backend or server."
       />
+      <PlatformsBar />
       <TextWithImage
         variant="image-right"
-        theme="gray"
         headline="Customize features as Sockets"
         textline={`Sockets are the layer stacked between Syncano’s core and your application. Easily configure,
           combine, and create Sockets for your app. Instantly add new functionality to your applications exactly the
@@ -107,10 +108,10 @@ export default () => {
       </ScreenDescriptions>
       <ColumnParagraphs
         headline="Server-Side Code"
-        imageSrc={require('./server-side-code.jpg')}
-        image2xSrc={require('./server-side-code@2x.jpg')}
-        imageSmallSrc={require('./server-side-code-small.jpg')}
-        imageSmall2xSrc={require('./server-side-code-small@2x.jpg')}
+        imageSrc={require('./server-side-code.png')}
+        image2xSrc={require('./server-side-code@2x.png')}
+        imageSmallSrc={require('./server-side-code-small.png')}
+        imageSmall2xSrc={require('./server-side-code-small@2x.png')}
       >
         <ColumnParagraphs.Paragraph
           iconSrc={require('./scripts.svg')}

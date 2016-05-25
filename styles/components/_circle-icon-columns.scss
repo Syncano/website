@@ -23,7 +23,7 @@
       img {
         margin-left: auto;
         margin-right: auto;
-        width: 88px;
+        width: 68px;
       }
 
       h3 {
@@ -54,6 +54,10 @@
       .circle-icon-columns__columns__column {
         padding: 10px;
         margin-bottom: 0;
+
+        img {
+          width: 88px;
+        }
 
         h3 {
           font-size: 24px;

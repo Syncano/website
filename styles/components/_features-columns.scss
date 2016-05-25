@@ -44,12 +44,6 @@
     margin-top: 70px;
   }
 
-  @include small {
-    .features-columns__columns .features-columns__columns__column .features-columns__columns__column__icon img {
-      width: auto;
-    }
-  }
-
   @include medium {
     h2 {
       font-size: 30px;
@@ -66,6 +60,10 @@
         flex-basis: 50%;
         margin-bottom: 80px;
         padding: 0 30px;
+
+        .features-columns__columns__column__icon img {
+          width: auto;
+        }
 
         h3 {
           font-size: 24px;

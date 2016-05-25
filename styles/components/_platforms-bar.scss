@@ -1,0 +1,47 @@
+.platforms-bar {
+  background: #F8F9F9;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  .inner {
+    padding-top: 38px;
+    padding-bottom: 38px;
+    display: flex;
+    justify-content: space-between;
+    min-width: 175vw;
+  }
+
+  .platforms-bar__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: $transition-default;
+
+    &.javascript img,
+    &.python img,
+    &.android img,
+    &.swift img,
+    &.angularjs img,
+    &.ruby img {
+      height: 42px;
+    }
+
+    &.emberjs img {
+      height: 21px;
+    }
+
+    &.arduino img {
+      height: 31px;
+    }
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  @include small {
+    .inner {
+      min-width: 0;
+    }
+  }
+}
