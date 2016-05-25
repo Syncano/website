@@ -132,10 +132,14 @@
         }
 
         img {
-          display: inline-block;
           vertical-align: middle;
           margin-right: 7px;
-          display: none;
+          display: none; // inline-block
+
+          &.facebook {
+            margin-right: (7px + 4px);
+            margin-left: 4px;
+          }
         }
       }
     }
