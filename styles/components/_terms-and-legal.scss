@@ -7,8 +7,8 @@
     display: none;
 
     .terms-and-legal__sidebar__nav-container {
-      padding-top: 20px;
-      transform: translateY(-20px);
+      padding-top: 100px;
+      transform: translateY(-100px);
 
       &.sticky {
         transform: none;
@@ -43,6 +43,7 @@
         a {
           color: $color-text-base;
           text-decoration: none;
+          cursor: pointer;
 
           &:hover {
             color: $color-main-blue;

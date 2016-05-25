@@ -6,7 +6,7 @@ export default ({ children }) => {
   return (
     <StickyContainer className="terms-and-legal__sidebar">
       <Sticky
-        topOffset={-20}
+        topOffset={-100}
         className="terms-and-legal__sidebar__nav-container"
       >
         <nav className="terms-and-legal__sidebar__nav">
