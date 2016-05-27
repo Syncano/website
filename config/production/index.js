@@ -3,6 +3,7 @@ export default {
   contactFormEmail: PRODUCTION_CONTACT_FORM_EMAIL,
   dashboardUrl: PRODUCTION_DASHBOARD_URL,
   statusPageStatusUrl: STATUS_PAGE_URL,
+  supportFormEmail: PRODUCTION_SUPPORT_FORM_EMAIL,
   syncanoAPIBaseUrl: PRODUCTION_API_URL,
   hello: {
     github: PRODUCTION_HELLO_GITHUB,

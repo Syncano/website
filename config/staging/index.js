@@ -3,6 +3,7 @@ export default {
   contactFormEmail: STAGING_CONTACT_FORM_EMAIL,
   dashboardUrl: STAGING_DASHBOARD_URL,
   statusPageStatusUrl: STATUS_PAGE_URL,
+  supportFormEmail: STAGING_SUPPORT_FORM_EMAIL,
   syncanoAPIBaseUrl: STAGING_API_URL,
   hello: {
     github: STAGING_HELLO_GITHUB,

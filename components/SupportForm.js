@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Formsy from 'formsy-react';
 import axios from 'axios';
-import FormInput from '../FormInput';
-import FormTextarea from '../FormTextarea';
-import config from '../../config/';
+import FormInput from './FormInput';
+import FormTextarea from './FormTextarea';
+import config from '../config/';
 
-export default class ContactForm extends Component {
+export default class SupportForm extends Component {
   constructor(props) {
     super(props);
 
@@ -15,8 +15,8 @@ export default class ContactForm extends Component {
   };
 
   submit = (model) => {
-    const { contactFormEmail } = config;
-    const action = `//formspree.io/${contactFormEmail}`;
+    const { supportFormEmail } = config;
+    const action = `//formspree.io/${supportFormEmail}`;
 
     axios.post(action, model)
       .then(this.onSubmitSuccess)
@@ -38,7 +38,7 @@ export default class ContactForm extends Component {
   getErrorMessage = () => (
     <div>
       <p><strong>There was an error sending your message.</strong></p>
-      <p>Sorry about that. Please write us at <a href="mailto:hello@syncano.io">hello@syncano.io</a></p>
+      <p>Sorry about that. Please write us at <a href="mailto:support@syncano.io">support@syncano.io</a></p>
     </div>
   );
 
@@ -64,17 +64,11 @@ export default class ContactForm extends Component {
           <FormInput
             type="hidden"
             name="_subject"
-            value="Contact Form Submission from syncano.io"
-          />
-          <FormInput
-            type="text"
-            name="name"
-            placeholder="Name"
-            required
+            value="Support Form Submission from syncano.io"
           />
           <FormInput
             type="email"
-            name="_replyto"
+            name="email"
             placeholder="E-mail address"
             validations="isEmail"
             required
@@ -89,7 +83,7 @@ export default class ContactForm extends Component {
             style={{ display: 'none' }}
           />
           <button className="button button--large button--filled">
-            Send message
+            Send
           </button>
         </Formsy.Form>
       </div>
@@ -100,7 +94,7 @@ export default class ContactForm extends Component {
     const { status } = this.state;
 
     return (
-      <div className="contact-form">
+      <div className="contact-form contact-form--support-form">
         <div className="inner">
           <div className="contact-form__box">
             {status ? this.renderStatus(status) : this.renderForm()}

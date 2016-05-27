@@ -12,6 +12,8 @@ import CTASection from './CTASection';
 import FAQ from './FAQ';
 import FeaturesColumns from './FeaturesColumns';
 import Footer from './Footer';
+import FormInput from './FormInput';
+import FormTextarea from './FormTextarea';
 import HamburgerMenu from './HamburgerMenu';
 import Hero from './Hero';
 import ListColumns from './ListColumns';
@@ -30,6 +32,7 @@ import SliderWrapper from './SliderWrapper';
 import SocialProfiles from './SocialProfiles';
 import StatusImage from './StatusImage';
 import StatusPageHeader from './StatusPageHeader';
+import SupportForm from './SupportForm';
 import Team from './Team';
 import TermsAndLegal from './TermsAndLegal';
 import Testimonials from './Testimonials';
@@ -55,6 +58,8 @@ export default {
   CTASection,
   FAQ,
   Footer,
+  FormInput,
+  FormTextarea,
   FeaturesColumns,
   HamburgerMenu,
   Hero,
@@ -75,6 +80,7 @@ export default {
   SocialProfiles,
   StatusImage,
   StatusPageHeader,
+  SupportForm,
   Team,
   TermsAndLegal,
   Testimonials,

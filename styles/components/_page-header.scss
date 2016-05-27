@@ -26,7 +26,7 @@
     font-size: 18px;
   }
 
-  .button {
+  .inner > .button {
     margin-top: 50px;
   }
 
@@ -52,6 +52,10 @@
     }
   }
 
+  &.page-header--no-bottom-padding {
+    padding-bottom: 0;
+  }
+
   @include medium {
     padding-top: 170px;
     padding-bottom: 110px;
@@ -69,7 +73,7 @@
       }
     }
 
-    .button {
+    .inner > .button {
       margin-top: 60px;
     }
 
@@ -84,7 +88,7 @@
         font-size: 100px;
       }
 
-      .button {
+      .inner > .button {
         margin-top: 40px;
       }
     }
