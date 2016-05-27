@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Formsy from 'formsy-react';
 import axios from 'axios';
-import ContactFormInput from './ContactFormInput';
-import ContactFormTextarea from './ContactFormTextarea';
+import FormInput from '../FormInput';
+import FormTextarea from '../FormTextarea';
 import config from '../../config/';
 
 export default class ContactForm extends Component {
@@ -38,7 +38,7 @@ export default class ContactForm extends Component {
   getErrorMessage = () => (
     <div>
       <p><strong>There was an error sending your message.</strong></p>
-      <p>Sorry about that. Please write us at <a href="mailto:hello@syncano.io" target="_blank">hello@syncano.io</a></p>
+      <p>Sorry about that. Please write us at <a href="mailto:hello@syncano.io">hello@syncano.io</a></p>
     </div>
   );
 
@@ -46,7 +46,7 @@ export default class ContactForm extends Component {
     <div>
       <p><strong>Thank you! Your message has been received.</strong></p>
       <p>We'll get back to you soon. In the meantime, check out some of
-      our <a href="https://www.syncano.io/blog/">recent blog articles</a>.
+      our <a href="https://www.syncano.io/blog/" target="_blank">recent blog articles</a>.
       </p>
     </div>
   );
@@ -61,30 +61,30 @@ export default class ContactForm extends Component {
     return (
       <div className="contact-form__box__form form">
         <Formsy.Form onValidSubmit={this.submit}>
-          <ContactFormInput
+          <FormInput
             type="hidden"
             name="_subject"
             value="Contact Form Submission from syncano.io"
           />
-          <ContactFormInput
+          <FormInput
             type="text"
             name="name"
             placeholder="Name"
             required
           />
-          <ContactFormInput
+          <FormInput
             type="email"
             name="_replyto"
             placeholder="E-mail address"
             validations="isEmail"
             required
           />
-          <ContactFormTextarea
+          <FormTextarea
             name="message"
             placeholder="Message"
             required
           />
-          <ContactFormInput
+          <FormInput
             name="_gotcha"
             style={{ display: 'none' }}
           />

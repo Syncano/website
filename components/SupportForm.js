@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Formsy from 'formsy-react';
 import axios from 'axios';
-import SupportFormInput from './SupportFormInput';
-import SupportFormTextarea from './SupportFormTextarea';
-import config from '../../config/';
+import FormInput from './FormInput';
+import FormTextarea from './FormTextarea';
+import config from '../config/';
 
 export default class SupportForm extends Component {
   constructor(props) {
@@ -38,7 +38,7 @@ export default class SupportForm extends Component {
   getErrorMessage = () => (
     <div>
       <p><strong>There was an error sending your message.</strong></p>
-      <p>Sorry about that. Please write us at <a href="mailto:support@syncano.io" target="_blank">support@syncano.io</a></p>
+      <p>Sorry about that. Please write us at <a href="mailto:support@syncano.io">support@syncano.io</a></p>
     </div>
   );
 
@@ -46,7 +46,7 @@ export default class SupportForm extends Component {
     <div>
       <p><strong>Thank you! Your message has been received.</strong></p>
       <p>We'll get back to you soon. In the meantime, check out some of
-      our <a href="https://www.syncano.io/blog/">recent blog articles</a>.
+      our <a href="https://www.syncano.io/blog/" target="_blank">recent blog articles</a>.
       </p>
     </div>
   );
@@ -61,24 +61,24 @@ export default class SupportForm extends Component {
     return (
       <div className="contact-form__box__form form">
         <Formsy.Form onValidSubmit={this.submit}>
-          <SupportFormInput
+          <FormInput
             type="hidden"
             name="_subject"
             value="Support Form Submission from syncano.io"
           />
-          <SupportFormInput
+          <FormInput
             type="email"
             name="email"
             placeholder="E-mail address"
             validations="isEmail"
             required
           />
-          <SupportFormTextarea
+          <FormTextarea
             name="message"
             placeholder="Message"
             required
           />
-          <SupportFormInput
+          <FormInput
             name="_gotcha"
             style={{ display: 'none' }}
           />
