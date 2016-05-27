@@ -1,25 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import axios from 'axios';
 import _ from 'lodash';
 import PricingPlan from './PricingPlan';
-import config from '../../config/';
+import plan from '../../plans.json';
 
 class Pricing extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
-  };
-
-  componentWillMount() {
-    this.fetchPlans();
-  };
-
-  fetchPlans() {
-    const plansUrl = `${config.syncanoAPIBaseUrl}v1.1/billing/plans/`;
-
-    axios.get(plansUrl).then((response) => this.setState({ plan: response.data.objects[0] }));
+    this.state = { plan };
   };
 
   getOptions(field, minPrice, maxPrice) {

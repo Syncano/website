@@ -21,12 +21,12 @@ deployment:
   production:
     branch: master
     commands:
-      - NODE_ENV=production gatsby build
+      - NODE_ENV=production npm run build
       - bundle exec s3_website push --config-dir=./config/production/
       - cd syncano-ansible/playbooks/ && ansible-playbook www-server.yml -e 'env=prd' --tags=website
   staging:
     branch: devel
     commands:
-      - NODE_ENV=staging gatsby build
+      - NODE_ENV=staging npm run build
       - bundle exec s3_website push --force --config-dir=./config/staging/
       - cd syncano-ansible/playbooks/ && ansible-playbook www-server.yml -e 'env=stg' --tags=website
