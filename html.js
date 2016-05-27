@@ -10,6 +10,11 @@ export default React.createClass({
     const head = Helmet.rewind();
     const attrs = head.htmlAttributes.toComponent();
 
+    let css;
+    if (process.env.NODE_ENV === 'production') {
+      css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
+    }
+
     return (
       <html
         lang="en"
@@ -19,7 +24,7 @@ export default React.createClass({
           <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
           {head.title.toComponent()}
           {head.meta.toComponent()}
-          {process.env.NODE_ENV !== 'development' && <link rel="stylesheet" href={`/styles.css?t=${BUILD_TIME}`} />}
+          {css}
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/plugins/line-numbers/prism-line-numbers.min.css" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/themes/prism-twilight.min.css" />
