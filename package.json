@@ -5,6 +5,7 @@
   "author": "Patryk Kopycinski <patryk.kopycinski@syncano.com>",
   "dependencies": {
     "axios": "0.11.1",
+    "babel-cli": "6.9.0",
     "babel-plugin-add-module-exports": "0.2.1",
     "babel-preset-es2015": "6.9.0",
     "babel-preset-react": "6.5.0",
@@ -58,6 +59,10 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
+    "prestart": "babel-node ./scripts/get-plans.js",
+    "start": "gatsby develop",
+    "prebuild": "babel-node ./scripts/get-plans.js",
+    "build": "gatsby build",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
