@@ -17,7 +17,7 @@
     padding-bottom: 22px;
     position: relative;
     @include z-index(top-bar__inner);
-    transition: inherit;
+    transition: $transition-default;
   }
 
   .top-bar__logo {
