@@ -7,8 +7,6 @@ const fetchPlans = () => {
   const apiUrl = ENV === 'development' ? config.syncanoAPIBaseUrl : process.env[config.syncanoAPIBaseUrl];
   const plansUrl = `${apiUrl}v1.1/billing/plans/`;
 
-  console.error('apiUrl', apiUrl, config.syncanoAPIBaseUrl, process.env);
-
   axios.get(plansUrl).then((response) => {
     return fs.writeFileSync(`${__dirname}/../pricing-plans.json`, JSON.stringify(response.data.objects[0]))
   });
