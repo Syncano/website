@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import classNames from 'classnames';
 import moment from 'moment';
 import StatusImage from './StatusImage';
+import SupportForm from './SupportForm';
 import config from '../config/';
 
 export default class StatusPageHeader extends Component {
@@ -9,6 +11,7 @@ export default class StatusPageHeader extends Component {
     super(props);
 
     this.state = {
+      hasSupportFormVisible: false,
       status: {
         page: {
           url: 'http://status.syncano.com/'
@@ -49,12 +52,24 @@ export default class StatusPageHeader extends Component {
     return status.status.description;
   };
 
+  showSupportForm = () => {
+    this.setState({ hasSupportFormVisible: true });
+  };
+
+  getStatusPageHeaderClassName = () => {
+    const { hasSupportFormVisible } = this.state;
+
+    return classNames({
+      'page-header': true,
+      'page-header--no-bottom-padding': (hasSupportFormVisible === true)
+    });
+  };
+
   render = () => {
-    const { status } = this.state;
-    const { children } = this.props;
+    const { hasSupportFormVisible, status } = this.state;
 
     return (
-      <header className="page-header">
+      <header className={this.getStatusPageHeaderClassName()}>
         <div className="inner">
           <StatusImage
             className="page-header__status"
@@ -64,8 +79,17 @@ export default class StatusPageHeader extends Component {
           <h2>{this.getHeadlineText(status)}</h2>
           <p>Updated about {moment(status.page.updated_at).fromNow()}. <br /><a href={status.page.url} target="_blank">
           View our status page</a> for more info.</p>
-          {children}
+          <a
+            className="button button--large button--filled"
+            onClick={this.showSupportForm}
+          >
+            Create Support Ticket
+          </a>
+          <p className="page-header__more">
+            or <a href="http://syncano-community.github.io/slack-invite/" target="_blank">chat with us on Slack</a>
+          </p>
         </div>
+        {hasSupportFormVisible && <SupportForm />}
       </header>
     );
   };
