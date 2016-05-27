@@ -59,9 +59,9 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "prestart": "babel-node ./scripts/get-plans.js",
+    "prestart": "babel-node ./scripts/get-pricing-plans.js",
     "start": "gatsby develop",
-    "prebuild": "babel-node ./scripts/get-plans.js",
+    "prebuild": "babel-node ./scripts/get-pricing-plans.js",
     "build": "gatsby build",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1"
