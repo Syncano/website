@@ -6,7 +6,7 @@ const fetchPlans = () => {
   const plansUrl = `${config.syncanoAPIBaseUrl}v1.1/billing/plans/`;
 
   axios.get(plansUrl).then((response) => {
-    return fs.writeFileSync(`${__dirname}/../plans.json`, JSON.stringify(response.data.objects[0]))
+    return fs.writeFileSync(`${__dirname}/../pricing-plans.json`, JSON.stringify(response.data.objects[0]))
   });
 };
 

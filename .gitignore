@@ -29,4 +29,4 @@ build/Release
 node_modules
 .gatsby-context.js
 config/development/index.js
-plans.json
+pricing-plans.json
