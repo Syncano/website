@@ -69,7 +69,7 @@ export default () => {
           <div className="social-profiles__group__profiles">
             <a
               className="social-profiles__group__profiles__icon"
-              href="http://syncano-community.github.io/slack-invite/"
+              href="http://www.syncano.io/slack-invite/"
               target="_blank"
               title="Slack"
             >
