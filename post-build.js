@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import sm from 'sitemap';
-import fs from 'fs.extra';
+import fs from 'fs-extra';
 
 const generateSitemapUrl = (page) => {
   const pagePath = page.path;
@@ -43,11 +43,11 @@ const generateRobots = () => {
 };
 
 const copyStaticContent = () => {
-  fs.copyRecursive(`${__dirname}/static`, `${__dirname}/public`, function (err) {
-    if (err) {
-      throw err;
-    }
-  });
+  try {
+    fs.copySync(`${__dirname}/static`, `${__dirname}/public`)
+  } catch (err) {
+    console.error(err)
+  }
 };
 
 export default (pages, callback) => {
