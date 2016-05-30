@@ -10,6 +10,11 @@ export default React.createClass({
     const head = Helmet.rewind();
     const attrs = head.htmlAttributes.toComponent();
 
+    let css;
+    if (process.env.NODE_ENV === 'production') {
+      css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
+    }
+
     return (
       <html
         lang="en"
@@ -17,9 +22,10 @@ export default React.createClass({
         <head>
           <meta charSet="utf-8" />
           <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+          <meta http-equiv="Cache-Control" content="private">
           {head.title.toComponent()}
           {head.meta.toComponent()}
-          {process.env.NODE_ENV !== 'development' && <link rel="stylesheet" href={`/styles.css?t=${BUILD_TIME}`} />}
+          {css}
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/plugins/line-numbers/prism-line-numbers.min.css" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/themes/prism-twilight.min.css" />
@@ -38,10 +44,10 @@ export default React.createClass({
           <link rel="icon" type="image/png" href={require('./images/favicons/favicon-16x16.png')} sizes="16x16" />
           <link rel="manifest" href={require('./images/favicons/manifest.json')} />
           <link rel="mask-icon" href={require('./images/favicons/safari-pinned-tab.svg')} color="#0070d3" />
-          {head.link.toComponent()}
           <meta name="msapplication-TileColor" content="#0070d3" />
           <meta name="msapplication-TileImage" content={require('./images/favicons/mstile-144x144.png')} />
           <meta name="theme-color" content="#ffffff" />
+          {head.link.toComponent()}
           <script dangerouslySetInnerHTML={{__html:`
             (function(h,o,t,j,a,r){
               h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
