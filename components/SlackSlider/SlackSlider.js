@@ -49,7 +49,7 @@ export default () => {
           </SliderWrapper>
         </div>
         <a
-          href="http://syncano-community.github.io/slack-invite/"
+          href="http://syncano.io/slack-invite/"
           className="button button--white"
           target="_blank"
         >

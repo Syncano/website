@@ -86,7 +86,7 @@ export default class StatusPageHeader extends Component {
             Create Support Ticket
           </a>
           <p className="page-header__more">
-            or <a href="http://syncano-community.github.io/slack-invite/" target="_blank">chat with us on Slack</a>
+            or <a href="http://syncano.io/slack-invite/" target="_blank">chat with us on Slack</a>
           </p>
         </div>
         {hasSupportFormVisible && <SupportForm />}

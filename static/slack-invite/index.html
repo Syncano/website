@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Join the Syncano Community</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/normalize/3.0.3/normalize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+
+  <link rel="icon" type="image/png" href="./img/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="./img/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="./img/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="./img/favicon-16x16.png" sizes="16x16">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      background: #fff;
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      color: #4D5966;
+      line-height: 1.5;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    input,
+    button {
+      border: none;
+      background: none;
+      outline: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    .wrapper {
+      height: 100vh;
+    }
+
+    .invite-box {
+      background: #fff;
+      padding: 40px 10px;
+      max-width: 540px;
+    }
+
+    .invite-box__header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .invite-box__header img {
+      margin: 0 auto 40px;
+    }
+
+    .invite-box__header h1 {
+      font-weight: 700;
+      font-size: 28px;
+      color: #1D2228;
+      margin-bottom: 20px;
+      line-height: 1.25;
+    }
+
+    .form input,
+    .form button {
+      width: 100%;
+      height: 54px;
+      line-height: 18px;
+      padding: 18px 20px;
+      border-radius: 4px;
+    }
+
+    .form input,
+    .form__message {
+      margin-bottom: 10px;
+    }
+
+    .form input {
+      border: 1px solid #DBDEE3;
+    }
+
+    .form button {
+      background: #FFCC01;
+      color: #1D2228;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+      transition: all .2s;
+    }
+
+    .form button:hover {
+      opacity: .8;
+    }
+
+    .form--error input {
+      color: #F0423A;
+      border-color: #F0423A;
+    }
+
+    .form--success input,
+    .form--success button {
+      display: none !important;
+    }
+
+    .form--success .form__message {
+      margin-bottom: 0;
+    }
+
+    .form__message {
+      display: none;
+      text-align: center;
+      font-weight: bold;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    .form__message--error { color: #F0423A; }
+    .form__message--success { color: #28B12B; }
+
+    body #elevio-widget { display: none !important; }
+
+    @media (min-width: 540px) {
+      body {
+        background: #1976d2 url('./img/background.jpg') no-repeat 50% 50%;
+        background-size: cover;
+      }
+
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .invite-box {
+        padding: 60px 70px;
+        border-radius: 4px;
+        box-shadow: 0 0 50px rgba(0, 0, 0, .37);
+      }
+
+      .form input,
+      .form__message {
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (min-width: 540px) and (min-resolution: 192dpi) {
+      body { background-image: url('./img/background@2x.jpg'); }
+    }
+  </style>
+
+  <link rel="icon" type="image/png" href="./img/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="./img/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="./img/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="./img/favicon-16x16.png" sizes="16x16">
+
+  <meta property="og:image" content="http://syncano.io/slack-invite/img/og-image.png" />
+  <meta property="og:title" content="Join the Syncano Community" />
+  <meta property="og:url" content="http://syncano.io/slack-invite/" />
+  <meta property="og:site_name" content="Join the Syncano Community" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@syncano" />
+  <meta name="twitter:title" content="Join the Syncano Community" />
+  <meta name="twitter:description" content="Join the Syncano community and chat with other developers. Share ideas, learn, build together or ask us anything!" />
+  <meta name="twitter:image" content="http://syncano.io/slack-invite/img/twitter-image.png" />
+  
+  <script type="text/javascript">
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
+      analytics.load("fLDtpYXRjFYnHlp1gvzl4I3Gv8gDoQ8m");
+      analytics.ready(function () {
+        if (analytics.user().id()) {
+          analytics.identify();
+        }
+      });
+      analytics.page('Slack Invite')
+    }}();
+  </script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="invite-box">
+      <header class="invite-box__header">
+        <img src="./img/syncano-slack.svg" alt="Syncano plus Slack">
+        <h1>Syncano Slack Community</h1>
+        <p>Join the Syncano community and chat with other developers. Share ideas, learn, build together or ask us anything!</p>
+      </header>
+      
+      <div class="form jsForm">
+        <form>
+          <div class="form__message jsFormMessage"><p></p></div>
+          <input type="email" name="email" placeholder="E-mail address" required>
+          <button>Send me an invite</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/vendor/jquery.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
