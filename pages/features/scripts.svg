@@ -1,18 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="34px" height="22px" viewBox="0 0 34 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
-    <title>Shape</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Desktop-design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Features" transform="translate(-310.000000, -4583.000000)" fill="#49B9E8">
-            <g id="Group-4-Copy" transform="translate(0.000000, 4339.000000)">
-                <g id="Group-14">
-                    <g id="Group-12">
-                        <path d="M331.047619,263.433333 L339.099099,255 L331.047619,246.566667 L333.498069,244 L344,255 L333.498069,266 L331.047619,263.433333 Z M322.952381,263.433333 L314.900901,255 L322.952381,246.566667 L320.501931,244 L310,255 L320.501931,266 L322.952381,263.433333 Z" id="Shape"></path>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="34" height="22" viewBox="0 0 34 22" xmlns="http://www.w3.org/2000/svg"><path d="M21.048 19.433l8.051-8.433-8.051-8.433 2.45-2.567 10.502 11-10.502 11-2.45-2.567zm-8.095 0l-8.051-8.433 8.051-8.433-2.45-2.567-10.502 11 10.502 11 2.45-2.567z" fill="#49B9E8"/></svg>

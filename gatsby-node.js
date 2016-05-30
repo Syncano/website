@@ -53,8 +53,7 @@ exports.modifyWebpackConfig = function(config, env) {
   config.removeLoader('svg');
   config.loader('svg', function(cfg) {
     cfg.test = /\.svg/;
-    // cfg.loader = 'file-loader';
-    cfg.loader = 'svg-sprite?' + JSON.stringify({ name: '[name]_[hash]' });
+    cfg.loader = 'file-loader';
     return cfg;
   });
 

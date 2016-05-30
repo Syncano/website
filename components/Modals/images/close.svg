@@ -1,16 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="20px" height="19px" viewBox="0 0 20 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
-    <title>Combined Shape</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Mobile-design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Log-in-mobile" transform="translate(-287.000000, -30.000000)" fill="#0070D3">
-            <g id="Group-2">
-                <g id="Group-39">
-                    <path d="M297,37.3786797 L289.575379,29.9540585 L287.454058,32.0753788 L294.87868,39.5 L287.454058,46.9246212 L289.575379,49.0459415 L297,41.6213203 L304.424621,49.0459415 L306.545942,46.9246212 L299.12132,39.5 L306.545942,32.0753788 L304.424621,29.9540585 L297,37.3786797 Z" id="Combined-Shape"></path>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="20" height="19" viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg"><path d="M10 7.379l-7.425-7.425-2.121 2.121 7.425 7.425-7.425 7.425 2.121 2.121 7.425-7.425 7.425 7.425 2.121-2.121-7.425-7.425 7.425-7.425-2.121-2.121-7.425 7.425z" fill="#0070D3"/></svg>
