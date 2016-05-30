@@ -44,10 +44,10 @@ export default React.createClass({
           <link rel="icon" type="image/png" href={require('./images/favicons/favicon-16x16.png')} sizes="16x16" />
           <link rel="manifest" href={require('./images/favicons/manifest.json')} />
           <link rel="mask-icon" href={require('./images/favicons/safari-pinned-tab.svg')} color="#0070d3" />
-          {head.link.toComponent()}
           <meta name="msapplication-TileColor" content="#0070d3" />
           <meta name="msapplication-TileImage" content={require('./images/favicons/mstile-144x144.png')} />
           <meta name="theme-color" content="#ffffff" />
+          {head.link.toComponent()}
           <script dangerouslySetInnerHTML={{__html:`
             (function(h,o,t,j,a,r){
               h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};

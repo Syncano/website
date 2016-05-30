@@ -1,6 +1,15 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { AboutUs, AboutUsHeaderImage, CounterBoxes, CTASection, Footer, OfficesMap, PageHeader, Team } from '../../components';
+import {
+  AboutUs,
+  AboutUsHeaderImage,
+  CounterBoxes,
+  CTASection,
+  Footer,
+  OfficesMap,
+  PageHeader,
+  Team
+} from '../../components';
 
 export default () => {
   return (
