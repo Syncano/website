@@ -11,7 +11,7 @@ export default React.createClass({
     const attrs = head.htmlAttributes.toComponent();
 
     let css;
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV !== 'development') {
       css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
     }
 
@@ -22,7 +22,7 @@ export default React.createClass({
         <head>
           <meta charSet="utf-8" />
           <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-          <meta http-equiv="Cache-Control" content="private">
+          <meta http-equiv="Cache-Control" content="private" />
           {head.title.toComponent()}
           {head.meta.toComponent()}
           {css}
@@ -48,16 +48,16 @@ export default React.createClass({
           <meta name="msapplication-TileImage" content={require('./images/favicons/mstile-144x144.png')} />
           <meta name="theme-color" content="#ffffff" />
           {head.link.toComponent()}
-          <script dangerouslySetInnerHTML={{__html:`
+          <script dangerouslySetInnerHTML={{__html: `
             (function(h,o,t,j,a,r){
-              h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-              h._hjSettings={hjid:108213,hjsv:5};
-              a=o.getElementsByTagName('head')[0];
-              r=o.createElement('script');r.async=1;
-              r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-              a.appendChild(r);
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:108213,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
             })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-          `}}></script>
+          `}} />
         </head>
         <body>
           <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
