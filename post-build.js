@@ -44,9 +44,9 @@ const generateRobots = () => {
 
 const copyStaticContent = () => {
   try {
-    fs.copySync(`${__dirname}/static`, `${__dirname}/public`)
+    fs.copySync(`${__dirname}/static`, `${__dirname}/public`);
   } catch (err) {
-    console.error(err)
+    console.error(err);
   }
 };
 
