@@ -22,7 +22,7 @@ export default React.createClass({
         <head>
           <meta charSet="utf-8" />
           <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-          <meta http-equiv="Cache-Control" content="private" />
+          <meta httpEquiv="Cache-Control" content="private" />
           {head.title.toComponent()}
           {head.meta.toComponent()}
           {css}
