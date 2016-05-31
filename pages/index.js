@@ -15,10 +15,13 @@ import {
 } from '../components';
 
 const Homepage = (props, { modals }) => {
+  const title = 'Build powerful realtime apps in half the time | Syncano';
+  const pathname = props.location.pathname;
+
   return (
     <div>
       <Helmet
-        title="Build powerful realtime apps in half the time | Syncano"
+        title={title}
         meta={[
           {
             name: 'description',
@@ -28,6 +31,14 @@ const Homepage = (props, { modals }) => {
           {
             name: 'mixpanelTitle',
             content: 'Home'
+          },
+          {
+            property: 'og:title',
+            content: `${title}`
+          },
+          {
+            property: 'og:url',
+            content: `http://www.syncano.io${pathname}`
           }
         ]}
       />

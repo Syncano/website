@@ -22,7 +22,7 @@ export default React.createClass({
         <head>
           <meta charSet="utf-8" />
           <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-          <meta http-equiv="Cache-Control" content="private" />
+          <meta httpEquiv="Cache-Control" content="private" />
           {head.title.toComponent()}
           {head.meta.toComponent()}
           {css}
@@ -47,6 +47,11 @@ export default React.createClass({
           <meta name="msapplication-TileColor" content="#0070d3" />
           <meta name="msapplication-TileImage" content={require('./images/favicons/mstile-144x144.png')} />
           <meta name="theme-color" content="#ffffff" />
+
+          <meta property="og:image" content={require('./images/og-image.png')} />
+          <meta property="og:site_name" content="Syncano" />
+          <meta property="og:type" content="website" />
+
           {head.link.toComponent()}
           <script dangerouslySetInnerHTML={{__html: `
             (function(h,o,t,j,a,r){

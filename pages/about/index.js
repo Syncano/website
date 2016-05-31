@@ -11,11 +11,14 @@ import {
   Team
 } from '../../components';
 
-export default () => {
+export default ({ location }) => {
+  const title = 'About Syncano and the team';
+  const { pathname } = location;
+
   return (
     <div>
       <Helmet
-        title="About Syncano and the team"
+        title={title}
         meta={[
           {
             name: 'description',
@@ -25,6 +28,14 @@ export default () => {
           {
             name: 'mixpanelTitle',
             content: 'About Us'
+          },
+          {
+            property: 'og:title',
+            content: `${title}`
+          },
+          {
+            property: 'og:url',
+            content: `http://www.syncano.io${pathname}`
           }
         ]}
       />
