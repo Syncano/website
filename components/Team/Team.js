@@ -57,14 +57,6 @@ export default ({ headline, children }) => {
               position="Customer Growth"
             />
             <TeamMember
-              photoSrc={require('./images/dawid-dapszus.jpg')}
-              photo2xSrc={require('./images/dawid-dapszus@2x.jpg')}
-              photoMediumSrc={require('./images/dawid-dapszus-medium.jpg')}
-              photoMedium2xSrc={require('./images/dawid-dapszus-medium@2x.jpg')}
-              name="Dawid Dapszus"
-              position="Product Designer"
-            />
-            <TeamMember
               photoSrc={require('./images/jakub-bilko.jpg')}
               photo2xSrc={require('./images/jakub-bilko@2x.jpg')}
               photoMediumSrc={require('./images/jakub-bilko-medium.jpg')}
@@ -87,14 +79,6 @@ export default ({ headline, children }) => {
               photoMedium2xSrc={require('./images/michal-kobus-medium@2x.jpg')}
               name="Michał Kobus"
               position="DevOps Engineer"
-            />
-            <TeamMember
-              photoSrc={require('./images/daniel-kopka.jpg')}
-              photo2xSrc={require('./images/daniel-kopka@2x.jpg')}
-              photoMediumSrc={require('./images/daniel-kopka-medium.jpg')}
-              photoMedium2xSrc={require('./images/daniel-kopka-medium@2x.jpg')}
-              name="Daniel Kopka"
-              position="Software Engineer"
             />
             <TeamMember
               photoSrc={require('./images/patryk-kopycinski.jpg')}
@@ -143,14 +127,6 @@ export default ({ headline, children }) => {
               photoMedium2xSrc={require('./images/andrej-shevchenko-medium@2x.jpg')}
               name="Andrej Shevchenko"
               position="UX &amp; Marketing"
-            />
-            <TeamMember
-              photoSrc={require('./images/marcin-swiderski.jpg')}
-              photo2xSrc={require('./images/marcin-swiderski@2x.jpg')}
-              photoMediumSrc={require('./images/marcin-swiderski-medium.jpg')}
-              photoMedium2xSrc={require('./images/marcin-swiderski-medium@2x.jpg')}
-              name="Marcin Swiderski"
-              position="Software Engineer"
             />
             <TeamMember
               photoSrc={require('./images/devin-visslailli.jpg')}
