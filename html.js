@@ -11,7 +11,7 @@ export default React.createClass({
     const attrs = head.htmlAttributes.toComponent();
 
     let css;
-    if (process.env.NODE_ENV !== 'development') {
+    if (process.env.NODE_ENV === 'production') {
       css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
     }
 
