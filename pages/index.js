@@ -14,9 +14,9 @@ import {
   TwitterSlider
 } from '../components';
 
-const Homepage = (props, { modals }) => {
+const Homepage = ({ location }, { modals }) => {
   const title = 'Build powerful realtime apps in half the time | Syncano';
-  const pathname = props.location.pathname;
+  const { pathname } = location;
 
   return (
     <div>
