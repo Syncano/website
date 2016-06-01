@@ -130,7 +130,7 @@ export default class PricingPlan extends Component {
 
   render() {
     const { period, title } = this.props;
-    const { apiCalls, scripts } = this.state;
+    const { apiCalls, scripts, isExpanded } = this.state;
 
     return (
       <div className={this.getPricingPlanClassName()}>
@@ -155,7 +155,7 @@ export default class PricingPlan extends Component {
               className="pricing-plan__box__more__link"
               onClick={this.handleClick}
             >
-              Show More
+              {!isExpanded ? 'Show More' : 'Show less'}
             </span>
           </div>
           <div className="pricing-plan__box__features">
