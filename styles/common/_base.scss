@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   background: #fff;
   color: $color-text-base;
   min-width: 320px;
@@ -15,10 +15,6 @@ body {
   &.has-hamburger-menu-visible,
   &.has-modal-open {
     overflow: hidden;
-  }
-
-  @include medium {
-    font-size: 16px;
   }
 }
 
