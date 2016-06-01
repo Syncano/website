@@ -1,22 +1,4 @@
-.offices-map {
-  .offices-map__map {
-    overflow: auto;
-
-    img {
-      height: 416px;
-      width: auto;
-      max-width: none;
-    }
-  }
-
-  @include large {
-    .offices-map__map {
-      overflow: hidden;
-
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
-  }
+.offices-map .offices-map__map img {
+  width: 100%;
+  height: auto;
 }
