@@ -14,7 +14,7 @@ import {
 } from '../../components';
 
 export default ({ location }) => {
-  const title = 'Features - Syncano Sockets, Data management, Automations';
+  const title = 'Features - Syncano Sockets, Data Management, Automations';
   const { pathname } = location;
 
   return (
@@ -62,7 +62,7 @@ export default ({ location }) => {
       <TextWithBottomImage
         variant="no-bottom-padding minus-bottom-margin"
         theme="purple"
-        headline="Collaborate better with our dashboard"
+        headline="Collaborate better with our Dashboard"
         textline={`Visualize your data in our Dashboard to have a complete overview of your applications. Edit and
           test your scripts, manage users, collaborate with multiple admins, and more - all from one place.`}
         image={
@@ -82,7 +82,7 @@ export default ({ location }) => {
           </picture>
         }
       />
-      <ScreenDescriptions headline="Data management">
+      <ScreenDescriptions headline="Data Management">
         <ScreenDescriptions.Screen
           imageSrc={require('./define-your-classes.png')}
           image2xSrc={require('./define-your-classes@2x.png')}

@@ -87,6 +87,9 @@ export default () => (
               <a href="https://github.com/Syncano/" target="_blank">GitHub</a>
             </li>
             <li>
+              <a href="http://www.syncano.io/slack-invite/" target="_blank">Slack</a>
+            </li>
+            <li>
               <a href="https://www.linkedin.com/company/syncano/" target="_blank">LinkedIn</a>
             </li>
             <li>
@@ -139,6 +142,18 @@ export default () => (
             </li>
             <li>
               <a
+                href="http://www.syncano.io/slack-invite/"
+                target="_blank"
+                title="Slack"
+              >
+                <img
+                  src={require('./images/slack.svg')}
+                  alt="Slack"
+                />
+              </a>
+            </li>
+            <li>
+              <a
                 href="https://www.linkedin.com/company/syncano/"
                 target="_blank"
                 title="LinkedIn"
@@ -146,18 +161,6 @@ export default () => (
                 <img
                   src={require('./images/linkedin.svg')}
                   alt="LinkedIn"
-                />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://syncano-community.slack.com/"
-                target="_blank"
-                title="Slack"
-              >
-                <img
-                  src={require('./images/slack.svg')}
-                  alt="Slack"
                 />
               </a>
             </li>
