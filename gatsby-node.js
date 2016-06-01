@@ -29,13 +29,6 @@ exports.modifyWebpackConfig = function(config, env) {
     return cfg;
   });
 
-  config.removeLoader('json');
-  config.loader('json', function(cfg) {
-    cfg.test = /\.json/;
-    cfg.loader = 'file-loader';
-    return cfg;
-  });
-
   config.removeLoader('mp4');
   config.loader('mp4', function(cfg) {
     cfg.test = /\.mp4/;
