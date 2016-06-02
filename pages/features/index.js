@@ -13,11 +13,14 @@ import {
   TextWithImage
 } from '../../components';
 
-export default () => {
+export default ({ location }) => {
+  const title = 'Features - Syncano Sockets, Data Management, Automations';
+  const { pathname } = location;
+
   return (
     <div>
       <Helmet
-        title="Features - Syncano Sockets, Data Management, Automations"
+        title={title}
         meta={[
           {
             name: 'description',
@@ -27,6 +30,14 @@ export default () => {
           {
             name: 'mixpanelTitle',
             content: 'Features'
+          },
+          {
+            property: 'og:title',
+            content: `${title}`
+          },
+          {
+            property: 'og:url',
+            content: `http://www.syncano.io${pathname}`
           }
         ]}
       />

@@ -14,11 +14,14 @@ import {
   TwitterSlider
 } from '../components';
 
-const Homepage = (props, { modals }) => {
+const Homepage = ({ location }, { modals }) => {
+  const title = 'Build powerful realtime apps in half the time | Syncano';
+  const { pathname } = location;
+
   return (
     <div>
       <Helmet
-        title="Build powerful realtime apps in half the time | Syncano"
+        title={title}
         meta={[
           {
             name: 'description',
@@ -28,6 +31,14 @@ const Homepage = (props, { modals }) => {
           {
             name: 'mixpanelTitle',
             content: 'Home'
+          },
+          {
+            property: 'og:title',
+            content: `${title}`
+          },
+          {
+            property: 'og:url',
+            content: `http://www.syncano.io${pathname}`
           }
         ]}
       />

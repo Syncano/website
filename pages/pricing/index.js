@@ -12,11 +12,14 @@ import {
   TwitterSlider
 } from '../../components';
 
-export default () => {
+export default ({ location }) => {
+  const title = 'Plans & Pricing at Syncano';
+  const { pathname } = location;
+
   return (
     <div>
       <Helmet
-        title="Plans & Pricing at Syncano"
+        title={title}
         meta={[
           {
             name: 'description',
@@ -26,6 +29,14 @@ export default () => {
           {
             name: 'mixpanelTitle',
             content: 'Pricing'
+          },
+          {
+            property: 'og:title',
+            content: `${title}`
+          },
+          {
+            property: 'og:url',
+            content: `http://www.syncano.io${pathname}`
           }
         ]}
       />

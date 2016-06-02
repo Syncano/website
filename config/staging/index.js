@@ -5,10 +5,8 @@ export default {
   statusPageStatusUrl: 'STATUS_PAGE_URL',
   supportFormEmail: 'STAGING_SUPPORT_FORM_EMAIL',
   syncanoAPIBaseUrl: 'STAGING_API_URL',
-  hello: {
-    github: 'STAGING_HELLO_GITHUB',
-    facebook: 'STAGING_HELLO_FACEBOOK',
-    google: 'STAGING_HELLO_GOOGLE',
-    redirect_uri: 'STAGING_HELLO_REDIRECT_URI'
-  }
+  github: 'STAGING_HELLO_GITHUB',
+  facebook: 'STAGING_HELLO_FACEBOOK',
+  google: 'STAGING_HELLO_GOOGLE',
+  redirect_uri: 'STAGING_HELLO_REDIRECT_URI'
 };
