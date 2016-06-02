@@ -3,11 +3,14 @@ import Helmet from 'react-helmet';
 import { Link } from 'react-router';
 import { CTASection, Footer, PageHeader, Travolta } from '../../components';
 
-export default () => {
+export default ({ location }) => {
+  const title = '404 Error - Page does not exist | Syncano';
+  const { pathname } = location;
+
   return (
     <div>
       <Helmet
-        title="404 Error - Page does not exist | Syncano"
+        title={title}
         meta={[
           {
             name: 'description',
@@ -16,6 +19,14 @@ export default () => {
           {
             name: 'mixpanelTitle',
             content: '404'
+          },
+          {
+            property: 'og:title',
+            content: `${title}`
+          },
+          {
+            property: 'og:url',
+            content: `http://www.syncano.io${pathname}`
           }
         ]}
       />

@@ -57,17 +57,17 @@ exports.modifyWebpackConfig = function(config, env) {
     return cfg;
   });
 
-  config.removeLoader('webm');
-  config.loader('webm', function(cfg) {
-    cfg.test = /\.webm/;
-    cfg.loader = imageLoader;
-    return cfg;
-  });
-
   config.removeLoader('txt');
   config.loader('txt', function(cfg) {
     cfg.test = /\.txt/;
     cfg.loader = 'raw-loader';
+    return cfg;
+  });
+
+  config.removeLoader('webm');
+  config.loader('webm', function(cfg) {
+    cfg.test = /\.webm/;
+    cfg.loader = imageLoader;
     return cfg;
   });
 
