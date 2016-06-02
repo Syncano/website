@@ -26,7 +26,7 @@ test:
     - mv reports/selenium-debug.log reports/chrome-debug.log
     - npm run e2e-firefox:
         timeout: 60
-    - - mv reports/selenium-debug.log reports/firefox-debug.log
+    - mv reports/selenium-debug.log reports/firefox-debug.log
 
 
 deployment:
