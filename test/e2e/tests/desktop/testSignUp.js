@@ -8,7 +8,9 @@ export default {
     const tempPass = Date.now();
     const tempEmail = 'syncano.bot+' + tempPass + '@syncano.com';
 
-    client.init();
+    client
+      .init()
+      .setResolution(client);
 
     formPage
       .clickElement('@signupButton')

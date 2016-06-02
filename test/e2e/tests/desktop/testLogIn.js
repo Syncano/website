@@ -6,7 +6,9 @@ export default {
   'Test Log In using email address': (client) => {
     const formPage = client.page.formPage();
 
-    client.init();
+    client
+      .init()
+      .setResolution(client);
 
     formPage
       .clickElement('@loginButton')
