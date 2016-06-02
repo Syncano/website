@@ -2,11 +2,14 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { CTASection, Footer, PageHeader, TermsAndLegal } from '../../components';
 
-export default () => {
+export default ({ location }) => {
+  const title = 'Terms and Legal | Syncano';
+  const { pathname } = location;
+
   return (
     <div>
       <Helmet
-        title="Terms and Legal | Syncano"
+        title={title}
         meta={[
           {
             name: 'description',
@@ -15,6 +18,14 @@ export default () => {
           {
             name: 'mixpanelTitle',
             content: 'Terms and Legal'
+          },
+          {
+            property: 'og:title',
+            content: `${title}`
+          },
+          {
+            property: 'og:url',
+            content: `http://www.syncano.io${pathname}`
           }
         ]}
       />
