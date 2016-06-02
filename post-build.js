@@ -7,10 +7,10 @@ const generateSitemapUrl = (page) => {
   const nonIndexedPages = ['/404/'];
   const importantPages = ['/', '/pricing/'];
   const isRootPath = pagePath === '/';
-  const isNonInedexedPage = _.includes(nonIndexedPages, pagePath) || _.some(nonIndexedPages, (nonIndexedPage) => _.startsWith(pagePath, nonIndexedPage));
+  const isNonIndexedPage = _.includes(nonIndexedPages, pagePath) || _.some(nonIndexedPages, (nonIndexedPage) => _.startsWith(pagePath, nonIndexedPage));
   const isImportantPage = _.includes(importantPages, pagePath);
 
-  if (!pagePath || isNonInedexedPage) {
+  if (!pagePath || isNonIndexedPage) {
     return;
   }
 
