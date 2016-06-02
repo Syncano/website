@@ -16,6 +16,7 @@ dependencies:
     - cp syncano-ansible/config/ssh_config ~/.ssh/config
     - npm install -g npm
     - pip install -r syncano-ansible/requirements.txt
+    - sudo apt-get install pushd popd
 
 test:
   override:
