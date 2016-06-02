@@ -1,6 +1,5 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import config from './config/';
 import { Analytics } from './components/';
 
 const BUILD_TIME = new Date().getTime();
@@ -11,7 +10,7 @@ export default React.createClass({
     const attrs = head.htmlAttributes.toComponent();
 
     let css;
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV !== 'development') {
       css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
     }
 
@@ -70,7 +69,7 @@ export default React.createClass({
         </head>
         <body>
           <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
-          <Analytics writeKey={config.analyticsKey} />
+          <Analytics writeKey={APP_CONFIG.analyticsKey} />
           <script src="https://cdn.jsdelivr.net/g/prism@1.5.0(prism.js+components/prism-clike.min.js+components/prism-c.min.js+components/prism-objectivec.min.js+components/prism-java.min.js+components/prism-javascript.min.js+components/prism-swift.min.js+components/prism-cpp.min.js+components/prism-python.min.js+components/prism-ruby.min.js+plugins/line-numbers/prism-line-numbers.min.js)" />
           <script src={`/bundle.js?t=${BUILD_TIME}`} />
           <script async src="//platform.twitter.com/widgets.js" charSet="utf-8" />

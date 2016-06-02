@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Syncano from 'syncano';
 import Hello from './Hello';
-import config from '../../config/';
 
 console.error('env', process.env);
 console.error('configAUTHHOC', config);
@@ -34,8 +33,7 @@ export default (ComposedComponent) => (
     };
 
     handlePasswordAuth = (type, { email, password }) => {
-      const { syncanoAPIBaseUrl } = config;
-      const { Account } = Syncano({ baseUrl: syncanoAPIBaseUrl });
+      const { Account } = Syncano({ baseUrl: APP_CONFIG.syncanoAPIBaseUrl });
 
       Account[type]({ email, password })
         .then((data) => this.redirectToDashboard(data.account_key))
@@ -48,8 +46,7 @@ export default (ComposedComponent) => (
     };
 
     handlePasswordReset = ({ email }) => {
-      const { syncanoAPIBaseUrl } = config;
-      const { Account } = Syncano({ baseUrl: syncanoAPIBaseUrl });
+      const { Account } = Syncano({ baseUrl: APP_CONFIG.syncanoAPIBaseUrl });
 
       Account.resetPassword(email)
         .then((data) => this.setState({ status: 'done' }))
@@ -60,8 +57,7 @@ export default (ComposedComponent) => (
     };
 
     handleSocialAuth = (network) => {
-      const { syncanoAPIBaseUrl } = config;
-      const { Account } = Syncano({ baseUrl: syncanoAPIBaseUrl });
+      const { Account } = Syncano({ baseUrl: APP_CONFIG.syncanoAPIBaseUrl });
 
       Hello(network).login().then((data) => {
         const { access_token } = data.authResponse;
@@ -82,8 +78,7 @@ export default (ComposedComponent) => (
     };
 
     redirectToDashboard = (token) => {
-      const { dashboardUrl } = config;
-      const redirectUrl = `${dashboardUrl}?token=${token}`;
+      const redirectUrl = `${APP_CONFIG.dashboardUrl}?token=${token}`;
 
       window.location.href = redirectUrl;
     };
