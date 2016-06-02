@@ -12,21 +12,23 @@ dependencies:
     - cp syncano-ansible/config/ssh_config ~/.ssh/config
     - npm install -g npm
     - pip install -r syncano-ansible/requirements.txt
+  post:
+    - if [[ $CIRCLE_BRANCH == "master" ]] ; then echo 'export NODE_ENV=production' >> ~/.circlerc ; fi
+    - if [[ $CIRCLE_BRANCH == "devel" ]] ; then echo 'export NODE_ENV=staging' >> ~/.circlerc ; fi
 
 test:
   override:
-    - NODE_ENV=staging npm run build
+    - npm run get-pricing-plans
+    - gatsby build
 
 deployment:
   production:
     branch: master
     commands:
-      - NODE_ENV=production npm run build
       - bundle exec s3_website push --config-dir=./config/production/
       - cd syncano-ansible/playbooks/ && ansible-playbook www-server.yml -e 'env=prd' --tags=website
   staging:
     branch: devel
     commands:
-      - NODE_ENV=staging npm run build
       - bundle exec s3_website push --force --config-dir=./config/staging/
       - cd syncano-ansible/playbooks/ && ansible-playbook www-server.yml -e 'env=stg' --tags=website

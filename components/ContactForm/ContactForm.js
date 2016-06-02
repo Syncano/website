@@ -3,7 +3,6 @@ import Formsy from 'formsy-react';
 import axios from 'axios';
 import FormInput from '../FormInput';
 import FormTextarea from '../FormTextarea';
-import config from '../../config/';
 
 export default class ContactForm extends Component {
   constructor(props) {
@@ -15,8 +14,7 @@ export default class ContactForm extends Component {
   };
 
   submit = (model) => {
-    const { contactFormEmail } = config;
-    const action = `//formspree.io/${contactFormEmail}`;
+    const action = `//formspree.io/${APP_CONFIG.contactFormEmail}`;
 
     axios.post(action, model)
       .then(this.onSubmitSuccess)
