@@ -4,7 +4,6 @@ import classNames from 'classnames';
 import moment from 'moment';
 import StatusImage from './StatusImage';
 import SupportForm from './SupportForm';
-import config from '../config/';
 
 export default class StatusPageHeader extends Component {
   constructor(props) {
@@ -35,9 +34,7 @@ export default class StatusPageHeader extends Component {
   };
 
   fetchCurrentStatus = () => {
-    const { statusPageStatusUrl } = config;
-
-    axios.get(statusPageStatusUrl).then((response) => this.setState({ status: response.data }));
+    axios.get(APP_CONFIG.statusPageStatusUrl).then((response) => this.setState({ status: response.data }));
   };
 
   getHeadlineText = (status) => {

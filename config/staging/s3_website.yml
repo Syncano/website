@@ -1,5 +1,5 @@
-s3_id: <%= ENV['STAGING_AWS_S3_ACCESS_KEY_ID'] %>
-s3_secret: <%= ENV['STAGING_AWS_S3_SECRET_ACCESS_KEY'] %>
+s3_id: <%= ENV['AWS_S3_ACCESS_KEY_ID'] %>
+s3_secret: <%= ENV['AWS_S3_SECRET_ACCESS_KEY'] %>
 s3_bucket: <%= ENV['STAGING_AWS_S3_BUCKET'] %>
 s3_endpoint: us-east-1
 cache_control:
