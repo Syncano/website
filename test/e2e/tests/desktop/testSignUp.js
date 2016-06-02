@@ -1,5 +1,5 @@
 export default {
-  tags: ['login'],
+  tags: ['signup'],
   after(client) {
     client.end();
   },
