@@ -67,7 +67,7 @@
     "build": "gatsby build",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "e2e-setup": "npm install selenium-standalone && selenium-standalone install",
+    "e2e-setup": "mkdir reports/ && npm install selenium-standalone && selenium-standalone install",
     "e2e-http-server": "cd public/ && nohup python -m SimpleHTTPServer &",
     "e2e-chrome": "nightwatch -e chrome --suiteRetries 1",
     "e2e-firefox": "nightwatch -e firefox --suiteRetries 1",
