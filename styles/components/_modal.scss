@@ -10,16 +10,11 @@
 
 .modal-scroll {
   height: 100%;
-
-  @include medium {
-    max-height: 100vh;
-    overflow: auto;
-  }
+  max-height: 100vh;
+  overflow: auto;
 }
 
 .modal {
-  height: 100%;
-
   @include medium {
     display: flex;
     align-items: center;
@@ -31,8 +26,6 @@
 
 .modal-box {
   width: 100%;
-  height: 100%;
-  overflow: auto;
   position: relative;
   background: #fff;
 
@@ -178,7 +171,6 @@
     border-radius: 4px;
     overflow: visible;
     background: none;
-    min-height: calc(100% + 96px);
 
     .modal-box__close {
       top: 20px;
