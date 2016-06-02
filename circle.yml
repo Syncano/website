@@ -23,8 +23,10 @@ test:
     - npm run e2e-setup && npm run e2e-http-server
     - npm run e2e-chrome:
         timeout: 60
-    # - npm run e2e-firefox:
-    #     timeout: 60
+    - mv reports/selenium-debug.log reports/chrome-debug.log
+    - npm run e2e-firefox:
+        timeout: 60
+    - - mv reports/selenium-debug.log reports/firefox-debug.log
 
 
 deployment:
