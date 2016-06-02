@@ -27,6 +27,7 @@ test:
     - npm run e2e-firefox:
         timeout: 60
     - mv reports/selenium-debug.log reports/firefox-debug.log
+    - cp public/nohup.out reports/http-server.log
 
 
 deployment:
