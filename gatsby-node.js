@@ -71,6 +71,8 @@ exports.modifyWebpackConfig = function(config, env) {
     return cfg;
   });
 
+  console.error('envs', generateEnvVariables());
+
   config.plugin('webpack-define', webpack.DefinePlugin, [generateEnvVariables()]);
 
   return config;
