@@ -1,16 +1,5 @@
-import _ from 'lodash';
-import CONSTANS from './circle-constans';
-import webpack from 'webpack';
-
-const generateEnvVariables = () => {
-  const variables = {};
-
-  _.forEach(CONSTANS, (variable) => {
-    variables[variable] = process.env[variable];
-  });
-
-  return variables;
-};
+import APP_CONFIG from './config/';
+import ExtendedDefinePlugin from 'extended-define-webpack-plugin';
 
 exports.modifyWebpackConfig = function(config, env) {
   const imageLoader = env !== 'develop' ? 'file-loader?name=/[hash].[ext]' : 'file-loader';
@@ -71,9 +60,7 @@ exports.modifyWebpackConfig = function(config, env) {
     return cfg;
   });
 
-  console.error('envs', generateEnvVariables());
-
-  config.plugin('webpack-define', webpack.DefinePlugin, [generateEnvVariables()]);
+  config.plugin('webpack-extended-define', ExtendedDefinePlugin, [{APP_CONFIG}]);
 
   return config;
 };
