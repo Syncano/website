@@ -56,7 +56,7 @@ const Homepage = (props, { modals }) => {
       <TextWithBottomImage
         variant="no-bottom-padding"
         theme="gray"
-        headline={<span>Create and manage your API from<br />the Dashboard</span>}
+        headline={<span>Create and manage your API from <br />the Dashboard</span>}
         textline={`Make your own custom APIs in the cloud. Instantly scale for the web, mobile, and the Internet of
           Things. Support millions of users without learning the nuts and bolts of handling servers.`}
         image={

@@ -41,14 +41,6 @@ export default ({ headline, children }) => {
               position="Principal Developer Evangelist"
             />
             <TeamMember
-              photoSrc={require('./images/mary-fabro.jpg')}
-              photo2xSrc={require('./images/mary-fabro@2x.jpg')}
-              photoMediumSrc={require('./images/mary-fabro-medium.jpg')}
-              photoMedium2xSrc={require('./images/mary-fabro-medium@2x.jpg')}
-              name="Mary Fabro"
-              position="Head of Customer Growth"
-            />
-            <TeamMember
               photoSrc={require('./images/sara-cowie.jpg')}
               photo2xSrc={require('./images/sara-cowie@2x.jpg')}
               photoMediumSrc={require('./images/sara-cowie-medium.jpg')}
