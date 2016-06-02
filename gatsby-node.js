@@ -71,9 +71,13 @@ exports.modifyWebpackConfig = function(config, env) {
     return cfg;
   });
 
+  config.plugin('webpack-define', webpack.DefinePlugin, [generateEnvVariables()]);
+
   console.error('envs', generateEnvVariables());
 
-  config.plugin('webpack-define', webpack.DefinePlugin, [generateEnvVariables()]);
+  console.error('process.env', process.env);
+
+  console.error('config', config);
 
   return config;
 };
