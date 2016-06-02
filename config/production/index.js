@@ -5,10 +5,8 @@ export default {
   statusPageStatusUrl: 'STATUS_PAGE_URL',
   supportFormEmail: 'PRODUCTION_SUPPORT_FORM_EMAIL',
   syncanoAPIBaseUrl: 'PRODUCTION_API_URL',
-  hello: {
-    github: 'PRODUCTION_HELLO_GITHUB',
-    facebook: 'PRODUCTION_HELLO_FACEBOOK',
-    google: 'PRODUCTION_HELLO_GOOGLE',
-    redirect_uri: 'PRODUCTION_HELLO_REDIRECT_URI'
-  }
+  github: 'PRODUCTION_HELLO_GITHUB',
+  facebook: 'PRODUCTION_HELLO_FACEBOOK',
+  google: 'PRODUCTION_HELLO_GOOGLE',
+  redirect_uri: 'PRODUCTION_HELLO_REDIRECT_URI'
 };
