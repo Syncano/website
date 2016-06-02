@@ -52,7 +52,8 @@
     "eslint-config-airbnb": "9.0.1",
     "eslint-plugin-import": "1.8.1",
     "eslint-plugin-jsx-a11y": "1.2.2",
-    "eslint-plugin-react": "5.1.1"
+    "eslint-plugin-react": "5.1.1",
+    "nightwatch": "0.9.1"
   },
   "keywords": [
     "gatsby"
@@ -65,6 +66,10 @@
     "prebuild": "babel-node ./scripts/get-pricing-plans.js",
     "build": "gatsby build",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "e2e-setup": "npm install selenium-standalone && selenium-standalone install",
+    "e2e-chrome": "nightwatch -e chrome --suiteRetries 1",
+    "e2e-firefox": "nightwatch -e firefox --suiteRetries 1",
+    "e2e-local": "nightwatch -e chrome,firefox --suiteRetries 1"
   }
 }
