@@ -15,8 +15,10 @@ import {
 } from '../components';
 
 const Homepage = ({ location }, { modals }) => {
-  const title = 'Build powerful realtime apps in half the time | Syncano';
   const { pathname } = location;
+  const title = 'Build powerful realtime apps in half the time | Syncano';
+  const description = `Create and manage your API from our dashboard. Use our serverless platform to set up your backend
+    and support millions of users without handling servers!`;
 
   return (
     <div>
@@ -25,8 +27,7 @@ const Homepage = ({ location }, { modals }) => {
         meta={[
           {
             name: 'description',
-            content: `Create and manage your API from our dashboard. Use our serverless platform to set up your backend
-             and support millions of users without handling servers!`
+            content: `${description}`
           },
           {
             name: 'mixpanelTitle',
@@ -39,6 +40,14 @@ const Homepage = ({ location }, { modals }) => {
           {
             property: 'og:url',
             content: `http://www.syncano.io${pathname}`
+          },
+          {
+            name: 'twitter:title',
+            content: `${title}`
+          },
+          {
+            name: 'twitter:description',
+            content: `${description}`
           }
         ]}
       />

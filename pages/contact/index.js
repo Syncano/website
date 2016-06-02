@@ -3,8 +3,10 @@ import Helmet from 'react-helmet';
 import { ContactForm, CTASection, Footer, OfficeAddresses, PageHeader } from '../../components';
 
 export default ({ location }) => {
-  const title = 'Get in touch with us | Syncano';
   const { pathname } = location;
+  const title = 'Get in touch with us | Syncano';
+  const description = `Get in touch with us, write your feedback or just say hi! Use the form or just drop us an
+    email.`;
 
   return (
     <div>
@@ -13,7 +15,7 @@ export default ({ location }) => {
         meta={[
           {
             name: 'description',
-            content: 'Get in touch with us, write your feedback or just say hi! Use the form or just drop us an email.'
+            content: `${description}`
           },
           {
             name: 'mixpanelTitle',
@@ -26,6 +28,14 @@ export default ({ location }) => {
           {
             property: 'og:url',
             content: `http://www.syncano.io${pathname}`
+          },
+          {
+            name: 'twitter:title',
+            content: `${title}`
+          },
+          {
+            name: 'twitter:description',
+            content: `${description}`
           }
         ]}
       />

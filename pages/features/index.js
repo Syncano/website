@@ -14,8 +14,10 @@ import {
 } from '../../components';
 
 export default ({ location }) => {
-  const title = 'Features - Syncano Sockets, Data Management, Automations';
   const { pathname } = location;
+  const title = 'Features - Syncano Sockets, Data Management, Automations';
+  const description = `Rapidly assemble building blocks for your app without a backend or server. Learn more about what
+    you can do with Syncano.`;
 
   return (
     <div>
@@ -24,8 +26,7 @@ export default ({ location }) => {
         meta={[
           {
             name: 'description',
-            content: `Rapidly assemble building blocks for your app without a backend or server. Learn more about what
-             you can do with Syncano.`
+            content: `${description}`
           },
           {
             name: 'mixpanelTitle',
@@ -38,6 +39,14 @@ export default ({ location }) => {
           {
             property: 'og:url',
             content: `http://www.syncano.io${pathname}`
+          },
+          {
+            name: 'twitter:title',
+            content: `${title}`
+          },
+          {
+            name: 'twitter:description',
+            content: `${description}`
           }
         ]}
       />

@@ -4,8 +4,9 @@ import { Link } from 'react-router';
 import { CTASection, Footer, PageHeader, Travolta } from '../../components';
 
 export default ({ location }) => {
-  const title = '404 Error - Page does not exist | Syncano';
   const { pathname } = location;
+  const title = '404 Error - Page does not exist | Syncano';
+  const description = `The age you were looking for doesn't exist.`;
 
   return (
     <div>
@@ -14,7 +15,7 @@ export default ({ location }) => {
         meta={[
           {
             name: 'description',
-            content: `The age you were looking for doesn't exist.`
+            content: `${description}`
           },
           {
             name: 'mixpanelTitle',
@@ -27,6 +28,14 @@ export default ({ location }) => {
           {
             property: 'og:url',
             content: `http://www.syncano.io${pathname}`
+          },
+          {
+            name: 'twitter:title',
+            content: `${title}`
+          },
+          {
+            name: 'twitter:description',
+            content: `${description}`
           }
         ]}
       />

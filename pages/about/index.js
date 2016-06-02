@@ -12,8 +12,10 @@ import {
 } from '../../components';
 
 export default ({ location }) => {
-  const title = 'About Syncano and the team';
   const { pathname } = location;
+  const title = 'About Syncano and the team';
+  const description = `Changing the way the world thinks about app development. We want to help developers focus on
+    strategic initiatives, and not worry about heavy lifting.`;
 
   return (
     <div>
@@ -22,8 +24,7 @@ export default ({ location }) => {
         meta={[
           {
             name: 'description',
-            content: `Changing the way the world thinks about app development. We want to help developers focus on
-             strategic initiatives, and not worry about heavy lifting.`
+            content: `${description}`
           },
           {
             name: 'mixpanelTitle',
@@ -36,6 +37,14 @@ export default ({ location }) => {
           {
             property: 'og:url',
             content: `http://www.syncano.io${pathname}`
+          },
+          {
+            name: 'twitter:title',
+            content: `${title}`
+          },
+          {
+            name: 'twitter:description',
+            content: `${description}`
           }
         ]}
       />

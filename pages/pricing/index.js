@@ -13,8 +13,10 @@ import {
 } from '../../components';
 
 export default ({ location }) => {
-  const title = 'Plans & Pricing at Syncano';
   const { pathname } = location;
+  const title = 'Plans & Pricing at Syncano';
+  const description = `Get started with Syncano for free and scale to millions of users. Upgrade, downgrade or cancel at
+    any time. 30 day money back guarantee. Read more...`;
 
   return (
     <div>
@@ -23,8 +25,7 @@ export default ({ location }) => {
         meta={[
           {
             name: 'description',
-            content: `Get started with Syncano for free and scale to millions of users. Upgrade, downgrade or cancel at any
-             time. 30 day money back guarantee. Read more...`
+            content: `${description}`
           },
           {
             name: 'mixpanelTitle',
@@ -37,6 +38,14 @@ export default ({ location }) => {
           {
             property: 'og:url',
             content: `http://www.syncano.io${pathname}`
+          },
+          {
+            name: 'twitter:title',
+            content: `${title}`
+          },
+          {
+            name: 'twitter:description',
+            content: `${description}`
           }
         ]}
       />

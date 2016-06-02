@@ -3,8 +3,9 @@ import Helmet from 'react-helmet';
 import { CTASection, Footer, PageHeader, TermsAndLegal } from '../../components';
 
 export default ({ location }) => {
-  const title = 'Terms and Legal | Syncano';
   const { pathname } = location;
+  const title = 'Terms and Legal | Syncano';
+  const description = 'Learn more about our terms and policies.';
 
   return (
     <div>
@@ -13,7 +14,7 @@ export default ({ location }) => {
         meta={[
           {
             name: 'description',
-            content: 'Learn more about our terms and policies.'
+            content: `${description}`
           },
           {
             name: 'mixpanelTitle',
@@ -26,6 +27,14 @@ export default ({ location }) => {
           {
             property: 'og:url',
             content: `http://www.syncano.io${pathname}`
+          },
+          {
+            name: 'twitter:title',
+            content: `${title}`
+          },
+          {
+            name: 'twitter:description',
+            content: `${description}`
           }
         ]}
       />
