@@ -6,7 +6,7 @@ const generateEnvVariables = () => {
   const variables = {};
 
   _.forEach(CONSTANS, (variable) => {
-    variables[variable] = JSON.stringify(process.env[variable]);
+    variables[variable] = process.env[variable];
   });
 
   return variables;
