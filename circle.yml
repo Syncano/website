@@ -19,7 +19,7 @@ dependencies:
 
 test:
   override:
-    - npm run e2e-setup && npm start
+    - npm run e2e-setup && npm run e2e-http-server
     - npm run e2e-chrome:
         timeout: 60
     - npm run e2e-firefox:

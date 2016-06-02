@@ -1,6 +1,6 @@
 {
   "src_folders" : ["test/e2e/tests"],
-  "output_folder" : "./reports",
+  "output_folder" : "reports/",
   "custom_commands_path" : "test/e2e/commands",
   "custom_assertions_path" : "",
   "page_objects_path" : "test/e2e/pages",
@@ -9,7 +9,7 @@
   "selenium" : {
     "start_process" : true,
     "server_path" : "./node_modules/selenium-standalone/.selenium/selenium-server/2.53.0-server.jar",
-    "log_path" : "./reports/",
+    "log_path" : "reports/",
     "host" : "127.0.0.1",
     "port" : 4444,
     "cli_args" : {
