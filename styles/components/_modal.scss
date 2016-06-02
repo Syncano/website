@@ -25,6 +25,7 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    height: auto;
   }
 }
 
@@ -33,6 +34,7 @@
   height: 100%;
   overflow: auto;
   position: relative;
+  background: #fff;
 
   .modal-box__close {
     display: block;
@@ -56,8 +58,6 @@
   .modal-box__content {
     padding-top: 50px;
     padding-bottom: 50px;
-    background: #fff;
-    min-height: 100%;
 
     h2, p {
       text-align: center;
@@ -146,7 +146,29 @@
   }
 
   .modal-box__footer {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: -5px;
+    padding: 0 10px 50px;
+
+    .modal-box__footer__column {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      span {
+        color: $color-main-blue;
+        cursor: pointer;
+        transition: $transition-default;
+
+        &:hover {
+          opacity: .8;
+        }
+      }
+    }
   }
 
   @include medium {
@@ -155,6 +177,8 @@
     max-width: 520px;
     border-radius: 4px;
     overflow: visible;
+    background: none;
+    min-height: calc(100% + 96px);
 
     .modal-box__close {
       top: 20px;
@@ -174,6 +198,7 @@
       padding-bottom: 60px;
       box-shadow: 0 0 50px rgba(0, 0, 0, .37);
       min-height: 0;
+      background: #fff;
 
       .inner {
         padding-left: 70px;
@@ -191,9 +216,10 @@
 
     .modal-box__footer {
       display: flex;
+      flex-direction: row;
       justify-content: space-between;
-      padding-top: 40px;
-      padding-bottom: 40px;
+      padding: 40px 0;
+      margin-top: 0;
 
       .modal-box__footer__column {
         &:last-child {
@@ -207,12 +233,6 @@
 
         span {
           color: #fff;
-          cursor: pointer;
-          transition: $transition-default;
-
-          &:hover {
-            opacity: .8;
-          }
         }
       }
     }
