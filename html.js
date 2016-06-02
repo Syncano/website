@@ -1,6 +1,5 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import config from './config/';
 import { Analytics } from './components/';
 
 const BUILD_TIME = new Date().getTime();
@@ -11,7 +10,7 @@ export default React.createClass({
     const attrs = head.htmlAttributes.toComponent();
 
     let css;
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV !== 'development') {
       css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
     }
 
@@ -42,11 +41,16 @@ export default React.createClass({
           <link rel="icon" type="image/png" href={require('./images/favicons/android-chrome-192x192.png')} sizes="192x192" />
           <link rel="icon" type="image/png" href={require('./images/favicons/favicon-96x96.png')} sizes="96x96" />
           <link rel="icon" type="image/png" href={require('./images/favicons/favicon-16x16.png')} sizes="16x16" />
-          <link rel="manifest" href={require('./images/favicons/manifest.json')} />
+          <link rel="manifest" href={require('!file-loader!./images/favicons/manifest.json')} />
           <link rel="mask-icon" href={require('./images/favicons/safari-pinned-tab.svg')} color="#0070d3" />
           <meta name="msapplication-TileColor" content="#0070d3" />
           <meta name="msapplication-TileImage" content={require('./images/favicons/mstile-144x144.png')} />
           <meta name="theme-color" content="#ffffff" />
+
+          <meta property="og:image" content={require('./images/og-image.png')} />
+          <meta property="og:site_name" content="Syncano" />
+          <meta property="og:type" content="website" />
+
           {head.link.toComponent()}
           <script dangerouslySetInnerHTML={{__html: `
             (function(h,o,t,j,a,r){
@@ -61,7 +65,7 @@ export default React.createClass({
         </head>
         <body>
           <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
-          <Analytics writeKey={config.analyticsKey} />
+          <Analytics writeKey={APP_CONFIG.analyticsKey} />
           <script src="https://cdn.jsdelivr.net/g/prism@1.5.0(prism.js+components/prism-clike.min.js+components/prism-c.min.js+components/prism-objectivec.min.js+components/prism-java.min.js+components/prism-javascript.min.js+components/prism-swift.min.js+components/prism-cpp.min.js+components/prism-python.min.js+components/prism-ruby.min.js+plugins/line-numbers/prism-line-numbers.min.js)" />
           <script src={`/bundle.js?t=${BUILD_TIME}`} />
           <script async src="//platform.twitter.com/widgets.js" charSet="utf-8" />

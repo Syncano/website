@@ -1,16 +1,5 @@
-import _ from 'lodash';
-import CONSTANS from './circle-constans';
-import webpack from 'webpack';
-
-const generateEnvVariables = () => {
-  const variables = {};
-
-  _.forEach(CONSTANS, (variable) => {
-    variables[variable] = JSON.stringify(process.env[variable]);
-  });
-
-  return variables;
-};
+import APP_CONFIG from './config/';
+import ExtendedDefinePlugin from 'extended-define-webpack-plugin';
 
 exports.modifyWebpackConfig = function(config, env) {
   const imageLoader = env !== 'develop' ? 'file-loader?name=/[hash].[ext]' : 'file-loader';
@@ -57,13 +46,6 @@ exports.modifyWebpackConfig = function(config, env) {
     return cfg;
   });
 
-  config.removeLoader('webm');
-  config.loader('webm', function(cfg) {
-    cfg.test = /\.webm/;
-    cfg.loader = imageLoader;
-    return cfg;
-  });
-
   config.removeLoader('txt');
   config.loader('txt', function(cfg) {
     cfg.test = /\.txt/;
@@ -71,7 +53,14 @@ exports.modifyWebpackConfig = function(config, env) {
     return cfg;
   });
 
-  config.plugin('webpack-define', webpack.DefinePlugin, [generateEnvVariables()]);
+  config.removeLoader('webm');
+  config.loader('webm', function(cfg) {
+    cfg.test = /\.webm/;
+    cfg.loader = imageLoader;
+    return cfg;
+  });
+
+  config.plugin('webpack-extended-define', ExtendedDefinePlugin, [{APP_CONFIG}]);
 
   return config;
 };
