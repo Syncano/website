@@ -14,7 +14,7 @@ dependencies:
     - pip install -r syncano-ansible/requirements.txt
   post:
     - if [[ $CIRCLE_BRANCH == "master" ]] ; then echo 'export NODE_ENV=production' >> ~/.circlerc ; fi
-    - if [[ $CIRCLE_BRANCH == "devel" ]] ; then echo 'export NODE_ENV=staging' >> ~/.circlerc ; fi
+    - if [[ $CIRCLE_BRANCH != "master" ]] ; then echo 'export NODE_ENV=staging' >> ~/.circlerc ; fi
 
 test:
   override:
