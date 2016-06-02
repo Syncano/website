@@ -15,16 +15,20 @@
 }
 
 .modal {
+  height: 100%;
+
   @include medium {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    height: auto;
   }
 }
 
 .modal-box {
   width: 100%;
+  min-height: 100%;
   position: relative;
   background: #fff;
 
@@ -155,6 +159,7 @@
         color: $color-main-blue;
         cursor: pointer;
         transition: $transition-default;
+        line-height: 1.25;
 
         &:hover {
           opacity: .8;
