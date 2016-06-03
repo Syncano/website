@@ -1,6 +1,4 @@
 .text-with-background {
-  text-align: center;
-
   .inner {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -39,8 +37,6 @@
   }
 
   @include small {
-    text-align: left;
-
     &.text-with-background--image1 {
       .inner {
         background-position: right -210px bottom 0;
