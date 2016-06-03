@@ -53,7 +53,9 @@
     "eslint-plugin-import": "1.8.1",
     "eslint-plugin-jsx-a11y": "1.2.3",
     "eslint-plugin-react": "5.1.1",
-    "extended-define-webpack-plugin": "0.1.0"
+    "extended-define-webpack-plugin": "0.1.0",
+    "nightwatch": "0.9.1",
+    "selenium-standalone": "5.1.0"
   },
   "keywords": [
     "gatsby"
@@ -67,6 +69,11 @@
     "prebuild": "npm run get-pricing-plans",
     "build": "NODE_ENV=staging gatsby build",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "e2e-setup": "mkdir reports/ && selenium-standalone install --drivers.chrome.version=2.16",
+    "e2e-http-server": "cd public/ && nohup python -m SimpleHTTPServer &",
+    "e2e-chrome": "nightwatch -e chrome --suiteRetries 1",
+    "e2e-firefox": "nightwatch -e firefox --suiteRetries 1",
+    "e2e-local": "nightwatch -e chrome,firefox --suiteRetries 1"
   }
 }

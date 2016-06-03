@@ -1,12 +1,12 @@
 .column-paragraphs {
   padding-top: 80px;
-  text-align: center;
 
   h2 {
     font-size: 20px;
     color: $color-text-headline;
     font-weight: 700;
     line-height: 1.35;
+    text-align: center;
   }
 
   .column-paragraphs__paragraphs {
@@ -23,7 +23,6 @@
       .column-paragraphs__paragraphs__paragraph__headline {
         display: flex;
         align-items: center;
-        justify-content: center;
 
         img {
           margin-right: 15px;
@@ -76,19 +75,14 @@
         margin-bottom: 80px;
         flex: 0 0 50%;
         padding: 20px;
-        text-align: left;
         margin-bottom: (80px - 20px);
 
         &:nth-last-child(2) {
           margin-bottom: 0;
         }
 
-        .column-paragraphs__paragraphs__paragraph__headline {
-          justify-content: flex-start;
-
-          h3 {
-            font-size: 24px;
-          }
+        .column-paragraphs__paragraphs__paragraph__headline h3 {
+          font-size: 24px;
         }
       }
     }

@@ -1,7 +1,6 @@
 .screen-descriptions {
   padding-top: (80px + 25px);
   padding-bottom: 80px;
-  text-align: center;
   background: $color-main-azure;
   color: #fff;
 
@@ -9,6 +8,7 @@
     font-size: 20px;
     font-weight: 700;
     line-height: 1.35;
+    text-align: center;
   }
 
   .screen-descriptions__screens {
@@ -62,7 +62,6 @@
       .screen-descriptions__screens__screen {
         margin-bottom: 100px;
         display: flex;
-        text-align: left;
         align-items: center;
 
         .screen-descriptions__screens__screen__image,
