@@ -6,7 +6,7 @@ export default {
   'Test Login using email address': (client) => {
     const formPage = client.page.formPage();
     const tempPass = Date.now();
-    const tempEmail = 'syncano.bot+' + tempPass + '@syncano.com';
+    const tempEmail = `syncano.bot+${tempPass}@syncano.com`;
 
     client
       .init()

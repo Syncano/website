@@ -30,7 +30,7 @@ or one by one:
     $ npm run e2e-firefox
 
 
-If part of the tests fail for some reason, you can temporarily disable them by `--skiptags` argument. So if, for instance classes tests fail, you can modify `package.json` e2e line, so that it looks like this:
+If part of the tests fail for some reason, you can temporarily disable them by `--skiptags` argument. So if, for instance signup tests fail, you can modify `package.json` e2e line, so that it looks like this:
 
     "e2e-local": "nightwatch -e chrome,firefox --suiteRetries 1 --skiptags signup",
 
