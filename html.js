@@ -54,6 +54,7 @@ export default React.createClass({
           <meta property="og:type" content="website" />
 
           {head.link.toComponent()}
+          <script src="https://cdn.optimizely.com/js/3962180131.js"></script>
           <script dangerouslySetInnerHTML={{__html: `
             (function(h,o,t,j,a,r){
             h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
