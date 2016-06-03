@@ -43,6 +43,7 @@ import TextWithImage from './TextWithImage';
 import TopBar from './TopBar';
 import Travolta from './Travolta';
 import TwitterSlider from './TwitterSlider';
+import TwitterWidget from './TwitterWidget';
 
 export default {
   AboutUs,
@@ -90,5 +91,6 @@ export default {
   TextWithImage,
   TopBar,
   Travolta,
-  TwitterSlider
+  TwitterSlider,
+  TwitterWidget
 };
