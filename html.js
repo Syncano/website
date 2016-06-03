@@ -25,6 +25,8 @@ export default React.createClass({
           {head.title.toComponent()}
           {head.meta.toComponent()}
           {css}
+          <link rel="preload" href={require('./components/Modals/images/close.svg')} as="image" />
+          <link rel="preload" href={require('./components/Modals/images/close-small.svg')} as="image" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/plugins/line-numbers/prism-line-numbers.min.css" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/themes/prism-twilight.min.css" />
