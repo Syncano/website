@@ -1,4 +1,4 @@
-exports.command = function fillInput(element, string) {
+export function command(element, string) {
   return this
     .waitForElementVisible(element)
     .clearValue(element)
