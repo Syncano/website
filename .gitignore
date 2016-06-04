@@ -29,7 +29,8 @@ build/Release
 node_modules
 .gatsby-context.js
 config/development/index.js
-pricing-plans.json
+data-pricing-plans.json
+data-tweets.json
 
 # Test data
 reports/

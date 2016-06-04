@@ -8,5 +8,9 @@ export default {
   github: 'PRODUCTION_HELLO_GITHUB',
   facebook: 'PRODUCTION_HELLO_FACEBOOK',
   google: 'PRODUCTION_HELLO_GOOGLE',
-  redirect_uri: 'PRODUCTION_HELLO_REDIRECT_URI'
+  redirect_uri: 'PRODUCTION_HELLO_REDIRECT_URI',
+  twitterConsumerKey: 'TWITTER_CONSUMER_KEY',
+  twitterConsumerSecret: 'TWITTER_CONSUMER_SECRET',
+  twitterAccessToken: 'TWITTER_ACCESS_TOKEN',
+  twitterAccessTokenSecret: 'TWITTER_ACCESS_TOKEN_SECRET'
 };

@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Patryk Kopycinski <patryk.kopycinski@syncano.com>",
   "dependencies": {
+    "autolinker": "0.26.0",
     "axios": "0.12.0",
     "babel-cli": "6.9.0",
     "babel-plugin-add-module-exports": "0.2.1",
@@ -44,6 +45,7 @@
     "sitemap": "1.6.0",
     "syncano": "1.0.15",
     "toml-js": "0.0.8",
+    "twit": "2.2.4",
     "typography": "0.7.0"
   },
   "devDependencies": {
@@ -64,9 +66,10 @@
   "main": "n/a",
   "scripts": {
     "get-pricing-plans": "babel-node ./scripts/get-pricing-plans.js",
-    "prestart": "npm run get-pricing-plans",
+    "get-tweets": "babel-node ./scripts/get-tweets.js",
+    "prestart": "npm run get-pricing-plans && npm run get-tweets",
     "start": "gatsby develop",
-    "prebuild": "npm run get-pricing-plans",
+    "prebuild": "npm run get-pricing-plans && npm run get-tweets",
     "build": "NODE_ENV=staging gatsby build",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",

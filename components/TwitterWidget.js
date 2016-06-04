@@ -1,23 +1,30 @@
 import React from 'react';
+import Autolinker from 'autolinker';
 
-export default () => {
+export default ({ data }) => {
+  const { user, text } = data;
+  const { name, screen_name, profile_image_url } = user;
+
   return (
     <div className="twitter-widget">
       <a
         className="twitter-widget__header"
-        href="https://twitter.com/BizziBodyDotCom"
+        href={`https://twitter.com/${screen_name}`}
         target="_blank"
       >
         <div className="twitter-widget__header__avatar">
-          <img src="https://unsplash.it/72" alt="" />
+          <img
+            src={profile_image_url}
+            alt={name}
+          />
         </div>
         <div className="twitter-widget__header__user">
-          <strong>Bizzi Body</strong>
-          <div className="twitter-widget__header__user__username">@BizziBodyDotCom</div>
+          <strong>{name}</strong>
+          <div className="twitter-widget__header__user__username">@{screen_name}</div>
         </div>
       </a>
       <div className="twitter-widget__content">
-        <p>It's great to see this platform growing - it's really worth some minutes of your time to investigate. <a href="https://t.co/pMW4qn1Ly6" rel="nofollow" target="_blank"><span className="u-hiddenVisually">https://</span>twitter.com/Syncano/status<span className="u-hiddenVisually">/712692528307421184&nbsp;</span>…</a></p>
+        <p dangerouslySetInnerHTML={{__html: Autolinker.link(text, { hashtag: 'twitter' })}} />
       </div>
     </div>
   );

@@ -3,6 +3,8 @@ import SliderWrapper from '../SliderWrapper';
 import TwitterSliderNavPrev from './TwitterSliderNavPrev';
 import TwitterSliderNavNext from './TwitterSliderNavNext';
 import TwitterWidget from '../TwitterWidget';
+import _ from 'lodash';
+import tweets from '../../data-tweets.json';
 
 export default class TwitterSlider extends Component {
   render = () => {
@@ -46,21 +48,11 @@ export default class TwitterSlider extends Component {
                 }
               ]}
             >
-              <div>
-                <TwitterWidget />
-              </div>
-              <div>
-                <TwitterWidget />
-              </div>
-              <div>
-                <TwitterWidget />
-              </div>
-              <div>
-                <TwitterWidget />
-              </div>
-              <div>
-                <TwitterWidget />
-              </div>
+              {_.map(tweets, (data) => (
+                <div key={data.id}>
+                  <TwitterWidget data={data} />
+                </div>
+              ))}
             </SliderWrapper>
           </div>
           <a

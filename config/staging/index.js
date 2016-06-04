@@ -8,5 +8,9 @@ export default {
   github: 'STAGING_HELLO_GITHUB',
   facebook: 'STAGING_HELLO_FACEBOOK',
   google: 'STAGING_HELLO_GOOGLE',
-  redirect_uri: 'STAGING_HELLO_REDIRECT_URI'
+  redirect_uri: 'STAGING_HELLO_REDIRECT_URI',
+  twitterConsumerKey: 'TWITTER_CONSUMER_KEY',
+  twitterConsumerSecret: 'TWITTER_CONSUMER_SECRET',
+  twitterAccessToken: 'TWITTER_ACCESS_TOKEN',
+  twitterAccessTokenSecret: 'TWITTER_ACCESS_TOKEN_SECRET'
 };
