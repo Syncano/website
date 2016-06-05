@@ -49,7 +49,7 @@ export default class TwitterSlider extends Component {
               ]}
             >
               {_.map(tweets, (data) => (
-                <div key={data.id}>
+                <div>
                   <TwitterWidget data={data} />
                 </div>
               ))}

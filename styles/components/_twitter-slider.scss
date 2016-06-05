@@ -22,9 +22,12 @@
 
     .slick-slide {
       padding: 0 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
 
       .twitter-widget {
-        height: 100%;
+        flex: 1;
       }
     }
 
