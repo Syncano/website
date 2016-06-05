@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import Syncano from 'syncano';
 import Hello from './Hello';
 
-console.error('env', process.env);
-console.error('configAUTHHOC', config);
-
 export default (ComposedComponent) => (
   class AuthHOC extends Component {
     constructor(props) {

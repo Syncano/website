@@ -1,43 +1,17 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import { Link } from 'react-router';
-import { CTASection, Footer, PageHeader, Travolta } from '../../components';
+import { CTASection, Footer, PageHeader, PageHelmet, Travolta } from '../../components';
 
 export default ({ location }) => {
   const { pathname } = location;
-  const title = '404 Error - Page does not exist | Syncano';
-  const description = `The age you were looking for doesn't exist.`;
 
   return (
     <div>
-      <Helmet
-        title={title}
-        meta={[
-          {
-            name: 'description',
-            content: `${description}`
-          },
-          {
-            name: 'mixpanelTitle',
-            content: '404'
-          },
-          {
-            property: 'og:title',
-            content: `${title}`
-          },
-          {
-            property: 'og:url',
-            content: `http://www.syncano.io${pathname}`
-          },
-          {
-            name: 'twitter:title',
-            content: `${title}`
-          },
-          {
-            name: 'twitter:description',
-            content: `${description}`
-          }
-        ]}
+      <PageHelmet
+        title="404 Error - Page does not exist | Syncano"
+        mixpanelTitle="404"
+        description="The page you were looking for doesn't exist."
+        pathname={pathname}
       />
       <PageHeader
         variant="error-404"
