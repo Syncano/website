@@ -11,10 +11,6 @@
     line-height: 1.35;
   }
 
-  .twitter-tweet {
-    margin: 0 auto !important;
-  }
-
   .twitter-slider__slider {
     margin-top: 25px;
     position: relative;
@@ -26,6 +22,10 @@
 
     .slick-slide {
       padding: 0 10px;
+
+      .twitter-widget {
+        height: 100%;
+      }
     }
 
     .slick-dots {
