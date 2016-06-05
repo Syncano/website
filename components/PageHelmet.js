@@ -8,15 +8,15 @@ export default ({ title, mixpanelTitle, description, pathname }) => {
       meta={[
         {
           name: 'description',
-          content: `${description}`
+          content: description
         },
         {
           name: 'mixpanelTitle',
-          content: `${mixpanelTitle}`
+          content: mixpanelTitle
         },
         {
           property: 'og:title',
-          content: `${title}`
+          content: title
         },
         {
           property: 'og:url',
@@ -24,11 +24,11 @@ export default ({ title, mixpanelTitle, description, pathname }) => {
         },
         {
           name: 'twitter:title',
-          content: `${title}`
+          content: title
         },
         {
           name: 'twitter:description',
-          content: `${description}`
+          content: description
         }
       ]}
     />
