@@ -75,7 +75,7 @@ export default (ComposedComponent) => (
     };
 
     redirectToDashboard = (token) => {
-      const redirectUrl = `${APP_CONFIG.dashboardUrl}?token=${token}`;
+      const redirectUrl = `${APP_CONFIG.dashboardUrl}#/login?token=${token}`;
 
       window.location.href = redirectUrl;
     };
