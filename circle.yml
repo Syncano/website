@@ -22,7 +22,7 @@ dependencies:
 
 test:
   override:
-    - npm run get-pricing-plans
+    - npm run setup-data
     - gatsby build
     - npm run e2e-setup && npm run e2e-http-server
     - npm run e2e-chrome:
