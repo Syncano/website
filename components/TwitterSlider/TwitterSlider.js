@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
+import _ from 'lodash';
 import SliderWrapper from '../SliderWrapper';
 import TwitterSliderNavPrev from './TwitterSliderNavPrev';
 import TwitterSliderNavNext from './TwitterSliderNavNext';
 import TwitterWidget from '../TwitterWidget';
-import _ from 'lodash';
 import tweets from '../../data-tweets.json';
 
 export default class TwitterSlider extends Component {

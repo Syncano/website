@@ -1,2 +1,7 @@
-siteTitle="Gatsby Starter Site"
-linkPrefix = "/gatsby-starter-default"
+tweetsIDs = [
+  '712734440062074883',
+  '667455738139320320',
+  '650071291634946048',
+  '727236023298625537',
+  '717796429251497985'
+]
