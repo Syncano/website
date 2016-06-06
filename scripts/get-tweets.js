@@ -1,6 +1,5 @@
 import Twit from 'twit';
 import fs from 'fs';
-import toml from 'toml-js';
 import APP_CONFIG from '../config/';
 import GLOBAL_CONFIG from '../config/global';
 
