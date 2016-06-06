@@ -53,6 +53,10 @@ export default React.createClass({
           <meta property="og:site_name" content="Syncano" />
           <meta property="og:type" content="website" />
 
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:site" content="@syncano" />
+          <meta name="twitter:image" content={require('./images/twitter-image.png')} />
+
           {head.link.toComponent()}
           <script src="https://cdn.optimizely.com/js/3962180131.js"></script>
           <script dangerouslySetInnerHTML={{__html: `

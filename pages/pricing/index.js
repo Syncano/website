@@ -1,44 +1,25 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import {
   CTASection,
   FAQ,
   Footer,
   ListColumns,
   PageHeader,
+  PageHelmet,
   Pricing,
   TextWithImage,
   TextWithBottomImage,
   TwitterSlider
 } from '../../components';
 
-export default ({ location }) => {
-  const title = 'Plans & Pricing at Syncano';
-  const { pathname } = location;
-
+export default () => {
   return (
     <div>
-      <Helmet
-        title={title}
-        meta={[
-          {
-            name: 'description',
-            content: `Get started with Syncano for free and scale to millions of users. Upgrade, downgrade or cancel at any
-             time. 30 day money back guarantee. Read more...`
-          },
-          {
-            name: 'mixpanelTitle',
-            content: 'Pricing'
-          },
-          {
-            property: 'og:title',
-            content: `${title}`
-          },
-          {
-            property: 'og:url',
-            content: `http://www.syncano.io${pathname}`
-          }
-        ]}
+      <PageHelmet
+        title="Plans & Pricing at Syncano"
+        mixpanelTitle="Pricing"
+        description={`Get started with Syncano for free and scale to millions of users. Upgrade, downgrade or cancel at
+          any time. 30 day money back guarantee. Read more...`}
       />
       <PageHeader
         headline="Build secure, scalable apps in half the time"

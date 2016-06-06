@@ -1,5 +1,4 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import {
   AboutUs,
   AboutUsHeaderImage,
@@ -8,36 +7,18 @@ import {
   Footer,
   OfficesMap,
   PageHeader,
+  PageHelmet,
   Team
 } from '../../components';
 
-export default ({ location }) => {
-  const title = 'About Syncano and the team';
-  const { pathname } = location;
-
+export default () => {
   return (
     <div>
-      <Helmet
-        title={title}
-        meta={[
-          {
-            name: 'description',
-            content: `Changing the way the world thinks about app development. We want to help developers focus on
-             strategic initiatives, and not worry about heavy lifting.`
-          },
-          {
-            name: 'mixpanelTitle',
-            content: 'About Us'
-          },
-          {
-            property: 'og:title',
-            content: `${title}`
-          },
-          {
-            property: 'og:url',
-            content: `http://www.syncano.io${pathname}`
-          }
-        ]}
+      <PageHelmet
+        title="About Syncano and the team"
+        mixpanelTitle="About Us"
+        description={`Changing the way the world thinks about app development. We want to help developers focus on
+          strategic initiatives, and not worry about heavy lifting.`}
       />
       <PageHeader
         headline="About us"
