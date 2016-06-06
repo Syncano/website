@@ -12,17 +12,14 @@ import {
   TwitterSlider
 } from '../../components';
 
-export default ({ location }) => {
-  const { pathname } = location;
-
+export default () => {
   return (
     <div>
       <PageHelmet
         title="Plans & Pricing at Syncano"
         mixpanelTitle="Pricing"
-        description={`Get started with Syncano for free and scale to millions of users. Upgrade, downgrade or cancel at
-          any time. 30 day money back guarantee. Read more...`}
-        pathname={pathname}
+        description="Get started with Syncano for free and scale to millions of users. Upgrade, downgrade or cancel at
+        any time. 30 day money back guarantee. Read more..."
       />
       <PageHeader
         headline="Build secure, scalable apps in half the time"

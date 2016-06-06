@@ -1,16 +1,13 @@
 import React from 'react';
 import { ContactForm, CTASection, Footer, OfficeAddresses, PageHeader, PageHelmet } from '../../components';
 
-export default ({ location }) => {
-  const { pathname } = location;
-
+export default () => {
   return (
     <div>
       <PageHelmet
         title="Get in touch with us | Syncano"
         mixpanelTitle="Contact Us"
-        description={`Get in touch with us, write your feedback or just say hi! Use the form or just drop us an email.`}
-        pathname={pathname}
+        description="Get in touch with us, write your feedback or just say hi! Use the form or just drop us an email."
       />
       <PageHeader
         headline="Get in touch with us"

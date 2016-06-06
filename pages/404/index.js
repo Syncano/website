@@ -2,16 +2,13 @@ import React from 'react';
 import { Link } from 'react-router';
 import { CTASection, Footer, PageHeader, PageHelmet, Travolta } from '../../components';
 
-export default ({ location }) => {
-  const { pathname } = location;
-
+export default () => {
   return (
     <div>
       <PageHelmet
         title="404 Error - Page does not exist | Syncano"
         mixpanelTitle="404"
         description="The page you were looking for doesn't exist."
-        pathname={pathname}
       />
       <PageHeader
         variant="error-404"

@@ -1,7 +1,9 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-export default ({ title, mixpanelTitle, description, pathname }) => {
+const PageHelmet = ({ title, mixpanelTitle, description }, { location }) => {
+  const { pathname } = location;
+
   return (
     <Helmet
       title={title}
@@ -34,3 +36,9 @@ export default ({ title, mixpanelTitle, description, pathname }) => {
     />
   );
 };
+
+PageHelmet.contextTypes = {
+  location: React.PropTypes.object
+};
+
+export default PageHelmet;

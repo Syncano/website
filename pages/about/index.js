@@ -11,17 +11,14 @@ import {
   Team
 } from '../../components';
 
-export default ({ location }) => {
-  const { pathname } = location;
-
+export default () => {
   return (
     <div>
       <PageHelmet
         title="About Syncano and the team"
         mixpanelTitle="About Us"
-        description={`Changing the way the world thinks about app development. We want to help developers focus on
-          strategic initiatives, and not worry about heavy lifting.`}
-        pathname={pathname}
+        description="Changing the way the world thinks about app development. We want to help developers focus on
+          strategic initiatives, and not worry about heavy lifting."
       />
       <PageHeader
         headline="About us"

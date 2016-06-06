@@ -1,16 +1,13 @@
 import React from 'react';
 import { CTASection, Footer, PageHeader, PageHelmet, TermsAndLegal } from '../../components';
 
-export default ({ location }) => {
-  const { pathname } = location;
-
+export default () => {
   return (
     <div>
       <PageHelmet
         title="Terms and Legal | Syncano"
         mixpanelTitle="Terms and Legal"
         description="Learn more about our terms and policies."
-        pathname={pathname}
       />
       <PageHeader
         headline="Terms and Legal"

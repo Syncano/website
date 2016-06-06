@@ -1,54 +1,54 @@
-import React from 'react';
+import React, { Component } from 'react';
 import BodyClassName from 'react-body-classname';
 import classNames  from 'classnames';
 
-export default (ComposedComponent) => class extends React.Component {
-  static displayName = 'HamburgerMenuHOC';
+export default (ComposedComponent) => (
+  class HamburgerMenuHOC extends Component {
+    constructor(props) {
+      super(props);
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      hasHamburgerMenuVisible: false
+      this.state = {
+        hasHamburgerMenuVisible: false
+      };
     };
-  };
 
-  static childContextTypes = {
-    hamburgerMenu: React.PropTypes.object
-  };
-
-  getChildContext = () => {
-    return {
-      hamburgerMenu: {
-        toggle: this.toggleHamburgerMenu,
-        close: this.closeHamburgerMenu
-      }
+    static childContextTypes = {
+      hamburgerMenu: React.PropTypes.object
     };
-  };
 
-  getBodyClassName = (hasHamburgerMenuVisible) => {
-    return classNames({
-      'has-hamburger-menu-visible': (hasHamburgerMenuVisible)
-    });
-  };
+    getChildContext = () => {
+      return {
+        hamburgerMenu: {
+          toggle: this.toggleHamburgerMenu,
+          close: this.closeHamburgerMenu
+        }
+      };
+    };
 
-  toggleHamburgerMenu = () => {
-    const { hasHamburgerMenuVisible } = this.state;
+    getBodyClassName = (hasHamburgerMenuVisible) => {
+      return classNames({
+        'has-hamburger-menu-visible': (hasHamburgerMenuVisible)
+      });
+    };
 
-    this.setState({ hasHamburgerMenuVisible: !hasHamburgerMenuVisible });
-  };
+    toggleHamburgerMenu = () => {
+      const { hasHamburgerMenuVisible } = this.state;
 
-  closeHamburgerMenu = () => {
-    this.setState({ hasHamburgerMenuVisible: false });
-  };
-  
-  render() {
-    const { hasHamburgerMenuVisible } = this.state;
+      this.setState({ hasHamburgerMenuVisible: !hasHamburgerMenuVisible });
+    };
 
-    return (
-      <BodyClassName className={this.getBodyClassName(hasHamburgerMenuVisible)}>
-        <ComposedComponent {...this.props} {...this.state} />          
-      </BodyClassName>
-    );
-  };
-};
+    closeHamburgerMenu = () => {
+      this.setState({ hasHamburgerMenuVisible: false });
+    };
+    
+    render() {
+      const { hasHamburgerMenuVisible } = this.state;
+
+      return (
+        <BodyClassName className={this.getBodyClassName(hasHamburgerMenuVisible)}>
+          <ComposedComponent {...this.props} {...this.state} />          
+        </BodyClassName>
+      );
+    };
+  }
+);

@@ -13,17 +13,14 @@ import {
   TextWithImage
 } from '../../components';
 
-export default ({ location }) => {
-  const { pathname } = location;
-
+export default () => {
   return (
     <div>
       <PageHelmet
         title="Features - Syncano Sockets, Data Management, Automations"
         mixpanelTitle="Features"
-        description={`Rapidly assemble building blocks for your app without a backend or server. Learn more about what
-          you can do with Syncano.`}
-        pathname={pathname}
+        description="Rapidly assemble building blocks for your app without a backend or server. Learn more about what
+          you can do with Syncano."
       />
       <PageHeader
         headline="Features"
