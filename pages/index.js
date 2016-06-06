@@ -20,8 +20,8 @@ const Homepage = (props, { modals }) => {
       <PageHelmet
         title="Build powerful realtime apps in half the time | Syncano"
         mixpanelTitle="Home"
-        description="Create and manage your API from our dashboard. Use our serverless platform to set up your backend
-          and support millions of users without handling servers!"
+        description={`Create and manage your API from our dashboard. Use our serverless platform to set up your backend
+          and support millions of users without handling servers!`}
       />
       <Hero
         headline={<span>Build powerful apps<br />in half the time</span>}
