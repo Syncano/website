@@ -2,6 +2,9 @@ import Twit from 'twit';
 import fs from 'fs';
 import toml from 'toml-js';
 import APP_CONFIG from '../config/';
+import GLOBAL_CONFIG from '../config/global';
+
+const { tweetsIDs } = GLOBAL_CONFIG;
 
 const getTweets = (tweetsIDs) => {
   const T = new Twit({
@@ -17,9 +20,4 @@ const getTweets = (tweetsIDs) => {
   });
 };
 
-fs.readFile(`${__dirname}/../config.toml`, function (err, data) {
-  const parsed = toml.parse(data);
-  const { tweetsIDs } = parsed;
-
-  getTweets(tweetsIDs);
-});
+getTweets(tweetsIDs);
