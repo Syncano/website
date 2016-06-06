@@ -1,5 +1,4 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import { Link } from 'react-router';
 import {
   CodePreview,
@@ -7,6 +6,7 @@ import {
   FeaturesColumns,
   Footer,
   Hero,
+  PageHelmet,
   PlatformsSection,
   TextWithBackground,
   TextWithBottomImage,
@@ -14,33 +14,14 @@ import {
   TwitterSlider
 } from '../components';
 
-const Homepage = ({ location }, { modals }) => {
-  const title = 'Build powerful realtime apps in half the time | Syncano';
-  const { pathname } = location;
-
+const Homepage = (props, { modals }) => {
   return (
     <div>
-      <Helmet
-        title={title}
-        meta={[
-          {
-            name: 'description',
-            content: `Create and manage your API from our dashboard. Use our serverless platform to set up your backend
-             and support millions of users without handling servers!`
-          },
-          {
-            name: 'mixpanelTitle',
-            content: 'Home'
-          },
-          {
-            property: 'og:title',
-            content: `${title}`
-          },
-          {
-            property: 'og:url',
-            content: `http://www.syncano.io${pathname}`
-          }
-        ]}
+      <PageHelmet
+        title="Build powerful realtime apps in half the time | Syncano"
+        mixpanelTitle="Home"
+        description={`Create and manage your API from our dashboard. Use our serverless platform to set up your backend
+          and support millions of users without handling servers!`}
       />
       <Hero
         headline={<span>Build powerful apps<br />in half the time</span>}

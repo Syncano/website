@@ -1,5 +1,4 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import {
   CircleIconColumns,
   CTASection,
@@ -7,39 +6,21 @@ import {
   FeaturesColumns,
   Footer,
   PageHeader,
+  PageHelmet,
   PlatformsBar,
   ScreenDescriptions,
   TextWithBottomImage,
   TextWithImage
 } from '../../components';
 
-export default ({ location }) => {
-  const title = 'Features - Syncano Sockets, Data Management, Automations';
-  const { pathname } = location;
-
+export default () => {
   return (
     <div>
-      <Helmet
-        title={title}
-        meta={[
-          {
-            name: 'description',
-            content: `Rapidly assemble building blocks for your app without a backend or server. Learn more about what
-             you can do with Syncano.`
-          },
-          {
-            name: 'mixpanelTitle',
-            content: 'Features'
-          },
-          {
-            property: 'og:title',
-            content: `${title}`
-          },
-          {
-            property: 'og:url',
-            content: `http://www.syncano.io${pathname}`
-          }
-        ]}
+      <PageHelmet
+        title="Features - Syncano Sockets, Data Management, Automations"
+        mixpanelTitle="Features"
+        description={`Rapidly assemble building blocks for your app without a backend or server. Learn more about what
+          you can do with Syncano.`}
       />
       <PageHeader
         headline="Features"

@@ -21,6 +21,7 @@ import { Modals, ModalsHOC } from './Modals';
 import OfficeAddresses from './OfficeAddresses';
 import OfficesMap from './OfficesMap';
 import PageHeader from './PageHeader';
+import PageHelmet from './PageHelmet';
 import Platforms from './Platforms';
 import PlatformsBar from './PlatformsBar';
 import PlatformsSection from './PlatformsSection';
@@ -70,6 +71,7 @@ export default {
   OfficeAddresses,
   OfficesMap,
   PageHeader,
+  PageHelmet,
   Platforms,
   PlatformsBar,
   PlatformsSection,
