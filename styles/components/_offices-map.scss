@@ -1,3 +1,11 @@
-.offices-map .offices-map__map img {
-  width: 100%;
+.offices-map {
+  display: none;
+
+  .offices-map__map img {
+    width: 100%;
+  }
+
+  @include medium {
+    display: block;
+  }
 }
