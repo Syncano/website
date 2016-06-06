@@ -1,13 +1,13 @@
 .circle-icon-columns {
   padding-top: 80px;
   padding-bottom: 80px;
-  text-align: center;
 
   h2 {
     font-size: 20px;
     color: $color-text-headline;
     font-weight: 700;
     line-height: 1.35;
+    text-align: center;
   }
 
   .circle-icon-columns__columns {
@@ -31,6 +31,7 @@
         font-weight: 700;
         line-height: 1.35;
         margin-top: 20px;
+        text-align: center;
       }
 
       p {
@@ -87,6 +88,12 @@
       .circle-icon-columns__columns__column {
         padding: 20px;
       }
+    }
+  }
+
+  @include large-over {
+    .circle-icon-columns__columns .circle-icon-columns__columns__column p {
+      text-align: center;
     }
   }
 

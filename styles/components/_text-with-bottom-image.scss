@@ -1,7 +1,34 @@
 .text-with-bottom-image {
-  text-align: center;
   padding-top: 80px;
   padding-bottom: 80px;
+
+  h2 {
+    font-size: 20px;
+    color: $color-text-headline;
+    font-weight: 700;
+    line-height: 1.35;
+
+    br {
+      display: none;
+    }
+  }
+
+  p {
+    line-height: 1.5;
+    margin-top: 25px;
+  }
+
+  .button {
+    margin-top: 40px;
+  }
+
+  picture,
+  img {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+  }
 
   &.text-with-bottom-image--no-bottom-padding {
     padding-bottom: 0 !important;
@@ -29,34 +56,8 @@
     }
   }
 
-  h2 {
-    font-size: 20px;
-    color: $color-text-headline;
-    font-weight: 700;
-    line-height: 1.35;
-  }
-
-  p {
-    line-height: 1.5;
-    margin-top: 25px;
-  }
-
-  .button {
-    margin-top: 40px;
-  }
-
-  picture,
-  img {
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-  }
-
   @include medium {
-    &.text-with-bottom-image--minus-bottom-margin {
-      margin-bottom: -50px;
-    }
+    text-align: center;
 
     h2 {
       font-size: 30px;
@@ -70,15 +71,15 @@
     img {
       margin-top: 80px;
     }
+
+    &.text-with-bottom-image--minus-bottom-margin {
+      margin-bottom: -50px;
+    }
   }
 
   @include large {
     padding-top: 110px;
     padding-bottom: 110px;
-
-    &.text-with-bottom-image--minus-bottom-margin {
-      margin-bottom: -75px;
-    }
 
     h2 {
       font-size: 40px;
@@ -91,6 +92,10 @@
     picture,
     img {
       max-width: 100%;
+    }
+
+    &.text-with-bottom-image--minus-bottom-margin {
+      margin-bottom: -75px;
     }
   }
 

@@ -36,6 +36,7 @@
       p {
         margin-top: 20px;
         line-height: 1.625;
+        text-align: left;
       }
     }
   }
@@ -101,6 +102,12 @@
           margin-top: 30px;
         }
       }
+    }
+  }
+
+  @include large-over {
+    .features-columns__columns .features-columns__columns__column p {
+      text-align: center;
     }
   }
 

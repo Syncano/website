@@ -25,6 +25,8 @@ export default React.createClass({
           {head.title.toComponent()}
           {head.meta.toComponent()}
           {css}
+          <link rel="preload" href={require('./components/Modals/images/close.svg')} as="image" />
+          <link rel="preload" href={require('./components/Modals/images/close-small.svg')} as="image" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/plugins/line-numbers/prism-line-numbers.min.css" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/themes/prism-twilight.min.css" />
@@ -51,7 +53,12 @@ export default React.createClass({
           <meta property="og:site_name" content="Syncano" />
           <meta property="og:type" content="website" />
 
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:site" content="@syncano" />
+          <meta name="twitter:image" content={require('./images/twitter-image.png')} />
+
           {head.link.toComponent()}
+          <script src="https://cdn.optimizely.com/js/3962180131.js"></script>
           <script dangerouslySetInnerHTML={{__html: `
             (function(h,o,t,j,a,r){
             h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};

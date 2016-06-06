@@ -6,6 +6,16 @@ import 'normalize.css';
 import 'styles/styles';
 
 class Template extends Component {
+  static childContextTypes = {
+    location: React.PropTypes.object
+  };
+
+  getChildContext = () => {
+    return {
+      location: this.props.location
+    };
+  };
+
   componentDidMount() {
     this.trackPageView();
   }

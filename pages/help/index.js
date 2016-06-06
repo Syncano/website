@@ -1,42 +1,23 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import { Link } from 'react-router';
 import {
   CTASection,
   Footer,
+  PageHelmet,
   StatusPageHeader,
   SocialProfiles,
   TextPanels,
   TextWithImage
 } from '../../components';
 
-export default ({ location }) => {
-  const title = 'Help & Status | Syncano';
-  const { pathname } = location;
-
+export default () => {
   return (
     <div>
-      <Helmet
-        title={title}
-        meta={[
-          {
-            name: 'description',
-            content: `Learn the basics of how to get up and running on Syncano. Get answers to your questions. Join us
-             on Slack, read tutorials or simply fork our open source code.`
-          },
-          {
-            name: 'mixpanelTitle',
-            content: 'Help & Status'
-          },
-          {
-            property: 'og:title',
-            content: `${title}`
-          },
-          {
-            property: 'og:url',
-            content: `http://www.syncano.io${pathname}`
-          }
-        ]}
+      <PageHelmet
+        title="Help & Status | Syncano"
+        mixpanelTitle="Help & Status"
+        description={`Learn the basics of how to get up and running on Syncano. Get answers to your questions. Join us
+          on Slack, read tutorials or simply fork our open source code.`}
       />
       <StatusPageHeader />
       <TextWithImage

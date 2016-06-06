@@ -1,7 +1,6 @@
 .about-us {
   padding-top: 80px;
   padding-bottom: 80px;
-  text-align: center;
 
   .about-us__text {
     h2 {
@@ -37,7 +36,6 @@
   @include large {
     padding-top: 110px;
     padding-bottom: 110px;
-    text-align: left;
 
     .inner {
       display: flex;
