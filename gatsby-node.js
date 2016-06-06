@@ -42,7 +42,7 @@ exports.modifyWebpackConfig = function(config, env) {
   config.removeLoader('svg');
   config.loader('svg', function(cfg) {
     cfg.test = /\.svg/;
-    cfg.loader = 'file-loader';
+    cfg.loader = imageLoader;
     return cfg;
   });
 
