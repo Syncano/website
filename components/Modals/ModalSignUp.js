@@ -23,7 +23,7 @@ class ModalSignUp extends Component {
 
   render() {
     const { auth, modals } = this.context;
-    const { status, message } = auth;
+    const { status, message, handlePasswordAuth, handleSocialAuth } = auth;
     const isFormInvalid = status !== 'done' && message;
 
     const inputClassName = classNames({
@@ -45,7 +45,7 @@ class ModalSignUp extends Component {
             <p>Build serverless apps on Syncano for free.<br/>Set up your backend in minutes!</p>
 
             <div className="modal-box__content_form form">
-              <Formsy.Form onValidSubmit={(model) => auth.handlePasswordAuth('register', model)}>
+              <Formsy.Form onValidSubmit={(model) => handlePasswordAuth('register', model)}>
                 <ModalTextField
                   className={inputClassName}
                   name="email"
@@ -65,7 +65,7 @@ class ModalSignUp extends Component {
                 {isFormInvalid && renderErrorMessage(auth.message)}
                 <button
                   className="button button--large button--featured"
-                  disabled={status === 'processing'}
+                  disabled={status === 'processing' || status === 'done'}
                 >
                   Start Building for Free
                 </button>
@@ -81,7 +81,7 @@ class ModalSignUp extends Component {
                   <li>
                   <span
                     className="button"
-                    onClick={() => auth.handleSocialAuth('google')}
+                    onClick={() => handleSocialAuth('google')}
                   >
                     <img
                       src={require('./images/google.svg')}
@@ -93,7 +93,7 @@ class ModalSignUp extends Component {
                   <li>
                   <span
                     className="button"
-                    onClick={() => auth.handleSocialAuth('github')}
+                    onClick={() => handleSocialAuth('github')}
                   >
                     <img
                       className="github"

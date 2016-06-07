@@ -23,7 +23,7 @@ class ModalLogIn extends Component {
 
   render() {
     const { auth, modals } = this.context;
-    const { status, message } = auth;
+    const { status, message, handlePasswordAuth, handleSocialAuth } = auth;
     const isFormInvalid = status !== 'done' && message;
 
     const inputClassName = classNames({
@@ -45,7 +45,7 @@ class ModalLogIn extends Component {
             <p>Log in to the Syncano Dashboard below:</p>
 
             <div className="modal-box__content_form form">
-              <Formsy.Form onValidSubmit={(model) => auth.handlePasswordAuth('login', model)}>
+              <Formsy.Form onValidSubmit={(model) => handlePasswordAuth('login', model)}>
                 <ModalTextField
                   className={inputClassName}
                   name="email"
@@ -65,7 +65,7 @@ class ModalLogIn extends Component {
                 {isFormInvalid && renderErrorMessage(auth.message)}
                 <button
                   className="button button--large button--featured"
-                  disabled={status === 'processing'}
+                  disabled={status === 'processing' || status === 'done'}
                 >
                   Take me to the Dashboard
                 </button>
@@ -80,7 +80,7 @@ class ModalLogIn extends Component {
                   <li>
                   <span
                     className="button"
-                    onClick={() => auth.handleSocialAuth('google')}
+                    onClick={() => handleSocialAuth('google')}
                   >
                     <img
                       src={require('./images/google.svg')}
@@ -92,7 +92,7 @@ class ModalLogIn extends Component {
                   <li>
                   <span
                     className="button"
-                    onClick={() => auth.handleSocialAuth('github')}
+                    onClick={() => handleSocialAuth('github')}
                   >
                     <img
                       src={require('./images/github.svg')}
@@ -104,7 +104,7 @@ class ModalLogIn extends Component {
                   <li>
                   <span
                     className="button"
-                    onClick={() => auth.handleSocialAuth('facebook')}
+                    onClick={() => handleSocialAuth('facebook')}
                   >
                     <img
                       className="facebook"

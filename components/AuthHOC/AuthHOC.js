@@ -30,17 +30,14 @@ export default (ComposedComponent) => (
       return { auth };
     };
 
+    setStatus = (status, message) => {
+      this.setState({ status, message });
+    };
+
     resetStatus = () => {
       this.setState({
         status: null,
         message: null
-      });
-    };
-
-    setStatus = (status, message) => {
-      this.setState({
-        status: status,
-        message: message
       });
     };
 
