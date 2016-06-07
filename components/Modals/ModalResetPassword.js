@@ -61,7 +61,7 @@ class ModalResetPassword extends Component {
           {status === 400 && this.renderErrorMessage()}
           <button
             className="button button--large button--featured"
-            disabled={status == 'processing'}
+            disabled={status === 'processing'}
           >
             Reset password
           </button>

@@ -37,32 +37,33 @@ export default (ComposedComponent) => (
       });
     };
 
+    setStatus = (status, message) => {
+      this.setState({
+        status: status,
+        message: message
+      });
+    };
+
     handlePasswordAuth = (type, { email, password }) => {
       const { Account } = Syncano({ baseUrl: APP_CONFIG.syncanoAPIBaseUrl });
 
-      this.setState({ status: 'processing' });
+      this.resetStatus();
+      this.setStatus('processing');
 
       Account[type]({ email, password })
         .then((data) => this.redirectToDashboard(data.account_key))
-        .catch((error) => {
-          this.setState({
-            status: error.status,
-            message: error.message
-          })
-        });
+        .catch((error) => this.setStatus(error.status, error.message));
     };
 
     handlePasswordReset = ({ email }) => {
       const { Account } = Syncano({ baseUrl: APP_CONFIG.syncanoAPIBaseUrl });
 
-      this.setState({ status: 'processing' });
+      this.resetStatus();
+      this.setStatus('processing');
 
       Account.resetPassword(email)
         .then((data) => this.setState({ status: 'done' }))
-        .catch((error) => this.setState({
-          status: error.status,
-          message: error.message
-        }));
+        .catch((error) => this.setStatus(error.status, error.message));
     };
 
     handleSocialAuth = (network) => {
@@ -77,10 +78,7 @@ export default (ComposedComponent) => (
 
         Account.socialLogin(data.network, access_token)
           .then((data) => this.redirectToDashboard(data.account_key))
-          .catch((error) => this.setState({
-            status: error.status,
-            message: error.message
-          }));
+          .catch((error) => this.setStatus(error.status, error.message));
       }, (error) => this.setState({
         message: error.error.message
       }));
