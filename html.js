@@ -12,7 +12,7 @@ export default React.createClass({
 
     let css;
     if (process.env.NODE_ENV !== 'development') {
-      css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
+      css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />;
     }
 
     return (
@@ -44,7 +44,7 @@ export default React.createClass({
           <link rel="icon" type="image/png" href={require('./images/favicons/android-chrome-192x192.png')} sizes="192x192" />
           <link rel="icon" type="image/png" href={require('./images/favicons/favicon-96x96.png')} sizes="96x96" />
           <link rel="icon" type="image/png" href={require('./images/favicons/favicon-16x16.png')} sizes="16x16" />
-          <link rel="manifest" href={require('!file-loader!./images/favicons/manifest.json')} />
+          <link rel="manifest" href={require('!file-loader?name=/[hash].[ext]!./images/favicons/manifest.json')} />
           <link rel="mask-icon" href={require('./images/favicons/safari-pinned-tab.svg')} color="#0070d3" />
           <meta name="msapplication-TileColor" content="#0070d3" />
           <meta name="msapplication-TileImage" content={require('./images/favicons/mstile-144x144.png')} />
