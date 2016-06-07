@@ -13,13 +13,19 @@ class ModalResetPassword extends Component {
     if (isOpen !== wasOpen && isOpen) {
       this.trackPageView();
     }
-  }
+  };
 
   trackPageView() {
     analytics.page('Website', {
       Page: 'Reset Password'
     });
-  }
+  };
+
+  onClose = () => {
+    const { auth } = this.context;
+
+    auth.resetStatus();
+  };
 
   getInputClassName = () => {
     const { status } = this.context.auth;
@@ -28,6 +34,17 @@ class ModalResetPassword extends Component {
       'form__input': true,
       'is-invalid': (status === 400)
     });
+  };
+
+  getInputDisableStatus = () => {
+    const { auth } = this.context;
+    const { status } = auth;
+
+    if (status == 'waiting') {
+      return true;
+    }
+
+    return false;
   };
 
   renderErrorMessage = () => (
@@ -55,6 +72,7 @@ class ModalResetPassword extends Component {
             validations="isEmail"
             type="email"
             placeholder="E-mail address"
+            disabled={this.getInputDisableStatus()}
             autofocus
             required
           />
@@ -72,7 +90,10 @@ class ModalResetPassword extends Component {
     const { status } = auth;
 
     return (
-      <ModalWrapper modalName="resetPassword">
+      <ModalWrapper
+        modalName="resetPassword"
+        onClose={this.onClose}
+      >
         <div className="modal-box__content">
           <div className="inner">
             <h2>Forgot your password?</h2>
@@ -138,7 +159,7 @@ class ModalResetPassword extends Component {
       </ModalWrapper>
     );
   };
-}
+};
 
 ModalResetPassword.contextTypes = {
   auth: React.PropTypes.object,

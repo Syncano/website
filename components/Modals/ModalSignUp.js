@@ -13,13 +13,30 @@ class ModalSignUp extends Component {
     if (isOpen !== wasOpen && isOpen) {
       this.trackPageView();
     }
-  }
+  };
 
   trackPageView() {
     analytics.page('Website', {
       Page: 'Sign Up'
     });
-  }
+  };
+
+  onClose = () => {
+    const { auth } = this.context;
+
+    auth.resetStatus();
+  };
+
+  getInputDisableStatus = () => {
+    const { auth } = this.context;
+    const { status } = auth;
+
+    if (status == 'waiting') {
+      return true;
+    }
+
+    return false;
+  };
 
   render() {
     const { auth, modals } = this.context;
@@ -37,7 +54,10 @@ class ModalSignUp extends Component {
     );
 
     return (
-      <ModalWrapper modalName="signUp">
+      <ModalWrapper
+        modalName="signUp"
+        onClose={this.onClose}
+      >
         <div className="modal-box__content">
           <div className="inner">
             <h2>Sign up and start building</h2>
@@ -51,6 +71,7 @@ class ModalSignUp extends Component {
                   validations="isEmail"
                   type="email"
                   placeholder="E-mail address"
+                  disabled={this.getInputDisableStatus()}
                   autofocus
                   required
                 />
@@ -59,6 +80,7 @@ class ModalSignUp extends Component {
                   type="password"
                   name="password"
                   placeholder="Password"
+                  disabled={this.getInputDisableStatus()}
                   required
                 />
                 {isFormInvalid && renderErrorMessage(auth.message)}
@@ -113,8 +135,8 @@ class ModalSignUp extends Component {
         </footer>
       </ModalWrapper>
     );
-  }
-}
+  };
+};
 
 ModalSignUp.contextTypes = {
   auth: React.PropTypes.object,

@@ -11,6 +11,12 @@
     -webkit-appearance: none;
     -moz-appearance: none;
 
+    &[disabled] {
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+
     &.is-invalid {
       border-color: $color-main-red;
       color: $color-main-red;

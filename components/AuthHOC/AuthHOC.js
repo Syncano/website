@@ -21,6 +21,7 @@ export default (ComposedComponent) => (
       const auth = {
         status: this.state.status,
         message: this.state.message,
+        resetStatus: this.resetStatus,
         handlePasswordAuth: this.handlePasswordAuth,
         handlePasswordReset: this.handlePasswordReset,
         handleSocialAuth: this.handleSocialAuth
@@ -29,8 +30,17 @@ export default (ComposedComponent) => (
       return { auth };
     };
 
+    resetStatus = () => {
+      this.setState({
+        status: null,
+        message: null
+      });
+    };
+
     handlePasswordAuth = (type, { email, password }) => {
       const { Account } = Syncano({ baseUrl: APP_CONFIG.syncanoAPIBaseUrl });
+
+      this.setState({ status: 'waiting' });
 
       Account[type]({ email, password })
         .then((data) => this.redirectToDashboard(data.account_key))
@@ -44,6 +54,8 @@ export default (ComposedComponent) => (
 
     handlePasswordReset = ({ email }) => {
       const { Account } = Syncano({ baseUrl: APP_CONFIG.syncanoAPIBaseUrl });
+
+      this.setState({ status: 'waiting' });
 
       Account.resetPassword(email)
         .then((data) => this.setState({ status: 'done' }))

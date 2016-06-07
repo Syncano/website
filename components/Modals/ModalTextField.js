@@ -3,6 +3,14 @@ import { HOC } from 'formsy-react';
 import classNames  from 'classnames';
 
 class ModalTextField extends Component {
+  componentDidMount() {
+    const { autofocus } = this.props;
+
+    if (autofocus) {
+      setTimeout(() => this.refs.input.focus(), 0);
+    }
+  };
+
   getClassName = () => {
     const { showError, className } = this.props;
 
@@ -11,14 +19,6 @@ class ModalTextField extends Component {
       'mousetrap': true,
       'is-invalid': (showError())
     });
-  };
-
-  componentDidMount() {
-    const { autofocus } = this.props;
-
-    if (autofocus) {
-      setTimeout(() => this.refs.input.focus(), 0);
-    }
   };
 
   render = () => {

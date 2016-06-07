@@ -43,6 +43,17 @@ class ModalWrapper extends Component {
     return modals[modalName].isOpen;
   };
 
+  handleCloseClick = () => {
+    const { onClose } = this.props;
+    const { modals } = this.context;
+
+    if (onClose) {
+      onClose();
+    }
+
+    modals.closeAll();
+  };
+
   render() {
     const { modals } = this.context;
     const { children } = this.props;
@@ -58,7 +69,7 @@ class ModalWrapper extends Component {
             <div className="modal-box">
               <span
                 className="modal-box__close"
-                onClick={modals.closeAll}
+                onClick={this.handleCloseClick}
               >
                 <img
                   src={require('./images/close.svg')}
