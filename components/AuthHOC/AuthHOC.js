@@ -40,7 +40,7 @@ export default (ComposedComponent) => (
     handlePasswordAuth = (type, { email, password }) => {
       const { Account } = Syncano({ baseUrl: APP_CONFIG.syncanoAPIBaseUrl });
 
-      this.setState({ status: 'waiting' });
+      this.setState({ status: 'processing' });
 
       Account[type]({ email, password })
         .then((data) => this.redirectToDashboard(data.account_key))
@@ -55,7 +55,7 @@ export default (ComposedComponent) => (
     handlePasswordReset = ({ email }) => {
       const { Account } = Syncano({ baseUrl: APP_CONFIG.syncanoAPIBaseUrl });
 
-      this.setState({ status: 'waiting' });
+      this.setState({ status: 'processing' });
 
       Account.resetPassword(email)
         .then((data) => this.setState({ status: 'done' }))

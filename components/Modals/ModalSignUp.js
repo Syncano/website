@@ -21,20 +21,10 @@ class ModalSignUp extends Component {
     });
   };
 
-  getInputDisableStatus = () => {
-    const { auth } = this.context;
-    const { status } = auth;
-
-    if (status == 'waiting') {
-      return true;
-    }
-
-    return false;
-  };
-
   render() {
     const { auth, modals } = this.context;
-    const isFormInvalid = auth.status !== 'done' && auth.message;
+    const { status, message } = auth;
+    const isFormInvalid = status !== 'done' && message;
 
     const inputClassName = classNames({
       'form__input': true,
@@ -62,7 +52,6 @@ class ModalSignUp extends Component {
                   validations="isEmail"
                   type="email"
                   placeholder="E-mail address"
-                  disabled={this.getInputDisableStatus()}
                   autofocus
                   required
                 />
@@ -71,11 +60,13 @@ class ModalSignUp extends Component {
                   type="password"
                   name="password"
                   placeholder="Password"
-                  disabled={this.getInputDisableStatus()}
                   required
                 />
                 {isFormInvalid && renderErrorMessage(auth.message)}
-                <button className="button button--large button--featured">
+                <button
+                  className="button button--large button--featured"
+                  disabled={status == 'processing'}
+                >
                   Start Building for Free
                 </button>
               </Formsy.Form>

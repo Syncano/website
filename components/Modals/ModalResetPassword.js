@@ -30,17 +30,6 @@ class ModalResetPassword extends Component {
     });
   };
 
-  getInputDisableStatus = () => {
-    const { auth } = this.context;
-    const { status } = auth;
-
-    if (status == 'waiting') {
-      return true;
-    }
-
-    return false;
-  };
-
   renderErrorMessage = () => (
     <div className="form__message form__error-message">
       <p>Oops! That email was not found.</p>
@@ -66,12 +55,14 @@ class ModalResetPassword extends Component {
             validations="isEmail"
             type="email"
             placeholder="E-mail address"
-            disabled={this.getInputDisableStatus()}
             autofocus
             required
           />
           {status === 400 && this.renderErrorMessage()}
-          <button className="button button--large button--featured">
+          <button
+            className="button button--large button--featured"
+            disabled={status == 'processing'}
+          >
             Reset password
           </button>
         </Formsy.Form>
