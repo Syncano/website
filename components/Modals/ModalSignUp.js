@@ -21,12 +21,6 @@ class ModalSignUp extends Component {
     });
   };
 
-  onClose = () => {
-    const { auth } = this.context;
-
-    auth.resetStatus();
-  };
-
   getInputDisableStatus = () => {
     const { auth } = this.context;
     const { status } = auth;
@@ -54,10 +48,7 @@ class ModalSignUp extends Component {
     );
 
     return (
-      <ModalWrapper
-        modalName="signUp"
-        onClose={this.onClose}
-      >
+      <ModalWrapper modalName="signUp">
         <div className="modal-box__content">
           <div className="inner">
             <h2>Sign up and start building</h2>

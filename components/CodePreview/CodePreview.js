@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import classNames  from 'classnames';
+import classNames from 'classnames';
 
 export default class CodePreview extends React.Component {
   constructor(props) {

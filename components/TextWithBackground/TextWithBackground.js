@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames  from 'classnames';
+import classNames from 'classnames';
 
 export default ({ theme, headline, textline, children }) => {
   const textWithBackgroundClassName = classNames({

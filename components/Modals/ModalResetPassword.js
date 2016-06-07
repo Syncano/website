@@ -21,12 +21,6 @@ class ModalResetPassword extends Component {
     });
   };
 
-  onClose = () => {
-    const { auth } = this.context;
-
-    auth.resetStatus();
-  };
-
   getInputClassName = () => {
     const { status } = this.context.auth;
 
@@ -90,10 +84,7 @@ class ModalResetPassword extends Component {
     const { status } = auth;
 
     return (
-      <ModalWrapper
-        modalName="resetPassword"
-        onClose={this.onClose}
-      >
+      <ModalWrapper modalName="resetPassword">
         <div className="modal-box__content">
           <div className="inner">
             <h2>Forgot your password?</h2>
