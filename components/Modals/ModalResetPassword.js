@@ -13,13 +13,13 @@ class ModalResetPassword extends Component {
     if (isOpen !== wasOpen && isOpen) {
       this.trackPageView();
     }
-  }
+  };
 
   trackPageView() {
     analytics.page('Website', {
       Page: 'Reset Password'
     });
-  }
+  };
 
   getInputClassName = () => {
     const { status } = this.context.auth;
@@ -44,11 +44,11 @@ class ModalResetPassword extends Component {
 
   renderForm = () => {
     const { auth } = this.context;
-    const { status } = auth;
+    const { status, handlePasswordReset, handleSocialAuth } = auth;
 
     return (
       <div className="modal-box__content_form form">
-        <Formsy.Form onValidSubmit={(model) => auth.handlePasswordReset(model)}>
+        <Formsy.Form onValidSubmit={(model) => handlePasswordReset(model)}>
           <ModalTextField
             className={this.getInputClassName()}
             name="email"
@@ -59,7 +59,10 @@ class ModalResetPassword extends Component {
             required
           />
           {status === 400 && this.renderErrorMessage()}
-          <button className="button button--large button--featured">
+          <button
+            className="button button--large button--featured"
+            disabled={status === 'processing' || status === 'done'}
+          >
             Reset password
           </button>
         </Formsy.Form>
@@ -89,7 +92,7 @@ class ModalResetPassword extends Component {
                   <li>
                     <span
                       className="button"
-                      onClick={() => auth.handleSocialAuth('google')}
+                      onClick={() => handleSocialAuth('google')}
                     >
                       <img
                         src={require('./images/google.svg')}
@@ -101,7 +104,7 @@ class ModalResetPassword extends Component {
                   <li>
                     <span
                       className="button"
-                      onClick={() => auth.handleSocialAuth('github')}
+                      onClick={() => handleSocialAuth('github')}
                     >
                       <img
                         src={require('./images/github.svg')}
@@ -113,7 +116,7 @@ class ModalResetPassword extends Component {
                   <li>
                     <span
                       className="button"
-                      onClick={() => auth.handleSocialAuth('facebook')}
+                      onClick={() => handleSocialAuth('facebook')}
                     >
                       <img
                         className="facebook"
@@ -138,7 +141,7 @@ class ModalResetPassword extends Component {
       </ModalWrapper>
     );
   };
-}
+};
 
 ModalResetPassword.contextTypes = {
   auth: React.PropTypes.object,

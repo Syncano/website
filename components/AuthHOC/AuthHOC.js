@@ -21,6 +21,7 @@ export default (ComposedComponent) => (
       const auth = {
         status: this.state.status,
         message: this.state.message,
+        resetStatus: this.resetStatus,
         handlePasswordAuth: this.handlePasswordAuth,
         handlePasswordReset: this.handlePasswordReset,
         handleSocialAuth: this.handleSocialAuth
@@ -29,28 +30,37 @@ export default (ComposedComponent) => (
       return { auth };
     };
 
+    setStatus = (status, message) => {
+      this.setState({ status, message });
+    };
+
+    resetStatus = () => {
+      this.setState({
+        status: null,
+        message: null
+      });
+    };
+
     handlePasswordAuth = (type, { email, password }) => {
       const { Account } = Syncano({ baseUrl: APP_CONFIG.syncanoAPIBaseUrl });
 
+      this.resetStatus();
+      this.setStatus('processing');
+
       Account[type]({ email, password })
         .then((data) => this.redirectToDashboard(data.account_key))
-        .catch((error) => {
-          this.setState({
-            status: error.status,
-            message: error.message
-          })
-        });
+        .catch((error) => this.setStatus(error.status, error.message));
     };
 
     handlePasswordReset = ({ email }) => {
       const { Account } = Syncano({ baseUrl: APP_CONFIG.syncanoAPIBaseUrl });
 
+      this.resetStatus();
+      this.setStatus('processing');
+
       Account.resetPassword(email)
         .then((data) => this.setState({ status: 'done' }))
-        .catch((error) => this.setState({
-          status: error.status,
-          message: error.message
-        }));
+        .catch((error) => this.setStatus(error.status, error.message));
     };
 
     handleSocialAuth = (network) => {
@@ -65,10 +75,7 @@ export default (ComposedComponent) => (
 
         Account.socialLogin(data.network, access_token)
           .then((data) => this.redirectToDashboard(data.account_key))
-          .catch((error) => this.setState({
-            status: error.status,
-            message: error.message
-          }));
+          .catch((error) => this.setStatus(error.status, error.message));
       }, (error) => this.setState({
         message: error.error.message
       }));

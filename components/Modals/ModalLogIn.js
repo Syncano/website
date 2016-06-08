@@ -13,17 +13,18 @@ class ModalLogIn extends Component {
     if (isOpen !== wasOpen && isOpen) {
       this.trackPageView();
     }
-  }
+  };
 
   trackPageView() {
     analytics.page('Website', {
       Page: 'Login'
     });
-  }
+  };
 
   render() {
     const { auth, modals } = this.context;
-    const isFormInvalid = auth.status !== 'done' && auth.message;
+    const { status, message, handlePasswordAuth, handleSocialAuth } = auth;
+    const isFormInvalid = status !== 'done' && message;
 
     const inputClassName = classNames({
       'form__input': true,
@@ -44,7 +45,7 @@ class ModalLogIn extends Component {
             <p>Log in to the Syncano Dashboard below:</p>
 
             <div className="modal-box__content_form form">
-              <Formsy.Form onValidSubmit={(model) => auth.handlePasswordAuth('login', model)}>
+              <Formsy.Form onValidSubmit={(model) => handlePasswordAuth('login', model)}>
                 <ModalTextField
                   className={inputClassName}
                   name="email"
@@ -62,7 +63,10 @@ class ModalLogIn extends Component {
                   required
                 />
                 {isFormInvalid && renderErrorMessage(auth.message)}
-                <button className="button button--large button--featured">
+                <button
+                  className="button button--large button--featured"
+                  disabled={status === 'processing' || status === 'done'}
+                >
                   Take me to the Dashboard
                 </button>
               </Formsy.Form>
@@ -76,7 +80,7 @@ class ModalLogIn extends Component {
                   <li>
                   <span
                     className="button"
-                    onClick={() => auth.handleSocialAuth('google')}
+                    onClick={() => handleSocialAuth('google')}
                   >
                     <img
                       src={require('./images/google.svg')}
@@ -88,7 +92,7 @@ class ModalLogIn extends Component {
                   <li>
                   <span
                     className="button"
-                    onClick={() => auth.handleSocialAuth('github')}
+                    onClick={() => handleSocialAuth('github')}
                   >
                     <img
                       src={require('./images/github.svg')}
@@ -100,7 +104,7 @@ class ModalLogIn extends Component {
                   <li>
                   <span
                     className="button"
-                    onClick={() => auth.handleSocialAuth('facebook')}
+                    onClick={() => handleSocialAuth('facebook')}
                   >
                     <img
                       className="facebook"
@@ -129,8 +133,8 @@ class ModalLogIn extends Component {
         </footer>
       </ModalWrapper>
     );
-  }
-}
+  };
+};
 
 ModalLogIn.contextTypes = {
   auth: React.PropTypes.object,

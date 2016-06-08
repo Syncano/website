@@ -1,12 +1,26 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 import BodyClassName from 'react-body-classname';
-import classNames  from 'classnames';
+import classNames from 'classnames';
 import { mouseTrap } from 'react-mousetrap';
 import _ from 'lodash';
 const isBrowser = typeof window !== 'undefined';
 
 class ModalWrapper extends Component {
+  componentDidUpdate(props, state, context) {
+    const { modalName } = this.props;
+    const isOpen = this.context.modals[modalName].isOpen;
+    const wasOpen = context.modals[modalName].isOpen;
+
+    if (!isOpen && wasOpen) {
+      const { auth } = this.context;
+
+      if (auth) {
+        auth.resetStatus();
+      }
+    }
+  };
+
   componentWillReceiveProps(nextProps, nextContext) {
     this.handleESCShortcutBind(nextContext);
   };
@@ -80,6 +94,7 @@ class ModalWrapper extends Component {
 };
 
 ModalWrapper.contextTypes = {
+  auth: React.PropTypes.object,
   modals: React.PropTypes.object
 };
 

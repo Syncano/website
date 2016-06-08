@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames  from 'classnames';
+import classNames from 'classnames';
 
 export default ({ variant, imageSrc, image2xSrc, imageSmallSrc, imageSmall2xSrc, headline, text }) => {
   const className = classNames({

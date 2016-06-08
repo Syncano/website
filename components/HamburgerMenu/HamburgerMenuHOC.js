@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import BodyClassName from 'react-body-classname';
-import classNames  from 'classnames';
+import classNames from 'classnames';
 
 export default (ComposedComponent) => (
   class HamburgerMenuHOC extends Component {

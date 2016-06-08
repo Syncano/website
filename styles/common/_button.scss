@@ -23,8 +23,8 @@
 
   &.button--featured {
     background: $color-main-yellow;
-    color: $color-text-headline;
     border-color: $color-main-yellow;
+    color: $color-text-headline;
 
     &:hover {
       background: $color-main-yellow--hover;
@@ -34,6 +34,13 @@
     &:active {
       background: $color-main-yellow--active;
       border-color: $color-main-yellow--active;
+    }
+
+    &[disabled] {
+      background: $color-main-yellow;
+      border-color: $color-main-yellow;
+      opacity: .5;
+      cursor: default;
     }
   }
 
