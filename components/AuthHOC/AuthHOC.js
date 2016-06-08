@@ -48,7 +48,7 @@ export default (ComposedComponent) => (
       this.setStatus('processing');
 
       Account[type]({ email, password })
-        .then((data) => this.redirectToDashboard(data.account_key))
+        .then((data) => this.redirectToDashboard(data.account_key, type === 'register' && true))
         .catch((error) => this.setStatus(error.status, error.message));
     };
 
@@ -63,7 +63,7 @@ export default (ComposedComponent) => (
         .catch((error) => this.setStatus(error.status, error.message));
     };
 
-    handleSocialAuth = (network) => {
+    handleSocialAuth = (network, signUpMode = false) => {
       const { Account } = Syncano({ baseUrl: APP_CONFIG.syncanoAPIBaseUrl });
 
       Hello(network).login().then((data) => {
@@ -74,15 +74,15 @@ export default (ComposedComponent) => (
         }
 
         Account.socialLogin(data.network, access_token)
-          .then((data) => this.redirectToDashboard(data.account_key))
+          .then((data) => this.redirectToDashboard(data.account_key, signUpMode))
           .catch((error) => this.setStatus(error.status, error.message));
       }, (error) => this.setState({
         message: error.error.message
       }));
     };
 
-    redirectToDashboard = (token) => {
-      const redirectUrl = `${APP_CONFIG.dashboardUrl}#/login?token=${token}`;
+    redirectToDashboard = (token, signUpMode = false) => {
+      const redirectUrl = `${APP_CONFIG.dashboardUrl}#/login?token=${token}&signUpMode=${signUpMode}`;
 
       window.location.href = redirectUrl;
     };
