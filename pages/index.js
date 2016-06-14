@@ -18,14 +18,15 @@ const Homepage = (props, { modals }) => {
   return (
     <div>
       <PageHelmet
-        title="Build powerful realtime apps in half the time | Syncano"
+        title="Build powerful apps in half the time | Syncano"
         mixpanelTitle="Home"
-        description={`Create and manage your API from our dashboard. Use our serverless platform to set up your backend
-          and support millions of users without handling servers!`}
+        description={`A platform for building serverless apps. Increase productivity, focus on new features, and scale
+          to millions of users without managing servers. Get started for free!`}
       />
       <Hero
         headline={<span>Build powerful apps<br />in half the time</span>}
-        textline="Use our serverless platform to set up your backend in minutes."
+        textline={`A platform for building serverless apps. Increase productivity, focus on new features, and scale
+          without managing servers.`}
         image={
           <img
             src={require('./home/build-powerful-apps-in-half-the-time.svg')}
