@@ -24,7 +24,7 @@
       font-size: 18px;
       line-height: 1.5;
       margin-top: 30px;
-      max-width: 215px;
+      max-width: 300px;
       color: $color-text-base;
     }
 
@@ -63,7 +63,7 @@
       }
 
       .hero__text__textline {
-        max-width: 350px;
+        max-width: 365px;
       }
 
       .hero__text__button-container .button {
@@ -87,7 +87,7 @@
 
       .hero__text__textline {
         font-size: 20px;
-        max-width: none;
+        max-width: 425px;
         margin-top: 30px;
       }
 
@@ -126,6 +126,7 @@
 
       .hero__text__textline {
         font-size: 24px;
+        max-width: none;
       }
     }
 
