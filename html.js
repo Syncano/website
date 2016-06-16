@@ -45,10 +45,11 @@ export default React.createClass({
           <link rel="icon" type="image/png" href={require('./images/favicons/favicon-96x96.png')} sizes="96x96" />
           <link rel="icon" type="image/png" href={require('./images/favicons/favicon-16x16.png')} sizes="16x16" />
           <link rel="manifest" href={require('!file-loader?name=/[hash].[ext]!./images/favicons/manifest.json')} />
-          <link rel="mask-icon" href={require('./images/favicons/safari-pinned-tab.svg')} color="#0070d3" />
-          <meta name="msapplication-TileColor" content="#0070d3" />
+          <link rel="mask-icon" href={require('./images/favicons/safari-pinned-tab.svg')} color="#0070D3" />
+          <meta name="msapplication-TileColor" content="#0070D3" />
           <meta name="msapplication-TileImage" content={require('./images/favicons/mstile-144x144.png')} />
-          <meta name="theme-color" content="#ffffff" />
+          <meta name="theme-color" content="#0070D3" />
+          <meta name="msapplication-navbutton-color" content="#0070D3" />
 
           <meta property="og:image" content={`${redirect_uri}${require('./images/og-image.png')}`} />
           <meta property="og:site_name" content="Syncano" />
