@@ -5,7 +5,7 @@ import moment from 'moment';
 import StatusImage from './StatusImage';
 import SupportForm from './SupportForm';
 
-export default class StatusPageHeader extends Component {
+class StatusPageHeader extends Component {
   constructor(props) {
     super(props);
 
@@ -21,6 +21,10 @@ export default class StatusPageHeader extends Component {
         }
       }
     };
+  };
+
+  static childContextTypes = {
+    modals: React.PropTypes.object
   };
 
   componentWillMount = () => {
@@ -63,6 +67,7 @@ export default class StatusPageHeader extends Component {
   };
 
   render = () => {
+    const { modals } = this.context;
     const { hasSupportFormVisible, status } = this.state;
 
     return (
@@ -74,8 +79,11 @@ export default class StatusPageHeader extends Component {
             alt={status.status.description}
           />
           <h2>{this.getHeadlineText(status)}</h2>
-          <p>Updated about {moment(status.page.updated_at).fromNow()}. <br /><a href={status.page.url} target="_blank">
-          View our status page</a> for more info.</p>
+          <p>
+            Updated about {moment(status.page.updated_at).fromNow()}. <br /><a href={status.page.url} target="_blank">
+            View our status page</a> for more info or <a href="https://www.syncano.io/slack-invite/" target="_blank">
+            join us on Slack</a>.
+          </p>
           <a
             className="button button--large button--filled"
             onClick={this.showSupportForm}
@@ -83,7 +91,7 @@ export default class StatusPageHeader extends Component {
             Create Support Ticket
           </a>
           <p className="page-header__more">
-            or <a href="http://www.syncano.io/slack-invite/" target="_blank">chat with us on Slack</a>
+            or <span onClick={modals.suggestFeature.open}>suggest a feature</span>
           </p>
         </div>
         {hasSupportFormVisible && <SupportForm />}
@@ -91,3 +99,9 @@ export default class StatusPageHeader extends Component {
     );
   };
 };
+
+StatusPageHeader.contextTypes = {
+  modals: React.PropTypes.object
+};
+
+export default StatusPageHeader;
