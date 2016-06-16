@@ -20,10 +20,7 @@ export default () => {
         description={`Changing the way the world thinks about app development. We want to help developers focus on
           strategic initiatives, and not worry about heavy lifting.`}
       />
-      <PageHeader
-        headline="About us"
-        textline="We help developers build amazing apps"
-      />
+      <PageHeader headline="We help developers build amazing apps" />
       <AboutUsHeaderImage
         imageSrc={require('./header-image.jpg')}
         image2xSrc={require('./header-image@2x.jpg')}
