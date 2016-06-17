@@ -8,22 +8,20 @@ const TopBar = (props, { hamburgerMenu, modals }) => {
     <Headroom disableInlineStyles>
       <div className="inner">
         <div className="top-bar__logo">
-          <h1>
-            <Link
-              to="/"
-              onClick={hamburgerMenu.close}
-            >
-              <img
-                src={require('./images/logo.svg')}
-                alt="Syncano Logo"
-              />
-              <img
-                className="white"
-                src={require('./images/logo-white.svg')}
-                alt="Syncano Logo"
-              />
-            </Link>
-          </h1>
+          <Link
+            to="/"
+            onClick={hamburgerMenu.close}
+          >
+            <img
+              src={require('./images/logo.svg')}
+              alt="Syncano Logo"
+            />
+            <img
+              className="white"
+              src={require('./images/logo-white.svg')}
+              alt="Syncano Logo"
+            />
+          </Link>
         </div>
         <nav className="top-bar__nav">
           <div
