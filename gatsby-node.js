@@ -3,6 +3,7 @@ import ExtendedDefinePlugin from 'extended-define-webpack-plugin';
 
 exports.modifyWebpackConfig = function(config, env) {
   const fileLoader = env !== 'develop' ? 'file-loader?name=/[hash].[ext]' : 'file-loader';
+  const imageLoader = env !== 'develop' ? 'file-loader?name=/[name]-[hash].[ext]' : 'file-loader';
 
   config.removeLoader('flv');
   config.loader('flv', function(cfg) {
@@ -14,7 +15,7 @@ exports.modifyWebpackConfig = function(config, env) {
   config.removeLoader('jpg');
   config.loader('jpg', function(cfg) {
     cfg.test = /\.jpg/;
-    cfg.loader = fileLoader;
+    cfg.loader = imageLoader;
     return cfg;
   });
 
@@ -35,14 +36,14 @@ exports.modifyWebpackConfig = function(config, env) {
   config.removeLoader('png');
   config.loader('png', function(cfg) {
     cfg.test = /\.png/;
-    cfg.loader = fileLoader;
+    cfg.loader = imageLoader;
     return cfg;
   });
 
   config.removeLoader('svg');
   config.loader('svg', function(cfg) {
     cfg.test = /\.svg/;
-    cfg.loader = fileLoader;
+    cfg.loader = imageLoader;
     return cfg;
   });
 
