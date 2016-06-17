@@ -12,6 +12,8 @@ import {
 } from '../../components';
 
 export default () => {
+  const { redirect_uri } = APP_CONFIG;
+
   return (
     <div>
       <PageHelmet
@@ -19,6 +21,8 @@ export default () => {
         mixpanelTitle="About Us"
         description={`Changing the way the world thinks about app development. We want to help developers focus on
           strategic initiatives, and not worry about heavy lifting.`}
+        ogImageSrc={`${redirect_uri}${require('./og-image.png')}`}
+        twitterImageSrc={`${redirect_uri}${require('./twitter-image.png')}`}
       />
       <PageHeader headline="We help developers build amazing apps" />
       <AboutUsHeaderImage

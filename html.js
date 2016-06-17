@@ -8,7 +8,6 @@ export default React.createClass({
   render() {
     const head = Helmet.rewind();
     const attrs = head.htmlAttributes.toComponent();
-    const { redirect_uri } = APP_CONFIG;
 
     let css;
     if (process.env.NODE_ENV !== 'development') {
@@ -51,13 +50,11 @@ export default React.createClass({
           <meta name="theme-color" content="#0070D3" />
           <meta name="msapplication-navbutton-color" content="#0070D3" />
 
-          <meta property="og:image" content={`${redirect_uri}${require('./images/og-image.png')}`} />
           <meta property="og:site_name" content="Syncano" />
           <meta property="og:type" content="website" />
 
-          <meta name="twitter:card" content="summary" />
-          <meta name="twitter:site" content="@syncano" />
-          <meta name="twitter:image" content={`${redirect_uri}${require('./images/twitter-image.png')}`} />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@Syncano" />
 
           {head.link.toComponent()}
           <script src="https://cdn.optimizely.com/js/3962180131.js"></script>

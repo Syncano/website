@@ -14,6 +14,8 @@ import {
 } from '../../components';
 
 export default () => {
+  const { redirect_uri } = APP_CONFIG;
+
   return (
     <div>
       <PageHelmet
@@ -21,6 +23,8 @@ export default () => {
         mixpanelTitle="Features"
         description={`Rapidly assemble building blocks for your app without a backend or server. Learn more about what
           you can do with Syncano.`}
+        ogImageSrc={`${redirect_uri}${require('./og-image.png')}`}
+        twitterImageSrc={`${redirect_uri}${require('./twitter-image.png')}`}
       />
       <PageHeader
         headline="Features"
