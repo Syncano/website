@@ -5,7 +5,7 @@ export default () => {
     <div className="social-profiles">
       <div className="inner">
         <div className="social-profiles__group">
-          <h4>Fork us on GitHub</h4>
+          <h3>Fork us on GitHub</h3>
           <div className="social-profiles__group__profiles">
             <a
               className="social-profiles__group__profiles__icon" 
@@ -21,7 +21,7 @@ export default () => {
           </div>
         </div>
         <div className="social-profiles__group">
-          <h4>Follow us</h4>
+          <h3>Follow us</h3>
           <div className="social-profiles__group__profiles">
             <a
               className="social-profiles__group__profiles__icon"
@@ -65,7 +65,7 @@ export default () => {
           </div>
         </div>
         <div className="social-profiles__group">
-          <h4>Join the community</h4>
+          <h3>Join the community</h3>
           <div className="social-profiles__group__profiles">
             <a
               className="social-profiles__group__profiles__icon"
