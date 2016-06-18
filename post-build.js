@@ -3,7 +3,7 @@ import sm from 'sitemap';
 import fs from 'fs-extra';
 
 const generateSitemapUrl = (page) => {
-  const pagePath = page.path;
+  const pagePath = _.isString(page) ? page : page.path;
   const nonIndexedPages = ['/404/'];
   const importantPages = ['/', '/pricing/'];
   const isRootPath = pagePath === '/';
@@ -22,7 +22,8 @@ const generateSitemapUrl = (page) => {
 };
 
 const generateSitemap = (pages) => {
-  const sitemapUrls = _(pages).map(generateSitemapUrl).filter().value();
+  const staticDirNames = ['/slack-invite/'];
+  const sitemapUrls = _(pages.concat(staticDirNames)).map(generateSitemapUrl).filter().value();
 
   const sitemap = sm.createSitemap({
     hostname: 'https://www.syncano.io',
