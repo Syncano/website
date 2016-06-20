@@ -45,9 +45,8 @@ class ModalSuggestFeature extends Component {
   getThankYouMessage = () => (
     <div>
       <p><strong>Thank you! Your message has been received.</strong></p>
-      <p>We'll get back to you soon. In the meantime, check out some of
-      our <a href="https://www.syncano.io/blog/" target="_blank">recent blog articles</a>.
-      </p>
+      <p>{`We'll get back to you soon. In the meantime, check out some of our`}
+      <a href="https://www.syncano.io/blog/" target="_blank">recent blog articles</a>.</p>
     </div>
   );
 
