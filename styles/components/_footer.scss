@@ -4,11 +4,11 @@
   padding-bottom: 40px;
   color: $color-footer-base;
 
-  h4, li {
+  h3, li {
     line-height: 40px;
   }
 
-  h4 {
+  h3 {
     font-size: 12px;
     font-weight: 500;
     color: $color-footer-headline;
@@ -124,7 +124,7 @@
       justify-content: space-between;
     }
 
-    h4 {
+    h3 {
       line-height: 1;
       margin-bottom: 10px;
     }

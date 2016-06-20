@@ -5,12 +5,8 @@ export default ({ headline, textline, children, image }) => {
     <div className="hero">
       <div className="inner">
         <div className="hero__text">
-          <h2 className="hero__text__headline">
-            {headline}
-          </h2>
-          <p className="hero__text__textline">
-            {textline}
-          </p>
+          <h1>{headline}</h1>
+          <h2>{textline}</h2>
           {children}
         </div>
         <div className="hero__image">

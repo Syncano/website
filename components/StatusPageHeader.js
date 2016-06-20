@@ -78,12 +78,12 @@ class StatusPageHeader extends Component {
             indicator={status.status.indicator}
             alt={status.status.description}
           />
-          <h2>{this.getHeadlineText(status)}</h2>
-          <p>
+          <h1>{this.getHeadlineText(status)}</h1>
+          <h2>
             Updated about {moment(status.page.updated_at).fromNow()}. <br /><a href={status.page.url} target="_blank">
             View our status page</a> for more info or <a href="https://www.syncano.io/slack-invite/" target="_blank">
             join us on Slack</a>.
-          </p>
+          </h2>
           <a
             className="button button--large button--filled"
             onClick={this.showSupportForm}
