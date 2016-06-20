@@ -23,7 +23,7 @@ const generateSitemapUrl = (page) => {
 
 const generateSitemap = (pages) => {
   const staticDirNames = ['/slack-invite/'];
-  const sitemapUrls = _(pages.concat(staticDirNames)).map(generateSitemapUrl).filter().value();
+  const sitemapUrls = _([...pages, ...staticDirNames]).map(generateSitemapUrl).filter().value();
 
   const sitemap = sm.createSitemap({
     hostname: 'https://www.syncano.io',
