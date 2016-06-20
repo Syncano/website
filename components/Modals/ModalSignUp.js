@@ -64,7 +64,7 @@ class ModalSignUp extends Component {
                 />
                 {isFormInvalid && renderErrorMessage(auth.message)}
                 <button
-                  className="button button--large button--featured"
+                  className="button button--large form__submit"
                   disabled={status === 'processing' || status === 'done'}
                 >
                   Start Building for Free

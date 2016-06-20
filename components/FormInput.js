@@ -2,7 +2,15 @@ import React, { Component } from 'react';
 import { HOC } from 'formsy-react';
 import classNames from 'classnames';
 
-class ContactFormInput extends Component {
+class FormInput extends Component {
+  componentDidMount() {
+    const { autofocus } = this.props;
+
+    if (autofocus) {
+      setTimeout(() => this.refs.input.focus(), 0);
+    }
+  };
+
   getClassName = () => {
     const { showError } = this.props;
 
@@ -17,6 +25,7 @@ class ContactFormInput extends Component {
 
     return (
       <input
+        ref="input"
         className={this.getClassName()}
         value={getValue() || ''}
         onChange={(e) => setValue(e.target.value)}
@@ -26,4 +35,4 @@ class ContactFormInput extends Component {
   };
 };
 
-export default HOC(ContactFormInput);
+export default HOC(FormInput);

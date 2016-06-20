@@ -21,6 +21,10 @@
     height: 160px;
   }
 
+  .form__submit {
+    @extend .button--featured;
+  }
+
   .form__message {
     font-weight: 700;
     text-transform: uppercase;

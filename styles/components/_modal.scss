@@ -71,11 +71,13 @@
       line-height: 24px;
     }
 
-    .modal-box__content_form {
+    .modal-box__content_form,
+    .contact-form {
       margin-top: 40px;
     }
 
-    .modal-box__content_form__success-message {
+    .modal-box__content_form__success-message,
+    .contact-form__success-message {
       font-weight: bold;
       color: $color-main-green;
     }

@@ -1,8 +1,5 @@
 .contact-form {
-  padding-bottom: 80px;
-  margin-top: -30px;
-
-  .contact-form__box .contact-form__box__message {
+  .contact-form__box__message {
     text-align: center;
 
     p {
@@ -12,33 +9,5 @@
         color: $color-text-headline;
       }
     }
-  }
-
-  &.contact-form--support-form {
-    margin-top: 50px;
-  }
-
-  @include medium {
-    background: #fff url("../components/ContactForm/images/background.svg") no-repeat left 50% bottom 75px;
-    min-height: (457px + 75);
-    margin-top: -110px;
-
-    .contact-form__box {
-      max-width: 520px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 70px;
-      box-shadow: 0 12px 25px rgba(0, 0, 0, .27);
-      background: #fff;
-      transform: translateY(100px);
-    }
-
-    &.contact-form--support-form {
-      margin-top: 0;
-    }
-  }
-
-  @include large {
-    margin-top: -190px;
   }
 }
