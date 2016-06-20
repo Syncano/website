@@ -36,7 +36,7 @@ export default class SupportForm extends Component {
   getErrorMessage = () => (
     <div>
       <p><strong>There was an error sending your message.</strong></p>
-      <p>Sorry about that. Please write us at <a href="mailto:support@syncano.io">support@syncano.io</a></p>
+      <p>Sorry about that. Please write us at <a href="mailto:support@syncano.io">support@syncano.io</a>.</p>
     </div>
   );
 

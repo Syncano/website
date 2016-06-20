@@ -36,7 +36,7 @@ export default class ContactForm extends Component {
   getErrorMessage = () => (
     <div>
       <p><strong>There was an error sending your message.</strong></p>
-      <p>Sorry about that. Please write us at <a href="mailto:hello@syncano.io">hello@syncano.io</a></p>
+      <p>Sorry about that. Please write us at <a href="mailto:hello@syncano.io">hello@syncano.io</a>.</p>
     </div>
   );
 
@@ -51,7 +51,7 @@ export default class ContactForm extends Component {
 
   renderStatus = (status) => (
     <div className="contact-form__box__message">
-      {status === 'done' ? this.getThankYouMessage() : this.getErrorMessage() }
+      {status === 'done' ? this.getThankYouMessage() : this.getErrorMessage()}
     </div>
   );
 
