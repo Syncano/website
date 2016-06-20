@@ -53,10 +53,14 @@
   }
 
   @include medium {
+    .form__input,
+    .form__textarea {
+      margin-bottom: 20px;
+    }
+
     .form__input {
       height: 54px;
       line-height: 54px;
-      margin-bottom: 20px;
     }
 
     .form__message {

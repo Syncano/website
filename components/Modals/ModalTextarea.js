@@ -24,7 +24,7 @@ class ModalTextField extends Component {
     const { getValue, setValue, className, ...other } = this.props;
 
     return (
-      <input
+      <textarea
         ref="input"
         className={this.getClassName()}
         value={getValue() || ''}

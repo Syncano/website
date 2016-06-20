@@ -7,6 +7,7 @@ import CircleIconColumns from './CircleIconColumns';
 import CodePreview from './CodePreview';
 import ColumnParagraphs from './ColumnParagraphs';
 import ContactForm from './ContactForm';
+import ContactFormSection from './ContactFormSection';
 import CounterBoxes from './CounterBoxes';
 import CTASection from './CTASection';
 import FAQ from './FAQ';
@@ -56,6 +57,7 @@ export default {
   CodePreview,
   ColumnParagraphs,
   ContactForm,
+  ContactFormSection,
   CounterBoxes,
   CTASection,
   FAQ,

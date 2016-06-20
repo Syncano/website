@@ -38,7 +38,7 @@ class ModalResetPassword extends Component {
 
   renderSuccessMessage = () => (
     <div className="modal-box__content_form__success-message">
-      <p>Check your inbox. We've sent instructions on how to reset your password.</p>
+      <p>{`Check your inbox. We've sent instructions on how to reset your password.`}</p>
     </div>
   );
 

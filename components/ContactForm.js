@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Formsy from 'formsy-react';
 import axios from 'axios';
-import FormInput from '../FormInput';
-import FormTextarea from '../FormTextarea';
+import classNames from 'classnames';
+import FormInput from './FormInput';
 
 export default class ContactForm extends Component {
   constructor(props) {
@@ -14,7 +14,11 @@ export default class ContactForm extends Component {
   };
 
   submit = (model) => {
-    const action = `//formspree.io/${APP_CONFIG.contactFormEmail}`;
+    const { sendToEmail } = this.props;
+    const email = sendToEmail || APP_CONFIG.contactFormEmail;
+    const action = `//formspree.io/${email}`;
+
+    this.setState({ status: 'processing' });
 
     axios.post(action, model)
       .then(this.onSubmitSuccess)
@@ -36,58 +40,56 @@ export default class ContactForm extends Component {
   getErrorMessage = () => (
     <div>
       <p><strong>There was an error sending your message.</strong></p>
-      <p>Sorry about that. Please write us at <a href="mailto:hello@syncano.io">hello@syncano.io</a></p>
+      <p>Sorry about that. Please write us at <a href="mailto:hello@syncano.io">hello@syncano.io</a>.</p>
     </div>
   );
 
   getThankYouMessage = () => (
     <div>
       <p><strong>Thank you! Your message has been received.</strong></p>
-      <p>We'll get back to you soon. In the meantime, check out some of
-      our <a href="https://www.syncano.io/blog/" target="_blank">recent blog articles</a>.
-      </p>
+      <p>{`We'll get back to you soon. In the meantime, check out some of our `}
+      <a href="https://www.syncano.io/blog/" target="_blank">recent blog articles</a>.</p>
     </div>
   );
 
   renderStatus = (status) => (
     <div className="contact-form__box__message">
-      {status === 'done' ? this.getThankYouMessage() : this.getErrorMessage() }
+      {status === 'done' ? this.getThankYouMessage() : this.getErrorMessage()}
     </div>
   );
 
+  getButtonClassName = () => {
+    const { buttonIsFeatured } = this.props;
+
+    return classNames({
+      'button button--large': true,
+      'button--filled': !buttonIsFeatured,
+      'button--featured': buttonIsFeatured
+    });
+  };
+
   renderForm = () => {
+    const { status } = this.state;
+    const { subject, children, buttonLabel } = this.props;
+
     return (
-      <div className="contact-form__box__form form">
+      <div className="form">
         <Formsy.Form onValidSubmit={this.submit}>
           <FormInput
             type="hidden"
             name="_subject"
-            value="Contact Form Submission from syncano.io"
-          />
-          <FormInput
-            type="text"
-            name="name"
-            placeholder="Name"
-            required
-          />
-          <FormInput
-            type="email"
-            name="_replyto"
-            placeholder="E-mail address"
-            validations="isEmail"
-            required
-          />
-          <FormTextarea
-            name="message"
-            placeholder="Message"
-            required
+            value={subject}
           />
           <FormInput
             name="_gotcha"
             style={{ display: 'none' }}
           />
-          <button className="button button--large button--filled">
-            Send message
+          {children}
+          <button
+            className={this.getButtonClassName()}
+            disabled={status === 'processing'}
+          >
+            {buttonLabel || 'Send'}
           </button>
         </Formsy.Form>
       </div>
@@ -99,11 +101,7 @@ export default class ContactForm extends Component {
 
     return (
       <div className="contact-form">
-        <div className="inner">
-          <div className="contact-form__box">
-            {status ? this.renderStatus(status) : this.renderForm()}
-          </div>
-        </div>
+        {status && status != 'processing' ? this.renderStatus(status) : this.renderForm()}
       </div>
     );
   };

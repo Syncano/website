@@ -2,8 +2,9 @@ import React from 'react';
 import ModalLogIn from './ModalLogIn';
 import ModalResetPassword from './ModalResetPassword';
 import ModalSignUp from './ModalSignUp';
+import ModalSuggestFeature from './ModalSuggestFeature';
 
-export const MODALS = ['logIn', 'resetPassword', 'signUp'];
+export const MODALS = ['logIn', 'resetPassword', 'signUp', 'suggestFeature'];
 
 export default () => {
   return (
@@ -11,6 +12,7 @@ export default () => {
       <ModalLogIn />
       <ModalResetPassword />
       <ModalSignUp />
+      <ModalSuggestFeature />
     </div>
   );
 };

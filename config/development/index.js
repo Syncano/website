@@ -3,11 +3,14 @@ export default {
   contactFormEmail: '',
   dashboardUrl: '',
   statusPageStatusUrl: '',
+  supportFormEmail: '',
   syncanoAPIBaseUrl: '',
-  hello: {
-    github: '',
-    facebook: '',
-    google: '',
-    redirect_uri: ''
-  }
+  github: '',
+  facebook: '',
+  google: '',
+  redirect_uri: '',
+  twitterConsumerKey: '',
+  twitterConsumerSecret: '',
+  twitterAccessToken: '',
+  twitterAccessTokenSecret: ''
 };
