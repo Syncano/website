@@ -14,6 +14,7 @@ export default () => {
           <ContactForm
             subject="Suggest a Feature Form Submission from syncano.io"
             buttonLabel="Send message"
+            buttonIsFeatured={true}
           >
             <FormInput
               type="text"

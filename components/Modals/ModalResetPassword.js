@@ -38,7 +38,7 @@ class ModalResetPassword extends Component {
 
   renderSuccessMessage = () => (
     <div className="modal-box__content_form__success-message">
-      <p>Check your inbox. We've sent instructions on how to reset your password.</p>
+      <p>{`Check your inbox. We've sent instructions on how to reset your password.`}</p>
     </div>
   );
 
@@ -60,7 +60,7 @@ class ModalResetPassword extends Component {
           />
           {status === 400 && this.renderErrorMessage()}
           <button
-            className="button button--large form__submit"
+            className="button button--large button--featured"
             disabled={status === 'processing' || status === 'done'}
           >
             Reset password

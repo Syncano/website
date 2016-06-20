@@ -64,7 +64,7 @@ class ModalLogIn extends Component {
                 />
                 {isFormInvalid && renderErrorMessage(auth.message)}
                 <button
-                  className="button button--large form__submit"
+                  className="button button--large button--featured"
                   disabled={status === 'processing' || status === 'done'}
                 >
                   Take me to the Dashboard

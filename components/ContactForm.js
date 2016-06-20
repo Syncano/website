@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Formsy from 'formsy-react';
 import axios from 'axios';
+import classNames from 'classnames';
 import FormInput from './FormInput';
 
 export default class ContactForm extends Component {
@@ -57,6 +58,16 @@ export default class ContactForm extends Component {
     </div>
   );
 
+  getButtonClassName = () => {
+    const { buttonIsFeatured } = this.props;
+
+    return classNames({
+      'button button--large': true,
+      'button--filled': !buttonIsFeatured,
+      'button--featured': buttonIsFeatured
+    });
+  };
+
   renderForm = () => {
     const { status } = this.state;
     const { subject, children, buttonLabel } = this.props;
@@ -75,7 +86,7 @@ export default class ContactForm extends Component {
           />
           {children}
           <button
-            className="button button--large button--filled form__submit"
+            className={this.getButtonClassName()}
             disabled={status === 'processing'}
           >
             {buttonLabel || 'Send'}
