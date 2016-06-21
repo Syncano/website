@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import classNames from 'classnames';
 import moment from 'moment';
 import StatusImage from './StatusImage';
-import SupportForm from './SupportForm';
 
 class StatusPageHeader extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      hasSupportFormVisible: false,
       status: {
         page: {
           url: 'http://status.syncano.com/'
@@ -53,25 +50,12 @@ class StatusPageHeader extends Component {
     return status.status.description;
   };
 
-  showSupportForm = () => {
-    this.setState({ hasSupportFormVisible: true });
-  };
-
-  getStatusPageHeaderClassName = () => {
-    const { hasSupportFormVisible } = this.state;
-
-    return classNames({
-      'page-header': true,
-      'page-header--no-bottom-padding': (hasSupportFormVisible === true)
-    });
-  };
-
   render = () => {
     const { modals } = this.context;
-    const { hasSupportFormVisible, status } = this.state;
+    const { status } = this.state;
 
     return (
-      <header className={this.getStatusPageHeaderClassName()}>
+      <header className="page-header">
         <div className="inner">
           <StatusImage
             className="page-header__status"
@@ -86,7 +70,7 @@ class StatusPageHeader extends Component {
           </h2>
           <a
             className="button button--large button--filled"
-            onClick={this.showSupportForm}
+            onClick={modals.supportTicket.open}
           >
             Create Support Ticket
           </a>
@@ -94,7 +78,6 @@ class StatusPageHeader extends Component {
             or <span onClick={modals.suggestFeature.open}>suggest a feature</span>
           </p>
         </div>
-        {hasSupportFormVisible && <SupportForm />}
       </header>
     );
   };

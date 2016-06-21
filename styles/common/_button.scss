@@ -39,8 +39,6 @@
     &[disabled] {
       background: $color-main-yellow;
       border-color: $color-main-yellow;
-      opacity: .5;
-      cursor: default;
     }
   }
 
@@ -57,6 +55,11 @@
     &:active {
       background: $color-main-blue--active;
       border-color: $color-main-blue--active;
+    }
+
+    &[disabled] {
+      background: $color-main-blue;
+      border-color: $color-main-blue;
     }
   }
 
@@ -87,6 +90,11 @@
 
   &.button--wide {
     display: block;
+  }
+
+  &[disabled] {
+    opacity: .5;
+    cursor: default;
   }
 
   @include medium {

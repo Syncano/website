@@ -34,7 +34,6 @@ import SliderWrapper from './SliderWrapper';
 import SocialProfiles from './SocialProfiles';
 import StatusImage from './StatusImage';
 import StatusPageHeader from './StatusPageHeader';
-import SupportForm from './SupportForm';
 import Team from './Team';
 import TermsAndLegal from './TermsAndLegal';
 import Testimonials from './Testimonials';
@@ -85,7 +84,6 @@ export default {
   SocialProfiles,
   StatusImage,
   StatusPageHeader,
-  SupportForm,
   Team,
   TermsAndLegal,
   Testimonials,
