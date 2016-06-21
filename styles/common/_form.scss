@@ -3,13 +3,22 @@
   .form__textarea {
     margin-bottom: 10px;
     width: 100%;
-    border: 2px solid #DBDEE3;
+    border: 1px solid transparentize($color-main-silver, .75);
     border-radius: 4px;
     line-height: 24px;
     padding: 9px 20px;
-    color: transparentize(#4D5967, .5);
+    color: #4D5967;
     -webkit-appearance: none;
     -moz-appearance: none;
+
+    @mixin placeholder {
+      opacity: .75;
+    }
+
+    &::-webkit-input-placeholder { @include placeholder; }
+    &:-moz-placeholder { @include placeholder; }
+    &::-moz-placeholder { @include placeholder; }
+    &:-ms-input-placeholder { @include placeholder; }
 
     &.is-invalid {
       border-color: $color-main-red;
@@ -56,11 +65,11 @@
     .form__input,
     .form__textarea {
       margin-bottom: 20px;
+      line-height: (54px - (2 * 9px));
     }
 
     .form__input {
       height: 54px;
-      line-height: (54px - (2 * 9px));
     }
 
     .form__message {

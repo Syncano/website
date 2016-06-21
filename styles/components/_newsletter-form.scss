@@ -14,10 +14,14 @@
     margin-left: auto;
     margin-right: auto;
 
-    ::-webkit-input-placeholder { color: transparentize($color-text-base, .5); }
-    :-moz-placeholder { color: transparentize($color-text-base, .5); }
-    ::-moz-placeholder { color: transparentize($color-text-base, .5); }
-    :-ms-input-placeholder { color: transparentize($color-text-base, .5); }
+    @mixin placeholder {
+      color: transparentize($color-text-base, .5);
+    }
+
+    ::-webkit-input-placeholder { @include placeholder; }
+    :-moz-placeholder { @include placeholder; }
+    ::-moz-placeholder { @include placeholder; }
+    :-ms-input-placeholder { @include placeholder; }
 
     .newsletter-form__field__input,
     .newsletter-form__field__button {
