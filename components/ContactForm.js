@@ -16,7 +16,7 @@ export default class ContactForm extends Component {
   submit = (model) => {
     const { sendToEmail } = this.props;
     const email = sendToEmail || APP_CONFIG.contactFormEmail;
-    const action = `//formspree.io/${email}`;
+    const action = `https://formspree.io/${email}`;
 
     this.setState({ status: 'processing' });
 
@@ -25,8 +25,8 @@ export default class ContactForm extends Component {
       .catch(this.showError);
   };
 
-  onSubmitSuccess = ({ statusText }) => {
-    statusText === 'OK' ? this.showThankYou() : this.showError();
+  onSubmitSuccess = ({ status }) => {
+    status === 200 ? this.showThankYou() : this.showError();
   };
 
   showError = () => {
