@@ -33,14 +33,6 @@ export default ({ headline, children }) => {
               position="Chief Platform Architect"
             />
             <TeamMember
-              photoSrc={require('./images/kelly-andrews.jpg')}
-              photo2xSrc={require('./images/kelly-andrews@2x.jpg')}
-              photoMediumSrc={require('./images/kelly-andrews-medium.jpg')}
-              photoMedium2xSrc={require('./images/kelly-andrews-medium@2x.jpg')}
-              name="Kelly Andrews"
-              position="Principal Developer Evangelist"
-            />
-            <TeamMember
               photoSrc={require('./images/jakub-bilko.jpg')}
               photo2xSrc={require('./images/jakub-bilko@2x.jpg')}
               photoMediumSrc={require('./images/jakub-bilko-medium.jpg')}

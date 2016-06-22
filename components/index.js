@@ -7,6 +7,7 @@ import CircleIconColumns from './CircleIconColumns';
 import CodePreview from './CodePreview';
 import ColumnParagraphs from './ColumnParagraphs';
 import ContactForm from './ContactForm';
+import ContactFormSection from './ContactFormSection';
 import CounterBoxes from './CounterBoxes';
 import CTASection from './CTASection';
 import FAQ from './FAQ';
@@ -33,7 +34,6 @@ import SliderWrapper from './SliderWrapper';
 import SocialProfiles from './SocialProfiles';
 import StatusImage from './StatusImage';
 import StatusPageHeader from './StatusPageHeader';
-import SupportForm from './SupportForm';
 import Team from './Team';
 import TermsAndLegal from './TermsAndLegal';
 import Testimonials from './Testimonials';
@@ -56,6 +56,7 @@ export default {
   CodePreview,
   ColumnParagraphs,
   ContactForm,
+  ContactFormSection,
   CounterBoxes,
   CTASection,
   FAQ,
@@ -83,7 +84,6 @@ export default {
   SocialProfiles,
   StatusImage,
   StatusPageHeader,
-  SupportForm,
   Team,
   TermsAndLegal,
   Testimonials,

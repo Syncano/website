@@ -8,11 +8,10 @@ export default React.createClass({
   render() {
     const head = Helmet.rewind();
     const attrs = head.htmlAttributes.toComponent();
-    const { redirect_uri } = APP_CONFIG;
 
     let css;
     if (process.env.NODE_ENV !== 'development') {
-      css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
+      css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />;
     }
 
     return (
@@ -44,19 +43,18 @@ export default React.createClass({
           <link rel="icon" type="image/png" href={require('./images/favicons/android-chrome-192x192.png')} sizes="192x192" />
           <link rel="icon" type="image/png" href={require('./images/favicons/favicon-96x96.png')} sizes="96x96" />
           <link rel="icon" type="image/png" href={require('./images/favicons/favicon-16x16.png')} sizes="16x16" />
-          <link rel="manifest" href={require('!file-loader!./images/favicons/manifest.json')} />
-          <link rel="mask-icon" href={require('./images/favicons/safari-pinned-tab.svg')} color="#0070d3" />
-          <meta name="msapplication-TileColor" content="#0070d3" />
+          <link rel="manifest" href={require('!file-loader?name=/[hash].[ext]!./images/favicons/manifest.json')} />
+          <link rel="mask-icon" href={require('./images/favicons/safari-pinned-tab.svg')} color="#0070D3" />
+          <meta name="msapplication-TileColor" content="#0070D3" />
           <meta name="msapplication-TileImage" content={require('./images/favicons/mstile-144x144.png')} />
-          <meta name="theme-color" content="#ffffff" />
+          <meta name="theme-color" content="#0070D3" />
+          <meta name="msapplication-navbutton-color" content="#0070D3" />
 
-          <meta property="og:image" content={`${redirect_uri}${require('./images/og-image.png')}`} />
           <meta property="og:site_name" content="Syncano" />
           <meta property="og:type" content="website" />
 
-          <meta name="twitter:card" content="summary" />
-          <meta name="twitter:site" content="@syncano" />
-          <meta name="twitter:image" content={`${redirect_uri}${require('./images/twitter-image.png')}`} />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@Syncano" />
 
           {head.link.toComponent()}
           <script src="https://cdn.optimizely.com/js/3962180131.js"></script>

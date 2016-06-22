@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import classNames from 'classnames';
 import moment from 'moment';
 import StatusImage from './StatusImage';
-import SupportForm from './SupportForm';
 
-export default class StatusPageHeader extends Component {
+class StatusPageHeader extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      hasSupportFormVisible: false,
       status: {
         page: {
           url: 'http://status.syncano.com/'
@@ -21,6 +18,10 @@ export default class StatusPageHeader extends Component {
         }
       }
     };
+  };
+
+  static childContextTypes = {
+    modals: React.PropTypes.object
   };
 
   componentWillMount = () => {
@@ -49,45 +50,41 @@ export default class StatusPageHeader extends Component {
     return status.status.description;
   };
 
-  showSupportForm = () => {
-    this.setState({ hasSupportFormVisible: true });
-  };
-
-  getStatusPageHeaderClassName = () => {
-    const { hasSupportFormVisible } = this.state;
-
-    return classNames({
-      'page-header': true,
-      'page-header--no-bottom-padding': (hasSupportFormVisible === true)
-    });
-  };
-
   render = () => {
-    const { hasSupportFormVisible, status } = this.state;
+    const { modals } = this.context;
+    const { status } = this.state;
 
     return (
-      <header className={this.getStatusPageHeaderClassName()}>
+      <header className="page-header">
         <div className="inner">
           <StatusImage
             className="page-header__status"
             indicator={status.status.indicator}
             alt={status.status.description}
           />
-          <h2>{this.getHeadlineText(status)}</h2>
-          <p>Updated about {moment(status.page.updated_at).fromNow()}. <br /><a href={status.page.url} target="_blank">
-          View our status page</a> for more info.</p>
+          <h1>{this.getHeadlineText(status)}</h1>
+          <h2>
+            Updated about {moment(status.page.updated_at).fromNow()}. <br /><a href={status.page.url} target="_blank">
+            View our status page</a> for more info or <a href="https://www.syncano.io/slack-invite/" target="_blank">
+            join us on Slack</a>.
+          </h2>
           <a
             className="button button--large button--filled"
-            onClick={this.showSupportForm}
+            onClick={modals.supportTicket.open}
           >
             Create Support Ticket
           </a>
           <p className="page-header__more">
-            or <a href="http://www.syncano.io/slack-invite/" target="_blank">chat with us on Slack</a>
+            or <span onClick={modals.suggestFeature.open}>suggest a feature</span>
           </p>
         </div>
-        {hasSupportFormVisible && <SupportForm />}
       </header>
     );
   };
 };
+
+StatusPageHeader.contextTypes = {
+  modals: React.PropTypes.object
+};
+
+export default StatusPageHeader;

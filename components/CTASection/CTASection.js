@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames  from 'classnames';
+import classNames from 'classnames';
 
 const CTASection = ({ variant, theme, children }, { modals }) => {
   const className = classNames({

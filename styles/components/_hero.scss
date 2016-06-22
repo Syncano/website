@@ -5,13 +5,13 @@
   padding-bottom: 60px;
 
   .hero__text {
-    .hero__text__headline,
-    .hero__text__textline {
+    h1,
+    h2 {
       margin-left: auto;
       margin-right: auto;
     }
 
-    .hero__text__headline {
+    h1 {
       font-weight: 700;
       font-size: 28px;
       line-height: 1.35;
@@ -20,11 +20,11 @@
       white-space: nowrap;
     }
 
-    .hero__text__textline {
+    h2 {
       font-size: 18px;
       line-height: 1.5;
       margin-top: 30px;
-      max-width: 215px;
+      max-width: 300px;
       color: $color-text-base;
     }
 
@@ -58,12 +58,12 @@
     padding-top: 100px;
 
     .hero__text {
-      .hero__text__headline {
+      h1 {
         max-width: none;
       }
 
-      .hero__text__textline {
-        max-width: 350px;
+      h2 {
+        max-width: 365px;
       }
 
       .hero__text__button-container .button {
@@ -81,13 +81,13 @@
     padding-bottom: 200px;
 
     .hero__text {
-      .hero__text__headline {
+      h1 {
         font-size: 50px;
       }
 
-      .hero__text__textline {
+      h2 {
         font-size: 20px;
-        max-width: none;
+        max-width: 425px;
         margin-top: 30px;
       }
 
@@ -124,8 +124,9 @@
     .hero__text {
       margin-right: 40px;
 
-      .hero__text__textline {
+      h2 {
         font-size: 24px;
+        max-width: none;
       }
     }
 
@@ -143,7 +144,7 @@
     .hero__text {
       margin-right: 80px;
 
-      .hero__text__headline {
+      h1 {
         font-size: 56px;
       }
     }

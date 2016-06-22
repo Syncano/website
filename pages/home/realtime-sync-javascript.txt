@@ -1,4 +1,4 @@
-var Syncano = require("syncano");  // CommonJS
+var Syncano = require("syncano"); // CommonJS
 var connection = Syncano({ accountKey: "ACCOUNT_KEY" });
 var DataObject = connection.DataObject;
 

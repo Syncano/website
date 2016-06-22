@@ -11,19 +11,25 @@
     min-height: 60px;
   }
 
-  h2 {
+  h1 {
     font-size: 28px;
     color: #333A42;
     font-weight: 700;
     line-height: 40px;
   }
 
-  p {
+  h2 {
     margin-top: 30px;
     line-height: 1.5;
     color: transparentize($color-text-base, .2);
     font-weight: 500;
     font-size: 18px;
+
+    a {
+      @extend .text-link;
+      cursor: pointer;
+      transition: $transition-default;
+    }
   }
 
   .inner > .button {
@@ -36,17 +42,23 @@
     line-height: 10px;
     color: transparentize($color-text-base, .2);
     font-weight: 400;
+
+    span {
+      @extend .text-link;
+      cursor: pointer;
+      transition: $transition-default;
+    }
   }
 
   &.page-header--error-404 {
     position: relative;
     
-    h2 {
+    h1 {
       font-size: 80px;
       line-height: 1.2;
     }
 
-    p {
+    h2 {
       margin-top: 0;
     }
   }
@@ -59,12 +71,12 @@
     padding-top: 170px;
     padding-bottom: 110px;
 
-    h2 {
+    h1 {
       font-size: 35px;
       line-height: 1.2;
     }
 
-    p {
+    h2 {
       margin-top: 20px;
 
       br {
@@ -83,7 +95,7 @@
     &.page-header--error-404 {
       padding-top: 190px;
 
-      h2 {
+      h1 {
         font-size: 100px;
       }
 
@@ -97,14 +109,14 @@
     padding-top: 200px;
     padding-bottom: 190px;
 
-    h2 {
+    h1 {
       font-size: 42px;
     }
 
     &.page-header--error-404 {
       padding-bottom: 150px;
 
-      h2 {
+      h1 {
         font-size: 120px;
       }
     }

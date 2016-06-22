@@ -10,8 +10,8 @@ export default ({ variant, headline, textline, children }) => {
   return (
     <header className={pageHeaderClassName}>
       <div className="inner">
-        <h2>{headline}</h2>
-        <p>{textline}</p>
+        <h1>{headline}</h1>
+        {textline && <h2>{textline}</h2>}
         {children}
       </div>
     </header>

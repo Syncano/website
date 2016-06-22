@@ -13,6 +13,8 @@ import {
 } from '../../components';
 
 export default () => {
+  const { redirect_uri } = APP_CONFIG;
+
   return (
     <div>
       <PageHelmet
@@ -20,6 +22,8 @@ export default () => {
         mixpanelTitle="Pricing"
         description={`Get started with Syncano for free and scale to millions of users. Upgrade, downgrade or cancel at
           any time. 30 day money back guarantee. Read more...`}
+        ogImageSrc={`${redirect_uri}${require('./og-image.png')}`}
+        twitterImageSrc={`${redirect_uri}${require('./twitter-image.png')}`}
       />
       <PageHeader
         headline="Build secure, scalable apps in half the time"

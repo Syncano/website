@@ -30,7 +30,7 @@ class Pricing extends Component {
       }],
       scripts: [{
         price: 0,
-        included: 10000
+        included: 20000
       }]
     };
 

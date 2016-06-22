@@ -9,6 +9,17 @@
     font-size: 20px;
     font-weight: 700;
     line-height: 1.35;
+
+    img,
+    span {
+      vertical-align: middle;
+    }
+
+    img {
+      display: inline-block;
+      height: .9em;
+      margin-right: .45em;
+    }
   }
 
   .twitter-slider__slider {

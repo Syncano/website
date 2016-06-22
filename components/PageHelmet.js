@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-const PageHelmet = ({ title, mixpanelTitle, description }, { location }) => {
+const PageHelmet = ({ title, mixpanelTitle, description, ogImageSrc, twitterImageSrc }, { location }) => {
   const { pathname } = location;
 
   return (
@@ -25,12 +25,20 @@ const PageHelmet = ({ title, mixpanelTitle, description }, { location }) => {
           content: `http://www.syncano.io${pathname}`
         },
         {
+          name: 'og:image',
+          content: ogImageSrc
+        },
+        {
           name: 'twitter:title',
           content: title
         },
         {
           name: 'twitter:description',
           content: description
+        },
+        {
+          name: 'twitter:image',
+          content: twitterImageSrc
         }
       ]}
     />

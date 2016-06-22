@@ -23,8 +23,8 @@
 
   &.button--featured {
     background: $color-main-yellow;
-    color: $color-text-headline;
     border-color: $color-main-yellow;
+    color: $color-text-headline;
 
     &:hover {
       background: $color-main-yellow--hover;
@@ -34,6 +34,11 @@
     &:active {
       background: $color-main-yellow--active;
       border-color: $color-main-yellow--active;
+    }
+
+    &[disabled] {
+      background: $color-main-yellow;
+      border-color: $color-main-yellow;
     }
   }
 
@@ -50,6 +55,11 @@
     &:active {
       background: $color-main-blue--active;
       border-color: $color-main-blue--active;
+    }
+
+    &[disabled] {
+      background: $color-main-blue;
+      border-color: $color-main-blue;
     }
   }
 
@@ -80,6 +90,11 @@
 
   &.button--wide {
     display: block;
+  }
+
+  &[disabled] {
+    opacity: .5;
+    cursor: default;
   }
 
   @include medium {
