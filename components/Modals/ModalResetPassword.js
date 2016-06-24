@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Formsy from 'formsy-react';
 import classNames from 'classnames';
 import ModalWrapper from './ModalWrapper';
-import ModalTextField from './ModalTextField';
+import ModalInputElement from './ModalInputElement';
 import AuthHOC from '../AuthHOC';
 
 class ModalResetPassword extends Component {
@@ -25,7 +25,6 @@ class ModalResetPassword extends Component {
     const { status } = this.context.auth;
 
     return classNames({
-      'form__input': true,
       'is-invalid': (status === 400)
     });
   };
@@ -43,20 +42,23 @@ class ModalResetPassword extends Component {
   );
 
   renderForm = () => {
-    const { auth } = this.context;
-    const { status, handlePasswordReset, handleSocialAuth } = auth;
+    const { status, showValidationErrors, handlePasswordReset, handleSocialAuth } = this.context.auth;
 
     return (
       <div className="modal-box__content_form form">
-        <Formsy.Form onValidSubmit={(model) => handlePasswordReset(model)}>
-          <ModalTextField
+        <Formsy.Form
+          onValidSubmit={(model) => handlePasswordReset(model)}
+          onInvalidSubmit={showValidationErrors}
+        >
+          <ModalInputElement
             className={this.getInputClassName()}
             name="email"
-            validations="isEmail"
-            type="email"
             placeholder="E-mail address"
+            validations={{
+              isExisty: true,
+              isEmail: true
+            }}
             autofocus
-            required
           />
           {status === 400 && this.renderErrorMessage()}
           <button

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Formsy from 'formsy-react';
 import classNames from 'classnames';
 import ModalWrapper from './ModalWrapper';
-import ModalTextField from './ModalTextField';
+import ModalInputElement from './ModalInputElement';
 import AuthHOC from '../AuthHOC';
 
 class ModalSignUp extends Component {
@@ -46,21 +46,17 @@ class ModalSignUp extends Component {
 
             <div className="modal-box__content_form form">
               <Formsy.Form onValidSubmit={(model) => handlePasswordAuth('register', model)}>
-                <ModalTextField
+                <ModalInputElement
                   className={inputClassName}
                   name="email"
-                  validations="isEmail"
-                  type="email"
                   placeholder="E-mail address"
                   autofocus
-                  required
                 />
-                <ModalTextField
+                <ModalInputElement
                   className={inputClassName}
                   type="password"
                   name="password"
                   placeholder="Password"
-                  required
                 />
                 {isFormInvalid && renderErrorMessage(auth.message)}
                 <button

@@ -9,7 +9,8 @@ export default (ComposedComponent) => (
 
       this.state = {
         status: null,
-        message: null
+        message: null,
+        displayValidationErrors: false
       };
     };
 
@@ -22,6 +23,9 @@ export default (ComposedComponent) => (
         status: this.state.status,
         message: this.state.message,
         resetStatus: this.resetStatus,
+        displayValidationErrors: this.state.displayValidationErrors,
+        showValidationErrors: this.showValidationErrors,
+        hideValidationErrors: this.hideValidationErrors,
         handlePasswordAuth: this.handlePasswordAuth,
         handlePasswordReset: this.handlePasswordReset,
         handleSocialAuth: this.handleSocialAuth
@@ -53,6 +57,7 @@ export default (ComposedComponent) => (
     };
 
     handlePasswordReset = ({ email }) => {
+      console.log('handlePasswordReset()');
       const { Account } = Syncano({ baseUrl: APP_CONFIG.syncanoAPIBaseUrl });
 
       this.resetStatus();
@@ -85,6 +90,15 @@ export default (ComposedComponent) => (
       const redirectUrl = `${APP_CONFIG.dashboardUrl}#/login?token=${token}&signUpMode=${signUpMode}`;
 
       window.location.href = redirectUrl;
+    };
+
+    showValidationErrors = () => {
+      console.log('showValidationErrors()');
+      this.setState({ displayValidationErrors: true })
+    };
+
+    hideValidationErrors = () => {
+      this.setState({ displayValidationErrors: false })
     };
 
     render() {

@@ -2,22 +2,34 @@ import React, { Component } from 'react';
 import Formsy from 'formsy-react';
 import axios from 'axios';
 import classNames from 'classnames';
-import FormInput from './FormInput';
+import FormInputElement from './FormInputElement';
 
 export default class ContactForm extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      status: ''
+      status: '',
+      displayValidationErrors: false
     };
   };
 
-  submit = (model) => {
+  static childContextTypes = {
+    displayValidationErrors: React.PropTypes.bool
+  };
+
+  getChildContext = () => {
+    const { displayValidationErrors } = this.state;
+
+    return { displayValidationErrors: displayValidationErrors };
+  };
+
+  onSubmit = (model) => {
     const { sendToEmail } = this.props;
     const email = sendToEmail || APP_CONFIG.contactFormEmail;
     const action = `https://formspree.io/${email}`;
 
+    this.hideValidationErrors();
     this.setState({ status: 'processing' });
 
     axios.post(action, model)
@@ -68,19 +80,30 @@ export default class ContactForm extends Component {
     });
   };
 
+  showValidationErrors = () => {
+    this.setState({ displayValidationErrors: true })
+  };
+
+  hideValidationErrors = () => {
+    this.setState({ displayValidationErrors: false })
+  };
+
   renderForm = () => {
     const { status } = this.state;
     const { subject, children, buttonLabel } = this.props;
 
     return (
       <div className="form">
-        <Formsy.Form onValidSubmit={this.submit}>
-          <FormInput
+        <Formsy.Form
+          onValidSubmit={this.onSubmit}
+          onInvalidSubmit={this.showValidationErrors}
+        >
+          <FormInputElement
             type="hidden"
             name="_subject"
             value={subject}
           />
-          <FormInput
+          <FormInputElement
             name="_gotcha"
             style={{ display: 'none' }}
           />
