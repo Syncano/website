@@ -1,5 +1,6 @@
 import React from 'react';
 import Autolinker from 'autolinker';
+import _ from 'lodash';
 
 export default ({ data }) => {
   const { user, text } = data;
@@ -14,7 +15,7 @@ export default ({ data }) => {
       >
         <div className="twitter-widget__header__avatar">
           <img
-            src={profile_image_url}
+            src={_.replace(profile_image_url, 'http:', '')}
             alt={name}
           />
         </div>
