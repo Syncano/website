@@ -51,7 +51,7 @@ class ModalResetPassword extends Component {
     return (
       <div className="modal-box__content_form form">
         <Formsy.Form
-          onValidSubmit={(model) => handlePasswordReset(model)}
+          onValidSubmit={handlePasswordReset}
           onInvalidSubmit={showValidationErrors}
         >
           <ModalInputElement

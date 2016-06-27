@@ -57,7 +57,6 @@ export default (ComposedComponent) => (
     };
 
     handlePasswordReset = ({ email }) => {
-      console.log('handlePasswordReset()');
       const { Account } = Syncano({ baseUrl: APP_CONFIG.syncanoAPIBaseUrl });
 
       this.resetStatus();
@@ -93,7 +92,6 @@ export default (ComposedComponent) => (
     };
 
     showValidationErrors = () => {
-      console.log('showValidationErrors()');
       this.setState({ displayValidationErrors: true })
     };
 
