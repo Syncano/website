@@ -23,12 +23,19 @@ class ModalSignUp extends Component {
 
   render() {
     const { auth, modals } = this.context;
-    const { status, message, handlePasswordAuth, handleSocialAuth } = auth;
+    const {
+      status,
+      message,
+      displayValidationErrors,
+      showValidationErrors,
+      handlePasswordAuth,
+      handleSocialAuth
+    } = auth;
     const isFormInvalid = status !== 'done' && message;
 
     const inputClassName = classNames({
       'form__input': true,
-      'is-invalid': isFormInvalid
+      'is-invalid': (isFormInvalid && displayValidationErrors)
     });
 
     const renderErrorMessage = (message = 'Oops! That email / password combination is not valid.') => (
@@ -45,11 +52,19 @@ class ModalSignUp extends Component {
             <p>Build serverless apps on Syncano for free.<br/>Set up your backend in minutes!</p>
 
             <div className="modal-box__content_form form">
-              <Formsy.Form onValidSubmit={(model) => handlePasswordAuth('register', model)}>
+              <Formsy.Form
+                onValidSubmit={(model) => handlePasswordAuth('register', model)}
+                onInvalidSubmit={showValidationErrors}
+              >
                 <ModalInputElement
                   className={inputClassName}
                   name="email"
                   placeholder="E-mail address"
+                  validations={{
+                    isExisty: true,
+                    isEmail: true
+                  }}
+                  displayValidationErrors={displayValidationErrors}
                   autofocus
                 />
                 <ModalInputElement
@@ -57,6 +72,8 @@ class ModalSignUp extends Component {
                   type="password"
                   name="password"
                   placeholder="Password"
+                  validations={{ isExisty: true }}
+                  displayValidationErrors={displayValidationErrors}
                 />
                 {isFormInvalid && renderErrorMessage(auth.message)}
                 <button

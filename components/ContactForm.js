@@ -14,16 +14,6 @@ export default class ContactForm extends Component {
     };
   };
 
-  static childContextTypes = {
-    displayValidationErrors: React.PropTypes.bool
-  };
-
-  getChildContext = () => {
-    const { displayValidationErrors } = this.state;
-
-    return { displayValidationErrors: displayValidationErrors };
-  };
-
   onSubmit = (model) => {
     const { sendToEmail } = this.props;
     const email = sendToEmail || APP_CONFIG.contactFormEmail;
@@ -89,7 +79,7 @@ export default class ContactForm extends Component {
   };
 
   renderForm = () => {
-    const { status } = this.state;
+    const { status, displayValidationErrors } = this.state;
     const { subject, children, buttonLabel } = this.props;
 
     return (
@@ -107,7 +97,9 @@ export default class ContactForm extends Component {
             name="_gotcha"
             style={{ display: 'none' }}
           />
-          {children}
+          {children.map((child) => React.cloneElement(child, {
+            displayValidationErrors: displayValidationErrors
+          }))}
           <button
             className={this.getButtonClassName()}
             disabled={status === 'processing'}

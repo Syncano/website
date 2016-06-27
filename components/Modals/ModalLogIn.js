@@ -23,7 +23,14 @@ class ModalLogIn extends Component {
 
   render() {
     const { auth, modals } = this.context;
-    const { status, message, displayValidationErrors, handlePasswordAuth, handleSocialAuth } = auth;
+    const {
+      status,
+      message,
+      displayValidationErrors,
+      showValidationErrors,
+      handlePasswordAuth,
+      handleSocialAuth
+    } = auth;
     const isFormInvalid = status !== 'done' && message;
 
     const inputClassName = classNames({
@@ -45,11 +52,19 @@ class ModalLogIn extends Component {
             <p>Log in to the Syncano Dashboard below:</p>
 
             <div className="modal-box__content_form form">
-              <Formsy.Form onValidSubmit={(model) => handlePasswordAuth('login', model)}>
+              <Formsy.Form
+                onValidSubmit={(model) => handlePasswordAuth('login', model)}
+                onInvalidSubmit={showValidationErrors}
+              >
                 <ModalInputElement
                   className={inputClassName}
                   name="email"
                   placeholder="E-mail address"
+                  validations={{
+                    isExisty: true,
+                    isEmail: true
+                  }}
+                  displayValidationErrors={displayValidationErrors}
                   autofocus
                 />
                 <ModalInputElement
@@ -57,6 +72,8 @@ class ModalLogIn extends Component {
                   type="password"
                   name="password"
                   placeholder="Password"
+                  validations={{ isExisty: true }}
+                  displayValidationErrors={displayValidationErrors}
                 />
                 {isFormInvalid && renderErrorMessage(auth.message)}
                 <button

@@ -12,10 +12,7 @@ class ModalInputElement extends Component {
   };
 
   getClassName = () => {
-    const { showError, className } = this.props;
-    const { displayValidationErrors } = this.context.auth;
-
-    console.log(`displayValidationErrors: ${displayValidationErrors}`);
+    const { showError, className, displayValidationErrors } = this.props;
 
     return classNames(className, {
       'form__input': true,
@@ -38,9 +35,5 @@ class ModalInputElement extends Component {
     );
   };
 }
-
-ModalInputElement.contextTypes = {
-  auth: React.PropTypes.object
-};
 
 export default HOC(ModalInputElement);

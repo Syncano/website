@@ -64,7 +64,7 @@ export default (ComposedComponent) => (
       this.setStatus('processing');
 
       Account.resetPassword(email)
-        .then((data) => this.setState({ status: 'done' }))
+        .then((data) => this.setState({ status: 'success' }))
         .catch((error) => this.setStatus(error.status, error.message));
     };
 

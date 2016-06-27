@@ -21,14 +21,6 @@ class ModalResetPassword extends Component {
     });
   };
 
-  getInputClassName = () => {
-    const { status } = this.context.auth;
-
-    return classNames({
-      'is-invalid': (status === 400)
-    });
-  };
-
   renderErrorMessage = () => (
     <div className="form__message form__error-message">
       <p>Oops! That email was not found.</p>
@@ -42,7 +34,19 @@ class ModalResetPassword extends Component {
   );
 
   renderForm = () => {
-    const { status, showValidationErrors, handlePasswordReset, handleSocialAuth } = this.context.auth;
+    const {
+      status,
+      displayValidationErrors,
+      showValidationErrors,
+      handlePasswordReset,
+      handleSocialAuth
+    } = this.context.auth;
+    
+    const isFormInvalid = status === 400;
+    const inputClassName = classNames({
+      'form__input': true,
+      'is-invalid': (isFormInvalid && displayValidationErrors)
+    });
 
     return (
       <div className="modal-box__content_form form">
@@ -51,13 +55,14 @@ class ModalResetPassword extends Component {
           onInvalidSubmit={showValidationErrors}
         >
           <ModalInputElement
-            className={this.getInputClassName()}
+            className={inputClassName}
             name="email"
             placeholder="E-mail address"
             validations={{
               isExisty: true,
               isEmail: true
             }}
+            displayValidationErrors={displayValidationErrors}
             autofocus
           />
           {status === 400 && this.renderErrorMessage()}

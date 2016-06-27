@@ -12,8 +12,7 @@ class FormInputElement extends Component {
   };
 
   getClassName = () => {
-    const { element, showError } = this.props;
-    const { displayValidationErrors } = this.context;
+    const { element, showError, displayValidationErrors } = this.props;
     const baseClassName = element === 'textarea' ? 'form__textarea' : 'form__input';
 
     return classNames({
@@ -24,22 +23,11 @@ class FormInputElement extends Component {
   };
 
   render = () => {
-    const { element, getValue, setValue } = this.props;
-
-    if (element === 'textarea') {
-      return (
-        <textarea
-          ref="input"
-          className={this.getClassName()}
-          value={getValue() || ''}
-          onChange={(e) => setValue(e.target.value)}
-          {...this.props}
-        />
-      );
-    }
+    const { element = 'input', getValue, setValue } = this.props;
+    const FormInputElementTag = element;
 
     return (
-      <input
+      <FormInputElementTag
         ref="input"
         className={this.getClassName()}
         value={getValue() || ''}
@@ -48,10 +36,6 @@ class FormInputElement extends Component {
       />
     );
   };
-};
-
-FormInputElement.contextTypes = {
-  displayValidationErrors: React.PropTypes.bool
 };
 
 export default HOC(FormInputElement);
