@@ -9,7 +9,8 @@ export default (ComposedComponent) => (
 
       this.state = {
         status: null,
-        message: null
+        message: null,
+        displayValidationErrors: false
       };
     };
 
@@ -22,6 +23,9 @@ export default (ComposedComponent) => (
         status: this.state.status,
         message: this.state.message,
         resetStatus: this.resetStatus,
+        displayValidationErrors: this.state.displayValidationErrors,
+        showValidationErrors: this.showValidationErrors,
+        hideValidationErrors: this.hideValidationErrors,
         handlePasswordAuth: this.handlePasswordAuth,
         handlePasswordReset: this.handlePasswordReset,
         handleSocialAuth: this.handleSocialAuth
@@ -59,7 +63,7 @@ export default (ComposedComponent) => (
       this.setStatus('processing');
 
       Account.resetPassword(email)
-        .then((data) => this.setState({ status: 'done' }))
+        .then((data) => this.setState({ status: 'success' }))
         .catch((error) => this.setStatus(error.status, error.message));
     };
 
@@ -85,6 +89,14 @@ export default (ComposedComponent) => (
       const redirectUrl = `${APP_CONFIG.dashboardUrl}#/login?token=${token}&signUpMode=${signUpMode}`;
 
       window.location.href = redirectUrl;
+    };
+
+    showValidationErrors = () => {
+      this.setState({ displayValidationErrors: true })
+    };
+
+    hideValidationErrors = () => {
+      this.setState({ displayValidationErrors: false })
     };
 
     render() {

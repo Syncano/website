@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Formsy from 'formsy-react';
 import classNames from 'classnames';
 import ModalWrapper from './ModalWrapper';
-import ModalTextField from './ModalTextField';
+import ModalInputElement from './ModalInputElement';
 import AuthHOC from '../AuthHOC';
 
 class ModalResetPassword extends Component {
@@ -21,15 +21,6 @@ class ModalResetPassword extends Component {
     });
   };
 
-  getInputClassName = () => {
-    const { status } = this.context.auth;
-
-    return classNames({
-      'form__input': true,
-      'is-invalid': (status === 400)
-    });
-  };
-
   renderErrorMessage = () => (
     <div className="form__message form__error-message">
       <p>Oops! That email was not found.</p>
@@ -43,20 +34,36 @@ class ModalResetPassword extends Component {
   );
 
   renderForm = () => {
-    const { auth } = this.context;
-    const { status, handlePasswordReset, handleSocialAuth } = auth;
+    const {
+      status,
+      displayValidationErrors,
+      showValidationErrors,
+      handlePasswordReset,
+      handleSocialAuth
+    } = this.context.auth;
+    
+    const isFormInvalid = status === 400;
+    const inputClassName = classNames({
+      'form__input': true,
+      'is-invalid': (isFormInvalid && displayValidationErrors)
+    });
 
     return (
       <div className="modal-box__content_form form">
-        <Formsy.Form onValidSubmit={(model) => handlePasswordReset(model)}>
-          <ModalTextField
-            className={this.getInputClassName()}
+        <Formsy.Form
+          onValidSubmit={handlePasswordReset}
+          onInvalidSubmit={showValidationErrors}
+        >
+          <ModalInputElement
+            className={inputClassName}
             name="email"
-            validations="isEmail"
-            type="email"
             placeholder="E-mail address"
+            validations={{
+              isExisty: true,
+              isEmail: true
+            }}
+            displayValidationErrors={displayValidationErrors}
             autofocus
-            required
           />
           {status === 400 && this.renderErrorMessage()}
           <button

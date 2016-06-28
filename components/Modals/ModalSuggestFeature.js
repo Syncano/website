@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import ModalWrapper from './ModalWrapper';
 import ContactForm from '../ContactForm';
-import FormInput from '../FormInput';
-import FormTextarea from '../FormTextarea';
+import FormInputElement from '../FormInputElement';
 
 export default () => {
   return (
@@ -16,24 +15,27 @@ export default () => {
             buttonLabel="Send message"
             buttonIsFeatured={true}
           >
-            <FormInput
+            <FormInputElement
               type="text"
               name="name"
               placeholder="Name"
+              validations={{ isExisty: true }}
               autofocus
-              required
             />
-            <FormInput
-              type="email"
-              validations="isEmail"
+            <FormInputElement
+              type="text"
               name="_replyto"
               placeholder="E-mail address"
-              required
+              validations={{
+                isExisty: true,
+                isEmail: true
+              }}
             />
-            <FormTextarea
+            <FormInputElement
+              element="textarea"
               name="message"
               placeholder="Describe suggested feature"
-              required
+              validations={{ isExisty: true }}
             />
           </ContactForm>
         </div>

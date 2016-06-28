@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { HOC } from 'formsy-react';
 import classNames from 'classnames';
 
-class FormInput extends Component {
+class FormInputElement extends Component {
   componentDidMount() {
     const { autofocus } = this.props;
 
@@ -12,19 +12,22 @@ class FormInput extends Component {
   };
 
   getClassName = () => {
-    const { showError } = this.props;
+    const { element, showError, displayValidationErrors } = this.props;
+    const baseClassName = element === 'textarea' ? 'form__textarea' : 'form__input';
 
     return classNames({
-      'form__input': true,
-      'is-invalid': (showError())
+      'form__input': !element,
+      'form__textarea': element === 'textarea',
+      'is-invalid': (showError() && displayValidationErrors)
     });
   };
 
   render = () => {
-    const { getValue, setValue } = this.props;
+    const { element = 'input', getValue, setValue } = this.props;
+    const FormInputElementTag = element;
 
     return (
-      <input
+      <FormInputElementTag
         ref="input"
         className={this.getClassName()}
         value={getValue() || ''}
@@ -35,4 +38,4 @@ class FormInput extends Component {
   };
 };
 
-export default HOC(FormInput);
+export default HOC(FormInputElement);
