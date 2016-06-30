@@ -29,6 +29,7 @@ const Landing = (props, { modals }) => {
           on Slack, read tutorials or simply fork our open source code.`}
         ogImageSrc={`${redirect_uri}${require('./og-image.png')}`}
         twitterImageSrc={`${redirect_uri}${require('./twitter-image.png')}`}
+        noindexNofollow={true}
       />
       <Hero
         headline={<span>Build powerful apps<br />in half the time</span>}
