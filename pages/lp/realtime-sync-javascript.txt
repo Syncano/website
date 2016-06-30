@@ -1,0 +1,16 @@
+var Syncano = require("syncano"); // CommonJS
+var connection = Syncano({ accountKey: "ACCOUNT_KEY" });
+var DataObject = connection.DataObject;
+
+var book = {
+  title: "The Old Man and the Sea", 
+  author: "Ernest Hemingway",
+  instanceName: "INSTANCE_NAME",
+  className: "CLASS_name"
+};
+
+DataObject.please().create(book).then(function(book) {
+  console.log("book", book);
+});
+
+

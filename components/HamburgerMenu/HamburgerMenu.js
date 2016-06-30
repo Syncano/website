@@ -1,11 +1,12 @@
 import React from 'react';
 import { HamburgerMenuLink } from '../HamburgerMenu';
+import NotLandingElement from '../NotLandingElement';
 
 const HamburgerMenu = (props, { modals }) => {
   return (
     <nav className="hamburger-menu">
       <div className="inner">
-        <div className="hamburger-menu__menu">
+        <NotLandingElement className="hamburger-menu__menu" tagName="div">
           <ul>
             <li>
               <HamburgerMenuLink
@@ -40,17 +41,17 @@ const HamburgerMenu = (props, { modals }) => {
               </HamburgerMenuLink>
             </li>
           </ul>
-        </div>
+        </NotLandingElement>
         <div className="hamburger-menu__buttons">
           <ul>
-            <li>
+            <NotLandingElement tagName="li">
               <span
                 className="button button--large"
                 onClick={modals.logIn.open}
               >
                 Log In
               </span>
-            </li>
+            </NotLandingElement>
             <li>
               <span
                 className="button button--large button--featured"

@@ -36,15 +36,18 @@
   .top-bar__logo {
     float: left;
 
-    a {
+    a, span {
       display: block;
-      transition: $transition-default;
       padding: 10px;
       margin: -10px;
 
       .white {
         display: none;
       }
+    }
+
+    a {
+      transition: $transition-default;
 
       &:hover {
         opacity: .8;

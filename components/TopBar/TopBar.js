@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router';
 import Headroom from 'react-headroom';
-import { HamburgerMenu, HamburgerMenuHOC } from '../HamburgerMenu';
+import { HamburgerMenuHOC, HamburgerMenu } from '../HamburgerMenu';
+import LandingSpanLink from '../LandingSpanLink';
+import NotLandingElement from '../NotLandingElement';
 
-const TopBar = (props, { hamburgerMenu, modals }) => {
+const TopBar = (props, { hamburgerMenu, modals, isLandingPage }) => {
   return (
     <Headroom disableInlineStyles>
       <div className="inner">
         <div className="top-bar__logo">
-          <Link
+          <LandingSpanLink
             to="/"
             onClick={hamburgerMenu.close}
           >
@@ -21,7 +23,7 @@ const TopBar = (props, { hamburgerMenu, modals }) => {
               src={require('./images/logo-white.svg')}
               alt="Syncano Logo"
             />
-          </Link>
+          </LandingSpanLink>
         </div>
         <nav className="top-bar__nav">
           <div
@@ -40,7 +42,7 @@ const TopBar = (props, { hamburgerMenu, modals }) => {
           </div>
           <div className="top-bar__nav__menu">
             <ul>
-              <li>
+              <NotLandingElement tagName="li">
                 <Link
                   className="button button--noborder"
                   activeClassName="is-active"
@@ -48,8 +50,8 @@ const TopBar = (props, { hamburgerMenu, modals }) => {
                 >
                   Features
                 </Link>
-              </li>
-              <li>
+              </NotLandingElement>
+              <NotLandingElement tagName="li">
                 <Link
                   className="button button--noborder"
                   activeClassName="is-active"
@@ -57,8 +59,8 @@ const TopBar = (props, { hamburgerMenu, modals }) => {
                 >
                   Pricing
                 </Link>
-              </li>
-              <li>
+              </NotLandingElement>
+              <NotLandingElement tagName="li">
                 <a
                   className="button button--noborder"
                   href="http://docs.syncano.io/"
@@ -66,8 +68,8 @@ const TopBar = (props, { hamburgerMenu, modals }) => {
                 >
                   Docs
                 </a>
-              </li>
-              <li>
+              </NotLandingElement>
+              <NotLandingElement tagName="li">
                 <Link
                   className="button button--noborder"
                   activeClassName="is-active"
@@ -75,15 +77,7 @@ const TopBar = (props, { hamburgerMenu, modals }) => {
                 >
                   Help
                 </Link>
-              </li>
-              <li>
-                <span
-                  className="button button--noborder"
-                  onClick={modals.logIn.open}
-                >
-                  Log In
-                </span>
-              </li>
+              </NotLandingElement>
               <li>
                 <span
                   className="button top-bar__nav__menu__cta"
@@ -103,7 +97,8 @@ const TopBar = (props, { hamburgerMenu, modals }) => {
 
 TopBar.contextTypes = {
   hamburgerMenu: React.PropTypes.object,
-  modals: React.PropTypes.object
+  modals: React.PropTypes.object,
+  isLandingPage: React.PropTypes.bool
 };
 
 export default HamburgerMenuHOC(TopBar);

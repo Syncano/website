@@ -1,0 +1,16 @@
+saveNewItem() {
+  this.store.createRecord('todo', { 'title': this.get('newItem'), 'is_completed': false }).save();
+  this.set('newItem', null);
+},
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,17 +1,24 @@
 import React from 'react';
+import LandingSpanLink from '../LandingSpanLink';
 
-export default ({ className, imgSrc, title, href }) => {
+const PlatformsItem = ({ className, imgSrc, title, href }, { isLandingPage }) => {
   return (
-    <a
+    <LandingSpanLink
       className={`platforms__row__item ${className}`}
-      href={href}
+      href={isLandingPage ? null : href}
       target="_blank"
-      title={`View our ${title} library`}
+      title={isLandingPage ? null : `View our ${title} library`}
     >
       <img
         src={imgSrc}
         alt={title}
       />
-    </a>
+    </LandingSpanLink>
   );
 };
+
+PlatformsItem.contextTypes = {
+  isLandingPage: React.PropTypes.bool
+};
+
+export default PlatformsItem;

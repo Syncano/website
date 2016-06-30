@@ -8,6 +8,8 @@ import tweets from '../../data-tweets.json';
 
 export default class TwitterSlider extends Component {
   render = () => {
+    const { isOnLanding } = this.props;
+
     return (
       <div
         className="twitter-slider"
@@ -56,18 +58,21 @@ export default class TwitterSlider extends Component {
             >
               {_.map(tweets, (data) => (
                 <div>
-                  <TwitterWidget data={data} />
+                  <TwitterWidget
+                    data={data}
+                    isOnLanding={isOnLanding}
+                  />
                 </div>
               ))}
             </SliderWrapper>
           </div>
-          <a
+          {!isOnLanding && <a
             href="https://twitter.com/syncanolove/"
             className="button button--white"
             target="_blank"
           >
             More Tweets
-          </a>
+          </a>}
         </div>
       </div>
     );

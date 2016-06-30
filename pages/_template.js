@@ -7,12 +7,14 @@ import 'styles/styles';
 
 class Template extends Component {
   static childContextTypes = {
-    location: React.PropTypes.object
+    location: React.PropTypes.object,
+    isLandingPage: React.PropTypes.bool
   };
 
   getChildContext = () => {
     return {
-      location: this.props.location
+      location: this.props.location,
+      isLandingPage: this.props.location.pathname === '/lp/'
     };
   };
 
@@ -41,7 +43,7 @@ class Template extends Component {
   }
 
   render() {
-    const { children } = this.props;
+    const { location, children } = this.props;
 
     return (
       <div>

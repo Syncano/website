@@ -1,0 +1,16 @@
+// define Class of an object
+@interface Book : SCDataObject
+@property (nonatomic,copy) NSString *title;
+@property (nonatomic,copy) NSString *subtitle;
+@end
+  
+@implementation Book
+@end
+  
+// creating a book using Book class
+Book *book = [Book new];
+book.title = @"How to be a Pirate";
+book.subtitle = @"10 tips that will change your life.";
+[book saveWithCompletionBlock:^(NSError *error) {
+  // handle error
+}];
