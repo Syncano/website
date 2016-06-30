@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const NotLandingElement = ({ tagName = 'div' }, { isLandingPage }) => {
-  const TagName = tagName;
+class NotLandingElement extends Component {
+  render() {
+    const { tagName, children } = this.props;
+    const { isLandingPage } = this.context;
+    const TagName = tagName || 'div';
 
-  if (isLandingPage) {
-    return null;
+    if (isLandingPage) {
+      return null;
+    }
+
+    return (
+      <TagName {...this.props}>
+        {children}
+      </TagName>
+    );
   }
-
-  return (
-    <TagName {...this.props}>
-      {children}
-    </TagName>
-  );
 };
 
 NotLandingElement.contextTypes = {

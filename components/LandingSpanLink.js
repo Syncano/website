@@ -1,20 +1,35 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router';
 
-const LandingSpanLink = ({ className, children }, { isLandingPage }) => {
-  if (isLandingPage) {
+class LandingSpanLink extends Component {
+  render() {
+    const { tagName, children } = this.props;
+    const { isLandingPage } = this.context;
+
+    if (isLandingPage) {
+      return (
+        <span {...this.props}>
+          {children}
+        </span>
+      );
+    }
+
+    if (tagName) {
+      const TagName = tagName;
+
+      return (
+        <TagName {...this.props}>
+          {children}
+        </TagName>
+      )
+    }
+
     return (
-      <span className={className}>
+      <Link {...this.props}>
         {children}
-      </span>
+      </Link>
     );
   }
-
-  return (
-    <Link {...this.props}>
-      {children}
-    </Link>
-  );
 };
 
 LandingSpanLink.contextTypes = {

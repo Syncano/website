@@ -10,6 +10,7 @@ const TwitterWidget = ({ data }, { isLandingPage }) => {
   return (
     <div className="twitter-widget">
       <LandingSpanLink
+        tagName="a"
         className="twitter-widget__header"
         href={`https://twitter.com/${screen_name}`}
         target="_blank"

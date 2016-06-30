@@ -6,7 +6,7 @@ const HamburgerMenu = (props, { modals }) => {
   return (
     <nav className="hamburger-menu">
       <div className="inner">
-        <NotLandingElement className="hamburger-menu__menu" tagName="div">
+        <NotLandingElement className="hamburger-menu__menu">
           <ul>
             <li>
               <HamburgerMenuLink

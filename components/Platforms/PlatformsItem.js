@@ -4,6 +4,7 @@ import LandingSpanLink from '../LandingSpanLink';
 const PlatformsItem = ({ className, imgSrc, title, href }, { isLandingPage }) => {
   return (
     <LandingSpanLink
+      tagName="a"
       className={`platforms__row__item ${className}`}
       href={isLandingPage ? null : href}
       target="_blank"
