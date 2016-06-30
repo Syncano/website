@@ -98,6 +98,7 @@ export default class ContactForm extends Component {
             style={{ display: 'none' }}
           />
           {children.map((child) => React.cloneElement(child, {
+            key: child.props.name,
             displayValidationErrors: displayValidationErrors
           }))}
           <button

@@ -78,6 +78,14 @@ const TopBar = (props, { hamburgerMenu, modals, isLandingPage }) => {
                   Help
                 </Link>
               </NotLandingElement>
+              <NotLandingElement tagName="li">
+                <span
+                  className="button button--noborder"
+                  onClick={modals.logIn.open}
+                >
+                  Log In
+                </span>
+              </NotLandingElement>
               <li>
                 <span
                   className="button top-bar__nav__menu__cta"
