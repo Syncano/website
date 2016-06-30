@@ -8,7 +8,7 @@ const PlatformsItem = ({ className, imgSrc, title, href }, { isLandingPage }) =>
       className={`platforms__row__item ${className}`}
       href={isLandingPage ? null : href}
       target="_blank"
-      title={isLandingPage ? null : `View our ${title} library`}
+      title={isLandingPage ? title : `View our ${title} library`}
     >
       <img
         src={imgSrc}

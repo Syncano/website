@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 class NotLandingElement extends Component {
   render() {
-    const { tagName, children } = this.props;
+    const { tagName = 'div', children } = this.props;
     const { isLandingPage } = this.context;
-    const TagName = tagName || 'div';
+    const TagName = tagName;
 
     if (isLandingPage) {
       return null;

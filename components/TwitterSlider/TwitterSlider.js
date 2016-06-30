@@ -4,12 +4,11 @@ import SliderWrapper from '../SliderWrapper';
 import TwitterSliderNavPrev from './TwitterSliderNavPrev';
 import TwitterSliderNavNext from './TwitterSliderNavNext';
 import TwitterWidget from '../TwitterWidget';
+import NotLandingElement from '../NotLandingElement';
 import tweets from '../../data-tweets.json';
 
 export default class TwitterSlider extends Component {
   render = () => {
-    const { isOnLanding } = this.props;
-
     return (
       <div
         className="twitter-slider"
@@ -58,21 +57,18 @@ export default class TwitterSlider extends Component {
             >
               {_.map(tweets, (data) => (
                 <div>
-                  <TwitterWidget
-                    data={data}
-                    isOnLanding={isOnLanding}
-                  />
+                  <TwitterWidget data={data} />
                 </div>
               ))}
             </SliderWrapper>
           </div>
-          {!isOnLanding && <a
-            href="https://twitter.com/syncanolove/"
+          <NotLandingElement tagName="a"
             className="button button--white"
+            href="https://twitter.com/syncanolove/"
             target="_blank"
           >
             More Tweets
-          </a>}
+          </NotLandingElement>
         </div>
       </div>
     );

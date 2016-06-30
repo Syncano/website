@@ -43,7 +43,7 @@ class Template extends Component {
   }
 
   render() {
-    const { location, children } = this.props;
+    const { children } = this.props;
 
     return (
       <div>
