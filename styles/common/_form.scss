@@ -65,11 +65,7 @@
     .form__input,
     .form__textarea {
       margin-bottom: 20px;
-      line-height: (54px - (2 * 9px));
-    }
-
-    .form__input {
-      height: 54px;
+      padding: 14px 20px;
     }
 
     .form__message {
