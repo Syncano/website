@@ -53,8 +53,8 @@
     "eslint-plugin-jsx-a11y": "1.5.3",
     "eslint-plugin-react": "5.2.2",
     "extended-define-webpack-plugin": "0.1.0",
-    "nightwatch": "0.9.5",
-    "selenium-standalone": "5.4.0"
+    "nightwatch": "0.9.1",
+    "selenium-standalone": "5.1.0"
   },
   "keywords": [
     "gatsby"
