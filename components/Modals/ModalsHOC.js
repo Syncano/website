@@ -56,7 +56,7 @@ export default (ComposedComponent) => (
       router.push({
         query: _.omit(query, MODALS),
         pathname,
-        state
+        state: { ...state, forceTrack: true }
       });
     };
 

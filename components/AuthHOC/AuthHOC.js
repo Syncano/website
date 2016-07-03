@@ -52,7 +52,12 @@ export default (ComposedComponent) => (
       this.setStatus('processing');
 
       Account[type]({ email, password })
-        .then((data) => this.redirectToDashboard(data.account_key, type === 'register' && true))
+        .then((data) => {
+          this.trackSignUp(
+            data,
+            () => this.redirectToDashboard(data.account_key, type === 'register' && true)
+          );
+        })
         .catch((error) => this.setStatus(error.status, error.message));
     };
 
@@ -67,7 +72,7 @@ export default (ComposedComponent) => (
         .catch((error) => this.setStatus(error.status, error.message));
     };
 
-    handleSocialAuth = (network, signUpMode = false) => {
+    handleSocialAuth = (network) => {
       const { Account } = Syncano({ baseUrl: APP_CONFIG.syncanoAPIBaseUrl });
 
       Hello(network).login().then((data) => {
@@ -78,11 +83,24 @@ export default (ComposedComponent) => (
         }
 
         Account.socialLogin(data.network, access_token)
-          .then((data) => this.redirectToDashboard(data.account_key, signUpMode))
+          .then((response) => {
+            this.trackSignUp(
+              { ...response, network: data.network },
+              () => this.redirectToDashboard(response.account_key, response.created)
+            );
+          })
           .catch((error) => this.setStatus(error.status, error.message));
       }, (error) => this.setState({
         message: error.error.message
       }));
+    };
+
+    trackSignUp(data, callback) {
+      const authBackend = data.network || 'password';
+      const email = data.email;
+
+      window.analytics.alias(email);
+      window.analytics.track('Sign Up Website', { authBackend, email }, {}, callback);
     };
 
     redirectToDashboard = (token, signUpMode = false) => {
