@@ -10,6 +10,10 @@ export default (ComposedComponent) => (
       this.state = this.getInitialModalsState();
     };
 
+    static contextTypes = {
+      router: React.PropTypes.object
+    };
+
     static childContextTypes = {
       modals: React.PropTypes.object
     };
@@ -20,27 +24,40 @@ export default (ComposedComponent) => (
       return { modals: childContext };
     };
 
-    closeAll = () => {
+    closeAll = (updateRoute = true) => {
       const newState = _.merge({}, this.state);
 
       _.forEach(newState, (modal) => {
         newState[modal.name].isOpen = false
       });
 
+      !_.isBoolean(updateRoute) && this.handleUpdateRoute();
       this.setState(newState);
     };
 
     closeModal = (modalName) => {
       const newState = _.merge({}, this.state[modalName], { isOpen: false });
 
+      this.handleUpdateRoute();
       this.setState({ [modalName]: newState });
     };
 
     openModal = (modalName) => {
       const newState = _.merge({}, this.state[modalName], { isOpen: true });
 
-      this.closeAll();
+      this.closeAll(false);
       this.setState({ [modalName]: newState });
+    };
+
+    handleUpdateRoute = () => {
+      const { router } = this.context;
+      const { pathname, query, state } = this.props.location;
+
+      router.push({
+        query: _.omit(query, MODALS),
+        pathname,
+        state
+      });
     };
 
     getInitialModalsState = () => {
