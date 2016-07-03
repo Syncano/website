@@ -26,12 +26,11 @@ class Template extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    const currentPath = this.props.location.pathname;
+    const { pathname, state } = this.props.location;
     const previousPath = prevProps.children.props.location.pathname;
-    const currentQuery = this.props.location.query;
-    const previousQuery = prevProps.children.props.location.query;
+    const forceTrack = state && state.forceTrack;
 
-    if (currentPath !== previousPath || currentQuery !== previousQuery) {
+    if (pathname !== previousPath || forceTrack) {
       this.trackPageView();
     }
   }
