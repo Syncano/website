@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Modals, ModalsHOC, TopBar } from '../components';
 import Helmet from 'react-helmet';
 import _ from 'lodash';
+import { Modals, ModalsHOC, TopBar } from '../components';
+import GLOBAL_CONFIG from '../config/global';
 import 'normalize.css';
 import 'styles/styles';
 
@@ -14,7 +15,7 @@ class Template extends Component {
   getChildContext = () => {
     return {
       location: this.props.location,
-      isLandingPage: this.props.location.pathname === '/lp/'
+      isLandingPage: _.includes(GLOBAL_CONFIG.landingPagesSlugs, this.props.location.pathname)
     };
   };
 

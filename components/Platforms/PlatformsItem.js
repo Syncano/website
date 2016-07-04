@@ -1,12 +1,12 @@
 import React from 'react';
-import LandingSpanLink from '../LandingSpanLink';
+import Link from '../Link';
 
 const PlatformsItem = ({ className, imgSrc, title, href }, { isLandingPage }) => {
   return (
-    <LandingSpanLink
+    <Link
       tagName="a"
       className={`platforms__row__item ${className}`}
-      href={isLandingPage ? null : href}
+      href={!isLandingPage && href}
       target="_blank"
       title={isLandingPage ? title : `View our ${title} library`}
     >
@@ -14,7 +14,7 @@ const PlatformsItem = ({ className, imgSrc, title, href }, { isLandingPage }) =>
         src={imgSrc}
         alt={title}
       />
-    </LandingSpanLink>
+    </Link>
   );
 };
 

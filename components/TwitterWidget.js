@@ -1,7 +1,7 @@
 import React from 'react';
 import Autolinker from 'autolinker';
 import _ from 'lodash';
-import LandingSpanLink from './LandingSpanLink';
+import Link from './Link';
 
 const TwitterWidget = ({ data }, { isLandingPage }) => {
   const { user, text } = data;
@@ -9,7 +9,7 @@ const TwitterWidget = ({ data }, { isLandingPage }) => {
 
   return (
     <div className="twitter-widget">
-      <LandingSpanLink
+      <Link
         tagName="a"
         className="twitter-widget__header"
         href={`https://twitter.com/${screen_name}`}
@@ -25,7 +25,7 @@ const TwitterWidget = ({ data }, { isLandingPage }) => {
           <strong>{name}</strong>
           <div className="twitter-widget__header__user__username">@{screen_name}</div>
         </div>
-      </LandingSpanLink>
+      </Link>
       <div className="twitter-widget__content">
         <p dangerouslySetInnerHTML={{__html: isLandingPage ? text : Autolinker.link(text, { hashtag: 'twitter' })}} />
       </div>

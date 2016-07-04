@@ -1,21 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class HideOnLandingPage extends Component {
-  render() {
-    const { tagName = 'div', children } = this.props;
-    const { isLandingPage } = this.context;
-    const TagName = tagName;
+const HideOnLandingPage = (props, { isLandingPage }) => {
+  const { tagName = 'div', children } = props;
+  const TagName = tagName;
 
-    if (isLandingPage) {
-      return null;
-    }
-
-    return (
-      <TagName {...this.props}>
-        {children}
-      </TagName>
-    );
+  if (isLandingPage) {
+    return null;
   }
+
+  return (
+    <TagName {...props}>
+      {children}
+    </TagName>
+  );
 };
 
 HideOnLandingPage.contextTypes = {

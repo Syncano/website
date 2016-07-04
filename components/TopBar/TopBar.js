@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router';
 import Headroom from 'react-headroom';
 import { HamburgerMenuHOC, HamburgerMenu } from '../HamburgerMenu';
-import LandingSpanLink from '../LandingSpanLink';
+import Link from '../Link';
 import HideOnLandingPage from '../HideOnLandingPage';
 
 const TopBar = (props, { hamburgerMenu, modals, isLandingPage }) => {
@@ -10,7 +9,7 @@ const TopBar = (props, { hamburgerMenu, modals, isLandingPage }) => {
     <Headroom disableInlineStyles>
       <div className="inner">
         <div className="top-bar__logo">
-          <LandingSpanLink
+          <Link
             to="/"
             onClick={hamburgerMenu.close}
           >
@@ -23,7 +22,7 @@ const TopBar = (props, { hamburgerMenu, modals, isLandingPage }) => {
               src={require('./images/logo-white.svg')}
               alt="Syncano Logo"
             />
-          </LandingSpanLink>
+          </Link>
         </div>
         <nav className="top-bar__nav">
           <div

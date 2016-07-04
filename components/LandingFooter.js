@@ -6,7 +6,7 @@ export default () => (
     <div className="inner">
       <div className="footer__logo">
         <img
-          src={require('./images/logo.svg')}
+          src={require('./Footer/images/logo.svg')}
           alt="Syncano"
         />
         <div className="footer__logo__copyright">

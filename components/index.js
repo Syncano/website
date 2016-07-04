@@ -18,7 +18,7 @@ import HamburgerMenu from './HamburgerMenu';
 import Hero from './Hero';
 import HideOnLandingPage from './HideOnLandingPage';
 import LandingFooter from './LandingFooter';
-import LandingSpanLink from './LandingSpanLink';
+import Link from './Link';
 import ListColumns from './ListColumns';
 import { Modals, ModalsHOC } from './Modals';
 import OfficeAddresses from './OfficeAddresses';
@@ -69,7 +69,7 @@ export default {
   Hero,
   HideOnLandingPage,
   LandingFooter,
-  LandingSpanLink,
+  Link,
   ListColumns,
   Modals,
   ModalsHOC,
