@@ -41,49 +41,59 @@ const TopBar = (props, { hamburgerMenu, modals, isLandingPage }) => {
           </div>
           <div className="top-bar__nav__menu">
             <ul>
-              <HideOnLandingPage tagName="li">
-                <Link
-                  className="button button--noborder"
-                  activeClassName="is-active"
-                  to="/features/"
-                >
-                  Features
-                </Link>
+            <HideOnLandingPage>
+                <li>
+                  <Link
+                    className="button button--noborder"
+                    activeClassName="is-active"
+                    to="/features/"
+                  >
+                    Features
+                  </Link>
+                </li>
               </HideOnLandingPage>
-              <HideOnLandingPage tagName="li">
-                <Link
-                  className="button button--noborder"
-                  activeClassName="is-active"
-                  to="/pricing/"
-                >
-                  Pricing
-                </Link>
+              <HideOnLandingPage>
+                <li>
+                  <Link
+                    className="button button--noborder"
+                    activeClassName="is-active"
+                    to="/pricing/"
+                  >
+                    Pricing
+                  </Link>
+                </li>
               </HideOnLandingPage>
-              <HideOnLandingPage tagName="li">
-                <a
-                  className="button button--noborder"
-                  href="http://docs.syncano.io/"
-                  target="_blank"
-                >
-                  Docs
-                </a>
+              <HideOnLandingPage>
+                <li>
+                  <a
+                    className="button button--noborder"
+                    href="http://docs.syncano.io/"
+                    target="_blank"
+                  >
+                    Docs
+                  </a>
+                </li>
               </HideOnLandingPage>
-              <HideOnLandingPage tagName="li">
-                <Link
-                  className="button button--noborder"
-                  activeClassName="is-active"
-                  to="/help/"
-                >
-                  Help
-                </Link>
+              <HideOnLandingPage>
+                <li>
+                  <Link
+                    className="button button--noborder"
+                    activeClassName="is-active"
+                    to="/help/"
+                  >
+                    Help
+                  </Link>
+                </li>
               </HideOnLandingPage>
-              <HideOnLandingPage tagName="li">
-                <span
-                  className="button button--noborder"
-                  onClick={modals.logIn.open}
-                >
-                  Log In
-                </span>
+              <HideOnLandingPage>
+                <li>
+                  <span
+                    className="button button--noborder"
+                    onClick={modals.logIn.open}
+                  >
+                    Log In
+                  </span>
+                </li>
               </HideOnLandingPage>
               <li>
                 <span

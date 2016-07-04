@@ -62,13 +62,14 @@ export default class TwitterSlider extends Component {
               ))}
             </SliderWrapper>
           </div>
-          <HideOnLandingPage
-            tagName="a"
-            className="button button--white"
-            href="https://twitter.com/syncanolove/"
-            target="_blank"
-          >
-            More Tweets
+          <HideOnLandingPage>
+            <a
+              className="button button--white"
+              href="https://twitter.com/syncanolove/"
+              target="_blank"
+            >
+              More Tweets
+            </a>
           </HideOnLandingPage>
         </div>
       </div>

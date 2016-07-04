@@ -1,18 +1,11 @@
 import React from 'react';
 
-const HideOnLandingPage = (props, { isLandingPage }) => {
-  const { tagName = 'div', children } = props;
-  const TagName = tagName;
-
+const HideOnLandingPage = ({ children }, { isLandingPage }) => {
   if (isLandingPage) {
     return null;
   }
 
-  return (
-    <TagName {...props}>
-      {children}
-    </TagName>
-  );
+  return children;
 };
 
 HideOnLandingPage.contextTypes = {
