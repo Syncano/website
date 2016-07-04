@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Formsy from 'formsy-react';
 import axios from 'axios';
 import classNames from 'classnames';
-import FormInputElement from './FormInputElement';
+import FormInputElement from '../FormInputElement';
 
 export default class ContactForm extends Component {
   constructor(props) {
@@ -11,6 +11,16 @@ export default class ContactForm extends Component {
     this.state = {
       status: '',
       displayValidationErrors: false
+    };
+  };
+
+  static childContextTypes = {
+    displayValidationErrors: React.PropTypes.bool
+  };
+
+  getChildContext = () => {
+    return {
+      displayValidationErrors: this.state.displayValidationErrors
     };
   };
 
@@ -88,7 +98,7 @@ export default class ContactForm extends Component {
   };
 
   renderForm = () => {
-    const { status, displayValidationErrors } = this.state;
+    const { status } = this.state;
     const { title, subject, children, buttonLabel } = this.props;
 
     return (
@@ -108,9 +118,7 @@ export default class ContactForm extends Component {
               name="_gotcha"
               style={{ display: 'none' }}
             />
-            {children.map((child) => React.cloneElement(child, {
-              displayValidationErrors: displayValidationErrors
-            }))}
+            {children}
             <button
               className={this.getButtonClassName()}
               disabled={status === 'processing'}

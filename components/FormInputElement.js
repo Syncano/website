@@ -12,7 +12,8 @@ class FormInputElement extends Component {
   };
 
   getClassName = () => {
-    const { element, showError, displayValidationErrors } = this.props;
+    const { displayValidationErrors } = this.context;
+    const { element, showError } = this.props;
     const baseClassName = element === 'textarea' ? 'form__textarea' : 'form__input';
 
     return classNames({
@@ -36,6 +37,10 @@ class FormInputElement extends Component {
       />
     );
   };
+};
+
+FormInputElement.contextTypes = {
+  displayValidationErrors: React.PropTypes.bool
 };
 
 export default HOC(FormInputElement);
