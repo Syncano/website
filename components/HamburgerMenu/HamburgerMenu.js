@@ -1,12 +1,12 @@
 import React from 'react';
 import { HamburgerMenuLink } from '../HamburgerMenu';
-import NotLandingElement from '../NotLandingElement';
+import HideOnLandingPage from '../HideOnLandingPage';
 
 const HamburgerMenu = (props, { modals }) => {
   return (
     <nav className="hamburger-menu">
       <div className="inner">
-        <NotLandingElement className="hamburger-menu__menu">
+        <HideOnLandingPage className="hamburger-menu__menu">
           <ul>
             <li>
               <HamburgerMenuLink
@@ -41,17 +41,17 @@ const HamburgerMenu = (props, { modals }) => {
               </HamburgerMenuLink>
             </li>
           </ul>
-        </NotLandingElement>
+        </HideOnLandingPage>
         <div className="hamburger-menu__buttons">
           <ul>
-            <NotLandingElement tagName="li">
+            <HideOnLandingPage tagName="li">
               <span
                 className="button button--large"
                 onClick={modals.logIn.open}
               >
                 Log In
               </span>
-            </NotLandingElement>
+            </HideOnLandingPage>
             <li>
               <span
                 className="button button--large button--featured"

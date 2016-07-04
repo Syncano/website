@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import Headroom from 'react-headroom';
 import { HamburgerMenuHOC, HamburgerMenu } from '../HamburgerMenu';
 import LandingSpanLink from '../LandingSpanLink';
-import NotLandingElement from '../NotLandingElement';
+import HideOnLandingPage from '../HideOnLandingPage';
 
 const TopBar = (props, { hamburgerMenu, modals, isLandingPage }) => {
   return (
@@ -42,7 +42,7 @@ const TopBar = (props, { hamburgerMenu, modals, isLandingPage }) => {
           </div>
           <div className="top-bar__nav__menu">
             <ul>
-              <NotLandingElement tagName="li">
+              <HideOnLandingPage tagName="li">
                 <Link
                   className="button button--noborder"
                   activeClassName="is-active"
@@ -50,8 +50,8 @@ const TopBar = (props, { hamburgerMenu, modals, isLandingPage }) => {
                 >
                   Features
                 </Link>
-              </NotLandingElement>
-              <NotLandingElement tagName="li">
+              </HideOnLandingPage>
+              <HideOnLandingPage tagName="li">
                 <Link
                   className="button button--noborder"
                   activeClassName="is-active"
@@ -59,8 +59,8 @@ const TopBar = (props, { hamburgerMenu, modals, isLandingPage }) => {
                 >
                   Pricing
                 </Link>
-              </NotLandingElement>
-              <NotLandingElement tagName="li">
+              </HideOnLandingPage>
+              <HideOnLandingPage tagName="li">
                 <a
                   className="button button--noborder"
                   href="http://docs.syncano.io/"
@@ -68,8 +68,8 @@ const TopBar = (props, { hamburgerMenu, modals, isLandingPage }) => {
                 >
                   Docs
                 </a>
-              </NotLandingElement>
-              <NotLandingElement tagName="li">
+              </HideOnLandingPage>
+              <HideOnLandingPage tagName="li">
                 <Link
                   className="button button--noborder"
                   activeClassName="is-active"
@@ -77,15 +77,15 @@ const TopBar = (props, { hamburgerMenu, modals, isLandingPage }) => {
                 >
                   Help
                 </Link>
-              </NotLandingElement>
-              <NotLandingElement tagName="li">
+              </HideOnLandingPage>
+              <HideOnLandingPage tagName="li">
                 <span
                   className="button button--noborder"
                   onClick={modals.logIn.open}
                 >
                   Log In
                 </span>
-              </NotLandingElement>
+              </HideOnLandingPage>
               <li>
                 <span
                   className="button top-bar__nav__menu__cta"

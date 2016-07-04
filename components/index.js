@@ -16,11 +16,11 @@ import Footer from './Footer';
 import FormInputElement from './FormInputElement';
 import HamburgerMenu from './HamburgerMenu';
 import Hero from './Hero';
+import HideOnLandingPage from './HideOnLandingPage';
 import LandingFooter from './LandingFooter';
 import LandingSpanLink from './LandingSpanLink';
 import ListColumns from './ListColumns';
 import { Modals, ModalsHOC } from './Modals';
-import NotLandingElement from './NotLandingElement';
 import OfficeAddresses from './OfficeAddresses';
 import OfficesMap from './OfficesMap';
 import PageHeader from './PageHeader';
@@ -67,12 +67,12 @@ export default {
   FeaturesColumns,
   HamburgerMenu,
   Hero,
+  HideOnLandingPage,
   LandingFooter,
   LandingSpanLink,
   ListColumns,
   Modals,
   ModalsHOC,
-  NotLandingElement,
   OfficeAddresses,
   OfficesMap,
   PageHeader,

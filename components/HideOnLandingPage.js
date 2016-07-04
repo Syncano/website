@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class NotLandingElement extends Component {
+class HideOnLandingPage extends Component {
   render() {
     const { tagName = 'div', children } = this.props;
     const { isLandingPage } = this.context;
@@ -18,8 +18,8 @@ class NotLandingElement extends Component {
   }
 };
 
-NotLandingElement.contextTypes = {
+HideOnLandingPage.contextTypes = {
   isLandingPage: React.PropTypes.bool
 };
 
-export default NotLandingElement;
+export default HideOnLandingPage;
