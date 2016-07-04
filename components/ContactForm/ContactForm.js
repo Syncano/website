@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Formsy from 'formsy-react';
 import axios from 'axios';
 import classNames from 'classnames';
-import FormInputElement from './FormInputElement';
+import FormInputElement from '../FormInputElement';
 
 export default class ContactForm extends Component {
   constructor(props) {
@@ -11,6 +11,16 @@ export default class ContactForm extends Component {
     this.state = {
       status: '',
       displayValidationErrors: false
+    };
+  };
+
+  static childContextTypes = {
+    displayValidationErrors: React.PropTypes.bool
+  };
+
+  getChildContext = () => {
+    return {
+      displayValidationErrors: this.state.displayValidationErrors
     };
   };
 
@@ -46,13 +56,22 @@ export default class ContactForm extends Component {
     </div>
   );
 
-  getThankYouMessage = () => (
-    <div>
-      <p><strong>Thank you! Your message has been received.</strong></p>
-      <p>{`We'll get back to you soon. In the meantime, check out some of our `}
-      <a href="https://www.syncano.io/blog/" target="_blank">recent blog articles</a>.</p>
-    </div>
-  );
+  getThankYouMessage = () => {
+    const { thankYouMessage } = this.props;
+
+    if (thankYouMessage) {
+      return thankYouMessage;
+    }
+
+    return (
+      <div>
+        <h2>Thank you!</h2>
+        <p><strong>Your message has been received.</strong></p>
+        <p>{`We'll get back to you soon. In the meantime, check out some of our `}
+        <a href="https://www.syncano.io/blog/" target="_blank">recent blog articles</a>.</p>
+      </div>
+    );
+  };
 
   renderStatus = (status) => (
     <div className="contact-form__box__message">
@@ -79,34 +98,35 @@ export default class ContactForm extends Component {
   };
 
   renderForm = () => {
-    const { status, displayValidationErrors } = this.state;
-    const { subject, children, buttonLabel } = this.props;
+    const { status } = this.state;
+    const { title, subject, children, buttonLabel } = this.props;
 
     return (
-      <div className="form">
-        <Formsy.Form
-          onValidSubmit={this.onSubmit}
-          onInvalidSubmit={this.showValidationErrors}
-        >
-          <FormInputElement
-            type="hidden"
-            name="_subject"
-            value={subject}
-          />
-          <FormInputElement
-            name="_gotcha"
-            style={{ display: 'none' }}
-          />
-          {children.map((child) => React.cloneElement(child, {
-            displayValidationErrors: displayValidationErrors
-          }))}
-          <button
-            className={this.getButtonClassName()}
-            disabled={status === 'processing'}
+      <div>
+        {title && <h2>{title}</h2>}
+        <div className="form">
+          <Formsy.Form
+            onValidSubmit={this.onSubmit}
+            onInvalidSubmit={this.showValidationErrors}
           >
-            {buttonLabel || 'Send'}
-          </button>
-        </Formsy.Form>
+            <FormInputElement
+              type="hidden"
+              name="_subject"
+              value={subject}
+            />
+            <FormInputElement
+              name="_gotcha"
+              style={{ display: 'none' }}
+            />
+            {children}
+            <button
+              className={this.getButtonClassName()}
+              disabled={status === 'processing'}
+            >
+              {buttonLabel || 'Send'}
+            </button>
+          </Formsy.Form>
+        </div>
       </div>
     );
   };
