@@ -2,6 +2,14 @@
   .contact-form__box__message {
     text-align: center;
 
+    h2 {
+      font-size: 28px;
+      line-height: 33px;
+      font-weight: 700;
+      color: $color-text-headline;
+      margin-bottom: 20px;
+    }
+
     p {
       line-height: 1.75;
 

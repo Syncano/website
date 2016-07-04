@@ -94,7 +94,7 @@ class ModalSignUp extends Component {
                   <li>
                   <span
                     className="button"
-                    onClick={() => handleSocialAuth('google', true)}
+                    onClick={() => handleSocialAuth('google')}
                   >
                     <img
                       src={require('./images/google.svg')}
@@ -106,7 +106,7 @@ class ModalSignUp extends Component {
                   <li>
                   <span
                     className="button"
-                    onClick={() => handleSocialAuth('github', true)}
+                    onClick={() => handleSocialAuth('github')}
                   >
                     <img
                       className="github"

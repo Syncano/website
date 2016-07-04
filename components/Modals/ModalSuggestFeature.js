@@ -9,11 +9,12 @@ export default () => {
     <ModalWrapper modalName="suggestFeature">
       <div className="modal-box__content">
         <div className="inner">
-          <h2>Suggest a feature</h2>
           <ContactForm
+            title="Suggest a feature"
             subject="Suggest a Feature Form Submission from syncano.io"
             buttonLabel="Send message"
             buttonIsFeatured={true}
+            thankYouMessage={<ContactForm.DocsThankYouMessage />}
           >
             <FormInputElement
               type="text"
