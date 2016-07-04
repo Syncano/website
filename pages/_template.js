@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Modals, ModalsHOC, TopBar } from '../components';
+import _ from 'lodash';
 import { MODALS } from '../components/Modals/Modals';
 import Helmet from 'react-helmet';
-import _ from 'lodash';
+import { Modals, ModalsHOC, TopBar } from '../components';
+import GLOBAL_CONFIG from '../config/global';
 import 'normalize.css';
 import 'styles/styles';
 
@@ -12,12 +13,14 @@ class Template extends Component {
   };
 
   static childContextTypes = {
-    location: React.PropTypes.object
+    location: React.PropTypes.object,
+    isLandingPage: React.PropTypes.bool
   };
 
   getChildContext = () => {
     return {
-      location: this.props.location
+      location: this.props.location,
+      isLandingPage: _.includes(GLOBAL_CONFIG.landingPagesSlugs, this.props.location.pathname)
     };
   };
 

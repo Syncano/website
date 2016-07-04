@@ -4,6 +4,7 @@ import SliderWrapper from '../SliderWrapper';
 import TwitterSliderNavPrev from './TwitterSliderNavPrev';
 import TwitterSliderNavNext from './TwitterSliderNavNext';
 import TwitterWidget from '../TwitterWidget';
+import HideOnLandingPage from '../HideOnLandingPage';
 import tweets from '../../data-tweets.json';
 
 export default class TwitterSlider extends Component {
@@ -61,13 +62,15 @@ export default class TwitterSlider extends Component {
               ))}
             </SliderWrapper>
           </div>
-          <a
-            href="https://twitter.com/syncanolove/"
-            className="button button--white"
-            target="_blank"
-          >
-            More Tweets
-          </a>
+          <HideOnLandingPage>
+            <a
+              className="button button--white"
+              href="https://twitter.com/syncanolove/"
+              target="_blank"
+            >
+              More Tweets
+            </a>
+          </HideOnLandingPage>
         </div>
       </div>
     );
