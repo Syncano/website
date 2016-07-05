@@ -1,4 +1,5 @@
 export default {
+  landingPagesSlugs: ['/lp/'],
   tweetsIDs: [
     '712734440062074883',
     '667455738139320320',

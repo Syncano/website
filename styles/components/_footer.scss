@@ -109,6 +109,24 @@
     margin-top: 80px;
   }
 
+  &.footer--landing {
+    padding: 80px 0;
+
+    .inner {
+      display: block;
+    }
+
+    .footer__logo .footer__logo__copyright,
+    .footer__copyright {
+      margin-top: 30px;
+    }
+
+    .footer__logo {
+      margin-bottom: 0;
+      align-items: center;
+    }
+  }
+
   @include medium {
     .footer__column {
       flex-basis: 25%;

@@ -1,17 +1,25 @@
 import React from 'react';
+import Link from '../Link';
 
-export default ({ className, imgSrc, title, href }) => {
+const PlatformsItem = ({ className, imgSrc, title, href }, { isLandingPage }) => {
   return (
-    <a
+    <Link
+      tagName="a"
       className={`platforms__row__item ${className}`}
-      href={href}
+      href={!isLandingPage && href}
       target="_blank"
-      title={`View our ${title} library`}
+      title={isLandingPage ? title : `View our ${title} library`}
     >
       <img
         src={imgSrc}
         alt={title}
       />
-    </a>
+    </Link>
   );
 };
+
+PlatformsItem.contextTypes = {
+  isLandingPage: React.PropTypes.bool
+};
+
+export default PlatformsItem;

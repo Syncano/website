@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { HOC } from 'formsy-react';
 import classNames from 'classnames';
 
-class ModalTextField extends Component {
+class ModalInputElement extends Component {
   componentDidMount() {
     const { autofocus } = this.props;
 
@@ -12,11 +12,12 @@ class ModalTextField extends Component {
   };
 
   getClassName = () => {
-    const { showError, className } = this.props;
+    const { showError, className, displayValidationErrors } = this.props;
 
     return classNames(className, {
+      'form__input': true,
       'mousetrap': true,
-      'is-invalid': (showError())
+      'is-invalid': (showError() && displayValidationErrors)
     });
   };
 
@@ -35,4 +36,4 @@ class ModalTextField extends Component {
   };
 }
 
-export default HOC(ModalTextField);
+export default HOC(ModalInputElement);

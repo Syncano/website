@@ -49,6 +49,10 @@
     }
   }
 
+  .screen-descriptions__footer {
+    text-align: center;
+  }
+
   @include medium {
     padding-top: (80px + 50px);
 

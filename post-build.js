@@ -1,10 +1,11 @@
 import _ from 'lodash';
 import sm from 'sitemap';
 import fs from 'fs-extra';
+import GLOBAL_CONFIG from './config/global';
 
 const generateSitemapUrl = (page) => {
   const pagePath = _.isString(page) ? page : page.path;
-  const nonIndexedPages = ['/404/'];
+  const nonIndexedPages = ['/404/', ...GLOBAL_CONFIG.landingPagesSlugs];
   const importantPages = ['/', '/pricing/'];
   const isRootPath = pagePath === '/';
   const isNonIndexedPage = _.includes(nonIndexedPages, pagePath) || _.some(nonIndexedPages, (nonIndexedPage) => _.startsWith(pagePath, nonIndexedPage));

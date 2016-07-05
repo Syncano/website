@@ -2,22 +2,34 @@ import React, { Component } from 'react';
 import Formsy from 'formsy-react';
 import axios from 'axios';
 import classNames from 'classnames';
-import FormInput from './FormInput';
+import FormInputElement from '../FormInputElement';
 
 export default class ContactForm extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      status: ''
+      status: '',
+      displayValidationErrors: false
     };
   };
 
-  submit = (model) => {
+  static childContextTypes = {
+    displayValidationErrors: React.PropTypes.bool
+  };
+
+  getChildContext = () => {
+    return {
+      displayValidationErrors: this.state.displayValidationErrors
+    };
+  };
+
+  onSubmit = (model) => {
     const { sendToEmail } = this.props;
     const email = sendToEmail || APP_CONFIG.contactFormEmail;
     const action = `https://formspree.io/${email}`;
 
+    this.hideValidationErrors();
     this.setState({ status: 'processing' });
 
     axios.post(action, model)
@@ -44,13 +56,22 @@ export default class ContactForm extends Component {
     </div>
   );
 
-  getThankYouMessage = () => (
-    <div>
-      <p><strong>Thank you! Your message has been received.</strong></p>
-      <p>{`We'll get back to you soon. In the meantime, check out some of our `}
-      <a href="https://www.syncano.io/blog/" target="_blank">recent blog articles</a>.</p>
-    </div>
-  );
+  getThankYouMessage = () => {
+    const { thankYouMessage } = this.props;
+
+    if (thankYouMessage) {
+      return thankYouMessage;
+    }
+
+    return (
+      <div>
+        <h2>Thank you!</h2>
+        <p><strong>Your message has been received.</strong></p>
+        <p>{`We'll get back to you soon. In the meantime, check out some of our `}
+        <a href="https://www.syncano.io/blog/" target="_blank">recent blog articles</a>.</p>
+      </div>
+    );
+  };
 
   renderStatus = (status) => (
     <div className="contact-form__box__message">
@@ -68,30 +89,44 @@ export default class ContactForm extends Component {
     });
   };
 
+  showValidationErrors = () => {
+    this.setState({ displayValidationErrors: true })
+  };
+
+  hideValidationErrors = () => {
+    this.setState({ displayValidationErrors: false })
+  };
+
   renderForm = () => {
     const { status } = this.state;
-    const { subject, children, buttonLabel } = this.props;
+    const { title, subject, children, buttonLabel } = this.props;
 
     return (
-      <div className="form">
-        <Formsy.Form onValidSubmit={this.submit}>
-          <FormInput
-            type="hidden"
-            name="_subject"
-            value={subject}
-          />
-          <FormInput
-            name="_gotcha"
-            style={{ display: 'none' }}
-          />
-          {children}
-          <button
-            className={this.getButtonClassName()}
-            disabled={status === 'processing'}
+      <div>
+        {title && <h2>{title}</h2>}
+        <div className="form">
+          <Formsy.Form
+            onValidSubmit={this.onSubmit}
+            onInvalidSubmit={this.showValidationErrors}
           >
-            {buttonLabel || 'Send'}
-          </button>
-        </Formsy.Form>
+            <FormInputElement
+              type="hidden"
+              name="_subject"
+              value={subject}
+            />
+            <FormInputElement
+              name="_gotcha"
+              style={{ display: 'none' }}
+            />
+            {children}
+            <button
+              className={this.getButtonClassName()}
+              disabled={status === 'processing'}
+            >
+              {buttonLabel || 'Send'}
+            </button>
+          </Formsy.Form>
+        </div>
       </div>
     );
   };

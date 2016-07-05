@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router';
 import Headroom from 'react-headroom';
-import { HamburgerMenu, HamburgerMenuHOC } from '../HamburgerMenu';
+import { HamburgerMenuHOC, HamburgerMenu } from '../HamburgerMenu';
+import Link from '../Link';
+import HideOnLandingPage from '../HideOnLandingPage';
 
-const TopBar = (props, { hamburgerMenu, modals }) => {
+const TopBar = (props, { hamburgerMenu, modals, isLandingPage }) => {
   return (
     <Headroom disableInlineStyles>
       <div className="inner">
@@ -40,50 +41,60 @@ const TopBar = (props, { hamburgerMenu, modals }) => {
           </div>
           <div className="top-bar__nav__menu">
             <ul>
-              <li>
-                <Link
-                  className="button button--noborder"
-                  activeClassName="is-active"
-                  to="/features/"
-                >
-                  Features
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="button button--noborder"
-                  activeClassName="is-active"
-                  to="/pricing/"
-                >
-                  Pricing
-                </Link>
-              </li>
-              <li>
-                <a
-                  className="button button--noborder"
-                  href="http://docs.syncano.io/"
-                  target="_blank"
-                >
-                  Docs
-                </a>
-              </li>
-              <li>
-                <Link
-                  className="button button--noborder"
-                  activeClassName="is-active"
-                  to="/help/"
-                >
-                  Help
-                </Link>
-              </li>
-              <li>
-                <span
-                  className="button button--noborder"
-                  onClick={modals.logIn.open}
-                >
-                  Log In
-                </span>
-              </li>
+            <HideOnLandingPage>
+                <li>
+                  <Link
+                    className="button button--noborder"
+                    activeClassName="is-active"
+                    to="/features/"
+                  >
+                    Features
+                  </Link>
+                </li>
+              </HideOnLandingPage>
+              <HideOnLandingPage>
+                <li>
+                  <Link
+                    className="button button--noborder"
+                    activeClassName="is-active"
+                    to="/pricing/"
+                  >
+                    Pricing
+                  </Link>
+                </li>
+              </HideOnLandingPage>
+              <HideOnLandingPage>
+                <li>
+                  <a
+                    className="button button--noborder"
+                    href="http://docs.syncano.io/"
+                    target="_blank"
+                  >
+                    Docs
+                  </a>
+                </li>
+              </HideOnLandingPage>
+              <HideOnLandingPage>
+                <li>
+                  <Link
+                    className="button button--noborder"
+                    activeClassName="is-active"
+                    to="/help/"
+                  >
+                    Help
+                  </Link>
+                </li>
+              </HideOnLandingPage>
+              <HideOnLandingPage>
+                <li>
+                  <span
+                    className="button button--noborder"
+                    onClick={modals.logIn.open}
+                  >
+                    Log In
+                  </span>
+                </li>
+              </HideOnLandingPage>
               <li>
                 <span
                   className="button top-bar__nav__menu__cta"
@@ -103,7 +114,8 @@ const TopBar = (props, { hamburgerMenu, modals }) => {
 
 TopBar.contextTypes = {
   hamburgerMenu: React.PropTypes.object,
-  modals: React.PropTypes.object
+  modals: React.PropTypes.object,
+  isLandingPage: React.PropTypes.bool
 };
 
 export default HamburgerMenuHOC(TopBar);

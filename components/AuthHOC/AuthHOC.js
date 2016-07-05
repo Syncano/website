@@ -9,7 +9,8 @@ export default (ComposedComponent) => (
 
       this.state = {
         status: null,
-        message: null
+        message: null,
+        displayValidationErrors: false
       };
     };
 
@@ -22,6 +23,9 @@ export default (ComposedComponent) => (
         status: this.state.status,
         message: this.state.message,
         resetStatus: this.resetStatus,
+        displayValidationErrors: this.state.displayValidationErrors,
+        showValidationErrors: this.showValidationErrors,
+        hideValidationErrors: this.hideValidationErrors,
         handlePasswordAuth: this.handlePasswordAuth,
         handlePasswordReset: this.handlePasswordReset,
         handleSocialAuth: this.handleSocialAuth
@@ -48,7 +52,12 @@ export default (ComposedComponent) => (
       this.setStatus('processing');
 
       Account[type]({ email, password })
-        .then((data) => this.redirectToDashboard(data.account_key, type === 'register' && true))
+        .then((data) => {
+          this.trackSignUp(
+            data,
+            () => this.redirectToDashboard(data.account_key, type === 'register' && true)
+          );
+        })
         .catch((error) => this.setStatus(error.status, error.message));
     };
 
@@ -59,11 +68,11 @@ export default (ComposedComponent) => (
       this.setStatus('processing');
 
       Account.resetPassword(email)
-        .then((data) => this.setState({ status: 'done' }))
+        .then((data) => this.setState({ status: 'success' }))
         .catch((error) => this.setStatus(error.status, error.message));
     };
 
-    handleSocialAuth = (network, signUpMode = false) => {
+    handleSocialAuth = (network) => {
       const { Account } = Syncano({ baseUrl: APP_CONFIG.syncanoAPIBaseUrl });
 
       Hello(network).login().then((data) => {
@@ -74,17 +83,38 @@ export default (ComposedComponent) => (
         }
 
         Account.socialLogin(data.network, access_token)
-          .then((data) => this.redirectToDashboard(data.account_key, signUpMode))
+          .then((response) => {
+            this.trackSignUp(
+              { ...response, network: data.network },
+              () => this.redirectToDashboard(response.account_key, response.created)
+            );
+          })
           .catch((error) => this.setStatus(error.status, error.message));
       }, (error) => this.setState({
         message: error.error.message
       }));
     };
 
+    trackSignUp(data, callback) {
+      const authBackend = data.network || 'password';
+      const email = data.email;
+
+      window.analytics.alias(email);
+      window.analytics.track('Sign Up Website', { authBackend, email }, {}, callback);
+    };
+
     redirectToDashboard = (token, signUpMode = false) => {
       const redirectUrl = `${APP_CONFIG.dashboardUrl}#/login?token=${token}&signUpMode=${signUpMode}`;
 
       window.location.href = redirectUrl;
+    };
+
+    showValidationErrors = () => {
+      this.setState({ displayValidationErrors: true })
+    };
+
+    hideValidationErrors = () => {
+      this.setState({ displayValidationErrors: false })
     };
 
     render() {

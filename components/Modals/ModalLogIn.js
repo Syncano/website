@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Formsy from 'formsy-react';
 import classNames from 'classnames';
 import ModalWrapper from './ModalWrapper';
-import ModalTextField from './ModalTextField';
+import ModalInputElement from './ModalInputElement';
 import AuthHOC from '../AuthHOC';
 
 class ModalLogIn extends Component {
@@ -23,12 +23,19 @@ class ModalLogIn extends Component {
 
   render() {
     const { auth, modals } = this.context;
-    const { status, message, handlePasswordAuth, handleSocialAuth } = auth;
+    const {
+      status,
+      message,
+      displayValidationErrors,
+      showValidationErrors,
+      handlePasswordAuth,
+      handleSocialAuth
+    } = auth;
     const isFormInvalid = status !== 'done' && message;
 
     const inputClassName = classNames({
       'form__input': true,
-      'is-invalid': isFormInvalid
+      'is-invalid': (isFormInvalid && displayValidationErrors)
     });
 
     const renderErrorMessage = (message = 'Oops! That email / password combination is not valid.') => (
@@ -45,22 +52,28 @@ class ModalLogIn extends Component {
             <p>Log in to the Syncano Dashboard below:</p>
 
             <div className="modal-box__content_form form">
-              <Formsy.Form onValidSubmit={(model) => handlePasswordAuth('login', model)}>
-                <ModalTextField
+              <Formsy.Form
+                onValidSubmit={(model) => handlePasswordAuth('login', model)}
+                onInvalidSubmit={showValidationErrors}
+              >
+                <ModalInputElement
                   className={inputClassName}
                   name="email"
-                  validations="isEmail"
-                  type="email"
                   placeholder="E-mail address"
+                  validations={{
+                    isExisty: true,
+                    isEmail: true
+                  }}
+                  displayValidationErrors={displayValidationErrors}
                   autofocus
-                  required
                 />
-                <ModalTextField
+                <ModalInputElement
                   className={inputClassName}
                   type="password"
                   name="password"
                   placeholder="Password"
-                  required
+                  validations={{ isExisty: true }}
+                  displayValidationErrors={displayValidationErrors}
                 />
                 {isFormInvalid && renderErrorMessage(auth.message)}
                 <button

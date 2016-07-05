@@ -1,39 +1,42 @@
 import React, { Component } from 'react';
 import ModalWrapper from './ModalWrapper';
 import ContactForm from '../ContactForm';
-import FormInput from '../FormInput';
-import FormTextarea from '../FormTextarea';
+import FormInputElement from '../FormInputElement';
 
 export default () => {
   return (
     <ModalWrapper modalName="supportTicket">
       <div className="modal-box__content">
         <div className="inner">
-          <h2>Create support ticket</h2>
           <ContactForm
+            title="Create support ticket"
             sendToEmail={APP_CONFIG.supportFormEmail}
             subject="Support Form Submission from syncano.io"
             buttonLabel="Create Ticket"
             buttonIsFeatured={true}
+            thankYouMessage={<ContactForm.DocsThankYouMessage />}
           >
-            <FormInput
+            <FormInputElement
               type="text"
               name="name"
               placeholder="Name"
+              validations={{ isExisty: true }}
               autofocus
-              required
             />
-            <FormInput
-              type="email"
-              validations="isEmail"
+            <FormInputElement
+              type="text"
               name="_replyto"
               placeholder="E-mail address"
-              required
+              validations={{
+                isExisty: true,
+                isEmail: true
+              }}
             />
-            <FormTextarea
+            <FormInputElement
+              element="textarea"
               name="message"
               placeholder="Describe your issue"
-              required
+              validations={{ isExisty: true }}
             />
           </ContactForm>
         </div>

@@ -178,8 +178,8 @@ const Homepage = (props, { modals }) => {
       <TextWithBackground
         theme="image1"
         headline="We’ll support you every step of the way"
-        textline={`Adam is a great guy and a part of our support team. At Syncano, every team member is here to
-          help you. When you have questions, you’ll get timely answers directly from our team members.`}
+        textline={`Adam is a great guy and a part of our support team. At Syncano, every team member is here to help
+          you. When you have questions, you’ll get timely answers directly from our team members.`}
       >
         <Link
           to="/help/"

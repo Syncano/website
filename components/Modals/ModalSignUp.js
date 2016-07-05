@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Formsy from 'formsy-react';
 import classNames from 'classnames';
 import ModalWrapper from './ModalWrapper';
-import ModalTextField from './ModalTextField';
+import ModalInputElement from './ModalInputElement';
 import AuthHOC from '../AuthHOC';
 
 class ModalSignUp extends Component {
@@ -23,12 +23,19 @@ class ModalSignUp extends Component {
 
   render() {
     const { auth, modals } = this.context;
-    const { status, message, handlePasswordAuth, handleSocialAuth } = auth;
+    const {
+      status,
+      message,
+      displayValidationErrors,
+      showValidationErrors,
+      handlePasswordAuth,
+      handleSocialAuth
+    } = auth;
     const isFormInvalid = status !== 'done' && message;
 
     const inputClassName = classNames({
       'form__input': true,
-      'is-invalid': isFormInvalid
+      'is-invalid': (isFormInvalid && displayValidationErrors)
     });
 
     const renderErrorMessage = (message = 'Oops! That email / password combination is not valid.') => (
@@ -45,22 +52,28 @@ class ModalSignUp extends Component {
             <p>Build serverless apps on Syncano for free.<br/>Set up your backend in minutes!</p>
 
             <div className="modal-box__content_form form">
-              <Formsy.Form onValidSubmit={(model) => handlePasswordAuth('register', model)}>
-                <ModalTextField
+              <Formsy.Form
+                onValidSubmit={(model) => handlePasswordAuth('register', model)}
+                onInvalidSubmit={showValidationErrors}
+              >
+                <ModalInputElement
                   className={inputClassName}
                   name="email"
-                  validations="isEmail"
-                  type="email"
                   placeholder="E-mail address"
+                  validations={{
+                    isExisty: true,
+                    isEmail: true
+                  }}
+                  displayValidationErrors={displayValidationErrors}
                   autofocus
-                  required
                 />
-                <ModalTextField
+                <ModalInputElement
                   className={inputClassName}
                   type="password"
                   name="password"
                   placeholder="Password"
-                  required
+                  validations={{ isExisty: true }}
+                  displayValidationErrors={displayValidationErrors}
                 />
                 {isFormInvalid && renderErrorMessage(auth.message)}
                 <button
@@ -81,7 +94,7 @@ class ModalSignUp extends Component {
                   <li>
                   <span
                     className="button"
-                    onClick={() => handleSocialAuth('google', true)}
+                    onClick={() => handleSocialAuth('google')}
                   >
                     <img
                       src={require('./images/google.svg')}
@@ -93,7 +106,7 @@ class ModalSignUp extends Component {
                   <li>
                   <span
                     className="button"
-                    onClick={() => handleSocialAuth('github', true)}
+                    onClick={() => handleSocialAuth('github')}
                   >
                     <img
                       className="github"

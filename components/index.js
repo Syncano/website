@@ -13,10 +13,12 @@ import CTASection from './CTASection';
 import FAQ from './FAQ';
 import FeaturesColumns from './FeaturesColumns';
 import Footer from './Footer';
-import FormInput from './FormInput';
-import FormTextarea from './FormTextarea';
+import FormInputElement from './FormInputElement';
 import HamburgerMenu from './HamburgerMenu';
 import Hero from './Hero';
+import HideOnLandingPage from './HideOnLandingPage';
+import LandingFooter from './LandingFooter';
+import Link from './Link';
 import ListColumns from './ListColumns';
 import { Modals, ModalsHOC } from './Modals';
 import OfficeAddresses from './OfficeAddresses';
@@ -61,11 +63,13 @@ export default {
   CTASection,
   FAQ,
   Footer,
-  FormInput,
-  FormTextarea,
+  FormInputElement,
   FeaturesColumns,
   HamburgerMenu,
   Hero,
+  HideOnLandingPage,
+  LandingFooter,
+  Link,
   ListColumns,
   Modals,
   ModalsHOC,
