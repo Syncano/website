@@ -2,8 +2,8 @@ import APP_CONFIG from './config/';
 import ExtendedDefinePlugin from 'extended-define-webpack-plugin';
 
 exports.modifyWebpackConfig = function(config, env) {
-  const fileLoader = env !== 'develop' ? 'file-loader?name=/[hash].[ext]' : 'file-loader';
-  const imageLoader = env !== 'develop' ? 'file-loader?name=/[name]-[hash].[ext]' : 'file-loader';
+  const fileLoader = env !== 'develop' ? 'file-loader?name=[hash].[ext]' : 'file-loader';
+  const imageLoader = env !== 'develop' ? 'file-loader?name=[name]-[hash].[ext]' : 'file-loader';
 
   config.removeLoader('flv');
   config.loader('flv', function(cfg) {
