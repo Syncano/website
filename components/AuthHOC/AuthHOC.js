@@ -104,8 +104,12 @@ export default (ComposedComponent) => (
     };
 
     redirectToDashboard = (token, signUpMode = false) => {
-      const redirectUrl = `${APP_CONFIG.dashboardUrl}#/login?token=${token}&signUpMode=${signUpMode}`;
+      let redirectUrl = `${APP_CONFIG.dashboardUrl}#/login?token=${token}`;
 
+      if (signUpMode) {
+        redirectUrl += `&signUpMode=${signUpMode}`;
+      }
+      
       window.location.href = redirectUrl;
     };
 
