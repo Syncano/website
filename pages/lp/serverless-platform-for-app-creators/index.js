@@ -1,15 +1,15 @@
 import React from 'react';
-import { Hero } from '../../components';
+import { Hero } from '../../../components';
 
-const LandingPage = (props, { modals }) => {
+const ForAppCreatorsLandingPage = (props, { modals }) => {
   return (
     <Hero
-      headline={<span>Build powerful apps<br />in half the time</span>}
-      textline={`A platform for building serverless apps. Increase productivity, focus on new features, and scale
-        without managing servers.`}
+      headline={<span>Serverless platform<br />for app creators</span>}
+      textline={`Increase your productivity, focus on new features, and scale beyond millions of users without managing
+        servers.`}
       image={
         <img
-          src={require('../home/build-powerful-apps-in-half-the-time.svg')}
+          src={require('../../home/build-powerful-apps-in-half-the-time.svg')}
           alt="serverless app platform"
         />
       }
@@ -29,8 +29,8 @@ const LandingPage = (props, { modals }) => {
   );
 };
 
-LandingPage.contextTypes = {
+ForAppCreatorsLandingPage.contextTypes = {
   modals: React.PropTypes.object
 };
 
-export default LandingPage;
+export default ForAppCreatorsLandingPage;
