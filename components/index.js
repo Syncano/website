@@ -18,6 +18,7 @@ import HamburgerMenu from './HamburgerMenu';
 import Hero from './Hero';
 import HideOnLandingPage from './HideOnLandingPage';
 import LandingFooter from './LandingFooter';
+import LandingPageContent from './LandingPageContent';
 import Link from './Link';
 import ListColumns from './ListColumns';
 import { Modals, ModalsHOC } from './Modals';
@@ -69,6 +70,7 @@ export default {
   Hero,
   HideOnLandingPage,
   LandingFooter,
+  LandingPageContent,
   Link,
   ListColumns,
   Modals,
