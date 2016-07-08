@@ -18,7 +18,7 @@ export default () => (
       </div>
       <div className="footer__columns">
         <div className="footer__column">
-          <h3>Company</h3>
+          <div className="footer__headline">Company</div>
           <ul>
             <li>
               <Link to="/about/">About Us</Link>
@@ -38,7 +38,7 @@ export default () => (
           </ul>
         </div>
         <div className="footer__column">
-          <h3>Product</h3>
+          <div className="footer__headline">Product</div>
           <ul>
             <li>
               <Link to="/features/">Features</Link>
@@ -55,7 +55,7 @@ export default () => (
           </ul>
         </div>
         <div className="footer__column">
-          <h3>Resources</h3>
+          <div className="footer__headline">Resources</div>
           <ul>
             <li>
               <a href="http://docs.syncano.io/docs/getting-started-with-syncano/" target="_blank">Getting Started</a>
@@ -75,7 +75,7 @@ export default () => (
           </ul>
         </div>
         <div className="footer__column">
-          <h3>Let’s connect</h3>
+          <div className="footer__headline">Let’s connect</div>
           <ul>
             <li>
               <a href="https://twitter.com/Syncano/" target="_blank">Twitter</a>
@@ -99,10 +99,10 @@ export default () => (
         </div>
       </div>
       <div className="footer__newsletter">
-        <h3>Get our serverless digest</h3>
+        <div className="footer__headline">Get our serverless digest</div>
         <NewsletterForm />
         <div className="footer__newsletter__social">
-          <h3>Let’s connect</h3>
+          <div className="footer__headline">Let’s connect</div>
           <ul>
             <li>
               <a
