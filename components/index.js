@@ -17,7 +17,8 @@ import FormInputElement from './FormInputElement';
 import HamburgerMenu from './HamburgerMenu';
 import Hero from './Hero';
 import HideOnLandingPage from './HideOnLandingPage';
-import LandingFooter from './LandingFooter';
+import LandingPageFooter from './LandingPageFooter';
+import LandingPageHero from './LandingPageHero';
 import Link from './Link';
 import ListColumns from './ListColumns';
 import { Modals, ModalsHOC } from './Modals';
@@ -68,7 +69,8 @@ export default {
   HamburgerMenu,
   Hero,
   HideOnLandingPage,
-  LandingFooter,
+  LandingPageFooter,
+  LandingPageHero,
   Link,
   ListColumns,
   Modals,

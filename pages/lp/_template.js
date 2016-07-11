@@ -14,7 +14,7 @@ import {
   CodePreview,
   TextWithBackground,
   CTASection,
-  LandingFooter
+  LandingPageFooter
 } from '../../components';
 
 const Landing = ({ children }, { modals }) => {
@@ -255,7 +255,7 @@ const Landing = ({ children }, { modals }) => {
           you. When you have questions, you’ll get timely answers directly from our team members.`}
       />
       <CTASection />
-      <LandingFooter />
+      <LandingPageFooter />
     </div>
   );
 };
