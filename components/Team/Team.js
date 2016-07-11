@@ -102,7 +102,7 @@ export default ({ headline, children }) => {
               photoMediumSrc={require('./images/andrej-shevchenko-medium.jpg')}
               photoMedium2xSrc={require('./images/andrej-shevchenko-medium@2x.jpg')}
               name="Andrej Shevchenko"
-              position="UX &amp; Marketing"
+              position="Marketing &amp; UX"
             />
             <TeamMember
               photoSrc={require('./images/devin-visslailli.jpg')}

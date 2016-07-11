@@ -4,15 +4,9 @@
   padding-bottom: 40px;
   color: $color-footer-base;
 
-  h3, li {
+  li,
+  .footer__headline {
     line-height: 40px;
-  }
-
-  h3 {
-    font-size: 12px;
-    font-weight: 500;
-    color: $color-footer-headline;
-    text-transform: uppercase;
   }
 
   p {
@@ -30,6 +24,13 @@
 
   li a {
     text-decoration: none;
+  }
+
+  .footer__headline {
+    font-size: 12px;
+    font-weight: 500;
+    color: $color-footer-headline;
+    text-transform: uppercase;
   }
 
   .footer__logo {
@@ -142,14 +143,14 @@
       justify-content: space-between;
     }
 
-    h3 {
-      line-height: 1;
-      margin-bottom: 10px;
-    }
-
     li {
       line-height: 2.5;
       font-size: 14px;
+    }
+
+    .footer__headline {
+      line-height: 1;
+      margin-bottom: 10px;
     }
 
     .footer__logo,
