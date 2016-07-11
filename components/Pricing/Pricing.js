@@ -57,7 +57,7 @@ class Pricing extends Component {
               scriptsOptions={this.getFreePlanOptions('scripts')}
               features={[
                 'Full access to all features',
-                '15 requests per second',
+                '60 requests per second',
                 '10GB of storage',
                 '4 Instances (apps)',
                 '2 concurrent Scripts',
