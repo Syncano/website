@@ -1,5 +1,10 @@
 export default {
-  landingPagesSlugs: ['/lp/'],
+  landingPagesSlugs: [
+    '/lp/',
+    '/lp/serverless-platform-for-app-builders/',
+    '/lp/serverless-platform-for-app-creators/',
+    '/lp/serverless-platform-for-app-makers/'
+  ],
   tweetsIDs: [
     '712734440062074883',
     '667455738139320320',
