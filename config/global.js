@@ -1,6 +1,7 @@
 export default {
   landingPagesSlugs: [
     '/lp/',
+    '/lp/build-powerful-apps-in-half-the-time/',
     '/lp/serverless-platform-for-app-builders/',
     '/lp/serverless-platform-for-app-creators/',
     '/lp/serverless-platform-for-app-makers/'

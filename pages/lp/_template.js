@@ -23,10 +23,9 @@ const Landing = ({ children }, { modals }) => {
   return (
     <div>
       <PageHelmet
-        title="Build powerful apps in half the time | Syncano"
         mixpanelTitle="Home"
-        description={`Learn the basics of how to get up and running on Syncano. Get answers to your questions. Join us
-          on Slack, read tutorials or simply fork our open source code.`}
+        description={`Increase your productivity, focus on new features, and scale beyond millions of users without
+          managing servers.`}
         ogImageSrc={`${redirect_uri}${require('../home/og-image.png')}`}
         twitterImageSrc={`${redirect_uri}${require('../home/twitter-image.png')}`}
         noindexNofollow={true}
