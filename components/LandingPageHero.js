@@ -5,9 +5,9 @@ import Hero from './Hero';
 const LandingPageHero = ({ title, headline }, { modals }) => {
   return (
     <div>
-      <Helmet title={title || 'Build powerful apps in half the time | Syncano'} />
+      <Helmet title={title} />
       <Hero
-        headline={headline || <span>Build powerful apps<br />in half the time</span>}
+        headline={headline}
         textline={`Increase your productivity, focus on new features, and scale beyond millions of users without
           managing servers.`}
         image={
@@ -31,6 +31,11 @@ const LandingPageHero = ({ title, headline }, { modals }) => {
       </Hero>
     </div>
   );
+};
+
+LandingPageHero.defaultProps = {
+  title: 'Build powerful apps in half the time | Syncano',
+  headline: <span>Build powerfulapps<br />in half the time</span>
 };
 
 LandingPageHero.contextTypes = {
