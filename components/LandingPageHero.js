@@ -35,7 +35,7 @@ const LandingPageHero = ({ title, headline }, { modals }) => {
 
 LandingPageHero.defaultProps = {
   title: 'Build powerful apps in half the time | Syncano',
-  headline: <span>Build powerfulapps<br />in half the time</span>
+  headline: <span>Build powerful apps<br />in half the time</span>
 };
 
 LandingPageHero.contextTypes = {
