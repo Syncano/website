@@ -3,6 +3,9 @@ import { LandingPageHero } from '../../../components';
 
 export default () => {
   return (
-    <LandingPageHero headline={<span>Serverless platform<br />for app creators</span>} />
+    <LandingPageHero
+      title="Serverless platform for app creators | Syncano"
+      headline={<span>Serverless platform<br />for app creators</span>}
+    />
   );
 };
