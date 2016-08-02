@@ -28,16 +28,26 @@ class ModalWrapper extends Component {
   handleESCShortcutBind(nextContext) {
     const { bindShortcut, unbindShortcut } = this.props;
     const { modals } = this.context;
-    const nextContentModals = nextContext.modals;
+    const nextContextModals = nextContext.modals;
     const contextIsOpen = this.getModalsOpenState(modals);
-    const nextContextIsOpen = this.getModalsOpenState(nextContentModals);
+    const nextContextIsOpen = this.getModalsOpenState(nextContextModals);
 
     if (contextIsOpen !== nextContextIsOpen) {
       unbindShortcut('esc');
-      nextContextIsOpen && bindShortcut('esc', nextContentModals.closeAll);
+      nextContextIsOpen && bindShortcut('esc', (event) => {
+        event.preventDefault();
+        nextContextModals.closeAll();
+      });
     }
   };
-  
+
+  handleCloseClick(event) {
+    event.preventDefault();
+    const { modals } = this.context;
+
+    modals.closeAll();
+  };
+
   getBodyClassName() {
     const bodyClassName = classNames({
       'has-modal-open': this.getCurrentOpenState()
@@ -72,7 +82,7 @@ class ModalWrapper extends Component {
             <div className="modal-box">
               <span
                 className="modal-box__close"
-                onClick={modals.closeAll}
+                onClick={(event) => this.handleCloseClick(event)}
               >
                 <img
                   src={require('./images/close.svg')}
