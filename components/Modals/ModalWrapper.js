@@ -41,7 +41,7 @@ class ModalWrapper extends Component {
     }
   };
 
-  handleCloseClick(event) {
+  handleCloseClick = (event) => {
     event.preventDefault();
     const { modals } = this.context;
 
@@ -82,7 +82,7 @@ class ModalWrapper extends Component {
             <div className="modal-box">
               <span
                 className="modal-box__close"
-                onClick={(event) => this.handleCloseClick(event)}
+                onClick={this.handleCloseClick}
               >
                 <img
                   src={require('./images/close.svg')}
