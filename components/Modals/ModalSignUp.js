@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import ModalWrapper from './ModalWrapper';
 import ModalInputElement from './ModalInputElement';
 import AuthHOC from '../AuthHOC';
+import HideOnLandingPage from '../HideOnLandingPage';
 
 class ModalSignUp extends Component {
   componentDidUpdate(props, state, context) {
@@ -121,13 +122,15 @@ class ModalSignUp extends Component {
             </div>
           </div>
         </div>
-        <footer className="modal-box__footer">
-          <div className="modal-box__footer__column">
-          <span onClick={modals.logIn.open}>
-            Already have an account? <strong>Log in</strong> to your Dashboard.
-          </span>
-          </div>
-        </footer>
+        <HideOnLandingPage>
+          <footer className="modal-box__footer">
+            <div className="modal-box__footer__column">
+              <span onClick={modals.logIn.open}>
+                Already have an account? <strong>Log in</strong> to your Dashboard.
+              </span>
+            </div>
+          </footer>
+        </HideOnLandingPage>
       </ModalWrapper>
     );
   };
