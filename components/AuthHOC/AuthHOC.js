@@ -105,6 +105,7 @@ export default (ComposedComponent) => (
         return;
       }
 
+      window.analytics.identify(email);
       return callback();
     };
 
