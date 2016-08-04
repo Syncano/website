@@ -54,7 +54,7 @@ export default (ComposedComponent) => (
       Account[type]({ email, password })
         .then((data) => {
           this.trackSignUp(
-            data,
+            { ...data, type },
             () => this.redirectToDashboard(data.account_key, type === 'register' && true)
           );
         })
@@ -99,8 +99,14 @@ export default (ComposedComponent) => (
       const authBackend = data.network || 'password';
       const email = data.email;
 
-      window.analytics.alias(email);
-      window.analytics.track('Sign Up Website', { authBackend, email }, {}, callback);
+      if (data.created || data.type === 'register') {
+        window.analytics.alias(email);
+        window.analytics.track('Sign Up Website', { authBackend, email }, {}, callback);
+        return;
+      }
+
+      window.analytics.identify(email);
+      return callback();
     };
 
     redirectToDashboard = (token, signUpMode = false) => {
