@@ -2,14 +2,13 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import Hero from './Hero';
 
-const LandingPageHero = ({ title, headline }, { modals }) => {
+const LandingPageHero = ({ title, headline, textline }, { modals }) => {
   return (
     <div>
       <Helmet title={title} />
       <Hero
         headline={headline}
-        textline={`Increase your productivity, focus on new features, and scale beyond millions of users without
-          managing servers.`}
+        textline={textline}
         image={
           <img
             src={require('../pages/home/build-powerful-apps-in-half-the-time.svg')}
@@ -35,7 +34,9 @@ const LandingPageHero = ({ title, headline }, { modals }) => {
 
 LandingPageHero.defaultProps = {
   title: 'Build powerful apps in half the time | Syncano',
-  headline: <span>Build powerful apps<br />in half the time</span>
+  headline: <span>Build powerful apps<br />in half the time</span>,
+  textline: `Increase your productivity, focus on new features, and scale beyond millions of users without managing
+    servers.`
 };
 
 LandingPageHero.contextTypes = {
