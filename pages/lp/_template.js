@@ -24,8 +24,8 @@ const Landing = ({ children }, { modals }) => {
     <div>
       <PageHelmet
         mixpanelTitle="Home"
-        description={`Increase your productivity, focus on new features, and scale beyond millions of users without
-          managing servers.`}
+        description={`A platform for building serverless apps. Increase productivity, focus on new features, and scale
+          to millions of users without managing servers. Get started for free!`}
         ogImageSrc={`${redirect_uri}${require('../home/og-image.png')}`}
         twitterImageSrc={`${redirect_uri}${require('../home/twitter-image.png')}`}
         noindexNofollow={true}
