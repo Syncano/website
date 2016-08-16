@@ -14,6 +14,10 @@ export default (ComposedComponent) => (
       };
     };
 
+    static contextTypes = {
+      isLandingPage: React.PropTypes.bool
+    };
+
     static childContextTypes = {
       auth: React.PropTypes.object
     };
@@ -96,12 +100,14 @@ export default (ComposedComponent) => (
     };
 
     trackSignUp(data, callback) {
+      const { isLandingPage } = this.context;
       const authBackend = data.network || 'password';
       const email = data.email;
+      const analyticsAction = isLandingPage ? 'Sign up Landing Page' : 'Sign Up Website';
 
       if (data.created || data.type === 'register') {
         window.analytics.alias(email);
-        window.analytics.track('Sign Up Website', { authBackend, email }, {}, callback);
+        window.analytics.track(analyticsAction, { authBackend, email }, {}, callback);
         return;
       }
 
@@ -115,7 +121,7 @@ export default (ComposedComponent) => (
       if (signUpMode) {
         redirectUrl += `&signUpMode=${signUpMode}`;
       }
-      
+
       window.location.href = redirectUrl;
     };
 

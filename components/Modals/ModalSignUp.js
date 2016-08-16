@@ -17,8 +17,11 @@ class ModalSignUp extends Component {
   };
 
   trackPageView() {
+    const { isLandingPage } = this.context;
+    const analyticsAction = isLandingPage ? 'Sign up Landing Page' : 'Sign Up';
+
     analytics.page('Website', {
-      Page: 'Sign Up'
+      Page: analyticsAction
     });
   };
 
@@ -138,7 +141,8 @@ class ModalSignUp extends Component {
 
 ModalSignUp.contextTypes = {
   auth: React.PropTypes.object,
-  modals: React.PropTypes.object
+  modals: React.PropTypes.object,
+  isLandingPage: React.PropTypes.bool
 };
 
 export default AuthHOC(ModalSignUp);
