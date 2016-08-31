@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default ({ photoSrc, photo2xSrc, photoMediumSrc, photoMedium2xSrc, name, position }) => {
+export default ({ photoSrc, photo2xSrc, photoMediumSrc, photoMedium2xSrc, name, title }) => {
   return (
     <li className="team__list__member">
       <div className="team__list__member__photo">
@@ -29,8 +29,8 @@ export default ({ photoSrc, photo2xSrc, photoMediumSrc, photoMedium2xSrc, name, 
       <h3 className="team__list__member__name">
         {name}
       </h3>
-      <p className="team__list__member__position">
-        {position}
+      <p className="team__list__member__title">
+        {title}
       </p>
     </li>
   );
