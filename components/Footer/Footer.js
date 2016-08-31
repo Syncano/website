@@ -87,7 +87,7 @@ export default () => (
               <a href="https://github.com/Syncano/" target="_blank">GitHub</a>
             </li>
             <li>
-              <a href="http://www.syncano.io/slack-invite/" target="_blank">Slack</a>
+              <a href="https://www.syncano.io/slack-invite/" target="_blank">Slack</a>
             </li>
             <li>
               <a href="https://www.linkedin.com/company/syncano/" target="_blank">LinkedIn</a>
@@ -142,7 +142,7 @@ export default () => (
             </li>
             <li>
               <a
-                href="http://www.syncano.io/slack-invite/"
+                href="https://www.syncano.io/slack-invite/"
                 target="_blank"
                 title="Slack"
               >

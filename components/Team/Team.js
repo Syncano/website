@@ -14,7 +14,7 @@ export default ({ headline, children }) => {
               photoMediumSrc={require('./images/nikolai-fasting-medium.jpg')}
               photoMedium2xSrc={require('./images/nikolai-fasting-medium@2x.jpg')}
               name="Nikolai Fasting"
-              position="CEO"
+              title="CEO"
             />
             <TeamMember
               photoSrc={require('./images/maciej-kucharz.jpg')}
@@ -22,7 +22,7 @@ export default ({ headline, children }) => {
               photoMediumSrc={require('./images/maciej-kucharz-medium.jpg')}
               photoMedium2xSrc={require('./images/maciej-kucharz-medium@2x.jpg')}
               name="Maciej Kucharz"
-              position="Head of Engineering"
+              title="Head of Engineering"
             />
             <TeamMember
               photoSrc={require('./images/robert-kopaczewski.jpg')}
@@ -30,7 +30,7 @@ export default ({ headline, children }) => {
               photoMediumSrc={require('./images/robert-kopaczewski-medium.jpg')}
               photoMedium2xSrc={require('./images/robert-kopaczewski-medium@2x.jpg')}
               name="Robert Kopaczewski"
-              position="Chief Platform Architect"
+              title="Chief Platform Architect"
             />
             <TeamMember
               photoSrc={require('./images/jakub-bilko.jpg')}
@@ -38,7 +38,7 @@ export default ({ headline, children }) => {
               photoMediumSrc={require('./images/jakub-bilko-medium.jpg')}
               photoMedium2xSrc={require('./images/jakub-bilko-medium@2x.jpg')}
               name="Jakub Bilko"
-              position="Software Engineer"
+              title="Software Engineer"
             />
             <TeamMember
               photoSrc={require('./images/marcin-godlewski.jpg')}
@@ -46,7 +46,7 @@ export default ({ headline, children }) => {
               photoMediumSrc={require('./images/marcin-godlewski-medium.jpg')}
               photoMedium2xSrc={require('./images/marcin-godlewski-medium@2x.jpg')}
               name="Marcin Godlewski"
-              position="Software Tester"
+              title="Software Tester"
             />
             <TeamMember
               photoSrc={require('./images/michal-kobus.jpg')}
@@ -54,7 +54,7 @@ export default ({ headline, children }) => {
               photoMediumSrc={require('./images/michal-kobus-medium.jpg')}
               photoMedium2xSrc={require('./images/michal-kobus-medium@2x.jpg')}
               name="Michał Kobus"
-              position="DevOps Engineer"
+              title="DevOps Engineer"
             />
             <TeamMember
               photoSrc={require('./images/patryk-kopycinski.jpg')}
@@ -62,7 +62,7 @@ export default ({ headline, children }) => {
               photoMediumSrc={require('./images/patryk-kopycinski-medium.jpg')}
               photoMedium2xSrc={require('./images/patryk-kopycinski-medium@2x.jpg')}
               name="Patryk Kopyciński"
-              position="Software Engineer"
+              title="Software Engineer"
             />
             <TeamMember
               photoSrc={require('./images/jan-lipmann.jpg')}
@@ -70,7 +70,7 @@ export default ({ headline, children }) => {
               photoMediumSrc={require('./images/jan-lipmann-medium.jpg')}
               photoMedium2xSrc={require('./images/jan-lipmann-medium@2x.jpg')}
               name="Jan Lipmann"
-              position="Software Engineer"
+              title="Software Engineer"
             />
             <TeamMember
               photoSrc={require('./images/joanna-luma.jpg')}
@@ -78,7 +78,7 @@ export default ({ headline, children }) => {
               photoMediumSrc={require('./images/joanna-luma-medium.jpg')}
               photoMedium2xSrc={require('./images/joanna-luma-medium@2x.jpg')}
               name="Joanna Luma"
-              position="CEO Assistant"
+              title="CEO Assistant"
             />
             <TeamMember
               photoSrc={require('./images/sebastian-opalczynski.jpg')}
@@ -86,7 +86,7 @@ export default ({ headline, children }) => {
               photoMediumSrc={require('./images/sebastian-opalczynski-medium.jpg')}
               photoMedium2xSrc={require('./images/sebastian-opalczynski-medium@2x.jpg')}
               name="Sebastian Opałczyński"
-              position="Software Engineer"
+              title="Software Engineer"
             />
             <TeamMember
               photoSrc={require('./images/wojciech-pasinski.jpg')}
@@ -94,7 +94,7 @@ export default ({ headline, children }) => {
               photoMediumSrc={require('./images/wojciech-pasinski-medium.jpg')}
               photoMedium2xSrc={require('./images/wojciech-pasinski-medium@2x.jpg')}
               name="Wojciech Pasiński"
-              position="Front End Engineer"
+              title="Front End Engineer"
             />
             <TeamMember
               photoSrc={require('./images/andrej-shevchenko.jpg')}
@@ -102,7 +102,7 @@ export default ({ headline, children }) => {
               photoMediumSrc={require('./images/andrej-shevchenko-medium.jpg')}
               photoMedium2xSrc={require('./images/andrej-shevchenko-medium@2x.jpg')}
               name="Andrej Shevchenko"
-              position="Marketing &amp; UX"
+              title="Product Marketing"
             />
             <TeamMember
               photoSrc={require('./images/devin-visslailli.jpg')}
@@ -110,7 +110,7 @@ export default ({ headline, children }) => {
               photoMediumSrc={require('./images/devin-visslailli-medium.jpg')}
               photoMedium2xSrc={require('./images/devin-visslailli-medium@2x.jpg')}
               name="Devin Visslailli"
-              position="Developer Evangelist"
+              title="Developer Evangelist"
             />
             <TeamMember
               photoSrc={require('./images/todd-wacker.jpg')}
@@ -118,7 +118,7 @@ export default ({ headline, children }) => {
               photoMediumSrc={require('./images/todd-wacker-medium.jpg')}
               photoMedium2xSrc={require('./images/todd-wacker-medium@2x.jpg')}
               name="Todd Wacker"
-              position="Developer Evangelist"
+              title="Developer Evangelist"
             />
             <TeamMember
               photoSrc={require('./images/adam-wardecki.jpg')}
@@ -126,7 +126,7 @@ export default ({ headline, children }) => {
               photoMediumSrc={require('./images/adam-wardecki-medium.jpg')}
               photoMedium2xSrc={require('./images/adam-wardecki-medium@2x.jpg')}
               name="Adam Wardecki"
-              position="Software Engineer"
+              title="Software Engineer"
             />
             <TeamMember
               photoSrc={require('./images/hubert-wesolowski.jpg')}
@@ -134,7 +134,7 @@ export default ({ headline, children }) => {
               photoMediumSrc={require('./images/hubert-wesolowski-medium.jpg')}
               photoMedium2xSrc={require('./images/hubert-wesolowski-medium@2x.jpg')}
               name="Hubert Wesołowski"
-              position="Junior Front End Engineer"
+              title="Junior Front End Engineer"
             />
             <TeamMember
               photoSrc={require('./images/mariusz-wisniewski.jpg')}
@@ -142,7 +142,7 @@ export default ({ headline, children }) => {
               photoMediumSrc={require('./images/mariusz-wisniewski-medium.jpg')}
               photoMedium2xSrc={require('./images/mariusz-wisniewski-medium@2x.jpg')}
               name="Mariusz Wiśniewski"
-              position="Software Engineer"
+              title="Software Engineer"
             />
             <TeamMember
               photoSrc={require('./images/pedro-fasting.jpg')}
@@ -150,7 +150,7 @@ export default ({ headline, children }) => {
               photoMediumSrc={require('./images/pedro-fasting-medium.jpg')}
               photoMedium2xSrc={require('./images/pedro-fasting-medium@2x.jpg')}
               name="Pedro Fasting"
-              position="Chairman of the Board"
+              title="Chairman of the Board"
             />
             <TeamMember
               photoSrc={require('./images/harald-lervik.jpg')}
@@ -158,7 +158,7 @@ export default ({ headline, children }) => {
               photoMediumSrc={require('./images/harald-lervik-medium.jpg')}
               photoMedium2xSrc={require('./images/harald-lervik-medium@2x.jpg')}
               name="Harald Lervik"
-              position="Board Member"
+              title="Board Member"
             />
             <TeamMember
               photoSrc={require('./images/jeff-driskill.jpg')}
@@ -166,7 +166,7 @@ export default ({ headline, children }) => {
               photoMediumSrc={require('./images/jeff-driskill-medium.jpg')}
               photoMedium2xSrc={require('./images/jeff-driskill-medium@2x.jpg')}
               name="Jeff Driskill"
-              position="CFO"
+              title="CFO"
             />
             <TeamMember
               photoSrc={require('./images/teodor-bjerrang.jpg')}
@@ -174,7 +174,7 @@ export default ({ headline, children }) => {
               photoMediumSrc={require('./images/teodor-bjerrang-medium.jpg')}
               photoMedium2xSrc={require('./images/teodor-bjerrang-medium@2x.jpg')}
               name="Teodor Bjerrang"
-              position="Board Member"
+              title="Board Member"
             />
           </ul>
         </div>
