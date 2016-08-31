@@ -10,7 +10,7 @@ export default () => {
       <div className="inner">
         <h2>
           Join the community on
-          <img src={require('./images/slack.svg')} alt="Slack" /> 
+          <img src={require('./images/slack.svg')} alt="Slack" />
           Slack
         </h2>
         <div className="slack-slider__slider">
@@ -49,7 +49,7 @@ export default () => {
           </SliderWrapper>
         </div>
         <a
-          href="http://www.syncano.io/slack-invite/"
+          href="https://www.syncano.io/slack-invite/"
           className="button button--white"
           target="_blank"
         >

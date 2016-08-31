@@ -8,7 +8,7 @@ export default () => {
           <h3>Fork us on GitHub</h3>
           <div className="social-profiles__group__profiles">
             <a
-              className="social-profiles__group__profiles__icon" 
+              className="social-profiles__group__profiles__icon"
               href="https://github.com/Syncano/"
               target="_blank"
               title="GitHub"
@@ -69,7 +69,7 @@ export default () => {
           <div className="social-profiles__group__profiles">
             <a
               className="social-profiles__group__profiles__icon"
-              href="http://www.syncano.io/slack-invite/"
+              href="https://www.syncano.io/slack-invite/"
               target="_blank"
               title="Slack"
             >
