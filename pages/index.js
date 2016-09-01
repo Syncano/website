@@ -46,7 +46,7 @@ const Homepage = (props, { modals }) => {
             Get Started for Free
           </span>
           <p className="hero__text__button-description">
-            6 months free &bull; No credit card required
+            30 days free &bull; No credit card required
           </p>
         </div>
       </Hero>
