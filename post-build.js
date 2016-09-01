@@ -39,7 +39,9 @@ const generateRobots = () => {
   const fileContent = 'User-agent: *\n' +
     'Allow: /\n\n' +
     'Sitemap: https://www.syncano.io/sitemap.xml\n' +
-    'Sitemap: https://www.syncano.io/blog/sitemap.xml';
+    'Sitemap: https://www.syncano.io/blog/sitemap.xml\n\n' +
+    'Disallow: /blog/tag/\n' +
+    'Disallow: /blog/author/';
 
   return fs.writeFileSync(`${__dirname}/public/robots.txt`, fileContent);
 };
