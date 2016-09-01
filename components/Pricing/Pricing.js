@@ -52,7 +52,7 @@ class Pricing extends Component {
             <PricingPlan
               title="Starter"
               price="Free"
-              period="for 6 months"
+              period="for 30 days"
               apiCallsOptions={this.getFreePlanOptions('apiCalls')}
               scriptsOptions={this.getFreePlanOptions('scripts')}
               features={[
