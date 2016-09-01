@@ -40,8 +40,9 @@ const generateRobots = () => {
     'Allow: /\n\n' +
     'Sitemap: https://www.syncano.io/sitemap.xml\n' +
     'Sitemap: https://www.syncano.io/blog/sitemap.xml\n\n' +
-    'Disallow: /blog/tag/\n' +
-    'Disallow: /blog/author/';
+    'Disallow: /blog/ghost/\n' +
+    'Disallow: /blog/author/\n' +
+    'Disallow: /blog/tag/';
 
   return fs.writeFileSync(`${__dirname}/public/robots.txt`, fileContent);
 };
