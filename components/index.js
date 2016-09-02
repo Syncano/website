@@ -21,6 +21,8 @@ import LandingPageFooter from './LandingPageFooter';
 import LandingPageHero from './LandingPageHero';
 import Link from './Link';
 import ListColumns from './ListColumns';
+import LoggedInContent from './LoggedInContent';
+import LoggedOutContent from './LoggedOutContent';
 import { Modals, ModalsHOC } from './Modals';
 import OfficeAddresses from './OfficeAddresses';
 import OfficesMap from './OfficesMap';
@@ -73,6 +75,8 @@ export default {
   LandingPageHero,
   Link,
   ListColumns,
+  LoggedInContent,
+  LoggedOutContent,
   Modals,
   ModalsHOC,
   OfficeAddresses,

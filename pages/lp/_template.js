@@ -1,20 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router';
 import {
-  PageHelmet,
+  CircleIconColumns,
+  CodePreview,
+  ColumnParagraphs,
+  CTASection,
+  FeaturesColumns,
   Hero,
+  LandingPageFooter,
+  LoggedInContent,
+  LoggedOutContent,
+  PageHelmet,
+  PlatformsSection,
+  ScreenDescriptions,
+  TextWithBackground,
   TextWithBottomImage,
   TextWithImage,
-  ScreenDescriptions,
-  ColumnParagraphs,
-  FeaturesColumns,
-  CircleIconColumns,
-  TwitterSlider,
-  PlatformsSection,
-  CodePreview,
-  TextWithBackground,
-  CTASection,
-  LandingPageFooter
+  TwitterSlider
 } from '../../components';
 
 const Landing = ({ children }, { modals }) => {
@@ -106,12 +108,22 @@ const Landing = ({ children }, { modals }) => {
             you need with advanced filtering and ordering.`}
         />
         <footer className="screen-descriptions__footer">
-          <span
-            className="button button--large button--featured"
-            onClick={modals.signUp.open}
-          >
-            Get Started for Free
-          </span>
+          <LoggedOutContent>
+            <span
+              className="button button--large button--featured"
+              onClick={modals.signUp.open}
+            >
+              Get Started for Free
+            </span>
+          </LoggedOutContent>
+          <LoggedInContent>
+            <a
+              className="button button--large button--featured"
+              href={APP_CONFIG.dashboardUrl}
+            >
+              Go to Dashboard
+            </a>
+          </LoggedInContent>
         </footer>
       </ScreenDescriptions>
       <ColumnParagraphs

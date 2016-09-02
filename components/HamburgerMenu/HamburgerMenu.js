@@ -1,6 +1,8 @@
 import React from 'react';
 import { HamburgerMenuLink } from '../HamburgerMenu';
 import HideOnLandingPage from '../HideOnLandingPage';
+import LoggedInContent from '../LoggedInContent';
+import LoggedOutContent from '../LoggedOutContent';
 
 const HamburgerMenu = (props, { modals }) => {
   return (
@@ -46,24 +48,38 @@ const HamburgerMenu = (props, { modals }) => {
         </HideOnLandingPage>
         <div className="hamburger-menu__buttons">
           <ul>
-            <HideOnLandingPage>
+            <LoggedOutContent>
+              <HideOnLandingPage>
+                <li>
+                  <span
+                    className="button button--large"
+                    onClick={modals.logIn.open}
+                  >
+                    Log In
+                  </span>
+                </li>
+              </HideOnLandingPage>
+            </LoggedOutContent>
+            <LoggedOutContent>
               <li>
                 <span
-                  className="button button--large"
-                  onClick={modals.logIn.open}
+                  className="button button--large button--featured"
+                  onClick={modals.signUp.open}
                 >
-                  Log In
+                  Sign Up For Free
                 </span>
               </li>
-            </HideOnLandingPage>
-            <li>
-              <span
-                className="button button--large button--featured"
-                onClick={modals.signUp.open}
-              >
-                Sign Up For Free
-              </span>
-            </li>
+            </LoggedOutContent>
+            <LoggedInContent>
+              <li>
+                <a
+                  className="button button--large button--featured"
+                  href={APP_CONFIG.dashboardUrl}
+                >
+                  Go to Dashboard
+                </a>
+              </li>
+            </LoggedInContent>
           </ul>
         </div>
       </div>

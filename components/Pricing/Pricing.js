@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import _ from 'lodash';
 import PricingPlan from './PricingPlan';
+import LoggedInContent from '../LoggedInContent';
+import LoggedOutContent from '../LoggedOutContent';
 import plan from '../../data-pricing-plans.json';
 
 class Pricing extends Component {
@@ -95,12 +97,22 @@ class Pricing extends Component {
             />
           </div>
           <footer className="pricing__footer">
-            <span
-              className="button button--large button--featured"
-              onClick={modals.signUp.open}
-            >
-              Get Started for Free
-            </span>
+            <LoggedOutContent>
+              <span
+                className="button button--large button--featured"
+                onClick={modals.signUp.open}
+              >
+                Get Started for Free
+              </span>
+            </LoggedOutContent>
+            <LoggedInContent>
+              <a
+                className="button button--large button--featured"
+                href={APP_CONFIG.dashboardUrl}
+              >
+                Go to Dashboard
+              </a>
+            </LoggedInContent>
             <p>
               Premium support? Custom SLA? <Link to="/contact/">Contact us</Link> and we’ll configure a plan that’s best
               for you.
