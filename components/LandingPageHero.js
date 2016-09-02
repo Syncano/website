@@ -19,14 +19,6 @@ const LandingPageHero = ({ title, headline, textline }, { modals }) => {
         }
       >
         <div className="hero__text__button-container">
-          <LoggedInContent>
-            <a
-              className="button button--large button--featured"
-              href={APP_CONFIG.dashboardUrl}
-            >
-              Go to Dashboard
-            </a>
-          </LoggedInContent>
           <LoggedOutContent>
             <span
               className="button button--large button--featured"
@@ -35,6 +27,14 @@ const LandingPageHero = ({ title, headline, textline }, { modals }) => {
               Get Started for Free
             </span>
           </LoggedOutContent>
+          <LoggedInContent>
+            <a
+              className="button button--large button--featured"
+              href={APP_CONFIG.dashboardUrl}
+            >
+              Go to Dashboard
+            </a>
+          </LoggedInContent>
           <p className="hero__text__button-description">
             6 months free &bull; No credit card required
           </p>
