@@ -1,6 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Hero from './Hero';
+import LoggedInContent from './LoggedInContent';
+import LoggedOutContent from './LoggedOutContent';
 
 const LandingPageHero = ({ title, headline, textline }, { modals }) => {
   return (
@@ -17,12 +19,22 @@ const LandingPageHero = ({ title, headline, textline }, { modals }) => {
         }
       >
         <div className="hero__text__button-container">
-          <span
-            className="button button--large button--featured"
-            onClick={modals.signUp.open}
-          >
-            Get Started for Free
-          </span>
+          <LoggedOutContent>
+            <span
+              className="button button--large button--featured"
+              onClick={modals.signUp.open}
+            >
+              Get Started for Free
+            </span>
+          </LoggedOutContent>
+          <LoggedInContent>
+            <a
+              className="button button--large button--featured"
+              href={APP_CONFIG.dashboardUrl}
+            >
+              Go to Dashboard
+            </a>
+          </LoggedInContent>
           <p className="hero__text__button-description">
             6 months free &bull; No credit card required
           </p>

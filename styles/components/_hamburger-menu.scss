@@ -19,6 +19,7 @@
   .button {
     color: #fff;
     cursor: pointer;
+    text-decoration: none;
   }
 
   .hamburger-menu__menu li {
@@ -42,6 +43,11 @@
       &.button--featured {
         border-color: $color-main-yellow;
         color: $color-text-headline;
+
+        // todo: create .button--flat class
+        &:hover {
+          border-color: $color-main-yellow--hover;
+        }
       }
     }
 
