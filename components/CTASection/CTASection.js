@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import LoggedInContent from '../LoggedInContent';
-import LoggedOutContent from '../LoggedOutContent';
+import { LoggedInContent, LoggedOutContent } from '../LoggedInContent';
 
 const CTASection = ({ variant, theme, children }, { modals }) => {
   const className = classNames({

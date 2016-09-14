@@ -1,8 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Hero from './Hero';
-import LoggedInContent from './LoggedInContent';
-import LoggedOutContent from './LoggedOutContent';
+import { LoggedInContent, LoggedOutContent } from './LoggedInContent';
 
 const LandingPageHero = ({ title, headline, textline }, { modals }) => {
   return (

@@ -1,8 +1,7 @@
 import React from 'react';
 import { HamburgerMenuLink } from '../HamburgerMenu';
 import HideOnLandingPage from '../HideOnLandingPage';
-import LoggedInContent from '../LoggedInContent';
-import LoggedOutContent from '../LoggedOutContent';
+import { LoggedInContent, LoggedOutContent } from '../LoggedInContent';
 
 const HamburgerMenu = (props, { modals }) => {
   return (

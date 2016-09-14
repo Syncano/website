@@ -3,8 +3,7 @@ import Headroom from 'react-headroom';
 import { HamburgerMenuHOC, HamburgerMenu } from '../HamburgerMenu';
 import Link from '../Link';
 import HideOnLandingPage from '../HideOnLandingPage';
-import LoggedInContent from '../LoggedInContent';
-import LoggedOutContent from '../LoggedOutContent';
+import { LoggedInContent, LoggedOutContent } from '../LoggedInContent';
 
 const TopBar = (props, { hamburgerMenu, modals, isLandingPage }) => {
   return (
