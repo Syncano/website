@@ -12,6 +12,7 @@ export default ({
   imageSmall2xSrc,
   url,
   buttonText,
+  googlePlayUrl,
   itunesUrl
 }) => {
   return (

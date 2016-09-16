@@ -9,8 +9,6 @@ import {
 } from '../../components';
 
 export default () => {
-  // const { redirect_uri } = APP_CONFIG;
-
   return (
     <div>
       <PageHelmet
@@ -112,6 +110,52 @@ export default () => {
         imageSmallSrc={require('./viking-zombie-apocalypse-small.png')}
         imageSmall2xSrc={require('./viking-zombie-apocalypse-small@2x.png')}
         itunesUrl="https://itunes.apple.com/us/app/viking-zombie-apocalypse/id1090697288"
+      />
+      <CustomerSection
+        headline="C More Snack"
+        textline={`With C More Snack, you can make your voice heard by participating in polls about Allsvenskan (Swedish
+          football) match events. Together with all the other fans, your voices will be echoed in our tv broadcasts.`}
+        imageSrc={require('./c-more-snack.png')}
+        image2xSrc={require('./c-more-snack@2x.png')}
+        imageSmallSrc={require('./c-more-snack-small.png')}
+        imageSmall2xSrc={require('./c-more-snack-small@2x.png')}
+        googlePlayUrl="https://play.google.com/store/apps/details?id=se.cmore.arcticfalcon"
+      />
+      <CustomerSection
+        theme="gray"
+        headline="Save The Planet"
+        textline={`Stop the asteroids from destroying earth with a simple touch, and overcome the unknown variable of
+          time and space in this casual game of planetary defense. Remember, the universe isn't perfect.`}
+        imageSrc={require('./save-the-planet.png')}
+        image2xSrc={require('./save-the-planet@2x.png')}
+        imageSmallSrc={require('./save-the-planet-small.png')}
+        imageSmall2xSrc={require('./save-the-planet-small@2x.png')}
+        itunesUrl="https://itunes.apple.com/us/app/save-the-planet/id1096968741"
+      />
+      <CustomerSection
+        headline="Forest Treasures"
+        textline={`The Forest Treasures app is the perfect tool for mushroom hunters. It contains delicious mushrooms
+          recipes, a book of mushrooms with species details and pictures, along with a mushroom scanner to help you
+          identify a species easily!`}
+        imageSrc={require('./forest-treasures.png')}
+        image2xSrc={require('./forest-treasures@2x.png')}
+        imageSmallSrc={require('./forest-treasures-small.png')}
+        imageSmall2xSrc={require('./forest-treasures-small@2x.png')}
+        googlePlayUrl="https://play.google.com/store/apps/details?id=com.kasol.foresttreasures"
+        itunesUrl="https://itunes.apple.com/pl/app/forest-treasures/id1104922162"
+      />
+      <CustomerSection
+        theme="gray"
+        headline="Health.Er ­- Food Scanner"
+        textline={`What is really in your food? „E number” is often used informally as a negative term for artificial
+          food additives. The foods on supermarket shelves have more health information on their labels than ever before
+          and it is now even more confusing.`}
+        imageSrc={require('./healther-food-scanner.png')}
+        image2xSrc={require('./healther-food-scanner@2x.png')}
+        imageSmallSrc={require('./healther-food-scanner-small.png')}
+        imageSmall2xSrc={require('./healther-food-scanner-small@2x.png')}
+        googlePlayUrl="https://play.google.com/store/apps/details?id=com.aexol.healther"
+        itunesUrl="https://itunes.apple.com/us/app/health.er-food-scanner/id1068474907"
       />
       <CTASection />
       <Footer />
