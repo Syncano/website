@@ -29,6 +29,14 @@ const HamburgerMenu = (props, { modals }) => {
               </li>
               <li>
                 <HamburgerMenuLink
+                  activeClassName="is-active"
+                  to="/customers/"
+                >
+                  Customers
+                </HamburgerMenuLink>
+              </li>
+              <li>
+                <HamburgerMenuLink
                   href="http://docs.syncano.io/"
                   target="_blank"
                 >

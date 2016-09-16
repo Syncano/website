@@ -10,6 +10,7 @@ import ContactForm from './ContactForm';
 import ContactFormSection from './ContactFormSection';
 import CounterBoxes from './CounterBoxes';
 import CTASection from './CTASection';
+import CustomerSection from './CustomerSection';
 import FAQ from './FAQ';
 import FeaturesColumns from './FeaturesColumns';
 import Footer from './Footer';
@@ -64,10 +65,11 @@ export default {
   ContactFormSection,
   CounterBoxes,
   CTASection,
+  CustomerSection,
   FAQ,
+  FeaturesColumns,
   Footer,
   FormInputElement,
-  FeaturesColumns,
   HamburgerMenu,
   Hero,
   HideOnLandingPage,
