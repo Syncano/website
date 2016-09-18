@@ -189,7 +189,7 @@ export default () => {
         image2xSrc={require('./dashflow@2x.png')}
         imageSmallSrc={require('./dashflow-small.png')}
         imageSmall2xSrc={require('./dashflow-small@2x.png')}
-        url="https://dashflow.io/"
+        url="http://dashflow.co/"
         buttonText="Check Out DashFlow"
       />
       <CustomerSection
