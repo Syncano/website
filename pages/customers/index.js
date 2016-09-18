@@ -157,6 +157,53 @@ export default () => {
         googlePlayUrl="https://play.google.com/store/apps/details?id=com.aexol.healther"
         itunesUrl="https://itunes.apple.com/us/app/health.er-food-scanner/id1068474907"
       />
+      <CustomerSection
+        headline="YOSO - Collect moments"
+        textline={`YOSO was created to bring the magic back to taking pictures, as it used to be when they were taken
+          with a photographic film.`}
+        imageSrc={require('./yoso-collect-moments.png')}
+        image2xSrc={require('./yoso-collect-moments@2x.png')}
+        imageSmallSrc={require('./yoso-collect-moments-small.png')}
+        imageSmall2xSrc={require('./yoso-collect-moments-small@2x.png')}
+        url="http://yosoapp.com/"
+        buttonText="Check Out YOSO"
+      />
+      <CustomerSection
+        theme="gray"
+        headline="Victorio - Custom Shirts in 3D"
+        textline={`Victorio offers rotatable 3D shirt models, so you can preview your shirt design from all angles.
+          Handmade and custom-tailored dress shirts of the highest quality, designed by you. `}
+        imageSrc={require('./victorio-custom-shirts-in-3d.png')}
+        image2xSrc={require('./victorio-custom-shirts-in-3d@2x.png')}
+        imageSmallSrc={require('./victorio-custom-shirts-in-3d-small.png')}
+        imageSmall2xSrc={require('./victorio-custom-shirts-in-3d-small@2x.png')}
+        url="#"
+        buttonText="Check Out Victorio"
+      />
+      <CustomerSection
+        headline="DashFlow"
+        textline={`Stay on top of your budget, organize your bills, get reminders, and achieve your goals for savings,
+          budget, debt, and net worth. DashFlow makes it easy to track all of your financial goals on a customizable
+          dashboard.`}
+        imageSrc={require('./dashflow.png')}
+        image2xSrc={require('./dashflow@2x.png')}
+        imageSmallSrc={require('./dashflow-small.png')}
+        imageSmall2xSrc={require('./dashflow-small@2x.png')}
+        url="https://dashflow.io/"
+        buttonText="Check Out DashFlow"
+      />
+      <CustomerSection
+        theme="gray"
+        headline="Laundry Guide"
+        textline={`Forget about lengthy searching for the meaning of clothing labels. With Laundry Guide, you can scan
+          your label to get all the necessary wash and care instructions in seconds.`}
+        imageSrc={require('./laundry-guide.png')}
+        image2xSrc={require('./laundry-guide@2x.png')}
+        imageSmallSrc={require('./laundry-guide-small.png')}
+        imageSmall2xSrc={require('./laundry-guide-small@2x.png')}
+        googlePlayUrl="https://play.google.com/store/apps/details?id=com.aexol.laundryapp"
+        itunesUrl="https://itunes.apple.com/us/app/laundry-guide-care-symbols/id1091572208"
+      />
       <CTASection />
       <Footer />
     </div>
