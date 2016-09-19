@@ -1,6 +1,10 @@
 import React from 'react';
 
 export default ({ googlePlayUrl, itunesUrl }) => {
+  if (!googlePlayUrl && !itunesUrl) {
+    return null;
+  }
+
   return (
     <div className="mobile-app-download-buttons">
       {googlePlayUrl && <div className="mobile-app-download-buttons__button">
