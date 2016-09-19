@@ -1,4 +1,5 @@
 import React from 'react';
+import MobileAppDownloadButtons from './MobileAppDownloadButtons';
 import TextWithImage from './TextWithImage';
 
 export default ({
@@ -18,6 +19,7 @@ export default ({
   return (
     <TextWithImage
       theme={theme}
+      variant="customer"
       headline={headline}
       textline={textline}
       image={
@@ -42,6 +44,10 @@ export default ({
       >
         {buttonText}
       </a>}
+      <MobileAppDownloadButtons
+        googlePlayUrl={googlePlayUrl}
+        itunesUrl={itunesUrl}
+      />
     </TextWithImage>
   );
 };

@@ -9,6 +9,8 @@ import {
 } from '../../components';
 
 export default () => {
+  const { redirect_uri } = APP_CONFIG;
+
   return (
     <div>
       <PageHelmet
@@ -16,6 +18,8 @@ export default () => {
         mixpanelTitle="Customers"
         description={`Helping people build successful apps for the web, mobile and IoT. See what developers are building
           with Syncano.`}
+        ogImageSrc={`${redirect_uri}${require('./og-image.png')}`}
+        twitterImageSrc={`${redirect_uri}${require('./twitter-image.png')}`}
       />
       <PageHeader
         headline="Customers’ apps made with Syncano"
@@ -26,7 +30,7 @@ export default () => {
         headline="Havoc TV"
         textline={`Havoc TV is the only exclusive multi-platform network dedicated to action sports and independent
           music. Havoc TV also operates a 24/7 interactive and social TV channel, offered in both English and Spanish,
-          and available on AT&T U-verse, Frontier Cable and other domestic and international affiliates.`}
+          and available on AT\u0026T U-verse, Frontier Cable and other domestic and international affiliates.`}
         imageClassName="browser-image"
         imageSrc={require('./havoc-tv.png')}
         image2xSrc={require('./havoc-tv@2x.png')}
@@ -46,20 +50,20 @@ export default () => {
         image2xSrc={require('./pix2win@2x.png')}
         imageSmallSrc={require('./pix2win-small.png')}
         imageSmall2xSrc={require('./pix2win-small@2x.png')}
-        url="http://www.multilot.net/"
+        url="http://www.multilot-live.com/product/"
         buttonText="Check Out PIX2WIN"
       />
       <CustomerSection
         theme="gray"
-        headline="ehco"
-        textline={`The ehco&#8482; Giving app is the easiest way to give to your favorite causes. Add a payment method,
+        headline="ehco -­ Give to your favorite causes"
+        textline={`The ehco\u2122 Giving app is the easiest way to give to your favorite causes. Add a payment method,
           discover worthy local causes, and give in seconds to help a cause meet a specific need. All of your giving,
           one simple app.`}
-        imageSrc={require('./ehco.png')}
-        image2xSrc={require('./ehco@2x.png')}
-        imageSmallSrc={require('./ehco-small.png')}
-        imageSmall2xSrc={require('./ehco-small@2x.png')}
-        url="http://www.multilot.net/"
+        imageSrc={require('./ehco-give-to-your-favorite-causes.png')}
+        image2xSrc={require('./ehco-give-to-your-favorite-causes@2x.png')}
+        imageSmallSrc={require('./ehco-give-to-your-favorite-causes-small.png')}
+        imageSmall2xSrc={require('./ehco-give-to-your-favorite-causes-small@2x.png')}
+        url="http://ehco.us/"
         buttonText="Check Out ehco"
       />
       <CustomerSection
@@ -67,36 +71,36 @@ export default () => {
         textline={`ArtAttack is a mobile art marketplace and social network that gives artists and art lovers the
           ability to view, buy and sell artwork. It exists to give artists a safe and invigorating space in which to
           exhibit and sell their work, as well as document their development over time.`}
-        imageSrc={require('./artattack.png')}
-        image2xSrc={require('./artattack@2x.png')}
-        imageSmallSrc={require('./artattack-small.png')}
-        imageSmall2xSrc={require('./artattack-small@2x.png')}
+        imageSrc={require('./artattack-share-sell-network.png')}
+        image2xSrc={require('./artattack-share-sell-network@2x.png')}
+        imageSmallSrc={require('./artattack-share-sell-network-small.png')}
+        imageSmall2xSrc={require('./artattack-share-sell-network-small@2x.png')}
         url="http://artattackapp.com/"
         buttonText="Check Out ArtAttack"
       />
       <CustomerSection
         theme="gray"
-        headline="HelloHome"
+        headline="HelloHome ­- Connecting soulmates"
         textline={`HelloHome provides a fast, easy and fun alternative to traditional flat searches. Create a profile,
           swipe through potential flat/flatmate profiles and start a conversation if there is interest from both sides.
           Your flat search does not have to be a pain. Join the revolution!`}
-        imageSrc={require('./hellohome.png')}
-        image2xSrc={require('./hellohome@2x.png')}
-        imageSmallSrc={require('./hellohome-small.png')}
-        imageSmall2xSrc={require('./hellohome-small@2x.png')}
+        imageSrc={require('./helloHome-connecting-soulmates.png')}
+        image2xSrc={require('./helloHome-connecting-soulmates@2x.png')}
+        imageSmallSrc={require('./helloHome-connecting-soulmates-small.png')}
+        imageSmall2xSrc={require('./helloHome-connecting-soulmates-small@2x.png')}
         url="http://www.hellohome.io/"
         buttonText="Check Out HelloHome"
       />
       <CustomerSection
-        headline="Ordego"
+        headline="Ordego - Online Convenience Store"
         textline={`Ordego is striving to create an extensive network that delivers convenience items to you, based on
           your location, in a matter of minutes. By letting you have access to your own online bodega, Ordego is
           redefining the way New York City interacts with convenience.`}
         imageClassName="browser-image"
-        imageSrc={require('./ordego.png')}
-        image2xSrc={require('./ordego@2x.png')}
-        imageSmallSrc={require('./ordego-small.png')}
-        imageSmall2xSrc={require('./ordego-small@2x.png')}
+        imageSrc={require('./ordego-online-convenience-store.png')}
+        image2xSrc={require('./ordego-online-convenience-store@2x.png')}
+        imageSmallSrc={require('./ordego-online-convenience-store-small.png')}
+        imageSmall2xSrc={require('./ordego-online-convenience-store-small@2x.png')}
         url="https://www.ordego.com/"
         buttonText="Check Out Ordego"
       />
@@ -165,30 +169,31 @@ export default () => {
         image2xSrc={require('./yoso-collect-moments@2x.png')}
         imageSmallSrc={require('./yoso-collect-moments-small.png')}
         imageSmall2xSrc={require('./yoso-collect-moments-small@2x.png')}
-        url="http://yosoapp.com/"
+        url="http://yosoapp.com/en/"
         buttonText="Check Out YOSO"
       />
       <CustomerSection
         theme="gray"
         headline="Victorio - Custom Shirts in 3D"
         textline={`Victorio offers rotatable 3D shirt models, so you can preview your shirt design from all angles.
-          Handmade and custom-tailored dress shirts of the highest quality, designed by you. `}
+          Handmade and custom-tailored dress shirts of the highest quality, designed by you.`}
+        imageClassName="browser-image"
         imageSrc={require('./victorio-custom-shirts-in-3d.png')}
         image2xSrc={require('./victorio-custom-shirts-in-3d@2x.png')}
         imageSmallSrc={require('./victorio-custom-shirts-in-3d-small.png')}
         imageSmall2xSrc={require('./victorio-custom-shirts-in-3d-small@2x.png')}
-        url="#"
+        url="http://tailorvictorio.pl/generator/"
         buttonText="Check Out Victorio"
       />
       <CustomerSection
-        headline="DashFlow"
+        headline="DashFlow - Track All Your Money Goals"
         textline={`Stay on top of your budget, organize your bills, get reminders, and achieve your goals for savings,
           budget, debt, and net worth. DashFlow makes it easy to track all of your financial goals on a customizable
           dashboard.`}
-        imageSrc={require('./dashflow.png')}
-        image2xSrc={require('./dashflow@2x.png')}
-        imageSmallSrc={require('./dashflow-small.png')}
-        imageSmall2xSrc={require('./dashflow-small@2x.png')}
+        imageSrc={require('./dashflow-track-all-your-money-goals.png')}
+        image2xSrc={require('./dashflow-track-all-your-money-goals@2x.png')}
+        imageSmallSrc={require('./dashflow-track-all-your-money-goals-small.png')}
+        imageSmall2xSrc={require('./dashflow-track-all-your-money-goals-small@2x.png')}
         url="http://dashflow.co/"
         buttonText="Check Out DashFlow"
       />

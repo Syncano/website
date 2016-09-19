@@ -24,6 +24,7 @@ import Link from './Link';
 import ListColumns from './ListColumns';
 import LoggedInContent from './LoggedInContent';
 import LoggedOutContent from './LoggedOutContent';
+import MobileAppDownloadButtons from './MobileAppDownloadButtons';
 import { Modals, ModalsHOC } from './Modals';
 import OfficeAddresses from './OfficeAddresses';
 import OfficesMap from './OfficesMap';
@@ -79,6 +80,7 @@ export default {
   ListColumns,
   LoggedInContent,
   LoggedOutContent,
+  MobileAppDownloadButtons,
   Modals,
   ModalsHOC,
   OfficeAddresses,
