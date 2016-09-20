@@ -1,0 +1,7 @@
+.medium-text {
+  display: none;
+
+  @include medium {
+    display: inline;
+  }
+}

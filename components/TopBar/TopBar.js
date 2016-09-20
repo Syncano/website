@@ -67,13 +67,13 @@ const TopBar = (props, { hamburgerMenu, modals, isLandingPage }) => {
               </HideOnLandingPage>
               <HideOnLandingPage>
                 <li>
-                  <a
+                  <Link
                     className="button button--noborder"
-                    href="http://docs.syncano.io/"
-                    target="_blank"
+                    activeClassName="is-active"
+                    to="/customers/"
                   >
-                    Docs
-                  </a>
+                    Customers
+                  </Link>
                 </li>
               </HideOnLandingPage>
               <HideOnLandingPage>
