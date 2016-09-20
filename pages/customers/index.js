@@ -55,7 +55,7 @@ export default () => {
       />
       <CustomerSection
         theme="gray"
-        headline="ehco -­ Give to your favorite causes"
+        headline={<span>ehco<span className="medium-text"> -­ Give to your favorite causes</span></span>}
         textline={`The ehco\u2122 Giving app is the easiest way to give to your favorite causes. Add a payment method,
           discover worthy local causes, and give in seconds to help a cause meet a specific need. All of your giving,
           one simple app.`}
@@ -80,7 +80,7 @@ export default () => {
       />
       <CustomerSection
         theme="gray"
-        headline="HelloHome ­- Connecting soulmates"
+        headline={<span>HelloHome<span className="medium-text"> ­- Connecting soulmates</span></span>}
         textline={`HelloHome provides a fast, easy and fun alternative to traditional flat searches. Create a profile,
           swipe through potential flat/flatmate profiles and start a conversation if there is interest from both sides.
           Your flat search does not have to be a pain. Join the revolution!`}
@@ -92,7 +92,7 @@ export default () => {
         buttonText="Check Out HelloHome"
       />
       <CustomerSection
-        headline="Ordego - Online Convenience Store"
+        headline={<span>Ordego<span className="medium-text"> - Online Convenience Store</span></span>}
         textline={`Ordego is striving to create an extensive network that delivers convenience items to you, based on
           your location, in a matter of minutes. By letting you have access to your own online bodega, Ordego is
           redefining the way New York City interacts with convenience.`}
@@ -151,9 +151,11 @@ export default () => {
       <CustomerSection
         theme="gray"
         headline="Health.Er ­- Food Scanner"
-        textline={`What is really in your food? „E number” is often used informally as a negative term for artificial
-          food additives. The foods on supermarket shelves have more health information on their labels than ever before
-          and it is now even more confusing.`}
+        textline={<span>What is really in your food? „E number” is often used informally as a negative term for
+          artificial food additives. The foods on supermarket shelves have more health information on their labels than
+          ever before and it is now even more confusing.<span className="medium-text"> Health.Er analyzes food labels
+          for you and provides information about E numbers found on the label, so that you can know whether particular E
+          numbers are good, bad or neutral for your health!</span></span>}
         imageSrc={require('./healther-food-scanner.png')}
         image2xSrc={require('./healther-food-scanner@2x.png')}
         imageSmallSrc={require('./healther-food-scanner-small.png')}
@@ -163,8 +165,11 @@ export default () => {
       />
       <CustomerSection
         headline="YOSO - Collect moments"
-        textline={`YOSO was created to bring the magic back to taking pictures, as it used to be when they were taken
-          with a photographic film.`}
+        textline={<span>YOSO was created to bring the magic back to taking pictures, as it used to be when they were
+          taken with a photographic film.<span className="medium-text"> Do you remember that excitement while
+          triggering the shutter? We wanted you to experience the sensation of surprise again, while taking photos with
+          a smartphone. With YOSO, you can take 24 or 36 pictures with a smartphone, without immediately seeing each
+          picture, but only once you use up the whole virtual roll of film.</span></span>}
         imageSrc={require('./yoso-collect-moments.png')}
         image2xSrc={require('./yoso-collect-moments@2x.png')}
         imageSmallSrc={require('./yoso-collect-moments-small.png')}
@@ -186,7 +191,7 @@ export default () => {
         buttonText="Check Out Victorio"
       />
       <CustomerSection
-        headline="DashFlow - Track All Your Money Goals"
+        headline={<span>DashFlow<span className="medium-text"> - Track All Your Money Goals</span></span>}
         textline={`Stay on top of your budget, organize your bills, get reminders, and achieve your goals for savings,
           budget, debt, and net worth. DashFlow makes it easy to track all of your financial goals on a customizable
           dashboard.`}
