@@ -1,11 +1,12 @@
 import React, { PropTypes } from 'react';
 
 const LoggedOutContent = ({ children }, { isUserLoggedIn }) => {
-  if (isUserLoggedIn) {
-    return null;
+  // has to be false, not null
+  if (isUserLoggedIn === false) {
+    return children;
   }
 
-  return children;
+  return null;
 }
 
 LoggedOutContent.contextTypes = {
