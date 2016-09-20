@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import _ from 'lodash';
 import PricingPlan from './PricingPlan';
-import LoggedInContent from '../LoggedInContent';
-import LoggedOutContent from '../LoggedOutContent';
+import { LoggedInContent, LoggedOutContent } from '../LoggedInContent';
 import plan from '../../data-pricing-plans.json';
 
 class Pricing extends Component {

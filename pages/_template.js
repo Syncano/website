@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 import { MODALS } from '../components/Modals/Modals';
 import Helmet from 'react-helmet';
-import { Modals, ModalsHOC, TopBar } from '../components';
+import { LoggedInHOC, Modals, ModalsHOC, TopBar } from '../components';
 import GLOBAL_CONFIG from '../config/global';
 import 'normalize.css';
 import 'styles/styles';
@@ -80,4 +80,4 @@ class Template extends Component {
   };
 }
 
-export default ModalsHOC(Template);
+export default LoggedInHOC(ModalsHOC(Template));
