@@ -10,6 +10,7 @@ import ContactForm from './ContactForm';
 import ContactFormSection from './ContactFormSection';
 import CounterBoxes from './CounterBoxes';
 import CTASection from './CTASection';
+import CustomerSection from './CustomerSection';
 import FAQ from './FAQ';
 import FeaturesColumns from './FeaturesColumns';
 import Footer from './Footer';
@@ -22,6 +23,7 @@ import LandingPageHero from './LandingPageHero';
 import Link from './Link';
 import ListColumns from './ListColumns';
 import { LoggedInContent, LoggedInHOC, LoggedOutContent } from './LoggedInContent';
+import MobileAppDownloadButtons from './MobileAppDownloadButtons';
 import { Modals, ModalsHOC } from './Modals';
 import OfficeAddresses from './OfficeAddresses';
 import OfficesMap from './OfficesMap';
@@ -63,10 +65,11 @@ export default {
   ContactFormSection,
   CounterBoxes,
   CTASection,
+  CustomerSection,
   FAQ,
+  FeaturesColumns,
   Footer,
   FormInputElement,
-  FeaturesColumns,
   HamburgerMenu,
   Hero,
   HideOnLandingPage,
@@ -77,6 +80,7 @@ export default {
   LoggedInContent,
   LoggedInHOC,
   LoggedOutContent,
+  MobileAppDownloadButtons,
   Modals,
   ModalsHOC,
   OfficeAddresses,
