@@ -7,7 +7,7 @@ export default (ComposedComponent) => (
       super(props);
 
       this.state = {
-        isUserLoggedIn: false
+        isUserLoggedIn: null
       };
     }
 
@@ -24,9 +24,7 @@ export default (ComposedComponent) => (
     componentWillMount() {
       const isUserLoggedIn = Cookies.get('logged_in');
 
-      if (isUserLoggedIn) {
-        this.setState({ isUserLoggedIn: true });
-      }
+      this.setState({ isUserLoggedIn: isUserLoggedIn ? true : false });
     }
 
     render() {
