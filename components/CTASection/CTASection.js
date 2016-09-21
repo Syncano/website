@@ -29,7 +29,7 @@ const CTASection = ({ variant, theme, children }, { modals }) => {
         </a>
       </LoggedInContent>
       <p className="cta-section__button-description">
-        6 months free &bull; No credit card required
+        30 days free &bull; No credit card required
       </p>
     </div>
   );

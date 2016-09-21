@@ -58,7 +58,7 @@ const Homepage = (props, { modals }) => {
             </a>
           </LoggedInContent>
           <p className="hero__text__button-description">
-            6 months free &bull; No credit card required
+            30 days free &bull; No credit card required
           </p>
         </div>
       </Hero>
