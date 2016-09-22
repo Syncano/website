@@ -6,6 +6,8 @@ import {
   FeaturesColumns,
   Footer,
   Hero,
+  LoggedInContent,
+  LoggedOutContent,
   PageHelmet,
   PlatformsSection,
   TextWithBackground,
@@ -39,14 +41,24 @@ const Homepage = (props, { modals }) => {
         }
       >
         <div className="hero__text__button-container">
-          <span
-            className="button button--large button--featured"
-            onClick={modals.signUp.open}
-          >
-            Get Started for Free
-          </span>
+          <LoggedOutContent>
+            <span
+              className="button button--large button--featured"
+              onClick={modals.signUp.open}
+            >
+              Get Started for Free
+            </span>
+          </LoggedOutContent>
+          <LoggedInContent>
+            <a
+              className="button button--large button--featured"
+              href={APP_CONFIG.dashboardUrl}
+            >
+              Go to Dashboard
+            </a>
+          </LoggedInContent>
           <p className="hero__text__button-description">
-            6 months free &bull; No credit card required
+            30 days free &bull; No credit card required
           </p>
         </div>
       </Hero>

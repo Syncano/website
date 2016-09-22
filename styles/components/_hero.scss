@@ -128,6 +128,11 @@
         font-size: 24px;
         max-width: none;
       }
+
+      // make "Go to Dashboard" button wider than .hero__text__button-description
+      .hero__text__button-container .button {
+        min-width: 260px;
+      }
     }
 
     .hero__image {

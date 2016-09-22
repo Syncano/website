@@ -3,6 +3,7 @@ import Headroom from 'react-headroom';
 import { HamburgerMenuHOC, HamburgerMenu } from '../HamburgerMenu';
 import Link from '../Link';
 import HideOnLandingPage from '../HideOnLandingPage';
+import { LoggedInContent, LoggedOutContent } from '../LoggedInContent';
 
 const TopBar = (props, { hamburgerMenu, modals, isLandingPage }) => {
   return (
@@ -65,13 +66,13 @@ const TopBar = (props, { hamburgerMenu, modals, isLandingPage }) => {
               </HideOnLandingPage>
               <HideOnLandingPage>
                 <li>
-                  <a
+                  <Link
                     className="button button--noborder"
-                    href="http://docs.syncano.io/"
-                    target="_blank"
+                    activeClassName="is-active"
+                    to="/customers/"
                   >
-                    Docs
-                  </a>
+                    Customers
+                  </Link>
                 </li>
               </HideOnLandingPage>
               <HideOnLandingPage>
@@ -85,24 +86,38 @@ const TopBar = (props, { hamburgerMenu, modals, isLandingPage }) => {
                   </Link>
                 </li>
               </HideOnLandingPage>
-              <HideOnLandingPage>
+              <LoggedOutContent>
+                <HideOnLandingPage>
+                  <li>
+                    <span
+                      className="button button--noborder"
+                      onClick={modals.logIn.open}
+                    >
+                      Log In
+                    </span>
+                  </li>
+                </HideOnLandingPage>
+              </LoggedOutContent>
+              <LoggedOutContent>
                 <li>
                   <span
-                    className="button button--noborder"
-                    onClick={modals.logIn.open}
+                    className="button top-bar__nav__menu__cta"
+                    onClick={modals.signUp.open}
                   >
-                    Log In
+                    Sign Up For Free
                   </span>
                 </li>
-              </HideOnLandingPage>
-              <li>
-                <span
-                  className="button top-bar__nav__menu__cta"
-                  onClick={modals.signUp.open}
-                >
-                  Sign Up For Free
-                </span>
-              </li>
+              </LoggedOutContent>
+              <LoggedInContent>
+                <li>
+                  <a
+                    className="button top-bar__nav__menu__cta"
+                    href={APP_CONFIG.dashboardUrl}
+                  >
+                    Go to Dashboard
+                  </a>
+                </li>
+              </LoggedInContent>
             </ul>
           </div>
         </nav>

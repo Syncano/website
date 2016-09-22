@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import _ from 'lodash';
 import { MODALS } from './Modals';
 
@@ -11,11 +11,11 @@ export default (ComposedComponent) => (
     };
 
     static contextTypes = {
-      router: React.PropTypes.object
+      router: PropTypes.object
     };
 
     static childContextTypes = {
-      modals: React.PropTypes.object
+      modals: PropTypes.object
     };
 
     getChildContext = () => {
@@ -82,9 +82,7 @@ export default (ComposedComponent) => (
     });
 
     render() {
-      return (
-        <ComposedComponent {...this.props} {...this.state} />
-      );
+      return <ComposedComponent {...this.props} {...this.state} />;
     };
   }
 );

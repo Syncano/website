@@ -1,0 +1,7 @@
+.extended-description {
+  display: none;
+
+  @include medium {
+    display: inline;
+  }
+}
