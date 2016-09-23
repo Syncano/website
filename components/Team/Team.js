@@ -145,6 +145,30 @@ export default ({ headline, children }) => {
               title="Software Engineer"
             />
             <TeamMember
+              photoSrc={require('./images/piotr-owerczuk.jpg')}
+              photo2xSrc={require('./images/piotr-owerczuk@2x.jpg')}
+              photoMediumSrc={require('./images/piotr-owerczuk-medium.jpg')}
+              photoMedium2xSrc={require('./images/piotr-owerczuk-medium@2x.jpg')}
+              name="Piotr Owerczuk"
+              title="Junior Front End Engineer"
+            />
+            <TeamMember
+              photoSrc={require('./images/daniel-siwek.jpg')}
+              photo2xSrc={require('./images/daniel-siwek@2x.jpg')}
+              photoMediumSrc={require('./images/daniel-siwek-medium.jpg')}
+              photoMedium2xSrc={require('./images/daniel-siwek-medium@2x.jpg')}
+              name="Daniel Siwek"
+              title="Junior Front End Engineer"
+            />
+            <TeamMember
+              photoSrc={require('./images/tomek-ciecierski.jpg')}
+              photo2xSrc={require('./images/tomek-ciecierski@2x.jpg')}
+              photoMediumSrc={require('./images/tomek-ciecierski-medium.jpg')}
+              photoMedium2xSrc={require('./images/tomek-ciecierski-medium@2x.jpg')}
+              name="Tomek Ciecierski"
+              title="Junior Front End Engineer"
+            />
+            <TeamMember
               photoSrc={require('./images/pedro-fasting.jpg')}
               photo2xSrc={require('./images/pedro-fasting@2x.jpg')}
               photoMediumSrc={require('./images/pedro-fasting-medium.jpg')}
@@ -175,7 +199,7 @@ export default ({ headline, children }) => {
               photoMedium2xSrc={require('./images/teodor-bjerrang-medium@2x.jpg')}
               name="Teodor Bjerrang"
               title="Board Member"
-            />
+            />        
           </ul>
         </div>
       </div>
