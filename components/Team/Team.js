@@ -199,7 +199,7 @@ export default ({ headline, children }) => {
               photoMedium2xSrc={require('./images/teodor-bjerrang-medium@2x.jpg')}
               name="Teodor Bjerrang"
               title="Board Member"
-            />        
+            />
           </ul>
         </div>
       </div>
