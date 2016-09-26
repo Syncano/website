@@ -50,6 +50,14 @@ const HamburgerMenu = (props, { modals }) => {
                   Help
                 </HamburgerMenuLink>
               </li>
+              <li>
+                <HamburgerMenuLink
+                  href="https://www.syncano.io/blog/"
+                  target="_blank"
+                >
+                  Blog
+                </HamburgerMenuLink>
+              </li>
             </ul>
           </div>
         </HideOnLandingPage>
