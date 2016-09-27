@@ -42,7 +42,7 @@ const TopBar = (props, { hamburgerMenu, modals, isLandingPage }) => {
           </div>
           <div className="top-bar__nav__menu">
             <ul>
-            <HideOnLandingPage>
+              <HideOnLandingPage>
                 <li>
                   <Link
                     className="button button--noborder"
@@ -76,6 +76,17 @@ const TopBar = (props, { hamburgerMenu, modals, isLandingPage }) => {
                 </li>
               </HideOnLandingPage>
               <HideOnLandingPage>
+                <li className="top-bar__nav__menu__item--docs">
+                  <a
+                    className="button button--noborder"
+                    href="http://docs.syncano.io/"
+                    target="_blank"
+                  >
+                    Docs
+                  </a>
+                </li>
+              </HideOnLandingPage>
+              <HideOnLandingPage>
                 <li>
                   <Link
                     className="button button--noborder"
@@ -84,6 +95,17 @@ const TopBar = (props, { hamburgerMenu, modals, isLandingPage }) => {
                   >
                     Help
                   </Link>
+                </li>
+              </HideOnLandingPage>
+              <HideOnLandingPage>
+                <li className="top-bar__nav__menu__item--blog">
+                  <a
+                    className="button button--noborder"
+                    href="https://www.syncano.io/blog/"
+                    target="_blank"
+                  >
+                    Blog
+                  </a>
                 </li>
               </HideOnLandingPage>
               <LoggedOutContent>

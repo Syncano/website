@@ -23,7 +23,7 @@
     height: 500px;
     background: #fff;
   }
-  
+
   > .inner {
     overflow: hidden;
     padding-top: 22px;
@@ -84,6 +84,11 @@
 
         &:last-child {
           margin-right: 0;
+        }
+
+        &.top-bar__nav__menu__item--blog,
+        &.top-bar__nav__menu__item--docs {
+          display: none;
         }
 
         .button {
@@ -198,6 +203,11 @@
   @include large {
     .top-bar__nav .top-bar__nav__menu li {
       margin-right: 35px;
+
+      &.top-bar__nav__menu__item--blog,
+      &.top-bar__nav__menu__item--docs {
+        display: inline-block;
+      }
     }
   }
 }
