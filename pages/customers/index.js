@@ -55,7 +55,7 @@ export default () => {
       />
       <CustomerSection
         theme="gray"
-        headline="ehco -­ Give to your favorite causes"
+        headline={`ehco\u2122 - Mobile payments for nonprofits`}
         textline={`The ehco\u2122 Giving app is the easiest way to give to your favorite causes. Add a payment method,
           discover worthy local causes, and give in seconds to help a cause meet a specific need. All of your giving,
           one simple app.`}
