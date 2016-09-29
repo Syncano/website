@@ -33,6 +33,9 @@ export default () => (
               <Link to="/terms-of-service/#privacy-policy">Privacy Policy</Link>
             </li>
             <li>
+              <a href="https://www.privacyshield.gov/participant?id=a2zt0000000GnAKAA0" target="_blank">Privacy Shield</a>
+            </li>
+            <li>
               <Link to="/contact/">Contact Us</Link>
             </li>
           </ul>
