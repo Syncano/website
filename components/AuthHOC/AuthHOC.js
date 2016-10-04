@@ -119,7 +119,7 @@ export default (ComposedComponent) => (
       let redirectUrl = `${APP_CONFIG.dashboardUrl}#/login?token=${token}`;
 
       if (signUpMode) {
-        redirectUrl = `${APP_CONFIG.dashboardUrl}#/?token=${token}&signUpMode=${signUpMode}`;
+        redirectUrl = `${APP_CONFIG.dashboardUrl}#/setup/?token=${token}&signUpMode=${signUpMode}`;
       }
 
       window.location.href = redirectUrl;
@@ -134,9 +134,7 @@ export default (ComposedComponent) => (
     };
 
     render() {
-      return (
-        <ComposedComponent {...this.props} />
-      );
+      return <ComposedComponent {...this.props} />;
     };
   }
 );
