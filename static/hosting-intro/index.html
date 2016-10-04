@@ -1,0 +1,77 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Syncano Hosting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/avenir.css">
+  </head>
+  <body>
+    <div class="header-container">
+      <header class="wrapper clearfix">
+        <img src="img/whitelogo.svg" alt="Syncano Logo">
+        <h1 class="title">
+          <span class="congratulations">Congratulations</span>
+          You have successfully created a Syncano Hosting
+        </h1>
+        <span class="heading-divider"></span>
+        <p>Here is all you need to know to get going with your hosting.</p>
+      </header>
+    </div>
+    <div class="main-container">
+      <div class="main wrapper clearfix">
+        <div class="text-editor-wrap console">
+          <div class="title-bar"><span class="title">Bash</span></div>
+          <div class="text-body">
+            <span class="userselect">$ </span><span id="typed"></span><span class="element typed-cursor">|</span>
+          </div>
+        </div>
+        <article>
+          <header>
+            <h2 class="main-title">Syncano Hosting</h2>
+            <p class="center">The best way to manage your hosting files is through the syncano-cli. You should have Python installed. You should have Python installed. Learn how to install Python on
+            <a href="http://docs.python-guide.org/en/latest/starting/install/win/" target="_blank">Windows</a> or
+            <a href="http://docs.python-guide.org/en/latest/starting/install/osx/" target="_blank">Mac OS X.</a></p>
+          </header>
+          <section>
+            <h3>Install syncano-cli:</h3>
+            <p class="text-editor-wrap snippet"><span class="userselect">$ </span>pip install syncano-cli</p>
+            <h3>Login to your Syncano account:</h3>
+            <p class="text-editor-wrap snippet"><span class="userselect">$ </span>syncano login --instance-name YOUR_INSTANCE</p>
+          </section>
+          <section>
+            <h2 class="main-title">Deploy your application</h2>
+            <h3>Deploying your app is as simple as:</h3>
+            <p class="text-editor-wrap snippet"><span class="userselect">$ </span>syncano hosting publish ./your/project/path/</p>
+            <h3>To see all the available commands:</h3>
+            <p class="text-editor-wrap snippet"><span class="userselect">$ </span>syncano hosting</p>
+            <h3>With Syncano-CLI, you can do so much more than just managing your static files. See the
+              <a href="https://github.com/Syncano/syncano-cli" target="_blank">syncano-cli</a>
+              GitHub respository for a detailed usage instruction.
+            </h3>
+          </section>
+        </article>
+      </div>
+    </div>
+    <div class="footer-container">
+      <footer class="wrapper">
+        <img src="img/syncano.svg" alt="Syncano Logo">
+      </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
+    <script>
+      $(function(){
+        $(".element").typed({
+          strings: ["pip install syncano-cli", "syncano login --instance-name YOUR_INSTANCE", "syncano hosting list", "syncano hosting list files", "syncano hosting publish BASE_DIR", "syncano hosting delete", "syncano hosting delete hosting/file/path", "syncano hosting update hosting/file/path local/file/path", "syncano hosting --domain staging publish BASE_DIR","syncano hosting publish ./your/project/path/"],
+          typeSpeed: 0
+        });
+      });
+    </script>
+  </body>
+</html>
