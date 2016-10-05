@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import BodyClassName from 'react-body-classname';
 import classNames from 'classnames';
 
@@ -13,7 +13,7 @@ export default (ComposedComponent) => (
     };
 
     static childContextTypes = {
-      hamburgerMenu: React.PropTypes.object
+      hamburgerMenu: PropTypes.object
     };
 
     getChildContext = () => {
@@ -40,13 +40,13 @@ export default (ComposedComponent) => (
     closeHamburgerMenu = () => {
       this.setState({ hasHamburgerMenuVisible: false });
     };
-    
+
     render() {
       const { hasHamburgerMenuVisible } = this.state;
 
       return (
         <BodyClassName className={this.getBodyClassName(hasHamburgerMenuVisible)}>
-          <ComposedComponent {...this.props} {...this.state} />          
+          <ComposedComponent {...this.props} {...this.state} />
         </BodyClassName>
       );
     };

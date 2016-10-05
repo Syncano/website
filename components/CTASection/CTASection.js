@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import { LoggedInContent, LoggedOutContent } from '../LoggedInContent';
 
@@ -44,7 +44,7 @@ const CTASection = ({ variant, theme, children }, { modals }) => {
 };
 
 CTASection.contextTypes = {
-  modals: React.PropTypes.object
+  modals: PropTypes.object
 };
 
 export default CTASection;

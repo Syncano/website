@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import _ from 'lodash';
 import { MODALS } from '../components/Modals/Modals';
 import Helmet from 'react-helmet';
@@ -9,12 +9,12 @@ import 'styles/styles';
 
 class Template extends Component {
   static contextTypes = {
-    modals: React.PropTypes.object
+    modals: PropTypes.object
   };
 
   static childContextTypes = {
-    location: React.PropTypes.object,
-    isLandingPage: React.PropTypes.bool
+    location: PropTypes.object,
+    isLandingPage: PropTypes.bool
   };
 
   getChildContext = () => {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import {
   CodePreview,
@@ -207,7 +207,7 @@ const Homepage = (props, { modals }) => {
 };
 
 Homepage.contextTypes = {
-  modals: React.PropTypes.object
+  modals: PropTypes.object
 };
 
 export default Homepage;

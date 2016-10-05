@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { HamburgerMenuLink } from '../HamburgerMenu';
 import HideOnLandingPage from '../HideOnLandingPage';
 import { LoggedInContent, LoggedOutContent } from '../LoggedInContent';
@@ -103,7 +103,7 @@ const HamburgerMenu = (props, { modals }) => {
 };
 
 HamburgerMenu.contextTypes = {
-  modals: React.PropTypes.object
+  modals: PropTypes.object
 };
 
 export default HamburgerMenu;

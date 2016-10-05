@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Syncano from 'syncano';
 import Hello from './Hello';
 
@@ -15,11 +15,11 @@ export default (ComposedComponent) => (
     };
 
     static contextTypes = {
-      isLandingPage: React.PropTypes.bool
+      isLandingPage: PropTypes.bool
     };
 
     static childContextTypes = {
-      auth: React.PropTypes.object
+      auth: PropTypes.object
     };
 
     getChildContext = () => {
