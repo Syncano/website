@@ -76,6 +76,6 @@ textarea {
   resize: none;
 }
 
-// commenting out temporarily to allow for Intercom Messages to show
-// up when visitors see the site (14-day Acquire Trial); will adjust later
-// body #elevio-widget { display: none !important; }
+body #elevio-widget {
+  display: none !important;
+}
