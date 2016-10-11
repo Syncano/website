@@ -102,7 +102,6 @@ const TopBar = (props, { hamburgerMenu, modals, isLandingPage }) => {
                   <a
                     className="button button--noborder"
                     href="https://www.syncano.io/blog/"
-                    target="_blank"
                   >
                     Blog
                   </a>

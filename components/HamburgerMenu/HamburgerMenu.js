@@ -51,10 +51,7 @@ const HamburgerMenu = (props, { modals }) => {
                 </HamburgerMenuLink>
               </li>
               <li>
-                <HamburgerMenuLink
-                  href="https://www.syncano.io/blog/"
-                  target="_blank"
-                >
+                <HamburgerMenuLink href="https://www.syncano.io/blog/">
                   Blog
                 </HamburgerMenuLink>
               </li>

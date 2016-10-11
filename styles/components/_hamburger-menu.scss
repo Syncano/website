@@ -10,6 +10,7 @@
   padding-top: 86px;
   padding-bottom: 60px;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 
   @include body-class('has-hamburger-menu-visible') {
     display: block;
