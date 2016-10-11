@@ -1,5 +1,5 @@
 $(function() {
-  const codebox = ('.codebox');
+  const codebox = $('.js-codebox');
   const strings = [
     'pip install syncano-cli',
     'syncano login --instance-name YOUR_INSTANCE',
@@ -13,8 +13,8 @@ $(function() {
     'syncano hosting publish ./your/project/path/',
   ];
 
-  $(codebox).typed({
+  codebox.typed({
     strings,
-    loop: true,
-  })
-})
+    loop: true
+  });
+});
