@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Formsy from 'formsy-react';
 import classNames from 'classnames';
 import ModalWrapper from './ModalWrapper';
@@ -41,7 +41,7 @@ class ModalResetPassword extends Component {
       handlePasswordReset,
       handleSocialAuth
     } = this.context.auth;
-    
+
     const isFormInvalid = status === 400;
     const inputClassName = classNames({
       'form__input': true,
@@ -151,8 +151,8 @@ class ModalResetPassword extends Component {
 };
 
 ModalResetPassword.contextTypes = {
-  auth: React.PropTypes.object,
-  modals: React.PropTypes.object
+  auth: PropTypes.object,
+  modals: PropTypes.object
 };
 
 export default AuthHOC(ModalResetPassword);

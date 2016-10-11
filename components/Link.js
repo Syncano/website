@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Link as ReactRouterLink } from 'react-router';
 
 const Link = (props, { isLandingPage }) => {
@@ -30,7 +30,7 @@ const Link = (props, { isLandingPage }) => {
 };
 
 Link.contextTypes = {
-  isLandingPage: React.PropTypes.bool
+  isLandingPage: PropTypes.bool
 };
 
 export default Link;

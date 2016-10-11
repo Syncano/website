@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Headroom from 'react-headroom';
 import { HamburgerMenuHOC, HamburgerMenu } from '../HamburgerMenu';
 import Link from '../Link';
@@ -102,7 +102,6 @@ const TopBar = (props, { hamburgerMenu, modals, isLandingPage }) => {
                   <a
                     className="button button--noborder"
                     href="https://www.syncano.io/blog/"
-                    target="_blank"
                   >
                     Blog
                   </a>
@@ -150,9 +149,9 @@ const TopBar = (props, { hamburgerMenu, modals, isLandingPage }) => {
 };
 
 TopBar.contextTypes = {
-  hamburgerMenu: React.PropTypes.object,
-  modals: React.PropTypes.object,
-  isLandingPage: React.PropTypes.bool
+  hamburgerMenu: PropTypes.object,
+  modals: PropTypes.object,
+  isLandingPage: PropTypes.bool
 };
 
 export default HamburgerMenuHOC(TopBar);

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 import _ from 'lodash';
 import PricingPlan from './PricingPlan';
@@ -124,7 +124,7 @@ class Pricing extends Component {
 }
 
 Pricing.contextTypes = {
-  modals: React.PropTypes.object
+  modals: PropTypes.object
 };
 
 export default Pricing;

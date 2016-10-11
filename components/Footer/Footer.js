@@ -53,7 +53,7 @@ export default () => (
               <Link to="/help/">Help &amp; Status</Link>
             </li>
             <li>
-              <a href="https://www.syncano.io/blog/" target="_blank">Blog</a>
+              <a href="https://www.syncano.io/blog/">Blog</a>
             </li>
           </ul>
         </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 
 const HamburgerMenuLink = (props, { hamburgerMenu }) => {
@@ -20,7 +20,7 @@ const HamburgerMenuLink = (props, { hamburgerMenu }) => {
 };
 
 HamburgerMenuLink.contextTypes = {
-  hamburgerMenu: React.PropTypes.object
+  hamburgerMenu: PropTypes.object
 };
 
 export default HamburgerMenuLink;

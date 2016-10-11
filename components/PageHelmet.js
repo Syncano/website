@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Helmet from 'react-helmet';
 import _ from 'lodash';
 
@@ -61,7 +61,7 @@ const PageHelmet = ({
 };
 
 PageHelmet.contextTypes = {
-  location: React.PropTypes.object
+  location: PropTypes.object
 };
 
 export default PageHelmet;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { HOC } from 'formsy-react';
 import classNames from 'classnames';
 
@@ -40,7 +40,7 @@ class FormInputElement extends Component {
 };
 
 FormInputElement.contextTypes = {
-  displayValidationErrors: React.PropTypes.bool
+  displayValidationErrors: PropTypes.bool
 };
 
 export default HOC(FormInputElement);

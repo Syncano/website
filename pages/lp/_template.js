@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import {
   CircleIconColumns,
@@ -272,7 +272,7 @@ const Landing = ({ children }, { modals }) => {
 };
 
 Landing.contextTypes = {
-  modals: React.PropTypes.object
+  modals: PropTypes.object
 };
 
 export default Landing;
