@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Autolinker from 'autolinker';
 import _ from 'lodash';
 import Link from './Link';
@@ -34,7 +34,7 @@ const TwitterWidget = ({ data }, { isLandingPage }) => {
 };
 
 TwitterWidget.contextTypes = {
-  isLandingPage: React.PropTypes.bool
+  isLandingPage: PropTypes.bool
 };
 
 export default TwitterWidget;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Modal from 'react-modal';
 import BodyClassName from 'react-body-classname';
 import classNames from 'classnames';
@@ -104,8 +104,8 @@ class ModalWrapper extends Component {
 };
 
 ModalWrapper.contextTypes = {
-  auth: React.PropTypes.object,
-  modals: React.PropTypes.object
+  auth: PropTypes.object,
+  modals: PropTypes.object
 };
 
 export default isBrowser ? mouseTrap(ModalWrapper) : ModalWrapper;

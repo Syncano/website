@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Formsy from 'formsy-react';
 import classNames from 'classnames';
 import ModalWrapper from './ModalWrapper';
@@ -140,9 +140,9 @@ class ModalSignUp extends Component {
 };
 
 ModalSignUp.contextTypes = {
-  auth: React.PropTypes.object,
-  modals: React.PropTypes.object,
-  isLandingPage: React.PropTypes.bool
+  auth: PropTypes.object,
+  modals: PropTypes.object,
+  isLandingPage: PropTypes.bool
 };
 
 export default AuthHOC(ModalSignUp);

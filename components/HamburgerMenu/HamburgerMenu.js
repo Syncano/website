@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { HamburgerMenuLink } from '../HamburgerMenu';
 import HideOnLandingPage from '../HideOnLandingPage';
 import { LoggedInContent, LoggedOutContent } from '../LoggedInContent';
@@ -36,10 +36,23 @@ const HamburgerMenu = (props, { modals }) => {
               </li>
               <li>
                 <HamburgerMenuLink
+                  href="http://docs.syncano.io/"
+                  target="_blank"
+                >
+                  Docs
+                </HamburgerMenuLink>
+              </li>
+              <li>
+                <HamburgerMenuLink
                   activeClassName="is-active"
                   to="/help/"
                 >
                   Help
+                </HamburgerMenuLink>
+              </li>
+              <li>
+                <HamburgerMenuLink href="https://www.syncano.io/blog/">
+                  Blog
                 </HamburgerMenuLink>
               </li>
             </ul>
@@ -87,7 +100,7 @@ const HamburgerMenu = (props, { modals }) => {
 };
 
 HamburgerMenu.contextTypes = {
-  modals: React.PropTypes.object
+  modals: PropTypes.object
 };
 
 export default HamburgerMenu;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Formsy from 'formsy-react';
 import axios from 'axios';
 import classNames from 'classnames';
@@ -15,7 +15,7 @@ export default class ContactForm extends Component {
   };
 
   static childContextTypes = {
-    displayValidationErrors: React.PropTypes.bool
+    displayValidationErrors: PropTypes.bool
   };
 
   getChildContext = () => {

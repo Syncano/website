@@ -33,6 +33,9 @@ export default () => (
               <Link to="/terms-of-service/#privacy-policy">Privacy Policy</Link>
             </li>
             <li>
+              <a href="https://www.privacyshield.gov/participant?id=a2zt0000000GnAKAA0" target="_blank">Privacy Shield</a>
+            </li>
+            <li>
               <Link to="/contact/">Contact Us</Link>
             </li>
           </ul>
@@ -50,7 +53,7 @@ export default () => (
               <Link to="/help/">Help &amp; Status</Link>
             </li>
             <li>
-              <a href="https://www.syncano.io/blog/" target="_blank">Blog</a>
+              <a href="https://www.syncano.io/blog/">Blog</a>
             </li>
           </ul>
         </div>

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Syncano from 'syncano';
 import Hello from './Hello';
 
@@ -15,11 +15,11 @@ export default (ComposedComponent) => (
     };
 
     static contextTypes = {
-      isLandingPage: React.PropTypes.bool
+      isLandingPage: PropTypes.bool
     };
 
     static childContextTypes = {
-      auth: React.PropTypes.object
+      auth: PropTypes.object
     };
 
     getChildContext = () => {
@@ -119,7 +119,7 @@ export default (ComposedComponent) => (
       let redirectUrl = `${APP_CONFIG.dashboardUrl}#/login?token=${token}`;
 
       if (signUpMode) {
-        redirectUrl += `&signUpMode=${signUpMode}`;
+        redirectUrl = `${APP_CONFIG.dashboardUrl}#/setup?token=${token}&signUpMode=${signUpMode}`;
       }
 
       window.location.href = redirectUrl;
@@ -134,9 +134,7 @@ export default (ComposedComponent) => (
     };
 
     render() {
-      return (
-        <ComposedComponent {...this.props} />
-      );
+      return <ComposedComponent {...this.props} />;
     };
   }
 );

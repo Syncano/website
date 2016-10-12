@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Link from '../Link';
 
 const PlatformsItem = ({ className, imgSrc, title, href }, { isLandingPage }) => {
@@ -19,7 +19,7 @@ const PlatformsItem = ({ className, imgSrc, title, href }, { isLandingPage }) =>
 };
 
 PlatformsItem.contextTypes = {
-  isLandingPage: React.PropTypes.bool
+  isLandingPage: PropTypes.bool
 };
 
 export default PlatformsItem;

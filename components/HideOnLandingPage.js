@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 const HideOnLandingPage = ({ children }, { isLandingPage }) => {
   if (isLandingPage) {
@@ -9,7 +9,7 @@ const HideOnLandingPage = ({ children }, { isLandingPage }) => {
 };
 
 HideOnLandingPage.contextTypes = {
-  isLandingPage: React.PropTypes.bool
+  isLandingPage: PropTypes.bool
 };
 
 export default HideOnLandingPage;

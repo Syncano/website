@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import axios from 'axios';
 import moment from 'moment';
 import StatusImage from './StatusImage';
@@ -21,7 +21,7 @@ class StatusPageHeader extends Component {
   };
 
   static childContextTypes = {
-    modals: React.PropTypes.object
+    modals: PropTypes.object
   };
 
   componentWillMount = () => {
@@ -84,7 +84,7 @@ class StatusPageHeader extends Component {
 };
 
 StatusPageHeader.contextTypes = {
-  modals: React.PropTypes.object
+  modals: PropTypes.object
 };
 
 export default StatusPageHeader;

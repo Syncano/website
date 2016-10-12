@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Helmet from 'react-helmet';
 import Hero from './Hero';
 import { LoggedInContent, LoggedOutContent } from './LoggedInContent';
@@ -51,7 +51,7 @@ LandingPageHero.defaultProps = {
 };
 
 LandingPageHero.contextTypes = {
-  modals: React.PropTypes.object
+  modals: PropTypes.object
 };
 
 export default LandingPageHero;
