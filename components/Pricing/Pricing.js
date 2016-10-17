@@ -69,8 +69,8 @@ class Pricing extends Component {
               isFeatured={true}
               title="Developer"
               period="per month"
-              apiCallsOptions={this.getOptions('apiCalls', 0, 41)}
-              scriptsOptions={this.getOptions('scripts', 0, 11)}
+              apiCallsOptions={this.getOptions('apiCalls', 20, 41)}
+              scriptsOptions={this.getOptions('scripts', 5, 11)}
               features={[
                 'Full access to all features',
                 '60 requests per second',
@@ -84,7 +84,7 @@ class Pricing extends Component {
               title="Business"
               period="per month"
               apiCallsOptions={this.getOptions('apiCalls', 41, 1500)}
-              scriptsOptions={this.getOptions('scripts', 0, 1500)}
+              scriptsOptions={this.getOptions('scripts', 5, 1500)}
               features={[
                 'Full access to all features',
                 '60 requests per second',
