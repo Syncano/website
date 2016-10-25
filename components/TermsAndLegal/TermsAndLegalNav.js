@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { StickyContainer, Sticky } from 'react-sticky';
 import TermsAndLegalNavItem from './TermsAndLegalNavItem';
 
-const TermsAndLegalNav = ({ children }) => {
+const TermsAndLegalNav = ({ children }, { topBarHeight }) => {
   return (
     <StickyContainer className="terms-and-legal__sidebar">
       <Sticky
-        topOffset={-114}
+        topOffset={-topBarHeight}
         className="terms-and-legal__sidebar__nav-container"
       >
         <nav className="terms-and-legal__sidebar__nav">
@@ -29,6 +29,10 @@ const TermsAndLegalNav = ({ children }) => {
       </Sticky>
     </StickyContainer>
   );
+};
+
+TermsAndLegalNav.contextTypes = {
+  topBarHeight: PropTypes.number
 };
 
 export default TermsAndLegalNav;

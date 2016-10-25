@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Link } from 'react-scroll';
 import _ from 'lodash';
 
-const TermsAndLegalNavItem = ({ title }) => {
+const TermsAndLegalNavItem = ({ title }, { topBarHeight }) => {
   const slug = _.kebabCase(title);
 
   return (
@@ -11,12 +11,16 @@ const TermsAndLegalNavItem = ({ title }) => {
         to={slug}
         smooth={true}
         duration={500}
-        offset={-114}
+        offset={-topBarHeight}
       >
         {title}
       </Link>
     </li>
   );
+};
+
+TermsAndLegalNavItem.contextTypes = {
+  topBarHeight: PropTypes.number
 };
 
 export default TermsAndLegalNavItem;
