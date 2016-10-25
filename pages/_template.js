@@ -26,6 +26,7 @@ class Template extends Component {
 
   componentDidMount() {
     this.handleGetModalFromQuery() ? this.handleOpenModal() : this.trackPageView();
+    this.scrollToHash();
   }
 
   componentDidUpdate(prevProps) {
@@ -36,7 +37,23 @@ class Template extends Component {
     if (pathname !== previousPath || forceTrack) {
       this.trackPageView();
     }
+    this.scrollToHash();
   }
+
+  scrollToHash = () => {
+    const { hash } = window.location;
+
+    if (hash) {
+      setTimeout(() => {
+        const name = hash.replace('#', '');
+        const element = document.getElementsByName(name)[0];
+
+        element && element.scrollIntoView();
+        // Scroll up 100px as TopBar hides content
+        window.scrollBy(null, -100);
+      }, 0);
+    };
+  };
 
   trackPageView() {
     analytics.page('Website', {
