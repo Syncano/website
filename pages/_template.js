@@ -37,6 +37,7 @@ class Template extends Component {
     if (pathname !== previousPath || forceTrack) {
       this.trackPageView();
     }
+
     this.scrollToHash();
   }
 
@@ -44,14 +45,16 @@ class Template extends Component {
     const { hash } = window.location;
 
     if (hash) {
-      setTimeout(() => {
-        const name = hash.replace('#', '');
-        const element = document.getElementsByName(name)[0];
+      const name = hash.replace('#', '');
+      const element = document.getElementsByName(name)[0];
 
-        element && element.scrollIntoView();
-        // Scroll up 100px as TopBar hides content
-        window.scrollBy(null, -100);
-      }, 0);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView();
+          // scroll up as TopBar hides content
+          window.scrollBy(0, -114);
+        }, 0);
+      }
     };
   };
 

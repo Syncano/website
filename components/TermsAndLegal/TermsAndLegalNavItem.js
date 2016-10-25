@@ -11,7 +11,7 @@ export default ({ title }) => {
         to={slug}
         smooth={true}
         duration={500}
-        offset={-100}
+        offset={-114}
       >
         {title}
       </Link>
