@@ -6,7 +6,6 @@ import { LoggedInHOC, Modals, ModalsHOC, TopBar } from '../components';
 import GLOBAL_CONFIG from '../config/global';
 import 'normalize.css';
 import 'styles/styles';
-import utils from './utils';
 
 class Template extends Component {
   static contextTypes = {
@@ -38,8 +37,6 @@ class Template extends Component {
     if (pathname !== previousPath || forceTrack) {
       this.trackPageView();
     }
-
-    this.scrollToHash();
   }
 
   scrollToHash = () => {
@@ -47,14 +44,13 @@ class Template extends Component {
 
     if (hash) {
       const name = hash.replace('#', '');
-      const element = document.getElementsByName(name)[0];
-      const topBarHeigh = utils.getTopBarHeight();
+      const elementToScrollTo = document.getElementsByName(name)[0];
 
-      if (element) {
+      if (elementToScrollTo) {
         setTimeout(() => {
-          element.scrollIntoView();
+          elementToScrollTo.scrollIntoView();
           // scroll up as TopBar hides content
-          window.scrollBy(0, -topBarHeigh);
+          window.scrollBy(0, -114);
         }, 0);
       }
     };

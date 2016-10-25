@@ -1,11 +1,9 @@
 import React from 'react';
-import _ from 'lodash';
-import utils from '../../pages/utils'
 import { Link } from 'react-scroll';
+import _ from 'lodash';
 
 const TermsAndLegalNavItem = ({ title }) => {
   const slug = _.kebabCase(title);
-  const topBarHeigh = utils.getTopBarHeight();
 
   return (
     <li>
@@ -13,7 +11,7 @@ const TermsAndLegalNavItem = ({ title }) => {
         to={slug}
         smooth={true}
         duration={500}
-        offset={-topBarHeigh}
+        offset={-114}
       >
         {title}
       </Link>
