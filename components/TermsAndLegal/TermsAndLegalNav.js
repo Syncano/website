@@ -2,7 +2,7 @@ import React from 'react';
 import { StickyContainer, Sticky } from 'react-sticky';
 import TermsAndLegalNavItem from './TermsAndLegalNavItem';
 
-export default ({ children }) => {
+const TermsAndLegalNav = ({ children }) => {
   return (
     <StickyContainer className="terms-and-legal__sidebar">
       <Sticky
@@ -30,3 +30,5 @@ export default ({ children }) => {
     </StickyContainer>
   );
 };
+
+export default TermsAndLegalNav;

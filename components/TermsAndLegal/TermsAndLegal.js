@@ -1,7 +1,7 @@
 import React from 'react';
 import TermsAndLegalNav from './TermsAndLegalNav';
 
-export default ({ children }) => {
+const TermsAndLegal = ({ children }) => {
   return (
     <div className="terms-and-legal">
       <div className="inner">
@@ -15,3 +15,5 @@ export default ({ children }) => {
     </div>
   );
 };
+
+export default TermsAndLegal;

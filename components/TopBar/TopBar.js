@@ -7,7 +7,7 @@ import { LoggedInContent, LoggedOutContent } from '../LoggedInContent';
 
 const TopBar = (props, { hamburgerMenu, modals, isLandingPage }) => {
   return (
-    <Headroom disableInlineStyles>
+    <Headroom id="top-bar" disableInlineStyles>
       <div className="inner">
         <div className="top-bar__logo">
           <Link
