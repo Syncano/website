@@ -48,12 +48,16 @@ class Template extends Component {
     if (pathname !== previousPath || forceTrack) {
       this.trackPageView();
     }
+
+    this.scrollToHash();
   };
 
   getTopBarHeight = () => {
     const topBarHeight = mainUtils.getElementHeight('top-bar');
 
-    this.setState({ topBarHeight });
+    if (this.state.topBarHeight === 0) {
+      this.setState({ topBarHeight });
+    }
 
     return topBarHeight;
   };
