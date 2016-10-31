@@ -6,11 +6,12 @@ import { LoggedInHOC, Modals, ModalsHOC, TopBar } from '../components';
 import GLOBAL_CONFIG from '../config/global';
 import 'normalize.css';
 import 'styles/styles';
-import mainUtils from '../utils/mainUtils';
+import utils from '../utils';
 
 class Template extends Component {
   static contextTypes = {
-    modals: PropTypes.object
+    modals: PropTypes.object,
+    location: PropTypes.object
   };
 
   static childContextTypes = {
@@ -37,38 +38,37 @@ class Template extends Component {
 
   componentDidMount() {
     this.handleGetModalFromQuery() ? this.handleOpenModal() : this.trackPageView();
+    this.setTopBarHeight();
     this.scrollToHash();
   };
 
   componentDidUpdate(prevProps) {
-    const { pathname, state } = this.props.location;
-    const previousPath = prevProps.children.props.location.pathname;
+    const { pathname, state, hash, action } = this.props.location;
+    const { pathname: previousPath, hash: previousHash }= prevProps.location;
     const forceTrack = state && state.forceTrack;
 
     if (pathname !== previousPath || forceTrack) {
       this.trackPageView();
     }
 
-    this.scrollToHash();
+    if (action !== 'REPLACE' && action !== 'POP') {
+      this.scrollToHash();``
+    }
   };
 
-  getTopBarHeight = () => {
-    const topBarHeight = mainUtils.getElementHeight('top-bar');
+  setTopBarHeight = () => {
+    const topBarHeight = utils.getElementHeight('top-bar');
 
-    if (this.state.topBarHeight === 0) {
-      this.setState({ topBarHeight });
-    }
-
-    return topBarHeight;
+    this.setState({ topBarHeight });
   };
 
   scrollToHash = () => {
-    const { hash } = window.location;
+    const { hash } = this.props.location;
 
     if (hash) {
       const name = hash.replace('#', '');
       const elementToScrollTo = document.getElementsByName(name)[0];
-      const topBarHeight = this.getTopBarHeight();
+      const { topBarHeight } = this.state;
 
       if (elementToScrollTo) {
         setTimeout(() => {
@@ -77,7 +77,7 @@ class Template extends Component {
           window.scrollBy(0, -topBarHeight);
         }, 0);
       }
-    };
+    }
   };
 
   trackPageView() {
