@@ -6,8 +6,6 @@ const utils = {
     return height;
   },
   setupScroll(hash, topBarHeight) {
-    console.error('scroll', hash, topBarHeight);
-
     const elementToScrollTo = this._getScrollToElement(hash);
 
     if (elementToScrollTo) {
