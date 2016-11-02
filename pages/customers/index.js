@@ -14,7 +14,7 @@ export default () => {
   return (
     <div>
       <PageHelmet
-        title="Customers’ apps made with Syncano"
+        title="Featured customers’ apps made with Syncano"
         mixpanelTitle="Customers"
         description={`Helping people build successful apps for the web, mobile and IoT. See what developers are building
           with Syncano.`}
@@ -22,7 +22,7 @@ export default () => {
         twitterImageSrc={`${redirect_uri}${require('./twitter-image.png')}`}
       />
       <PageHeader
-        headline="Customers’ apps made with Syncano"
+        headline="Featured customers’ apps made with Syncano"
         textline="Helping people build amazing apps for the web, mobile and IoT."
       />
       <CustomerSection
