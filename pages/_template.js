@@ -39,7 +39,6 @@ class Template extends Component {
   componentDidMount() {
     this.handleGetModalFromQuery() ? this.handleOpenModal() : this.trackPageView();
     this.setTopBarHeight();
-    this.scrollToHash();
   };
 
   componentDidUpdate(prevProps) {
@@ -50,34 +49,16 @@ class Template extends Component {
     if (pathname !== previousPath || forceTrack) {
       this.trackPageView();
     }
-
-    if (action !== 'REPLACE' && action !== 'POP') {
-      this.scrollToHash();``
-    }
   };
 
   setTopBarHeight = () => {
-    const topBarHeight = utils.getElementHeight('top-bar');
+    const { topBarHeight } = this.state;
 
-    this.setState({ topBarHeight });
-  };
+    if (topBarHeight) return null;
 
-  scrollToHash = () => {
-    const { hash } = this.props.location;
+    const getTopBarHeight = utils.getElementHeight('top-bar');
 
-    if (hash) {
-      const name = hash.replace('#', '');
-      const elementToScrollTo = document.getElementsByName(name)[0];
-      const { topBarHeight } = this.state;
-
-      if (elementToScrollTo) {
-        setTimeout(() => {
-          elementToScrollTo.scrollIntoView();
-          // scroll up as TopBar hides content
-          window.scrollBy(0, -topBarHeight);
-        }, 0);
-      }
-    }
+    this.setState({ topBarHeight: getTopBarHeight });
   };
 
   trackPageView() {
