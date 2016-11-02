@@ -6,13 +6,8 @@
   .terms-and-legal__sidebar {
     display: none;
 
-    .terms-and-legal__sidebar__nav-container {
-      padding-top: 100px;
-      transform: translateY(-100px);
-
-      &.sticky {
-        transform: none;
-      }
+    .terms-and-legal__sidebar__nav-container.sticky {
+      padding-top: 114px;
     }
 
     .terms-and-legal__sidebar__nav {
@@ -45,7 +40,8 @@
           text-decoration: none;
           cursor: pointer;
 
-          &:hover {
+          &:hover,
+          &.active {
             color: $color-main-blue;
           }
         }
