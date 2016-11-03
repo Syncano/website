@@ -1,5 +1,8 @@
 # syncano.com
-Syncano.com Website
+[![Slack](https://img.shields.io/badge/chat-on_slack-blue.svg)](https://www.syncano.io/slack-invite/)
+[![CircleCI](https://circleci.com/gh/Syncano/syncano.com/tree/master.svg?style=shield)](https://circleci.com/gh/Syncano/syncano.com/tree/master)
+
+[Syncano.com](https://www.syncano.io/) Website
 
 # Installation
 
@@ -30,8 +33,6 @@ You'll also need to configure env variables for the tests to work locally:
 
     $ export NIGHTWATCH_EMAIL="xx"
     $ export NIGHTWATCH_PASSWORD="xx"
-
-You will get them here: [link](https://syncano.atlassian.net/wiki/display/SYN/How+to+setup+and+run+nightwatch+e2e+tests).
 
 If you are ready just run dev server:
 

@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import { Element } from 'react-scroll';
 
-export default ({ title, children }) => {
+const TermsAndLegalItem = ({ title, children }) => {
   const slug = _.kebabCase(title);
 
   return (
@@ -16,3 +16,5 @@ export default ({ title, children }) => {
     </Element>
   );
 };
+
+export default TermsAndLegalItem;
