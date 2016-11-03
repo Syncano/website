@@ -1,19 +1,22 @@
 {
-  "extends": "eslint-config-airbnb",
+  "extends": "airbnb",
   "rules": {
+    "comma-dangle": [2, "never"],
     "func-names": [0],
+    "global-require": [0],
     "indent": [2, 2, {"SwitchCase": 1}],
-    "max-len": [2, 120],
+    "max-len": [0],
     "no-console": [0],
     "no-else-return": [0],
     "no-extra-semi": [2],
     "react/prefer-es6-class": [0],
     "react/prefer-stateless-function": [0],
-    "semi": [2, "never"],
-    "space-before-function-paren": [2, "always"],
-    "space-infix-ops": [0]
+    "react/prop-types": [0],
+    "space-infix-ops": [0],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
   },
   "globals": {
-    "__PREFIX_LINKS__": true,
-  },
+    "APP_CONFIG": true,
+    "__PREFIX_LINKS__": true
+  }
 }

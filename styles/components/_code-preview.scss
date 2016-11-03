@@ -49,11 +49,12 @@
   .code-preview__content {
     padding: 5px;
     font-size: 12px;
-    
+
     .code-preview__content__item {
       display: none;
 
-      pre, code {
+      pre,
+      code {
         border: none;
         background: none;
         box-shadow: none;

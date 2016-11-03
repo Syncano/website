@@ -1,0 +1,57 @@
+.terminal-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+
+  h2 {
+    font-size: 20px;
+    color: $color-text-headline;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  h3 {
+    margin-top: 30px;
+    line-height: 1.5;
+    color: transparentize($color-text-base, .2);
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  .terminal {
+    margin-top: 55px;
+  }
+
+  .button {
+    margin-top: 40px;
+  }
+
+  &.terminal-section--under-page-header {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @include medium {
+    h2 {
+      font-size: 30px;
+    }
+
+    h3 {
+      margin-top: 20px;
+    }
+  }
+
+  @include large {
+    padding-top: 110px;
+    padding-bottom: 110px;
+
+    h2 {
+      font-size: 40px;
+    }
+  }
+
+  @include very-large {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+}

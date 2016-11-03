@@ -59,6 +59,23 @@
     }
   }
 
+  &.column-paragraphs--blue {
+    background: $color-main-blue;
+
+    .column-paragraphs__paragraphs {
+      .column-paragraphs__paragraphs__paragraph .column-paragraphs__paragraphs__paragraph__headline img,
+      .column-paragraphs__paragraphs__paragraph .column-paragraphs__paragraphs__paragraph__headline h3,
+      p {
+        color: #fff;
+
+        a {
+          color: inherit;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
   @include medium {
     h2 {
       font-size: 30px;
