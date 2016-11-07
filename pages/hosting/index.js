@@ -62,14 +62,14 @@ const Hosting = (props, { modals }) => {
       >
         <SideIconParagraphs.Paragraph
           iconSrc={require('./simple-web-publishing-from-the-command-line.svg')}
-          headline="Simple web publishing from the command line"
+          headline={<span>Simple web publishing<br />from the command line</span>}
           text={<span>With the <a href="https://github.com/Syncano/syncano-cli" target="_blank">Syncano CLI</a>, you can
             rapidly push your entire web app, or just individual files, with just a few commands. Take a look below to
             see just how simple it really is!</span>}
         />
         <SideIconParagraphs.Paragraph
           iconSrc={require('./securely-delivered-content-worldwide.svg')}
-          headline="Securely delivered content worldwide"
+          headline={<span>Securely delivered<br />content worldwide</span>}
           text={`SSL is a standard for web app security in today’s modern web. By hosting your app with Syn cano, you’ll
             have security built-in, creating a worry-free production environment!`}
         />
