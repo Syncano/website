@@ -42,7 +42,7 @@
   "devDependencies": {
     "eslint": "3.9.1",
     "eslint-config-airbnb": "12.0.0",
-    "eslint-plugin-import": "2.1.0",
+    "eslint-plugin-import": "2.2.0",
     "eslint-plugin-jsx-a11y": "2.2.3",
     "eslint-plugin-react": "6.6.0",
     "extended-define-webpack-plugin": "0.1.2",
