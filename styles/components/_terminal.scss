@@ -1,9 +1,13 @@
 .terminal {
   background: #1d2228;
-  max-width: 488px;
+  max-width: 355px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 4px;
+
+  // prevent .token to display above .top-bar
+  position: relative;
+  z-index: 0;
 
   .terminal__header {
     display: flex;
@@ -59,7 +63,37 @@
     }
   }
 
+  &.terminal--bottom-shadow {
+    position: relative;
+
+    &:before {
+      display: block;
+      content: '';
+      width: calc(100% + 10px);
+      height: 24px;
+      background: rgba(0, 0, 0, .2);
+      border-radius: 50%;
+      position: absolute;
+      left: -5px;
+      bottom: -11px;
+    }
+
+    .terminal__content {
+      background: inherit;
+      border-radius: inherit;
+      position: relative;
+    }
+  }
+
+  @include small {
+    &.terminal--bottom-shadow:before {
+      width: calc(100% + 20px);
+      left: -10px;
+    }
+  }
+
   @include medium {
+    max-width: 488px;
     border-radius: 8px;
 
     .terminal__content {

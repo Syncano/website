@@ -34,6 +34,7 @@ import PlatformsBar from './PlatformsBar';
 import PlatformsSection from './PlatformsSection';
 import Pricing from './Pricing';
 import ScreenDescriptions from './ScreenDescriptions';
+import SideIconParagraphs from './SideIconParagraphs';
 import SlackMessage from './SlackMessage';
 import SlackSlider from './SlackSlider';
 import SliderWrapper from './SliderWrapper';
@@ -94,6 +95,7 @@ export default {
   PlatformsSection,
   Pricing,
   ScreenDescriptions,
+  SideIconParagraphs,
   SlackMessage,
   SlackSlider,
   SliderWrapper,

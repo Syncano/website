@@ -1,10 +1,11 @@
 import React from 'react';
 import classNames from 'classnames';
 
-const TerminalSection = ({ variant, headline, textline, children }) => {
+const TerminalSection = ({ variant, theme, headline, textline, children }) => {
   const className = classNames({
     'terminal-section': true,
-    'terminal-section--under-page-header': (variant === 'under-page-header')
+    'terminal-section--under-page-header': (variant === 'under-page-header'),
+    'terminal-section--hosting-publish': (theme === 'hosting-publish')
   });
 
   return (

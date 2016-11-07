@@ -1,8 +1,8 @@
 import React from 'react';
 
 export default ({ iconSrc, headline, text }) => (
-  <div className="column-paragraphs__paragraphs__paragraph">
-    <div className="column-paragraphs__paragraphs__paragraph__headline">
+  <div className="side-icon-paragraphs__paragraphs__paragraph">
+    <div className="side-icon-paragraphs__paragraphs__paragraph__headline">
       <img
         src={iconSrc}
         alt={headline}

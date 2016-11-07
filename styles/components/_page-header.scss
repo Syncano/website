@@ -36,6 +36,12 @@
     margin-top: 50px;
   }
 
+  .page-header__button-description {
+    color: transparentize($color-text-base, .4);
+    font-size: 12px;
+    margin-top: 20px;
+  }
+
   .page-header__more {
     font-size: 14px;
     margin-top: 30px;
@@ -52,7 +58,7 @@
 
   &.page-header--error-404 {
     position: relative;
-    
+
     h1 {
       font-size: 80px;
       line-height: 1.2;
@@ -78,14 +84,19 @@
 
     h2 {
       margin-top: 20px;
+    }
 
-      br {
-        display: none;
-      }
+    h1 br,
+    h2 br {
+      display: none;
     }
 
     .inner > .button {
       margin-top: 60px;
+    }
+
+    .page-header__button-description {
+      font-size: 14px;
     }
 
     .page-header__more {

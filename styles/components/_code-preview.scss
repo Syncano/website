@@ -5,6 +5,8 @@
   margin-right: auto;
   background: #1D2228;
   overflow: hidden;
+
+  // prevent .token to display above .top-bar
   position: relative;
   z-index: 0;
 

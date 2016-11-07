@@ -1,13 +1,13 @@
 import React, { PropTypes } from 'react';
 
 import {
-  ColumnParagraphs,
   CTASection,
   Footer,
   LoggedInContent,
   LoggedOutContent,
   PageHeader,
   PageHelmet,
+  SideIconParagraphs,
   Terminal,
   TerminalSection
 } from '../../components';
@@ -43,38 +43,50 @@ const Hosting = (props, { modals }) => {
             Go to Dashboard
           </a>
         </LoggedInContent>
+        <p className="page-header__button-description">
+          30 days free &bull; No credit card required
+        </p>
       </PageHeader>
-      <TerminalSection variant="under-page-header">
-        <Terminal code={require('./syncano-hosting-publish.txt')} />
+      <TerminalSection
+        variant="under-page-header"
+        theme="hosting-publish"
+      >
+        <Terminal
+          code={require('./syncano-hosting-publish.txt')}
+          bottomShadow={true}
+        />
       </TerminalSection>
-      <ColumnParagraphs theme="blue">
-        <ColumnParagraphs.Paragraph
+      <SideIconParagraphs
+        variant="top-spacing"
+        theme="blue"
+      >
+        <SideIconParagraphs.Paragraph
           iconSrc={require('./simple-web-publishing-from-the-command-line.svg')}
           headline="Simple web publishing from the command line"
           text={<span>With the <a href="https://github.com/Syncano/syncano-cli" target="_blank">Syncano CLI</a>, you can
             rapidly push your entire web app, or just individual files, with just a few commands. Take a look below to
             see just how simple it really is!</span>}
         />
-        <ColumnParagraphs.Paragraph
+        <SideIconParagraphs.Paragraph
           iconSrc={require('./securely-delivered-content-worldwide.svg')}
           headline="Securely delivered content worldwide"
           text={`SSL is a standard for web app security in today’s modern web. By hosting your app with Syn cano, you’ll
             have security built-in, creating a worry-free production environment!`}
         />
-        <ColumnParagraphs.Paragraph
+        <SideIconParagraphs.Paragraph
           iconSrc={require('./quick-rollbacks-to-undo-mistakes.svg')}
           headline="Quick rollbacks to undo mistakes"
           text={`Need to rollback to a previous version fast? The Syncano Platform allows for making switches between
             hosted sites so that you can easily control which version will be displayed. Never again will you regret
             pushing to production!`}
         />
-        <ColumnParagraphs.Paragraph
+        <SideIconParagraphs.Paragraph
           iconSrc={require('./scale-your-websites-on-demand.svg')}
           headline="Scale your websites on demand"
           text={`Each Syncano hosted site uses Amazon’s S3 platform for storage. This means all of your data and files
             are secure, and your web app is automatically highly-scalable, as well as extremely durable.`}
         />
-      </ColumnParagraphs>
+      </SideIconParagraphs>
       <TerminalSection
         headline="Hosting Quickstart"
         textline="Learn how to start with Syncano Hosting in one minute!"
