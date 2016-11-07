@@ -14,7 +14,6 @@ import {
 
 const Hosting = (props, { modals }) => {
   const { redirect_uri } = APP_CONFIG;
-  console.log(redirect_uri);
 
   return (
     <div>
@@ -22,6 +21,8 @@ const Hosting = (props, { modals }) => {
         title="Static Web Hosting for Developers"
         mixpanelTitle="Hosting"
         description="Secure, single-command web publishing for your applications."
+        ogImageSrc={`${redirect_uri}${require('./og-image.png')}`}
+        twitterImageSrc={`${redirect_uri}${require('./twitter-image.png')}`}
       />
       <PageHeader
         headline={<span>Static Web Hosting<br />for Developers</span>}
