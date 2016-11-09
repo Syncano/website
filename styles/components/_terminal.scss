@@ -18,10 +18,9 @@
 
     .terminal__header__buttons {
       display: flex;
-      position: absolute;
-
-      // prevent Safari to display buttons at the top
       align-items: center;
+      position: absolute;
+      top: 0;
       height: 100%;
 
       .terminal__header__buttons__button {
