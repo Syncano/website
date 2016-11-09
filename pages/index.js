@@ -74,9 +74,7 @@ const Homepage = (props, { modals }) => {
               media="(min-width: 321px)"
               srcSet={`${require('./home/a-serverless-app-platform-to-design-publish-and-manage-your-api-small.jpg')} 1x, ${require('./home/a-serverless-app-platform-to-design-publish-and-manage-your-api-small@2x.jpg')} 2x`}
             />
-            <source
-              srcSet={`${require('./home/a-serverless-app-platform-to-design-publish-and-manage-your-api.jpg')} 1x, ${require('./home/a-serverless-app-platform-to-design-publish-and-manage-your-api@2x.jpg')} 2x`}
-            />
+            <source srcSet={`${require('./home/a-serverless-app-platform-to-design-publish-and-manage-your-api.jpg')} 1x, ${require('./home/a-serverless-app-platform-to-design-publish-and-manage-your-api@2x.jpg')} 2x`} />
             <img
               className="browser-image browser-image--no-bottom-radius browser-image--dark"
               src={require('./home/a-serverless-app-platform-to-design-publish-and-manage-your-api-small@2x.jpg')}

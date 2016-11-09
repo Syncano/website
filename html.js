@@ -17,7 +17,8 @@ export default React.createClass({
     return (
       <html
         lang="en"
-        {...attrs}>
+        {...attrs}
+      >
         <head>
           <meta charSet="utf-8" />
           <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
@@ -57,8 +58,8 @@ export default React.createClass({
           <meta name="twitter:site" content="@Syncano" />
 
           {head.link.toComponent()}
-          <script src="https://cdn.optimizely.com/js/3962180131.js"></script>
-          <script dangerouslySetInnerHTML={{__html: `
+          <script src="https://cdn.optimizely.com/js/3962180131.js" />
+          <script dangerouslySetInnerHTML={{ __html: `
             (function(h,o,t,j,a,r){
             h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
             h._hjSettings={hjid:108213,hjsv:5};
@@ -66,13 +67,13 @@ export default React.createClass({
             r=o.createElement('script');r.async=1;
             r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
             a.appendChild(r);
-            })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-          `}} />
+            })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');` }}
+          />
         </head>
         <body>
           <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
           <Analytics writeKey={APP_CONFIG.analyticsKey} />
-          <script src="https://cdn.jsdelivr.net/g/prism@1.5.0(prism.js+components/prism-clike.min.js+components/prism-c.min.js+components/prism-objectivec.min.js+components/prism-java.min.js+components/prism-javascript.min.js+components/prism-swift.min.js+components/prism-cpp.min.js+components/prism-python.min.js+components/prism-ruby.min.js+plugins/line-numbers/prism-line-numbers.min.js)" />
+          <script src="https://cdn.jsdelivr.net/g/prism@1.5.1(prism.js+components/prism-bash.min.js+components/prism-clike.min.js+components/prism-c.min.js+components/prism-objectivec.min.js+components/prism-java.min.js+components/prism-javascript.min.js+components/prism-swift.min.js+components/prism-cpp.min.js+components/prism-python.min.js+components/prism-ruby.min.js+plugins/line-numbers/prism-line-numbers.min.js)" />
           <script src={`/bundle.js?t=${BUILD_TIME}`} />
         </body>
       </html>

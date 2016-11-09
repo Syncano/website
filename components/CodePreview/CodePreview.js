@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import _ from 'lodash';
 import classNames from 'classnames';
 
-export default class CodePreview extends React.Component {
+export default class CodePreview extends Component {
   constructor(props) {
     super(props);
 
@@ -43,7 +43,6 @@ export default class CodePreview extends React.Component {
 
   render() {
     const { variant, children } = this.props;
-
     const codePreviewClassName = classNames({
       'code-preview': true,
       'code-preview--no-bottom-radius': (variant === 'no-bottom-radius')

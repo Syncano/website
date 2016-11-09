@@ -5,6 +5,8 @@
   margin-right: auto;
   background: #1D2228;
   overflow: hidden;
+
+  // prevent .token to display above .top-bar
   position: relative;
   z-index: 0;
 
@@ -49,11 +51,12 @@
   .code-preview__content {
     padding: 5px;
     font-size: 12px;
-    
+
     .code-preview__content__item {
       display: none;
 
-      pre, code {
+      pre,
+      code {
         border: none;
         background: none;
         box-shadow: none;
