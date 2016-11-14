@@ -3,13 +3,13 @@ import AboutUsHeaderImage from './AboutUsHeaderImage';
 import Analytics from './Analytics';
 import AuthHOC from './AuthHOC';
 import BlockquoteSection from './BlockquoteSection';
+import CTASection from './CTASection';
 import CircleIconColumns from './CircleIconColumns';
 import CodePreview from './CodePreview';
 import ColumnParagraphs from './ColumnParagraphs';
 import ContactForm from './ContactForm';
 import ContactFormSection from './ContactFormSection';
 import CounterBoxes from './CounterBoxes';
-import CTASection from './CTASection';
 import CustomerSection from './CustomerSection';
 import FAQ from './FAQ';
 import FeaturesColumns from './FeaturesColumns';
@@ -34,6 +34,7 @@ import PlatformsBar from './PlatformsBar';
 import PlatformsSection from './PlatformsSection';
 import Pricing from './Pricing';
 import ScreenDescriptions from './ScreenDescriptions';
+import SideIconParagraphs from './SideIconParagraphs';
 import SlackMessage from './SlackMessage';
 import SlackSlider from './SlackSlider';
 import SliderWrapper from './SliderWrapper';
@@ -41,6 +42,8 @@ import SocialProfiles from './SocialProfiles';
 import StatusImage from './StatusImage';
 import StatusPageHeader from './StatusPageHeader';
 import Team from './Team';
+import Terminal from './Terminal';
+import TerminalSection from './TerminalSection';
 import TermsAndLegal from './TermsAndLegal';
 import Testimonials from './Testimonials';
 import TextPanels from './TextPanels';
@@ -58,13 +61,13 @@ export default {
   Analytics,
   AuthHOC,
   BlockquoteSection,
+  CTASection,
   CircleIconColumns,
   CodePreview,
   ColumnParagraphs,
   ContactForm,
   ContactFormSection,
   CounterBoxes,
-  CTASection,
   CustomerSection,
   FAQ,
   FeaturesColumns,
@@ -92,6 +95,7 @@ export default {
   PlatformsSection,
   Pricing,
   ScreenDescriptions,
+  SideIconParagraphs,
   SlackMessage,
   SlackSlider,
   SliderWrapper,
@@ -99,6 +103,8 @@ export default {
   StatusImage,
   StatusPageHeader,
   Team,
+  Terminal,
+  TerminalSection,
   TermsAndLegal,
   Testimonials,
   TextPanels,

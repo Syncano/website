@@ -27,7 +27,7 @@ export default () => (
               <a href="https://syncano.workable.com/" target="_blank">Jobs</a>
             </li>
             <li>
-              <Link to="/terms-of-service/">Terms of Service</Link>
+              <Link to="/terms-of-service/#terms-of-service">Terms of Service</Link>
             </li>
             <li>
               <Link to="/terms-of-service/#privacy-policy">Privacy Policy</Link>
@@ -48,6 +48,12 @@ export default () => (
             </li>
             <li>
               <Link to="/pricing/">Plans &amp; Pricing</Link>
+            </li>
+            <li>
+              <Link to="/hosting/">Hosting</Link>
+            </li>
+            <li>
+              <Link to="/customers/">Customers</Link>
             </li>
             <li>
               <Link to="/help/">Help &amp; Status</Link>

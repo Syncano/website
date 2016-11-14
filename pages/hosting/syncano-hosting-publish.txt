@@ -1,0 +1,9 @@
+~/my-project $ syncano hosting publish .
+> Domain: https://my-project.syncano.site
+> Upload [====================] 100% 2.3s
+> Published at: https://my-project.syncano.site
+~/my-project $
+
+
+
+

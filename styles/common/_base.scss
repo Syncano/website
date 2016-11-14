@@ -76,6 +76,11 @@ textarea {
   resize: none;
 }
 
+// react-prism
+pre[class*=language-] {
+  -webkit-overflow-scrolling: touch;
+}
+
 body #elevio-widget,
 body #intercom-container {
   display: none !important;
