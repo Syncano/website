@@ -15,7 +15,7 @@
     "formsy-react": "0.18.1",
     "fs": "0.0.2",
     "fs-extra": "1.0.0",
-    "gatsby": "0.12.19",
+    "gatsby": "1.0.0-alpha10-test1",
     "hellojs": "1.14.0",
     "highlight.js": "9.8.0",
     "js-cookie": "2.1.3",
