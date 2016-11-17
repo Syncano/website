@@ -14,7 +14,6 @@ import {
   TextWithImage
 } from '../../components';
 
-
 export default () => {
   const { redirect_uri } = APP_CONFIG;
 
@@ -198,7 +197,7 @@ export default () => {
           rock-solid with our free SSL, versioning, and highly-scalable infrastructure!`}
         image={
           <img
-            src={require('./hosting.svg')}
+            src={require('./scalable-and-secure-hosting-for-your-websites.svg')}
             alt="Scalable and Secure Hosting for Your Websites"
           />
         }
