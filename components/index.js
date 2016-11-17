@@ -1,6 +1,7 @@
 import AboutUs from './AboutUs';
 import AboutUsHeaderImage from './AboutUsHeaderImage';
 import Analytics from './Analytics';
+import ArchitecturePresentation from './ArchitecturePresentation';
 import AuthHOC from './AuthHOC';
 import BlockquoteSection from './BlockquoteSection';
 import CTASection from './CTASection';
@@ -59,6 +60,7 @@ export default {
   AboutUs,
   AboutUsHeaderImage,
   Analytics,
+  ArchitecturePresentation,
   AuthHOC,
   BlockquoteSection,
   CTASection,
