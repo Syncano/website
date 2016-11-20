@@ -46,7 +46,7 @@
     "eslint-plugin-jsx-a11y": "2.2.3",
     "eslint-plugin-react": "6.7.0",
     "extended-define-webpack-plugin": "0.1.2",
-    "nightwatch": "0.9.8",
+    "nightwatch": "0.9.9",
     "selenium-standalone": "5.8.0"
   },
   "keywords": [
