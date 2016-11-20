@@ -1,4 +1,3 @@
-
 var BABYLON;
 (function (BABYLON) {
     /**
