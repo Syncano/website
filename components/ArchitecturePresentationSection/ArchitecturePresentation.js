@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class ArchitecturePresentation extends Component {
-  componentDidMount() {    
+  componentDidMount() {
     const scriptSrcs = [
       '/serverless-architecture/scripts/hand-1.js',
       '/serverless-architecture/scripts/babylon.js',
