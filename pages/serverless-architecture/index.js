@@ -1,5 +1,5 @@
 import React from 'react';
-import { CTASection, Footer, PageHeader, PageHelmet, ArchitecturePresentation } from '../../components';
+import { CTASection, Footer, PageHeader, PageHelmet, ArchitecturePresentationSection } from '../../components';
 
 export default () => (
   <div>
@@ -14,7 +14,7 @@ export default () => (
       textline={`Take a look at this 3D interactive presentation that explains our platform architecture. Click to
         explore!`}
     />
-    <ArchitecturePresentation />
+    <ArchitecturePresentationSection />
     <CTASection />
     <Footer />
   </div>

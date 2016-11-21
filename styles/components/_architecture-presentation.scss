@@ -1,4 +1,6 @@
 .architecture-presentation {
+  display: none;
+
   .architecture-presentation__canvas {
     width: 100%;
     height: 100%;
@@ -7,5 +9,9 @@
 
   .architecture-presentation__overlay {
     display: none;
+  }
+
+  @include very-large {
+    display: block;
   }
 }

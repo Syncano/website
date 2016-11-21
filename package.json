@@ -30,6 +30,7 @@
     "react-modal": "1.5.2",
     "react-mousetrap": "0.1.1",
     "react-prism": "4.0.0",
+    "react-responsive-grid": "0.3.4",
     "react-router": "2.6.1",
     "react-router-scroll": "0.3.1",
     "react-scroll": "1.4.4",

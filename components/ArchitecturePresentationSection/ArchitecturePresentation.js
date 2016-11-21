@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import _ from 'lodash';
 
 class ArchitecturePresentation extends Component {
-  componentDidMount() {
+  componentDidMount() {    
     const scriptSrcs = [
       '/serverless-architecture/scripts/hand-1.js',
       '/serverless-architecture/scripts/babylon.js',
@@ -18,7 +17,7 @@ class ArchitecturePresentation extends Component {
 
       document.body.appendChild(script);
     });
-  }
+  };
 
   enableScrollWheel = () => {
     document.body.style.overflow = null;
