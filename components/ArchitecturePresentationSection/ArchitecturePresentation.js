@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import _ from 'lodash';
 
 class ArchitecturePresentation extends Component {
   componentDidMount() {
@@ -18,7 +17,7 @@ class ArchitecturePresentation extends Component {
 
       document.body.appendChild(script);
     });
-  }
+  };
 
   enableScrollWheel = () => {
     document.body.style.overflow = null;
