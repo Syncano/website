@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import {
   CircleIconColumns,
   CTASection,
@@ -187,6 +188,27 @@ export default () => {
             their account in Syncano in the same format as with the traditional login.`}
         />
       </CircleIconColumns>
+      <TextWithImage
+        variant="image-right"
+        theme="gray"
+        headline="Scalable and Secure Hosting for Your Websites"
+        textline={`Fast website and app hosting made for every developer. You can deploy from the command line,
+          or visually manage your files straight from the Dashboard. Publish with confidence and make your app 
+          rock-solid with our free SSL, versioning, and highly-scalable infrastructure!`}
+        image={
+          <img
+            src={require('./scalable-and-secure-hosting-for-your-websites.svg')}
+            alt="Scalable and Secure Hosting for Your Websites"
+          />
+        }
+      >
+        <Link
+          to="/hosting/"
+          className="button"
+        >
+          More about Hosting
+        </Link>
+      </TextWithImage>
       <CTASection />
       <Footer />
     </div>

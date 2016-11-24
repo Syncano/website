@@ -50,6 +50,12 @@ export default () => (
               <Link to="/pricing/">Plans &amp; Pricing</Link>
             </li>
             <li>
+              <Link to="/hosting/">Hosting</Link>
+            </li>
+            <li>
+              <Link to="/customers/">Customers</Link>
+            </li>
+            <li>
               <Link to="/help/">Help &amp; Status</Link>
             </li>
             <li>

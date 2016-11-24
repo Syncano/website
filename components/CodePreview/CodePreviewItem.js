@@ -3,15 +3,13 @@ import { PrismCode } from 'react-prism';
 import classNames from 'classnames';
 
 const CodePreviewItem = ({ code, languageClassName, isActive }) => {
-  const getCodePreviewItemClassName = () => {
-    return classNames({
-      'code-preview__content__item': true,
-      'code-preview__content__item--is-active': (isActive)
-    });
-  };
+  const className = classNames({
+    'code-preview__content__item': true,
+    'code-preview__content__item--is-active': (isActive)
+  });
 
   return (
-    <div className={getCodePreviewItemClassName()}>
+    <div className={className}>
       <pre className="line-numbers">
         <PrismCode className={`language-${languageClassName}`}>
           {code}

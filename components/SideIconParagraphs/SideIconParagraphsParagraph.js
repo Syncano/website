@@ -1,0 +1,14 @@
+import React from 'react';
+
+export default ({ iconSrc, headline, text }) => (
+  <div className="side-icon-paragraphs__paragraphs__paragraph">
+    <div className="side-icon-paragraphs__paragraphs__paragraph__headline">
+      <img
+        src={iconSrc}
+        alt={headline}
+      />
+      <h3>{headline}</h3>
+    </div>
+    <p>{text}</p>
+  </div>
+);
