@@ -76,6 +76,10 @@ textarea {
   resize: none;
 }
 
+canvas {
+  display: block;
+}
+
 // react-prism
 pre[class*=language-] {
   -webkit-overflow-scrolling: touch;

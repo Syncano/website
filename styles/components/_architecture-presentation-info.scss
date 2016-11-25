@@ -1,0 +1,32 @@
+.architecture-presentation-info {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  background: $color-main-gray;
+
+  h2 {
+    color: #333A42;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.35;
+  }
+
+  p {
+    color: transparentize($color-text-base, .2);
+    margin-top: 20px;
+    line-height: 1.5;
+  }
+
+  @include medium {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    h2 {
+      font-size: 24px;
+    }
+  }
+
+  @include very-large {
+    display: none;
+  }
+}
