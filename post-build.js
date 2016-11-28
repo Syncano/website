@@ -5,7 +5,7 @@ import GLOBAL_CONFIG from './config/global';
 
 const generateSitemapUrl = (page) => {
   const pagePath = _.isString(page) ? page : page.path;
-  const nonIndexedPages = ['/404/', ...GLOBAL_CONFIG.landingPagesSlugs];
+  const nonIndexedPages = ['/404/', '/hosting-lhgkld62od', ...GLOBAL_CONFIG.landingPagesSlugs];
   const importantPages = ['/', '/pricing/'];
   const isRootPath = pagePath === '/';
   const isNonIndexedPage = _.includes(nonIndexedPages, pagePath) || _.some(nonIndexedPages, (nonIndexedPage) => _.startsWith(pagePath, nonIndexedPage));
@@ -42,7 +42,8 @@ const generateRobots = () => {
     'Sitemap: https://www.syncano.io/blog/sitemap.xml\n\n' +
     'Disallow: /blog/ghost/\n' +
     'Disallow: /blog/author/\n' +
-    'Disallow: /blog/tag/';
+    'Disallow: /blog/tag/\n' +
+    'Disallow: /hosting-lhgkld62od';
 
   return fs.writeFileSync(`${__dirname}/public/robots.txt`, fileContent);
 };
