@@ -188,12 +188,12 @@ export default () => {
             their account in Syncano in the same format as with the traditional login.`}
         />
       </CircleIconColumns>
-      <TextWithImage
+      {/* <TextWithImage
         variant="image-right"
         theme="gray"
         headline="Scalable and Secure Hosting for Your Websites"
         textline={`Fast website and app hosting made for every developer. You can deploy from the command line,
-          or visually manage your files straight from the Dashboard. Publish with confidence and make your app 
+          or visually manage your files straight from the Dashboard. Publish with confidence and make your app
           rock-solid with our free SSL, versioning, and highly-scalable infrastructure!`}
         image={
           <img
@@ -208,7 +208,7 @@ export default () => {
         >
           More about Hosting
         </Link>
-      </TextWithImage>
+      </TextWithImage> */}
       <CTASection />
       <Footer />
     </div>

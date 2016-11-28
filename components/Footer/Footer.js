@@ -49,9 +49,9 @@ export default () => (
             <li>
               <Link to="/pricing/">Plans &amp; Pricing</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/hosting/">Hosting</Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/customers/">Customers</Link>
             </li>
