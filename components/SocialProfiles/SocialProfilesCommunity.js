@@ -45,6 +45,29 @@ export default () => {
                 alt="Twitter"
               />
             </a>
+            <a
+              className="social-profiles__group__profiles__icon"
+              href="https://www.linkedin.com/company/syncano/"
+              target="_blank"
+              title="LinkedIn"
+            >
+              <img
+                src={require('./images/linkedin.svg')}
+                alt="Twitter"
+              />
+            </a>
+            <a
+              className="social-profiles__group__profiles__icon"
+              href="https://www.syncano.io/blog/"
+              target="_blank"
+              title="Blog"
+            >
+              <img
+                src={require('./images/writing-on-paper.svg')}
+                alt="Blog"
+                style={{ width: 20 }}
+              />
+            </a>
           </div>
         </div>
         <div className="social-profiles__group">

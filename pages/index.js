@@ -104,7 +104,7 @@ const Home = (props, { modals }) => {
                 />
                 <div className="testimonials-home__item__body__quote">
                   <div className="testimonials-home__item__body__quote__text">We managed to build, launch and succeed with our Pokemon Go map app in just 48 hours of programming.</div>
-                  <div className="testimonials-home__item__body__quote__author">Artur Czemiel, developer, Aexol</div>
+                  <div className="testimonials-home__item__body__quote__author">Artur Czemiel, developer & founder, Aexol</div>
                 </div>
               </div>
             </div>
