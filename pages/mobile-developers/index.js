@@ -19,19 +19,20 @@ const { redirect_uri } = APP_CONFIG;
 const MobileDevelopers = () => (
   <div>
     <PageHelmet
-      title="Featured customers’ apps made with Syncano"
-      mixpanelTitle="Customers"
-      description={`Helping people build successful apps for the web, mobile and IoT. See what developers are building
-          with Syncano.`}
+      title="Syncano for Mobile Developers"
+      mixpanelTitle="Mobile Developers"
+      description={`Increase your productivity and focus on user experience. Build powerful backends for your apps in
+        half the time and scale without managing servers.`}
       ogImageSrc={`${redirect_uri}${require('./og-image.png')}`}
       twitterImageSrc={`${redirect_uri}${require('./twitter-image.png')}`}
     />
     <PageHeader
       headline="Syncano for Mobile Developers"
-      textline="Rapidly assemble building blocks for your app without a backend or server."
+      textline={`Increase your productivity and focus on user experience. Build powerful backends for your apps in half
+        the time and scale without managing servers.`}
     />
     <PlatformsBar />
-    <FeaturesColumns headline="Automations">
+    <FeaturesColumns headline="Automations to ease your workflow">
       <FeaturesColumns.Column
         iconSrc={require('./real-time-communication.svg')}
         headline="Real-Time Communication"
@@ -94,7 +95,7 @@ const MobileDevelopers = () => (
         </picture>
       }
     />
-    <ScreenDescriptions headline="Data Management">
+    <ScreenDescriptions headline="Enhanced data management">
       <ScreenDescriptions.Screen
         imageSrc={require('./define-your-classes.png')}
         image2xSrc={require('./define-your-classes@2x.png')}
@@ -145,49 +146,49 @@ const MobileDevelopers = () => (
       <ColumnParagraphs.Paragraph
         iconSrc={require('./scripts.svg')}
         headline="Scripts"
-        text={`Scripts are snippets of code that allow you to run complex code on Syncano’s servers. We support a
-            wide range of environments including Node.js, Python, Swift, Go, PHP, and Ruby.`}
+        text={`Scripts are snippets of code that allow you to run complex code on Syncano’s servers. We support a wide
+          range of environments including Node.js, Python, Swift, Go, PHP, and Ruby.`}
       />
       <ColumnParagraphs.Paragraph
         iconSrc={require('./script-endpoint.svg')}
         headline="Script Endpoint"
-        text={`Make Scripts public or private, it’s up to you. Send POST or GET requests to your Script and open up
-            the possibility of how and where to run it.`}
+        text={`Make Scripts public or private, it’s up to you. Send POST or GET requests to your Script and open up the
+          possibility of how and where to run it.`}
       />
       <ColumnParagraphs.Paragraph
         iconSrc={require('./environmental-variables.svg')}
         headline="Environmental Variables"
         text={`Each Snippet can be set to use environmental variables stored in your configuration settings. You can
-            store API keys and frequently used variables in a more permanent way.`}
+          store API keys and frequently used variables in a more permanent way.`}
       />
       <ColumnParagraphs.Paragraph
         iconSrc={require('./integrations.svg')}
         headline="Integrations"
-        text={`Connect your app with our constantly growing list of integrations. We’ll help you stay up-to-date
-            with new add-ons, keeping your application ahead of the crowd.`}
+        text={`Connect your app with our constantly growing list of integrations. We’ll help you stay up-to-date with
+          new add-ons, keeping your application ahead of the crowd.`}
       />
     </ColumnParagraphs>
-    <CircleIconColumns headline="User authentication">
+    <CircleIconColumns headline="Simple user authentication">
       <CircleIconColumns.Column
         iconSrc={require('./add-users.svg')}
         headline="Add Users"
-        text={`Allow users to register and sign into your app instantly and securely. Customize them with User
-            Profiles - add avatars, files, and relevant information.`}
+        text={`Allow users to register and sign into your app instantly and securely. Customize them with User Profiles
+          - add avatars, files, and relevant information.`}
       />
       <CircleIconColumns.Column
         iconSrc={require('./group-users.svg')}
         headline="Group Users"
-        text={`Construct different levels of permissions to data stored on Syncano. With groups, you can better
-            manage user access controls.`}
+        text={`Construct different levels of permissions to data stored on Syncano. With groups, you can better manage
+          user access controls.`}
       />
       <CircleIconColumns.Column
         iconSrc={require('./social-authentication.svg')}
         headline="Social Authentication"
         text={`Allow your users to sign up with Facebook, Google, Twitter, and Linkedin. We’ll automatically create
-            their account in Syncano in the same format as with the traditional login.`}
+          their account in Syncano in the same format as with the traditional login.`}
       />
     </CircleIconColumns>
-    <CTASection />
+    <CTASection headline="Rethink how you build apps" />
     <Footer />
   </div>
 );
