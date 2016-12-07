@@ -4,6 +4,11 @@
   padding-top: 120px;
   padding-bottom: 60px;
 
+  &.hero--homepage {
+    padding-bottom: 0;
+
+  }
+
   .hero__text {
     h1,
     h2 {
@@ -26,6 +31,10 @@
       margin-top: 30px;
       max-width: 300px;
       color: $color-text-base;
+    }
+
+    a {
+      color: inherit;
     }
 
     .hero__text__button-container {

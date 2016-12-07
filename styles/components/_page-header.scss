@@ -20,6 +20,8 @@
 
   h2 {
     margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
     line-height: 1.5;
     color: transparentize($color-text-base, .2);
     font-weight: 500;
@@ -84,6 +86,7 @@
 
     h2 {
       margin-top: 20px;
+      max-width: 50vw;
     }
 
     h1 br,

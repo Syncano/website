@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+// import { Link } from 'react-router';
 import {
   CircleIconColumns,
   CTASection,
@@ -110,7 +110,7 @@ export default () => {
         />
       </ScreenDescriptions>
       <ColumnParagraphs
-        headline="Server-Side Code"
+        headline="Server-Side code"
         imageSrc={require('./server-side-code.png')}
         image2xSrc={require('./server-side-code@2x.png')}
         imageSmallSrc={require('./server-side-code-small.png')}

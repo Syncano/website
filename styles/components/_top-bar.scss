@@ -2,6 +2,12 @@
   height: 0 !important;
 }
 
+.homepage .top-bar {
+  @include large {
+    transform: translate3d(0, 51px, 0);
+  }
+}
+
 .top-bar {
   position: fixed;
   top: 0;

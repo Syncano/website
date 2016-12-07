@@ -24,7 +24,7 @@ export default () => {
           href="https://github.com/Syncano/syncano-android/"
         />
         <PlatformsItem
-          className="swift"
+          className="ios"
           imgSrc={require('./images/ios@2x.png')}
           title="iOS"
           href="https://github.com/Syncano/syncano-ios/"

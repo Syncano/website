@@ -14,7 +14,8 @@ export default ({
   url,
   buttonText,
   googlePlayUrl,
-  itunesUrl
+  itunesUrl,
+  children
 }) => {
   return (
     <TextWithImage
@@ -48,6 +49,7 @@ export default ({
         googlePlayUrl={googlePlayUrl}
         itunesUrl={itunesUrl}
       />
+      {children}
     </TextWithImage>
   );
 };
