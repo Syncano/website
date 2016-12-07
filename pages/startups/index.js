@@ -12,7 +12,7 @@ import {
 
 const { redirect_uri } = APP_CONFIG;
 
-const Enterprises = () => (
+const Startups = () => (
   <div>
     <PageHelmet
       title="Plans & Pricing at Syncano"
@@ -94,4 +94,4 @@ const Enterprises = () => (
   </div>
 );
 
-export default Enterprises;
+export default Startups;
