@@ -1,11 +1,15 @@
 .platforms-bar {
   background: #F8F9F9;
 
+  a {
+    display: block;
+  }
+
   .inner {
     padding-top: 38px;
     padding-bottom: 38px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
   }
 
@@ -17,29 +21,38 @@
     flex: 0 0 25%;
     margin-bottom: 30px;
 
-    &:nth-last-child(-n + 4) {
+    // works only for 8, 6 or 2 items
+    &:nth-child(n + 5),
+    &:nth-last-child(-n + 2) {
       margin-bottom: 0;
     }
 
+    &.android img,
+    &.angularjs img,
+    &.ios img,
     &.javascript img,
     &.python img,
-    &.android img,
-    &.swift img,
-    &.angularjs img,
     &.ruby img {
       height: 42px;
-    }
-
-    &.emberjs img {
-      height: 21px;
     }
 
     &.arduino img {
       height: 31px;
     }
 
+    &.emberjs img {
+      height: 21px;
+    }
+
     &:hover {
       opacity: .8;
+    }
+  }
+
+  &.platforms-bar--large .platforms-bar__item {
+    &.android img,
+    &.ios img {
+      height: 60px;
     }
   }
 
@@ -49,8 +62,18 @@
     }
 
     .platforms-bar__item {
-      flex: none;
+      flex: 1;
       margin-bottom: 0;
+    }
+
+    &.platforms-bar--mobile {
+      .inner {
+        justify-content: center;
+      }
+
+      .platforms-bar__item {
+        flex: 0 0 25%;
+      }
     }
   }
 }

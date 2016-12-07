@@ -7,7 +7,7 @@ const CTASection = ({
   theme,
   headline = 'Rethink how you build apps. Go serverless!',
   buttonText = 'Get Started for Free',
-  buttonDescription = true,
+  showButtonDescription = true,
   children
 }, { modals }) => {
   const className = classNames({
@@ -35,7 +35,7 @@ const CTASection = ({
           Go to Dashboard
         </a>
       </LoggedInContent>
-      {buttonDescription && <p className="cta-section__button-description">
+      {showButtonDescription && <p className="cta-section__button-description">
         30 days free &bull; No credit card required
       </p>}
     </div>

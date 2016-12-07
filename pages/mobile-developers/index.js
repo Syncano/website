@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import {
   CircleIconColumns,
-  CTASection,
   ColumnParagraphs,
+  CTASection,
   FeaturesColumns,
   Footer,
+  LoggedInContent,
+  LoggedOutContent,
   PageHeader,
   PageHelmet,
   PlatformsBar,
@@ -15,8 +17,7 @@ import {
 
 const { redirect_uri } = APP_CONFIG;
 
-
-const MobileDevelopers = () => (
+const MobileDevelopers = (props, { modals }) => (
   <div>
     <PageHelmet
       title="Syncano for Mobile Developers"
@@ -30,41 +31,64 @@ const MobileDevelopers = () => (
       headline="Syncano for Mobile Developers"
       textline={`Increase your productivity and focus on user experience. Build powerful backends for your apps in half
         the time and scale without managing servers.`}
+    >
+      <LoggedOutContent>
+        <span
+          className="button button--large button--featured"
+          onClick={modals.signUp.open}
+        >
+          Get Started for Free
+        </span>
+      </LoggedOutContent>
+      <LoggedInContent>
+        <a
+          className="button button--large button--featured"
+          href={APP_CONFIG.dashboardUrl}
+        >
+          Go to Dashboard
+        </a>
+      </LoggedInContent>
+      <p className="page-header__button-description">
+        30 days free &bull; No credit card required
+      </p>
+    </PageHeader>
+    <PlatformsBar
+      variant="mobile"
+      size="large"
     />
-    <PlatformsBar />
     <FeaturesColumns headline="Automations to ease your workflow">
       <FeaturesColumns.Column
         iconSrc={require('./real-time-communication.svg')}
         headline="Real-Time Communication"
         text={`Add real-time functionality to your app with Channels. Users can subscribe to Channels and get
-            notifications of changes to Data Objects. You can grant users the ability to send custom notification
-            messages.`}
+          notifications of changes to Data Objects. You can grant users the ability to send custom notification
+          messages.`}
       />
       <FeaturesColumns.Column
         iconSrc={require('./schedules.svg')}
         headline="Schedules"
-        text={`Execute your Scripts at a desired date and time interval. Choose from CronTabs and seconds as
-            scheduling options. We support time zones so you can launch Scripts in around the globe.`}
+        text={`Execute your Scripts at a desired date and time interval. Choose from CronTabs and seconds as scheduling
+          options. We support time zones so you can launch Scripts in around the globe.`}
       />
       <FeaturesColumns.Column
         iconSrc={require('./triggers.svg')}
         headline="Triggers"
-        text={`Execute a Server-Side Script when a Data Object inside a selected Class is created, updated, or
-            deleted. Each Trigger is customizable to fit your app’s needs.`}
+        text={`Execute a Server-Side Script when a Data Object inside a selected Class is created, updated, or deleted.
+          Each Trigger is customizable to fit your app’s needs.`}
       />
       <FeaturesColumns.Column
         iconSrc={require('./push-notifications.svg')}
         headline="Push Notifications"
         text={`Instantly message your iOS or Android users with timely and relevant content. Use our Dashboard to
-            configure and send push notifications with ease.`}
+          configure and send push notifications with ease.`}
       />
     </FeaturesColumns>
     <TextWithImage
       variant="image-right"
       headline="Customize features as Sockets"
-      textline={`Sockets are the layer stacked between Syncano’s core and your application. Easily configure,
-          combine, and create Sockets for your app. Instantly add new functionality to your applications exactly the
-          way you want.`}
+      textline={`Sockets are the layer stacked between Syncano’s core and your application. Easily configure, combine,
+        and create Sockets for your app. Instantly add new functionality to your applications exactly the way you
+        want.`}
       image={
         <img
           src={require('./customize-individual-features-as-sockets.svg')}
@@ -76,8 +100,8 @@ const MobileDevelopers = () => (
       variant="no-bottom-padding minus-bottom-margin"
       theme="purple"
       headline="Collaborate better with our Dashboard"
-      textline={`Visualize your data in our Dashboard to have a complete overview of your applications. Edit and
-          test your scripts, manage users, collaborate with multiple admins, and more - all from one place.`}
+      textline={`Visualize your data in our Dashboard to have a complete overview of your applications. Edit and test
+        your scripts, manage users, collaborate with multiple admins, and more - all from one place.`}
       image={
         <picture>
           <source
@@ -103,7 +127,7 @@ const MobileDevelopers = () => (
         imageSmall2xSrc={require('./define-your-classes-small@2x.png')}
         headline="Define your Classes"
         text={`Control how you define the structure for each of your Data Objects. Every Data Object you create will
-            inherit the properties of its own customized Class.`}
+          inherit the properties of its own customized Class.`}
       />
       <ScreenDescriptions.Screen
         variant="image-right"
@@ -113,7 +137,7 @@ const MobileDevelopers = () => (
         imageSmall2xSrc={require('./customize-class-schemas-small@2x.png')}
         headline="Customize Class schemas"
         text={`Create fields with specific types to get a flexible architecture. Our pre-set custom fields include
-            string, text, integer, float, Boolean, datetime, file, object, array, and reference.`}
+          string, text, integer, float, Boolean, datetime, file, object, array, and reference.`}
       />
       <ScreenDescriptions.Screen
         imageSrc={require('./create-data-objects.png')}
@@ -122,8 +146,8 @@ const MobileDevelopers = () => (
         imageSmall2xSrc={require('./create-data-objects-small@2x.png')}
         headline="Create Data Objects"
         text={`Store your data as JSON objects that contain key-value pairs that you define. Control what your users
-            have access to. Define your own data views on the backend instead of updating every client-side
-            application.`}
+          have access to. Define your own data views on the backend instead of updating every client-side
+          application.`}
       />
       <ScreenDescriptions.Screen
         variant="image-right"
@@ -132,12 +156,12 @@ const MobileDevelopers = () => (
         imageSmallSrc={require('./query-away-small.png')}
         imageSmall2xSrc={require('./query-away-small@2x.png')}
         headline="Query away!"
-        text={`Query your data based on built-in or customized fields for each of your objects. Get back the data
-            you need with advanced filtering and ordering.`}
+        text={`Query your data based on built-in or customized fields for each of your objects. Get back the data you
+          need with advanced filtering and ordering.`}
       />
     </ScreenDescriptions>
     <ColumnParagraphs
-      headline="Server-Side Code"
+      headline="Server-Side code"
       imageSrc={require('./server-side-code.png')}
       image2xSrc={require('./server-side-code@2x.png')}
       imageSmallSrc={require('./server-side-code-small.png')}
@@ -192,5 +216,9 @@ const MobileDevelopers = () => (
     <Footer />
   </div>
 );
+
+MobileDevelopers.contextTypes = {
+  modals: PropTypes.object
+};
 
 export default MobileDevelopers;
