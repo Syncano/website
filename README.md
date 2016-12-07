@@ -51,6 +51,15 @@ Always remember to ignore changes made in this file with a command:
 
 After that you can run the website with a `$ npm start` command. Required JSON files should be downloaded automatically.
 
+# How To Build
+
+To build the website use the following command:
+
+    $ npm run build
+
+It will create a `public` directory with all static files inside. Also when building, all files from `static` directory
+are copied to `public` folder.
+
 # E2E Testing
 
 We are using [Nightwatch.js](http://nightwatchjs.org/) for e2e testing.
@@ -75,7 +84,6 @@ or one by one:
 
     $ npm run e2e-chrome
     $ npm run e2e-firefox
-
 
 If part of the tests fail for some reason, you can temporarily disable them by `--skiptags` argument. So if, for instance signup tests fail, you can modify `package.json` e2e line, so that it looks like this:
 
