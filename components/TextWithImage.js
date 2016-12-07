@@ -7,7 +7,8 @@ export default ({ variant, theme, image, headline, textline, children }) => {
     'text-with-image--customer': (variant === 'customer'),
     'text-with-image--image-right': (variant === 'image-right'),
     'text-with-image--gray': (theme === 'gray'),
-    'text-with-image--purple': (theme === 'purple')
+    'text-with-image--purple': (theme === 'purple'),
+    'text-with-image--cyan': (theme === 'cyan'),
   });
 
   return (

@@ -4,8 +4,7 @@ import {
   CTASection,
   Footer,
   PageHeader,
-  PageHelmet,
-  TextWithImage
+  PageHelmet
 } from '../../components';
 
 export default () => {

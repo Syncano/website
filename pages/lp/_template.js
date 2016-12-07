@@ -127,7 +127,7 @@ const Landing = ({ children }, { modals }) => {
         </footer>
       </ScreenDescriptions>
       <ColumnParagraphs
-        headline="Server-Side Code"
+        headline="Server-Side code"
         imageSrc={require('../features/server-side-code.png')}
         image2xSrc={require('../features/server-side-code@2x.png')}
         imageSmallSrc={require('../features/server-side-code-small.png')}

@@ -2,7 +2,14 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import { LoggedInContent, LoggedOutContent } from '../LoggedInContent';
 
-const CTASection = ({ variant, theme, children }, { modals }) => {
+const CTASection = ({
+  variant,
+  theme,
+  headline = 'Rethink how you build apps. Go serverless!',
+  buttonText = 'Get Started for Free',
+  showButtonDescription = true,
+  children
+}, { modals }) => {
   const className = classNames({
     'cta-section': true,
     'cta-section--small-button-only': (variant === 'small-button-only'),
@@ -11,13 +18,13 @@ const CTASection = ({ variant, theme, children }, { modals }) => {
 
   const getDefaultContent = () => (
     <div>
-      <h2>Rethink how you build apps. Go serverless!</h2>
+      <h2>{headline}</h2>
       <LoggedOutContent>
         <span
           className="button button--large button--featured"
           onClick={modals.signUp.open}
         >
-          Get Started for Free
+          {buttonText}
         </span>
       </LoggedOutContent>
       <LoggedInContent>
@@ -28,9 +35,9 @@ const CTASection = ({ variant, theme, children }, { modals }) => {
           Go to Dashboard
         </a>
       </LoggedInContent>
-      <p className="cta-section__button-description">
+      {showButtonDescription && <p className="cta-section__button-description">
         30 days free &bull; No credit card required
-      </p>
+      </p>}
     </div>
   );
 

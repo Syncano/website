@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default ({ headline, textline, children, image }) => {
+export default ({ headline, textline, children, image, className }) => {
   return (
-    <div className="hero">
+    <div className={`hero ${className}`}>
       <div className="inner">
         <div className="hero__text">
           <h1>{headline}</h1>

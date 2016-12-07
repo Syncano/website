@@ -8,18 +8,18 @@ export default () => {
         <div className="counter-boxes__boxes">
           <CounterBoxesBox
             theme="azure"
-            headline="22,000"
+            headline="50,000"
             textline="Developers use Syncano"
           />
           <CounterBoxesBox
             theme="purple"
-            headline="29 Million"
-            textline="Monthly API requests"
+            headline="73"
+            textline="Countries"
           />
           <CounterBoxesBox
             theme="silver"
-            headline="3 Million"
-            textline="Monthly Script seconds"
+            headline="25"
+            textline="Successful startups"
           />
         </div>
       </div>

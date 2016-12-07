@@ -19,7 +19,7 @@ const Link = (props, { isLandingPage }) => {
       <TagName {...props}>
         {children}
       </TagName>
-    )
+    );
   }
 
   return (

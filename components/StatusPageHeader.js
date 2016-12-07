@@ -50,7 +50,7 @@ class StatusPageHeader extends Component {
     return status.status.description;
   };
 
-  render = () => {
+  render() {
     const { modals } = this.context;
     const { status } = this.state;
 

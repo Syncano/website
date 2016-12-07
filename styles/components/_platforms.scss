@@ -22,21 +22,21 @@
       border-radius: 50%;
       background: #fff;
 
+      &.android img,
+      &.angularjs img,
+      &.ios img,
       &.javascript img,
       &.python img,
-      &.android img,
-      &.swift img,
-      &.angularjs img,
       &.ruby img {
         height: (42px / 1.5);
       }
 
-      &.emberjs img {
-        height: (21px / 1.5);
-      }
-
       &.arduino img {
         height: (31px / 1.5);
+      }
+
+      &.emberjs img {
+        height: (21px / 1.5);
       }
     }
 
@@ -59,21 +59,21 @@
         width: 105px;
         height: 105px;
 
+        &.android img,
+        &.angularjs img,
+        &.ios img,
         &.javascript img,
         &.python img,
-        &.android img,
-        &.swift img,
-        &.angularjs img,
         &.ruby img {
           height: 42px;
         }
 
-        &.emberjs img {
-          height: 21px;
-        }
-        
         &.arduino img {
           height: 31px;
+        }
+
+        &.emberjs img {
+          height: 21px;
         }
       }
     }

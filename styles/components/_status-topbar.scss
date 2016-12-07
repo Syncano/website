@@ -1,0 +1,88 @@
+.status-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 50px;
+  padding: 0 16px;
+  border-bottom: 1px solid $color-main-gray;
+
+  .status-topbar {
+    &__news-column {
+      display: flex;
+      align-items: center;
+
+      &__blog-link {
+        font-weight: 700;
+        color: $color-main-black;
+        text-decoration: underline;
+        padding: 0 8px;
+      }
+    }
+
+    &__status-column {
+      display: flex;
+      align-items: center;
+      padding-left: 24px;
+      border-left: 1px solid $color-main-gray;
+
+      &__status-info {
+        font-weight: 700;
+        color: $color-main-black;
+        display: flex;
+        align-items: center;
+        border: 1px solid $color-main-gray;
+        border-radius: 4px;
+        padding: 8px;
+        margin: 0 16px;
+
+        &__icon {
+          width: 20px;
+          height: 20px;
+          margin-right: 8px;
+        }
+      }
+
+      &__status-link {
+        text-transform: uppercase;
+        text-decoration: underline;
+        font-size: 1rem;
+        color: $color-main-silver;
+      }
+    }
+  }
+}
+
+.blink_me {
+  -webkit-animation-name: blinker;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+
+  -moz-animation-name: blinker;
+  -moz-animation-duration: 1s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+
+  animation-name: blinker;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1.0; }
+}
+
+@keyframes blinker {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1.0; }
+}

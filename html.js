@@ -28,7 +28,7 @@ export default React.createClass({
           {css}
           <link rel="preload" href={require('./components/Modals/images/close.svg')} as="image" />
           <link rel="preload" href={require('./components/Modals/images/close-small.svg')} as="image" />
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,700,700italic" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/plugins/line-numbers/prism-line-numbers.min.css" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/themes/prism-twilight.min.css" />
           <link rel="apple-touch-icon" sizes="57x57" href={require('./images/favicons/apple-touch-icon-57x57.png')} />
