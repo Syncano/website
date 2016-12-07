@@ -27,7 +27,13 @@ const Startups = () => (
       textline={`Is your groundbreaking new app haltered by the tedious work on backend stuff? Stop wasting time
         reinventing the wheel and get cracking on the real issues at hand. Make the app your users will love.`}
     >
-      Get in touch with us
+      <a
+        className="button button--large button--featured"
+        href="https://pipedrivewebforms.com/form/c9950aad5f4c79f9ca4b6dc0cffe15c31317049"
+        target="_blank"
+      >
+        Get in touch with us
+      </a>
     </PageHeader>
     <TextWithImage
       theme="gray"
