@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import PlatformsBarItem from './PlatformsBarItem';
 
-export default ({ variant, centered, size }) => {
+export default ({ variant, size }) => {
   const className = classNames({
     'platforms-bar': true,
     'platforms-bar--mobile': (variant === 'mobile'),
