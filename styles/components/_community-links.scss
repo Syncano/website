@@ -1,0 +1,29 @@
+.community-links {
+  display: flex;
+
+
+  > a {
+    font-size: 40px;
+    color: $color-main-blue;
+
+    > img {
+      width: 20%;
+    }
+  }
+}
+
+.community-page .page-header h2 br {
+  display: block;
+}
+
+.community-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 16px 0 32px;
+
+  > img {
+    max-width: 100px;
+    width: 100%;
+  }
+}

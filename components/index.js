@@ -41,6 +41,7 @@ import SlackSlider from './SlackSlider';
 import SliderWrapper from './SliderWrapper';
 import SocialProfiles from './SocialProfiles';
 import StatusImage from './StatusImage';
+import StatusInfo from './StatusInfo';
 import StatusPageHeader from './StatusPageHeader';
 import Team from './Team';
 import Terminal from './Terminal';
@@ -103,6 +104,7 @@ export default {
   SliderWrapper,
   SocialProfiles,
   StatusImage,
+  StatusInfo,
   StatusPageHeader,
   Team,
   Terminal,
