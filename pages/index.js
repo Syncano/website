@@ -121,7 +121,7 @@ const Home = (props, { modals }) => {
                 <div className="new-homepage-nik__content__textline">
                   Nikolai Fasting, CEO & Founder, Syncano
                   <div>
-                    <Link to="/vision/">Read about our vision here</Link>
+                    <a href="https://www.syncano.io/blog/if-software-eats-the-world-syncano-feeds-it/" target="_blank">Read about our vision here</a>
                   </div>
                 </div>
               </div>
