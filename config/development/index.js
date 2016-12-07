@@ -4,13 +4,13 @@ export default {
   dashboardUrl: '',
   statusPageStatusUrl: '',
   supportFormEmail: '',
-  syncanoAPIBaseUrl: '',
+  syncanoAPIBaseUrl: 'https://api.syncano.io/',
   github: '',
   facebook: '',
   google: '',
   redirect_uri: '',
-  twitterConsumerKey: '',
-  twitterConsumerSecret: '',
-  twitterAccessToken: '',
-  twitterAccessTokenSecret: ''
+  twitterConsumerKey: '<YOUR_TWITTER_CONSUMER_KEY>',
+  twitterConsumerSecret: '<YOUR_TWITTER_CONSUMER_SECRET>',
+  twitterAccessToken: '<YOUR_TWITTER_ACCESS_TOKEN>',
+  twitterAccessTokenSecret: '<YOUR_TWITTER_ACCESS_TOKEN_SECRET>'
 };

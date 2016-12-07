@@ -22,10 +22,39 @@ Use the up / down arrow to navigate, and press enter or the right arrow to selec
     ο 6.2.1
       4.4.3
 
+# How To Run
+
+First of all you need at least the following config keys filled (`config/development/index.js`):
+
+    export default {
+        analyticsKey: '',
+        contactFormEmail: '',
+        dashboardUrl: '',
+        statusPageStatusUrl: '',
+        supportFormEmail: '',
+        syncanoAPIBaseUrl: 'https://api.syncano.io/',
+        github: '',
+        facebook: '',
+        google: '',
+        redirect_uri: '',
+        twitterConsumerKey: '<YOUR_TWITTER_CONSUMER_KEY>',
+        twitterConsumerSecret: '<YOUR_TWITTER_CONSUMER_SECRET>',
+        twitterAccessToken: '<YOUR_TWITTER_ACCESS_TOKEN>',
+        twitterAccessTokenSecret: '<YOUR_TWITTER_ACCESS_TOKEN_SECRET>'
+    };
+
+You can generate your Twitter app keys here: https://apps.twitter.com.
+
+Always remember to ignore changes made in this file with a command:
+
+    $ git update-index --assume-unchanged config/development/index.js
+
+After that you can run the website with a `$ npm start` command. Required JSON files should be downloaded automatically.
+
 # E2E Testing
 
-We are using [nightwatchjs](http://nightwatchjs.org/) for e2e testing.
-**nightwatchjs** requires few binary files which can be installed via proper NPM command:
+We are using [Nightwatch.js](http://nightwatchjs.org/) for e2e testing.
+**Nightwatch.js** requires few binary files which can be installed via proper NPM command:
 
     $ npm run e2e-setup
 
