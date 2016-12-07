@@ -66,17 +66,18 @@ const Home = (props, { modals }) => {
               <div className="testimonials-home__item__headline">For business developers:</div>
               <div className="testimonials-home__item__textline">Scale your venture faster.</div>
               <div className="testimonials-home__item__buttons">
-                <button className="testimonials-home__item__buttons__single button button--filled button--wide">
+                <Link to="/enterprises/" className="testimonials-home__item__buttons__single button button--filled button--wide">
                   enterprise
-                </button>
-                <button className="testimonials-home__item__buttons__single button button--filled button--wide">
+                </Link>
+                <Link to="/startups/" className="testimonials-home__item__buttons__single button button--filled button--wide">
                   startup
-                </button>
+                </Link>
               </div>
               <div className="testimonials-home__item__body">
                 <img
                   className="testimonials-home__item__body__image"
                   src={require('./home/stale@2x.jpg')}
+                  alt="Stale Husby, CEO, Relinklabs"
                 />
                 <div className="testimonials-home__item__body__quote">
                   <div className="testimonials-home__item__body__quote__text">If Syncano was around the time we created our MVP, it would have sauved us a full to get into the market</div>
@@ -88,17 +89,18 @@ const Home = (props, { modals }) => {
               <div className="testimonials-home__item__headline">For software developers:</div>
               <div className="testimonials-home__item__textline">Build more code faster.</div>
               <div className="testimonials-home__item__buttons">
-                <button className="testimonials-home__item__buttons__single button button--filled button--wide">
+                <Link to="/enterprises/" className="testimonials-home__item__buttons__single button button--filled button--wide">
                   enterprise
-                </button>
-                <button className="testimonials-home__item__buttons__single button button--filled button--wide">
+                </Link>
+                <Link to="/startups/" className="testimonials-home__item__buttons__single button button--filled button--wide">
                   startup
-                </button>
+                </Link>
               </div>
               <div className="testimonials-home__item__body">
                 <img
                   className="testimonials-home__item__body__image"
                   src={require('./home/artur@2x.jpg')}
+                  alt="Artur Czemiel, developer, Aexol"
                 />
                 <div className="testimonials-home__item__body__quote">
                   <div className="testimonials-home__item__body__quote__text">We managed to build, launch and succeed with our Pokemon Go map app in just 48 hours of programming.</div>
