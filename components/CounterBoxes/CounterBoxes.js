@@ -7,9 +7,9 @@ export default () => {
       <div className="inner">
         <div className="counter-boxes__boxes">
           <CounterBoxesBox
-            theme="azure"
-            headline="50,000"
-            textline="Developers use Syncano"
+            theme="silver"
+            headline="25"
+            textline="Successful startups"
           />
           <CounterBoxesBox
             theme="purple"
@@ -17,9 +17,9 @@ export default () => {
             textline="Countries"
           />
           <CounterBoxesBox
-            theme="silver"
-            headline="25"
-            textline="Successful startups"
+            theme="azure"
+            headline="50,000"
+            textline="Developers use Syncano"
           />
         </div>
       </div>
