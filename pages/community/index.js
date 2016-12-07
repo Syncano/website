@@ -15,8 +15,8 @@ const { redirect_uri } = APP_CONFIG;
 const Community = () => (
   <div className="community-page">
     <PageHelmet
-      title="Syncano for Mobile Developers"
-      mixpanelTitle="Mobile Developers"
+      title="Syncano community"
+      mixpanelTitle="Community"
       description={`One person with an idea needs iteration to reach perfection. With a community, you have many brains to make that process incredibly fast.`}
       ogImageSrc={`${redirect_uri}${require('./og-image.png')}`}
       twitterImageSrc={`${redirect_uri}${require('./twitter-image.png')}`}
@@ -49,6 +49,11 @@ const Community = () => (
           <img src={require('./ebay.svg')} />
           <img src={require('./next.svg')} />
           <img src={require('./shopping-cart.svg')} />
+        </div>
+        <div style={{ lineHeight: 1.6 }}>
+          Innovation drives growth and speed keeps you ahead of your competition.
+          <br/>
+          Syncano has the community that unlocks this potential.
         </div>
       </div>
     </ListColumns>

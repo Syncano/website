@@ -13,13 +13,13 @@ export default () => {
           />
           <CounterBoxesBox
             theme="purple"
-            headline="29 Million"
-            textline="Monthly API requests"
+            headline="73"
+            textline="Countries"
           />
           <CounterBoxesBox
             theme="silver"
-            headline="3 Million"
-            textline="Monthly Script seconds"
+            headline="25"
+            textline="Successful startups"
           />
         </div>
       </div>

@@ -80,8 +80,8 @@ const Home = (props, { modals }) => {
                   alt="Stale Husby, CEO, Relinklabs"
                 />
                 <div className="testimonials-home__item__body__quote">
-                  <div className="testimonials-home__item__body__quote__text">If Syncano was around the time we created our MVP, it would have sauved us a full to get into the market</div>
-                  <div className="testimonials-home__item__body__quote__author">Stale Husby, CEO, Relinklabs</div>
+                  <div className="testimonials-home__item__body__quote__text">If Syncano was around at the time we created our MVP, it would have saved us a full year to get into the market.</div>
+                  <div className="testimonials-home__item__body__quote__author">Ståle Husby, CEO, Relinklabs</div>
                 </div>
               </div>
             </div>
@@ -89,11 +89,11 @@ const Home = (props, { modals }) => {
               <div className="testimonials-home__item__headline">For software developers:</div>
               <div className="testimonials-home__item__textline">Build more code faster.</div>
               <div className="testimonials-home__item__buttons">
-                <Link to="/enterprises/" className="testimonials-home__item__buttons__single button button--filled button--wide">
-                  enterprise
+                <Link to="/mobile-developers/" className="testimonials-home__item__buttons__single button button--filled button--wide">
+                  Mobile
                 </Link>
-                <Link to="/startups/" className="testimonials-home__item__buttons__single button button--filled button--wide">
-                  startup
+                <Link to="/full-stack-developers/" className="testimonials-home__item__buttons__single button button--filled button--wide">
+                  Full stack
                 </Link>
               </div>
               <div className="testimonials-home__item__body">
@@ -128,129 +128,7 @@ const Home = (props, { modals }) => {
             </div>
           </div>
         </div>
-        <TextWithBottomImage
-          variant="no-bottom-padding"
-          theme="gray"
-          headline={<span>Create and manage your API from <br />the Dashboard</span>}
-          textline={`Make your own custom APIs in the cloud. Instantly scale for the web, mobile, and the Internet of
-            Things. Support millions of users without learning the nuts and bolts of handling servers.`}
-          image={
-            <picture>
-              <source
-                media="(min-width: 321px)"
-                srcSet={`${require('./home/a-serverless-app-platform-to-design-publish-and-manage-your-api-small.jpg')} 1x, ${require('./home/a-serverless-app-platform-to-design-publish-and-manage-your-api-small@2x.jpg')} 2x`}
-              />
-              <source srcSet={`${require('./home/a-serverless-app-platform-to-design-publish-and-manage-your-api.jpg')} 1x, ${require('./home/a-serverless-app-platform-to-design-publish-and-manage-your-api@2x.jpg')} 2x`} />
-              <img
-                className="browser-image browser-image--no-bottom-radius browser-image--dark"
-                src={require('./home/a-serverless-app-platform-to-design-publish-and-manage-your-api-small@2x.jpg')}
-                alt="Create and manage your API from our dashboard"
-              />
-            </picture>
-          }
-        />
-        <TextWithImage
-          headline="Assemble your backend with building blocks"
-          textline={`Simplify your stack. Piece together one or multiple features as building blocks for your app. Use
-            Syncano Sockets as a data hub and easily connect disparate backend systems.`}
-          image={
-            <img
-              src={require('./home/assemble-your-backend-with-building-blocks.svg')}
-              alt="Assemble your backend with building blocks"
-            />
-          }
-        />
-        <FeaturesColumns
-          headline="See what you can do with Syncano"
-          underColumnsContent={
-            <Link
-              to="/features/"
-              className="button"
-            >
-              View All Features
-            </Link>
-          }
-        >
-          <FeaturesColumns.Column
-            iconSrc={require('./home/real-time-communication.svg')}
-            headline="Real-Time Communication"
-            text={`Add real-Time functionality to your app with Channels. Users can subscribe to Channels and get
-              notifications of changes to Data Objects. You can grant users the ability to send custom notification
-              messages.`}
-          />
-          <FeaturesColumns.Column
-            iconSrc={require('./home/run-server-side-logic-in-the-cloud.svg')}
-            headline="Run server-side logic in the cloud"
-            text={`Execute code on API calls, in response to events, updates to data, in-app activity, or by a schedule.
-              Leverage hundreds of available libraries. Write your scripts in Node.js, Go, Swift, Python, Ruby, and
-              PHP.`}
-          />
-          <FeaturesColumns.Column
-            iconSrc={require('./home/add-push-notifications.svg')}
-            headline="Add push notifications"
-            text={`Boost your engagement. Add powerful push notifications to your app with a few clicks in your
-              Dashboard. Send relevant notifications to users.`}
-          />
-          <FeaturesColumns.Column
-            iconSrc={require('./home/customize-your-output.svg')}
-            headline="Customize your output"
-            text={`Save valuable client-side resources to make your app faster. Use Templates to change the output of
-              your data to the response format you need, including JSON, XML, and HTML.`}
-          />
-        </FeaturesColumns>
         <TwitterSlider />
-        <PlatformsSection
-          headline="Use the frameworks and languages you like"
-          bottomContentHeadline="Add data with a few lines of code"
-        >
-          <CodePreview variant="no-bottom-radius">
-            <CodePreview.Item
-              title="Javascript"
-              languageClassName="javascript"
-              code={require('./home/realtime-sync-javascript.txt')}
-            />
-            <CodePreview.Item
-              title="Python"
-              languageClassName="python"
-              code={require('./home/realtime-sync-python.txt')}
-            />
-            <CodePreview.Item
-              title="Android"
-              languageClassName="java"
-              code={require('./home/realtime-sync-android.txt')}
-            />
-            <CodePreview.Item
-              title="Objective-C"
-              languageClassName="objectivec"
-              code={require('./home/realtime-sync-objectivec.txt')}
-            />
-            <CodePreview.Item
-              title="Swift"
-              languageClassName="swift"
-              code={require('./home/realtime-sync-swift.txt')}
-            />
-            <CodePreview.Item
-              title="AngularJS"
-              languageClassName="javascript"
-              code={require('./home/realtime-sync-angular.txt')}
-            />
-            <CodePreview.Item
-              title="Ruby"
-              languageClassName="ruby"
-              code={require('./home/realtime-sync-ruby.txt')}
-            />
-            <CodePreview.Item
-              title="Ember"
-              languageClassName="javascript"
-              code={require('./home/realtime-sync-ember.txt')}
-            />
-            <CodePreview.Item
-              title="Arduino"
-              languageClassName="cpp"
-              code={require('./home/realtime-sync-arduino.txt')}
-            />
-          </CodePreview>
-        </PlatformsSection>
         <TextWithBackground
           theme="image1"
           headline="We’ll support you every step of the way"
