@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import {
   CircleIconColumns,
-  CTASection,
   ColumnParagraphs,
+  CTASection,
   FeaturesColumns,
   Footer,
+  LoggedInContent,
+  LoggedOutContent,
   PageHeader,
   PageHelmet,
   PlatformsBar,
@@ -15,14 +17,13 @@ import {
 
 const { redirect_uri } = APP_CONFIG;
 
-
-const FullStackDevelopers = () => (
+const FullStackDevelopers = (props, { modals }) => (
   <div>
     <PageHelmet
       title="Syncano for Full-Stack Developers"
       mixpanelTitle="Full-Stack Developers"
-      description={`Increase productivity and scale without managing servers. Build your backend in minutes and save
-        yourself the gray hairs. Leave server management to us!`}
+      description={`Build your backend in minutes and save yourself the gray hairs. Leave server management to us! Learn
+        more...`}
       ogImageSrc={`${redirect_uri}${require('./og-image.png')}`}
       twitterImageSrc={`${redirect_uri}${require('./twitter-image.png')}`}
     />
@@ -30,8 +31,28 @@ const FullStackDevelopers = () => (
       headline="Syncano for Full-Stack Developers"
       textline={`Increase productivity and scale without managing servers. Build your backend in minutes and save
         yourself the gray hairs. Leave server management to us!`}
-    />
-    <PlatformsBar />
+    >
+      <LoggedOutContent>
+        <span
+          className="button button--large button--featured"
+          onClick={modals.signUp.open}
+        >
+          Get Started for Free
+        </span>
+      </LoggedOutContent>
+      <LoggedInContent>
+        <a
+          className="button button--large button--featured"
+          href={APP_CONFIG.dashboardUrl}
+        >
+          Go to Dashboard
+        </a>
+      </LoggedInContent>
+      <p className="page-header__button-description">
+        30 days free &bull; No credit card required
+      </p>
+    </PageHeader>
+    <PlatformsBar variant="full-stack" />
     <FeaturesColumns headline="Automations to ease your workflow">
       <FeaturesColumns.Column
         iconSrc={require('./real-time-communication.svg')}
@@ -62,9 +83,8 @@ const FullStackDevelopers = () => (
     <TextWithImage
       variant="image-right"
       headline="Customize features as Sockets"
-      textline={`Sockets are the layer stacked between Syncano’s core and your application. Easily configure,
-          combine, and create Sockets for your app. Instantly add new functionality to your applications exactly the way
-          you want.`}
+      textline={`Sockets are the layer stacked between Syncano’s core and your application. Easily configure, combine,
+        and create Sockets for your app. Instantly add new functionality to your applications exactly the way you want.`}
       image={
         <img
           src={require('./customize-individual-features-as-sockets.svg')}
@@ -76,8 +96,8 @@ const FullStackDevelopers = () => (
       variant="no-bottom-padding minus-bottom-margin"
       theme="purple"
       headline="Collaborate better with our Dashboard"
-      textline={`Visualize your data in our Dashboard to have a complete overview of your applications. Edit and
-          test your scripts, manage users, collaborate with multiple admins, and more - all from one place.`}
+      textline={`Visualize your data in our Dashboard to have a complete overview of your applications. Edit and test
+        your scripts, manage users, collaborate with multiple admins, and more - all from one place.`}
       image={
         <picture>
           <source
@@ -136,7 +156,7 @@ const FullStackDevelopers = () => (
       />
     </ScreenDescriptions>
     <ColumnParagraphs
-      headline="Server-Side Code"
+      headline="Server-Side code"
       imageSrc={require('./server-side-code.png')}
       image2xSrc={require('./server-side-code@2x.png')}
       imageSmallSrc={require('./server-side-code-small.png')}
@@ -191,5 +211,9 @@ const FullStackDevelopers = () => (
     <Footer />
   </div>
 );
+
+FullStackDevelopers.contextTypes = {
+  modals: PropTypes.object
+};
 
 export default FullStackDevelopers;
