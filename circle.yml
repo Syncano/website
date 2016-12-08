@@ -51,3 +51,10 @@ deployment:
     commands:
       - bundle exec s3_website push --force --config-dir=./config/staging/
       - cd syncano-ansible/playbooks/ && ansible-playbook www-server.yml -e 'env=stg' --tags=website
+
+experimental:
+  notify:
+    branches:
+      only:
+        - master
+        - devel
