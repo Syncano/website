@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-
 import {
   CTASection,
   Footer,
@@ -12,7 +11,7 @@ import {
   TerminalSection
 } from '../../components';
 
-const Hosting = (props, { modals }) => {
+const HostingPage = (props, { modals }) => {
   const { redirect_uri } = APP_CONFIG;
 
   return (
@@ -23,6 +22,7 @@ const Hosting = (props, { modals }) => {
         description="Secure, single-command web publishing for your applications."
         ogImageSrc={`${redirect_uri}${require('./og-image.png')}`}
         twitterImageSrc={`${redirect_uri}${require('./twitter-image.png')}`}
+        noindexNofollow={true}
       />
       <PageHeader
         headline={<span>Static Web Hosting <br />for Developers</span>}
@@ -107,8 +107,8 @@ const Hosting = (props, { modals }) => {
   );
 };
 
-Hosting.contextTypes = {
+HostingPage.contextTypes = {
   modals: PropTypes.object
 };
 
-export default Hosting;
+export default HostingPage;

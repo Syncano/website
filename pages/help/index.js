@@ -3,13 +3,13 @@ import {
   CTASection,
   Footer,
   PageHelmet,
-  StatusPageHeader,
   SocialProfiles,
+  StatusPageHeader,
   TextPanels,
   TextWithImage
 } from '../../components';
 
-export default () => {
+const HelpPage = () => {
   const { redirect_uri } = APP_CONFIG;
 
   return (
@@ -119,13 +119,13 @@ export default () => {
         </TextPanels.Panel>
       </TextPanels>
       <TextWithImage
+        headline="Get answers to common questions"
         image={
           <img
             src={require('./get-answers-to-common-questions.svg')}
             alt="lifebuoy"
           />
         }
-        headline="Get answers to common questions"
       >
         <div className="text-with-image__text__list">
           <ul>
@@ -148,3 +148,5 @@ export default () => {
     </div>
   );
 };
+
+export default HelpPage;

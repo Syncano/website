@@ -16,7 +16,7 @@ import {
   TwitterSlider
 } from '../components';
 
-const Homepage = (props, { modals }) => {
+const HomePage = (props, { modals }) => {
   const { redirect_uri } = APP_CONFIG;
 
   return (
@@ -204,8 +204,8 @@ const Homepage = (props, { modals }) => {
   );
 };
 
-Homepage.contextTypes = {
+HomePage.contextTypes = {
   modals: PropTypes.object
 };
 
-export default Homepage;
+export default HomePage;

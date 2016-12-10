@@ -1,7 +1,7 @@
 import React from 'react';
 import { ContactFormSection, CTASection, Footer, OfficeAddresses, PageHeader, PageHelmet } from '../../components';
 
-export default () => {
+const ContactPage = () => {
   const { redirect_uri } = APP_CONFIG;
 
   return (
@@ -18,7 +18,12 @@ export default () => {
         textline={
           <span>
             {`Use the form below or drop us an email at `}
-            <a href="mailto:hello@syncano.io" target="_blank">hello@syncano.io</a>
+            <a
+              href="mailto:hello@syncano.io"
+              target="_blank"
+            >
+              hello@syncano.io
+            </a>
           </span>
         }
       />
@@ -29,3 +34,5 @@ export default () => {
     </div>
   );
 };
+
+export default ContactPage;

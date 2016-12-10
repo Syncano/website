@@ -119,7 +119,7 @@
 
       li {
         line-height: 2.5;
-        list-style-image: url("../images/check.svg");
+        list-style-image: url("../components/Pricing/images/check.svg");
         padding-left: 10px;
       }
     }
@@ -236,7 +236,7 @@
         display: block;
       }
     }
-    
+
     .pricing-plan__overage-rates {
       margin-top: 40px - $tooltip-offset;
     }

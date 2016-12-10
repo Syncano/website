@@ -2,8 +2,8 @@ import React from 'react';
 // import { Link } from 'react-router';
 import {
   CircleIconColumns,
-  CTASection,
   ColumnParagraphs,
+  CTASection,
   FeaturesColumns,
   Footer,
   PageHeader,
@@ -14,7 +14,7 @@ import {
   TextWithImage
 } from '../../components';
 
-export default () => {
+const FeaturesPage = () => {
   const { redirect_uri } = APP_CONFIG;
 
   return (
@@ -119,8 +119,8 @@ export default () => {
         <ColumnParagraphs.Paragraph
           iconSrc={require('./scripts.svg')}
           headline="Scripts"
-          text={`Scripts are snippets of code that allow you to run complex code on Syncano’s servers. We support a
-            wide range of environments including Node.js, Python, Swift, Go, PHP, and Ruby.`}
+          text={`Scripts are snippets of code that allow you to run complex code on Syncano’s servers. We support a wide
+            range of environments including Node.js, Python, Swift, Go, PHP, and Ruby.`}
         />
         <ColumnParagraphs.Paragraph
           iconSrc={require('./script-endpoint.svg')}
@@ -137,8 +137,8 @@ export default () => {
         <ColumnParagraphs.Paragraph
           iconSrc={require('./integrations.svg')}
           headline="Integrations"
-          text={`Connect your app with our constantly growing list of integrations. We’ll help you stay up-to-date
-            with new add-ons, keeping your application ahead of the crowd.`}
+          text={`Connect your app with our constantly growing list of integrations. We’ll help you stay up-to-date with
+            new add-ons, keeping your application ahead of the crowd.`}
         />
       </ColumnParagraphs>
       <FeaturesColumns headline="Automations">
@@ -214,3 +214,5 @@ export default () => {
     </div>
   );
 };
+
+export default FeaturesPage;

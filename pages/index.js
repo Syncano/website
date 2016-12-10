@@ -1,22 +1,20 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { Link } from 'react-router';
 import BodyClassName from 'react-body-classname';
+
 import {
-  CodePreview,
+  CardTestimonials,
   CTASection,
-  FeaturesColumns,
   Footer,
   Hero,
+  LargeBlockquote,
   PageHelmet,
-  PlatformsSection,
-  StatusInfo,
+  SyncanoStatusBar,
   TextWithBackground,
-  TextWithBottomImage,
-  TextWithImage,
   TwitterSlider
 } from '../components';
 
-const Home = (props, { modals }) => {
+const HomePage = () => {
   const { redirect_uri } = APP_CONFIG;
 
   return (
@@ -30,104 +28,52 @@ const Home = (props, { modals }) => {
           ogImageSrc={`${redirect_uri}${require('./home/og-image.png')}`}
           twitterImageSrc={`${redirect_uri}${require('./home/twitter-image.png')}`}
         />
-        <div className="status-topbar">
-          <div className="status-topbar__news-column">
-            News from Syncano: <a className="status-topbar__news-column__blog-link" href="https://www.syncano.io/blog/executing-logic-based-on-data-changes-with-triggers/" target="_blank">Executing Logic Based on Data Changes with Triggers</a>
-          </div>
-          <div className="status-topbar__status-column">
-            Syncano Status:
-            <StatusInfo />
-            <Link
-              className="status-topbar__status-column__status-link"
-              to="/help/">
-              Status Page
-            </Link>
-          </div>
-        </div>
+        <SyncanoStatusBar />
         <Hero
+          variant="homepage"
           headline={<span>The Ultimate<br />Tech Platform for<br />Business Development</span>}
-          textline={[
-            'Automated backend running in the cloud, ',
-            <br />,
-            <Link to="/community/"><u>powered by the community</u></Link>,
-            '.'
-          ]}
+          textline={<span>
+            Automated backend running in the cloud, <br /><Link to="/community/">powered by the community</Link>.
+          </span>}
           image={
             <img
-              src={require('./home/robots.svg')}
+              src={require('./home/the-ultimate-tech-platform-for-business-development.svg')}
               alt="serverless app platform"
             />
           }
-          className="hero--homepage"
         />
-        <div className="inner">
-          <div className="testimonials-home">
-            <div className="testimonials-home__item">
-              <div className="testimonials-home__item__headline">For business developers:</div>
-              <div className="testimonials-home__item__textline">Scale your venture faster.</div>
-              <div className="testimonials-home__item__buttons">
-                <Link to="/enterprises/" className="testimonials-home__item__buttons__single button button--filled button--wide">
-                  enterprise
-                </Link>
-                <Link to="/startups/" className="testimonials-home__item__buttons__single button button--filled button--wide">
-                  startup
-                </Link>
-              </div>
-              <div className="testimonials-home__item__body">
-                <img
-                  className="testimonials-home__item__body__image"
-                  src={require('./home/stale@2x.jpg')}
-                  alt="Stale Husby, CEO, Relinklabs"
-                />
-                <div className="testimonials-home__item__body__quote">
-                  <div className="testimonials-home__item__body__quote__text">If Syncano was around at the time we created our MVP, it would have saved us a full year to get into the market.</div>
-                  <div className="testimonials-home__item__body__quote__author">Ståle Husby, CEO, Relinklabs</div>
-                </div>
-              </div>
-            </div>
-            <div className="testimonials-home__item">
-              <div className="testimonials-home__item__headline">For software developers:</div>
-              <div className="testimonials-home__item__textline">Build more code faster.</div>
-              <div className="testimonials-home__item__buttons">
-                <Link to="/mobile-developers/" className="testimonials-home__item__buttons__single button button--filled button--wide">
-                  Mobile
-                </Link>
-                <Link to="/full-stack-developers/" className="testimonials-home__item__buttons__single button button--filled button--wide">
-                  Full stack
-                </Link>
-              </div>
-              <div className="testimonials-home__item__body">
-                <img
-                  className="testimonials-home__item__body__image"
-                  src={require('./home/artur@2x.jpg')}
-                  alt="Artur Czemiel, developer, Aexol"
-                />
-                <div className="testimonials-home__item__body__quote">
-                  <div className="testimonials-home__item__body__quote__text">We managed to build, launch and succeed with our Pokemon Go map app in just 48 hours of programming.</div>
-                  <div className="testimonials-home__item__body__quote__author">Artur Czemiel, developer & founder, Aexol</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="new-homepage-nik">
-          <div className="inner">
-            <div className="new-homepage-nik__content">
-              <div className="new-homepage-nik__content__image" />
-              <div className="new-homepage-nik__content__body">
-                <div className="new-homepage-nik__content__headline">
-                  "We are entering an era where software builds software. Syncano is a pioneer in that evolution."
-                </div>
-                <div className="new-homepage-nik__content__textline">
-                  Nikolai Fasting, CEO & Founder, Syncano
-                  <div>
-                    <a href="https://www.syncano.io/blog/if-software-eats-the-world-syncano-feeds-it/" target="_blank">Read about our vision here</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <CardTestimonials>
+          <CardTestimonials.Card
+            headline="For business developers:"
+            textline="Scale your venture faster."
+            link1To="/enterprises/"
+            link1Text="Enterprise"
+            link2To="/startups/"
+            link2Text="Startup"
+            authorImgSrc={require('./home/stale-husby@2x.jpg')}
+            quote={`If Syncano was around at the time we created our MVP, it would have saved us a full year to get into
+              the market.`}
+            author="Ståle Husby, CEO, Relinklabs"
+          />
+          <CardTestimonials.Card
+            headline="For software developers:"
+            textline="Build more code faster."
+            link1To="/mobile-developers/"
+            link1Text="Mobile"
+            link2To="/full-stack-developers/"
+            link2Text="Full stack"
+            authorImgSrc={require('./home/artur-czemiel@2x.jpg')}
+            quote="We managed to build, launch and succeed with our Pokemon Go map app in just 48 hours of programming."
+            author="Artur Czemiel, developer & founder, Aexol"
+          />
+        </CardTestimonials>
+        <LargeBlockquote
+          authorImgSrc={require('./home/nikolai-fasting@2x.jpg')}
+          quote="We are entering an era where software builds software. Syncano is a pioneer in that evolution."
+          author="Nikolai Fasting, CEO & Founder, Syncano"
+          linkHref="https://www.syncano.io/blog/if-software-eats-the-world-syncano-feeds-it/"
+          linkText="Read about our vision here"
+        />
         <TwitterSlider />
         <TextWithBackground
           theme="image1"
@@ -149,8 +95,4 @@ const Home = (props, { modals }) => {
   );
 };
 
-Home.contextTypes = {
-  modals: PropTypes.object
-};
-
-export default Home;
+export default HomePage;

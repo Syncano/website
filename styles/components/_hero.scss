@@ -6,10 +6,13 @@
 
   &.hero--homepage {
     padding-bottom: 0;
-
   }
 
   .hero__text {
+    a {
+      color: inherit;
+    }
+
     h1,
     h2 {
       margin-left: auto;
@@ -31,10 +34,10 @@
       margin-top: 30px;
       max-width: 300px;
       color: $color-text-base;
-    }
 
-    a {
-      color: inherit;
+      a {
+        text-decoration: underline;
+      }
     }
 
     .hero__text__button-container {
