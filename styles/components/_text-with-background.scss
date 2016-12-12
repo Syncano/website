@@ -21,6 +21,10 @@
       max-width: 630px;
     }
 
+    .button-container {
+      text-align: center;
+    }
+
     .button {
       margin-top: 40px;
     }
@@ -37,12 +41,16 @@
   }
 
   @include small {
+    .text-with-background__text .button-container {
+      text-align: inherit;
+    }
+
     &.text-with-background--image1 {
       .inner {
         background-position: right -210px bottom 0;
         padding-bottom: 80px;
       }
-      
+
       .text-with-background__text {
         max-width: 75%;
       }

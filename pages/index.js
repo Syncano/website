@@ -79,12 +79,14 @@ const HomePage = () => {
           textline={`Adam is a great guy and a part of our support team. At Syncano, every team member is here to help
             you. When you have questions, you’ll get timely answers directly from our team members.`}
         >
-          <Link
-            to="/help/"
-            className="button"
-          >
-            Get support
-          </Link>
+          <div className="button-container">
+            <Link
+              to="/help/"
+              className="button"
+            >
+              Help &amp; Support
+            </Link>
+          </div>
         </TextWithBackground>
         <CTASection />
         <Footer />
