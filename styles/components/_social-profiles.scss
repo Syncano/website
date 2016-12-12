@@ -19,20 +19,23 @@
     }
 
     .social-profiles__group__profiles {
+      display: flex;
+      justify-content: center;
+
       .social-profiles__group__profiles__icon,
       .social-profiles__group__profiles__icon__dot {
-        display: inline-flex;
+        display: flex;
         align-items: center;
         justify-content: center;
       }
 
       .social-profiles__group__profiles__icon {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
         text-align: center;
         border: 2px solid $color-footer-link;
         border-radius: 50%;
-        margin-right: 28px;
+        margin-right: 10px;
         position: relative;
         transition: $transition-default;
 
@@ -44,6 +47,10 @@
           margin-right: 0;
         }
 
+        img {
+          transform: scale(.8);
+        }
+
         .social-profiles__group__profiles__icon__dot {
           position: absolute;
           top: -7px;
@@ -53,6 +60,18 @@
           background: $color-main-azure;
           border-radius: 50%;
         }
+      }
+    }
+  }
+
+  @include small {
+    .social-profiles__group .social-profiles__group__profiles .social-profiles__group__profiles__icon {
+      width: 70px;
+      height: 70px;
+      margin-right: 28px;
+
+      img {
+        transform: none;
       }
     }
   }

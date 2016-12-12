@@ -6,9 +6,11 @@ import Analytics from './Analytics';
 import ArchitecturePresentationSection from './ArchitecturePresentationSection';
 import AuthHOC from './AuthHOC';
 import BlockquoteSection from './BlockquoteSection';
+import CardTestimonials from './CardTestimonials';
 import CircleIconColumns from './CircleIconColumns';
 import CodePreview from './CodePreview';
 import ColumnParagraphs from './ColumnParagraphs';
+import CommunityExamples from './CommunityExamples';
 import ContactForm from './ContactForm';
 import ContactFormSection from './ContactFormSection';
 import CounterBoxes from './CounterBoxes';
@@ -23,6 +25,7 @@ import Hero from './Hero';
 import HideOnLandingPage from './HideOnLandingPage';
 import LandingPageFooter from './LandingPageFooter';
 import LandingPageHero from './LandingPageHero';
+import LargeBlockquote from './LargeBlockquote';
 import Link from './Link';
 import ListColumns from './ListColumns';
 import MobileAppDownloadButtons from './MobileAppDownloadButtons';
@@ -57,21 +60,19 @@ import TopBar from './TopBar';
 import Travolta from './Travolta';
 import TwitterSlider from './TwitterSlider';
 import TwitterWidget from './TwitterWidget';
-import LargeBlockquote from './LargeBlockquote';
-import CardTestimonials from './CardTestimonials';
 
 export default {
-  CardTestimonials,
-  LargeBlockquote,
   AboutUs,
   AboutUsHeaderImage,
   Analytics,
   ArchitecturePresentationSection,
   AuthHOC,
   BlockquoteSection,
+  CardTestimonials,
   CircleIconColumns,
   CodePreview,
   ColumnParagraphs,
+  CommunityExamples,
   ContactForm,
   ContactFormSection,
   CounterBoxes,
@@ -86,6 +87,7 @@ export default {
   HideOnLandingPage,
   LandingPageFooter,
   LandingPageHero,
+  LargeBlockquote,
   Link,
   ListColumns,
   LoggedInContent,

@@ -5,7 +5,7 @@ const StartupsPage = (props, { modals }) => {
   const { redirect_uri } = APP_CONFIG;
 
   return (
-    <div className="enterprises-page">
+    <div>
       <PageHelmet
         title="Syncano for Startups"
         mixpanelTitle="Startups"

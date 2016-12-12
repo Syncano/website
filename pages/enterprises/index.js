@@ -5,7 +5,7 @@ const EnterprisesPage = () => {
   const { redirect_uri } = APP_CONFIG;
 
   return (
-    <div className="enterprises-page">
+    <div>
       <PageHelmet
         title="Syncano for Enterprises"
         mixpanelTitle="Enterprises"
@@ -16,11 +16,15 @@ const EnterprisesPage = () => {
       />
       <PageHeader
         headline="Syncano for Enterprises"
-        textline={<span>Syncano offers an automated serverless backend platform - leveraging the power of a Developer
-          Community.<br /><br />IT legacy backend systems halters the innovation process, and results in a decreasing
-          product market fit. Keeping your current product market fit requires rapid experimentation. Efficient software
-          development is the key to successful Enterprises in the future.</span>}
-      />
+        textline={<span>Syncano offers an automated serverless backend platform - leveraging the power
+          of&nbsp;a&nbsp;Developer Community.</span>}
+      >
+        <p>
+          IT legacy backend systems halters the innovation process, and results in a decreasing product market fit.
+          Keeping your current product market fit requires rapid experimentation. Efficient software development is the
+          key to successful Enterprises in the future.
+        </p>
+      </PageHeader>
       <TextWithImage
         theme="gray"
         headline={<span>Enterprise innovation<br />meets Lean Startup</span>}

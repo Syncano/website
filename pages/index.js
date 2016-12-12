@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
 import BodyClassName from 'react-body-classname';
-
 import {
   CardTestimonials,
   CTASection,
@@ -32,9 +31,8 @@ const HomePage = () => {
         <Hero
           variant="homepage"
           headline={<span>The Ultimate<br />Tech Platform for<br />Business Development</span>}
-          textline={<span>
-            Automated backend running in the cloud, <br /><Link to="/community/">powered by the community</Link>.
-          </span>}
+          textline={<span>Automated backend running in the cloud, <br className="medium" /><Link to="/community/">
+            powered by the community</Link>.</span>}
           image={
             <img
               src={require('./home/the-ultimate-tech-platform-for-business-development.svg')}

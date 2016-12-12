@@ -102,6 +102,10 @@
     h1 br,
     h2 br {
       display: none;
+
+      &.force {
+        display: block;
+      }
     }
 
     p {
