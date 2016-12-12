@@ -1,7 +1,7 @@
 import React from 'react';
 import { CTASection, Footer, PageHeader, PageHelmet, TermsAndLegal } from '../../components';
 
-export default () => {
+const TermsOfServicePage = () => {
   return (
     <div>
       <PageHelmet
@@ -223,23 +223,23 @@ export default () => {
           <p>Syncano Inc. (“Syncano”) is committed to ensuring the privacy of your information. We have created this Privacy Policy to help explain about how we handle Information (collectively “Information”) that we receive from the European Economic Area (“EEA”) in connection with our product, Performance Insight.</p>
           <p>Syncano complies with the EU-US Privacy Shield Framework as set forth by the US Department of Commerce regarding the collection, use and retention of personal information from European Union member countries. Syncano has certified that it adhere to the Privacy Shield Principles of Notice, Choice, Accountability for Onward Transfer, Security, Data Integrity and Purpose Limitation, Access and Recourse, Enforcement and Liability. If there is any conflict between the policies in this privacy policy and the Privacy Shield Principles, the Privacy Shield Principles shall govern. To learn more about the Privacy Shield program, and to view our certification page, please visit <a href="https://www.privacyshield.gov/">https://www.privacyshield.gov/</a></p>
           <p>This policy applies to all personal information received by Syncano whether in electronic, paper, or verbal format.</p>
-          
+
           <h4>Definitions</h4>
           <p>“Personal Information” means information that is (1) transferred from the EEA to the United States; (2) is recorded in any form; (3) is about or pertains to a specific individual; and (4) can be linked to that individual.</p>
           <p>“Sensitive Personal Information” means information that reveals race, ethnic origin, sexual orientation, political opinions, religious or philosophical beliefs, trade union membership or that concerns an individual’s health.</p>
-          
+
           <h4>What kind of Personal Information do Syncano collect?</h4>
           <p>Syncano may collect information that may be used to identify an individual, including, but not limited to, a first and last name, home or other physical address, an email address, phone number or other contact information, whether at work or at home.</p>
-          
+
           <h4>Why does Syncano collect your personal information?</h4>
           <p>If You provide personally identifiable information for a certain reason, we may use the personally identifiable information in connection with the reason for which it was provided. For instance, if You contact us by e-mail, we will use the personally identifiable information you provide to answer Your question or resolve Your problem. Also, if You provide personally identifiable information in order to obtain access to the Syncano Website or Services, we will use such information to provide You with access to such services and to monitor Your use of such services. Further, your personally identifiable information may be used to provide You with new product information and support services offered on the Syncano Website, to notify you of technical updates or changes in policy, to improve the content and functionality of the Syncano Website and Services, to help us better understand our users, or to deliver other services.</p>
 
           <h4>Notice</h4>
           <p>Syncano is a platform for app developers. You can create an app on syncano, and then all personal data will get stored on Syncanos servers. Therefor Syncano does not collect Information from individuals directly. However, Information is received from affiliates or third-parties in the EEA for the purpose of providing technical support and maintenance. Syncano will use and disclose such information only in accordance with the notices provided by such entities. Types of data may include e.g., name, mailing or email address, biometric data etc.</p>
-          
+
           <h4>Choice</h4>
           <p>Syncano is a data processor who cannot extend choice, therefor individuals will be referred to the entity with which they placed their original information. If an individual opts-out when the data is collected by the affiliate or third-party in the EEA, Syncano has no means of receiving that individual’s Information.</p>
-          
+
           <h4>Onward Transfer</h4>
           <p>Syncano is not in the business of selling your information. We consider your personal information to be a vital part of our relationship with You. There are, however, certain circumstances in which we may share your personally identifiable information with certain third parties without further notice to You, as set forth below:
             <ul>
@@ -251,34 +251,34 @@ export default () => {
             </ul>
           </p>
           <p>However, no method of transmission over the Internet or method of electronic storage is  100% secure. Therefore, while we strive to use commercially acceptable means to protect Your personally identifiable information, we cannot guarantee its absolute security. In cases of onward transfer to third parties of data of EU individuals received pursuant to the EU-US Privacy Shield, Syncano is therefor potentially liable.</p>
-          
+
           <h4>Security</h4>
           <p>Syncano takes commercially reasonable steps to protect the Information from loss, misuse and unauthorized access, disclosure, alteration and destruction. Syncano has put in place appropriate physical, electronic and administrative procedures to safeguard and secure the Information from loss, misuse, unauthorized access or disclosure, alteration or destruction. However, Syncano cannot guarantee the security of Information on or transmitted via the Internet.</p>
           <p>We also may be required to disclose an individual’s personal information in response to a lawful request by public authorities, including to meet national security or law enforcement requirements.</p>
-          
+
           <h4>Data Integrity</h4>
           <p>Syncano’s access to Information is limited due to the relationship between Syncano and its affiliates and third-parties. As such, Syncano does not have a direct impact on the integrity of the data it stores and cannot make any representations as to data integrity.</p>
           <p>However, Syncano may not process personal information in a way that is incompatible with the purposes for which it has been collected or subsequently authorized by the individual.</p>
-          
+
           <h4>Access and Correction</h4>
           <p>Due to the relationship between Syncano and its affiliates and third-parties, Syncano has only limited access to an individual’s data. However, individuals will have the right to access personal data concerning themselves if they were to require it. Furthermore, individuals have the opportunity to correct, modify or delete personal information about them if such information has been processed in violation of the Privacy Shield principles.</p>
           <p>As such, Syncano will forward any requests to access and correct an individual’s information to the appropriate affiliate or third-party. To notify us of a change in your details, please contact the Privacy Officer. A formal request from an individual for information that we hold about them must be made in writing.</p>
-          
+
           <h4>Enforcement and Dispute Resolution</h4>
           <p>Syncano will periodically verify that the policy is accurate, comprehensive for the information intended to be covered, prominently displayed, completely implemented and accessible and in conformity with the Principles.</p>
           <p>In compliance with the EU-US Privacy Shield Principles, Syncano commits to resolve complaints about your privacy and our collection or use of your personal information.  European Union individuals with inquiries or complaints regarding this privacy policy should first contact Syncano using the information listed in the Contact Information section below.</p>
           <p>Syncano has further committed to refer unresolved privacy complaints under the EU-US Privacy Shield Principles BBB EU PRIVACY SHIELD, a non-profit alternative dispute resolution provider located in the United States and operated by the Council of Better Business Bureaus.</p>
           <p>If you do not receive timely acknowledgment of your complaint, or if your complaint is not satisfactorily addressed, please visit <a href="http://www.bbb.org/EU-privacy-shield/for-eu-consumers/">www.bbb.org/EU-privacy-shield/for-eu-consumers/</a> for more information and to file a complaint.</p>
           <p>Syncano is subject to the investigatory and enforcement powers of the Federal Trade Commission (FTC).</p>
-          
+
           <h4>Binding Arbitration</h4>
           <p>If your complaint is not resolved through these channels, under limited circumstances, a binding arbitration option may be available before a Privacy Shield Panel.</p>
-          
+
           <h4>Contact Information</h4>
           <p>Mariusz Wisniewski, Privacy Officer</p>
           <p>Syncano, Inc. 60 Madison Avenue, Floor 12, New York, NY 10010</p>
-          <p><a href="mailto:privacy-officer@syncano.com">privacy-officer@syncano.com</a></p>
-          
+          <p><a href="mailto:privacy-officer@syncano.com" target="_blank">privacy-officer@syncano.com</a></p>
+
           <h4>Changes to this Policy</h4>
           <p>Subject to the requirements of the Privacy Shield Program, Syncano may modify and/or amend this policy at any time. Any changes or modification will be posted on our website and will take effect thirty (30) days after the changes are posted.</p>
         </TermsAndLegal.Item>
@@ -288,3 +288,5 @@ export default () => {
     </div>
   );
 };
+
+export default TermsOfServicePage;

@@ -2,12 +2,6 @@
   height: 0 !important;
 }
 
-.homepage .top-bar {
-  @include large {
-    transform: translate3d(0, 51px, 0);
-  }
-}
-
 .top-bar {
   position: fixed;
   top: 0;
@@ -157,12 +151,6 @@
     }
   }
 
-  @include body-class('has-modal-open') {
-    &:before {
-      background: #fff;
-    }
-  }
-
   @include medium {
     box-shadow: none;
     overflow: hidden;
@@ -198,7 +186,7 @@
 
     &.headroom--pinned,
     &.headroom--unpinned {
-      transform: translateY(-46px);
+      transform: translateY(-46px) !important;
 
       > .inner {
         transform: translateY(23px);
@@ -207,6 +195,10 @@
   }
 
   @include large {
+    @include body-class('homepage') {
+      transform: translate3d(0, 51px, 0);
+    }
+
     .top-bar__nav .top-bar__nav__menu li {
       margin-right: 35px;
 

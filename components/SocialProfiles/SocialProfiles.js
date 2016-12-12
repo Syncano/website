@@ -1,86 +1,58 @@
 import React from 'react';
+import SocialProfilesGroup from './SocialProfilesGroup';
+import SocialProfilesIcon from './SocialProfilesIcon';
 
-export default () => {
-  return (
-    <div className="social-profiles">
-      <div className="inner">
-        <div className="social-profiles__group">
-          <h3>Fork us on GitHub</h3>
-          <div className="social-profiles__group__profiles">
-            <a
-              className="social-profiles__group__profiles__icon"
-              href="https://github.com/Syncano/"
-              target="_blank"
-              title="GitHub"
-            >
-              <img
-                src={require('./images/github.svg')}
-                alt="GitHub"
-              />
-            </a>
-          </div>
-        </div>
-        <div className="social-profiles__group">
-          <h3>Follow us</h3>
-          <div className="social-profiles__group__profiles">
-            <a
-              className="social-profiles__group__profiles__icon"
-              href="https://www.facebook.com/syncano/"
-              target="_blank"
-              title="Facebook"
-            >
-              <img
-                src={require('./images/facebook.svg')}
-                alt="Facebook"
-              />
-            </a>
-            <a
-              className="social-profiles__group__profiles__icon"
-              href="https://twitter.com/Syncano/"
-              target="_blank"
-              title="Twitter"
-            >
-              <img
-                src={require('./images/twitter.svg')}
-                alt="Twitter"
-              />
-            </a>
-            <a
-              className="social-profiles__group__profiles__icon"
-              href="https://twitter.com/SyncanoStatus/"
-              target="_blank"
-              title="Twitter Status"
-            >
-              <img
-                src={require('./images/twitter.svg')}
-                alt="Twitter Status"
-              />
-              <div className="social-profiles__group__profiles__icon__dot">
-                <img
-                  src={require('./images/status.svg')}
-                  alt="Status"
-                />
-              </div>
-            </a>
-          </div>
-        </div>
-        <div className="social-profiles__group">
-          <h3>Join the community</h3>
-          <div className="social-profiles__group__profiles">
-            <a
-              className="social-profiles__group__profiles__icon"
-              href="https://www.syncano.io/slack-invite/"
-              target="_blank"
-              title="Slack"
-            >
-              <img
-                src={require('./images/slack.svg')}
-                alt="Slack"
-              />
-            </a>
-          </div>
-        </div>
-      </div>
+const SocialProfiles = ({ variant }) => (
+  <div className="social-profiles">
+    <div className="inner">
+      <SocialProfilesGroup title="Fork us on GitHub">
+        <SocialProfilesIcon
+          href="https://github.com/Syncano/"
+          title="GitHub"
+          imgSrc={require('./images/github.svg')}
+        />
+      </SocialProfilesGroup>
+      <SocialProfilesGroup title="Follow us">
+        <SocialProfilesIcon
+          href="https://www.facebook.com/syncano/"
+          title="Facebook"
+          imgSrc={require('./images/facebook.svg')}
+        />
+        <SocialProfilesIcon
+          href="https://twitter.com/Syncano/"
+          title="Twitter"
+          imgSrc={require('./images/twitter.svg')}
+        />
+        <SocialProfilesIcon
+          href="https://twitter.com/SyncanoStatus/"
+          title="Twitter Status"
+          imgSrc={require('./images/twitter.svg')}
+          dotImgSrc={require('./images/status.svg')}
+          dotImgAlt="Status"
+          isHidden={variant === 'community'}
+        />
+        <SocialProfilesIcon
+          href="https://www.linkedin.com/company/syncano/"
+          title="LinkedIn"
+          imgSrc={require('./images/linkedin.svg')}
+          isHidden={variant !== 'community'}
+        />
+        <SocialProfilesIcon
+          href="https://www.syncano.io/blog/"
+          title="Blog"
+          imgSrc={require('./images/blog.svg')}
+          isHidden={variant !== 'community'}
+        />
+      </SocialProfilesGroup>
+      <SocialProfilesGroup title="Join the community">
+        <SocialProfilesIcon
+          href="https://www.syncano.io/slack-invite/"
+          title="Slack"
+          imgSrc={require('./images/slack.svg')}
+        />
+      </SocialProfilesGroup>
     </div>
-  );
-}
+  </div>
+);
+
+export default SocialProfiles;

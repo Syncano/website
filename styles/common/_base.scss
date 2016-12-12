@@ -33,6 +33,15 @@ ol {
   list-style: none;
 }
 
+blockquote p,
+q {
+  &:before,
+  &:after {
+    display: inline;
+    content: '"';
+  }
+}
+
 strong {
   font-weight: 500;
 }

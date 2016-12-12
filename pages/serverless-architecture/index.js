@@ -1,7 +1,7 @@
 import React from 'react';
-import { CTASection, Footer, PageHeader, PageHelmet, ArchitecturePresentationSection } from '../../components';
+import { ArchitecturePresentationSection, CTASection, Footer, PageHeader, PageHelmet } from '../../components';
 
-export default () => {
+const ServerlessArchitecturePage = () => {
   const { redirect_uri } = APP_CONFIG;
 
   return (
@@ -25,3 +25,5 @@ export default () => {
     </div>
   );
 };
+
+export default ServerlessArchitecturePage;

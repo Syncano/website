@@ -8,11 +8,10 @@ import {
   PageHelmet,
   Pricing,
   TextWithImage,
-  TextWithBottomImage,
   TwitterSlider
 } from '../../components';
 
-export default () => {
+const PricingPage = () => {
   const { redirect_uri } = APP_CONFIG;
 
   return (
@@ -64,3 +63,5 @@ export default () => {
     </div>
   );
 };
+
+export default PricingPage;
