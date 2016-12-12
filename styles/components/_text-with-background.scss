@@ -30,14 +30,12 @@
     }
   }
 
-  &.text-with-background--image1 {
-    .inner {
-      background-image: url("../components/TextWithBackground/images/well-support-you-every-step-of-the-way.jpg");
-      background-repeat: no-repeat;
-      background-position: bottom;
-      background-size: contain;
-      padding-bottom: 75vw;
-    }
+  &.text-with-background--image1 .inner {
+    background-image: url("../components/TextWithBackground/images/well-support-you-every-step-of-the-way.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    padding-bottom: 75vw;
   }
 
   @include small {
