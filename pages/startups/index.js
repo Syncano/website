@@ -29,8 +29,8 @@ const StartupsPage = (props, { modals }) => {
           spend all your efforts creating business logic in the frontend.`}
         image={
           <img
-            src={require('./integrations-for-more-opportunities.svg')}
-            alt="Integrations for more opportunities"
+            src={require('./make-the-app-your-users-will-love.svg')}
+            alt="bulb"
           />
         }
       >
