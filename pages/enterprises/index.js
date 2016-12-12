@@ -33,8 +33,8 @@ const EnterprisesPage = () => {
           added overhead.`}
         image={
           <img
-            src={require('./integrations-to-help-you-connect-systems.svg')}
-            alt="Integrations to help you connect systems"
+            src={require('./enterprise-innovation-meets-lean-startup.svg')}
+            alt="robot"
           />
         }
       >
