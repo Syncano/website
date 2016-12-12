@@ -135,6 +135,11 @@
         margin-top: 40px;
       }
     }
+
+    &.page-header--3d-presentation {
+      padding-top: 120px;
+      padding-bottom: 60px;
+    }
   }
 
   @include large {

@@ -18,6 +18,7 @@ const ServerlessArchitecturePage = () => {
         headline="Syncano Serverless Architecture"
         textline={`Take a look at this 3D interactive presentation that explains our platform architecture. Click to
           explore!`}
+        variant="3d-presentation"
       />
       <ArchitecturePresentationSection />
       <CTASection />
