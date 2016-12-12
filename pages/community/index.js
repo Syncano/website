@@ -16,7 +16,7 @@ const CommunityPage = () => {
   return (
     <div>
       <PageHelmet
-        title="Syncano community"
+        title="Communities Fuel Growth | Syncano"
         mixpanelTitle="Community"
         description={`One person with an idea needs iteration to reach perfection. With a community, you have many
           brains to make that process incredibly fast.`}
@@ -51,7 +51,7 @@ const CommunityPage = () => {
         <CommunityExamples.Example
           leftImgSrc={require('./uber.svg')}
           leftImgAlt="Uber"
-          rightImgSrc={require('./sports-car.svg')}
+          rightImgSrc={require('./cars.svg')}
           ightImgAlt="sports car"
           text={`Uber uses the potential that lies in all the worlds’ unused transportation capacity by being the
             central connection point to a worldwide crowd of car owners. Although they do need some local presence in
@@ -68,12 +68,17 @@ const CommunityPage = () => {
             revenue to exponential levels. It is essentially a community for ecommerce, and has created unforeseen
             growth in revenue - with lightning speed.`}
         />
+        <CommunityExamples.Example
+          leftImgSrc={require('./syncano.svg')}
+          leftImgAlt="Syncano"
+          rightImgSrc={require('./thinking.svg')}
+          ightImgAlt="thinking"
+        />
       </CommunityExamples>
       <CTASection
         headline="Syncano and the developer community"
-        textline={<span>Innovation drives growth and speed keeps you ahead of your competition. Syncano has the
-          community that unlocks this potential.<br />Do you want to learn how Syncano can connect your business to the
-          developer community?</span>}
+        textline={`Innovation drives growth and speed keeps you ahead of your competition. Syncano has the community
+          that unlocks this potential.`}
       >
         <a
           className="button button--large button--featured"
