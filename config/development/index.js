@@ -9,8 +9,8 @@ export default {
   facebook: '',
   google: '',
   redirect_uri: '',
-  twitterConsumerKey: '<YOUR_TWITTER_CONSUMER_KEY>',
-  twitterConsumerSecret: '<YOUR_TWITTER_CONSUMER_SECRET>',
-  twitterAccessToken: '<YOUR_TWITTER_ACCESS_TOKEN>',
-  twitterAccessTokenSecret: '<YOUR_TWITTER_ACCESS_TOKEN_SECRET>'
+  twitterConsumerKey: '',
+  twitterConsumerSecret: '',
+  twitterAccessToken: '',
+  twitterAccessTokenSecret: ''
 };

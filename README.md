@@ -24,32 +24,12 @@ Use the up / down arrow to navigate, and press enter or the right arrow to selec
 
 # How To Run
 
-First of all you need at least the following config keys filled (`config/development/index.js`):
+To run the website use the following command:
 
-    export default {
-        analyticsKey: '',
-        contactFormEmail: '',
-        dashboardUrl: '',
-        statusPageStatusUrl: '',
-        supportFormEmail: '',
-        syncanoAPIBaseUrl: 'https://api.syncano.io/',
-        github: '',
-        facebook: '',
-        google: '',
-        redirect_uri: '',
-        twitterConsumerKey: '<YOUR_TWITTER_CONSUMER_KEY>',
-        twitterConsumerSecret: '<YOUR_TWITTER_CONSUMER_SECRET>',
-        twitterAccessToken: '<YOUR_TWITTER_ACCESS_TOKEN>',
-        twitterAccessTokenSecret: '<YOUR_TWITTER_ACCESS_TOKEN_SECRET>'
-    };
+    $ npm start
 
-You can generate your Twitter app keys here: https://apps.twitter.com.
-
-Always remember to ignore changes made in this file with a command:
-
-    $ git update-index --assume-unchanged config/development/index.js
-
-After that you can run the website with a `$ npm start` command. Required JSON files should be downloaded automatically.
+If you want to see Twitter slider, you need to provide your Twitter config keys in `config/development/index.js`. If you modify this file, remember to ignore your changes with a command
+`$ git update-index --assume-unchanged config/development/index.js`;
 
 # How To Build
 
