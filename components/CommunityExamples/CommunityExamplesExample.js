@@ -8,17 +8,17 @@ const CommunityExamplesExample = ({ leftImgSrc, leftImgAlt, rightImgSrc, rightIm
         alt={leftImgAlt}
       />
       <img
-        src={require('./images/next.svg')}
-        alt=""
+        src={require('./images/arrow.svg')}
+        alt="right arrow"
       />
       <img
         src={rightImgSrc}
         alt={rightImgAlt}
       />
     </div>
-    <div className="community-examples__example__text">
+    {text && <div className="community-examples__example__text">
       {text}
-    </div>
+    </div>}
   </div>
 );
 
