@@ -4,7 +4,7 @@ export default {
   dashboardUrl: '',
   statusPageStatusUrl: '',
   supportFormEmail: '',
-  syncanoAPIBaseUrl: '',
+  syncanoAPIBaseUrl: 'https://api.syncano.io/',
   github: '',
   facebook: '',
   google: '',

@@ -5,17 +5,24 @@ import GLOBAL_CONFIG from '../config/global';
 
 const { tweetsIDs } = GLOBAL_CONFIG;
 
-const getTweets = (tweetsIDs) => {
+const getTweets = (ids) => {
+  const { twitterConsumerKey, twitterConsumerSecret, twitterAccessToken, twitterAccessTokenSecret } = APP_CONFIG;
+  const dataFilePath = `${__dirname}/../data-tweets.json`;
+
+  if (!twitterConsumerKey || !twitterConsumerSecret || !twitterAccessToken || !twitterAccessTokenSecret) {
+    return fs.writeFileSync(dataFilePath, JSON.stringify({ error: true }));
+  }
+
   const T = new Twit({
-    consumer_key: APP_CONFIG.twitterConsumerKey,
-    consumer_secret: APP_CONFIG.twitterConsumerSecret,
-    access_token: APP_CONFIG.twitterAccessToken,
-    access_token_secret: APP_CONFIG.twitterAccessTokenSecret,
+    consumer_key: twitterConsumerKey,
+    consumer_secret: twitterConsumerSecret,
+    access_token: twitterAccessToken,
+    access_token_secret: twitterAccessTokenSecret,
     timeout_ms: 60*1000
   });
 
-  T.get('statuses/lookup', { id: tweetsIDs.join() }, (err, data, response) => {
-    fs.writeFileSync(`${__dirname}/../data-tweets.json`, JSON.stringify(data));
+  return T.get('statuses/lookup', { id: ids.join() }, (err, data) => {
+    fs.writeFileSync(dataFilePath, JSON.stringify(data));
   });
 };
 
