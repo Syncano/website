@@ -9,7 +9,7 @@ const ArchitecturePresentationSection = () => (
   <div>
     <ArchitecturePresentationMobileInfo />
     <Breakpoint
-      minWidth={1300}
+      minWidth={1025}
       widthMethod="pageWidth"
     >
       <ArchitecturePresentation />
