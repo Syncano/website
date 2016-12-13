@@ -61,8 +61,8 @@ const CommunityPage = () => {
         <CommunityExamples.Example
           leftImgSrc={require('./alibaba.svg')}
           leftImgAlt="Alibaba"
-          rightImgSrc={require('./shopping-cart.svg')}
-          ightImgAlt="shopping cart"
+          rightImgSrc={require('./shopping-carts.svg')}
+          ightImgAlt="shopping carts"
           text={`Alibaba is the worlds largest online ecommerce retailer, but they have no inventory of their own. It is
             a software service that connects a vast network of retail suppliers to their customers, scaling their
             revenue to exponential levels. It is essentially a community for ecommerce, and has created unforeseen
@@ -76,7 +76,7 @@ const CommunityPage = () => {
         />
       </CommunityExamples>
       <CTASection
-        headline="Syncano and the developer community"
+        headline="Do you want to learn how Syncano can connect your business to the developer community?"
         textline={`Innovation drives growth and speed keeps you ahead of your competition. Syncano has the community
           that unlocks this potential.`}
       >
