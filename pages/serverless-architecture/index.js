@@ -1,7 +1,7 @@
 import React from 'react';
-import { CTASection, Footer, PageHeader, PageHelmet, ArchitecturePresentationSection } from '../../components';
+import { ArchitecturePresentationSection, CTASection, Footer, PageHeader, PageHelmet } from '../../components';
 
-export default () => {
+const ServerlessArchitecturePage = () => {
   const { redirect_uri } = APP_CONFIG;
 
   return (
@@ -18,6 +18,7 @@ export default () => {
         headline="Syncano Serverless Architecture"
         textline={`Take a look at this 3D interactive presentation that explains our platform architecture. Click to
           explore!`}
+        variant="3d-presentation"
       />
       <ArchitecturePresentationSection />
       <CTASection />
@@ -25,3 +26,5 @@ export default () => {
     </div>
   );
 };
+
+export default ServerlessArchitecturePage;

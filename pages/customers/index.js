@@ -1,13 +1,13 @@
 import React from 'react';
 import {
-  CustomerSection,
   CTASection,
+  CustomerSection,
   Footer,
   PageHeader,
   PageHelmet
 } from '../../components';
 
-export default () => {
+const CustomersPage = () => {
   const { redirect_uri } = APP_CONFIG;
 
   return (
@@ -218,3 +218,5 @@ export default () => {
     </div>
   );
 };
+
+export default CustomersPage;

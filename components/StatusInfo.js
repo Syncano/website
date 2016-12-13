@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import StatusImage from './StatusImage';
 
-class StatusPageHeader extends Component {
+class StatusInfo extends Component {
   constructor(props) {
     super(props);
 
@@ -49,9 +49,9 @@ class StatusPageHeader extends Component {
     const { status } = this.state;
 
     return (
-      <div className="status-topbar__status-column__status-info">
+      <div className="syncano-status-bar__status-column__status-info">
         <StatusImage
-          className="status-topbar__status-column__status-info__icon blink_me"
+          className="syncano-status-bar__status-column__status-info__icon"
           indicator={status.status.indicator}
           alt={status.status.description}
         />
@@ -61,4 +61,4 @@ class StatusPageHeader extends Component {
   };
 }
 
-export default StatusPageHeader;
+export default StatusInfo;

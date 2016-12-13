@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import { CTASection, Footer, PageHeader, PageHelmet, Travolta } from '../../components';
 
-export default () => {
+const Error404Page = () => {
   return (
     <div>
       <PageHelmet
@@ -28,3 +28,5 @@ export default () => {
     </div>
   );
 };
+
+export default Error404Page;

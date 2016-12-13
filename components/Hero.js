@@ -1,8 +1,14 @@
 import React from 'react';
+import classNames from 'classnames';
 
-export default ({ headline, textline, children, image, className }) => {
+export default ({ variant, headline, textline, children, image }) => {
+  const className = classNames({
+    'hero': true,
+    'hero--homepage': (variant === 'homepage')
+  });
+
   return (
-    <div className={`hero ${className}`}>
+    <div className={className}>
       <div className="inner">
         <div className="hero__text">
           <h1>{headline}</h1>

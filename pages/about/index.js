@@ -11,7 +11,7 @@ import {
   Team
 } from '../../components';
 
-export default () => {
+const AboutPage = () => {
   const { redirect_uri } = APP_CONFIG;
 
   return (
@@ -63,3 +63,5 @@ export default () => {
     </div>
   );
 };
+
+export default AboutPage;
