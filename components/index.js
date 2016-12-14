@@ -1,16 +1,20 @@
+import { LoggedInContent, LoggedInHOC, LoggedOutContent } from './LoggedInContent';
+import { Modals, ModalsHOC } from './Modals';
 import AboutUs from './AboutUs';
 import AboutUsHeaderImage from './AboutUsHeaderImage';
 import Analytics from './Analytics';
 import ArchitecturePresentationSection from './ArchitecturePresentationSection';
 import AuthHOC from './AuthHOC';
 import BlockquoteSection from './BlockquoteSection';
-import CTASection from './CTASection';
+import CardTestimonials from './CardTestimonials';
 import CircleIconColumns from './CircleIconColumns';
 import CodePreview from './CodePreview';
 import ColumnParagraphs from './ColumnParagraphs';
+import CommunityExamples from './CommunityExamples';
 import ContactForm from './ContactForm';
 import ContactFormSection from './ContactFormSection';
 import CounterBoxes from './CounterBoxes';
+import CTASection from './CTASection';
 import CustomerSection from './CustomerSection';
 import FAQ from './FAQ';
 import FeaturesColumns from './FeaturesColumns';
@@ -21,11 +25,10 @@ import Hero from './Hero';
 import HideOnLandingPage from './HideOnLandingPage';
 import LandingPageFooter from './LandingPageFooter';
 import LandingPageHero from './LandingPageHero';
+import LargeBlockquote from './LargeBlockquote';
 import Link from './Link';
 import ListColumns from './ListColumns';
-import { LoggedInContent, LoggedInHOC, LoggedOutContent } from './LoggedInContent';
 import MobileAppDownloadButtons from './MobileAppDownloadButtons';
-import { Modals, ModalsHOC } from './Modals';
 import OfficeAddresses from './OfficeAddresses';
 import OfficesMap from './OfficesMap';
 import PageHeader from './PageHeader';
@@ -43,6 +46,7 @@ import SocialProfiles from './SocialProfiles';
 import StatusImage from './StatusImage';
 import StatusInfo from './StatusInfo';
 import StatusPageHeader from './StatusPageHeader';
+import SyncanoStatusBar from './SyncanoStatusBar';
 import Team from './Team';
 import Terminal from './Terminal';
 import TerminalSection from './TerminalSection';
@@ -64,13 +68,15 @@ export default {
   ArchitecturePresentationSection,
   AuthHOC,
   BlockquoteSection,
-  CTASection,
+  CardTestimonials,
   CircleIconColumns,
   CodePreview,
   ColumnParagraphs,
+  CommunityExamples,
   ContactForm,
   ContactFormSection,
   CounterBoxes,
+  CTASection,
   CustomerSection,
   FAQ,
   FeaturesColumns,
@@ -81,6 +87,7 @@ export default {
   HideOnLandingPage,
   LandingPageFooter,
   LandingPageHero,
+  LargeBlockquote,
   Link,
   ListColumns,
   LoggedInContent,
@@ -106,6 +113,7 @@ export default {
   StatusImage,
   StatusInfo,
   StatusPageHeader,
+  SyncanoStatusBar,
   Team,
   Terminal,
   TerminalSection,

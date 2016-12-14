@@ -6,10 +6,13 @@
 
   &.hero--homepage {
     padding-bottom: 0;
-
   }
 
   .hero__text {
+    a {
+      color: inherit;
+    }
+
     h1,
     h2 {
       margin-left: auto;
@@ -20,7 +23,7 @@
       font-weight: 700;
       font-size: 28px;
       line-height: 1.35;
-      max-width: 255px;
+      // max-width: 255px;
       color: $color-text-headline;
       white-space: nowrap;
     }
@@ -31,10 +34,14 @@
       margin-top: 30px;
       max-width: 300px;
       color: $color-text-base;
-    }
 
-    a {
-      color: inherit;
+      a {
+        text-decoration: underline;
+      }
+
+      br {
+        display: none;
+      }
     }
 
     .hero__text__button-container {
@@ -98,6 +105,10 @@
         font-size: 20px;
         max-width: 425px;
         margin-top: 30px;
+
+        br.medium {
+          display: block;
+        }
       }
 
       .hero__text__button-container {

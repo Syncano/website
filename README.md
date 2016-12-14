@@ -22,10 +22,28 @@ Use the up / down arrow to navigate, and press enter or the right arrow to selec
     ο 6.2.1
       4.4.3
 
+# How To Run
+
+To run the website use the following command:
+
+    $ npm start
+
+If you want to see Twitter slider, you need to provide your Twitter config keys in `config/development/index.js`. If you modify this file, remember to ignore your changes with a command
+`$ git update-index --assume-unchanged config/development/index.js`;
+
+# How To Build
+
+To build the website use the following command:
+
+    $ npm run build
+
+It will create a `public` directory with all static files inside. Also when building, all files from `static` directory
+are copied to `public` folder.
+
 # E2E Testing
 
-We are using [nightwatchjs](http://nightwatchjs.org/) for e2e testing.
-**nightwatchjs** requires few binary files which can be installed via proper NPM command:
+We are using [Nightwatch.js](http://nightwatchjs.org/) for e2e testing.
+**Nightwatch.js** requires few binary files which can be installed via proper NPM command:
 
     $ npm run e2e-setup
 
@@ -46,7 +64,6 @@ or one by one:
 
     $ npm run e2e-chrome
     $ npm run e2e-firefox
-
 
 If part of the tests fail for some reason, you can temporarily disable them by `--skiptags` argument. So if, for instance signup tests fail, you can modify `package.json` e2e line, so that it looks like this:
 

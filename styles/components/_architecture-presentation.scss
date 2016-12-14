@@ -11,7 +11,7 @@
     display: none;
   }
 
-  @include very-large {
+  @include large-over {
     display: block;
   }
 }

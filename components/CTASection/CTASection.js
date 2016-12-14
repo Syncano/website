@@ -6,6 +6,7 @@ const CTASection = ({
   variant,
   theme,
   headline = 'Rethink how you build apps. Go serverless!',
+  textline,
   buttonText = 'Get Started for Free',
   showButtonDescription = true,
   children
@@ -16,35 +17,42 @@ const CTASection = ({
     'cta-section--gray': (theme === 'gray')
   });
 
-  const getDefaultContent = () => (
-    <div>
-      <h2>{headline}</h2>
-      <LoggedOutContent>
-        <span
-          className="button button--large button--featured"
-          onClick={modals.signUp.open}
-        >
-          {buttonText}
-        </span>
-      </LoggedOutContent>
-      <LoggedInContent>
-        <a
-          className="button button--large button--featured"
-          href={APP_CONFIG.dashboardUrl}
-        >
-          Go to Dashboard
-        </a>
-      </LoggedInContent>
-      {showButtonDescription && <p className="cta-section__button-description">
-        30 days free &bull; No credit card required
-      </p>}
-    </div>
-  );
+  const renderChildren = () => {
+    if (children) {
+      return children;
+    }
+
+    return (
+      <div>
+        <LoggedOutContent>
+          <span
+            className="button button--large button--featured"
+            onClick={modals.signUp.open}
+          >
+            {buttonText}
+          </span>
+        </LoggedOutContent>
+        <LoggedInContent>
+          <a
+            className="button button--large button--featured"
+            href={APP_CONFIG.dashboardUrl}
+          >
+            Go to Dashboard
+          </a>
+        </LoggedInContent>
+        {showButtonDescription && <p className="cta-section__button-description">
+          30 days free &bull; No credit card required
+        </p>}
+      </div>
+    );
+  };
 
   return (
     <div className={className}>
       <div className="inner">
-        {children ? children : getDefaultContent()}
+        <h2>{headline}</h2>
+        <p>{textline}</p>
+        {renderChildren()}
       </div>
     </div>
   );

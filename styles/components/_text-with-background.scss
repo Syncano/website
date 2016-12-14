@@ -21,28 +21,34 @@
       max-width: 630px;
     }
 
+    .button-container {
+      text-align: center;
+    }
+
     .button {
       margin-top: 40px;
     }
   }
 
-  &.text-with-background--image1 {
-    .inner {
-      background-image: url("../components/TextWithBackground/images/well-support-you-every-step-of-the-way.jpg");
-      background-repeat: no-repeat;
-      background-position: bottom;
-      background-size: contain;
-      padding-bottom: 75vw;
-    }
+  &.text-with-background--image1 .inner {
+    background-image: url("../components/TextWithBackground/images/well-support-you-every-step-of-the-way.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    padding-bottom: 75vw;
   }
 
   @include small {
+    .text-with-background__text .button-container {
+      text-align: inherit;
+    }
+
     &.text-with-background--image1 {
       .inner {
         background-position: right -210px bottom 0;
         padding-bottom: 80px;
       }
-      
+
       .text-with-background__text {
         max-width: 75%;
       }

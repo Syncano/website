@@ -8,7 +8,11 @@ import HideOnLandingPage from '../HideOnLandingPage';
 import tweets from '../../data-tweets.json';
 
 export default class TwitterSlider extends Component {
-  render = () => {
+  render() {
+    if (tweets.errors) {
+      return null;
+    }
+
     return (
       <div
         className="twitter-slider"
@@ -18,7 +22,7 @@ export default class TwitterSlider extends Component {
           <h2>
             <img
               src={require('./images/heart.svg')}
-              alt="heart" 
+              alt="heart"
             />
             <span>from our users</span>
           </h2>
