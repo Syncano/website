@@ -9,7 +9,7 @@ import tweets from '../../data-tweets.json';
 
 export default class TwitterSlider extends Component {
   render() {
-    if (tweets.error) {
+    if (tweets.errors) {
       return null;
     }
 

@@ -10,7 +10,7 @@ const getTweets = (ids) => {
   const dataFilePath = `${__dirname}/../data-tweets.json`;
 
   if (!twitterConsumerKey || !twitterConsumerSecret || !twitterAccessToken || !twitterAccessTokenSecret) {
-    return fs.writeFileSync(dataFilePath, JSON.stringify({ error: true }));
+    return fs.writeFileSync(dataFilePath, JSON.stringify({ errors: true }));
   }
 
   const T = new Twit({
