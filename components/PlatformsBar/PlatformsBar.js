@@ -13,9 +13,7 @@ export default ({ healine, variant, size }) => {
   return (
     <div className={className}>
       <div className="inner">
-        {healine && <h2 className="platforms-bar__healine">
-          {healine}
-        </h2>}
+        {healine && <h2>{healine}</h2>}
         <div className="platforms-bar__items">
           <PlatformsBarItem
             variant={variant}
