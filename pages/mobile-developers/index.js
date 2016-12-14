@@ -54,6 +54,7 @@ const MobileDevelopersPage = (props, { modals }) => {
         </p>
       </PageHeader>
       <PlatformsBar
+        healine="View our mobile libraries on GitHub"
         variant="mobile"
         size="large"
       />

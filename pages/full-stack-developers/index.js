@@ -53,7 +53,10 @@ const FullStackDevelopersPage = (props, { modals }) => {
           30 days free &bull; No credit card required
         </p>
       </PageHeader>
-      <PlatformsBar variant="full-stack" />
+      <PlatformsBar
+        healine="View our libraries on GitHub"
+        variant="full-stack"
+      />
       <FeaturesColumns headline="Automations to ease your workflow">
         <FeaturesColumns.Column
           iconSrc={require('./real-time-communication.svg')}
