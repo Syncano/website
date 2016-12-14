@@ -76,7 +76,7 @@ const CommunityPage = () => {
         />
       </CommunityExamples>
       <CTASection
-        headline="Do you want to learn how Syncano can connect your business to the developer community?"
+        headline={<span>Learn how Syncano can connect your business to the&nbsp;developer&nbsp;community</span>}
         textline={`Innovation drives growth and speed keeps you ahead of your competition. Syncano has the community
           that unlocks this potential.`}
       >

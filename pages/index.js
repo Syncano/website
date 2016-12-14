@@ -20,7 +20,7 @@ const HomePage = () => {
     <BodyClassName className="homepage">
       <div>
         <PageHelmet
-          title="Build powerful apps in half the time | Syncano"
+          title="The Ultimate Tech Platform for Business Development | Syncano"
           mixpanelTitle="Home"
           description={`A platform for building serverless apps. Increase productivity, focus on new features, and scale
             to millions of users without managing servers. Get started for free!`}
