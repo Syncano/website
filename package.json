@@ -44,7 +44,7 @@
     "eslint": "3.12.1",
     "eslint-config-airbnb": "13.0.0",
     "eslint-plugin-import": "2.2.0",
-    "eslint-plugin-jsx-a11y": "2.2.3",
+    "eslint-plugin-jsx-a11y": "3.0.2",
     "eslint-plugin-react": "6.8.0",
     "extended-define-webpack-plugin": "0.1.2",
     "nightwatch": "0.9.9",
