@@ -1,13 +1,19 @@
 .platforms-bar {
+  padding-top: 38px;
+  padding-bottom: 38px;
   background: #F8F9F9;
 
   a {
     display: block;
   }
 
-  .inner {
-    padding-top: 38px;
-    padding-bottom: 38px;
+  h2 {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .platforms-bar__items {
+    margin-top: 38px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -57,7 +63,11 @@
   }
 
   @include medium {
-    .inner {
+    h2 {
+      font-size: 28px;
+    }
+
+    .platforms-bar__items {
       flex-wrap: nowrap;
     }
 
@@ -67,7 +77,7 @@
     }
 
     &.platforms-bar--mobile {
-      .inner {
+      .platforms-bar__items {
         justify-content: center;
       }
 

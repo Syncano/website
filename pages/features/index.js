@@ -31,7 +31,7 @@ const FeaturesPage = () => {
         headline="Features"
         textline="Rapidly assemble building blocks for your app without a backend or server."
       />
-      <PlatformsBar />
+      <PlatformsBar healine="View our libraries on GitHub" />
       <TextWithImage
         variant="image-right"
         headline="Customize features as Sockets"
