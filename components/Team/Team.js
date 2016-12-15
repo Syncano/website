@@ -33,14 +33,6 @@ export default ({ headline, children }) => {
               title="Chief Platform Architect"
             />
             <TeamMember
-              photoSrc={require('./images/jakub-bilko.jpg')}
-              photo2xSrc={require('./images/jakub-bilko@2x.jpg')}
-              photoMediumSrc={require('./images/jakub-bilko-medium.jpg')}
-              photoMedium2xSrc={require('./images/jakub-bilko-medium@2x.jpg')}
-              name="Jakub Bilko"
-              title="Software Engineer"
-            />
-            <TeamMember
               photoSrc={require('./images/marcin-godlewski.jpg')}
               photo2xSrc={require('./images/marcin-godlewski@2x.jpg')}
               photoMediumSrc={require('./images/marcin-godlewski-medium.jpg')}
@@ -81,14 +73,6 @@ export default ({ headline, children }) => {
               title="CEO Assistant"
             />
             <TeamMember
-              photoSrc={require('./images/sebastian-opalczynski.jpg')}
-              photo2xSrc={require('./images/sebastian-opalczynski@2x.jpg')}
-              photoMediumSrc={require('./images/sebastian-opalczynski-medium.jpg')}
-              photoMedium2xSrc={require('./images/sebastian-opalczynski-medium@2x.jpg')}
-              name="Sebastian Opałczyński"
-              title="Software Engineer"
-            />
-            <TeamMember
               photoSrc={require('./images/wojciech-pasinski.jpg')}
               photo2xSrc={require('./images/wojciech-pasinski@2x.jpg')}
               photoMediumSrc={require('./images/wojciech-pasinski-medium.jpg')}
@@ -113,35 +97,11 @@ export default ({ headline, children }) => {
               title="Developer Evangelist"
             />
             <TeamMember
-              photoSrc={require('./images/todd-wacker.jpg')}
-              photo2xSrc={require('./images/todd-wacker@2x.jpg')}
-              photoMediumSrc={require('./images/todd-wacker-medium.jpg')}
-              photoMedium2xSrc={require('./images/todd-wacker-medium@2x.jpg')}
-              name="Todd Wacker"
-              title="Developer Evangelist"
-            />
-            <TeamMember
               photoSrc={require('./images/adam-wardecki.jpg')}
               photo2xSrc={require('./images/adam-wardecki@2x.jpg')}
               photoMediumSrc={require('./images/adam-wardecki-medium.jpg')}
               photoMedium2xSrc={require('./images/adam-wardecki-medium@2x.jpg')}
               name="Adam Wardecki"
-              title="Software Engineer"
-            />
-            <TeamMember
-              photoSrc={require('./images/hubert-wesolowski.jpg')}
-              photo2xSrc={require('./images/hubert-wesolowski@2x.jpg')}
-              photoMediumSrc={require('./images/hubert-wesolowski-medium.jpg')}
-              photoMedium2xSrc={require('./images/hubert-wesolowski-medium@2x.jpg')}
-              name="Hubert Wesołowski"
-              title="Junior Front End Engineer"
-            />
-            <TeamMember
-              photoSrc={require('./images/mariusz-wisniewski.jpg')}
-              photo2xSrc={require('./images/mariusz-wisniewski@2x.jpg')}
-              photoMediumSrc={require('./images/mariusz-wisniewski-medium.jpg')}
-              photoMedium2xSrc={require('./images/mariusz-wisniewski-medium@2x.jpg')}
-              name="Mariusz Wiśniewski"
               title="Software Engineer"
             />
             <TeamMember
