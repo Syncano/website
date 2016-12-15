@@ -48,8 +48,10 @@ const AboutPage = () => {
       <CounterBoxes />
       <OfficesMap />
       <Team headline="Meet the Syncano team" />
-      <CTASection theme="gray">
-        <h2>Working at Syncano</h2>
+      <CTASection
+        theme="gray"
+        headline="Working at Syncano"
+      >
         <p>Join us and help create a unique serverless platform for developers worldwide.</p>
         <a
           href="https://syncano.workable.com/"
