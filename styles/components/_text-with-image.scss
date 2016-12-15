@@ -104,6 +104,14 @@
       > ul > li:before {
         background: #fff;
       }
+
+      ul li a {
+        color: #fff;
+
+        &:hover {
+          color: rgba(255, 255, 255, .8);
+        }
+      }
     }
   }
 
