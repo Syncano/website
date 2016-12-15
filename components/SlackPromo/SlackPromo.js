@@ -4,10 +4,15 @@ const SlackPromo = () => {
   return (
     <div className="slack-promo">
       <div className="slack-promo__image">
-        <img
-          src={require('./images/slack.svg')}
-          alt="Slack Logo"
-        />
+        <a
+          href="https://www.syncano.io/slack-invite/"
+          target="_blank"
+        >
+          <img
+            src={require('./images/slack.svg')}
+            alt="Slack Logo"
+          />
+        </a>
       </div>
       <div className="slack-promo__content">
         <p>

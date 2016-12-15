@@ -2,12 +2,21 @@
   padding: 25px;
   border: 2px solid $color-main-gray;
   border-radius: 4px;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
 
-  .slack-promo__image img {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    max-width: 180px;
+  .slack-promo__image {
+    a {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100px;
+    }
+
+    img {
+      width: 100%;
+    }
   }
 
   .slack-promo__content {
@@ -24,7 +33,7 @@
     align-items: center;;
 
     .slack-promo__image {
-      flex: 0 0 180px;
+      flex: 0 0 100px;
       margin-right: 25px;
 
       img {
