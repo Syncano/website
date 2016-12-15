@@ -109,6 +109,7 @@ const MobileDevelopersPage = (props, { modals }) => {
       </TextWithImage>
       <TextWithImage
         variant="image-right"
+        theme="gray"
         headline="Learn as you go with our Documentation"
         textline={`Want to know all the details? Good documentation is the key to good app building practices. Here are
           some must-reads for mobile developers:`}

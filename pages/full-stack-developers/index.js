@@ -1,21 +1,19 @@
 import React, { PropTypes } from 'react';
+import { Link } from 'react-router';
 import {
-  CircleIconColumns,
-  ColumnParagraphs,
+  ContentSection,
   CTASection,
-  FeaturesColumns,
   Footer,
   LoggedInContent,
   LoggedOutContent,
   PageHeader,
   PageHelmet,
   PlatformsBar,
-  ScreenDescriptions,
-  TextWithBottomImage,
+  SlackPromo,
   TextWithImage
 } from '../../components';
 
-const FullStackDevelopersPage = (props, { modals }) => {
+const FullStackPage = (props, { modals }) => {
   const { redirect_uri } = APP_CONFIG;
 
   return (
@@ -57,170 +55,112 @@ const FullStackDevelopersPage = (props, { modals }) => {
         healine="View our libraries on GitHub"
         variant="full-stack"
       />
-      <FeaturesColumns headline="Automations to ease your workflow">
-        <FeaturesColumns.Column
-          iconSrc={require('./real-time-communication.svg')}
-          headline="Real-Time Communication"
-          text={`Add real-time functionality to your app with Channels. Users can subscribe to Channels and get
-            notifications of changes to Data Objects. You can grant users the ability to send custom notification
-            messages.`}
-        />
-        <FeaturesColumns.Column
-          iconSrc={require('./schedules.svg')}
-          headline="Schedules"
-          text={`Execute your Scripts at a desired date and time interval. Choose from CronTabs and seconds as
-            scheduling options. We support time zones so you can launch Scripts in around the globe.`}
-        />
-        <FeaturesColumns.Column
-          iconSrc={require('./triggers.svg')}
-          headline="Triggers"
-          text={`Execute a Server-Side Script when a Data Object inside a selected Class is created, updated, or
-            deleted. Each Trigger is customizable to fit your app’s needs.`}
-        />
-        <FeaturesColumns.Column
-          iconSrc={require('./push-notifications.svg')}
-          headline="Push Notifications"
-          text={`Instantly message your iOS or Android users with timely and relevant content. Use our Dashboard to
-            configure and send push notifications with ease.`}
-        />
-      </FeaturesColumns>
       <TextWithImage
-        variant="image-right"
-        headline="Customize features as Sockets"
-        textline={`Sockets are the layer stacked between Syncano’s core and your application. Easily configure, combine,
-          and create Sockets for your app. Instantly add new functionality to your applications exactly the way you
-          want.`}
+        headline="Backend Services for Full Stack Developers"
+        textline={<span>Whether you are developing a full-scale web app, or building your own API to be used across
+          multiple applications, Syncano provides you with the tools you need to build and launch these applications in
+          half the time.<br /><br />We support many of the most popular web programming languages. Our Libraries and
+          SDKs make integration into your current front-end code fast and easy, and allow you to have full control over
+          your data.</span>}
         image={
           <img
-            src={require('./customize-individual-features-as-sockets.svg')}
-            alt="Customize individual features as Sockets"
+            src={require('./backend-services-for-full-stack-developers.svg')}
+            alt="Backend Services for Full Stack Developers"
           />
         }
       />
-      <TextWithBottomImage
-        variant="no-bottom-padding minus-bottom-margin"
-        theme="purple"
-        headline="Collaborate better with our Dashboard"
-        textline={`Visualize your data in our Dashboard to have a complete overview of your applications. Edit and test
-          your scripts, manage users, collaborate with multiple admins, and more - all from one place.`}
+      <TextWithImage
+        variant="image-right"
+        theme="gray"
+        headline="Library Quick Starts"
+        textline={`Everything in the Syncano platform is available via a REST API endpoint, but to make development in
+          client-side code even easier we have created libraries and SDKs. With these libraries, you can quickly
+          integrate user management, data management, Syncano-side Script endpoints, and so much more!`}
         image={
-          <picture>
-            <source
-              media="(min-width: 321px)"
-              srcSet={`${require('./collaborate-better-with-our-dashboard-small.png')} 1x, ${require('./collaborate-better-with-our-dashboard-small@2x.png')} 2x`}
-            />
-            <source
-              srcSet={`${require('./collaborate-better-with-our-dashboard.png')} 1x, ${require('./collaborate-better-with-our-dashboard@2x.png')} 2x`}
-            />
-            <img
-              className="browser-image"
-              src={require('./collaborate-better-with-our-dashboard-small@2x.png')}
-              alt="Collaborate better with our Dashboard"
-            />
-          </picture>
+          <img
+            src={require('./library-quick-starts.svg')}
+            alt="Library Quick Starts"
+          />
         }
-      />
-      <ScreenDescriptions headline="Enhanced data management">
-        <ScreenDescriptions.Screen
-          imageSrc={require('./define-your-classes.png')}
-          image2xSrc={require('./define-your-classes@2x.png')}
-          imageSmallSrc={require('./define-your-classes-small.png')}
-          imageSmall2xSrc={require('./define-your-classes-small@2x.png')}
-          headline="Define your Classes"
-          text={`Control how you define the structure for each of your Data Objects. Every Data Object you create will
-            inherit the properties of its own customized Class.`}
-        />
-        <ScreenDescriptions.Screen
-          variant="image-right"
-          imageSrc={require('./customize-class-schemas.png')}
-          image2xSrc={require('./customize-class-schemas@2x.png')}
-          imageSmallSrc={require('./customize-class-schemas-small.png')}
-          imageSmall2xSrc={require('./customize-class-schemas-small@2x.png')}
-          headline="Customize Class schemas"
-          text={`Create fields with specific types to get a flexible architecture. Our pre-set custom fields include
-            string, text, integer, float, Boolean, datetime, file, object, array, and reference.`}
-        />
-        <ScreenDescriptions.Screen
-          imageSrc={require('./create-data-objects.png')}
-          image2xSrc={require('./create-data-objects@2x.png')}
-          imageSmallSrc={require('./create-data-objects-small.png')}
-          imageSmall2xSrc={require('./create-data-objects-small@2x.png')}
-          headline="Create Data Objects"
-          text={`Store your data as JSON objects that contain key-value pairs that you define. Control what your users
-            have access to. Define your own data views on the backend instead of updating every client-side
-            application.`}
-        />
-        <ScreenDescriptions.Screen
-          variant="image-right"
-          imageSrc={require('./query-away.png')}
-          image2xSrc={require('./query-away@2x.png')}
-          imageSmallSrc={require('./query-away-small.png')}
-          imageSmall2xSrc={require('./query-away-small@2x.png')}
-          headline="Query away!"
-          text={`Query your data based on built-in or customized fields for each of your objects. Get back the data you
-            need with advanced filtering and ordering.`}
-        />
-      </ScreenDescriptions>
-      <ColumnParagraphs
-        headline="Server-Side code"
-        imageSrc={require('./server-side-code.png')}
-        image2xSrc={require('./server-side-code@2x.png')}
-        imageSmallSrc={require('./server-side-code-small.png')}
-        imageSmall2xSrc={require('./server-side-code-small@2x.png')}
       >
-        <ColumnParagraphs.Paragraph
-          iconSrc={require('./scripts.svg')}
-          headline="Scripts"
-          text={`Scripts are snippets of code that allow you to run complex code on Syncano’s servers. We support a wide
-            range of environments including Node.js, Python, Swift, Go, PHP, and Ruby.`}
-        />
-        <ColumnParagraphs.Paragraph
-          iconSrc={require('./script-endpoint.svg')}
-          headline="Script Endpoint"
-          text={`Make Scripts public or private, it’s up to you. Send POST or GET requests to your Script and open up
-            the possibility of how and where to run it.`}
-        />
-        <ColumnParagraphs.Paragraph
-          iconSrc={require('./environmental-variables.svg')}
-          headline="Environmental Variables"
-          text={`Each Snippet can be set to use environmental variables stored in your configuration settings. You can
-            store API keys and frequently used variables in a more permanent way.`}
-        />
-        <ColumnParagraphs.Paragraph
-          iconSrc={require('./integrations.svg')}
-          headline="Integrations"
-          text={`Connect your app with our constantly growing list of integrations. We’ll help you stay up-to-date with
-            new add-ons, keeping your application ahead of the crowd.`}
-        />
-      </ColumnParagraphs>
-      <CircleIconColumns headline="Simple user authentication">
-        <CircleIconColumns.Column
-          iconSrc={require('./add-users.svg')}
-          headline="Add Users"
-          text={`Allow users to register and sign into your app instantly and securely. Customize them with User
-            Profiles - add avatars, files, and relevant information.`}
-        />
-        <CircleIconColumns.Column
-          iconSrc={require('./group-users.svg')}
-          headline="Group Users"
-          text={`Construct different levels of permissions to data stored on Syncano. With groups, you can better manage
-            user access controls.`}
-        />
-        <CircleIconColumns.Column
-          iconSrc={require('./social-authentication.svg')}
-          headline="Social Authentication"
-          text={`Allow your users to sign up with Facebook, Google, Twitter, and Linkedin. We’ll automatically create
-            their account in Syncano in the same format as with the traditional login.`}
-        />
-      </CircleIconColumns>
+        <div className="text-with-image__text__list">
+          <ul>
+            <li><a href="http://docs.syncano.io/docs/javascript/" target="_blank">JavaScript Library Quick Start Guide</a></li>
+            <li><a href="http://docs.syncano.io/docs/python/" target="_blank">Python Library Quick Start Guide</a></li>
+            <li><a href="http://docs.syncano.io/docs/ng-syncano/" target="_blank">AngularJS Library Quick Start Guide</a></li>
+            <li><a href="http://docs.syncano.io/docs/ember-syncano/" target="_blank">EmberJS Library Quick Start Guide</a></li>
+            <li><a href="http://docs.syncano.io/docs/ruby/" target="_blank">Ruby Library Quick Start Guide</a></li>
+          </ul>
+        </div>
+      </TextWithImage>
+      <TextWithImage
+        theme="cyan"
+        headline="Improve Your Skills with Tutorials"
+        textline={`Syncano is great for building amazing and complex applications that no one else has made before. But
+          in order to learn the system, you might want to start by looking at how efficiently you can build something
+          when the concept is already made:`}
+        image={
+          <img
+            src={require('./improve-your-skills-with-tutorials.svg')}
+            alt="Improve Your Skills with Tutorials"
+          />
+        }
+      >
+        <div className="text-with-image__text__list">
+          <ul>
+            <li><a href="https://www.syncano.io/blog/build-a-hacker-news-clone-with-syncano/" target="_blank">How to Build a Hacker News Clone</a></li>
+            <li><a href="https://www.syncano.io/blog/build-pokemon-radar-app/" target="_blank">Build a Pokémon Radar App in React with Syncano</a></li>
+            <li><a href="https://www.syncano.io/blog/build-a-multiplatform-quiz-game-with-unity-3d-and-syncano/" target="_blank">Build a Multiplatform Quiz Game with Unity 3D and Syncano</a></li>
+          </ul>
+        </div>
+      </TextWithImage>
+      <TextWithImage
+        variant="image-right"
+        theme="gray"
+        headline="Learn as you go with our Documentation"
+        textline={`There are endless possibilities with the Syncano platform, but with our documentation you can get
+          started quickly. Here are some essential reads for full-stack developers:`}
+        image={
+          <img
+            src={require('./learn-as-you-go-with-our-documentation.svg')}
+            alt="Learn as you go with our Documentation"
+          />
+        }
+      >
+        <div className="text-with-image__text__list">
+          <ul>
+            <li><a href="http://docs.syncano.io/docs/android-push-notifications-app/" target="_blank">Jump right in with our quick start guide</a></li>
+            <li><a href="http://docs.syncano.io/docs/ios-push-notifications-app/" target="_blank">Run your servers-side code as endpoints on Syncano with Scripts</a></li>
+            <li><a href="http://docs.syncano.io/docs/ios-push-notifications-app/" target="_blank">Manage data your way with Data Endpoints</a></li>
+          </ul>
+        </div>
+      </TextWithImage>
+      <ContentSection
+        align="center"
+        headline="Help and Support"
+      >
+        <p>
+          Make sure you see the <a href="http://docs.syncano.io/docs/faq/" target="_blank">FAQ</a> to get answers to
+          your questions. And keep an eye out for our latest articles on
+          the <a href="https://www.syncano.io/blog/" target="_blank">blog</a> - we strive to deliver the best content
+          for mobile developers.
+        </p>
+        <Link
+          to="/help/"
+          className="button"
+        >
+          Visit our Help Page
+        </Link>
+        <SlackPromo />
+      </ContentSection>
       <CTASection headline="Rethink how you build apps" />
       <Footer />
     </div>
   );
 };
 
-FullStackDevelopersPage.contextTypes = {
+FullStackPage.contextTypes = {
   modals: PropTypes.object
 };
 
-export default FullStackDevelopersPage;
+export default FullStackPage;
