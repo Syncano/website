@@ -129,9 +129,9 @@ const FullStackPage = (props, { modals }) => {
       >
         <div className="text-with-image__text__list">
           <ul>
-            <li><a href="http://docs.syncano.io/docs/android-push-notifications-app/" target="_blank">Jump right in with our quick start guide</a></li>
-            <li><a href="http://docs.syncano.io/docs/ios-push-notifications-app/" target="_blank">Run your servers-side code as endpoints on Syncano with Scripts</a></li>
-            <li><a href="http://docs.syncano.io/docs/ios-push-notifications-app/" target="_blank">Manage data your way with Data Endpoints</a></li>
+            <li><a href="http://docs.syncano.io/docs/quick-start-tutorial/" target="_blank">Jump right in with our quick start guide</a></li>
+            <li><a href="http://docs.syncano.io/docs/snippets-scripts/" target="_blank">Run your servers-side code as endpoints on Syncano with Scripts</a></li>
+            <li><a href="http://docs.syncano.io/docs/endpoints-data/" target="_blank">Manage data your way with Data Endpoints</a></li>
           </ul>
         </div>
       </TextWithImage>
