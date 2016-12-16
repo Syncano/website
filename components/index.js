@@ -13,6 +13,7 @@ import ColumnParagraphs from './ColumnParagraphs';
 import CommunityExamples from './CommunityExamples';
 import ContactForm from './ContactForm';
 import ContactFormSection from './ContactFormSection';
+import ContentSection from './ContentSection';
 import CounterBoxes from './CounterBoxes';
 import CTASection from './CTASection';
 import CustomerSection from './CustomerSection';
@@ -40,6 +41,7 @@ import Pricing from './Pricing';
 import ScreenDescriptions from './ScreenDescriptions';
 import SideIconParagraphs from './SideIconParagraphs';
 import SlackMessage from './SlackMessage';
+import SlackPromo from './SlackPromo';
 import SlackSlider from './SlackSlider';
 import SliderWrapper from './SliderWrapper';
 import SocialProfiles from './SocialProfiles';
@@ -75,6 +77,7 @@ export default {
   CommunityExamples,
   ContactForm,
   ContactFormSection,
+  ContentSection,
   CounterBoxes,
   CTASection,
   CustomerSection,
@@ -107,6 +110,7 @@ export default {
   ScreenDescriptions,
   SideIconParagraphs,
   SlackMessage,
+  SlackPromo,
   SlackSlider,
   SliderWrapper,
   SocialProfiles,
