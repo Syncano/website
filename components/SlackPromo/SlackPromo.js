@@ -17,8 +17,7 @@ const SlackPromo = () => {
       <div className="slack-promo__content">
         <p>
           Do you want to contribute to make the Syncano experience even better for other mobile
-          developers? <a href="https://www.syncano.io/slack-invite/" target="_blank">Joins us on Slack</a>, we have a
-          dedicated channel only for mobile!
+          developers? <a href="https://www.syncano.io/slack-invite/" target="_blank">Joins us on Slack!</a>
         </p>
       </div>
     </div>
