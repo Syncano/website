@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   CounterBoxes,
-  CTASection,
   Footer,
   CommunityExamples,
   PageHeader,
@@ -73,21 +72,24 @@ const CommunityPage = () => {
           leftImgAlt="Syncano"
           rightImgSrc={require('./thinking.svg')}
           ightImgAlt="thinking"
+          text={
+            <div>
+              <div>
+                Innovation drives growth and speed keeps you ahead of your competition. Syncano has the community that
+                unlocks this potential. Do you want to learn how Syncano can connect your business to the developer
+                community?
+              </div>
+              <a
+                className="button button--large button--featured"
+                href="https://pipedrivewebforms.com/form/c9950aad5f4c79f9ca4b6dc0cffe15c31317049"
+                target="_blank"
+              >
+                Get in touch with us!
+              </a>
+            </div>
+          }
         />
       </CommunityExamples>
-      <CTASection
-        headline={<span>Learn how Syncano can connect your business to the&nbsp;developer&nbsp;community</span>}
-        textline={`Innovation drives growth and speed keeps you ahead of your competition. Syncano has the community
-          that unlocks this potential.`}
-      >
-        <a
-          className="button button--large button--featured"
-          href="https://pipedrivewebforms.com/form/c9950aad5f4c79f9ca4b6dc0cffe15c31317049"
-          target="_blank"
-        >
-          Get in touch with us!
-        </a>
-      </CTASection>
       <TextWithImage
         variant="image-right"
         theme="purple"
