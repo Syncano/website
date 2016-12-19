@@ -34,6 +34,7 @@ import OfficeAddresses from './OfficeAddresses';
 import OfficesMap from './OfficesMap';
 import PageHeader from './PageHeader';
 import PageHelmet from './PageHelmet';
+import ParagraphsWithIconList from './ParagraphsWithIconList';
 import Platforms from './Platforms';
 import PlatformsBar from './PlatformsBar';
 import PlatformsSection from './PlatformsSection';
@@ -103,6 +104,7 @@ export default {
   OfficesMap,
   PageHeader,
   PageHelmet,
+  ParagraphsWithIconList,
   Platforms,
   PlatformsBar,
   PlatformsSection,
