@@ -4,6 +4,17 @@
   padding-bottom: 80px;
   background: #fff;
 
+  .page-header__icon,
+  .page-header__status {
+    margin-bottom: 30px;
+  }
+
+  .page-header__icon img {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100px;
+  }
+
   .page-header__status {
     margin-left: auto;
     margin-right: auto;
@@ -82,6 +93,14 @@
   @include medium {
     padding-top: 170px;
     padding-bottom: 110px;
+
+    .page-header__icon {
+      margin-bottom: 50px;
+
+      img {
+        max-width: none;
+      }
+    }
 
     h1 {
       font-size: 35px;
