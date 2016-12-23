@@ -89,6 +89,10 @@ canvas {
   display: block;
 }
 
+table {
+  width: 100%;
+}
+
 // react-prism
 pre[class*=language-] {
   -webkit-overflow-scrolling: touch;

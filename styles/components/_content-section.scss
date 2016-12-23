@@ -35,6 +35,15 @@
     text-align: center;
   }
 
+  &.content-section--gray {
+    background: $color-main-gray;
+
+    .table th,
+    .table td {
+      border-color: #fff;
+    }
+  }
+
   @include medium {
     h2 {
       font-size: 30px;
@@ -51,6 +60,10 @@
 
     h2 {
       font-size: 40px;
+    }
+
+    .content-section__content {
+      margin-top: 40px;
     }
   }
 

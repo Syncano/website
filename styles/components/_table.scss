@@ -1,0 +1,40 @@
+.table {
+  table {
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    text-align: left;
+    border: 2px solid $color-main-gray;
+    padding: 8px;
+
+    &.txt-center {
+      text-align: center;
+    }
+
+    .check img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @include medium {
+    table {
+      font-size: 16px;
+    }
+
+    th,
+    td {
+      padding: 12px;
+    }
+  }
+
+  @include large {
+    th,
+    td {
+      padding: 16px;
+    }
+  }
+}
