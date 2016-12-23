@@ -15,9 +15,7 @@ export default ({ variant, imageSrc, image2xSrc, imageSmallSrc, imageSmall2xSrc,
             media="(min-width: 321px)"
             srcSet={`${imageSmallSrc} 1x, ${imageSmall2xSrc} 2x`}
           />
-          <source
-            srcSet={`${imageSrc} 1x, ${image2xSrc} 2x`}
-          />
+          <source srcSet={`${imageSrc} 1x, ${image2xSrc} 2x`} />
           <img
             className="browser-image"
             src={imageSmall2xSrc}

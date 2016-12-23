@@ -9,11 +9,12 @@ import {
   LabelWithIconColumnHeader,
   PageHeader,
   PageHelmet,
+  ParagraphDivider,
   Table,
   TextWithBottomImage
 } from '../../components';
 
-const SyncanoVsFirebasePage = (props, { modals }) => {
+const SyncanoVsFirebasePage = (props) => {
   const { redirect_uri } = APP_CONFIG;
 
   return (
@@ -41,10 +42,15 @@ const SyncanoVsFirebasePage = (props, { modals }) => {
           or Google Cloud Platform.`}
         image={
           <picture>
+            <source
+              media="(min-width: 321px)"
+              srcSet={`${require('./syncano-offers-server-side-code-no-outsourcing-required-small.png')} 1x, ${require('./syncano-offers-server-side-code-no-outsourcing-required-small@2x.png')} 2x`}
+            />
+            <source srcSet={`${require('./syncano-offers-server-side-code-no-outsourcing-required.png')} 1x, ${require('./syncano-offers-server-side-code-no-outsourcing-required@2x.png')} 2x`} />
             <img
               className="browser-image"
-              src={require('./syncano-offers-server-side-code-no-outsourcing-required@2x.png')}
-              alt="Syncano offers server-side code. No outsourcing required."
+              src={require('./syncano-offers-server-side-code-no-outsourcing-required-small@2x.png')}
+              alt="Collaborate better with our Dashboard"
             />
           </picture>
         }
@@ -72,9 +78,14 @@ const SyncanoVsFirebasePage = (props, { modals }) => {
           traditional databases. Get going fast without needing documentation.`}
         image={
           <picture>
+            <source
+              media="(min-width: 321px)"
+              srcSet={`${require('./data-management-with-syncano-is-easier-small.png')} 1x, ${require('./data-management-with-syncano-is-easier-small@2x.png')} 2x`}
+            />
+            <source srcSet={`${require('./data-management-with-syncano-is-easier.png')} 1x, ${require('./data-management-with-syncano-is-easier@2x.png')} 2x`} />
             <img
               className="browser-image"
-              src={require('./data-management-with-syncano-is-easier@2x.png')}
+              src={require('./data-management-with-syncano-is-easier-small@2x.png')}
               alt="Data Management with Syncano is easier"
             />
           </picture>
@@ -184,12 +195,10 @@ const SyncanoVsFirebasePage = (props, { modals }) => {
         <p>
           In addition to sharing resources and code, Syncano
           has <a href="http://docs.syncano.io/docs/syncano-libraries/" target="_blank">open-sourced all libraries</a> and
-          the <a href="http://docs.syncano.io/docs/syncano-libraries/" target="_blank">Dashboard</a>. This makes it
+          the <a href="https://www.syncano.io/blog/open-source-dashboard/" target="_blank">Dashboard</a>. This makes it
           easier to have your ideas heard, and to give back to the community.
         </p>
-        <p className="txt-center">
-          ***
-        </p>
+        <ParagraphDivider />
         <p>
           You now know the difference between Syncano and Firebase! Hopefully this short guide was useful and gives you
           a general overview of how Syncano compares to Firebase.
@@ -212,10 +221,6 @@ const SyncanoVsFirebasePage = (props, { modals }) => {
       <Footer />
     </div>
   );
-};
-
-SyncanoVsFirebasePage.contextTypes = {
-  modals: PropTypes.object
 };
 
 export default SyncanoVsFirebasePage;
