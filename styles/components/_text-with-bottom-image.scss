@@ -30,6 +30,10 @@
     margin-top: 50px;
   }
 
+  picture img {
+    max-width: 100%;
+  }
+
   &.text-with-bottom-image--no-bottom-padding {
     padding-bottom: 0 !important;
     overflow: hidden;
