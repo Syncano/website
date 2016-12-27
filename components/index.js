@@ -6,6 +6,7 @@ import Analytics from './Analytics';
 import ArchitecturePresentationSection from './ArchitecturePresentationSection';
 import AuthHOC from './AuthHOC';
 import BlockquoteSection from './BlockquoteSection';
+import BrowserWindow from './BrowserWindow';
 import CardTestimonials from './CardTestimonials';
 import Check from './Check';
 import CircleIconColumns from './CircleIconColumns';
@@ -75,6 +76,7 @@ export default {
   ArchitecturePresentationSection,
   AuthHOC,
   BlockquoteSection,
+  BrowserWindow,
   CardTestimonials,
   Check,
   CircleIconColumns,

@@ -1,0 +1,43 @@
+.browser-window {
+  border-radius: 4px;
+  box-shadow: 0 5px 30px rgba(34, 131, 172, .4);
+  overflow: hidden;
+
+  picture,
+  img {
+    margin-top: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .browser-window__top {
+    background: #B8C0C9;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    padding-left: 11px;
+  }
+
+  .browser-window__top__button {
+    width: 6px;
+    height: 6px;
+    background: rgba(0, 0, 0, .5);
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+
+  @include medium {
+    border-radius: 8px;
+
+    &.browser-window--large {
+      .browser-window__top__button {
+        width: 8px;
+        height: 8px;
+      }
+
+      .browser-window__top {
+        height: 30px;
+        padding-left: 15px;
+      }
+    }
+  }
+}

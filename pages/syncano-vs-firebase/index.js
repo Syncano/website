@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import {
+  BrowserWindow,
   CardTestimonials,
   Check,
   ContentSection,
@@ -41,18 +42,19 @@ const SyncanoVsFirebasePage = (props) => {
           enabling you keep your resources in one place. Firebase would prefer that you outsource those resources to AWS
           or Google Cloud Platform.`}
         image={
-          <picture>
-            <source
-              media="(min-width: 321px)"
-              srcSet={`${require('./syncano-offers-server-side-code-no-outsourcing-required-small.png')} 1x, ${require('./syncano-offers-server-side-code-no-outsourcing-required-small@2x.png')} 2x`}
-            />
-            <source srcSet={`${require('./syncano-offers-server-side-code-no-outsourcing-required.png')} 1x, ${require('./syncano-offers-server-side-code-no-outsourcing-required@2x.png')} 2x`} />
-            <img
-              className="browser-image"
-              src={require('./syncano-offers-server-side-code-no-outsourcing-required-small@2x.png')}
-              alt="Collaborate better with our Dashboard"
-            />
-          </picture>
+          <BrowserWindow variant="large">
+            <picture>
+              <source
+                media="(min-width: 321px)"
+                srcSet={`${require('./syncano-offers-server-side-code-no-outsourcing-required-small.png')} 1x, ${require('./syncano-offers-server-side-code-no-outsourcing-required-small@2x.png')} 2x`}
+              />
+              <source srcSet={`${require('./syncano-offers-server-side-code-no-outsourcing-required.png')} 1x, ${require('./syncano-offers-server-side-code-no-outsourcing-required@2x.png')} 2x`} />
+              <img
+                src={require('./syncano-offers-server-side-code-no-outsourcing-required-small@2x.png')}
+                alt="Collaborate better with our Dashboard"
+              />
+            </picture>
+          </BrowserWindow>
         }
       />
       <TextWithBottomImage
@@ -61,13 +63,19 @@ const SyncanoVsFirebasePage = (props) => {
           set by you. In addition, you can create custom functions that are triggered based on changes in your data such
           as <em>create</em>, <em>update</em>, or <em>delete</em>!</span>}
         image={
-          <picture>
-            <img
-              className="browser-image"
-              src={require('./with-syncano-you-can-schedule-or-trigger-tasks.png')}
-              alt="With Syncano you can schedule or trigger tasks"
-            />
-          </picture>
+          <BrowserWindow variant="large">
+            <picture>
+              <source
+                media="(min-width: 321px)"
+                srcSet={`${require('./with-syncano-you-can-schedule-or-trigger-tasks-small.png')} 1x, ${require('./with-syncano-you-can-schedule-or-trigger-tasks-small@2x.png')} 2x`}
+              />
+              <source srcSet={`${require('./with-syncano-you-can-schedule-or-trigger-tasks.png')} 1x, ${require('./with-syncano-you-can-schedule-or-trigger-tasks@2x.png')} 2x`} />
+              <img
+                src={require('./with-syncano-you-can-schedule-or-trigger-tasks-small@2x.png')}
+                alt="With Syncano you can schedule or trigger tasks"
+              />
+            </picture>
+          </BrowserWindow>
         }
       />
       <TextWithBottomImage
@@ -77,18 +85,19 @@ const SyncanoVsFirebasePage = (props) => {
           your productivity. With Syncano, the database consists of typed fields and data rows, similar to most other
           traditional databases. Get going fast without needing documentation.`}
         image={
-          <picture>
-            <source
-              media="(min-width: 321px)"
-              srcSet={`${require('./data-management-with-syncano-is-easier-small.png')} 1x, ${require('./data-management-with-syncano-is-easier-small@2x.png')} 2x`}
-            />
-            <source srcSet={`${require('./data-management-with-syncano-is-easier.png')} 1x, ${require('./data-management-with-syncano-is-easier@2x.png')} 2x`} />
-            <img
-              className="browser-image"
-              src={require('./data-management-with-syncano-is-easier-small@2x.png')}
-              alt="Data Management with Syncano is easier"
-            />
-          </picture>
+          <BrowserWindow variant="large">
+            <picture>
+              <source
+                media="(min-width: 321px)"
+                srcSet={`${require('./data-management-with-syncano-is-easier-small.png')} 1x, ${require('./data-management-with-syncano-is-easier-small@2x.png')} 2x`}
+              />
+              <source srcSet={`${require('./data-management-with-syncano-is-easier.png')} 1x, ${require('./data-management-with-syncano-is-easier@2x.png')} 2x`} />
+              <img
+                src={require('./data-management-with-syncano-is-easier-small@2x.png')}
+                alt="Data Management with Syncano is easier"
+              />
+            </picture>
+          </BrowserWindow>
         }
       />
       <TextWithBottomImage
@@ -97,13 +106,19 @@ const SyncanoVsFirebasePage = (props) => {
           searchable. Unlike Firebase, Syncano gives you precision without building any of the sorting algorithms
           yourself.`}
         image={
-          <picture>
-            <img
-              className="browser-image"
-              src={require('./syncano-has-better-data-query-functionalities.png')}
-              alt="Syncano has better data query functionalities"
-            />
-          </picture>
+          <BrowserWindow variant="large">
+            <picture>
+              <source
+                media="(min-width: 321px)"
+                srcSet={`${require('./syncano-has-better-data-query-functionalities-small.png')} 1x, ${require('./syncano-has-better-data-query-functionalities-small@2x.png')} 2x`}
+              />
+              <source srcSet={`${require('./syncano-has-better-data-query-functionalities.png')} 1x, ${require('./syncano-has-better-data-query-functionalities@2x.png')} 2x`} />
+              <img
+                src={require('./syncano-has-better-data-query-functionalities-small@2x.png')}
+                alt="Syncano has better data query functionalities"
+              />
+            </picture>
+          </BrowserWindow>
         }
       />
       <CardTestimonials>
@@ -181,6 +196,7 @@ const SyncanoVsFirebasePage = (props) => {
         </Table>
       </ContentSection>
       <ContentSection
+        variant="narrow"
         theme="gray"
         headline="One last thing you should know about Syncano"
       >

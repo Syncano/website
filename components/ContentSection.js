@@ -1,9 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
 
-const ContentSection = ({ theme, align, headline, children }) => {
+const ContentSection = ({ variant, align, theme, headline, children }) => {
   const className = classNames({
     'content-section': true,
+    'content-section--narrow': (variant === 'narrow'),
     'content-section--center': (align === 'center'),
     'content-section--gray': (theme === 'gray'),
   });
