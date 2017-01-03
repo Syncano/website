@@ -23,11 +23,16 @@
   }
 
   picture,
-  img {
+  img,
+  .browser-window {
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
+  }
+
+  picture img {
+    max-width: 100%;
   }
 
   &.text-with-bottom-image--no-bottom-padding {
@@ -68,7 +73,8 @@
     }
 
     picture,
-    img {
+    img,
+    .browser-window {
       margin-top: 80px;
     }
 
@@ -90,7 +96,8 @@
     }
 
     picture,
-    img {
+    img,
+    .browser-window {
       max-width: 100%;
     }
 

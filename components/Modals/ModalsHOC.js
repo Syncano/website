@@ -4,8 +4,8 @@ import { MODALS } from './Modals';
 
 export default (ComposedComponent) => (
   class ModalsHOC extends Component {
-    constructor(props) {
-      super(props);
+    constructor() {
+      super();
 
       this.state = this.getInitialModalsState();
     };

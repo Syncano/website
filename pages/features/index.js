@@ -57,9 +57,7 @@ const FeaturesPage = () => {
               media="(min-width: 321px)"
               srcSet={`${require('./collaborate-better-with-our-dashboard-small.png')} 1x, ${require('./collaborate-better-with-our-dashboard-small@2x.png')} 2x`}
             />
-            <source
-              srcSet={`${require('./collaborate-better-with-our-dashboard.png')} 1x, ${require('./collaborate-better-with-our-dashboard@2x.png')} 2x`}
-            />
+            <source srcSet={`${require('./collaborate-better-with-our-dashboard.png')} 1x, ${require('./collaborate-better-with-our-dashboard@2x.png')} 2x`} />
             <img
               className="browser-image"
               src={require('./collaborate-better-with-our-dashboard-small@2x.png')}

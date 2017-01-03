@@ -6,7 +6,9 @@ import Analytics from './Analytics';
 import ArchitecturePresentationSection from './ArchitecturePresentationSection';
 import AuthHOC from './AuthHOC';
 import BlockquoteSection from './BlockquoteSection';
+import BrowserWindow from './BrowserWindow';
 import CardTestimonials from './CardTestimonials';
+import Check from './Check';
 import CircleIconColumns from './CircleIconColumns';
 import CodePreview from './CodePreview';
 import ColumnParagraphs from './ColumnParagraphs';
@@ -24,6 +26,7 @@ import FormInputElement from './FormInputElement';
 import HamburgerMenu from './HamburgerMenu';
 import Hero from './Hero';
 import HideOnLandingPage from './HideOnLandingPage';
+import LabelWithIconColumnHeader from './LabelWithIconColumnHeader';
 import LandingPageFooter from './LandingPageFooter';
 import LandingPageHero from './LandingPageHero';
 import LargeBlockquote from './LargeBlockquote';
@@ -34,6 +37,7 @@ import OfficeAddresses from './OfficeAddresses';
 import OfficesMap from './OfficesMap';
 import PageHeader from './PageHeader';
 import PageHelmet from './PageHelmet';
+import ParagraphDivider from './ParagraphDivider';
 import ParagraphsWithIconList from './ParagraphsWithIconList';
 import Platforms from './Platforms';
 import PlatformsBar from './PlatformsBar';
@@ -50,6 +54,7 @@ import StatusImage from './StatusImage';
 import StatusInfo from './StatusInfo';
 import StatusPageHeader from './StatusPageHeader';
 import SyncanoStatusBar from './SyncanoStatusBar';
+import Table from './Table';
 import Team from './Team';
 import Terminal from './Terminal';
 import TerminalSection from './TerminalSection';
@@ -71,7 +76,9 @@ export default {
   ArchitecturePresentationSection,
   AuthHOC,
   BlockquoteSection,
+  BrowserWindow,
   CardTestimonials,
+  Check,
   CircleIconColumns,
   CodePreview,
   ColumnParagraphs,
@@ -89,6 +96,7 @@ export default {
   HamburgerMenu,
   Hero,
   HideOnLandingPage,
+  LabelWithIconColumnHeader,
   LandingPageFooter,
   LandingPageHero,
   LargeBlockquote,
@@ -104,6 +112,7 @@ export default {
   OfficesMap,
   PageHeader,
   PageHelmet,
+  ParagraphDivider,
   ParagraphsWithIconList,
   Platforms,
   PlatformsBar,
@@ -120,6 +129,7 @@ export default {
   StatusInfo,
   StatusPageHeader,
   SyncanoStatusBar,
+  Table,
   Team,
   Terminal,
   TerminalSection,
