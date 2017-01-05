@@ -19,7 +19,7 @@ exports.modifyWebpackConfig = function(config, env) {
 
   config.removeLoader('images');
   config.loader('images', function(cfg) {
-    cfg.test = /\.(jpg|jpeg|png|gif|svg|)(\?.*)?$/i;
+    cfg.test = /\.(jpg|jpeg|png|gif|svg)(\?.*)?$/i;
     cfg.loader = fileLoader;
     return cfg;
   });
