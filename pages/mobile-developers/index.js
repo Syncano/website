@@ -23,8 +23,8 @@ const MobileDevelopersPage = (props, { modals }) => {
         mixpanelTitle="Mobile Developers"
         description={`Increase your productivity and focus on user experience. Build powerful backends for your apps in
           half the time and scale without managing servers.`}
-        ogImageSrc={`${redirect_uri}${require('./og-image.png')}`}
-        twitterImageSrc={`${redirect_uri}${require('./twitter-image.png')}`}
+        ogImageSrc={`${redirect_uri}${require('file-loader!./og-image.png')}`}
+        twitterImageSrc={`${redirect_uri}${require('file-loader!./twitter-image.png')}`}
       />
       <PageHeader
         headline="Syncano for Mobile Developers"
