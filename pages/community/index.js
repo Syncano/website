@@ -19,8 +19,8 @@ const CommunityPage = () => {
         mixpanelTitle="Community"
         description={`One person with an idea needs iteration to reach perfection. With a community, you have many
           brains to make that process incredibly fast.`}
-        ogImageSrc={`${redirect_uri}${require('./og-image.png')}`}
-        twitterImageSrc={`${redirect_uri}${require('./twitter-image.png')}`}
+        ogImageSrc={`${redirect_uri}${require('file-loader!./og-image.png')}`}
+        twitterImageSrc={`${redirect_uri}${require('file-loader!./twitter-image.png')}`}
       />
       <PageHeader
         headline="Communities fuel growth"

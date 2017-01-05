@@ -23,8 +23,8 @@ const FullStackPage = (props, { modals }) => {
         mixpanelTitle="Full-Stack Developers"
         description={`Build your backend in minutes and save yourself the gray hairs. Leave server management to us!
           Learn more...`}
-        ogImageSrc={`${redirect_uri}${require('./og-image.png')}`}
-        twitterImageSrc={`${redirect_uri}${require('./twitter-image.png')}`}
+        ogImageSrc={`${redirect_uri}${require('file-loader!./og-image.png')}`}
+        twitterImageSrc={`${redirect_uri}${require('file-loader!./twitter-image.png')}`}
       />
       <PageHeader
         headline="Syncano for Full-Stack Developers"
