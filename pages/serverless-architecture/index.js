@@ -11,8 +11,8 @@ const ServerlessArchitecturePage = () => {
         mixpanelTitle="Serverless Architecture"
         description={`Take a look at this 3D interactive presentation that explains our platform architecture. Click to
           explore!`}
-        ogImageSrc={`${redirect_uri}${require('file-loader!./og-image.png')}`}
-        twitterImageSrc={`${redirect_uri}${require('file-loader!./twitter-image.png')}`}
+        ogImageSrc={`${redirect_uri}${require('./og-image.png')}`}
+        twitterImageSrc={`${redirect_uri}${require('./twitter-image.png')}`}
       />
       <PageHeader
         headline="Syncano Serverless Architecture"

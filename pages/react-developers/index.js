@@ -22,8 +22,8 @@ const FullStackPage = (props, { modals }) => {
         mixpanelTitle="React Developers"
         description={`Build your React application backend in minutes. Cloud database management, server-side functions,
           user management, and more - all in one place.`}
-        ogImageSrc={`${redirect_uri}${require('file-loader!./og-image.png')}`}
-        twitterImageSrc={`${redirect_uri}${require('file-loader!./twitter-image.png')}`}
+        ogImageSrc={`${redirect_uri}${require('./og-image.png')}`}
+        twitterImageSrc={`${redirect_uri}${require('./twitter-image.png')}`}
       />
       <PageHeader
         iconSrc={require('./the-instant-backend-solution-for-react-developers.svg')}
