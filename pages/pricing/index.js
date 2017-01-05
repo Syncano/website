@@ -21,8 +21,8 @@ const PricingPage = () => {
         mixpanelTitle="Pricing"
         description={`Get started with Syncano for free and scale to millions of users. Upgrade, downgrade or cancel at
           any time. 30 day money back guarantee. Read more...`}
-        ogImageSrc={`${redirect_uri}${require('./og-image.png')}`}
-        twitterImageSrc={`${redirect_uri}${require('./twitter-image.png')}`}
+        ogImageSrc={`${redirect_uri}${require('file-loader!./og-image.png')}`}
+        twitterImageSrc={`${redirect_uri}${require('file-loader!./twitter-image.png')}`}
       />
       <PageHeader
         headline="Build secure, scalable apps in half the time"

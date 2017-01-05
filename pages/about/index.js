@@ -21,8 +21,8 @@ const AboutPage = () => {
         mixpanelTitle="About Us"
         description={`Changing the way the world thinks about app development. We want to help developers focus on
           strategic initiatives, and not worry about heavy lifting.`}
-        ogImageSrc={`${redirect_uri}${require('./og-image.jpg')}`}
-        twitterImageSrc={`${redirect_uri}${require('./twitter-image.jpg')}`}
+        ogImageSrc={`${redirect_uri}${require('file-loader!./og-image.jpg')}`}
+        twitterImageSrc={`${redirect_uri}${require('file-loader!./twitter-image.jpg')}`}
       />
       <PageHeader headline="We help developers build amazing apps" />
       <AboutUsHeaderImage

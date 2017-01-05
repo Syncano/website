@@ -11,8 +11,8 @@ const StartupsPage = (props, { modals }) => {
         mixpanelTitle="Startups"
         description={`Stop wasting time reinventing the wheel and get cracking on the real issues at hand. Make the app
           your users will love. Learn more...`}
-        ogImageSrc={`${redirect_uri}${require('./og-image.png')}`}
-        twitterImageSrc={`${redirect_uri}${require('./twitter-image.png')}`}
+        ogImageSrc={`${redirect_uri}${require('file-loader!./og-image.png')}`}
+        twitterImageSrc={`${redirect_uri}${require('file-loader!./twitter-image.png')}`}
       />
       <PageHeader
         headline="Syncano for Startups"

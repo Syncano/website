@@ -25,8 +25,8 @@ const SyncanoVsFirebasePage = (props) => {
         mixpanelTitle="Syncano vs Firebase"
         description={`Syncano is a developer platform for rapid backend development. See how it compares to Google’s
           Firebase.`}
-        ogImageSrc={`${redirect_uri}${require('./og-image.png')}`}
-        twitterImageSrc={`${redirect_uri}${require('./twitter-image.png')}`}
+        ogImageSrc={`${redirect_uri}${require('file-loader!./og-image.png')}`}
+        twitterImageSrc={`${redirect_uri}${require('file-loader!./twitter-image.png')}`}
       />
       <PageHeader
         iconSrc={require('./syncano-vs-firebase.svg')}

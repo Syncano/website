@@ -17,8 +17,8 @@ const CustomersPage = () => {
         mixpanelTitle="Customers"
         description={`Helping people build successful apps for the web, mobile and IoT. See what developers are building
           with Syncano.`}
-        ogImageSrc={`${redirect_uri}${require('./og-image.png')}`}
-        twitterImageSrc={`${redirect_uri}${require('./twitter-image.png')}`}
+        ogImageSrc={`${redirect_uri}${require('file-loader!./og-image.png')}`}
+        twitterImageSrc={`${redirect_uri}${require('file-loader!./twitter-image.png')}`}
       />
       <PageHeader
         headline="Featured customers’ apps made with Syncano"
