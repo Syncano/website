@@ -20,8 +20,8 @@ const HostingPage = (props, { modals }) => {
         title="Static Web Hosting for Developers"
         mixpanelTitle="Hosting"
         description="Secure, single-command web publishing for your applications."
-        ogImageSrc={`${redirect_uri}${require('file-loader!./og-image.png')}`}
-        twitterImageSrc={`${redirect_uri}${require('file-loader!./twitter-image.png')}`}
+        ogImageSrc={`${redirect_uri}${require('./og-image.png')}`}
+        twitterImageSrc={`${redirect_uri}${require('./twitter-image.png')}`}
         noindexNofollow={true}
       />
       <PageHeader

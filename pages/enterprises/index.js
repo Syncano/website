@@ -11,8 +11,8 @@ const EnterprisesPage = () => {
         mixpanelTitle="Enterprises"
         description={`Achieve a competitive advantage by unlocking the potential of thousands of developers across the
           world. Learn more...`}
-        ogImageSrc={`${redirect_uri}${require('file-loader!./og-image.png')}`}
-        twitterImageSrc={`${redirect_uri}${require('file-loader!./twitter-image.png')}`}
+        ogImageSrc={`${redirect_uri}${require('./og-image.png')}`}
+        twitterImageSrc={`${redirect_uri}${require('./twitter-image.png')}`}
       />
       <PageHeader
         headline="Syncano for Enterprises"

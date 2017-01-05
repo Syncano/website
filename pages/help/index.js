@@ -19,8 +19,8 @@ const HelpPage = () => {
         mixpanelTitle="Help & Status"
         description={`Learn the basics of how to get up and running on Syncano. Get answers to your questions. Join us
           on Slack, read tutorials or simply fork our open source code.`}
-        ogImageSrc={`${redirect_uri}${require('file-loader!./og-image.png')}`}
-        twitterImageSrc={`${redirect_uri}${require('file-loader!./twitter-image.png')}`}
+        ogImageSrc={`${redirect_uri}${require('./og-image.png')}`}
+        twitterImageSrc={`${redirect_uri}${require('./twitter-image.png')}`}
       />
       <StatusPageHeader />
       <TextWithImage
