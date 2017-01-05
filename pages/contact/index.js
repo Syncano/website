@@ -10,8 +10,8 @@ const ContactPage = () => {
         title="Get in touch with us | Syncano"
         mixpanelTitle="Contact Us"
         description="Get in touch with us, write your feedback or just say hi! Use the form or just drop us an email."
-        ogImageSrc={`${redirect_uri}${require('file-loader!./og-image.png')}`}
-        twitterImageSrc={`${redirect_uri}${require('file-loader!./twitter-image.png')}`}
+        ogImageSrc={`${redirect_uri}${require('./og-image.png')}`}
+        twitterImageSrc={`${redirect_uri}${require('./twitter-image.png')}`}
       />
       <PageHeader
         headline="Get in touch with us"
