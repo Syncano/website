@@ -10,7 +10,8 @@ import {
   PageHelmet,
   SyncanoStatusBar,
   TextWithBackground,
-  TwitterSlider
+  TwitterSlider,
+  TwoPagesPromo
 } from '../components';
 
 const HomePage = () => {
@@ -72,6 +73,38 @@ const HomePage = () => {
           linkHref="https://www.syncano.io/blog/if-software-eats-the-world-syncano-feeds-it/"
           linkText="Read about our vision here"
         />
+        <TwoPagesPromo>
+          <TwoPagesPromo.Page
+            imgSrc={require('./home/syncano-vs-firebase.svg')}
+            title="Syncano vs Firebase"
+            description={`Syncano is a developer platform for rapid backend development. See how it compares to Google’s
+              Firebase.`}
+          >
+            <div className="button-container">
+              <Link
+                to="/syncano-vs-firebase/"
+                className="button"
+              >
+                See how they compare
+              </Link>
+            </div>
+          </TwoPagesPromo.Page>
+          <TwoPagesPromo.Page
+            imgSrc={require('./home/the-instant-backend-solution-for-react-developers.svg')}
+            title="For React Developers"
+            description={`Build your React application backend in minutes. Cloud database management, server-side
+              functions, user management, and more - all in one place.`}
+          >
+            <div className="button-container">
+              <Link
+                to="/react-developers/"
+                className="button"
+              >
+                Build my React app
+              </Link>
+            </div>
+          </TwoPagesPromo.Page>
+        </TwoPagesPromo>
         <TwitterSlider />
         <TextWithBackground
           theme="image1"
