@@ -95,14 +95,12 @@ const HomePage = () => {
             description={`Build your React application backend in minutes. Cloud database management, server-side
               functions, user management, and more - all in one place.`}
           >
-            <div className="button-container">
-              <Link
-                to="/react-developers/"
-                className="button"
-              >
-                Build my React app
-              </Link>
-            </div>
+            <Link
+              to="/react-developers/"
+              className="button"
+            >
+              Build my React app
+            </Link>
           </TwoPagesPromo.Page>
         </TwoPagesPromo>
         <TwitterSlider />
@@ -112,14 +110,12 @@ const HomePage = () => {
           textline={`Adam is a great guy and a part of our support team. At Syncano, every team member is here to help
             you. When you have questions, you’ll get timely answers directly from our team members.`}
         >
-          <div className="button-container">
-            <Link
-              to="/help/"
-              className="button"
-            >
-              Help &amp; Support
-            </Link>
-          </div>
+          <Link
+            to="/help/"
+            className="button"
+          >
+            Help &amp; Support
+          </Link>
         </TextWithBackground>
         <CTASection />
         <Footer />

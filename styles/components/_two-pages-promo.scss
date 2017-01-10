@@ -2,6 +2,7 @@
   .two-pages-promo__page {
     padding-top: 80px;
     padding-bottom: 80px;
+    text-align: center;
 
     &:last-child {
       position: relative;
@@ -42,10 +43,6 @@
       p {
         line-height: 1.5;
       }
-    }
-
-    .button-container {
-      text-align: center;
     }
 
     .button {
@@ -91,10 +88,6 @@
 
       .two-pages-promo__page__description p {
         line-height: 1.75;
-      }
-
-      .button-container {
-        text-align: left;
       }
     }
   }
