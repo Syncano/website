@@ -88,7 +88,7 @@ const FullStackPage = (props, { modals }) => {
           <ul>
             <li>New to React? Here’s a <a href="https://www.syncano.io/blog/getting-started-reactjs-tutorial/" target="_blank">Quick start guide</a></li>
             <li>Try out building a <a href="https://www.syncano.io/blog/build-pokemon-radar-app/" target="_blank">Pokemon Go Radar</a></li>
-            <li>Take a look at the <a href="http://docs.syncano.io/docs/javascript" target="_blank">JavaScript Library</a></li>
+            <li>Take a look at the <a href="http://docs.syncano.io/docs/react/" target="_blank">JavaScript Library</a></li>
           </ul>
         </div>
       </TextWithImage>

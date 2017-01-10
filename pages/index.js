@@ -10,7 +10,8 @@ import {
   PageHelmet,
   SyncanoStatusBar,
   TextWithBackground,
-  TwitterSlider
+  TwitterSlider,
+  TwoPagesPromo
 } from '../components';
 
 const HomePage = () => {
@@ -72,6 +73,36 @@ const HomePage = () => {
           linkHref="https://www.syncano.io/blog/if-software-eats-the-world-syncano-feeds-it/"
           linkText="Read about our vision here"
         />
+        <TwoPagesPromo>
+          <TwoPagesPromo.Page
+            imgSrc={require('./home/syncano-vs-firebase.svg')}
+            title="Syncano vs Firebase"
+            description={`Syncano is a developer platform for rapid backend development. See how it compares to Google’s
+              Firebase.`}
+          >
+            <div className="button-container">
+              <Link
+                to="/syncano-vs-firebase/"
+                className="button"
+              >
+                See how they compare
+              </Link>
+            </div>
+          </TwoPagesPromo.Page>
+          <TwoPagesPromo.Page
+            imgSrc={require('./home/the-instant-backend-solution-for-react-developers.svg')}
+            title="For React Developers"
+            description={`Build your React app backend in minutes. Cloud database management, server-side functions, and
+              more - all in one place.`}
+          >
+            <Link
+              to="/react-developers/"
+              className="button"
+            >
+              Build my React app
+            </Link>
+          </TwoPagesPromo.Page>
+        </TwoPagesPromo>
         <TwitterSlider />
         <TextWithBackground
           theme="image1"
@@ -79,14 +110,12 @@ const HomePage = () => {
           textline={`Adam is a great guy and a part of our support team. At Syncano, every team member is here to help
             you. When you have questions, you’ll get timely answers directly from our team members.`}
         >
-          <div className="button-container">
-            <Link
-              to="/help/"
-              className="button"
-            >
-              Help &amp; Support
-            </Link>
-          </div>
+          <Link
+            to="/help/"
+            className="button"
+          >
+            Help &amp; Support
+          </Link>
         </TextWithBackground>
         <CTASection />
         <Footer />

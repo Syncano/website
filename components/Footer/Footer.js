@@ -81,6 +81,12 @@ export default () => (
             <li>
               <a href="http://docs.syncano.io/v0.1.1/docs/" target="_blank">API Reference</a>
             </li>
+            <li>
+              <Link to="/syncano-vs-firebase/">Syncano vs Firebase</Link>
+            </li>
+            <li>
+              <Link to="/react-developers/">For React developers</Link>
+            </li>
           </ul>
         </div>
         <div className="footer__column">

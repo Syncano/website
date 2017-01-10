@@ -68,6 +68,7 @@ import TopBar from './TopBar';
 import Travolta from './Travolta';
 import TwitterSlider from './TwitterSlider';
 import TwitterWidget from './TwitterWidget';
+import TwoPagesPromo from './TwoPagesPromo';
 
 export default {
   AboutUs,
@@ -142,5 +143,6 @@ export default {
   TopBar,
   Travolta,
   TwitterSlider,
-  TwitterWidget
+  TwitterWidget,
+  TwoPagesPromo
 };
