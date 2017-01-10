@@ -92,8 +92,8 @@ const HomePage = () => {
           <TwoPagesPromo.Page
             imgSrc={require('./home/the-instant-backend-solution-for-react-developers.svg')}
             title="For React Developers"
-            description={`Build your React application backend in minutes. Cloud database management, server-side
-              functions, user management, and more - all in one place.`}
+            description={`Build your React app backend in minutes. Cloud database management, server-side functions, and
+              more - all in one place.`}
           >
             <Link
               to="/react-developers/"
