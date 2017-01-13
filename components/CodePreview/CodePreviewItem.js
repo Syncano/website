@@ -5,7 +5,7 @@ import classNames from 'classnames';
 const CodePreviewItem = ({ code, languageClassName, isActive }) => {
   const className = classNames({
     'code-preview__content__item': true,
-    'code-preview__content__item--is-active': (isActive)
+    'code-preview__content__item--is-active': isActive
   });
 
   return (

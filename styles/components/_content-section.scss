@@ -18,10 +18,47 @@
     margin-left: auto;
     margin-right: auto;
 
+    p,
+    .content-section__content__list,
+    .code-preview {
+      margin-top: 25px;
+    }
+
+    h3 {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      font-size: 20px;
+      color: $color-text-headline;
+      font-weight: 700;
+    }
+
     p {
       line-height: 1.75;
       color: transparentize($color-text-base, .1);
-      margin-top: 25px;
+    }
+
+    .content-section__content__list {
+      text-align: left;
+
+      li {
+        line-height: 2;
+        color: transparentize($color-text-base, .15);
+        position: relative;
+        padding-left: 37px;
+
+        &:before {
+          display: block;
+          content: '';
+          width: 6px;
+          height: 6px;
+          background: $color-main-blue;
+          border-radius: 50%;
+          position: absolute;
+          left: 12px;
+          top: 1em;
+          transform: translateY(-50%);
+        }
+      }
     }
 
     .button {
@@ -58,6 +95,10 @@
     .content-section__content {
       margin-top: 50px;
 
+      h3 {
+        font-size: 30px;
+      }
+
       .slack-promo {
         margin-top: 50px;
       }
@@ -70,10 +111,6 @@
 
     h2 {
       font-size: 40px;
-    }
-
-    .content-section__content {
-      margin-top: 80px;
     }
   }
 

@@ -1,0 +1,6 @@
+syncano = SyncanoClient.Instance.Init("api_key", "instance_name");
+    planet = new Planet();
+    planet.Name = "Invictus";
+    planet.Description = "Turian colony.";
+
+    syncano.Please().Save<Planet>(planet, OnGetPlanetSuccess, OnGetPlanetFailure);
