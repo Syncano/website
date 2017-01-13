@@ -12,7 +12,8 @@ import {
   PageHelmet,
   ParagraphDivider,
   Table,
-  TextWithBottomImage
+  TextWithBottomImage,
+  TextWithImage
 } from '../../components';
 
 const SyncanoVsFirebasePage = (props) => {
@@ -195,9 +196,28 @@ const SyncanoVsFirebasePage = (props) => {
           </tr>
         </Table>
       </ContentSection>
+      <TextWithImage
+        theme="gray"
+        headline="Syncano is available on-premise"
+        textline={`The entire Syncano platform is available to be installed on-premise, and the process is simple and
+          stress-free. On-premise installation will give you all of the following benefits:`}
+        image={
+          <img
+            src={require('./syncano-is-available-on-premise.svg')}
+            alt="Syncano is available on-premise"
+          />
+        }
+      >
+        <div className="text-with-image__text__list">
+          <ul>
+            <li>Complete control and regulation of your data</li>
+            <li>Decreased latency with an on-site server</li>
+            <li>Increased visibility of your data and it’s location</li>
+          </ul>
+        </div>
+      </TextWithImage>
       <ContentSection
         variant="narrow"
-        theme="gray"
         headline="One last thing you should know about Syncano"
       >
         <p>
