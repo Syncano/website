@@ -22,6 +22,8 @@ const UnityDevelopersPage = (props, { modals }) => {
         mixpanelTitle="Unity Developers"
         description={`Create a customize, highly-scalable backend for your games. Cloud real-time data management,
           server-side code, and more - all in one platform.`}
+        ogImageSrc={`${redirect_uri}${require('./og-image.png')}`}
+        twitterImageSrc={`${redirect_uri}${require('./twitter-image.png')}`}
       />
       <PageHeader
         iconSrc={require('./the-ultimate-cloud-backend-for-unity-developers.svg')}
