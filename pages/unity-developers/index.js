@@ -73,7 +73,7 @@ const UnityDevelopersPage = (props, { modals }) => {
           mix-and-match to build the perfect backend. Manage your data and files, execute server-side code, and
           integrate your backend services or third-party APIs.
         </p>
-        <div className="content-section__content__list">
+        <div className="content-section__content__list content-section__content__list--center">
           <ul>
             <li>No long-term contracts</li>
             <li>Adjust to the plan that fits your needs</li>
@@ -93,14 +93,19 @@ const UnityDevelopersPage = (props, { modals }) => {
           />
         </CodePreview>
       </ContentSection>
-      <ContentSection
+      <TextWithImage
+        variant="image-right"
         theme="gray"
         headline="Integration is easy with the Syncano Unity library"
+        textline={`Integration from Unity to Syncano is seamless with our brand-new Unity library. Import the Unity
+          library directly into your project’s assets.`}
+        image={
+          <img
+            src={require('./integration-is-easy-with-the-syncano-unity-library.svg')}
+            alt="Integration is easy with the Syncano Unity library"
+          />
+        }
       >
-        <p>
-          Integration from Unity to Syncano is seamless with our brand-new Unity library. Import the Unity library
-          directly into your project’s assets.
-        </p>
         <a
           className="button"
           href="http://docs.syncano.io/docs/unity/"
@@ -108,7 +113,7 @@ const UnityDevelopersPage = (props, { modals }) => {
         >
           Download our Unity library
         </a>
-      </ContentSection>
+      </TextWithImage>
       <TextWithImage
         headline="Get the best out of Syncano for your games"
         textline="Fast game development and great resources go hand-in-hand, so we have curated some for you here:"
@@ -129,7 +134,7 @@ const UnityDevelopersPage = (props, { modals }) => {
       </TextWithImage>
       <TwitterSlider
         theme="gray"
-        headline="What are developers saying?"
+        headline="What are developers saying"
         filter="unity"
         arrows={false}
         hideButton={true}

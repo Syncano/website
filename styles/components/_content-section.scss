@@ -59,10 +59,19 @@
           transform: translateY(-50%);
         }
       }
+
+      &.content-section__content__list--center {
+        display: flex;
+        justify-content: center;
+      }
     }
 
     .button {
       margin-top: 25px;
+    }
+
+    .code-preview {
+      max-width: 700px;
     }
 
     .slack-promo {
@@ -97,6 +106,10 @@
 
       h3 {
         font-size: 30px;
+      }
+
+      .button {
+        margin-top: 40px;
       }
 
       .slack-promo {

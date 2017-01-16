@@ -19,7 +19,15 @@ const TwitterSlider = ({ theme = 'blue', headline, filter, arrows = true, hideBu
         unity: [712734440062074900, 717796429251498000, 727236023298625500]
       };
 
-      return _.filter(tweetsData, (item) => _.includes(collections[filter], item.id));
+      let filtered = _.filter(tweetsData, (item) => _.includes(collections[filter], item.id));
+
+      if (filter === 'unity') {
+        const pulled = _.pullAt(filtered, [1]);
+
+        filtered = [...filtered, ...pulled];
+      }
+
+      return filtered;
     }
 
     return tweetsData;
