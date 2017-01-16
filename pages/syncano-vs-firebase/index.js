@@ -1,5 +1,4 @@
-import React, { PropTypes } from 'react';
-import { Link } from 'react-router';
+import React from 'react';
 import {
   BrowserWindow,
   CardTestimonials,
@@ -16,7 +15,7 @@ import {
   TextWithImage
 } from '../../components';
 
-const SyncanoVsFirebasePage = (props) => {
+const SyncanoVsFirebasePage = () => {
   const { redirect_uri } = APP_CONFIG;
 
   return (
