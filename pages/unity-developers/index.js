@@ -67,7 +67,10 @@ const UnityDevelopersPage = (props, { modals }) => {
           />
         }
       />
-      <ContentSection headline="Here’s how Syncano helps Unity game developers">
+      <ContentSection
+        variant="narrow"
+        headline="Here’s how Syncano helps Unity game developers"
+      >
         <p>
           The Syncano platform provides you with an extensive, custom API based on simple building blocks that you can
           mix-and-match to build the perfect backend. Manage your data and files, execute server-side code, and
