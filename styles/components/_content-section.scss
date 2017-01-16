@@ -92,10 +92,6 @@
     }
   }
 
-  &.content-section--narrow .content-section__content {
-    max-width: 600px;
-  }
-
   @include medium {
     h2 {
       font-size: 30px;
@@ -124,6 +120,14 @@
 
     h2 {
       font-size: 40px;
+    }
+
+    .content-section__content {
+      margin-top: 80px;
+    }
+
+    &.content-section--narrow .content-section__content {
+      max-width: 600px;
     }
   }
 
