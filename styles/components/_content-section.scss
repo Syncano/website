@@ -18,14 +18,53 @@
     margin-left: auto;
     margin-right: auto;
 
-    p {
-      line-height: 1.75;
-      color: transparentize($color-text-base, .1);
+    p,
+    .content-section__content__list,
+    .code-preview,
+    .button {
       margin-top: 25px;
     }
 
-    .button {
-      margin-top: 25px;
+    h3 {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      font-size: 20px;
+      color: $color-text-headline;
+      font-weight: 700;
+    }
+
+    p {
+      line-height: 1.75;
+      color: transparentize($color-text-base, .1);
+    }
+
+    .content-section__content__list {
+      text-align: left;
+
+      li {
+        line-height: 2;
+        color: transparentize($color-text-base, .15);
+        position: relative;
+        padding-left: 37px;
+
+        &:before {
+          display: block;
+          content: '';
+          width: 6px;
+          height: 6px;
+          background: $color-main-blue;
+          border-radius: 50%;
+          position: absolute;
+          left: 12px;
+          top: 1em;
+          transform: translateY(-50%);
+        }
+      }
+
+      &.content-section__content__list--center {
+        display: flex;
+        justify-content: center;
+      }
     }
 
     .slack-promo {
@@ -46,10 +85,6 @@
     }
   }
 
-  &.content-section--narrow .content-section__content {
-    max-width: 600px;
-  }
-
   @include medium {
     h2 {
       font-size: 30px;
@@ -57,6 +92,17 @@
 
     .content-section__content {
       margin-top: 50px;
+
+      p,
+      .content-section__content__list,
+      .code-preview,
+      .button {
+        margin-top: 40px;
+      }
+
+      h3 {
+        font-size: 30px;
+      }
 
       .slack-promo {
         margin-top: 50px;
@@ -74,6 +120,10 @@
 
     .content-section__content {
       margin-top: 80px;
+    }
+
+    &.content-section--narrow .content-section__content {
+      max-width: 700px;
     }
   }
 

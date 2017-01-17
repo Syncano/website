@@ -6,6 +6,7 @@ import Link from './Link';
 const TwitterWidget = ({ data }, { isLandingPage }) => {
   const { user, text } = data;
   const { name, screen_name, profile_image_url } = user;
+  const contentText = isLandingPage ? text : Autolinker.link(text, { hashtag: 'twitter', mention: 'twitter' });
 
   return (
     <div className="twitter-widget">
@@ -27,7 +28,7 @@ const TwitterWidget = ({ data }, { isLandingPage }) => {
         </div>
       </Link>
       <div className="twitter-widget__content">
-        <p dangerouslySetInnerHTML={{__html: isLandingPage ? text : Autolinker.link(text, { hashtag: 'twitter' })}} />
+        <p dangerouslySetInnerHTML={{__html: contentText }} />
       </div>
     </div>
   );

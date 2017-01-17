@@ -139,7 +139,7 @@ const HomePage = (props, { modals }) => {
       >
         <CodePreview variant="no-bottom-radius">
           <CodePreview.Item
-            title="Javascript"
+            title="JavaScript"
             languageClassName="javascript"
             code={require('./home/realtime-sync-javascript.txt')}
           />
