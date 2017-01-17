@@ -20,7 +20,7 @@ const UnityDevelopersPage = (props, { modals }) => {
       <PageHelmet
         title="The Ultimate Cloud Backend for Unity Developers"
         mixpanelTitle="Unity Developers"
-        description={`Create a customize, highly-scalable backend for your games. Cloud real-time data management,
+        description={`Create a customizable, highly-scalable backend for your games. Cloud real-time data management,
           server-side code, and more - all in one platform.`}
         ogImageSrc={`${redirect_uri}${require('./og-image.png')}`}
         twitterImageSrc={`${redirect_uri}${require('./twitter-image.png')}`}
@@ -29,7 +29,7 @@ const UnityDevelopersPage = (props, { modals }) => {
         iconSrc={require('./the-ultimate-cloud-backend-for-unity-developers.svg')}
         iconAlt="The Ultimate Cloud Backend for Unity Developers"
         headline={<span>The Ultimate Cloud Backend<br className="force" />for Unity Developers</span>}
-        textline={`Create a customize, highly-scalable backend for your games. Cloud real-time data management,
+        textline={`Create a customizable, highly-scalable backend for your games. Cloud real-time data management,
           server-side code, and more - all in one platform.`}
       >
         <LoggedOutContent>
@@ -56,6 +56,7 @@ const UnityDevelopersPage = (props, { modals }) => {
         variant="image-right"
         theme="gray"
         headline="What is Syncano?"
+        headlineVariant="mobile-center"
         textline={<span>Syncano is a development platform that gives you the tools you need as a Unity game developer to
           create a perfect backend, completely custom to your needs.<br /><br />Sync data across every device, integrate
           3rd-party resources, and run complex calculations in the cloud, all without managing the server yourself.
@@ -100,8 +101,8 @@ const UnityDevelopersPage = (props, { modals }) => {
         variant="image-right"
         theme="gray"
         headline="Integration is easy with the Syncano Unity library"
-        textline={`Integration from Unity to Syncano is seamless with our brand-new Unity library. Import the Unity
-          library directly into your project’s assets.`}
+        textline={`Integration from Unity to Syncano is seamless with our Unity library. Import the Unity library
+          directly into your project’s assets.`}
         image={
           <img
             src={require('./integration-is-easy-with-the-syncano-unity-library.svg')}
