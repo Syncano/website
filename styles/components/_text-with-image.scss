@@ -120,6 +120,12 @@
     background: #49B9E8;
   }
 
+  @include small-only {
+    &.text-with-image--headline-mobile-center .text-with-image__text h2 {
+      text-align: center;
+    }
+  }
+
   @include medium {
     text-align: left;
 

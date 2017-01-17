@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-export default ({ variant, theme, image, headline, textline, children }) => {
+export default ({ variant, theme, image, headline, headlineVariant, textline, children }) => {
   const className = classNames({
     'text-with-image': true,
     'text-with-image--customer': (variant === 'customer'),
@@ -9,6 +9,7 @@ export default ({ variant, theme, image, headline, textline, children }) => {
     'text-with-image--gray': (theme === 'gray'),
     'text-with-image--purple': (theme === 'purple'),
     'text-with-image--cyan': (theme === 'cyan'),
+    'text-with-image--headline-mobile-center': (headlineVariant === 'mobile-center')
   });
 
   return (
