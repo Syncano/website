@@ -73,22 +73,6 @@ export default ({ headline, children }) => {
               title="Front End Engineer"
             />
             <TeamMember
-              photoSrc={require('./images/andrej-shevchenko.jpg')}
-              photo2xSrc={require('./images/andrej-shevchenko@2x.jpg')}
-              photoMediumSrc={require('./images/andrej-shevchenko-medium.jpg')}
-              photoMedium2xSrc={require('./images/andrej-shevchenko-medium@2x.jpg')}
-              name="Andrej Shevchenko"
-              title="Product Marketing"
-            />
-            <TeamMember
-              photoSrc={require('./images/devin-visslailli.jpg')}
-              photo2xSrc={require('./images/devin-visslailli@2x.jpg')}
-              photoMediumSrc={require('./images/devin-visslailli-medium.jpg')}
-              photoMedium2xSrc={require('./images/devin-visslailli-medium@2x.jpg')}
-              name="Devin Visslailli"
-              title="Developer Evangelist"
-            />
-            <TeamMember
               photoSrc={require('./images/adam-wardecki.jpg')}
               photo2xSrc={require('./images/adam-wardecki@2x.jpg')}
               photoMediumSrc={require('./images/adam-wardecki-medium.jpg')}
