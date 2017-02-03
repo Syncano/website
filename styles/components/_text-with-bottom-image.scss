@@ -22,6 +22,41 @@
     margin-top: 40px;
   }
 
+  .flex-row {
+    display: flex;
+    flex-direction: row
+  }
+
+  .text-with-bottom-image__text__list {
+      text-align: left;
+      margin-top: 20px;
+
+      li {
+        line-height: 2;
+        color: transparentize($color-text-base, .15);
+        position: relative;
+        padding-left: 37px;
+
+        &:before {
+          display: block;
+          content: '';
+          width: 6px;
+          height: 6px;
+          background: $color-main-blue;
+          border-radius: 50%;
+          position: absolute;
+          left: 12px;
+          top: 1em;
+          transform: translateY(-50%);
+        }
+      }
+
+      &.content-section__content__list--center {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
   picture,
   img,
   .browser-window {
