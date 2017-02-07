@@ -13,9 +13,7 @@ const AboutUs = ({ headline, children, imageSrc, image2xSrc, imageSmallSrc, imag
             media="(min-width: 321px)"
             srcSet={`${imageSmallSrc} 1x, ${imageSmall2xSrc} 2x`}
           />
-          <source
-            srcSet={`${imageSrc} 1x, ${image2xSrc} 2x`}
-          />
+          <source srcSet={`${imageSrc} 1x, ${image2xSrc} 2x`} />
           <img
             src={image2xSrc}
             alt="grid with photos of us"
