@@ -49,14 +49,6 @@ export default ({ headline, children }) => {
               title="DevOps Engineer"
             />
             <TeamMember
-              photoSrc={require('./images/jan-lipmann.jpg')}
-              photo2xSrc={require('./images/jan-lipmann@2x.jpg')}
-              photoMediumSrc={require('./images/jan-lipmann-medium.jpg')}
-              photoMedium2xSrc={require('./images/jan-lipmann-medium@2x.jpg')}
-              name="Jan Lipmann"
-              title="Software Engineer"
-            />
-            <TeamMember
               photoSrc={require('./images/joanna-luma.jpg')}
               photo2xSrc={require('./images/joanna-luma@2x.jpg')}
               photoMediumSrc={require('./images/joanna-luma-medium.jpg')}
