@@ -87,6 +87,9 @@ export default () => (
             <li>
               <Link to="/react-developers/">For React developers</Link>
             </li>
+            <li>
+              <Link to="/amazon-web-services/">Faster alternative to AWS</Link>
+            </li>
           </ul>
         </div>
         <div className="footer__column">
