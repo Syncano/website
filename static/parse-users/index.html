@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Syncano Hosting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="main">
+      <header class="wrapper">
+        <a class="header-logo" href="https://www.syncano.io/" target="_blank">
+          <img src="img/syncano_parse.png" alt="Syncano vs Parse">
+        </a>
+      </header>
+      <article class="wrapper">
+        <section>
+          <p>
+            As you all know Facebook's Parse developer platform has been shut down as mentioned on Techcrunch.
+          </p>
+          <p>
+            We want to inform you that here at Syncano we are currently working on a solution for hosting your Parse backend. If you are eager to know more about this, sign up and we will let you know once launched (..in near future).
+          </p> 
+          <form action="" method="POST" id="form" target="hiddenFrame">
+            <input type="email" id="email-form" placeholder="E-mail address..."></input>
+            <input type="submit" name="submit" class="send" value="Send" />
+          </form>
+          <p>
+          Best regards,<br/>
+          The Syncano Team
+          </p>
+        </section>
+      </article>
+      <iframe name="hiddenFrame" class="hiddenFrame"></iframe>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      $('#form').on('submit', function() {
+        const emaildata = encodeURIComponent($('#email-form').val());
+        const question = 'entry.189509516';
+        const baseURL = 'https://docs.google.com/a/syncano.com/forms/d/e/1FAIpQLSfXdcjVfJiXKQgm1J_pM5Zw8sAv8PKaQIPu1YAKyaTfm1CqfA/formResponse?';
+        const submitRef = '&submit=Submit';
+        const submitURL = `${baseURL}${question}=${emaildata}${submitRef}`;
+        $(this)[0].action=submitURL;
+        $('#email-form').val('Thank you!');
+      });
+    </script>
+  </body>
+</html>

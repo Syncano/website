@@ -52,7 +52,7 @@ const HomePage = () => {
             authorImgSrc={require('./home/stale-husby@2x.jpg')}
             quote={`If Syncano was around at the time we created our MVP, it would have saved us a full year to get into
               the market.`}
-            author="Ståle Husby, CEO, Relinklabs"
+            author="Ståle Husby, CEO, Relink"
           />
           <CardTestimonials.Card
             headline="For software developers:"
