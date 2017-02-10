@@ -12,7 +12,7 @@
     * { box-sizing: border-box; }
 
     body {
-      background: #fff;
+      background: #1976d2;
       font-family: 'Roboto', sans-serif;
       font-size: 16px;
       color: #4D5966;
@@ -38,30 +38,17 @@
       margin: 15px 0 ;
     }
 
-      a {
+    a {
       color: inherit;
       text-decoration: underline;
     }
 
     .wrapper {
       height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-
-    .parse-box {
-      background: #fff;
-      padding: 40px 10px;
-      max-width: 540px;
-    }
-
-    .parse-box__header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .parse-box__header img {
-      margin: 0 auto 40px;
-    }
-
  
     .form input {
       width: 100%;
@@ -70,6 +57,11 @@
       padding: 18px 20px;
       border-radius: 4px;
     }  
+
+    .form input,
+    .form__message {
+      margin-bottom: 20px;
+    }
 
     .form .input {
       border: 1px solid #DBDEE3;
@@ -87,6 +79,16 @@
     .form .button:hover {
       opacity: .8;
     }
+    
+    .form__message {
+      display: none;
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+    .form__message--success { color: #28B12B; }
 
     .hiddenFrame {
       width: 0;
@@ -95,34 +97,39 @@
       display: none;
     }
 
+    .parse-box {
+      background: #fff;
+      padding: 40px 10px;
+      max-width: 540px;
+    }
+
+    .parse-box__header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .parse-box__header img {
+      margin: 0 auto 40px;
+    }
+
     @media (min-width: 540px) {
-      body {
-        background: #1976d2
-      }
-
-      .wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
       .parse-box {
         padding: 60px 70px;
         border-radius: 4px;
         box-shadow: 0 0 50px rgba(0, 0, 0, .37);
       }
-
-      .form input,
-      .form__message {
-        margin-bottom: 20px;
-      }
     }
     
     @media (max-width: 768px) {
+      
+      body {
+        background: #fff;
 
+      }
       .wrapper {
         margin: 10% 3%;
       }
+
     }
   </style>
   
@@ -135,14 +142,17 @@
           <img src="img/syncano_parse.png" alt="Syncano vs Parse">
         </a>
       </header>
-      <div class="form">
+      <div>
         <p>
           As you all know Facebook's Parse developer platform has been shut down as mentioned on <a href="https://techcrunch.com/2017/01/30/facebooks-parse-developer-platform-is-shutting-down-today/" target="_blank">Techcrunch</a>.
         </p>
         <p>
           We want to inform you that here at Syncano we are currently working on a solution for hosting your Parse backend. If you are eager to know more about this, sign up and we will let you know once launched (..in near future).
         </p> 
+      </div>
+      <div class="form jsForm">
         <form action="" method="POST" id="form" target="hiddenFrame">
+            <div class="form__message jsFormMessage"><p></p></div>
             <input class="input" type="email" id="email-form" required placeholder="E-mail address..."></input>
             <input type="submit" name="submit" class="button" value="Send" />
           </form>
@@ -159,11 +169,19 @@
       $('#form').on('submit', function() {
         const emaildata = encodeURIComponent($('#email-form').val());
         const question = 'entry.189509516';
+        const messageSent = 'Message sent!';
         const baseURL = 'https://docs.google.com/a/syncano.com/forms/d/e/1FAIpQLSfXdcjVfJiXKQgm1J_pM5Zw8sAv8PKaQIPu1YAKyaTfm1CqfA/formResponse?';
         const submitRef = '&submit=Submit';
         const submitURL = `${baseURL}${question}=${emaildata}${submitRef}`;
         $(this)[0].action=submitURL;
-        $('#email-form').val('Thank you!');
+        $('input').click(function(){
+            $('.jsFormMessage p').html('');
+        });
+        $('#email-form').val('');
+        $('.jsFormMessage p').html(messageSent);
+        $('.jsFormMessage').addClass('form__message--success').val('').show();
+        $('.jsForm').addClass('form--success');
+
       });
     </script>
 </body>
