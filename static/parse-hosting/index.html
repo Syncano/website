@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <title>Parse Hosting</title>
+  <meta name="description" content="Syncano as an alternative to Parse Hosting">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/normalize/3.0.3/normalize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      background: #fff;
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      color: #4D5966;
+      line-height: 1.5;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    input,
+    button {
+      border: none;
+      background: none;
+      outline: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    p {
+      margin: 15px 0 ;
+      font-size: 1.2em;
+    }
+
+
+    .wrapper {
+      height: 100vh;
+    }
+
+    .parse-box {
+      background: #fff;
+      padding: 40px 10px;
+      max-width: 540px;
+    }
+
+    .parse-box__header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .parse-box__header img {
+      margin: 0 auto 40px;
+    }
+
+ 
+    .form input,
+    .form button {
+      width: 100%;
+      height: 54px;
+      line-height: 18px;
+      padding: 18px 20px;
+      border-radius: 4px;
+    }  
+
+    .form input {
+      border: 1px solid #DBDEE3;
+    }
+    
+    .form button {
+      background: #FFCC01;
+      color: #1D2228;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+      transition: all .2s;
+    }
+
+    .form button:hover {
+      opacity: .8;
+    }
+
+    .hiddenFrame {
+      width: 0;
+      height: 0;
+      border: 0;
+      display: none;
+    }
+
+    @media (min-width: 540px) {
+      body {
+        background: #1976d2
+      }
+
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .parse-box {
+        padding: 60px 70px;
+        border-radius: 4px;
+        box-shadow: 0 0 50px rgba(0, 0, 0, .37);
+      }
+
+      .form input,
+      .form__message {
+        margin-bottom: 20px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+
+      .wrapper {
+        margin: 10% 3%;
+      }
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="wrapper">
+    <div class="parse-box">
+      <header class="parse-box__header">
+        <a class="header-logo" href="https://www.syncano.io/" target="_blank">
+          <img src="img/syncano_parse.png" alt="Syncano vs Parse">
+        </a>
+      </header>
+      <div class="form">
+        <p>
+          As you all know Facebook's Parse developer platform has been shut down as mentioned on Techcrunch.
+        </p>
+        <p>
+          We want to inform you that here at Syncano we are currently working on a solution for hosting your Parse backend. If you are eager to know more about this, sign up and we will let you know once launched (..in near future).
+        </p> 
+        <form action="" method="POST" id="form" target="hiddenFrame">
+            <input type="email" id="email-form" required placeholder="E-mail address..."></input>
+            <input type="submit" name="submit" class="send" value="Send" />
+          </form>
+          <p>
+            Best regards,<br/>
+            The Syncano Team
+          </p>
+      </div>
+      <iframe name="hiddenFrame" class="hiddenFrame"></iframe>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      $('#form').on('submit', function() {
+        const emaildata = encodeURIComponent($('#email-form').val());
+        const question = 'entry.189509516';
+        const baseURL = 'https://docs.google.com/a/syncano.com/forms/d/e/1FAIpQLSfXdcjVfJiXKQgm1J_pM5Zw8sAv8PKaQIPu1YAKyaTfm1CqfA/formResponse?';
+        const submitRef = '&submit=Submit';
+        const submitURL = `${baseURL}${question}=${emaildata}${submitRef}`;
+        $(this)[0].action=submitURL;
+        $('#email-form').val('Thank you!');
+      });
+    </script>
+</body>
+</html>
