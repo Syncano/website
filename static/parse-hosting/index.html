@@ -12,7 +12,7 @@
     * { box-sizing: border-box; }
 
     body {
-      background: #1976d2;
+      background: #fff;
       font-family: 'Roboto', sans-serif;
       font-size: 16px;
       color: #4D5966;
@@ -42,14 +42,11 @@
       color: inherit;
       text-decoration: underline;
     }
-
+    
     .wrapper {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      margin: 10% 5%;
     }
- 
+
     .form input {
       width: 100%;
       height: 54px;
@@ -113,23 +110,21 @@
     }
 
     @media (min-width: 540px) {
+      body {
+        background: #1976d2;
+      }
       .parse-box {
         padding: 60px 70px;
         border-radius: 4px;
         box-shadow: 0 0 50px rgba(0, 0, 0, .37);
       }
-    }
-    
-    @media (max-width: 768px) {
-      
-      body {
-        background: #fff;
-
-      }
       .wrapper {
-        margin: 10% 3%;
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
-
     }
   </style>
   
@@ -175,13 +170,12 @@
         const submitURL = `${baseURL}${question}=${emaildata}${submitRef}`;
         $(this)[0].action=submitURL;
         $('input').click(function(){
-            $('.jsFormMessage p').html('');
+          $('.jsFormMessage p').html('');
         });
         $('#email-form').val('');
         $('.jsFormMessage p').html(messageSent);
-        $('.jsFormMessage').addClass('form__message--success').val('').show();
+        $('.jsFormMessage').addClass('form__message--success').show();
         $('.jsForm').addClass('form--success');
-
       });
     </script>
 </body>
