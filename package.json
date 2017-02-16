@@ -72,7 +72,7 @@
     "build": "gatsby build",
     "reinstall": "rm -rf node_modules && npm i",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./test.sh",
     "e2e-setup": "mkdir -p reports/ && selenium-standalone install --version=2.53.0 --drivers.chrome.version=2.25",
     "e2e-http-server": "cd public/ && nohup python -m SimpleHTTPServer &",
     "e2e-chrome": "nightwatch -e chrome --suiteRetries 1",
