@@ -1,7 +1,7 @@
 $(function() {
   const codebox = $('.js-codebox');
   const strings = [
-    'yarn add syncano-cli',
+    'npm install -g syncano-cli',
     'syncano-cli init',
     'syncano-cli hosting add [hosting_path]',
     'syncano-cli hosting delete <name>',
