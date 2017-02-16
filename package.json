@@ -69,7 +69,7 @@
     "prestart": "npm run setup-data",
     "start": "gatsby develop",
     "prebuild": "npm run setup-data",
-    "build": "NODE_ENV=staging gatsby build",
+    "build": "gatsby build",
     "reinstall": "rm -rf node_modules && npm i",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",

@@ -15,4 +15,4 @@ export default {
       .clickElement('@confirmButton')
       .waitForElementPresent('@dashboardBar');
   }
-}
+};

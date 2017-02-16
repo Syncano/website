@@ -21,12 +21,11 @@ dependencies:
     - sudo dpkg -i google-chrome.deb
     - sudo sed -i 's|HERE/chrome\"|HERE/chrome\" --disable-setuid-sandbox|g' /opt/google/chrome/google-chrome
     - rm google-chrome.deb
-    - if [[ $CIRCLE_BRANCH == "master" ]] ; then echo 'export NODE_ENV=production' >> ~/.circlerc ; fi
-    - if [[ $CIRCLE_BRANCH != "master" ]] ; then echo 'export NODE_ENV=staging' >> ~/.circlerc ; fi
+    - if [[ $CIRCLE_BRANCH == "master" ]] ; then echo 'export GATSBY_ENV=production' >> ~/.circlerc ; fi
+    - if [[ $CIRCLE_BRANCH != "master" ]] ; then echo 'export GATSBY_ENV=staging' >> ~/.circlerc ; fi
 
 test:
   override:
-    - echo $NODE_ENV
     - npm run setup-data
     - gatsby build
     - google-chrome --version
