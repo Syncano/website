@@ -1,8 +1,6 @@
 export default {
   tags: ['signup'],
-  after(client) {
-    client.end();
-  },
+  after: client => client.getChromeLogs().end(),
   'Test Login using email address': (client) => {
     const formPage = client.page.formPage();
     const tempPass = Date.now();
