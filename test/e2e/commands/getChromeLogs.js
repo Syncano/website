@@ -5,7 +5,9 @@
 exports.command = function getChromeLogs() {
   return this.getLog('browser', (logEntriesArray) => {
     logEntriesArray.forEach((log) => {
-      console.log(`[${log.level}] Timestamp: ${log.timestamp}\n`);
+      if (process.env.CI) {
+        console.log(`[${log.level}] Timestamp: ${log.timestamp}\n`);
+      }
     });
-  });
+  });  
 };

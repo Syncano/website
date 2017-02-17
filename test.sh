@@ -27,7 +27,6 @@ function ci_tests {
     else
         npm run e2e-setup
         npm run e2e-http-server
-        echo "------- Starting E2E tests!"
         npm run e2e-chrome
         mv reports/selenium-debug.log reports/chrome-debug.log
         # Firefox changed driver to geckodriver due to this compatibility with Selenium is not complete
