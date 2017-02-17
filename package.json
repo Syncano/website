@@ -71,12 +71,12 @@
     "prebuild": "npm run setup-data",
     "build": "gatsby build",
     "reinstall": "rm -rf node_modules && npm i",
-    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint": "eslint . --ext .js,.jsx",
     "test": "./test.sh",
-    "e2e-setup": "mkdir -p reports/ && selenium-standalone install --version=2.53.0 --drivers.chrome.version=2.25",
+    "e2e-setup": "mkdir -p reports/ && selenium-standalone install --version=2.53.0 --drivers.chrome.version=2.25 --silent",
     "e2e-http-server": "cd public/ && nohup python -m SimpleHTTPServer &",
     "e2e-chrome": "nightwatch -e chrome --suiteRetries 1",
     "e2e-firefox": "nightwatch -e firefox --suiteRetries 1",
-    "e2e-local": "nightwatch -e chrome,firefox --suiteRetries 1"
+    "e2e-parallel": "nightwatch -e chrome,firefox --suiteRetries 1"
   }
 }

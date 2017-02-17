@@ -43,9 +43,7 @@ are copied to `public` folder.
 # E2E Testing
 
 We are using [Nightwatch.js](http://nightwatchjs.org/) for e2e testing.
-**Nightwatch.js** requires few binary files which can be installed via proper NPM command:
-
-    $ npm run e2e-setup
+**Nightwatch.js** requires few binary files which can be installed but they will be installed when tests start.
 
 You'll also need to configure env variables for the tests to work locally:
 
@@ -56,17 +54,18 @@ If you are ready just run dev server:
 
     $ npm start
 
-and start testing using two browsers in parallel mode:
+and start testing using our test runner:
 
-    $ npm run e2e-local
+    $ npm test
 
-or one by one:
+it will setup and start tests. You can specify test mode:
 
-    $ npm run e2e-chrome
-    $ npm run e2e-firefox
+    $ npm test {chrome|firefox|parallel}
+
+where chrome will be default one if no argument was passed.
 
 If part of the tests fail for some reason, you can temporarily disable them by `--skiptags` argument. So if, for instance signup tests fail, you can modify `package.json` e2e line, so that it looks like this:
 
-    "e2e-local": "nightwatch -e chrome,firefox --suiteRetries 1 --skiptags signup",
+    "e2e-parallel": "nightwatch -e chrome,firefox --suiteRetries 1 --skiptags signup",
 
 Tests will continue to run but the classes tests will be skipped. Refer to the test files for the appropriate tag name.
