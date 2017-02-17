@@ -7,10 +7,8 @@ const fetchPlans = () => {
 
   axios
     .get(plansUrl)
-    .then((response) => {
-      return fs.writeFileSync(`${__dirname}/../data-pricing-plans.json`, JSON.stringify(response.data.objects[0]));
-    })
-    .catch((error) => console.error('error', error));
+    .then(response => fs.writeFileSync(`${__dirname}/../data-pricing-plans.json`, JSON.stringify(response.data.objects[0])))
+    .catch(error => console.error('error', error));
 };
 
 fetchPlans();

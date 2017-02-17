@@ -9,5 +9,5 @@ exports.command = function getChromeLogs() {
         console.log(`[${log.level}] Timestamp: ${log.timestamp}\n`);
       }
     });
-  });  
+  });
 };

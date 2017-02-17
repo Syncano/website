@@ -48,6 +48,7 @@
     "eslint-plugin-react": "6.8.0",
     "extended-define-webpack-plugin": "0.1.2",
     "nightwatch": "0.9.9",
+    "pre-commit": "1.2.2",
     "selenium-standalone": "6.0.1"
   },
   "keywords": [
@@ -71,12 +72,13 @@
     "prebuild": "npm run setup-data",
     "build": "gatsby build",
     "reinstall": "rm -rf node_modules && npm i",
-    "lint": "eslint . --ext .js,.jsx",
+    "lint": "eslint scripts test --ext .js,.jsx",
     "test": "./test.sh",
     "e2e-setup": "mkdir -p reports/ && selenium-standalone install --version=2.53.0 --drivers.chrome.version=2.25 --silent",
     "e2e-http-server": "cd public/ && nohup python -m SimpleHTTPServer &",
     "e2e-chrome": "nightwatch -e chrome --suiteRetries 1",
     "e2e-firefox": "nightwatch -e firefox --suiteRetries 1",
     "e2e-parallel": "nightwatch -e chrome,firefox --suiteRetries 1"
-  }
+  },
+  "pre-commit": "lint"
 }

@@ -26,4 +26,4 @@ export default {
       locateStrategy: 'xpath'
     }
   }
-}
+};
