@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Patryk Kopycinski <patryk.kopycinski@syncano.com>",
   "dependencies": {
-    "autolinker": "1.4.0",
+    "autolinker": "1.4.1",
     "axios": "0.12.0",
     "babel-cli": "6.22.2",
     "babel-plugin-add-module-exports": "0.2.1",
