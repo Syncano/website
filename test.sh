@@ -1,13 +1,18 @@
 #!/bin/bash
 set -e
 
+function e2e_setup {
+    npm run selenium-install
+    nohup npm run selenium-start > ./reports/selenium-debug.log 2>&1&
+}
+
 function local_tests {
     if [ -z "$NIGHTWATCH_EMAIL" ] || [ -z "$NIGHTWATCH_PASSWORD" ]; then
       echo "Missing env variables NIGHTWATCH_EMAIL or NIGHTWATCH_PASSWORD!!"
       echo "Please check README.md for more information"
       echo "" && exit 1
     else
-      npm run e2e-setup
+      e2e_setup
 
       # If no argument specified tests start by default on chrome
       case "$1" in
@@ -25,10 +30,10 @@ function ci_tests {
     if [[ "$MESSAGE" == *\[e2e-skip\]* ]]; then
         message "[WARN] Skipping E2E tests !!!"
     else
-        npm run e2e-setup
+        e2e_setup
         npm run e2e-http-server
         npm run e2e-chrome
-        mv reports/selenium-debug.log reports/chrome-debug.log
+        cp reports/selenium-debug.log reports/chrome-debug.log
         # Firefox changed driver to geckodriver due to this compatibility with Selenium is not complete
         # For now disabling them, more info: http://nightwatchjs.org/getingstarted#geckodriver
         # npm run e2e-firefox
