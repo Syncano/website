@@ -1,4 +1,4 @@
-export function command(element) {
+exports.command = function command(element) {
   return this
     .waitForElementPresent(element)
     .moveToElement(element, 0, 0)

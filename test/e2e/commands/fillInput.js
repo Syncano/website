@@ -1,4 +1,4 @@
-export function command(element, string) {
+exports.command = function command(element, string) {
   return this
     .waitForElementVisible(element)
     .clearValue(element)

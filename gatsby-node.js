@@ -24,7 +24,7 @@ exports.modifyWebpackConfig = function(config, env) {
     return cfg;
   });
 
-  config.plugin('webpack-extended-define', ExtendedDefinePlugin, [{APP_CONFIG}]);
+  config.plugin('webpack-extended-define', ExtendedDefinePlugin, [{ APP_CONFIG }]);
 
   if (env === 'build-html') config._config.target = 'web';
 
