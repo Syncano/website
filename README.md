@@ -43,7 +43,7 @@ are copied to `public` folder.
 # E2E Testing
 
 We are using [Nightwatch.js](http://nightwatchjs.org/) for e2e testing.
-**Nightwatch.js** requires few binary files which can be installed but they will be installed when tests start.
+**Nightwatch.js** requires a few binary files which can be installed but they will be installed when tests start.
 
 You'll also need to configure env variables for the tests to work locally:
 
