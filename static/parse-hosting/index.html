@@ -183,6 +183,7 @@
         $('.jsForm').addClass('form--success');
 
         analytics.track('Subscribed to Parse List', { email: email });
+        analytics.identify({parseEmail: email});
       });
     </script>
 </body>
