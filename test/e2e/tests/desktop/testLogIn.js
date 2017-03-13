@@ -1,8 +1,6 @@
 export default {
   tags: ['login'],
-  after(client) {
-    client.end();
-  },
+  after: client => client.getChromeLogs().end(),
   'Test Log In using email address': (client) => {
     const formPage = client.page.formPage();
 
@@ -17,4 +15,4 @@ export default {
       .clickElement('@confirmButton')
       .waitForElementPresent('@dashboardBar');
   }
-}
+};

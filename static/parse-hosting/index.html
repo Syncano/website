@@ -42,7 +42,7 @@
       color: inherit;
       text-decoration: underline;
     }
-    
+
     .wrapper {
       margin: 10% 5%;
     }
@@ -53,7 +53,7 @@
       line-height: 18px;
       padding: 18px 20px;
       border-radius: 4px;
-    }  
+    }
 
     .form input,
     .form__message {
@@ -63,7 +63,7 @@
     .form .input {
       border: 1px solid #DBDEE3;
     }
-    
+
     .form .button {
       background: #FFCC01;
       color: #1D2228;
@@ -76,7 +76,7 @@
     .form .button:hover {
       opacity: .8;
     }
-    
+
     .form__message {
       display: none;
       text-align: center;
@@ -127,7 +127,7 @@
       }
     }
   </style>
-  
+
 </head>
 <body>
   <div class="wrapper">
@@ -142,14 +142,14 @@
           As you all know Facebook's Parse developer platform has been shut down as mentioned on <a href="https://techcrunch.com/2017/01/30/facebooks-parse-developer-platform-is-shutting-down-today/" target="_blank">Techcrunch</a>.
         </p>
         <p>
-          We want to inform you that here at Syncano we are currently working on a solution for hosting your Parse backend. If you are eager to know more about this, sign up and we will let you know once launched (..in near future).
-        </p> 
+          We want to inform you that here at Syncano we are currently working on a solution for hosting your Parse backend. If you are eager to know more about this, sign up and we will let you know once launched (...in the near future).
+        </p>
       </div>
       <div class="form jsForm">
         <form action="" method="POST" id="form" target="hiddenFrame">
             <div class="form__message jsFormMessage"><p></p></div>
             <input class="input" type="email" id="email-form" required placeholder="E-mail address..."></input>
-            <input type="submit" name="submit" class="button" value="Send" />
+            <input type="submit" name="submit" class="button" value="Subscribe" />
           </form>
           <p>
             Best regards,<br/>
@@ -161,21 +161,28 @@
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
+        analytics.load("fLDtpYXRjFYnHlp1gvzl4I3Gv8gDoQ8m");
+        analytics.ready(function () {
+          if (analytics.user().id()) {
+            analytics.identify();
+          }
+        });
+        analytics.page('Parse')
+      }}();
+
       $('#form').on('submit', function() {
-        const emaildata = encodeURIComponent($('#email-form').val());
-        const question = 'entry.189509516';
-        const messageSent = 'Message sent!';
-        const baseURL = 'https://docs.google.com/a/syncano.com/forms/d/e/1FAIpQLSfXdcjVfJiXKQgm1J_pM5Zw8sAv8PKaQIPu1YAKyaTfm1CqfA/formResponse?';
-        const submitRef = '&submit=Submit';
-        const submitURL = `${baseURL}${question}=${emaildata}${submitRef}`;
-        $(this)[0].action=submitURL;
+        const email = $('#email-form').val();
+
         $('input').click(function(){
           $('.jsFormMessage p').html('');
         });
         $('#email-form').val('');
-        $('.jsFormMessage p').html(messageSent);
+        $('.jsFormMessage p').html('Subscribed!');
         $('.jsFormMessage').addClass('form__message--success').show();
         $('.jsForm').addClass('form--success');
+
+        analytics.track('Subscribed to Parse List', { email: email });
       });
     </script>
 </body>
