@@ -182,7 +182,8 @@
         $('.jsFormMessage').addClass('form__message--success').show();
         $('.jsForm').addClass('form--success');
 
-        analytics.track('Subscribed to Parse List', { email: email });
+        analytics.track('Subscribed to Parse List', { parseEmail: email });
+        analytics.identify({parseEmail: email});
       });
     </script>
 </body>
