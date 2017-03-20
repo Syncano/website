@@ -1,8 +1,0 @@
-# Start by installing syncano tool
-$ pip install syncano-cli
-
-# Login to your syncano instance
-$ syncano login --instance-name <base_dir>
-
-# Publish <base_dir> to hosting
-$ syncano hosting publish <base_dir>
