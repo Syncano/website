@@ -2,8 +2,11 @@ import React from 'react';
 import { Link } from 'react-router';
 import StatusInfo from '../components/StatusInfo';
 
-const SyncanoStatusBar = () => (
-  <div className="syncano-status-bar">
+const SyncanoStatusBar = props => (
+  <div
+    className="syncano-status-bar"
+    style={props.style}
+  >
     <div className="syncano-status-bar__news-column">
       <div>News from Syncano:</div>
       <a
