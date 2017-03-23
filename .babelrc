@@ -1,0 +1,4 @@
+{
+  "presets": [ "zefir/babel" ],
+  "plugins": [ "inline-react-svg" ]
+}
