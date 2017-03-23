@@ -27,8 +27,7 @@ class Template extends Component {
     super();
 
     this.state = {
-      topBarHeight: 0,
-      closeBetaBanner: localStorage.getItem('closeBetaBanner'),
+      topBarHeight: 0
     };
   };
 
@@ -43,6 +42,9 @@ class Template extends Component {
   };
 
   componentDidMount() {
+    this.setState({
+      closeBetaBanner: localStorage.getItem('closeBetaBanner')
+    })
     this.handleGetModalFromQuery() ? this.handleOpenModal() : this.trackPageView();
     this.setTopBarHeight();
   };
@@ -101,7 +103,6 @@ class Template extends Component {
 
   onApplyBeta() {
     console.log('Apply for beta');
-    // route to application view
   };
 
   render() {
@@ -111,12 +112,8 @@ class Template extends Component {
     return (
       <div>
         {showBetaBanner && <BetaSignUp />}
-        <TopBar 
-          showBetaBanner={showBetaBanner}
-        />
-        <div 
-          className="wrapper"
-        >
+        <TopBar showBetaBanner={showBetaBanner} />
+        <div className="wrapper">
           {children}
         }
         </div>

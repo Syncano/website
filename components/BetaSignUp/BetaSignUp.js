@@ -59,16 +59,7 @@ const BetaSignUp = React.createClass({
         borderBottom: '1px solid #fff',
         cursor: 'pointer'
       }
-
     };
-  },
-
-  renderBetaBadge() {
-    const styles = this.getStyles();
-
-    return (
-      <span style={styles.betaBadge}>Beta</span>
-    );
   },
 
   render() {
@@ -91,7 +82,7 @@ const BetaSignUp = React.createClass({
           ASCEND
         </div>
         <div style={styles.toolbarList && styles.toolbarGroup}>
-          {this.renderBetaBadge()}
+        <span style={styles.betaBadge}>Beta</span>
         </div>
         <div style={styles.toolbarList && styles.toolbarGroup}>
           Get a sneak peek before anyone else:

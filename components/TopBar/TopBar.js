@@ -7,8 +7,6 @@ import { LoggedInContent, LoggedOutContent } from '../LoggedInContent';
 import SyncanoStatusBar from '../SyncanoStatusBar';
 
 const TopBar = (props, { hamburgerMenu, modals }) => {
-  console.log('props', props);
-
   const styles = {
     noTopOnBar: {
       top: !props.showBetaBanner && 0
@@ -18,9 +16,7 @@ const TopBar = (props, { hamburgerMenu, modals }) => {
 
   return (
     <div>
-      <SyncanoStatusBar
-        style={styles.noTopOnBar}
-      />
+      <SyncanoStatusBar style={styles.noTopOnBar} />
       <Headroom
         style={styles.noTopOnBar}
         id="top-bar"
