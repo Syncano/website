@@ -15,7 +15,7 @@ const CloseButton = (props, context) => {
       justifyContent: 'center'
     }
   };
-  console.log('context', context);
+
   return (
     <div
       style={{ ...props.style, ...styles.button }}
