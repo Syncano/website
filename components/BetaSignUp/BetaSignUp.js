@@ -13,6 +13,7 @@ const BetaSignUp = React.createClass({
         display: 'flex',
         justifyContent: 'center',
         fontSize: 18,
+        cursor: 'pointer',
         color: 'rgb(155, 155, 155)',
         position: 'fixed',
         width: '100%',
@@ -62,40 +63,51 @@ const BetaSignUp = React.createClass({
     };
   },
 
+  renderBetaBadge() {
+    const styles = this.getStyles();
+
+    return (
+      <span style={styles.betaBadge}>Beta</span>
+    );
+  },
+
   render() {
     const styles = this.getStyles();
 
     return (
-      <div style={styles.topToolbar && styles.banner}>
+      <div>
         <CloseButton />
-        <div style={styles.toolbarList && styles.toolbarGroup}>
-          Get ready for
-        </div>
-        <div style={styles.toolbarList && styles.toolbarGroup}>
-          <img
-            style={styles.logo}
-            src={require('./syncano-logo.svg')}
-            alt="Syncano Logo"
-          />
-        </div>
-        <div style={{ ...styles.toolbarList && styles.ascend }}>
-          ASCEND
-        </div>
-        <div style={styles.toolbarList && styles.toolbarGroup}>
-        <span style={styles.betaBadge}>Beta</span>
-        </div>
-        <div style={styles.toolbarList && styles.toolbarGroup}>
-          Get a sneak peek before anyone else:
-        </div>
-        <div style={styles.toolbarList && styles.toolbarGroup}>
-          <div
-            style={styles.applyBeta}
-            onClick={() => this.context.onApplyBeta()}
-          >
-            Apply for beta access
+        <div
+          style={styles.topToolbar && styles.banner}
+          onClick={() => this.context.onApplyBeta()}
+        >
+          <div style={styles.toolbarList && styles.toolbarGroup}>
+            Get ready for
+          </div>
+          <div style={styles.toolbarList && styles.toolbarGroup}>
+            <img
+              style={styles.logo}
+              src={require('./syncano-logo.svg')}
+              alt="Syncano Logo"
+            />
+          </div>
+          <div style={{ ...styles.toolbarList && styles.ascend }}>
+            ASCEND
+          </div>
+          <div style={styles.toolbarList && styles.toolbarGroup}>
+            {this.renderBetaBadge()}
+          </div>
+          <div style={styles.toolbarList && styles.toolbarGroup}>
+            Get a sneak peek before anyone else:
+          </div>
+          <div style={styles.toolbarList && styles.toolbarGroup}>
+            <div
+              style={styles.applyBeta}
+            >
+              Apply for beta access
+            </div>
           </div>
         </div>
-
       </div>
     );
   }

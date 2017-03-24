@@ -1,13 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 import _ from 'lodash';
-import { MODALS } from '../components/Modals/Modals';
-import Helmet from 'react-helmet';
-import { LoggedInHOC, Modals, ModalsHOC, TopBar } from '../components';
-import GLOBAL_CONFIG from '../config/global';
 import 'normalize.css';
 import 'styles/styles';
-import BetaSignUp from '../components/BetaSignUp';
-import utils from '../utils';
+import { MODALS } from '../components/Modals/Modals';
+import Helmet from 'react-helmet';
+import { LoggedInHOC, Modals, ModalsHOC, TopBar, BetaSignUp, Dialog, BetaDialogContent } from '../components';
+import GLOBAL_CONFIG from '../config/global';
 
 class Template extends Component {
   static contextTypes = {
@@ -20,14 +18,17 @@ class Template extends Component {
     isLandingPage: PropTypes.bool,
     topBarHeight: PropTypes.number,
     closeBanner: PropTypes.func,
-    onApplyBeta: PropTypes.func
+    onApplyBeta: PropTypes.func,
+    onRequestClose: PropTypes.func
   };
 
   constructor() {
     super();
 
     this.state = {
-      topBarHeight: 0
+      topBarHeight: 0,
+      isDialogOpen: false,
+      closeBetaBanner: localStorage.getItem('closeBetaBanner')
     };
   };
 
@@ -37,7 +38,8 @@ class Template extends Component {
       isLandingPage: _.includes(GLOBAL_CONFIG.landingPagesSlugs, this.props.location.pathname),
       topBarHeight: this.state.topBarHeight,
       closeBanner: this.closeBetaBanner.bind(this),
-      onApplyBeta: this.onApplyBeta.bind(this)
+      onApplyBeta: this.onApplyBeta.bind(this),
+      onRequestClose: this.closeDialog.bind(this)
     };
   };
 
@@ -97,26 +99,50 @@ class Template extends Component {
   };
 
   closeBetaBanner() {
-    localStorage.setItem('closeBetaBanner', true);
-    this.setState({ closeBetaBanner: true });
+    localStorage.setItem('closeBetaBanner', false);
+    this.setState({ closeBetaBanner: true, isDialogOpen: false, });
   };
 
+  closeDialog() {
+    this.setState({ isDialogOpen: false })
+  }
+
   onApplyBeta() {
-    //referal page opens here
+
+    this.setState({ isDialogOpen: true })
   };
 
   render() {
     const { children } = this.props;
+    const { isDialogOpen } = this.state;
     const showBetaBanner = !this.state.closeBetaBanner;
+    const styles = isDialogOpen && {
+      content: {
+        filter: 'blur(5px)',
+        overflow: 'hidden',
+        height: '100vh'
+      }
+    };
 
     return (
       <div>
         {showBetaBanner && <BetaSignUp />}
-        <TopBar showBetaBanner={showBetaBanner} />
-        <div className="wrapper">
+        <TopBar 
+          style={styles.content}
+          showBetaBanner={showBetaBanner}
+        />
+        <div 
+          className="wrapper"
+          style={styles.content}
+        >
           {children}
         }
         </div>
+        <Dialog
+          isOpen={this.state.isDialogOpen}
+        >
+          <BetaDialogContent />
+        </Dialog>
         <Modals />
       </div>
     );

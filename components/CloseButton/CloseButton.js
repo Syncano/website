@@ -12,7 +12,8 @@ const CloseButton = (props, context) => {
       cursor: 'pointer',
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      zIndex: 9999
     }
   };
 
@@ -21,7 +22,7 @@ const CloseButton = (props, context) => {
       style={{ ...props.style, ...styles.button }}
       onClick={() => context.closeBanner()}
     >
-      x
+      X
     </div>
   );
 };
