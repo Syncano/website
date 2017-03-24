@@ -6,6 +6,7 @@ import { LoggedInHOC, Modals, ModalsHOC, TopBar } from '../components';
 import GLOBAL_CONFIG from '../config/global';
 import 'normalize.css';
 import 'styles/styles';
+import BetaSignUp from '../components/BetaSignUp';
 import utils from '../utils';
 
 class Template extends Component {
@@ -17,7 +18,9 @@ class Template extends Component {
   static childContextTypes = {
     location: PropTypes.object,
     isLandingPage: PropTypes.bool,
-    topBarHeight: PropTypes.number
+    topBarHeight: PropTypes.number,
+    closeBanner: PropTypes.func,
+    onApplyBeta: PropTypes.func
   };
 
   constructor() {
@@ -28,15 +31,20 @@ class Template extends Component {
     };
   };
 
-  getChildContext = () => {
+  getChildContext() {
     return {
       location: this.props.location,
       isLandingPage: _.includes(GLOBAL_CONFIG.landingPagesSlugs, this.props.location.pathname),
-      topBarHeight: this.state.topBarHeight
+      topBarHeight: this.state.topBarHeight,
+      closeBanner: this.closeBetaBanner.bind(this),
+      onApplyBeta: this.onApplyBeta.bind(this)
     };
   };
 
   componentDidMount() {
+    this.setState({
+      closeBetaBanner: localStorage.getItem('closeBetaBanner')
+    })
     this.handleGetModalFromQuery() ? this.handleOpenModal() : this.trackPageView();
     this.setTopBarHeight();
   };
@@ -88,14 +96,26 @@ class Template extends Component {
     return _.result(_.find(helmet.metaTags, [ 'name', 'mixpanelTitle' ]), 'content');
   };
 
+  closeBetaBanner() {
+    localStorage.setItem('closeBetaBanner', true);
+    this.setState({ closeBetaBanner: true });
+  };
+
+  onApplyBeta() {
+    //referal page opens here
+  };
+
   render() {
     const { children } = this.props;
+    const showBetaBanner = !this.state.closeBetaBanner;
 
     return (
       <div>
-        <TopBar />
+        {showBetaBanner && <BetaSignUp />}
+        <TopBar showBetaBanner={showBetaBanner} />
         <div className="wrapper">
           {children}
+        }
         </div>
         <Modals />
       </div>

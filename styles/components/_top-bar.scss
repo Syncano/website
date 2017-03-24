@@ -4,7 +4,6 @@
 
 .top-bar {
   position: fixed;
-  top: 0;
   left: 0;
   width: 100%;
   @include z-index(top-bar);
@@ -154,6 +153,7 @@
   @include medium {
     box-shadow: none;
     overflow: hidden;
+    top: 60px;
 
     &:before {
       display: none;
@@ -187,6 +187,7 @@
     &.headroom--pinned,
     &.headroom--unpinned {
       transform: translateY(-46px) !important;
+      top: 60px;
 
       > .inner {
         transform: translateY(23px);

@@ -5,11 +5,13 @@ import AboutUsHeaderImage from './AboutUsHeaderImage';
 import Analytics from './Analytics';
 import ArchitecturePresentationSection from './ArchitecturePresentationSection';
 import AuthHOC from './AuthHOC';
+import BetaSignUp from './BetaSignUp';
 import BlockquoteSection from './BlockquoteSection';
 import BrowserWindow from './BrowserWindow';
 import CardTestimonials from './CardTestimonials';
 import Check from './Check';
 import CircleIconColumns from './CircleIconColumns';
+import CloseButton from './CloseButton';
 import CodePreview from './CodePreview';
 import ColumnParagraphs from './ColumnParagraphs';
 import CommunityExamples from './CommunityExamples';
@@ -76,11 +78,13 @@ export default {
   Analytics,
   ArchitecturePresentationSection,
   AuthHOC,
+  BetaSignUp,
   BlockquoteSection,
   BrowserWindow,
   CardTestimonials,
   Check,
   CircleIconColumns,
+  CloseButton,
   CodePreview,
   ColumnParagraphs,
   CommunityExamples,
