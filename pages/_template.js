@@ -102,7 +102,7 @@ class Template extends Component {
   };
 
   onApplyBeta() {
-    console.log('Apply for beta');
+    //referal page opens here
   };
 
   render() {
