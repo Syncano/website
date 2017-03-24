@@ -241,22 +241,14 @@ const PromoteSyncanoSection = React.createClass({
 
   addIntercomLead({ email, customAttributes = {} }) {
     axios.post('https://intercom-socket.syncano.link/intercom/add_lead/', {
-      environment: APP_CONFIG.ENV === 'production' ? 'prod' : '',
+      environment: APP_CONFIG.env === 'production' ? 'prod' : '',
       email,
       custom_attributes: customAttributes
     });
   },
 
-  // handleDevButtonClick(devType) {
-  //   const { email, devType } = this.state;
-  //   window.analytics.track('Beta user subscription', {
-  //     devType,
-  //     email
-  //   });
-  // },
 
   handleDevOptionChange(devType) {
-    // console.log('eee', changeEvent.target.value);
     this.setState({
       devType
     });
@@ -445,6 +437,9 @@ const PromoteSyncanoSection = React.createClass({
   render() {
     const styles = this.getStyles();
     const { step } = this.state;
+
+    console.log('APP_CONFIG', APP_CONFIG);
+
 
 
     const renderStep = [

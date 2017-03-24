@@ -27,8 +27,7 @@ class Template extends Component {
 
     this.state = {
       topBarHeight: 0,
-      isDialogOpen: false,
-      closeBetaBanner: localStorage.getItem('closeBetaBanner')
+      isDialogOpen: false
     };
   };
 
@@ -108,7 +107,7 @@ class Template extends Component {
   }
 
   onApplyBeta() {
-
+    // window.analytics.track('User clicked banner');
     this.setState({ isDialogOpen: true })
   };
 
