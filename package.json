@@ -22,7 +22,7 @@
     "js-yaml": "3.8.0",
     "lodash": "4.17.4",
     "moment": "2.17.1",
-    "normalize.css": "5.0.0",
+    "normalize.css": "6.0.0",
     "numeral": "2.0.4",
     "react-body-classname": "1.1.0",
     "react-headroom": "2.1.3",
