@@ -39,12 +39,11 @@ const PromoteSyncanoSection = React.createClass({
           }
         });
       } else {
-        this.addIntercomLead({ email, customAttributes: { devType } });
+        this.addIntercomLead({ email, customAttributes: { devType, beta_inviter_email: devType ? '' : devEmail } });
 
         this.setState({
           emails: '',
           devType: '',
-          devEmail: '',
           step: step + 1
         });
       }
@@ -240,7 +239,7 @@ const PromoteSyncanoSection = React.createClass({
   },
 
   addIntercomLead({ email, customAttributes = {} }) {
-    axios.post('https://intercom-socket.syncano.link/intercom/add_lead/', {
+    axios.post('https://intercom-socket.syncano.space/intercom/add_lead/', {
       environment: APP_CONFIG.env === 'production' ? 'prod' : '',
       email,
       custom_attributes: customAttributes
@@ -339,12 +338,16 @@ const PromoteSyncanoSection = React.createClass({
   renderPromoteSection() {
     const styles = this.getStyles();
     const { emails, errors, alreadyInvited } = this.state;
+    const emailConfirm = location.search === '?utm_source=beta_email_confirmation&utm_campaign=beta_ascend&utm_name=beta_ascend'
 
     return (
       <div>
         <section style={styles.cta}>
           <div style={styles.emailVerify}>
-            {alreadyInvited ? '' : "We've sent you a verification email." }
+            {(!alreadyInvited && !emailConfirm) ? "We've sent you a verification email." : '' }
+          </div>
+          <div style={styles.emailVerify}>
+            {(emailConfirm && !alreadyInvited) ? 'Email confirmed.' : ''}
           </div>
           <p style={styles.ctaText}>
             Want to get to the top of the list?
@@ -426,7 +429,7 @@ const PromoteSyncanoSection = React.createClass({
         </p>
         <SocialButton
           style={{ ...styles.inviteButton }}
-          onClick={() => this.setState({ step: step - 1, alreadyInvited: true })}
+          onClick={() => this.setState({ step: step - 1, alreadyInvited: true,  })}
         >
         INVITE MORE PEOPLE
         </SocialButton>

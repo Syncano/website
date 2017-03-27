@@ -107,7 +107,7 @@ class Template extends Component {
   }
 
   onApplyBeta() {
-    // window.analytics.track('User clicked banner');
+    analytics.track('User clicked banner');
     this.setState({ isDialogOpen: true })
   };
 
