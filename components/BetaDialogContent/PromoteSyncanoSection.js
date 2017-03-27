@@ -353,7 +353,7 @@ const PromoteSyncanoSection = React.createClass({
         >
           {!alreadyInvited && !emailConfirm &&
             <div style={styles.emailVerify}>
-              We've sent you a verification email.
+              {"We've sent you a verification email."}
             </div>
           }
           {emailConfirm && !alreadyInvited && 
