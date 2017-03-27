@@ -3,8 +3,6 @@
   overflow-y: auto;
 }
 
-
-
 .promote-syncano-section {
   width: 40%;
   padding: 40px 60px;
@@ -41,7 +39,6 @@
   z-index: 9999;
 }
 
-
 .social-button{
   border: 10px;
   box-sizing: border-box;
@@ -73,6 +70,11 @@
     width: 100%;
     padding: 40px 10px;
   }
+  .promote-cta {
+    div {
+      width:100%;
+    }
+  }
   .overview-row {
     flex-wrap: wrap;
     display:flex;
@@ -89,6 +91,7 @@
       }
     }
   }
+
   .close-button-icon {
     right: 6%;
   }
