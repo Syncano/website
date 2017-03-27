@@ -28,7 +28,8 @@ const PromoteSyncanoSection = React.createClass({
     if (!emailsToTrack[step]) return true;
 
     return emailsToTrack[step].forEach((email, index, arr) => {
-      const isValidEmail = new RegExp('\\S+@\\S+\\.\\S+', 'g').test(email);
+      const emailRegex = new RegExp("^[a-z][a-zA-Z0-9_.+]*(\.[a-zA-Z][a-zA-Z0-9_.]*)?@[a-z][a-zA-Z-0-9]*\.[a-z]+(\.[a-z]+)?$", 'g');
+      const isValidEmail = emailRegex.test(email);
 
       if (!isValidEmail) {
         arr.length = 0;
@@ -52,7 +53,7 @@ const PromoteSyncanoSection = React.createClass({
   },
 
   getStyles() {
-    const { errors, devEmail, emails } = this.state;
+    const { errors, devEmail, emails, devType } = this.state;
     const isWrongEmail = errors.emails;
 
     return {
@@ -98,7 +99,6 @@ const PromoteSyncanoSection = React.createClass({
       cta: {
         lineHeight: '25px',
         position: 'relative',
-        bottom: 40,
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'center'
@@ -189,12 +189,11 @@ const PromoteSyncanoSection = React.createClass({
       applyForBetaForm: {
         display: 'flex',
         flexDirection: 'column',
-        position: 'relative',
-        bottom: 40
+        position: 'relative'
       },
       applyForBetaButton: {
         fontFamily: 'Avenir, sans-serif',
-        backgroundColor: '#1976d2',
+        backgroundColor: (devEmail && devType) ? '#1976d2' : '#ddd',
         height: 50,
         marginTop: 10
       },
@@ -214,7 +213,8 @@ const PromoteSyncanoSection = React.createClass({
       emailVerify: {
         fontSize: 20,
         color: '#39e600',
-        position: 'relative'
+        position: 'relative',
+        textAlign: 'center'
       },
       thankYou: {
         fontSize: '1.2em',
@@ -437,10 +437,6 @@ const PromoteSyncanoSection = React.createClass({
   render() {
     const styles = this.getStyles();
     const { step } = this.state;
-
-    console.log('APP_CONFIG', APP_CONFIG);
-
-
 
     const renderStep = [
       () => this.renderDevOptionSection(),

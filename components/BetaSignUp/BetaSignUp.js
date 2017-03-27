@@ -76,12 +76,15 @@ const BetaSignUp = React.createClass({
 
     return (
       <div>
-        <CloseButton />
+        <CloseButton/>
         <div
           style={styles.topToolbar && styles.banner}
           onClick={() => this.context.onApplyBeta()}
         >
-          <div style={styles.toolbarList && styles.toolbarGroup}>
+          <div
+            className="hide-on-mobile"
+            style={styles.toolbarList && styles.toolbarGroup}
+          >
             Get ready for
           </div>
           <div style={styles.toolbarList && styles.toolbarGroup}>
@@ -97,14 +100,24 @@ const BetaSignUp = React.createClass({
           <div style={styles.toolbarList && styles.toolbarGroup}>
             {this.renderBetaBadge()}
           </div>
-          <div style={styles.toolbarList && styles.toolbarGroup}>
+          <div
+            className="hide-on-mobile"
+            style={styles.toolbarList && styles.toolbarGroup}
+          >
             Get a sneak peek before anyone else:
           </div>
           <div style={styles.toolbarList && styles.toolbarGroup}>
             <div
+              className="hide-on-mobile"
               style={styles.applyBeta}
             >
               Apply for beta access
+            </div>
+            <div
+              className="show-on-mobile"
+              style={styles.applyBeta}
+            >
+              APPLY
             </div>
           </div>
         </div>

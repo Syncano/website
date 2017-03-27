@@ -31,7 +31,7 @@ const SyncanoOverviewSection = () => {
 
   return (
     <div style={styles.root}>
-      <div style={styles.rowContainer}>
+      <div className="overview-row" style={styles.rowContainer}>
         <div style={styles.box}>
           <img src={require('../../images/features/socket.svg')} alt="socket icon" />
           <h2 style={styles.title}>Socket Registry</h2>
@@ -47,7 +47,7 @@ const SyncanoOverviewSection = () => {
           </p>
         </div>
       </div>
-      <div style={styles.rowContainer}>
+      <div className="overview-row" style={styles.rowContainer}>
         <div style={styles.box}>
           <img src={require('../../images/features/terminal.svg')} alt="terminal icon" />
           <h2 style={styles.title}>Powerful CLI</h2>
@@ -63,7 +63,7 @@ const SyncanoOverviewSection = () => {
           </p>
         </div>
       </div>
-      <div style={styles.rowContainer}>
+      <div className="overview-row" style={styles.rowContainer}>
         <div style={styles.box}>
           <img src={require('../../images/features/database.svg')} alt="database icon" />
           <h2 style={styles.title}>Realtime storage</h2>

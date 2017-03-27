@@ -210,6 +210,38 @@
     }
   }
 }
+.close-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.show-on-mobile {
+  display:none;
+}
+
+@media(max-width:1025px) {
+  .hide-on-mobile {
+    display:none !important;
+  }
+  .show-on-mobile {
+    display:block;
+  }
+}
+
+@media(max-width:450px) {
+  .close-button {
+    display:none;
+  }
+}
 
 .headroom {
   @extend .top-bar;
