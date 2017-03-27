@@ -342,7 +342,10 @@ const PromoteSyncanoSection = React.createClass({
 
     return (
       <div>
-        <section style={styles.cta}>
+        <section 
+          className="promote-cta" 
+          style={styles.cta}
+        >
           <div style={styles.emailVerify}>
             {(!alreadyInvited && !emailConfirm) ? "We've sent you a verification email." : '' }
           </div>
