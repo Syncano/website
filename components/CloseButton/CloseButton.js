@@ -1,27 +1,13 @@
 import React from 'react';
 
 const CloseButton = (props, context) => {
-  const styles = {
-    button: {
-      position: 'absolute',
-      top: 5,
-      right: 10,
-      width: 48,
-      height: 48,
-      padding: 12,
-      cursor: 'pointer',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center'
-    }
-  };
-
   return (
     <div
-      style={{ ...props.style, ...styles.button }}
+      className="close-button"
+      style={{ ...props.style }}
       onClick={() => context.closeBanner()}
     >
-      x
+      X
     </div>
   );
 };

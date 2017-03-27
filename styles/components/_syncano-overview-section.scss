@@ -1,0 +1,10 @@
+.overviewRow {
+  @include medium {
+    display: flex;
+    flex-flow: column wrap;
+
+      .syncanoOverviewSection {
+      flex-wrap: wrap;
+    }
+  }
+}

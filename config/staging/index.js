@@ -12,5 +12,6 @@ export default {
   twitterConsumerKey: 'TWITTER_CONSUMER_KEY',
   twitterConsumerSecret: 'TWITTER_CONSUMER_SECRET',
   twitterAccessToken: 'TWITTER_ACCESS_TOKEN',
-  twitterAccessTokenSecret: 'TWITTER_ACCESS_TOKEN_SECRET'
+  twitterAccessTokenSecret: 'TWITTER_ACCESS_TOKEN_SECRET',
+  env: 'staging'
 };

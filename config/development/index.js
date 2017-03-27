@@ -12,5 +12,6 @@ export default {
   twitterConsumerKey: '',
   twitterConsumerSecret: '',
   twitterAccessToken: '',
-  twitterAccessTokenSecret: ''
+  twitterAccessTokenSecret: '',
+  env: 'development'
 };
