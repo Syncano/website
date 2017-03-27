@@ -11,13 +11,13 @@ class Dialog extends React.Component {
 
     return (
       <div>
-        <button
-          className="close-button-icon"
-          onClick={this.context.onRequestClose}
-        >
-          x
-        </button>
         <div className="dialog">
+          <button
+            className="close-button-icon"
+            onClick={this.context.onRequestClose}
+          >
+            x
+          </button>
           {children}
         </div>
         <BlurPageDialog onRequestClose={onRequestClose} />
