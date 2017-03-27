@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import axios from 'axios';
 
 import logo from '../../images/features/syncano-logo.svg';
@@ -6,6 +6,15 @@ import SocialButton from '../SocialButton';
 import RadioButton from '../RadioButton';
 
 const PromoteSyncanoSection = React.createClass({
+
+  componentWillMount() {
+    if (this.context.location.query.utm_source === 'beta_email_confirmation') {
+      this.setState({
+        step: 1 
+      });
+      this.context.location.query.utm_source = '';
+    }
+  },
 
   getInitialState() {
     return {
@@ -123,7 +132,9 @@ const PromoteSyncanoSection = React.createClass({
         textTransform: 'none',
         alignItems: 'center',
         justifyContent: 'center',
-        cursor: 'pointer'
+        cursor: (devEmail && devType) ? 'pointer' : 'default',
+        fontFamily: 'Avenir, sans-serif',
+        fontWeight: 500
       },
       inviteButton: {
         border: '10px',
@@ -143,13 +154,13 @@ const PromoteSyncanoSection = React.createClass({
         lineHeight: '36px',
         minWidth: '88px',
         color: 'rgb(33, 150, 243)',
-        transition: 'all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms',
         borderRadius: '2px',
         userSelect: 'none',
         position: 'relative',
         overflow: 'hidden',
         backgroundColor: 'rgba(0, 0, 0, 0)',
-        textAlign: 'center'
+        textAlign: 'center',
+        cursor: 'pointer'
       },
       formInfo: {
         fontSize: 14,
@@ -168,22 +179,16 @@ const PromoteSyncanoSection = React.createClass({
         backgroundColor: isWrongEmail ? '#FFF2F4' : '#F5F5F5',
         flex: 2,
         border: isWrongEmail ? '2px solid #C14A58' : '2px solid #E2E2E2',
-        textAlign: 'center',
         fontSize: 18
       },
       formButton: {
         backgroundColor: (devEmail || emails) ? '#1976d2' : '#ddd',
-        color: '#fff',
-        transition: 'all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms',
-        boxSizing: 'border-box',
         fontFamily: 'Avenir, sans-serif',
-        WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)',
         borderRadius: '5px',
-        display: 'inline-block',
         minWidth: '88px',
-        marginBottom: '0px',
-        overflow: 'hidden',
-        flex: '1 1 0%'
+        flex: 1,
+        margin: 0,
+        color: '#fff'
       },
       applyForBetaForm: {
         display: 'flex',
@@ -194,30 +199,32 @@ const PromoteSyncanoSection = React.createClass({
         fontFamily: 'Avenir, sans-serif',
         backgroundColor: (devEmail && devType) ? '#1976d2' : '#ddd',
         height: 50,
-        marginTop: 10
+        marginTop: 10,
+        color: '#fff'
       },
       applyForBetaInput: {
-        textAlign: 'left',
-        backgroundColor: '#f2f2f2',
+        backgroundColor: isWrongEmail ? '#FFF2F4' : '#f2f2f2',
         letterSpacing: 1,
-        color: '#000',
         paddingLeft: '5%',
-        height: 50
+        height: 50,
+        color: '#000'
       },
       errors: {
         fontSize: 14,
         color: 'red',
-        position: 'absolute'
+        marginTop: 10
       },
       emailVerify: {
         fontSize: 20,
         color: '#39e600',
         position: 'relative',
-        textAlign: 'center'
+        textAlign: 'center',
+        width: '100%'
       },
       thankYou: {
         fontSize: '1.2em',
-        paddingBottom: 15
+        paddingBottom: 15,
+        color: '#000'
       }
     };
   },
@@ -320,14 +327,12 @@ const PromoteSyncanoSection = React.createClass({
       <form style={styles.ctaButtons} required>
         <RadioButton
           title="I'm a Product Developer"
-          style={{ ...styles.buttonContainer }}
           onChange={() => this.handleDevOptionChange('product')}
           checked={devType === 'product'}
 
         />
         <RadioButton
           title="I'm a Software Developer"
-          style={{ ...styles.buttonContainer }}
           onChange={() => this.handleDevOptionChange('software')}
           checked={devType === 'software'}
         />
@@ -346,12 +351,16 @@ const PromoteSyncanoSection = React.createClass({
           className="promote-cta" 
           style={styles.cta}
         >
-          <div style={styles.emailVerify}>
-            {(!alreadyInvited && !emailConfirm) ? "We've sent you a verification email." : '' }
-          </div>
-          <div style={styles.emailVerify}>
-            {(emailConfirm && !alreadyInvited) ? 'Email confirmed.' : ''}
-          </div>
+          {!alreadyInvited && !emailConfirm &&
+            <div style={styles.emailVerify}>
+              We've sent you a verification email.
+            </div>
+          }
+          {emailConfirm && !alreadyInvited && 
+            <div style={styles.emailVerify}>
+              Email confirmed.
+            </div>
+          }
           <p style={styles.ctaText}>
             Want to get to the top of the list?
             <br />
@@ -367,7 +376,7 @@ const PromoteSyncanoSection = React.createClass({
           <input
             name="emails"
             placeholder="Enter email addresses"
-            style={styles.formInput}
+            style={{ ...styles.formInput, marginRight: 10, paddingLeft: '5%' }}
             onChange={this.handleEmailsChange}
           />
           <button
@@ -407,6 +416,7 @@ const PromoteSyncanoSection = React.createClass({
             style={{ ...styles.formInput, ...styles.formButton, ...styles.applyForBetaInput }}
             onChange={this.handleDevEmailChange}
           />
+          <div style={styles.errors}>{this.state.errors.emails}</div>
           <button
             disabled={!devEmail || !devType}
             style={{ ...styles.buttonContainer, ...styles.formButton, ...styles.applyForBetaButton }}
@@ -415,7 +425,6 @@ const PromoteSyncanoSection = React.createClass({
             Apply for beta
           </button>
         </form>
-        <div style={styles.errors}>{this.state.errors.emails}</div>
       </div>
     );
   },
@@ -432,7 +441,7 @@ const PromoteSyncanoSection = React.createClass({
         </p>
         <SocialButton
           style={{ ...styles.inviteButton }}
-          onClick={() => this.setState({ step: step - 1, alreadyInvited: true,  })}
+          onClick={() => this.setState({ step: step - 1, alreadyInvited: true })}
         >
         INVITE MORE PEOPLE
         </SocialButton>
@@ -442,7 +451,7 @@ const PromoteSyncanoSection = React.createClass({
 
   render() {
     const styles = this.getStyles();
-    const { step } = this.state;
+    let { step } = this.state;
 
     const renderStep = [
       () => this.renderDevOptionSection(),
@@ -470,5 +479,10 @@ const PromoteSyncanoSection = React.createClass({
     );
   }
 });
+
+
+PromoteSyncanoSection.contextTypes = {
+  location: PropTypes.object
+}
 
 export default PromoteSyncanoSection;

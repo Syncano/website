@@ -5,7 +5,7 @@ const SyncanoOverviewSection = () => {
     root: {
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'center',
+      alignItems: 'center',
       height: '100%'
     },
     rowContainer: {

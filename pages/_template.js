@@ -50,9 +50,17 @@ class Template extends Component {
     this.setTopBarHeight();
   };
 
+  componentWillMount() {
+    if (this.props.location.query.utm_name === 'beta_ascend') {
+      this.setState({
+        isDialogOpen: true
+      });
+    }
+  }
+
   componentDidUpdate(prevProps) {
     const { pathname, state, hash, action } = this.props.location;
-    const { pathname: previousPath, hash: previousHash }= prevProps.location;
+    const { pathname: previousPath, hash: previousHash } = prevProps.location;
     const forceTrack = state && state.forceTrack;
 
     if (pathname !== previousPath || forceTrack) {
@@ -103,7 +111,7 @@ class Template extends Component {
   };
 
   closeDialog() {
-    this.setState({ isDialogOpen: false })
+    this.setState({ isDialogOpen: false });
   }
 
   onApplyBeta() {
@@ -112,33 +120,28 @@ class Template extends Component {
   };
 
   render() {
-    const { children } = this.props;
+    const { children, location } = this.props;
     const { isDialogOpen } = this.state;
     const showBetaBanner = !this.state.closeBetaBanner;
-    const styles = isDialogOpen && {
-      content: {
+    const styles = {
+      content: isDialogOpen ? {
         filter: 'blur(5px)',
         overflow: 'hidden',
         height: '100vh'
-      }
+      } : {}
     };
 
     return (
       <div>
-        {showBetaBanner && <BetaSignUp />}
-        <TopBar 
-          style={styles.content}
-          showBetaBanner={showBetaBanner}
-        />
-        <div 
-          className="wrapper"
-          style={styles.content}
-        >
-          {children}
-        }
+        <div style={styles.content}>
+          {showBetaBanner && <BetaSignUp />}
+          <TopBar showBetaBanner={showBetaBanner} />
+          <div className="wrapper">
+            {children}
+          </div>
         </div>
         <Dialog
-          isOpen={this.state.isDialogOpen}
+          isOpen={isDialogOpen}
         >
           <BetaDialogContent />
         </Dialog>
