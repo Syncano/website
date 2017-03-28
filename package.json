@@ -46,7 +46,7 @@
     "eslint-plugin-import": "2.2.0",
     "eslint-plugin-jsx-a11y": "4.0.0",
     "eslint-plugin-react": "6.8.0",
-    "extended-define-webpack-plugin": "0.1.2",
+    "extended-define-webpack-plugin": "0.1.3",
     "nightwatch": "0.9.9",
     "pre-commit": "1.2.2",
     "selenium-standalone": "6.0.1"
