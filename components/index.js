@@ -5,11 +5,14 @@ import AboutUsHeaderImage from './AboutUsHeaderImage';
 import Analytics from './Analytics';
 import ArchitecturePresentationSection from './ArchitecturePresentationSection';
 import AuthHOC from './AuthHOC';
+import BetaSignUp from './BetaSignUp';
+import BetaDialogContent from './BetaDialogContent';
 import BlockquoteSection from './BlockquoteSection';
 import BrowserWindow from './BrowserWindow';
 import CardTestimonials from './CardTestimonials';
 import Check from './Check';
 import CircleIconColumns from './CircleIconColumns';
+import CloseButton from './CloseButton';
 import CodePreview from './CodePreview';
 import ColumnParagraphs from './ColumnParagraphs';
 import CommunityExamples from './CommunityExamples';
@@ -19,6 +22,7 @@ import ContentSection from './ContentSection';
 import CounterBoxes from './CounterBoxes';
 import CTASection from './CTASection';
 import CustomerSection from './CustomerSection';
+import Dialog from './Dialog';
 import FAQ from './FAQ';
 import FeaturesColumns from './FeaturesColumns';
 import Footer from './Footer';
@@ -43,12 +47,14 @@ import Platforms from './Platforms';
 import PlatformsBar from './PlatformsBar';
 import PlatformsSection from './PlatformsSection';
 import Pricing from './Pricing';
+import RadioButton from './RadioButton';
 import ScreenDescriptions from './ScreenDescriptions';
 import SideIconParagraphs from './SideIconParagraphs';
 import SlackMessage from './SlackMessage';
 import SlackPromo from './SlackPromo';
 import SlackSlider from './SlackSlider';
 import SliderWrapper from './SliderWrapper';
+import SocialButton from './SocialButton';
 import SocialProfiles from './SocialProfiles';
 import StatusImage from './StatusImage';
 import StatusInfo from './StatusInfo';
@@ -76,11 +82,14 @@ export default {
   Analytics,
   ArchitecturePresentationSection,
   AuthHOC,
+  BetaSignUp,
+  BetaDialogContent,
   BlockquoteSection,
   BrowserWindow,
   CardTestimonials,
   Check,
   CircleIconColumns,
+  CloseButton,
   CodePreview,
   ColumnParagraphs,
   CommunityExamples,
@@ -89,6 +98,7 @@ export default {
   ContentSection,
   CounterBoxes,
   CTASection,
+  Dialog,
   CustomerSection,
   FAQ,
   FeaturesColumns,
@@ -119,12 +129,14 @@ export default {
   PlatformsBar,
   PlatformsSection,
   Pricing,
+  RadioButton,
   ScreenDescriptions,
   SideIconParagraphs,
   SlackMessage,
   SlackPromo,
   SlackSlider,
   SliderWrapper,
+  SocialButton,
   SocialProfiles,
   StatusImage,
   StatusInfo,

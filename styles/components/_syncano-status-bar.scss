@@ -4,6 +4,9 @@
   align-items: stretch;
   height: 50px;
   border-bottom: 1px solid $color-main-gray;
+  top: 60px;
+  position: absolute;
+  width:100%;
 
   .syncano-status-bar__news-column,
   .syncano-status-bar__status-column {

@@ -22,7 +22,7 @@ export default {
       locateStrategy: 'xpath'
     },
     dashboardBar: {
-      selector: '//li[@id="menu-solutions"]/a[text()="Solutions Market"]',
+      selector: '//button[@data-e2e="getting-started-top-nav-button"]',
       locateStrategy: 'xpath'
     }
   }

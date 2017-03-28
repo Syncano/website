@@ -1,12 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 import _ from 'lodash';
-import { MODALS } from '../components/Modals/Modals';
-import Helmet from 'react-helmet';
-import { LoggedInHOC, Modals, ModalsHOC, TopBar } from '../components';
-import GLOBAL_CONFIG from '../config/global';
 import 'normalize.css';
 import 'styles/styles';
-import utils from '../utils';
+import { MODALS } from '../components/Modals/Modals';
+import Helmet from 'react-helmet';
+import { LoggedInHOC, Modals, ModalsHOC, TopBar, BetaSignUp, Dialog, BetaDialogContent } from '../components';
+import GLOBAL_CONFIG from '../config/global';
 
 class Template extends Component {
   static contextTypes = {
@@ -17,33 +16,51 @@ class Template extends Component {
   static childContextTypes = {
     location: PropTypes.object,
     isLandingPage: PropTypes.bool,
-    topBarHeight: PropTypes.number
+    topBarHeight: PropTypes.number,
+    closeBanner: PropTypes.func,
+    onApplyBeta: PropTypes.func,
+    onRequestClose: PropTypes.func
   };
 
   constructor() {
     super();
 
     this.state = {
-      topBarHeight: 0
+      topBarHeight: 0,
+      isDialogOpen: false
     };
   };
 
-  getChildContext = () => {
+  getChildContext() {
     return {
       location: this.props.location,
       isLandingPage: _.includes(GLOBAL_CONFIG.landingPagesSlugs, this.props.location.pathname),
-      topBarHeight: this.state.topBarHeight
+      topBarHeight: this.state.topBarHeight,
+      closeBanner: this.closeBetaBanner.bind(this),
+      onApplyBeta: this.onApplyBeta.bind(this),
+      onRequestClose: this.closeDialog.bind(this)
     };
   };
 
   componentDidMount() {
+    this.setState({
+      closeBetaBanner: localStorage.getItem('closeBetaBanner')
+    })
     this.handleGetModalFromQuery() ? this.handleOpenModal() : this.trackPageView();
     this.setTopBarHeight();
   };
 
+  componentWillMount() {
+    if (this.props.location.query.utm_name === 'beta_ascend') {
+      this.setState({
+        isDialogOpen: true
+      });
+    }
+  }
+
   componentDidUpdate(prevProps) {
     const { pathname, state, hash, action } = this.props.location;
-    const { pathname: previousPath, hash: previousHash }= prevProps.location;
+    const { pathname: previousPath, hash: previousHash } = prevProps.location;
     const forceTrack = state && state.forceTrack;
 
     if (pathname !== previousPath || forceTrack) {
@@ -88,15 +105,46 @@ class Template extends Component {
     return _.result(_.find(helmet.metaTags, [ 'name', 'mixpanelTitle' ]), 'content');
   };
 
+  closeBetaBanner() {
+    localStorage.setItem('closeBetaBanner', false);
+    this.setState({ closeBetaBanner: true, isDialogOpen: false, });
+  };
+
+  closeDialog() {
+    this.setState({ isDialogOpen: false });
+  }
+
+  onApplyBeta() {
+    analytics.track('User clicked banner');
+    this.setState({ isDialogOpen: true })
+  };
+
   render() {
-    const { children } = this.props;
+    const { children, location } = this.props;
+    const { isDialogOpen } = this.state;
+    const showBetaBanner = !this.state.closeBetaBanner;
+    const styles = {
+      content: isDialogOpen ? {
+        filter: 'blur(5px)',
+        overflow: 'hidden',
+        height: '100vh'
+      } : {}
+    };
 
     return (
       <div>
-        <TopBar />
-        <div className="wrapper">
-          {children}
+        <div style={styles.content}>
+          {showBetaBanner && <BetaSignUp />}
+          <TopBar showBetaBanner={showBetaBanner} />
+          <div className="wrapper">
+            {children}
+          </div>
         </div>
+        <Dialog
+          isOpen={isDialogOpen}
+        >
+          <BetaDialogContent />
+        </Dialog>
         <Modals />
       </div>
     );
