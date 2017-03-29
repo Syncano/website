@@ -8,11 +8,18 @@ import RadioButton from '../RadioButton';
 const PromoteSyncanoSection = React.createClass({
 
   componentWillMount() {
-    if (this.context.location.query.utm_source === 'beta_email_confirmation') {
+    const { utm_source, utm_medium } = this.context.location.query;
+
+    if (utm_source === 'beta_email_confirmation') {
       this.setState({
-        step: 1 
+        step: 1,
+        inviterEmail: utm_medium
       });
-      this.context.location.query.utm_source = '';
+    }
+    if (utm_medium === 'email_referral') {
+      this.setState({
+        inviterEmail: utm_source
+      });
     }
   },
 
@@ -28,7 +35,9 @@ const PromoteSyncanoSection = React.createClass({
   onFormSubmit(event) {
     event.preventDefault();
 
-    const { emails = '', step, devEmail, devType } = this.state;
+    const { emails = '', step, devEmail, devType, inviterEmail } = this.state;
+    const { utm_source } = this.context.location.query;
+
     const emailsToTrack = [
       [devEmail],
       emails.match(/([^, ]+)/g)
@@ -48,7 +57,12 @@ const PromoteSyncanoSection = React.createClass({
           }
         });
       } else {
-        this.addIntercomLead({ email, customAttributes: { devType, beta_inviter_email: devType ? '' : devEmail } });
+        this.addIntercomLead({ email,
+          customAttributes: { 
+            devType,
+            beta_inviter_email: (devType ? '' : devEmail) || (utm_source ? inviterEmail : '')
+          }
+        });
 
         this.setState({
           emails: '',
@@ -247,7 +261,7 @@ const PromoteSyncanoSection = React.createClass({
 
   addIntercomLead({ email, customAttributes = {} }) {
     axios.post('https://intercom-socket.syncano.space/intercom/add_lead/', {
-      environment: APP_CONFIG.env === 'production' ? 'prod' : '',
+      environment: APP_CONFIG.env,
       email,
       custom_attributes: customAttributes
     });
@@ -343,12 +357,12 @@ const PromoteSyncanoSection = React.createClass({
   renderPromoteSection() {
     const styles = this.getStyles();
     const { emails, errors, alreadyInvited } = this.state;
-    const emailConfirm = location.search === '?utm_source=beta_email_confirmation&utm_campaign=beta_ascend&utm_name=beta_ascend'
+    const emailConfirm = location.search.includes('?utm_source=beta_email_confirmation&utm_campaign=beta_ascend&utm_name=beta_ascend');
 
     return (
       <div>
-        <section 
-          className="promote-cta" 
+        <section
+          className="promote-cta"
           style={styles.cta}
         >
           {!alreadyInvited && !emailConfirm &&
@@ -356,7 +370,7 @@ const PromoteSyncanoSection = React.createClass({
               {"We've sent you a verification email."}
             </div>
           }
-          {emailConfirm && !alreadyInvited && 
+          {emailConfirm && !alreadyInvited &&
             <div style={styles.emailVerify}>
               Email confirmed.
             </div>
@@ -451,7 +465,7 @@ const PromoteSyncanoSection = React.createClass({
 
   render() {
     const styles = this.getStyles();
-    let { step } = this.state;
+    const { step } = this.state;
 
     const renderStep = [
       () => this.renderDevOptionSection(),
