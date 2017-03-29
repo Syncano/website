@@ -261,7 +261,7 @@ const PromoteSyncanoSection = React.createClass({
 
   addIntercomLead({ email, customAttributes = {} }) {
     axios.post('https://intercom-socket.syncano.space/intercom/add_lead/', {
-      environment: APP_CONFIG.env === 'production' ? 'prod' : '',
+      environment: APP_CONFIG.env,
       email,
       custom_attributes: customAttributes
     });
@@ -361,8 +361,8 @@ const PromoteSyncanoSection = React.createClass({
 
     return (
       <div>
-        <section 
-          className="promote-cta" 
+        <section
+          className="promote-cta"
           style={styles.cta}
         >
           {!alreadyInvited && !emailConfirm &&
@@ -370,7 +370,7 @@ const PromoteSyncanoSection = React.createClass({
               {"We've sent you a verification email."}
             </div>
           }
-          {emailConfirm && !alreadyInvited && 
+          {emailConfirm && !alreadyInvited &&
             <div style={styles.emailVerify}>
               Email confirmed.
             </div>
