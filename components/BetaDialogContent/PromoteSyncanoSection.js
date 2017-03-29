@@ -1,5 +1,3 @@
-// eslint-disable no-param-reassign
-
 import React, { PropTypes } from 'react';
 import axios from 'axios';
 
