@@ -13,5 +13,5 @@ export default {
   twitterConsumerSecret: 'TWITTER_CONSUMER_SECRET',
   twitterAccessToken: 'TWITTER_ACCESS_TOKEN',
   twitterAccessTokenSecret: 'TWITTER_ACCESS_TOKEN_SECRET',
-  env: 'production'
+  env: 'PRODUCTION_ENVIRONMENT'
 };
