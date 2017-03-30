@@ -49,7 +49,7 @@
     "extended-define-webpack-plugin": "0.1.2",
     "nightwatch": "0.9.9",
     "pre-commit": "1.2.2",
-    "selenium-standalone": "6.0.1"
+    "selenium-standalone": "6.1.0"
   },
   "keywords": [
     "gatsby"
