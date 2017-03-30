@@ -26,7 +26,7 @@
     "numeral": "2.0.4",
     "react-body-classname": "1.1.0",
     "react-headroom": "2.1.3",
-    "react-helmet": "4.0.0",
+    "react-helmet": "5.0.0-beta",
     "react-modal": "1.6.5",
     "react-mousetrap": "0.1.1",
     "react-prism": "4.0.0",
