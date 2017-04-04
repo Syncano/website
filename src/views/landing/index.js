@@ -4,7 +4,6 @@ import Page from '../../components/page'
 import Footer from '../../components/footer'
 import Header from '../../components/header'
 import CTA from '../../components/cta'
-import Innovation from './sections/innovation'
 import Features from './sections/features'
 import Sockets from './sections/sockets'
 import FAQ from './sections/faq'
@@ -39,7 +38,6 @@ const Landing = ({
       </div>
     </Header>
 
-    <Innovation />
     <Features />
     <Sockets />
     <FAQ />
