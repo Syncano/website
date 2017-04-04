@@ -1,7 +1,5 @@
-export default ({children}) => (
+export default () => (
   <div>
-    {children}
-
     <style jsx global>{`
       /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 
@@ -460,21 +458,6 @@ export default ({children}) => (
 
       [hidden] {
         display: none;
-      }
-
-      body,
-      h1, h2, h3, h4, h5, h6,
-      blockquote, p, pre,
-      dl, dd, ol, ul,
-      figure,
-      hr,
-      fieldset, legend {
-        margin:  0;
-        padding: 0;
-      }
-
-      h1, h2, h3, h4, h5, h6 {
-        line-height: 1.25;
       }
     `}</style>
   </div>

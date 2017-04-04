@@ -1,26 +1,133 @@
 import Head from '../../components/head'
+import Button from '../../components/button'
 import Page from '../../components/page'
-import Header from './header'
-import Innovation from './innovation'
-import Features from './features'
-import Sockets from './sockets'
-import FAQ from './faq'
-import CTA from './cta'
-import Footer from './footer'
+import Footer from '../../components/footer'
+import Header from '../../components/header'
+import CTA from '../../components/cta'
+import Innovation from './sections/innovation'
+import Features from './sections/features'
+import Sockets from './sections/sockets'
+import FAQ from './sections/faq'
+import CLI from '../../components/cli'
 
-const Landing = () => (
+const Landing = ({
+  stores: {ui: {flags}},
+  services: {ui: {toggleFlag}}
+}) => (
   <Page>
     <Head>
       <title>Syncano</title>
     </Head>
 
-    <Header />
+    <Header
+      theme='dark'
+      isSiteNavOpen={flags.has('site-nav.open')}
+      toggleNav={() => toggleFlag('site-nav.open')}
+      >
+      <div className='CTA'>
+        <h1 className='Title'>Software development on steroids</h1>
+        <h2 className='Subtitle'>Deploy your API in 60 seconds.</h2>
+
+        <Button primary>Sign up now</Button>
+        <div className='Separator' data-after='or' />
+
+        <a href=''>Download the CLI</a>
+
+        <div className='CLI'>
+          <CLI />
+        </div>
+      </div>
+    </Header>
+
     <Innovation />
     <Features />
     <Sockets />
     <FAQ />
     <CTA />
     <Footer />
+
+    <style jsx>{`
+      /* = CTA
+       * ==================================================================== */
+      .CTA {
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .CTA a {
+        color: #fff;
+        font-weight: 500;
+        text-decoration: none;
+      }
+
+      .CTA a:hover {
+        text-decoration: underline;
+      }
+
+      .Title {
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .Subtitle {
+        font-size: 24px;
+        font-weight: 300;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        color: rgba(255,255,255, .5);
+      }
+
+      @media screen and (min-width: 980px) {
+        .CTA {
+          margin-top: 90px;
+        }
+
+        .Title {
+          font-size: 48px;
+          line-height: 56px;
+        }
+      }
+
+      /* = SEPARATOR
+       * ==================================================================== */
+      .Separator {
+        width: 2px;
+        height: 24px;
+        opacity: 0.25;
+        border: dashed 1px #ffffff;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        margin-bottom: 30px;
+        margin-top: 20px;
+      }
+
+      .Separator::after {
+        content: attr(data-after);
+        color: rgba(255,255,255,.75);
+        font-weight: 300;
+        position: absolute;
+        top: 100%;
+        margin-top: 5px;
+        transform: translateX(-50%);
+      }
+
+      /* = CLI
+       * ==================================================================== */
+      .CLI {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        padding-bottom: 30px;
+      }
+
+      @media screen and (min-width: 560px) {
+        .CLI :global(>) :global(*) {
+          margin-bottom: -80px;
+        }
+      }
+    `}</style>
   </Page>
 )
 

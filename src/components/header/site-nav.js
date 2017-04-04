@@ -1,0 +1,185 @@
+import Nav from '../nav'
+
+const SiteNav = ({isOpen}) => (
+  <div className={`Site-nav ${isOpen ? 'is-open' : null}`}>
+    <div className='Site-nav__inner'>
+      <Nav>
+        <div>
+          <a className='Site-nav__item' href=''>Product</a>
+          <div className='Dropdown'>
+            <Nav stack>
+              <a href=''>Automation SDK</a>
+              <a href=''>Socket Registry</a>
+              <a href=''>Clout OS</a>
+              <a href=''>Community</a>
+            </Nav>
+          </div>
+        </div>
+        <a className='Site-nav__item' href=''>Plans &amp; Pricing</a>
+        <a className='Site-nav__item' href=''>Documentation</a>
+        <div className='Site-nav__social'>
+          <a href=''><i className='fa fa-github' /></a>
+          <a href=''><i className='fa fa-slack' /> 128</a>
+        </div>
+        <a className='Site-nav__item Site-nav__item--login' href=''>
+          Sign in<i className='fa fa-arrow-right' />
+        </a>
+      </Nav>
+    </div>
+
+    <style jsx>{`
+      /* = DROPDOWN
+       * ==================================================================== */
+      .Dropdown {
+        display: none;
+      }
+
+      .Site-nav {
+        /*display: none;*/
+      }
+
+      .Site-nav__inner {
+        will-change: transform,opacity;
+        transition-property: transform,opacity;
+        transition-duration: .25s;
+      }
+
+      .Site-nav__item {
+        text-decoration: none;
+      }
+
+      .Site-nav__social a + a {
+        margin-left: 10px;
+      }
+
+      .Site-nav__social a {
+        font-size: 14px;
+        margin-right: 10px;
+        text-decoration: none;
+        color: rgba(255,255,255, .33);
+        transition: color .25s ease;
+      }
+
+      .Site-nav__social a:hover,
+      .Site-nav__social a:hover .fa {
+        color: rgba(255,255,255, .75);
+      }
+
+      .Site-nav__social .fa {
+        font-size: 18px;
+        transition: color .25s ease;
+        color: rgba(255,255,255, .5);
+        vertical-align: middle;
+        margin-top: -1px;
+      }
+
+      @media screen and (max-width: 590px) {
+        .Site-nav {
+          position: absolute;
+          z-index: 10;
+          top: 40px;
+          left: 0;
+          right: 0;
+          padding: 10px;
+        }
+
+        .Site-nav__inner {
+          background: #fff;
+          padding: 18px 30px;
+          border-radius: 6px;
+          flex-grow: 1;
+          opacity: 0;
+          transform: translateY(-10px);
+          border: 1px solid #f5f5f5;
+          box-shadow: 0 2px 8px rgba(200, 200, 200, .3);
+        }
+
+        .Site-nav :global(ul) {
+          flex-flow: column;
+        }
+
+        .Site-nav__item {
+          text-decoration: none;
+          line-height: 36px;
+          font-size: 18px;
+          color: #2c59c5;
+          display: block;
+        }
+
+        .Site-nav__item--login {
+          border-top: 1px solid rgba(24, 126, 239, 0.08);
+          margin-bottom: -18px;
+          margin-left: -30px;
+          margin-right: -30px;
+          margin-top: 18px;
+          padding: 10px 30px;
+          font-weight: 500;
+          background-color: rgba(24, 126, 239, 0.03);
+          border-radius: 0 0 6px 6px;
+        }
+
+        .Site-nav__item--login .fa {
+          margin-left: 10px;
+          font-size: 14px;
+          margin-bottom: 2px;
+          vertical-align: middle;
+        }
+
+        .is-open .Site-nav__inner {
+          transform: none;
+          opacity: 1;
+        }
+      }
+
+      @media screen and (min-width: 591px) {
+        .Site-nav__item {
+          font-weight: 500;
+          color: rgba(255,255,255, .75);
+          margin-left: 15px;
+          transition: color .25s ease;
+        }
+
+        .Site-nav__item:hover {
+          color: #fff;
+        }
+
+        .Site-nav__item--login {
+          color: #fff;
+        }
+
+        .Site-nav__item--login .fa {
+          display: none;
+        }
+      }
+
+      @media screen and (min-width: 990px) {
+        .Site-nav :global(li) :global(+) :global(li) {
+          margin-left: 30px;
+        }
+
+        .Site-nav {
+          margin-right: auto;
+          margin-left: 50px;
+        }
+
+        .Site-nav__item--login {
+          display: none;
+        }
+      }
+
+      @media screen and (min-width: 990px) {
+        .Site-nav :global(li) :global(+) :global(li) {
+          margin-left: 30px;
+        }
+      }
+
+      @media screen and (max-width: 1090px) {
+        .Site-nav__social {
+          display: none;
+        }
+      }
+    `}</style>
+  </div>
+)
+
+export default SiteNav
