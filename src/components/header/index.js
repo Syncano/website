@@ -4,6 +4,8 @@ import UserNav from './user-nav'
 import Hexagons from './hexagons.svg'
 
 const Header = ({
+  title,
+  subtitle,
   theme = 'light',
   isSiteNavOpen,
   toggleNav,
@@ -21,20 +23,69 @@ const Header = ({
 
         <span onClick={toggleNav} className='Header__nav-toggle fa fa-bars' />
 
-        <SiteNav isOpen={isSiteNavOpen} />
-        <UserNav />
+        <SiteNav theme={theme} isOpen={isSiteNavOpen} />
+        <UserNav theme={theme} />
       </div>
+
+      {title && (
+        <div className='PageHead'>
+          <h1 className='PageHead__title'>{title}</h1>
+          <h2 className='PageHead__subtitle'>{subtitle}</h2>
+        </div>
+      )}
 
       {children}
     </div>
 
     <style jsx>{`
+      /* = PageHead
+       * ==================================================================== */
+      .PageHead {
+        margin: 45px auto;
+        text-align: center;
+      }
+
+      .PageHead__title {
+        color: #0b0f15;
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      .PageHead__subtitle {
+        font-size: 20px;
+        line-height: 32px;
+        font-weight: 300;
+        color: #7a7f87;
+        margin-top: 5px;
+      }
+
+      @media screen and (min-width: 560px) {
+        .PageHead {
+          margin: 90px auto;
+        }
+
+        .PageHead__title {
+          font-size: 48px;
+          line-height: 48px;
+        }
+
+        .PageHead__subtitle {
+          font-size: 24px;
+          margin-top: 15px;
+        }
+      }
+
+
       /* = HEADER
        * ==================================================================== */
       .Header {
-        color: #fff;
+        color: #3871d0;
         padding-top: 25px;
         position: relative;
+      }
+
+      .Header.t-dark {
+        color: #fff;
       }
 
       .Header.t-dark {
@@ -74,6 +125,10 @@ const Header = ({
       }
 
       .Header__logo :global(path) {
+        fill: #0b0f15;
+      }
+
+      .t-dark .Header__logo :global(path) {
         fill: #fff;
       }
 
@@ -108,7 +163,6 @@ const Header = ({
           opacity: 0;
         }
       }
-
 
       @keyframes pulseBG {
         from, to {

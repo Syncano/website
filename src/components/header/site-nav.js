@@ -1,7 +1,7 @@
 import Nav from '../nav'
 
-const SiteNav = ({isOpen}) => (
-  <div className={`Site-nav ${isOpen ? 'is-open' : null}`}>
+const SiteNav = ({isOpen, theme}) => (
+  <div className={`Site-nav t-${theme} ${isOpen ? 'is-open' : null}`}>
     <div className='Site-nav__inner'>
       <Nav>
         <div>
@@ -35,12 +35,8 @@ const SiteNav = ({isOpen}) => (
       }
 
       .Site-nav {
-        /*display: none;*/
-      }
-
-      .Site-nav__inner {
-        will-change: transform,opacity;
-        transition-property: transform,opacity;
+        will-change: transform,opacity,visibility;
+        transition-property: transform,opacity,visibility;
         transition-duration: .25s;
       }
 
@@ -56,21 +52,34 @@ const SiteNav = ({isOpen}) => (
         font-size: 14px;
         margin-right: 10px;
         text-decoration: none;
-        color: rgba(255,255,255, .33);
+        color: rgba(56,113,208, .33);
         transition: color .25s ease;
+      }
+
+      .t-dark .Site-nav__social a {
+        color: rgba(255,255,255, .33);
       }
 
       .Site-nav__social a:hover,
       .Site-nav__social a:hover .fa {
-        color: rgba(255,255,255, .75);
+        color: rgba(56,113,208, .75);
+      }
+
+      .t-dark .Site-nav__social a:hover,
+      .t-dark .Site-nav__social a:hover .fa {
+        color: rgba(255,255,255, 1);
       }
 
       .Site-nav__social .fa {
         font-size: 18px;
         transition: color .25s ease;
-        color: rgba(255,255,255, .5);
+        color: rgba(56,113,208, .33);
         vertical-align: middle;
         margin-top: -1px;
+      }
+
+      .t-dark .Site-nav__social .fa {
+        color: rgba(255,255,255, .5);
       }
 
       @media screen and (max-width: 590px) {
@@ -81,6 +90,9 @@ const SiteNav = ({isOpen}) => (
           left: 0;
           right: 0;
           padding: 10px;
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(-10px);
         }
 
         .Site-nav__inner {
@@ -88,8 +100,6 @@ const SiteNav = ({isOpen}) => (
           padding: 18px 30px;
           border-radius: 6px;
           flex-grow: 1;
-          opacity: 0;
-          transform: translateY(-10px);
           border: 1px solid #f5f5f5;
           box-shadow: 0 2px 8px rgba(200, 200, 200, .3);
         }
@@ -125,7 +135,8 @@ const SiteNav = ({isOpen}) => (
           vertical-align: middle;
         }
 
-        .is-open .Site-nav__inner {
+        .Site-nav.is-open {
+          visibility: visible;
           transform: none;
           opacity: 1;
         }
@@ -134,16 +145,21 @@ const SiteNav = ({isOpen}) => (
       @media screen and (min-width: 591px) {
         .Site-nav__item {
           font-weight: 500;
-          color: rgba(255,255,255, .75);
+          color: rgba(56,113,208, 1);
           margin-left: 15px;
           transition: color .25s ease;
         }
 
-        .Site-nav__item:hover {
-          color: #fff;
+        .t-dark .Site-nav__item {
+          color: rgba(255,255,255, .75);
         }
 
-        .Site-nav__item--login {
+        .Site-nav__item:hover {
+          color: rgba(56,113,208, .5);
+        }
+
+        .t-dark .Site-nav__item:hover,
+        .t-dark .Site-nav__item--login {
           color: #fff;
         }
 
@@ -169,7 +185,7 @@ const SiteNav = ({isOpen}) => (
 
       @media screen and (min-width: 990px) {
         .Site-nav :global(li) :global(+) :global(li) {
-          margin-left: 30px;
+          margin-left: 20px;
         }
       }
 

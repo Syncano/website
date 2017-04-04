@@ -1,12 +1,13 @@
 import Hex from 'react-hexagon'
 
-const Hexagon = ({width, fill, children, style, position}) => {
+const Hexagon = ({width, fill, opacity, children, style, position}) => {
   let positionStyle = {}
   const element = (
     <Hex
       diagonal={width || 200}
       style={{
         stroke: 'none',
+        opacity,
         fill,
         ...style
       }}

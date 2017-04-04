@@ -1,5 +1,5 @@
-import Hexagon from '../../../../components/hexagon'
-import Testimonials from '../testimonials'
+import Hexagon from '../../../components/hexagon'
+import Testimonials from './testimonials'
 
 const FAQ = () => (
   <div className='Section'>

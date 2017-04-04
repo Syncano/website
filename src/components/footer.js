@@ -6,7 +6,7 @@ const Footer = () => (
     <div className='HiddenAtSm'>
       <Hexagon width={18} fill='#05a5b4' position={{bottom: '90px', left: '-40px'}} />
       <Hexagon width={48} fill='#b4f1d9' position={{bottom: '90px', right: '15%'}} />
-      <Hexagon width={78} fill='#b4f1d9' position={{bottom: '-20px', left: '20%'}} />
+      <Hexagon width={78} fill='#b4f1d9' position={{bottom: '-20px', left: '20%'}} opacity='.5' />
       <Hexagon width={32} fill='#b4f1d9' position={{top: '40px', right: '-5%'}} />
       <Hexagon width={32} fill='#05a5b4' position={{bottom: '-20px', right: '-8%'}} />
     </div>

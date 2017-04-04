@@ -1,7 +1,7 @@
 import Nav from '../nav'
 
-const UserNav = () => (
-  <div className='User-nav'>
+const UserNav = ({theme}) => (
+  <div className={`User-nav t-${theme}`}>
     <Nav>
       <a href='' className='User-nav__item User-nav__item--status'>All systems operational</a>
       <a href='' className='User-nav__item'>Sign in</a>
@@ -9,30 +9,46 @@ const UserNav = () => (
     </Nav>
 
     <style jsx>{`
-      @media screen and (max-width: 989px) {
-        .User-nav {
-          /*display: none;*/
-        }
-      }
-
       .User-nav :global(li + li) {
         margin-left: 10px;
       }
 
       .User-nav__item {
+        color: rgba(56,113,208, 1);
         font-weight: 500;
-        color: #fff;
         text-decoration: none;
+        transition: color .25s;
       }
 
-      .User-nav a:hover {
-        text-decoration: underline;
+      .t-dark .User-nav__item {
+        color: #fff;
+      }
+
+      .User-nav__item:hover {
+        color: rgba(56,113,208, .5);
+      }
+
+      .t-dark .User-nav__item:hover {
+        color: rgba(255,255,255,.5);
       }
 
       .User-nav__item--status {
         font-weight: 400;
-        color: #b8e986;
+        color: #25b012;
         font-size: 12px;
+      }
+
+      .User-nav__item--status:hover {
+        color: #25b012;
+        text-decoration: underline;
+      }
+
+      .t-dark .User-nav__item--status {
+        color: #b8e986;
+      }
+
+      .t-dark .User-nav__item--status:hover {
+        color: #b8e986;
       }
 
       .User-nav__item--status::before {
@@ -43,9 +59,13 @@ const UserNav = () => (
         margin-right: 8px;
         margin-bottom: 2px;
         border-radius: 4px;
-        background-color: #b8e986;
+        background-color: #23ba15;
         box-shadow: 0 0 7px 1px #b8e986;
         animation: pulse 3s infinite linear;
+      }
+
+      .t-dark .User-nav__item--status::before {
+        background-color: #b8e986;
       }
 
       @media screen and (max-width: 989px) {
@@ -56,7 +76,7 @@ const UserNav = () => (
 
       @media screen and (min-width: 990px) {
         .User-nav :global(li) :global(+) :global(li) {
-          margin-left: 30px;
+          margin-left: 20px;
         }
       }
 

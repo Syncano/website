@@ -12,17 +12,17 @@ const CTA = () => (
     </div>
 
     <div className='HiddenAtSm'>
-      <Hexagon width={100} fill='#b4f1d9' position={{top: '-80px', left: '-60px'}} />
+      <Hexagon width={100} fill='#b4f1d9' position={{top: '-80px', left: '-60px'}} opacity='.25' />
       <Hexagon width={24} fill='#60e0ae' position={{top: '0px', left: '150px'}} />
       <Hexagon width={42} fill='#b4f1d9' position={{top: '-70px', left: '23%'}} />
       <Hexagon width={32} fill='#05a5b4' position={{top: '90px', left: '18%'}} />
-      <Hexagon width={32} fill='#b4f1d9' position={{top: '-140px', right: '45%'}} />
+      <Hexagon width={32} fill='#b4f1d9' position={{top: '-140px', right: '45%'}} opacity='.5' />
       <Hexagon width={24} fill='#60e0ae' position={{top: '-70px', right: '20%'}} />
       <Hexagon width={42} fill='#b4f2da' position={{top: '-40px', right: '16%'}} />
-      <Hexagon width={64} fill='#b4f1d9' position={{top: '-140px', right: '6%'}} />
+      <Hexagon width={64} fill='#b4f1d9' position={{top: '-140px', right: '6%'}} opacity='.5' />
       <Hexagon width={24} fill='#05a5b4' position={{bottom: '20px', right: '5%'}} />
       <Hexagon width={14} fill='#60e0ae' position={{bottom: '-95px', left: '41%'}} />
-      <Hexagon width={32} fill='#b4f1d9' position={{bottom: '-120px', left: '44%'}} />
+      <Hexagon width={32} fill='#b4f1d9' position={{bottom: '-120px', left: '44%'}} opacity='.5' />
       <Hexagon width={24} fill='#60e0ae' position={{bottom: '-90px', right: '40%'}} />
     </div>
 
