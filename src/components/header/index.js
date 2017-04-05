@@ -1,5 +1,6 @@
 import {connect} from 'zefir/utils'
 import Logo from '../logo'
+import Link from '../link'
 import SiteNav from './site-nav'
 import UserNav from './user-nav'
 import Hexagons from './hexagons.svg'
@@ -18,9 +19,11 @@ const Header = ({
     </div>
     <div className='Header__inner u-wrapper'>
       <div className='Header__bar'>
-        <a className='Header__logo' href='/'>
-          <Logo />
-        </a>
+        <Link to='/'>
+          <span className='Header__logo'>
+            <Logo />
+          </span>
+        </Link>
 
         <span onClick={() => toggleFlag('site-nav.open')} className='Header__nav-toggle fa fa-bars' />
 
