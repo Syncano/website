@@ -1,3 +1,4 @@
+import {connect} from 'zefir/utils'
 import Logo from '../logo'
 import SiteNav from './site-nav'
 import UserNav from './user-nav'
@@ -7,8 +8,8 @@ const Header = ({
   title,
   subtitle,
   theme = 'light',
-  isSiteNavOpen,
-  toggleNav,
+  stores: {ui: {flags}},
+  services: {ui: {toggleFlag}},
   children
 }) => (
   <div className={`Header t-${theme}`}>
@@ -21,9 +22,9 @@ const Header = ({
           <Logo />
         </a>
 
-        <span onClick={toggleNav} className='Header__nav-toggle fa fa-bars' />
+        <span onClick={() => toggleFlag('site-nav.open')} className='Header__nav-toggle fa fa-bars' />
 
-        <SiteNav theme={theme} isOpen={isSiteNavOpen} />
+        <SiteNav theme={theme} isOpen={flags.has('site-nav.open')} />
         <UserNav theme={theme} />
       </div>
 
@@ -135,6 +136,7 @@ const Header = ({
       .Header__nav-toggle {
         cursor: pointer;
         font-size: 28px;
+        line-height: 23px;
       }
 
       @media screen and (min-width: 591px) {
@@ -177,4 +179,4 @@ const Header = ({
   </div>
 )
 
-export default Header
+export default connect(Header)

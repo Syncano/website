@@ -3,8 +3,9 @@ import CommunityIcon from './icon-community.svg'
 import SocketRegistryIcon from './icon-socket-registry.svg'
 import CloudOSIcon from './icon-cloud-os.svg'
 import Hexagon from '../../../../components/hexagon'
+import Grid from '../../../../components/grid'
 
-const Innovation = () => (
+const Features = () => (
   <div className='Section u-wrapper'>
     <Hexagon width={32} fill='#05A5B4' position={{top: '20px', right: '70px'}} />
 
@@ -15,61 +16,63 @@ const Innovation = () => (
       </p>
     </div>
 
-    <div className='Section__content u-grid'>
-      <div className='Heading'>
-        <p className='Heading__item Heading__item--important'>
-          Syncano is a platform where you solve problems quickly by reusing and reconfiguring pieces of existing code.
-        </p>
-        <p className='Heading__item'>
-          You can continuously deliver, rapidly experiment and test your product with the real users until you get the market approval. Once your product hits off, it will scale unlimitedly with no extra effort on Syncano's infrastructure.
-        </p>
-      </div>
-      <div className='Feature-list'>
-        <a className='Feature'>
-          <div className='Feature__inner'>
-            <div className='Feature__icon'>
-              <SocketRegistryIcon />
+    <div className='Section__content'>
+      <Grid wrap>
+        <div className='Heading'>
+          <p className='Heading__item Heading__item--important'>
+            Syncano is a platform where you solve problems quickly by reusing and reconfiguring pieces of existing code.
+          </p>
+          <p className='Heading__item'>
+            You can continuously deliver, rapidly experiment and test your product with the real users until you get the market approval. Once your product hits off, it will scale unlimitedly with no extra effort on Syncano's infrastructure.
+          </p>
+        </div>
+        <div className='Feature-list'>
+          <a className='Feature'>
+            <div className='Feature__inner'>
+              <div className='Feature__icon'>
+                <SocketRegistryIcon />
+              </div>
+              <h4 className='Feature__title'>Syncano Registry</h4>
+              <p>
+                Assemble your project from reusable, existing components and backend blueprints created by the community.
+              </p>
             </div>
-            <h4 className='Feature__title'>Syncano Registry</h4>
-            <p>
-              Assemble your project from reusable, existing components and backend blueprints created by the community.
-            </p>
-          </div>
-        </a>
-        <a className='Feature'>
-          <div className='Feature__inner'>
-            <div className='Feature__icon'>
-              <AutomationSDKIcon />
+          </a>
+          <a className='Feature'>
+            <div className='Feature__inner'>
+              <div className='Feature__icon'>
+                <AutomationSDKIcon />
+              </div>
+              <h4 className='Feature__title'>Automation SDK</h4>
+              <p>
+                Automatically build and sync your project into the cloud.
+              </p>
             </div>
-            <h4 className='Feature__title'>Automation SDK</h4>
-            <p>
-              Automatically build and sync your project into the cloud.
-            </p>
-          </div>
-        </a>
-        <a className='Feature'>
-          <div className='Feature__inner'>
-            <div className='Feature__icon'>
-              <CommunityIcon />
+          </a>
+          <a className='Feature'>
+            <div className='Feature__inner'>
+              <div className='Feature__icon'>
+                <CommunityIcon />
+              </div>
+              <h4 className='Feature__title'>Community</h4>
+              <p>
+                Reach the community to build missing project pieces at massive scale.
+              </p>
             </div>
-            <h4 className='Feature__title'>Community</h4>
-            <p>
-              Reach the community to build missing project pieces at massive scale.
-            </p>
-          </div>
-        </a>
-        <a className='Feature'>
-          <div className='Feature__inner'>
-            <div className='Feature__icon'>
-              <CloudOSIcon />
+          </a>
+          <a className='Feature'>
+            <div className='Feature__inner'>
+              <div className='Feature__icon'>
+                <CloudOSIcon />
+              </div>
+              <h4 className='Feature__title'>Cloud OS</h4>
+              <p>
+                Scale unlimitedly and pay only for what you really use.
+              </p>
             </div>
-            <h4 className='Feature__title'>Cloud OS</h4>
-            <p>
-              Scale unlimitedly and pay only for what you really use.
-            </p>
-          </div>
-        </a>
-      </div>
+          </a>
+        </div>
+      </Grid>
     </div>
 
     <style jsx>{`
@@ -296,4 +299,4 @@ const Innovation = () => (
   </div>
 )
 
-export default Innovation
+export default Features

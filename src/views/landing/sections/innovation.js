@@ -1,4 +1,5 @@
 import Hexagon from '../../../components/hexagon'
+import Grid from '../../../components/grid'
 
 const Innovation = () => (
   <div className='Section'>
@@ -10,14 +11,14 @@ const Innovation = () => (
     </div>
 
     <div className='Heading u-wrapper'>
-      <div className='u-grid'>
+      <Grid wrap>
         <div className='Heading__item Heading__item--important'>
           The Pacemaker has saved more than 9 million families the grief of losing a loved one early. New technologies will also save lives.
         </div>
         <div className='Heading__item'>
           People keep solving the same problems because there is no effective way to share and combine already existing code. This holds developers back and prevents true accelerated innovation.
         </div>
-      </div>
+      </Grid>
     </div>
 
     <div className='Section__header u-wrapper u-ta-c'>

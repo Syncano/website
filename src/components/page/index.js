@@ -30,6 +30,7 @@ export default ({children}) => (
 
       .AppContainer {
         overflow: hidden;
+        background-color: rgba(244, 246, 248, 1) linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
       }
 
       /* = WRAPPER
@@ -78,18 +79,6 @@ export default ({children}) => (
        * ==================================================================== */
       .u-ta-c {
         text-align: center;
-      }
-
-      /* = GRID
-       * ==================================================================== */
-      .u-grid {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: -30px;
-      }
-
-      .u-grid > * {
-        padding-left: 30px;
       }
     `}</style>
   </div>

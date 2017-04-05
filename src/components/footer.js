@@ -1,4 +1,5 @@
 import Nav from './nav'
+import Grid from './grid'
 import Hexagon from '../components/hexagon'
 
 const Footer = () => (
@@ -11,65 +12,67 @@ const Footer = () => (
       <Hexagon width={32} fill='#05a5b4' position={{bottom: '-20px', right: '-8%'}} />
     </div>
 
-    <div className='Navigation u-grid'>
-      <div className='Navigation__column'>
-        <h5 className='Navigation__head'>Company</h5>
-        <Nav stack>
-          <a className='Navigation__link' href='#'>About us</a>
-          <a className='Navigation__link' href='#'>Jobs</a>
-          <a className='Navigation__link' href='#'>Terms of Service</a>
-          <a className='Navigation__link' href='#'>Privacy Policy</a>
-          <a className='Navigation__link' href='#'>Privacy Shield</a>
-        </Nav>
-      </div>
-      <div className='Navigation__column'>
-        <h5 className='Navigation__head'>Product</h5>
-        <Nav stack>
-          <a className='Navigation__link' href='#'>Features</a>
-          <a className='Navigation__link' href='#'>Plans &amp; Pricing</a>
-          <a className='Navigation__link' href='#'>Customers</a>
-          <a className='Navigation__link' href='#'>Help &amp; Status</a>
-          <a className='Navigation__link' href='#'>Blog</a>
-        </Nav>
-      </div>
-      <div className='Navigation__column'>
-        <h5 className='Navigation__head'>Resources</h5>
-        <Nav stack>
-          <a className='Navigation__link' href='#'>Getting Started</a>
-          <a className='Navigation__link' href='#'>Documentation</a>
-          <a className='Navigation__link' href='#'>Libraries</a>
-          <a className='Navigation__link' href='#'>Turorials</a>
-          <a className='Navigation__link' href='#'>API Reference</a>
-        </Nav>
-      </div>
-      <div className='Navigation__column'>
-        <h5 className='Navigation__head'>For developers</h5>
-        <Nav stack>
-          <a className='Navigation__link' href='#'>iOS developers</a>
-          <a className='Navigation__link' href='#'>Android developers</a>
-          <a className='Navigation__link' href='#'>Web developers</a>
-          <a className='Navigation__link' href='#'>React developers</a>
-        </Nav>
-      </div>
-      <div className='Navigation__column'>
-        <h5 className='Navigation__head'>More</h5>
-        <Nav stack>
-          <a className='Navigation__link' href='#'>For Investors</a>
-          <a className='Navigation__link' href='#'>For Enterprise</a>
-          <a className='Navigation__link' href='#'>Our team</a>
-          <a className='Navigation__link' href='#'>Case studies</a>
-        </Nav>
-      </div>
-      <div className='Navigation__column'>
-        <h5 className='Navigation__head'>Connect</h5>
-        <Nav stack>
-          <a className='Navigation__link' href='#'>Twitter</a>
-          <a className='Navigation__link' href='#'>Github</a>
-          <a className='Navigation__link' href='#'>Facebook</a>
-          <a className='Navigation__link' href='#'>LinkedIn</a>
-          <a className='Navigation__link' href='#'>Contact us</a>
-        </Nav>
-      </div>
+    <div className='Navigation'>
+      <Grid wrap>
+        <div className='Navigation__column'>
+          <h5 className='Navigation__head'>Company</h5>
+          <Nav stack>
+            <a className='Navigation__link' href='#'>About us</a>
+            <a className='Navigation__link' href='#'>Jobs</a>
+            <a className='Navigation__link' href='#'>Terms of Service</a>
+            <a className='Navigation__link' href='#'>Privacy Policy</a>
+            <a className='Navigation__link' href='#'>Privacy Shield</a>
+          </Nav>
+        </div>
+        <div className='Navigation__column'>
+          <h5 className='Navigation__head'>Product</h5>
+          <Nav stack>
+            <a className='Navigation__link' href='#'>Features</a>
+            <a className='Navigation__link' href='#'>Plans &amp; Pricing</a>
+            <a className='Navigation__link' href='#'>Customers</a>
+            <a className='Navigation__link' href='#'>Help &amp; Status</a>
+            <a className='Navigation__link' href='#'>Blog</a>
+          </Nav>
+        </div>
+        <div className='Navigation__column'>
+          <h5 className='Navigation__head'>Resources</h5>
+          <Nav stack>
+            <a className='Navigation__link' href='#'>Getting Started</a>
+            <a className='Navigation__link' href='#'>Documentation</a>
+            <a className='Navigation__link' href='#'>Libraries</a>
+            <a className='Navigation__link' href='#'>Turorials</a>
+            <a className='Navigation__link' href='#'>API Reference</a>
+          </Nav>
+        </div>
+        <div className='Navigation__column'>
+          <h5 className='Navigation__head'>For developers</h5>
+          <Nav stack>
+            <a className='Navigation__link' href='#'>iOS developers</a>
+            <a className='Navigation__link' href='#'>Android developers</a>
+            <a className='Navigation__link' href='#'>Web developers</a>
+            <a className='Navigation__link' href='#'>React developers</a>
+          </Nav>
+        </div>
+        <div className='Navigation__column'>
+          <h5 className='Navigation__head'>More</h5>
+          <Nav stack>
+            <a className='Navigation__link' href='#'>For Investors</a>
+            <a className='Navigation__link' href='#'>For Enterprise</a>
+            <a className='Navigation__link' href='#'>Our team</a>
+            <a className='Navigation__link' href='#'>Case studies</a>
+          </Nav>
+        </div>
+        <div className='Navigation__column'>
+          <h5 className='Navigation__head'>Connect</h5>
+          <Nav stack>
+            <a className='Navigation__link' href='#'>Twitter</a>
+            <a className='Navigation__link' href='#'>Github</a>
+            <a className='Navigation__link' href='#'>Facebook</a>
+            <a className='Navigation__link' href='#'>LinkedIn</a>
+            <a className='Navigation__link' href='#'>Contact us</a>
+          </Nav>
+        </div>
+      </Grid>
     </div>
 
     <div className='Copyrights'>&copy; 2017 by Syncano. All rights reserved.</div>

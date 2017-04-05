@@ -1,4 +1,5 @@
 import Hexagon from '../../../../components/hexagon'
+import Avatar from '../../../../components/avatar'
 import Icon from './icon.svg'
 
 const Testimonials = () => (
@@ -30,11 +31,9 @@ const Testimonials = () => (
         <Hexagon width={32} fill='#b4f2da' position={{bottom: '-45px', right: '20px'}} />
 
         <div className='Testimonial__inner'>
-          <img
+          <Avatar
             src='/static/testimonials/nikolai-fasting.png'
             srcSet='/static/testimonials/nikolai-fasting.png 1x, /static/testimonials/nikolai-fasting@2x.png 2x'
-            rel='presentation'
-            className='Testimonial__avatar'
             />
           <p className='Testimonial__content'>
             We are entering an era where software builds software. Syncano is a pioneer in that evolution.
@@ -49,11 +48,9 @@ const Testimonials = () => (
       </blockquote>
       <blockquote className='Testimonial'>
         <div className='Testimonial__inner'>
-          <img
+          <Avatar
             src='/static/testimonials/stale-husby.png'
             srcSet='/static/testimonials/stale-husby.png 1x, /static/testimonials/stale-husby@2x.png 2x'
-            rel='presentation'
-            className='Testimonial__avatar'
             />
           <p className='Testimonial__content'>
             If Syncano was around at the time we created our MVP, it would have saved us a full year to get into the market.
@@ -70,11 +67,9 @@ const Testimonials = () => (
         <Hexagon width={52} fill='#b4f2da' position={{bottom: '-35px', right: '20px'}} />
 
         <div className='Testimonial__inner'>
-          <img
+          <Avatar
             src='/static/testimonials/artur-czmiel.png'
             srcSet='/static/testimonials/artur-czmiel.png 1x, /static/testimonials/artur-czmiel@2x.png 2x'
-            rel='presentation'
-            className='Testimonial__avatar'
             />
           <p className='Testimonial__content'>
             We managed to build, launch and succeed with our Pokemon Go map app in just 48 hours of programming.
@@ -135,10 +130,6 @@ const Testimonials = () => (
         background-color: #ffffff;
         box-shadow: 0 10px 20px 0 rgba(11, 15, 21, 0.1);
         padding: 30px;
-      }
-
-      .Testimonial__avatar {
-        border-radius: 50%;
       }
 
       .Testimonial__content {

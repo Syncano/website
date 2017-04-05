@@ -29,6 +29,7 @@ const Hexagon = ({width, fill, opacity, children, style, position}) => {
     return (
       <div style={{
         width,
+        lineHeight: 0,
         ...positionStyle
       }}>
         {element}

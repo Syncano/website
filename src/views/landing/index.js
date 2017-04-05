@@ -18,11 +18,7 @@ const Landing = ({
       <title>Syncano</title>
     </Head>
 
-    <Header
-      theme='dark'
-      isSiteNavOpen={flags.has('site-nav.open')}
-      toggleNav={() => toggleFlag('site-nav.open')}
-      >
+    <Header theme='dark'>
       <div className='CTA'>
         <h1 className='Title'>Software development on steroids</h1>
         <h2 className='Subtitle'>Deploy your API in 60 seconds.</h2>
