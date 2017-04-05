@@ -9,10 +9,7 @@ import Sockets from './sections/sockets'
 import FAQ from './sections/faq'
 import CLI from '../../components/cli'
 
-const Landing = ({
-  stores: {ui: {flags}},
-  services: {ui: {toggleFlag}}
-}) => (
+const Landing = () => (
   <Page>
     <Head>
       <title>Syncano</title>

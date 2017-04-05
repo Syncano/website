@@ -7,10 +7,7 @@ import Hexagon from '../../components/hexagon'
 import CTA from '../../components/cta'
 import Icon from './icon-1.svg'
 
-const Landing = ({
-  stores: {ui: {flags}},
-  services: {ui: {toggleFlag}}
-}) => (
+const Sockets = () => (
   <Page>
     <Head>
       <title>Sockets Registry - Syncano</title>
@@ -155,4 +152,4 @@ const Landing = ({
   </Page>
 )
 
-export default Landing
+export default Sockets

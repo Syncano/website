@@ -5,10 +5,7 @@ import Header from '../components/header'
 import Text from '../components/text'
 import CTA from '../components/cta'
 
-const Landing = ({
-  stores: {ui: {flags}},
-  services: {ui: {toggleFlag}}
-}) => (
+const Landing = () => (
   <Page>
     <Head>
       <title>Syncano</title>
