@@ -1,0 +1,12 @@
+<svg width="152" height="16" viewBox="0 0 152 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Line</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-5514 -1483)">
+<g id="Line" opacity="0.15">
+<use xlink:href="#path0_stroke" transform="translate(5515 1490)" fill="#8D9299"/>
+</g>
+</g>
+<defs>
+<path id="path0_stroke" d="M 0 0L -1 0L -1 2L 0 2L 0 0ZM 150.707 1.70711C 151.098 1.31658 151.098 0.683418 150.707 0.292893L 144.343 -6.07107C 143.953 -6.46159 143.319 -6.46159 142.929 -6.07107C 142.538 -5.68054 142.538 -5.04738 142.929 -4.65685L 148.586 1L 142.929 6.65685C 142.538 7.04738 142.538 7.68054 142.929 8.07107C 143.319 8.46159 143.953 8.46159 144.343 8.07107L 150.707 1.70711ZM 0 2L 150 2L 150 0L 0 0L 0 2Z"/>
+</defs>
+</svg>

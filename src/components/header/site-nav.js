@@ -1,4 +1,5 @@
 import Nav from '../nav'
+import Link from '../link'
 
 const SiteNav = ({isOpen, theme}) => (
   <div className={`Site-nav t-${theme} ${isOpen ? 'is-open' : null}`}>
@@ -15,7 +16,9 @@ const SiteNav = ({isOpen, theme}) => (
             </Nav>
           </div>
         </div>
-        <a className='Site-nav__item' href=''>Plans &amp; Pricing</a>
+        <Link to='/pricing'>
+          <span className='Site-nav__item'>Plans &amp; Pricing</span>
+        </Link>
         <a className='Site-nav__item' href=''>Documentation</a>
         <div className='Site-nav__social'>
           <a href=''><i className='fa fa-github' /></a>

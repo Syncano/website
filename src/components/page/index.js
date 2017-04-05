@@ -80,6 +80,10 @@ export default ({children}) => (
       .u-ta-c {
         text-align: center;
       }
+
+      .u-ta-r {
+        text-align: right;
+      }
     `}</style>
   </div>
 )

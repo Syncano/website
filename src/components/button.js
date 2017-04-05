@@ -4,6 +4,7 @@ const Button = ({children, ...props}) => (
       Button
       ${'primary' in props && 'Button--primary'}
       ${'outline' in props && 'Button--outline'}
+      ${'full' in props && 'Button--full'}
     `
   }>
     {children}
@@ -25,6 +26,10 @@ const Button = ({children, ...props}) => (
 
       .Button:focus {
         outline: 0;
+      }
+
+      .Button--full {
+        width: 100%;
       }
 
       .Button--primary {

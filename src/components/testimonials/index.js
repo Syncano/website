@@ -1,5 +1,5 @@
-import Hexagon from '../../../../components/hexagon'
-import Avatar from '../../../../components/avatar'
+import Hexagon from '../hexagon'
+import Avatar from '../avatar'
 import Icon from './icon.svg'
 
 const Testimonials = () => (

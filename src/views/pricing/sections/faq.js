@@ -13,33 +13,25 @@ const FAQ = () => (
     <div className='Section__content u-wrapper'>
       <div className='FAQ-list'>
         <div className='FAQ'>
-          <h4 className='FAQ__title'>How is Syncano different from Heroku?</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.</p>
+          <h4 className='FAQ__title'>What happens if I exceed my usage?</h4>
+          <p>When you log into your Dashboard, you can set hard limits (absolute) and soft limits (warnings/notifications issued). If you actually exceed your usage, overage fees will appear as a separate bill at the end of the month (billing period). You can change your plan and limits at any time.</p>
         </div>
         <div className='FAQ'>
-          <h4 className='FAQ__title'>How does Syncano scale with my app?</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.</p>
+          <h4 className='FAQ__title'>What kind of metrics will I have access to?</h4>
+          <p>Usage is accessible in your Dashboard. Easily track the number of API calls and Script executions per each Instance (app) on Syncano.</p>
         </div>
         <div className='FAQ'>
-          <h4 className='FAQ__title'>Can I cancel my subscription any time?</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.</p>
+          <h4 className='FAQ__title'>When will I be billed?</h4>
+          <p>As soon as you're ready to switch to a paid account, choose your plan and simply enter your credit card. The bill for the first month is prorated but we still give you the full month’s usage. On the 1st of every month, you are billed up front for that entire month's usage. Should you exceed your usage, you can always change your plan and/or pay the overage. Your overage will appear as a separate bill at the end of that month.</p>
         </div>
         <div className='FAQ'>
-          <h4 className='FAQ__title'>What payment options do you offer?</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.</p>
-        </div>
-        <div className='FAQ'>
-          <h4 className='FAQ__title'>What if I use up all my account limits?</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.</p>
-        </div>
-        <div className='FAQ'>
-          <h4 className='FAQ__title'>What if 30 days of trial is not enough?</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.</p>
+          <h4 className='FAQ__title'>How is a Script second measured?</h4>
+          <p>A Script is measured by a Webhook, Schedule, Trigger, and automation. You’re billed for each second a Script is run. These are all explained in detail here.</p>
         </div>
       </div>
 
       <div className='CTA'>
-        <a href=''>See complete FAQ</a>, <a href=''>ask your own question</a>, <a href=''>read the docs</a> or <a href=''>join our Slack channel</a> to get instant answers.
+        <a href=''>See complete FAQ</a>, <a href=''>ask your own question</a>.
       </div>
     </div>
 
@@ -47,7 +39,6 @@ const FAQ = () => (
       /* = SECTION
        * ==================================================================== */
       .Section {
-        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff), linear-gradient(#f5f6f9, #f5f6f9);
         margin-bottom: 30px;
         position: relative;
       }
@@ -69,7 +60,7 @@ const FAQ = () => (
       }
 
       .Section__content {
-        max-width: 1230px;
+        max-width: 770px;
       }
 
       @media screen and (min-width: 560px) {
@@ -96,22 +87,26 @@ const FAQ = () => (
 
       @media screen and (min-width: 560px) {
         .FAQ-list {
-          display: flex;
+          /*display: flex;*/
           flex-wrap: wrap;
           margin-bottom: -30px;
           margin-left: -30px;
         }
 
+        .FAQ-list::after {
+          content: '';
+          display: table;
+          clear: both;
+        }
+
         .FAQ {
           width: 50%;
           padding-left: 30px;
+          float: left;
         }
-      }
 
-      @media screen and (min-width: 960px) {
-        .FAQ {
-          width: 33.33333%;
-        }
+        .FAQ:nth-child(2) {float: right;}
+        .FAQ:nth-child(3) {float: right;}
       }
 
       /* = CTA
