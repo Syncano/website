@@ -1,5 +1,8 @@
 import FontAwesome from './styles/font-awesome'
 import Normalize from './styles/normalize'
+import Modal from '../modal'
+import SignUpForm from '../modals/signup'
+import SignInForm from '../modals/signin'
 
 export default ({children}) => (
   <div>
@@ -7,6 +10,22 @@ export default ({children}) => (
 
     <FontAwesome />
     <Normalize />
+
+    <Modal
+      name='signup'
+      title='Sign up and start building'
+      subtitle='Build serverless apps on Syncano for free. Set up your backend in minutes!'
+      >
+      <SignUpForm />
+    </Modal>
+
+    <Modal
+      name='signin'
+      title='Welcom back'
+      subtitle='Build serverless apps on Syncano for free. Set up your backend in minutes!'
+      >
+      <SignInForm />
+    </Modal>
 
     <style jsx global>{`
       body,
@@ -30,7 +49,7 @@ export default ({children}) => (
 
       .AppContainer {
         overflow: hidden;
-        background-color: rgba(244, 246, 248, 1) linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
+        background: rgba(244, 246, 248, 1) linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
       }
 
       /* = WRAPPER

@@ -1,11 +1,11 @@
 import Nav from '../nav'
 
-const UserNav = ({theme}) => (
+const UserNav = ({theme, toggleSignUp, toggleSignIn}) => (
   <div className={`User-nav t-${theme}`}>
     <Nav>
-      <a href='' className='User-nav__item User-nav__item--status'>All systems operational</a>
-      <a href='' className='User-nav__item'>Sign in</a>
-      <a href='' className='User-nav__item'>Sign up</a>
+      <a className='User-nav__item User-nav__item--status' href=''>All systems operational</a>
+      <a className='User-nav__item' onClick={toggleSignIn}>Sign in</a>
+      <a className='User-nav__item' onClick={toggleSignUp}>Sign up</a>
     </Nav>
 
     <style jsx>{`
@@ -18,6 +18,7 @@ const UserNav = ({theme}) => (
         font-weight: 500;
         text-decoration: none;
         transition: color .25s;
+        cursor: pointer;
       }
 
       .t-dark .User-nav__item {

@@ -224,6 +224,7 @@ const Features = () => (
       @media screen and (min-width: 520px) {
         .Feature-list {
           margin-left: -30px;
+
         }
 
         .Feature {
@@ -250,6 +251,7 @@ const Features = () => (
       @media screen and (min-width: 918px) {
         .Feature-list {
           width: 530px;
+          margin-left: auto;
         }
 
         .Feature {

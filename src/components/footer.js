@@ -96,6 +96,7 @@ const Footer = () => (
 
       .Navigation__column {
         margin-bottom: 30px;
+        flex: 1;
       }
 
       .Navigation__head {

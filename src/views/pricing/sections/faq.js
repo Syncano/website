@@ -31,7 +31,7 @@ const FAQ = () => (
       </div>
 
       <div className='CTA'>
-        <a href=''>See complete FAQ</a>, <a href=''>ask your own question</a>.
+        <a href=''>See complete FAQ</a> or <a href=''>ask your own question</a>.
       </div>
     </div>
 

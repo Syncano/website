@@ -158,7 +158,7 @@ const Sockets = () => (
         z-index: 1;
       }
 
-      @media screen and (max-width: 409px) {
+      @media screen and (max-width: 429px) {
         .Socket-list {
           margin-bottom: 30px;
         }
@@ -181,19 +181,13 @@ const Sockets = () => (
         }
       }
 
-      @media screen and (min-width: 410px) {
+      @media screen and (min-width: 430px) {
         .Socket-list {
           max-width: 350px;
         }
       }
 
-      @media screen and (min-width: 650px) {
-        .Socket-list {
-          padding-top: 80px;
-        }
-      }
-
-      @media screen and (min-width: 410px) and (max-width: 649px) {
+      @media screen and (min-width: 430px) and (max-width: 649px) {
         .Socket-list {
           margin-bottom: -30px;
         }
@@ -213,6 +207,7 @@ const Sockets = () => (
 
       @media screen and (min-width: 650px) {
         .Socket-list {
+          padding-top: 80px;
           max-width: 590px;
         }
 

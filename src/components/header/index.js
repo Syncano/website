@@ -9,8 +9,10 @@ const Header = ({
   title,
   subtitle,
   theme = 'light',
-  stores: {ui: {flags}},
-  services: {ui: {toggleFlag}},
+  toggleNav,
+  toggleSignUp,
+  toggleSignIn,
+  flags,
   children
 }) => (
   <div className={`Header t-${theme}`}>
@@ -25,10 +27,10 @@ const Header = ({
           </span>
         </Link>
 
-        <span onClick={() => toggleFlag('site-nav.open')} className='Header__nav-toggle fa fa-bars' />
+        <span onClick={toggleNav} className='Header__nav-toggle fa fa-bars' />
 
-        <SiteNav theme={theme} isOpen={flags.has('site-nav.open')} />
-        <UserNav theme={theme} />
+        <SiteNav theme={theme} toggleSignUp={toggleSignUp} isOpen={flags.has('site-nav.open')} />
+        <UserNav theme={theme} toggleSignUp={toggleSignUp} toggleSignIn={toggleSignIn} />
       </div>
 
       {title && (
@@ -175,11 +177,31 @@ const Header = ({
         }
 
         50% {
-          opacity: .8;
+          opacity: .7;
         }
       }
     `}</style>
   </div>
 )
+
+Header.init = ({
+  title,
+  subtitle,
+  theme = 'light',
+  stores: {ui: {flags}},
+  services: {ui: {toggleFlag, toggleModal}},
+  children
+}) => {
+  return {
+    title,
+    subtitle,
+    theme,
+    flags,
+    toggleSignUp: () => toggleModal('signup'),
+    toggleSignIn: () => toggleModal('signin'),
+    toggleNav: () => toggleFlag('site-nav.open'),
+    children
+  }
+}
 
 export default connect(Header)

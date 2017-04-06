@@ -3,7 +3,6 @@ import Page from '../../components/page'
 import Footer from '../../components/footer'
 import Header from '../../components/header'
 import CTA from '../../components/cta'
-import CLI from '../../components/cli'
 import FAQ from './sections/faq'
 import Scaling from './sections/scaling'
 import PricingTable from './components/pricing-table'
@@ -29,13 +28,14 @@ const Pricing = () => (
       <Scaling />
       <FAQ />
       <CTA />
-      <Footer />
     </div>
+
+    <Footer />
 
     <style jsx>{`
       .Section {
         padding-top: 1px;
-        background-image: linear-gradient(to top, rgba(255, 255, 255, 0), #ffffff), linear-gradient(#f5f6f9, #f5f6f9);
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff), linear-gradient(#f5f6f9, #f5f6f9);
       }
 
       /* = Header

@@ -2,7 +2,7 @@ import VendorSlider from 'rc-slider'
 
 const Slider = props => (
   <div>
-    <VendorSlider {...props}/>
+    <VendorSlider {...props} />
 
     <style jsx global>{`
       .rc-slider {

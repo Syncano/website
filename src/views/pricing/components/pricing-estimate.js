@@ -127,7 +127,7 @@ PricingEstimate.form = {
       min: 10000,
       step: 10000,
       max: 5000000,
-      value: 10000
+      value: 1000000
     },
     seconds: {
       min: 10000,

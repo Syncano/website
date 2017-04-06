@@ -8,4 +8,9 @@ export default class UI {
       this.store.flags.set(flag, value)
     }
   }
+
+  @action toggleModal = name => {
+    console.log(this.store.modal, name);
+    this.store.modal = this.store.modal === name ? null : name
+  }
 }

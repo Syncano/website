@@ -39,7 +39,7 @@ const CLI = () => (
         border-radius: 6px;
         background-color: #0b0f15;
         box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.35);
-        min-height: 360px;
+        min-height: 398px;
         max-width: 640px;
         width: 100%;
         position: relative;
