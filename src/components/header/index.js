@@ -185,22 +185,18 @@ const Header = ({
 )
 
 Header.init = ({
-  title,
-  subtitle,
   theme = 'light',
   stores: {ui: {flags}},
   services: {ui: {toggleFlag, toggleModal}},
-  children
+  ...props
 }) => {
   return {
-    title,
-    subtitle,
     theme,
     flags,
     toggleSignUp: () => toggleModal('signup'),
     toggleSignIn: () => toggleModal('signin'),
     toggleNav: () => toggleFlag('site-nav.open'),
-    children
+    ...props
   }
 }
 
