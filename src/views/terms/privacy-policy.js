@@ -5,7 +5,7 @@ import Head from '../../components/ui/head'
 import Page from '../../components/ui/page'
 import Text from '../../components/ui/text'
 import Grid from '../../components/ui/grid'
-import TermsSidebar from './sidebar'
+import TermsSidebar from './components/sidebar'
 
 const PrivacyPolicy = () => (
   <Page>
