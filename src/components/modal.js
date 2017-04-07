@@ -46,6 +46,7 @@ const Modal = ({
         position: fixed;
         z-index: -1;
         opacity: 0.85;
+        cursor: pointer;
         background-image: linear-gradient(to bottom, #000000, #0b0f15);
       }
 
@@ -65,6 +66,7 @@ const Modal = ({
         position: absolute;
         right: 30px;
         top: 30px;
+        cursor: pointer;
       }
 
       .Modal__close::before {

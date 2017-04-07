@@ -1,7 +1,7 @@
 import Nav from '../nav'
 import Link from '../link'
 
-const SiteNav = ({isOpen, theme, toggleSignUp}) => (
+const SiteNav = ({isOpen, theme, toggleSignIn}) => (
   <div className={`Site-nav t-${theme} ${isOpen ? 'is-open' : null}`}>
     <div className='Site-nav__inner'>
       <Nav>
@@ -24,7 +24,7 @@ const SiteNav = ({isOpen, theme, toggleSignUp}) => (
           <a href=''><i className='fa fa-github' /></a>
           <a href=''><i className='fa fa-slack' /> 128</a>
         </div>
-        <a className='Site-nav__item Site-nav__item--login' onClick={toggleSignUp}>
+        <a className='Site-nav__item Site-nav__item--login' onClick={toggleSignIn}>
           Sign in<i className='fa fa-arrow-right' />
         </a>
       </Nav>

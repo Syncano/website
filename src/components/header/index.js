@@ -29,7 +29,7 @@ const Header = ({
 
         <span onClick={toggleNav} className='Header__nav-toggle fa fa-bars' />
 
-        <SiteNav theme={theme} toggleSignUp={toggleSignUp} isOpen={flags.has('site-nav.open')} />
+        <SiteNav theme={theme} toggleSignIn={toggleSignIn} isOpen={flags.has('site-nav.open')} />
         <UserNav theme={theme} toggleSignUp={toggleSignUp} toggleSignIn={toggleSignIn} />
       </div>
 
