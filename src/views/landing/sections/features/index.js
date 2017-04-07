@@ -2,8 +2,8 @@ import AutomationSDKIcon from './icon-automation-sdk.svg'
 import CommunityIcon from './icon-community.svg'
 import SocketRegistryIcon from './icon-socket-registry.svg'
 import CloudOSIcon from './icon-cloud-os.svg'
-import Hexagon from '../../../../components/hexagon'
-import Grid from '../../../../components/grid'
+import Hexagon from '../../../../components/ui/hexagon'
+import Grid from '../../../../components/ui/grid'
 
 const Features = () => (
   <div className='Section u-wrapper'>

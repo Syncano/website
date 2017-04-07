@@ -1,5 +1,5 @@
-import Hexagon from '../../../../components/hexagon'
-import Button from '../../../../components/button'
+import Hexagon from '../../../../components/ui/hexagon'
+import Button from '../../../../components/ui/button'
 import Icon from './icon-1.svg'
 import Hexagons from './hexagons.svg'
 

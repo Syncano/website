@@ -1,4 +1,4 @@
-import Hexagon from './hexagon'
+import Hexagon from '../ui/hexagon'
 
 const CLI = () => (
   <div className='CLI'>

@@ -1,9 +1,9 @@
 import {connect} from 'zefir/utils'
-import Button from '../button'
-import Input from '../input'
+import Button from '../../ui/button'
+import Input from '../../ui/input'
 import Style from './style'
 
-const SignUpForm = ({
+const SignInForm = ({
   services: {ui: {toggleModal}},
   form: {fields: {email, password}}
 }) => (
@@ -17,15 +17,15 @@ const SignUpForm = ({
     <div className='AuthForm__column AuthForm__column--form'>
       <Input full {...email} />
       <Input full {...password} />
-      <Button full secondary>Create your account</Button>
+      <Button full secondary>Sign in</Button>
     </div>
     <div className='AuthForm__footer'>
       <div>
-        By signing up you confirm that you accept our <a href=''>Terms of Use</a>
+        By signing in you confirm that you accept our <a href=''>Terms of Use</a>
       </div>
 
       <div>
-        Already a member? <a onClick={() => toggleModal('signin')}>Sign in here</a>
+        No account yet? <a onClick={() => toggleModal('signup')}>Sign up here</a>
       </div>
     </div>
 
@@ -33,8 +33,8 @@ const SignUpForm = ({
   </div>
 )
 
-SignUpForm.form = {
-  formName: 'SignUpForm',
+SignInForm.form = {
+  formName: 'SignInForm',
   fields: {
     email: {
       type: 'email',
@@ -47,4 +47,4 @@ SignUpForm.form = {
   }
 }
 
-export default connect(SignUpForm)
+export default connect(SignInForm)

@@ -1,10 +1,10 @@
-import Head from '../../components/head'
-import Page from '../../components/page'
-import Footer from '../../components/footer'
-import Header from '../../components/header'
-import Avatar from '../../components/avatar'
-import Hexagon from '../../components/hexagon'
-import CTA from '../../components/cta'
+import Head from '../../components/ui/head'
+import Page from '../../components/ui/page'
+import Footer from '../../components/shared/footer'
+import Header from '../../components/shared/header'
+import Avatar from '../../components/ui/avatar'
+import Hexagon from '../../components/ui/hexagon'
+import CTA from '../../components/shared/cta'
 import Icon from './icon-1.svg'
 
 const Sockets = () => (

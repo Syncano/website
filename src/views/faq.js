@@ -1,9 +1,9 @@
-import Head from '../components/head'
-import Page from '../components/page'
-import Footer from '../components/footer'
-import Header from '../components/header'
-import Text from '../components/text'
-import CTA from '../components/cta'
+import Footer from '../components/shared/footer'
+import Header from '../components/shared/header'
+import CTA from '../components/shared/cta'
+import Head from '../components/ui/head'
+import Page from '../components/ui/page'
+import Text from '../components/ui/text'
 
 const Landing = () => (
   <Page>

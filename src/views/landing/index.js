@@ -1,13 +1,13 @@
-import Head from '../../components/head'
-import Button from '../../components/button'
-import Page from '../../components/page'
-import Footer from '../../components/footer'
-import Header from '../../components/header'
-import CTA from '../../components/cta'
+import Footer from '../../components/shared/footer'
+import Header from '../../components/shared/header'
+import CTA from '../../components/shared/cta'
+import CLI from '../../components/shared/cli'
+import Head from '../../components/ui/head'
+import Button from '../../components/ui/button'
+import Page from '../../components/ui/page'
 import Features from './sections/features'
 import Sockets from './sections/sockets'
 import FAQ from './sections/faq'
-import CLI from '../../components/cli'
 
 const Landing = () => (
   <Page>

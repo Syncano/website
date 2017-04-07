@@ -1,6 +1,6 @@
-import Nav from './nav'
-import Grid from './grid'
-import Hexagon from '../components/hexagon'
+import Nav from '../ui/nav'
+import Grid from '../ui/grid'
+import Hexagon from '../ui/hexagon'
 
 const Footer = () => (
   <footer className='Footer u-wrapper'>

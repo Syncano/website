@@ -1,6 +1,6 @@
-import Head from '../components/head'
-import Page from '../components/page'
-import Link from '../components/link'
+import Head from '../components/ui/head'
+import Page from '../components/ui/page'
+import Link from '../components/ui/link'
 
 const Missing = () => (
   <Page>

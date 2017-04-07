@@ -1,4 +1,4 @@
-import {Match, Switch} from './components/router'
+import {Match, Switch} from './components/ui/router'
 
 import LandingView from './views/landing'
 import PricingView from './views/pricing'

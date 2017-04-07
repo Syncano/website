@@ -1,5 +1,5 @@
 import {connect} from 'zefir/utils'
-import Slider from '../../../components/slider'
+import Slider from '../../../components/ui/slider'
 import Arrow from './arrow.svg'
 
 const PricingEstimate = ({

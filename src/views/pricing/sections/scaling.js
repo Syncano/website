@@ -1,5 +1,5 @@
-import Hexagon from '../../../components/hexagon'
-import Grid from '../../../components/grid'
+import Hexagon from '../../../components/ui/hexagon'
+import Grid from '../../../components/ui/grid'
 import PricingEstimate from '../components/pricing-estimate'
 
 const Scaling = () => (

@@ -1,5 +1,5 @@
-import Button from './button'
-import Hexagon from './hexagon'
+import Button from '../ui/button'
+import Hexagon from '../ui/hexagon'
 
 const CTA = () => (
   <div className='Section u-wrapper u-ta-c'>

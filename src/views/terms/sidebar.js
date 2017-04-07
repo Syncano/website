@@ -1,6 +1,6 @@
-import Sidebar from '../../components/sidebar'
-import Menu from '../../components/menu'
-import NavLink from '../../components/nav-link'
+import Sidebar from '../../components/ui/sidebar'
+import Menu from '../../components/ui/menu'
+import NavLink from '../../components/ui/nav-link'
 
 const TermsSidebar = () => (
   <Sidebar>
