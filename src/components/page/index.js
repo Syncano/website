@@ -1,8 +1,8 @@
 import FontAwesome from './styles/font-awesome'
 import Normalize from './styles/normalize'
 import Modal from '../modal'
-import SignUpForm from '../modals/signup'
-import SignInForm from '../modals/signin'
+import SignUpForm from '../auth/signup'
+import SignInForm from '../auth/signin'
 
 export default ({children}) => (
   <div>
