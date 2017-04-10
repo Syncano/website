@@ -1,5 +1,3 @@
-import Hexagon from './hexagon'
-
 const CLI = () => (
   <div className='CLI'>
     <div className='CLI__buttons'>
@@ -20,27 +18,13 @@ const CLI = () => (
       <li className='CLI__line'>~/my-proj $</li>
     </ul>
 
-    <div className='HiddenAtSm'>
-      <Hexagon width={32} fill='#7C51CD' position={{top: '-13px', right: '120px'}} />
-      <Hexagon width={54} fill='#197eee' position={{top: '25%', right: '-27px'}} />
-      <Hexagon width={64} fill='#05b470' position={{bottom: '-18px', right: '35px'}} />
-      <Hexagon width={32} fill='#60e0ae' position={{bottom: '-22px', right: '-17px'}} />
-      <Hexagon width={64} fill='#60e0ae' position={{bottom: '-40px', left: '10%'}} />
-      <Hexagon width={42} fill='#05a5b4' position={{bottom: '10%', left: '-21px'}} />
-    </div>
-    <div className='HiddenAtMd'>
-      <Hexagon width={22} fill='#3cdd9e' position={{bottom: '-45px', left: '22%'}} />
-      <Hexagon width={40} fill='#60e0ae' position={{bottom: '-70px', right: '30%'}} />
-    </div>
-
     <style jsx>{`
       .CLI {
         text-align: left;
         border-radius: 6px;
         background-color: #0b0f15;
         box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.35);
-        min-height: 398px;
-        max-width: 640px;
+        min-height: 100%;
         width: 100%;
         position: relative;
       }
@@ -71,7 +55,7 @@ const CLI = () => (
 
       .CLI__lines {
         list-style: none;
-        padding: 30px 40px;
+        padding: 30px 40px 0;
         font-size: 14px;
         line-height: 20px;
         font-family: Courier;
@@ -86,18 +70,6 @@ const CLI = () => (
 
       .CLI__line--indent {
         margin-left: 12px;
-      }
-
-      @media screen and (max-width: 560px) {
-        .HiddenAtSm {
-          display: none;
-        }
-      }
-
-      @media screen and (max-width: 960px) {
-        .HiddenAtMd {
-          display: none;
-        }
       }
     `}</style>
   </div>

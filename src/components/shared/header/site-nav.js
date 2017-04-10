@@ -1,12 +1,14 @@
-import Nav from '../nav'
-import Link from '../link'
+import Nav from '../../ui/nav'
+import Link from '../../ui/link'
 
-const SiteNav = ({isOpen, theme, toggleSignUp}) => (
+const SiteNav = ({isOpen, theme, toggleSignIn}) => (
   <div className={`Site-nav t-${theme} ${isOpen ? 'is-open' : null}`}>
     <div className='Site-nav__inner'>
       <Nav>
         <div>
-          <a className='Site-nav__item' href=''>Product</a>
+          <Link to='/features'>
+            <span className='Site-nav__item'>Product</span>
+          </Link>
           <div className='Dropdown'>
             <Nav stack>
               <a href=''>Automation SDK</a>
@@ -24,7 +26,7 @@ const SiteNav = ({isOpen, theme, toggleSignUp}) => (
           <a href=''><i className='fa fa-github' /></a>
           <a href=''><i className='fa fa-slack' /> 128</a>
         </div>
-        <a className='Site-nav__item Site-nav__item--login' onClick={toggleSignUp}>
+        <a className='Site-nav__item Site-nav__item--login' onClick={toggleSignIn}>
           Sign in<i className='fa fa-arrow-right' />
         </a>
       </Nav>
@@ -107,11 +109,7 @@ const SiteNav = ({isOpen, theme, toggleSignUp}) => (
           box-shadow: 0 2px 8px rgba(200, 200, 200, .3);
         }
 
-        .Site-nav :global(ul) {
-          flex-flow: column;
-        }
-
-        .Site-nav__item {
+        .Site-nav :global(.Site-nav__item) {
           text-decoration: none;
           line-height: 36px;
           font-size: 18px;
@@ -142,6 +140,10 @@ const SiteNav = ({isOpen, theme, toggleSignUp}) => (
           visibility: visible;
           transform: none;
           opacity: 1;
+        }
+
+        .Site-nav :global(ul) {
+          flex-flow: column;
         }
       }
 

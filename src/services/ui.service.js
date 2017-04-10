@@ -10,7 +10,6 @@ export default class UI {
   }
 
   @action toggleModal = name => {
-    console.log(this.store.modal, name);
     this.store.modal = this.store.modal === name ? null : name
   }
 }

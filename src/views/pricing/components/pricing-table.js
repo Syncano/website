@@ -1,5 +1,5 @@
-import Button from '../../../components/button'
-import Hexagon from '../../../components/hexagon'
+import Button from '../../../components/ui/button'
+import Hexagon from '../../../components/ui/hexagon'
 
 const PricingTable = () => (
   <div className='Pricing'>

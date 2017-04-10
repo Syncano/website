@@ -1,11 +1,11 @@
-import Head from '../../components/head'
-import Page from '../../components/page'
-import Footer from '../../components/footer'
-import Header from '../../components/header'
-import Text from '../../components/text'
-import Grid from '../../components/grid'
-import TermsSidebar from './sidebar'
-import CTA from '../../components/cta'
+import Footer from '../../components/shared/footer'
+import Header from '../../components/shared/header'
+import CTA from '../../components/shared/cta'
+import Head from '../../components/ui/head'
+import Page from '../../components/ui/page'
+import Text from '../../components/ui/text'
+import Grid from '../../components/ui/grid'
+import TermsSidebar from './components/sidebar'
 
 const TermsOfService = () => (
   <Page>
@@ -57,6 +57,10 @@ const TermsOfService = () => (
     <Footer />
 
     <style jsx>{`
+      :global(.AppContainer) {
+        background: rgba(244, 246, 248, 1) linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+      }
+
       .Section {
         max-width: 940px;
       }

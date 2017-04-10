@@ -1,4 +1,4 @@
-import Nav from '../nav'
+import Nav from '../../ui/nav'
 
 const UserNav = ({theme, toggleSignUp, toggleSignIn}) => (
   <div className={`User-nav t-${theme}`}>

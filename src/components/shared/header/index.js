@@ -1,6 +1,6 @@
 import {connect} from 'zefir/utils'
-import Logo from '../logo'
-import Link from '../link'
+import Logo from '../../ui/logo'
+import Link from '../../ui/link'
 import SiteNav from './site-nav'
 import UserNav from './user-nav'
 import Hexagons from './hexagons.svg'
@@ -29,7 +29,7 @@ const Header = ({
 
         <span onClick={toggleNav} className='Header__nav-toggle fa fa-bars' />
 
-        <SiteNav theme={theme} toggleSignUp={toggleSignUp} isOpen={flags.has('site-nav.open')} />
+        <SiteNav theme={theme} toggleSignIn={toggleSignIn} isOpen={flags.has('site-nav.open')} />
         <UserNav theme={theme} toggleSignUp={toggleSignUp} toggleSignIn={toggleSignIn} />
       </div>
 
@@ -88,6 +88,7 @@ const Header = ({
         color: #3871d0;
         padding-top: 25px;
         position: relative;
+        z-index: 10;
       }
 
       .Header.t-dark {
@@ -185,22 +186,18 @@ const Header = ({
 )
 
 Header.init = ({
-  title,
-  subtitle,
   theme = 'light',
   stores: {ui: {flags}},
   services: {ui: {toggleFlag, toggleModal}},
-  children
+  ...props
 }) => {
   return {
-    title,
-    subtitle,
     theme,
     flags,
     toggleSignUp: () => toggleModal('signup'),
     toggleSignIn: () => toggleModal('signin'),
     toggleNav: () => toggleFlag('site-nav.open'),
-    children
+    ...props
   }
 }
 
