@@ -7,7 +7,7 @@ import FAQ from './sections/faq'
 import Scaling from './sections/scaling'
 import PricingTable from './components/pricing-table'
 
-const Pricing = () => (
+const Pricing = ({toggleSignUpModal}) => (
   <Page>
     <Head>
       <title>Pricing - Syncano</title>
@@ -15,12 +15,12 @@ const Pricing = () => (
 
     <Header theme='dark'>
       <div className='Header'>
-        <h1 className='Header_title'>Build secure, scalable apps in half the time</h1>
+        <h1 className='Header_title'>At Syncano, we want to help you build technology that matters, faster.</h1>
         <h2 className='Header_subtitle'>30-day money back guarantee. No contracts. Upgrade, downgrade, or cancel at any time.</h2>
       </div>
 
       <div className='Pricing'>
-        <PricingTable />
+        <PricingTable toggleSignUpModal={toggleSignUpModal} />
       </div>
     </Header>
 
@@ -48,7 +48,7 @@ const Pricing = () => (
 
       .Header_title,
       .Header_subtitle {
-        max-width: 500px;
+        max-width: 560px;
         margin-left: auto;
         margin-right: auto;
       }
@@ -96,5 +96,11 @@ const Pricing = () => (
     `}</style>
   </Page>
 )
+
+Pricing.init = ({
+  services: {ui: {toggleModal}}
+}) => ({
+  toggleSignUpModal: () => toggleModal('signup')
+})
 
 export default Pricing

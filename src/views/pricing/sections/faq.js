@@ -1,5 +1,6 @@
 import Hexagon from '../../../components/ui/hexagon'
 import Testimonials from '../../../components/shared/testimonials'
+import Link from '../../../components/ui/link'
 
 const FAQ = () => (
   <div className='Section'>
@@ -14,24 +15,24 @@ const FAQ = () => (
       <div className='FAQ-list'>
         <div className='FAQ'>
           <h4 className='FAQ__title'>What happens if I exceed my usage?</h4>
-          <p>When you log into your Dashboard, you can set hard limits (absolute) and soft limits (warnings/notifications issued). If you actually exceed your usage, overage fees will appear as a separate bill at the end of the month (billing period). You can change your plan and limits at any time.</p>
+          <p>When you log into your Syncano Dashboard, you can set hard limits (absolute) and soft limits (warnings/notifications issued). If you actually exceed your usage, overage fees will appear as a separate bill at the end of the month (billing period). You can change your plan and limits at any time.</p>
         </div>
         <div className='FAQ'>
-          <h4 className='FAQ__title'>What kind of metrics will I have access to?</h4>
-          <p>Usage is accessible in your Dashboard. Easily track the number of API calls and Script executions per each Instance (app) on Syncano.</p>
+          <h4 className='FAQ__title'>How is a Script second measured?</h4>
+          <p>A Script is measured by a Webhook, Schedule, Trigger, and automation. You’re billed for each second a Script is run.</p>
         </div>
         <div className='FAQ'>
           <h4 className='FAQ__title'>When will I be billed?</h4>
           <p>As soon as you're ready to switch to a paid account, choose your plan and simply enter your credit card. The bill for the first month is prorated but we still give you the full month’s usage. On the 1st of every month, you are billed up front for that entire month's usage. Should you exceed your usage, you can always change your plan and/or pay the overage. Your overage will appear as a separate bill at the end of that month.</p>
         </div>
         <div className='FAQ'>
-          <h4 className='FAQ__title'>How is a Script second measured?</h4>
-          <p>A Script is measured by a Webhook, Schedule, Trigger, and automation. You’re billed for each second a Script is run. These are all explained in detail here.</p>
+          <h4 className='FAQ__title'>What kind of metrics will I have access to?</h4>
+          <p>Usage is accessible in your Dashboard. Easily track the number of API calls and Script executions per each Instance (app) on Syncano.</p>
         </div>
       </div>
 
       <div className='CTA'>
-        <a href=''>See complete FAQ</a> or <a href=''>ask your own question</a>.
+        <Link to='/faq'>See complete FAQ</Link> or <a href='mailto:hello@syncano.com'>ask your own question</a>.
       </div>
     </div>
 
@@ -118,14 +119,14 @@ const FAQ = () => (
         margin-top: 30px;
       }
 
-      .CTA a {
+      .CTA :global(a) {
         color: #2c59c5;
         text-decoration: none;
         font-weight: 500;
         line-height: 28px;
       }
 
-      .CTA a:hover {
+      .CTA :global(a:hover) {
         text-decoration: underline;
       }
 

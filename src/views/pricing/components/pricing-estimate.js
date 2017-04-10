@@ -3,9 +3,12 @@ import Slider from '../../../components/ui/slider'
 import Arrow from './arrow.svg'
 
 const PricingEstimate = ({
-  calls, seconds, handleCallsChange, handleSecondsChange
+  calls, seconds, handleCallsChange, handleSecondsChange, price
 }) => (
   <div className='Estimate'>
+    {(() => {
+      price = -14 + Math.floor(seconds.value / 100000 + calls.value / 27000)
+    })()}
     <div className='Estimate__group'>
       <div className='Estimate__title'>API calls per month</div>
       <div className='Estimate__help'>What is an API call?</div>
@@ -26,14 +29,16 @@ const PricingEstimate = ({
       <div className='Estimate__footer'>
         <div>
           <div className='Estimate__footer-meta'>Your pricing plan</div>
-          <div className='Estimate__footer-value'>Growth</div>
+          <div className='Estimate__footer-value'>{
+            price === 25 ? 'Base' : 'Growth'
+          }</div>
         </div>
         <div className='Estimate__footer-arrow'>
           <Arrow />
         </div>
         <div>
           <div className='Estimate__footer-meta'>Monthly price</div>
-          <div className='Estimate__footer-value u-ta-r'>${5 + Math.floor(seconds.value / 1000 + calls.value / 1000)}</div>
+          <div className='Estimate__footer-value u-ta-r'>${price}</div>
         </div>
       </div>
     </div>
@@ -124,16 +129,16 @@ PricingEstimate.form = {
   formName: 'PricingEstimateForm',
   fields: {
     calls: {
-      min: 10000,
-      step: 10000,
+      min: 1000000,
+      step: 100000,
       max: 5000000,
       value: 1000000
     },
     seconds: {
-      min: 10000,
+      min: 270000,
       step: 10000,
       max: 5000000,
-      value: 600000
+      value: 270000
     }
   }
 }

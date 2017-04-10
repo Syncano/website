@@ -1,14 +1,20 @@
-const Button = ({children, ...props}) => (
-  <button className={`
-    Button
-    ${'primary' in props && 'Button--primary'}
-    ${'secondary' in props && 'Button--secondary'}
-    ${'outline' in props && 'Button--outline'}
-    ${'github' in props && 'Button--github'}
-    ${'google' in props && 'Button--google'}
-    ${'facebook' in props && 'Button--facebook'}
-    ${'full' in props && 'Button--full'}
-  `}>
+const Button = ({
+  children,
+  primary, secondary, outline, github, google, facebook, full,
+  ...props
+}) => (
+  <button
+    className={`
+      Button
+      ${primary ? 'Button--primary' : ''}
+      ${secondary ? 'Button--secondary' : ''}
+      ${outline ? 'Button--outline' : ''}
+      ${github ? 'Button--github' : ''}
+      ${google ? 'Button--google' : ''}
+      ${facebook ? 'Button--facebook' : ''}
+      ${full ? 'Button--full' : ''}
+    `}
+    {...props}>
     {children}
     <style jsx>{`
       .Button {

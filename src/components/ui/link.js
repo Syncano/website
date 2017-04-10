@@ -5,6 +5,10 @@ export default props => (
     <Link {...props} />
 
     <style jsx>{`
+      div {
+        display: inline-block;
+      }
+
       div :global(a) {
         text-decoration: none;
       }

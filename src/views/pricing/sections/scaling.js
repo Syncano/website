@@ -11,7 +11,7 @@ const Scaling = () => (
     <div className='Section__header u-ta-c'>
       <h2 className='u-title'>Syncano scales with you</h2>
       <p className='u-subtitle'>
-        Don’t worry about scaling. It’ll be done automatically.
+        Your app will always get the capacity it needs - and you only pay for what you use.
       </p>
     </div>
 
@@ -23,7 +23,7 @@ const Scaling = () => (
             Apps come in different shapes and sizes. As you grow, you can adjust your plan based on your needs.
           </p>
           <p className='Heading__item'>
-            Pay fair overage rates when you see the number of your users skyrocket and exceed the limits of your current plan.
+            Pay fair overage rates when you see the number of app users skyrocket and exceed the limits of your current plan. We give a progressive discount, so bigger volume means lower unit prices.
           </p>
         </div>
         <div className='PricingEstimate'>
@@ -50,6 +50,12 @@ const Scaling = () => (
       .Section__header {
         margin-top: 30px;
         margin-bottom: 30px;
+      }
+
+      .Section__header .u-subtitle {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       @media screen and (min-width: 560px) {

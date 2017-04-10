@@ -1,7 +1,9 @@
 import Button from '../../../components/ui/button'
 import Hexagon from '../../../components/ui/hexagon'
 
-const PricingTable = () => (
+const PricingTable = ({
+  toggleSignUpModal
+}) => (
   <div className='Pricing'>
     <div className='HiddenAtSm'>
       <Hexagon width={30} fill='#7c50cd' position={{top: '10px', right: '-17px'}} />
@@ -31,7 +33,7 @@ const PricingTable = () => (
     </ul>
 
     <div className='Pricing__footer'>
-      <Button primary full>Try free for 30 days</Button>
+      <Button primary full onClick={toggleSignUpModal}>Try free for 30 days</Button>
       <div className='Pricing__meta'>
         No credit card required
       </div>
