@@ -20,7 +20,7 @@ const Testimonials = () => (
           </p>
           <footer>
             <div className='Testimonial__author'>The News Stack</div>
-            <a href='' className='Testimonial__author-about'>
+            <a href='https://thenewstack.io/tns-guide-serverless-technologies-best-frameworks-platforms-tools/' className='Testimonial__author-about'>
               TNS Guide to Serverless technologies
             </a>
           </footer>
@@ -49,16 +49,16 @@ const Testimonials = () => (
       <blockquote className='Testimonial'>
         <div className='Testimonial__inner'>
           <Avatar
-            src='/static/testimonials/stale-husby.png'
-            srcSet='/static/testimonials/stale-husby.png 1x, /static/testimonials/stale-husby@2x.png 2x'
+            src='/static/testimonials/halvor-lande.png'
+            srcSet='/static/testimonials/halvor-lande.png 1x, /static/testimonials/halvor-lande@2x.png 2x'
             />
           <p className='Testimonial__content'>
-            If Syncano was around at the time we created our MVP, it would have saved us a full year to get into the market.
+            We chose to work with Syncano to create MVPs faster and increase the speed of innovation.
           </p>
           <footer>
-            <div className='Testimonial__author'>Ståle Husby</div>
+            <div className='Testimonial__author'>Halvor Lande</div>
             <div className='Testimonial__author-about'>
-              CEO, Relink
+              CDO, DNB ASA
             </div>
           </footer>
         </div>
@@ -68,16 +68,16 @@ const Testimonials = () => (
 
         <div className='Testimonial__inner'>
           <Avatar
-            src='/static/testimonials/artur-czmiel.png'
-            srcSet='/static/testimonials/artur-czmiel.png 1x, /static/testimonials/artur-czmiel@2x.png 2x'
+            src='/static/testimonials/ingar-bentzen.png'
+            srcSet='/static/testimonials/ingar-bentzen.png 1x, /static/testimonials/ingar-bentzen@2x.png 2x'
             />
           <p className='Testimonial__content'>
-            We managed to build, launch and succeed with our Pokemon Go map app in just 48 hours of programming.
+            We chose Syncano as tech partner for our accelerator programs in Fintech and Insurtech to help the startups reach product market fit faster.
           </p>
           <footer>
-            <div className='Testimonial__author'>Artur Czemiel</div>
+            <div className='Testimonial__author'>Ingar S. Bentzen</div>
             <div className='Testimonial__author-about'>
-              Developer & Founder, Aexol
+              CEO, The Factory
             </div>
           </footer>
         </div>
