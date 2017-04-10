@@ -1,4 +1,5 @@
 import Nav from '../ui/nav'
+import Link from '../ui/link'
 import Grid from '../ui/grid'
 import Hexagon from '../ui/hexagon'
 
@@ -17,34 +18,38 @@ const Footer = () => (
         <div className='Navigation__column'>
           <h5 className='Navigation__head'>Company</h5>
           <Nav stack>
-            <a className='Navigation__link' href='#'>About us</a>
-            <a className='Navigation__link' href='#'>Jobs</a>
-            <a className='Navigation__link' href='#'>Terms of Service</a>
-            <a className='Navigation__link' href='#'>Privacy Policy</a>
-            <a className='Navigation__link' href='#'>Privacy Shield</a>
+            <Link to="/terms-of-service">
+              <span className='Navigation__link'>Terms of Service</span>
+            </Link>
+            <Link to="/privacy-policy">
+              <span className='Navigation__link'>Privacy Policy</span>
+            </Link>
+            <Link to="/privacy-shield">
+              <span className='Navigation__link'>Privacy Shield</span>
+            </Link>
           </Nav>
         </div>
         <div className='Navigation__column'>
           <h5 className='Navigation__head'>Product</h5>
           <Nav stack>
-            <a className='Navigation__link' href='#'>Features</a>
-            <a className='Navigation__link' href='#'>Plans &amp; Pricing</a>
-            <a className='Navigation__link' href='#'>Customers</a>
-            <a className='Navigation__link' href='#'>Help &amp; Status</a>
-            <a className='Navigation__link' href='#'>Blog</a>
+            <Link to="/features">
+              <span className='Navigation__link'>Features</span>
+            </Link>
+            <Link to="/pricing">
+              <span className='Navigation__link'>Plans &amp; Pricing</span>
+            </Link>
+            <a className='Navigation__link' href='http://status.syncano.com/'>Help &amp; Status</a>
           </Nav>
         </div>
         <div className='Navigation__column'>
           <h5 className='Navigation__head'>Resources</h5>
           <Nav stack>
-            <a className='Navigation__link' href='#'>Getting Started</a>
-            <a className='Navigation__link' href='#'>Documentation</a>
-            <a className='Navigation__link' href='#'>Libraries</a>
-            <a className='Navigation__link' href='#'>Turorials</a>
-            <a className='Navigation__link' href='#'>API Reference</a>
+            <a className='Navigation__link' href='https://syncano.github.io/syncano-node-cli/#/getting-started/quickstart'>Quickstart</a>
+            <a className='Navigation__link' href='https://syncano.github.io/syncano-node-cli/#/'>Documentation</a>
+            <a className='Navigation__link' href='https://syncano.github.io/syncano-node-cli/#/client-lib-reference/installation'>Libraries</a>
           </Nav>
         </div>
-        <div className='Navigation__column'>
+        {/* <div className='Navigation__column'>
           <h5 className='Navigation__head'>For developers</h5>
           <Nav stack>
             <a className='Navigation__link' href='#'>iOS developers</a>
@@ -52,8 +57,8 @@ const Footer = () => (
             <a className='Navigation__link' href='#'>Web developers</a>
             <a className='Navigation__link' href='#'>React developers</a>
           </Nav>
-        </div>
-        <div className='Navigation__column'>
+        </div> */}
+        {/* <div className='Navigation__column'>
           <h5 className='Navigation__head'>More</h5>
           <Nav stack>
             <a className='Navigation__link' href='#'>For Investors</a>
@@ -61,15 +66,16 @@ const Footer = () => (
             <a className='Navigation__link' href='#'>Our team</a>
             <a className='Navigation__link' href='#'>Case studies</a>
           </Nav>
-        </div>
-        <div className='Navigation__column'>
+        </div> */}
+        <div className='Navigation__column Navigation__column--split'>
           <h5 className='Navigation__head'>Connect</h5>
           <Nav stack>
-            <a className='Navigation__link' href='#'>Twitter</a>
-            <a className='Navigation__link' href='#'>Github</a>
-            <a className='Navigation__link' href='#'>Facebook</a>
-            <a className='Navigation__link' href='#'>LinkedIn</a>
-            <a className='Navigation__link' href='#'>Contact us</a>
+            <a className='Navigation__link' href='https://twitter.com/Syncano/'>Twitter</a>
+            <a className='Navigation__link' href='https://github.com/Syncano/'>Github</a>
+            <a className='Navigation__link' href='https://www.facebook.com/syncano/'>Facebook</a>
+            <a className='Navigation__link' href='https://www.linkedin.com/company/syncano/'>LinkedIn</a>
+            <a className='Navigation__link' href='https://dribbble.com/syncano'>Dribbble</a>
+            <a className='Navigation__link' href='mailto:hello@syncano.com'>Contact us</a>
           </Nav>
         </div>
       </Grid>
@@ -79,7 +85,7 @@ const Footer = () => (
 
     <style jsx>{`
       .Footer {
-        max-width: 1240px;
+        max-width: 880px;
         padding-bottom: 30px;
         position: relative;
       }
@@ -97,6 +103,17 @@ const Footer = () => (
       .Navigation__column {
         margin-bottom: 30px;
         flex: 1;
+      }
+
+      .Navigation__column--split :global(ul) {
+        width: 230px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .Navigation__column--split :global(li) {
+        flex-basis: 50%;
       }
 
       .Navigation__head {

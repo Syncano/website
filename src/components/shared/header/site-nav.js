@@ -21,10 +21,10 @@ const SiteNav = ({isOpen, theme, toggleSignIn}) => (
         <Link to='/pricing'>
           <span className='Site-nav__item'>Plans &amp; Pricing</span>
         </Link>
-        <a className='Site-nav__item' href=''>Documentation</a>
+        <a className='Site-nav__item' href='https://syncano.github.io/syncano-node-cli/'>Documentation</a>
         <div className='Site-nav__social'>
-          <a href=''><i className='fa fa-github' /></a>
-          <a href=''><i className='fa fa-slack' /> 128</a>
+          <a href='https://github.com/syncano'><i className='fa fa-github' /></a>
+          <a href='https://www.syncano.io/slack-invite/'><i className='fa fa-slack' /></a>
         </div>
         <a className='Site-nav__item Site-nav__item--login' onClick={toggleSignIn}>
           Sign in<i className='fa fa-arrow-right' />

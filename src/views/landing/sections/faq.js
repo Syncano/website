@@ -13,33 +13,33 @@ const FAQ = () => (
     <div className='Section__content u-wrapper'>
       <div className='FAQ-list'>
         <div className='FAQ'>
-          <h4 className='FAQ__title'>How is Syncano different from Heroku?</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.</p>
+          <h4 className='FAQ__title'>How is Syncano different from other cloud backend products?</h4>
+          <p>Syncano has been created with developers in mind; built for engineers by engineers. During the development of the latest version, we carefully listened to the feedback and learned our lessons. The outcome is a tool that seamlessly integrates with your workflow and takes it to the next level. With Syncano, working with the backend feels like http://locallhost.</p>
         </div>
         <div className='FAQ'>
-          <h4 className='FAQ__title'>How does Syncano scale with my app?</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.</p>
+          <h4 className='FAQ__title'>How does your pricing model work?</h4>
+          <p>Operations on Syncano are based on the number of API calls and the time it takes to execute the backend script code inside of the sockets you use. We have monthly pricing plans that include a fixed amount of API calls and script execution time. The basic plan of USD 25 includes 1 million API calls and 270k script seconds, which should usually cover around 1000 daily users making several requests through your frontend.</p>
         </div>
         <div className='FAQ'>
-          <h4 className='FAQ__title'>Can I cancel my subscription any time?</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.</p>
+          <h4 className='FAQ__title'>What happens if I exceed my usage?</h4>
+          <p>Your application will continue to work without any interruptions, regardless of the usage of the backend. If you exceed your usage, overage fees will appear as a separate bill at the end of the month, which is our billing period. You can change your plan at any time and set limits to notify you in the event of getting close to exceeding your current plan.</p>
         </div>
         <div className='FAQ'>
-          <h4 className='FAQ__title'>What payment options do you offer?</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.</p>
+          <h4 className='FAQ__title'>What will happen if my app gets popular and attracts millions of users?</h4>
+          <p>Will be as excited as you! You don’t need to worry about scaling issues, as our infrastructure will scale along with the load of your users. We have a proven track record of handling millions of API requests daily.</p>
         </div>
         <div className='FAQ'>
-          <h4 className='FAQ__title'>What if I use up all my account limits?</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.</p>
+          <h4 className='FAQ__title'>Where are the libraries for iOS and Android?</h4>
+          <p>Syncano is currently in beta and we provide a client library for JavaScript. We are also working on the iOS, Android and Unity libraries and they will be released very soon. <a href='https://www.syncano.io/slack-invite/'>Ask us on Slack</a> to get the ETAs.</p>
         </div>
         <div className='FAQ'>
-          <h4 className='FAQ__title'>What if 30 days of trial is not enough?</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.</p>
+          <h4 className='FAQ__title'>How can I get support?</h4>
+          <p>You can join our <a href='https://www.syncano.io/slack-invite/'>Slack channel</a> for community support, talk to us via the messenger in the <a href='https://dashboard.syncano.io/'>Dashboard</a> after you log in, or simply <a href='mailto:support@syncano.io'>send us an email</a>. You can also browse through our documentation.</p>
         </div>
       </div>
 
       <div className='CTA'>
-        <a href=''>See complete FAQ</a>, <a href=''>ask your own question</a>, <a href=''>read the docs</a> or <a href=''>join our Slack channel</a> to get instant answers.
+        <a href=''>See complete FAQ</a>, <a href=''>ask your own question</a>, <a href=''>read the docs</a> to get instant answers.
       </div>
     </div>
 

@@ -1,60 +1,71 @@
 import Hexagon from '../../../../components/ui/hexagon'
 import Button from '../../../../components/ui/button'
-import Icon from './icon-1.svg'
+import IconFacebook from './icon-fb.svg'
+import IconDB from './icon-db.svg'
+import IconGoogleAnalytics from './icon-google-analytics.svg'
+import IconTwitter from './icon-twitter.svg'
+import IconSlack from './icon-slack.svg'
+import IconParse from './icon-parse.svg'
+import IconStripe from './icon-stripe.svg'
+import IconFirebase from './icon-firebase.svg'
+import IconSegment from './icon-segment.svg'
+import IconSentry from './icon-sentry.svg'
 import Hexagons from './hexagons.svg'
 
-const Sockets = () => (
+const Sockets = ({
+  toggleSignUpModal
+}) => (
   <div className='Section'>
     <div className='Section__content u-wrapper u-ta-c'>
       <div className='Project'>
-        <h2 className='Project__headline'>Combine Syncano sockets to build your</h2>
+        <h2 className='Project__headline'>Assemble your backend from Syncano Sockets to build your</h2>
         <p className='Project__title'>
-          fintech innovati_
+          Fintech innovation_
         </p>
       </div>
 
       <div className='Socket-list'>
         <a className='Socket' title='DB'>
-          <div className='Socket__icon'><Icon /></div>
+          <div className='Socket__icon'><IconDB /></div>
           <Hexagon width={130} style={{fill: '#05b470', stroke: 'none'}} />
         </a>
         <a className='Socket' title='BAR'>
-          <div className='Socket__icon'><Icon /></div>
+          <div className='Socket__icon'><IconGoogleAnalytics /></div>
           <Hexagon width={130} style={{fill: '#f69819', stroke: 'none'}} />
         </a>
         <a className='Socket' title='Twitter'>
-          <div className='Socket__icon'><Icon /></div>
+          <div className='Socket__icon'><IconTwitter /></div>
           <Hexagon width={130} style={{fill: '#1da1f2', stroke: 'none'}} />
         </a>
         <a className='Socket' title='Slack'>
-          <div className='Socket__icon'><Icon /></div>
+          <div className='Socket__icon'><IconSlack /></div>
           <Hexagon width={130} style={{fill: '#6ecadc', stroke: 'none'}} />
         </a>
         <a className='Socket' title='Parse'>
-          <div className='Socket__icon'><Icon /></div>
+          <div className='Socket__icon'><IconParse /></div>
           <Hexagon width={130} style={{fill: '#1199ed', stroke: 'none'}} />
         </a>
         <a className='Socket' title='Facebook'>
-          <div className='Socket__icon'><Icon /></div>
+          <div className='Socket__icon'><IconFacebook /></div>
           <Hexagon width={130} style={{fill: '#3B5998', stroke: 'none'}} />
         </a>
         <a className='Socket' title='Stripe'>
-          <div className='Socket__icon'><Icon /></div>
+          <div className='Socket__icon'><IconStripe /></div>
           <Hexagon width={130} style={{fill: '#00afe1', stroke: 'none'}} />
         </a>
-        <a className='Socket' title='Triangle'>
-          <div className='Socket__icon'><Icon /></div>
+        <a className='Socket' title='Sentry'>
+          <div className='Socket__icon'><IconSentry /></div>
           <Hexagon width={130} style={{fill: '#6c5bca', stroke: 'none'}} />
         </a>
         <a className='Socket' title='Firebase'>
-          <div className='Socket__icon'><Icon /></div>
+          <div className='Socket__icon'><IconFirebase /></div>
           <Hexagon width={130} style={{fill: '#ffa801', stroke: 'none'}} />
         </a>
         <a className='Socket' title='Segment'>
-          <div className='Socket__icon'><Icon /></div>
+          <div className='Socket__icon'><IconSegment /></div>
           <Hexagon width={130} style={{fill: '#3bb075', stroke: 'none'}} />
         </a>
-        <a className='Socket Socket--empty' title='Plus'>
+        <a className='Socket Socket--empty' href='https://syncano.github.io/syncano-node-cli/#/building-sockets/basics' title='Build your socket'>
           <i className='Socket__icon fa fa-plus' />
           <Hexagon width={130} style={{
             fill: '#111',
@@ -69,13 +80,13 @@ const Sockets = () => (
         </div>
 
         <div className='HiddenAtMd'>
-          <Hexagon width={64} fill='#05b470' position={{top: '-24%', right: '-90px'}} />
+          <Hexagon width={64} fill='#05b470' position={{top: '-24%', right: '-200px'}} />
           <Hexagon width={64} fill='#b4f2da' position={{bottom: '0%', left: '-8%'}} />
         </div>
       </div>
 
-      <div className='Separator' data-after='or' />
-      <a href=''>Browse all 150 sockets</a>
+      {/* <div className='Separator' data-after='or' /> */}
+      {/* <a href=''>Browse all 150 sockets</a> */}
 
       <div className='HiddenAtMd'>
         <Hexagon width={32} fill='#05a5b4' position={{top: '-15px', left: '10%'}} />
@@ -84,10 +95,13 @@ const Sockets = () => (
     </div>
 
     <div className='CTA u-wrapper'>
-      <h3 className='u-title'>50,000 developers use Syncano</h3>
-      <p className='CTA__subtitle u-subtitle'>to faster build, test and scale their APIs.</p>
+      <h3 className='u-title'>More than 60,000 developers use Syncano</h3>
+      <p className='CTA__subtitle u-subtitle'>
+        to accelerate and automate their software development process. <br />
+        Together, let’s enable the autonomous developer.
+      </p>
 
-      <Button primary>Get started for free</Button>
+      <Button primary onClick={toggleSignUpModal}>Get started for free</Button>
     </div>
 
     <style jsx>{`
@@ -226,7 +240,7 @@ const Sockets = () => (
         font-size: 16px;
         display: inline-block;
         width: 130px;
-        cursor: pointer;
+        /*cursor: pointer;*/
         margin-bottom: 10px;
       }
 

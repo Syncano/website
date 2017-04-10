@@ -61,11 +61,11 @@ const CLI = () => (
         font-family: Courier;
         font-weight: bold;
         letter-spacing: .1em;
-        color: #3e434a;
+        color: #68717d;
       }
 
       .CLI__line--result {
-        color: #707781;
+        color: #b3bece;
       }
 
       .CLI__line--indent {

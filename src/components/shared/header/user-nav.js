@@ -3,7 +3,7 @@ import Nav from '../../ui/nav'
 const UserNav = ({theme, toggleSignUp, toggleSignIn}) => (
   <div className={`User-nav t-${theme}`}>
     <Nav>
-      <a className='User-nav__item User-nav__item--status' href=''>All systems operational</a>
+      <a className='User-nav__item User-nav__item--status' href='http://status.syncano.com/'>All systems operational</a>
       <a className='User-nav__item' onClick={toggleSignIn}>Sign in</a>
       <a className='User-nav__item' onClick={toggleSignUp}>Sign up</a>
     </Nav>

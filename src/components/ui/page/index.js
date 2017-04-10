@@ -7,7 +7,7 @@ import SignInForm from '../../shared/auth/signin'
 export default ({children}) => (
   <div>
     {children}
-    {window.scrollTo(0, 0)}
+    {/* {window.scrollTo(0, 0)} */}
     <FontAwesome />
     <Normalize />
 

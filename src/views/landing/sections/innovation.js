@@ -13,34 +13,34 @@ const Innovation = () => (
     <div className='Heading u-wrapper'>
       <Grid wrap>
         <div className='Heading__item Heading__item--important'>
-          The Pacemaker has saved more than 9 million families the grief of losing a loved one early. New technologies will also save lives.
+          <b>Syncano</b> is a versatile development platform that enables developers to build more, faster by leveraging existing backend code. Developers can now spend their time solving app specific challenges instead of managing backend code.
         </div>
         <div className='Heading__item'>
-          People keep solving the same problems because there is no effective way to share and combine already existing code. This holds developers back and prevents true accelerated innovation.
+          Technology has transformed the unthinkable into reality. Think of the impact of advances like the Pacemaker, saving millions from the grief of loss.
+          There’s still abundant untapped opportunity to change the world we live in with technology, through the apps you can build.
         </div>
       </Grid>
     </div>
-
+{/*
     <div className='Section__header u-wrapper u-ta-c'>
       <h2 className='u-title'>Speed of innovation matters</h2>
       <p className='u-subtitle'>Go build something amazing!</p>
-    </div>
+    </div> */}
 
-    <div className='Video u-wrapper'>
+    {/* <div className='Video u-wrapper'>
       <div className='Video__inner' />
 
       <div className='HiddenAtSm'>
         <Hexagon width={64} fill='#b4f2da' position={{bottom: '-30px', left: '15%'}} />
         <Hexagon width={32} fill='#b4f2da' position={{bottom: '-60px', left: '25%'}} />
       </div>
-    </div>
+    </div> */}
 
     <style jsx>{`
       /* = SECTION
        * ==================================================================== */
       .Section {
         margin-top: 30px;
-        margin-bottom: 30px;
         position: relative;
       }
 
@@ -52,7 +52,7 @@ const Innovation = () => (
       @media screen and (min-width: 560px) {
         .Section {
           margin-top: 90px;
-          margin-bottom: 90px;
+          margin-bottom: -45px;
         }
 
         .Section__header {
@@ -63,7 +63,7 @@ const Innovation = () => (
       @media screen and (min-width: 960px) {
         .Section {
           margin-top: 140px;
-          margin-bottom: 140px;
+          margin-bottom: -90px;
         }
       }
 

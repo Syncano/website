@@ -1,6 +1,7 @@
 import {connect} from 'zefir/utils'
 import Button from '../../ui/button'
 import Input from '../../ui/input'
+import Link from '../../ui/link'
 import Style from './style'
 
 const SignInForm = ({
@@ -21,7 +22,7 @@ const SignInForm = ({
     </div>
     <div className='AuthForm__footer'>
       <div>
-        By signing in you confirm that you accept our <a href=''>Terms of Use</a>
+        By signing in you confirm that you accept our <Link to='/terms-of-service'>Terms of Use</Link>
       </div>
 
       <div>

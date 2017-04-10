@@ -1,0 +1,22 @@
+<svg width="41" height="41" viewBox="0 0 41 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>Icon/Google Analytics</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-589 -3362)" figma:type="canvas">
+<g id="Icon/Google Analytics" figma:type="instance">
+<g id="bar-1" figma:type="vector">
+<use xlink:href="#path-google-analytics-0_fill" transform="translate(589 3389)" fill="#FFFFFF"/>
+</g>
+<g id="bar-2" opacity="0.5" figma:type="vector">
+<use xlink:href="#path-google-analytics-1_fill" transform="translate(602 3375)" fill="#FFFFFF"/>
+</g>
+<g id="bar-3" opacity="0.25" figma:type="vector">
+<use xlink:href="#path-google-analytics-2_fill" transform="translate(616 3362)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path-google-analytics-0_fill" fill-rule="evenodd" d="M 0 4C 0 1.79086 1.79086 0 4 0L 13 0L 13 14L 4 14C 1.79086 14 0 12.2091 0 10L 0 4Z"/>
+<path id="path-google-analytics-1_fill" fill-rule="evenodd" d="M 0 4C 0 1.79086 1.79086 0 4 0L 14 0L 14 28L 0 28L 0 4Z"/>
+<path id="path-google-analytics-2_fill" fill-rule="evenodd" d="M 0 4C 0 1.79086 1.79086 0 4 0L 10 0C 12.2091 0 14 1.79086 14 4L 14 37C 14 39.2091 12.2091 41 10 41L 0 41L 0 4Z"/>
+</defs>
+</svg>
