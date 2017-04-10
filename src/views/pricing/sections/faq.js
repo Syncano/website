@@ -30,10 +30,6 @@ const FAQ = () => (
           <p>Usage is accessible in your Dashboard. Easily track the number of API calls and Script executions per each Instance (app) on Syncano.</p>
         </div>
       </div>
-
-      <div className='CTA'>
-        <Link to='/faq'>See complete FAQ</Link> or <a href='mailto:hello@syncano.com'>ask your own question</a>.
-      </div>
     </div>
 
     <style jsx>{`

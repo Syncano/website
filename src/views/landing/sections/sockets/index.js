@@ -172,9 +172,15 @@ const Sockets = ({
         z-index: 1;
       }
 
+      .Socket-list::after {
+        content: '';
+        clear: both;
+        display: table;
+      }
+
       @media screen and (max-width: 429px) {
         .Socket-list {
-          margin-bottom: 30px;
+          margin-bottom: 80px;
         }
 
         .Socket:nth-child(2),
@@ -202,10 +208,6 @@ const Sockets = ({
       }
 
       @media screen and (min-width: 430px) and (max-width: 649px) {
-        .Socket-list {
-          margin-bottom: -30px;
-        }
-
         .Socket:nth-child(2),
         .Socket:nth-child(5),
         .Socket:nth-child(8) {

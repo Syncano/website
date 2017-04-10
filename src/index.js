@@ -9,7 +9,7 @@ import PrivacyPolicyView from './views/terms/privacy-policy'
 import SocketsView from './views/sockets'
 import MissingView from './views/missing'
 
-export default () => (
+const Routes = () => (
   <Switch>
     <Match path='/' exact component={LandingView} />
     <Match path='/features' exact component={FeaturesView} />
@@ -21,3 +21,16 @@ export default () => (
     <Match component={MissingView} />
   </Switch>
 )
+
+Routes.init = () => {
+  {((h,o,t,j,a,r) => {
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:108213,hjsv:5};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=')}
+}
+
+export default Routes

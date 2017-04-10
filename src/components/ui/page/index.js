@@ -1,13 +1,14 @@
 import FontAwesome from './styles/font-awesome'
 import Normalize from './styles/normalize'
 import Modal from '../modal'
+import ScrollManager from '../../ui/scroll-manager'
 import SignUpForm from '../../shared/auth/signup'
 import SignInForm from '../../shared/auth/signin'
 
 export default ({children}) => (
   <div>
     {children}
-    {/* {window.scrollTo(0, 0)} */}
+    {/* <ScrollManager /> */}
     <FontAwesome />
     <Normalize />
 

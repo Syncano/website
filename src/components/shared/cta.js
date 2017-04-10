@@ -1,14 +1,15 @@
+import {connect} from 'zefir/utils'
 import Button from '../ui/button'
 import Hexagon from '../ui/hexagon'
 
-const CTA = () => (
+const CTA = ({toggleSignUpModal}) => (
   <div className='Section u-wrapper u-ta-c'>
     <h3 className='u-title'>Ready to get started?</h3>
     <p className='u-subtitle'>Try Syncano for free for 30 days. No credit card required.</p>
 
     <div className='Split'>
-      <Button primary>Start free trial</Button>
-      <Button outline>I'm not convinced</Button>
+      <Button primary onClick={toggleSignUpModal}>Start free trial</Button>
+      <Button outline onClick={() => hj('trigger', 'notConvinced')}>I'm not convinced</Button>
     </div>
 
     <div className='HiddenAtSm'>
@@ -71,4 +72,10 @@ const CTA = () => (
   </div>
 )
 
-export default CTA
+CTA.init = ({
+  services: {ui: {toggleModal}},
+}) => ({
+  toggleSignUpModal: () => toggleModal('signup')
+})
+
+export default connect(CTA)

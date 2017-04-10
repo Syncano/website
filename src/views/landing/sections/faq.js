@@ -1,4 +1,5 @@
 import Hexagon from '../../../components/ui/hexagon'
+import Link from '../../../components/ui/link'
 import Testimonials from '../../../components/shared/testimonials'
 
 const FAQ = () => (
@@ -39,7 +40,7 @@ const FAQ = () => (
       </div>
 
       <div className='CTA'>
-        <a href=''>See complete FAQ</a>, <a href=''>ask your own question</a>, <a href=''>read the docs</a> to get instant answers.
+        <Link to='/faq'>See complete FAQ</Link>, <a href='mailto:hello@syncano.com'>ask your own question</a>, <a href='https://syncano.github.io/syncano-node-cli/#/'>read the docs</a> to get instant answers.
       </div>
     </div>
 
@@ -123,14 +124,14 @@ const FAQ = () => (
         margin-top: 30px;
       }
 
-      .CTA a {
+      .CTA :global(a) {
         color: #2c59c5;
         text-decoration: none;
         font-weight: 500;
         line-height: 28px;
       }
 
-      .CTA a:hover {
+      .CTA :global(a:hover) {
         text-decoration: underline;
       }
 

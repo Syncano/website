@@ -11,7 +11,6 @@ const PricingEstimate = ({
     })()}
     <div className='Estimate__group'>
       <div className='Estimate__title'>API calls per month</div>
-      <div className='Estimate__help'>What is an API call?</div>
       <div className='Estimate__value'>{calls.value.toLocaleString()}</div>
       <div className='Estimate__slider'>
         <Slider {...calls} onChange={handleCallsChange} />
@@ -20,7 +19,6 @@ const PricingEstimate = ({
 
     <div className='Estimate__group'>
       <div className='Estimate__title'>Script seconds per month</div>
-      <div className='Estimate__help'>What is a script second?</div>
       <div className='Estimate__value'>{seconds.value.toLocaleString()}</div>
       <div className='Estimate__slider'>
         <Slider {...seconds} onChange={handleSecondsChange} />
