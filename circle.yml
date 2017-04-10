@@ -25,6 +25,7 @@ deployment:
     branch: syncano-ascend
     commands:
       - echo "deploy"
+      - syncano-cli hosting sync staging
 
 experimental:
   notify:

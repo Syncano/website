@@ -13,3 +13,8 @@ node_modules
 .DS_Store
 Thumbs.db
 .envrc
+
+# Syncano
+syncano/.dist
+syncano/.bundles
+syncano/**/scripts/.bundles
