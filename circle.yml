@@ -17,13 +17,14 @@ dependencies:
     - yarn install
 test:
   override:
-    - echo "no tests!"
+    - yarn
+    - yarn run build
 
 deployment:
   staging:
     branch: syncano-ascend
     commands:
-      - yarn run build
+      - echo "deploy"
 
 experimental:
   notify:
