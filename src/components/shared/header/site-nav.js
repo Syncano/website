@@ -24,7 +24,7 @@ const SiteNav = ({isOpen, theme, toggleSignIn}) => (
         <a className='Site-nav__item' href='https://syncano.github.io/syncano-node-cli/'>Documentation</a>
         <div className='Site-nav__social'>
           <a href='https://github.com/syncano'><i className='fa fa-github' /></a>
-          <a href='https://www.syncano.io/slack-invite/'><i className='fa fa-slack' /></a>
+          {/* <a href='https://www.syncano.io/slack-invite/'><i className='fa fa-slack' /></a> */}
         </div>
         <a className='Site-nav__item Site-nav__item--login' onClick={toggleSignIn}>
           Sign in<i className='fa fa-arrow-right' />
