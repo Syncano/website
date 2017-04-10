@@ -1,0 +1,33 @@
+machine:
+  environment:
+    YARN_VERSION: 0.17.10
+    PATH: "${PATH}:${HOME}/.yarn/bin"
+
+dependencies:
+  pre:
+    - case $CIRCLE_NODE_INDEX in 0) NODE_VERSION=7 ;; 1) NODE_VERSION=6 ;; 2) NODE_VERSION=4 ;; esac; nvm install $NODE_VERSION && nvm alias default $NODE_VERSION
+    - |
+      if [[ ! -e ~/.yarn/bin/yarn || $(yarn --version) != "${YARN_VERSION}" ]]; then
+        curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version $YARN_VERSION
+      fi
+  cache_directories:
+    - ~/.yarn
+    - ~/.yarn-cache
+  override:
+    - yarn
+test:
+  override:
+    - yarn run build
+
+deployment:
+  staging:
+    branch: syncano-ascend
+    commands:
+      - echo "deploy"
+      - syncano-cli hosting sync staging
+
+experimental:
+  notify:
+    branches:
+      only:
+        - syncano-ascend
