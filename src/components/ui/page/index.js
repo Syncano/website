@@ -49,7 +49,6 @@ export default ({children}) => (
 
       .AppContainer {
         overflow: hidden;
-        background: rgba(244, 246, 248, 1) linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
       }
 
       /* = WRAPPER
@@ -102,6 +101,15 @@ export default ({children}) => (
 
       .u-ta-r {
         text-align: right;
+      }
+
+      a {
+        color: #2c59c5;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
       }
     `}</style>
   </div>

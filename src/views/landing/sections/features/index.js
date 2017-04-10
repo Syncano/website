@@ -167,6 +167,10 @@ const Features = () => (
         vertical-align: top;
       }
 
+      .Feature:hover {
+        text-decoration: none;
+      }
+
       .Feature__inner {
         cursor: pointer;
         padding: 30px;

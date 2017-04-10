@@ -42,6 +42,10 @@ const Landing = () => (
     <Footer />
 
     <style jsx>{`
+      :global(.AppContainer) {
+        background: rgba(244, 246, 248, 1) linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+      }
+
       .Section {
         max-width: 670px;
       }

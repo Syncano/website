@@ -18,7 +18,7 @@ export default () => (
         line-height: 1.15; /* 2 */
         -ms-text-size-adjust: 100%; /* 3 */
         -webkit-text-size-adjust: 100%; /* 3 */
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
       }
 
       *,

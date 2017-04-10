@@ -6,7 +6,9 @@ const SiteNav = ({isOpen, theme, toggleSignIn}) => (
     <div className='Site-nav__inner'>
       <Nav>
         <div>
-          <a className='Site-nav__item' href=''>Product</a>
+          <Link to='/features'>
+            <span className='Site-nav__item'>Product</span>
+          </Link>
           <div className='Dropdown'>
             <Nav stack>
               <a href=''>Automation SDK</a>
@@ -107,11 +109,7 @@ const SiteNav = ({isOpen, theme, toggleSignIn}) => (
           box-shadow: 0 2px 8px rgba(200, 200, 200, .3);
         }
 
-        .Site-nav :global(ul) {
-          flex-flow: column;
-        }
-
-        .Site-nav__item {
+        .Site-nav :global(.Site-nav__item) {
           text-decoration: none;
           line-height: 36px;
           font-size: 18px;
@@ -142,6 +140,10 @@ const SiteNav = ({isOpen, theme, toggleSignIn}) => (
           visibility: visible;
           transform: none;
           opacity: 1;
+        }
+
+        .Site-nav :global(ul) {
+          flex-flow: column;
         }
       }
 

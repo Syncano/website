@@ -88,6 +88,7 @@ const Header = ({
         color: #3871d0;
         padding-top: 25px;
         position: relative;
+        z-index: 10;
       }
 
       .Header.t-dark {
