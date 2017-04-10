@@ -15,6 +15,7 @@ dependencies:
     - ~/.yarn-cache
   override:
     - yarn
+    - yarn global add syncano-cli@beta
 test:
   override:
     - yarn run build
