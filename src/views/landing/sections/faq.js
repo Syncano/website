@@ -40,7 +40,7 @@ const FAQ = () => (
       </div>
 
       <div className='CTA'>
-        <Link to='/faq'>See complete FAQ</Link>, <a href='mailto:hello@syncano.com'>ask your own question</a>, <a href='https://syncano.github.io/syncano-node-cli/#/'>read the docs</a> to get instant answers.
+        <a href='https://syncano.github.io/syncano-node-cli/#/'>Read the docs</a> or <a href='mailto:hello@syncano.com'>ask your own question</a> to get instant answers.
       </div>
     </div>
 
