@@ -7,10 +7,10 @@ import Grid from '../../../../components/ui/grid'
 
 const Features = () => (
   <div className='Section u-wrapper'>
-    <Hexagon width={32} fill='#05A5B4' position={{top: '20px', right: '70px'}} />
+    <Hexagon width={32} fill='#05A5B4' position={{top: '20px', right: '-20px'}} />
 
     <div className='Section__header u-ta-c'>
-      <h2 className='u-title'>Meet Syncano</h2>
+      <h2 className='u-title'>At Syncano, we want to help you build technology that matters, faster</h2>
       <p className='u-subtitle'>
         Syncano’s Serverless Platform and SDKs automatically assemble and deploy your backend to the cloud instantaneously - all while you build your app.
       </p>

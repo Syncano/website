@@ -27,38 +27,38 @@ const Testimonials = () => (
         </div>
       </blockquote>
       <blockquote className='Testimonial'>
-        <Hexagon width={42} fill='#60e0ae' position={{top: '-25px', right: '15px'}} />
-        <Hexagon width={32} fill='#b4f2da' position={{bottom: '-45px', right: '20px'}} />
-
-        <div className='Testimonial__inner'>
-          <Avatar
-            src='/static/testimonials/nikolai-fasting.png'
-            srcSet='/static/testimonials/nikolai-fasting.png 1x, /static/testimonials/nikolai-fasting@2x.png 2x'
-            />
-          <p className='Testimonial__content'>
-            We are entering an era where software builds software. Syncano is a pioneer in that evolution.
-          </p>
-          <footer>
-            <div className='Testimonial__author'>Nikolai Fasting</div>
-            <div className='Testimonial__author-about'>
-              CEO & Founder, Syncano
-            </div>
-          </footer>
-        </div>
-      </blockquote>
-      <blockquote className='Testimonial'>
         <div className='Testimonial__inner'>
           <Avatar
             src='/static/testimonials/halvor-lande.png'
             srcSet='/static/testimonials/halvor-lande.png 1x, /static/testimonials/halvor-lande@2x.png 2x'
             />
           <p className='Testimonial__content'>
-            We chose to work with Syncano to create MVPs faster and increase the speed of innovation.
+            We chose to work with Syncano to create MVPs faster, and to increase the speed of experimentation with Fintech.
           </p>
           <footer>
             <div className='Testimonial__author'>Halvor Lande</div>
             <div className='Testimonial__author-about'>
               CDO, DNB ASA
+            </div>
+          </footer>
+        </div>
+      </blockquote>
+      <blockquote className='Testimonial'>
+        <Hexagon width={42} fill='#60e0ae' position={{top: '-25px', right: '15px'}} />
+        <Hexagon width={32} fill='#b4f2da' position={{bottom: '-45px', right: '20px'}} />
+
+        <div className='Testimonial__inner'>
+          <Avatar
+            src='/static/testimonials/stale-husby.png'
+            srcSet='/static/testimonials/stale-husby.png 1x, /static/testimonials/stale-husby@2x.png 2x'
+            />
+          <p className='Testimonial__content'>
+            If Syncano was around at the time we created our MVP, it would have saved us a full year to get into the market.
+          </p>
+          <footer>
+            <div className='Testimonial__author'>Ståle Husby</div>
+            <div className='Testimonial__author-about'>
+              CEO, Relink
             </div>
           </footer>
         </div>
@@ -72,7 +72,7 @@ const Testimonials = () => (
             srcSet='/static/testimonials/ingar-bentzen.png 1x, /static/testimonials/ingar-bentzen@2x.png 2x'
             />
           <p className='Testimonial__content'>
-            We chose Syncano as tech partner for our accelerator programs in Fintech and Insurtech to help the startups reach product market fit faster.
+            Syncano helps the startups in our Fintech and Insurtech accelerator programs to reach product market fit faster.
           </p>
           <footer>
             <div className='Testimonial__author'>Ingar S. Bentzen</div>

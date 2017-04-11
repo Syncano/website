@@ -95,7 +95,7 @@ const Sockets = ({
     </div>
 
     <div className='CTA u-wrapper'>
-      <h3 className='u-title'>More than 60,000 developers use Syncano</h3>
+      <h3 className='u-title'>More than 60,000 developers use Syncano NoOps</h3>
       <p className='CTA__subtitle u-subtitle'>
         to accelerate and automate their software development process. <br />
         Together, let’s enable the autonomous developer.

@@ -53,9 +53,10 @@ const Scaling = () => (
       }
 
       .Section__header .u-subtitle {
-        max-width: 500px;
+        max-width: 480px;
         margin-left: auto;
         margin-right: auto;
+        hyphens: auto
       }
 
       @media screen and (min-width: 560px) {

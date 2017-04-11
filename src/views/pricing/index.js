@@ -15,7 +15,7 @@ const Pricing = ({toggleSignUpModal}) => (
 
     <Header theme='dark'>
       <div className='Header'>
-        <h1 className='Header_title'>At Syncano, we want to help you build technology that matters, faster.</h1>
+        <h1 className='Header_title'>At Syncano, we want to help you build technology that matters, faster</h1>
         <h2 className='Header_subtitle'>30-day money back guarantee. No contracts. Upgrade, downgrade, or cancel at any time.</h2>
       </div>
 

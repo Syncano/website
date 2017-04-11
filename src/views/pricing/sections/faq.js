@@ -26,7 +26,7 @@ const FAQ = () => (
           <p>As soon as you're ready to switch to a paid account, choose your plan and simply enter your credit card. The bill for the first month is prorated but we still give you the full month’s usage. On the 1st of every month, you are billed up front for that entire month's usage. Should you exceed your usage, you can always change your plan and/or pay the overage. Your overage will appear as a separate bill at the end of that month.</p>
         </div>
         <div className='FAQ'>
-          <h4 className='FAQ__title'>What kind of metrics will I have access to?</h4>
+          <h4 className='FAQ__title'>Which metrics can I access?</h4>
           <p>Usage is accessible in your Dashboard. Easily track the number of API calls and Script executions per each Instance (app) on Syncano.</p>
         </div>
       </div>
