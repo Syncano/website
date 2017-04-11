@@ -1,17 +1,17 @@
 import {Link} from 'zefir/router'
 
 export default props => (
-  <div>
+  <span>
     <Link {...props} />
 
     <style jsx>{`
-      div {
+      span {
         display: inline-block;
       }
 
-      div :global(a) {
+      span :global(a) {
         text-decoration: none;
       }
     `}</style>
-  </div>
+  </span>
 )
