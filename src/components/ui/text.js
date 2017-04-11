@@ -52,12 +52,60 @@ const Text = ({children}) => (
         color: #8d9299;
       }
 
+      div :global(p) + :global(p) {
+        margin-top: 15px;
+      }
+
       div :global(p) :global(a) {
         color: #2c59c5;
         font-weight: 500;
         text-decoration: none;
       }
 
+      div :global(li) {
+        margin-bottom: 15px;
+      }
+
+      div :global(ol) {
+        counter-reset: section;
+      }
+
+      div :global(li) > :global(h3) {
+        display: inline-block;
+      }
+
+      div :global(ol) > :global(li:before) {
+          counter-increment: section;
+          content: counter(section) ". ";
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          color: #444;
+      }
+
+      div :global(ol) :global(ol) {
+        counter-reset: subsection;
+        margin-left: 30px;
+      }
+
+      div :global(ol) :global(ol) :global(li:before) {
+        margin-left: 0;
+        counter-increment: subsection;
+        content: counter(section) "." counter(subsection) ". ";
+      }
+
+      div :global(ol) :global(ol) :global(ol) {
+        counter-reset: subsubsection;
+        margin-top: 15px;
+      }
+
+      div :global(ol) :global(ol) :global(ol) :global(li:before) {
+        margin-left: 0;
+        counter-increment: subsubsection;
+        content: counter(section) "." counter(subsection) "." counter(subsubsection) ". ";
+      }
+
+      div :global(ol),
       div :global(ul) {
         font-size: 14px;
         line-height: 1.86;
