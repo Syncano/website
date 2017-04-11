@@ -8,6 +8,7 @@ import ToSView from './views/terms/terms-of-service'
 import PrivacyPolicyView from './views/terms/privacy-policy'
 import AccepatbleUsePolicyView from './views/terms/acceptable-use-policy'
 import SyncanoPerformanceInsightsView from './views/terms/syncano-performance-insights'
+import GeneralTermsView from './views/terms/general-terms'
 import SocketsView from './views/sockets'
 import MissingView from './views/missing'
 
@@ -22,6 +23,7 @@ const Routes = () => (
     <Match path='/privacy-policy' exact component={PrivacyPolicyView} />
     <Match path='/acceptable-use-policy' exact component={AccepatbleUsePolicyView} />
     <Match path='/syncano-performance-insights' exact component={SyncanoPerformanceInsightsView} />
+    <Match path='/general-terms' exact component={GeneralTermsView} />
     <Match component={MissingView} />
   </Switch>
 )
