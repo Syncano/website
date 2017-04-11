@@ -9,7 +9,8 @@ const CTA = ({toggleSignUpModal}) => (
 
     <div className='Split'>
       <Button primary onClick={toggleSignUpModal}>Start free trial</Button>
-      <Button outline onClick={() => hj('trigger', 'notConvinced')}>I'm not convinced</Button>
+      {/* TODO: Will be replaced with modal form */}
+      {/* <Button outline onClick={() => hj('trigger', 'notConvinced')}>I'm not convinced</Button> */}
     </div>
 
     <div className='HiddenAtSm'>
