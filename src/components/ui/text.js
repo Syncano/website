@@ -62,12 +62,12 @@ const Text = ({children}) => (
         text-decoration: none;
       }
 
-      div :global(li) {
-        margin-bottom: 15px;
-      }
-
       div :global(ol) {
         counter-reset: section;
+      }
+
+      div :global(ol) :global(li) {
+        margin-bottom: 15px;
       }
 
       div :global(li) > :global(h3) {
