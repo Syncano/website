@@ -2,6 +2,12 @@ const Text = ({children}) => (
   <div>
     {children}
     <style jsx>{`
+      div {
+        font-size: 14px;
+        line-height: 1.57;
+        color: #8d9299;
+      }
+
       div :global(h2),
       div :global(h3),
       div :global(h4),
@@ -44,12 +50,6 @@ const Text = ({children}) => (
       div :global(p) + :global(h5),
       div :global(p) + :global(h6) {
         margin-top: 40px;
-      }
-
-      div :global(p) {
-        font-size: 14px;
-        line-height: 1.57;
-        color: #8d9299;
       }
 
       div :global(p) + :global(p) {

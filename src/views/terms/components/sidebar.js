@@ -9,7 +9,7 @@ const TermsSidebar = () => (
       <NavLink to='/acceptable-use-policy'>Acceptable Use Policy</NavLink>
       <NavLink to='/privacy-policy'>Privacy Policy</NavLink>
       <NavLink to='/general-terms'>General Terms and Conditions</NavLink>
-      <NavLink to='/syncano-performace-insights'>Syncano Performance Insight EU-US Privacy Shield Policy</NavLink>
+      <NavLink to='/syncano-performance-insights'>Syncano Performance Insight EU-US Privacy Shield Policy</NavLink>
     </Menu>
   </Sidebar>
 )
