@@ -21,7 +21,7 @@ const Innovation = () => (
         </div>
       </Grid>
     </div>
-{/*
+    {/*
     <div className='Section__header u-wrapper u-ta-c'>
       <h2 className='u-title'>Speed of innovation matters</h2>
       <p className='u-subtitle'>Go build something amazing!</p>

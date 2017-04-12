@@ -1,6 +1,5 @@
 import Hexagon from '../../../components/ui/hexagon'
 import Testimonials from '../../../components/shared/testimonials'
-import Link from '../../../components/ui/link'
 
 const FAQ = () => (
   <div className='Section'>

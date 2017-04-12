@@ -21,7 +21,7 @@ const SignUpForm = ({
     </div>
     <div className='AuthForm__footer'>
       <div>
-        By signing up you confirm that you accept our <a href='/#/terms-of-service' target="_blank" rel="noopener noreferrer">Terms of Use</a>
+        By signing up you confirm that you accept our <a href='/#/terms-of-service' target='_blank' rel='noopener noreferrer'>Terms of Use</a>
       </div>
 
       <div>

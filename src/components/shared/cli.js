@@ -17,28 +17,28 @@ const CLI = () => (
       </li>
       <li className='CLI__line CLI__line--result'>
         &nbsp;socket synced: <span className='CLI__line-time'>14:38:54</span>&nbsp;
-          <span className='CLI__line-scope'>openweathermap</span>&nbsp;
-          <span className='CLI__line-diff'>3545 ms</span>&nbsp;
+        <span className='CLI__line-scope'>openweathermap</span>&nbsp;
+        <span className='CLI__line-diff'>3545 ms</span>&nbsp;
       </li>
       <li className='CLI__line CLI__line--result'>
         &nbsp;socket synced: <span className='CLI__line-time'>14:38:59</span>&nbsp;
-          <span className='CLI__line-scope'>messenger-bot</span>&nbsp;
-          <span className='CLI__line-diff'>4144 ms</span>&nbsp;
+        <span className='CLI__line-scope'>messenger-bot</span>&nbsp;
+        <span className='CLI__line-diff'>4144 ms</span>&nbsp;
       </li>
       <li className='CLI__line CLI__line--result'>
         &nbsp;socket synced: <span className='CLI__line-time'>14:39:01</span>&nbsp;
-          <span className='CLI__line-scope'>twitter-bot</span>&nbsp;
-          <span className='CLI__line-diff'>4238 ms</span>&nbsp;
+        <span className='CLI__line-scope'>twitter-bot</span>&nbsp;
+        <span className='CLI__line-diff'>4238 ms</span>&nbsp;
       </li>
       <li className='CLI__line CLI__line--result'>
         &nbsp;socket synced: <span className='CLI__line-time'>14:39:01</span>&nbsp;
-          <span className='CLI__line-scope'>analytics</span>&nbsp;
-          <span className='CLI__line-diff'>4238 ms</span>&nbsp;
+        <span className='CLI__line-scope'>analytics</span>&nbsp;
+        <span className='CLI__line-diff'>4238 ms</span>&nbsp;
       </li>
       <li className='CLI__line CLI__line--result'>
         &nbsp;socket synced: <span className='CLI__line-time'>14:39:01</span>&nbsp;
-          <span className='CLI__line-scope'>mailgun</span>&nbsp;
-          <span className='CLI__line-diff'>2297 ms</span>&nbsp;
+        <span className='CLI__line-scope'>mailgun</span>&nbsp;
+        <span className='CLI__line-diff'>2297 ms</span>&nbsp;
       </li>
       {/* TODO: Add animation */}
       <li className='CLI__line CLI__line--result'>waiting...</li>

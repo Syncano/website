@@ -18,13 +18,13 @@ const Footer = () => (
         <div className='Navigation__column'>
           <h5 className='Navigation__head'>Company</h5>
           <Nav stack>
-            <Link to="/terms-of-service">
+            <Link to='/terms-of-service'>
               <span className='Navigation__link'>Terms of Service</span>
             </Link>
-            <Link to="/privacy-policy">
+            <Link to='/privacy-policy'>
               <span className='Navigation__link'>Privacy Policy</span>
             </Link>
-            <a href="https://www.privacyshield.gov/participant?id=a2zt0000000GnAKAA0">
+            <a href='https://www.privacyshield.gov/participant?id=a2zt0000000GnAKAA0'>
               <span className='Navigation__link'>Privacy Shield</span>
             </a>
           </Nav>
@@ -32,10 +32,10 @@ const Footer = () => (
         <div className='Navigation__column'>
           <h5 className='Navigation__head'>Product</h5>
           <Nav stack>
-            <Link to="/features">
+            <Link to='/features'>
               <span className='Navigation__link'>Features</span>
             </Link>
-            <Link to="/pricing">
+            <Link to='/pricing'>
               <span className='Navigation__link'>Plans &amp; Pricing</span>
             </Link>
             <a className='Navigation__link' href='http://status.syncano.com/'>Help &amp; Status</a>

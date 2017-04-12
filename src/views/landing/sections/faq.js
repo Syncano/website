@@ -1,5 +1,4 @@
 import Hexagon from '../../../components/ui/hexagon'
-import Link from '../../../components/ui/link'
 import Testimonials from '../../../components/shared/testimonials'
 
 const FAQ = () => (

@@ -74,7 +74,7 @@ const CTA = ({toggleSignUpModal}) => (
 )
 
 CTA.init = ({
-  services: {ui: {toggleModal}},
+  services: {ui: {toggleModal}}
 }) => ({
   toggleSignUpModal: () => toggleModal('signup')
 })
