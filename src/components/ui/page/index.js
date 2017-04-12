@@ -14,16 +14,16 @@ export default ({children}) => (
 
     <Modal
       name='signup'
-      title='Sign up and start building'
-      subtitle='Build serverless apps on Syncano for free. Set up your backend in minutes!'
+      title='Sign up and get started'
+      subtitle='Build more and faster by leveraging existing backend code.'
       >
       <SignUpForm />
     </Modal>
 
     <Modal
       name='signin'
-      title='Welcom back'
-      subtitle='Build serverless apps on Syncano for free. Set up your backend in minutes!'
+      title='Good to see you again'
+      subtitle='Continue solving unique customer problems, not building and operating backend code.'
       >
       <SignInForm />
     </Modal>
