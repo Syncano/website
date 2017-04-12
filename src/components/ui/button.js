@@ -26,6 +26,8 @@ const Button = ({
         cursor: pointer;
         font-size: 18px;
         font-weight: 500;
+        transition-property: transform, box-shadow;
+        transition-duration: .25s;
       }
 
       .Button:hover {
@@ -44,13 +46,23 @@ const Button = ({
         background-color: #e51148;
         box-shadow:
           0 5px 25px 0 rgba(229, 16, 71, 0.33),
+          inset 0 0 100px 0 rgba(255, 255, 255, 0),
           inset 0 0 3px 0 rgba(255, 255, 255, 0.5);
       }
 
       .Button--primary:hover,
       .Button--primary:focus {
+        transform: scale(1.1);
         box-shadow:
-          0 5px 25px 0 rgba(229, 16, 71, 0.33),
+          0 10px 35px 0 rgba(229, 16, 71, .33),
+          inset 0 0 100px 0 rgba(255, 255, 255, 0.2),
+          inset 0 0 3px 0 rgba(255, 255, 255, 0.5);
+      }
+
+      .Button--primary:active {
+        transform: scale(.99);
+        box-shadow:
+          0 0px 25px 0 rgba(229, 16, 71, .33),
           inset 0 0 100px 0 rgba(255, 255, 255, 0.2),
           inset 0 0 3px 0 rgba(255, 255, 255, 0.5);
       }
@@ -59,6 +71,7 @@ const Button = ({
         background-color: #3871d0;
         box-shadow:
           0 5px 25px 0 rgba(56, 113, 208, 0.33),
+          inset 0 0 100px 0 rgba(255, 255, 255, 0),
           inset 0 0 3px 0 rgba(255, 255, 255, 0.5);
       }
 
@@ -70,13 +83,16 @@ const Button = ({
           inset 0 0 3px 0 rgba(255, 255, 255, 0.5);
       }
 
+      .Button--secondary:active {
+        box-shadow:
+          0 5px 25px 0 rgba(56, 113, 208, 0.33),
+          inset 0 0 100px 0 rgba(0, 0, 0, 0.07),
+          inset 0 0 3px 0 rgba(255, 255, 255, 0.5);
+      }
+
       .Button--github {
         background-color: rgba(64, 120, 192, 0.15);
         color: #4078c0;
-      }
-
-      .Button--github:hover {
-        box-shadow: inset 0 0 100px 0 rgba(255, 255, 255, 0.5);
       }
 
       .Button--google {
@@ -87,6 +103,22 @@ const Button = ({
       .Button--facebook {
         background-color: rgba(59, 88, 152, 0.15);
         color: #3b5998;
+      }
+
+      .Button--github:hover,
+      .Button--github:focus,
+      .Button--google:hover,
+      .Button--google:focus,
+      .Button--facebook:hover,
+      .Button--facebook:focus {
+        box-shadow: inset 0 0 100px 0 rgba(255, 255, 255, 0.5);
+      }
+
+      .Button--github:active,
+      .Button--google:active,
+      .Button--facebook:active {
+        transform: scale(.99);
+        box-shadow: inset 0 0 100px 0 rgba(0, 0, 0, 0.07);
       }
 
       .Button--outline {
