@@ -2,9 +2,11 @@ import {connect} from 'zefir/utils'
 import Slider from '../../../components/ui/slider'
 import Arrow from './arrow.svg'
 
+const SECONDS_PRICE = 5
 const SECONDS_MAX = 20000000
 const SECONDS_MIN = 270000
 
+const CALLS_PRICE = 20
 const CALLS_MAX = 100000000
 const CALLS_MIN = 1000000
 
@@ -13,18 +15,17 @@ const PricingEstimate = ({
 }) => (
   <div className='Estimate'>
     {(() => {
-      const secondsPrice = Math.floor(
-        seconds.value / SECONDS_MIN * 5 - // calculate base price
-        ((seconds.value - SECONDS_MIN) * 122 / SECONDS_MAX) // calculate discount
-      )
-
       const callsPrice = Math.floor(
-        calls.value / CALLS_MIN * 20 - // calculate base price
+        calls.value / CALLS_MIN * CALLS_PRICE - // calculate base price
         ((calls.value - CALLS_MIN) * 757 / CALLS_MAX) // calculate discount
       )
 
+      const secondsPrice = Math.floor(
+        seconds.value / SECONDS_MIN * SECONDS_PRICE - // calculate base price
+        ((seconds.value - SECONDS_MIN) * 122 / SECONDS_MAX) // calculate discount
+      )
+
       price = callsPrice + secondsPrice
-      // price = -14 + Math.floor(seconds.value / 100000 + calls.value / 5 / 2700)
     })()}
     <div className='Estimate__group'>
       {/* TODO: Handle max value */}
