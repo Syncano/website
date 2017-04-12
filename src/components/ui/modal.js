@@ -30,6 +30,7 @@ const Modal = ({
         z-index: 1000;
         opacity: 0;
         visibility: hidden;
+        perspective: 2000px;
       }
 
       .Modal.is-visible {
@@ -52,7 +53,7 @@ const Modal = ({
 
       .Modal__content {
         background-color: #ffffff;
-        box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);;
+        box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
         color: #7a7f87;
         font-size: 16px;
         line-height: 22px;
@@ -60,6 +61,15 @@ const Modal = ({
         position: relative;
         max-height: 100%;
         overflow: auto;
+        will-change: transform, opacity;
+        transform: rotate3d(1,1,0,-15deg);
+        transform-origin: 100% 0;
+        transition-duration: .25s;
+        transition-property: transform;
+      }
+
+      .is-visible .Modal__content {
+        transform: none;
       }
 
       .Modal__close {
@@ -92,7 +102,7 @@ const Modal = ({
 
       .Modal__subtitle {
         font-size: 16px;
-        max-width: 300px;
+        max-width: 320px;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
