@@ -1,7 +1,6 @@
 import {connect} from 'zefir/utils'
 import Button from '../../ui/button'
 import Input from '../../ui/input'
-import Link from '../../ui/link'
 import Style from './style'
 
 const SignUpForm = ({
@@ -22,7 +21,7 @@ const SignUpForm = ({
     </div>
     <div className='AuthForm__footer'>
       <div>
-        By signing up you confirm that you accept our <Link to='/terms-of-service'>Terms of Use</Link>
+        By signing up you confirm that you accept our <a href='/#/terms-of-service' target="_blank" rel="noopener noreferrer">Terms of Use</a>
       </div>
 
       <div>
