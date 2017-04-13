@@ -7,7 +7,7 @@ export default () => (
         margin-top: 30px;
       }
 
-      .AuthForm__column > * + * {
+      .AuthForm__column * + * {
         margin-top: 15px;
       }
 

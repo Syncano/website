@@ -1,12 +1,23 @@
 import Nav from '../../ui/nav'
+import {MatchAsGuest, MatchAsMember} from '../../ui/router'
 
 const UserNav = ({theme, toggleSignUp, toggleSignIn}) => (
   <div className={`User-nav t-${theme}`}>
-    <Nav>
-      <a className='User-nav__item User-nav__item--status' href='http://status.syncano.com/'>All systems operational</a>
-      <a className='User-nav__item' onClick={toggleSignIn}>Sign in</a>
-      <a className='User-nav__item' onClick={toggleSignUp}>Sign up</a>
-    </Nav>
+    <MatchAsGuest component={() => (
+      <Nav>
+        <a className='User-nav__item User-nav__item--status' href='http://status.syncano.com/'>All systems operational</a>
+
+        <a className='User-nav__item' onClick={toggleSignIn}>Sign in</a>
+        <a className='User-nav__item' onClick={toggleSignUp}>Sign up</a>
+      </Nav>
+    )} />
+
+    <MatchAsMember component={() => (
+      <Nav>
+        <a className='User-nav__item User-nav__item--status' href='http://status.syncano.com/'>All systems operational</a>
+        <a className='User-nav__item'>Go to dashboard</a>
+      </Nav>
+    )} />
 
     <style jsx>{`
       .User-nav :global(li + li) {
@@ -16,7 +27,7 @@ const UserNav = ({theme, toggleSignUp, toggleSignIn}) => (
       .User-nav__item {
         color: rgba(56,113,208, 1);
         font-weight: 500;
-        text-decoration: none;
+        text-decoration: none;s
         transition: color .25s;
         cursor: pointer;
       }

@@ -1,11 +1,15 @@
 import {Component} from 'react'
 
 class ScrollManager extends Component {
-  componentDidMount(prevProps) {
-    window.scrollTo(0, 0)
+  componentDidMount (prevProps) {
+    const isLocal = window.location.hostname === 'localhost'
+
+    if (!isLocal) {
+      window.scrollTo(0, 0)
+    }
   }
 
-  render() {
+  render () {
     return null
   }
 }

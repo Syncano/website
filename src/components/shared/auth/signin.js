@@ -1,24 +1,25 @@
 import {connect} from 'zefir/utils'
 import Button from '../../ui/button'
 import Input from '../../ui/input'
-import Style from './style'
+import InputList from '../../ui/input-list'
+import Style from './components/style'
+import SocialButtons from './components/social-buttons'
 
 const SignInForm = ({
-  services: {ui: {toggleModal}},
-  form: {fields: {email, password}}
+  email, password, toggleModal, login, messages
 }) => (
   <div className='AuthForm'>
     <div className='AuthForm__column AuthForm__column--buttons'>
-      <Button full github>Github</Button>
-      <Button full google>Google</Button>
-      <Button full facebook>Facebook</Button>
+      <SocialButtons />
     </div>
     <div className='AuthForm__separator' />
-    <div className='AuthForm__column AuthForm__column--form'>
-      <Input full {...email} />
-      <Input full {...password} />
+    <form className='AuthForm__column AuthForm__column--form' onSubmit={login}>
+      <InputList errors={messages.get('auth.login')}>
+        <Input full {...email} />
+        <Input full {...password} />
+      </InputList>
       <Button full secondary>Sign in</Button>
-    </div>
+    </form>
     <div className='AuthForm__footer'>
       <div>
         By signing in you confirm that you accept our <a href='/#/terms-of-service' target='_blank' rel='noopener noreferrer'>Terms of Use</a>
@@ -32,6 +33,21 @@ const SignInForm = ({
     <Style />
   </div>
 )
+
+SignInForm.init = ({
+  stores: {messages},
+  services: {
+    ui: {toggleModal},
+    auth: {login}
+  },
+  form: {fields: {email, password}, submit}
+}) => ({
+  email,
+  password,
+  toggleModal,
+  messages,
+  login: (e) => submit(e, login)
+})
 
 SignInForm.form = {
   formName: 'SignInForm',

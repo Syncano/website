@@ -47,6 +47,7 @@ const SiteNav = ({isOpen, theme, toggleSignIn}) => (
 
       .Site-nav__item {
         text-decoration: none;
+        cursor: pointer;
       }
 
       .Site-nav__social a + a {

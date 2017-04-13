@@ -35,7 +35,7 @@ const Landing = ({
           <div className='CLI__inner'>
             <CLI />
             <div className='HiddenAtSm'>
-              <Hexagon width={32} fill='#7C51CD' position={{top: '-13px', right: '120px'}} />
+              <Hexagon width={32} fill='#7C51CD' position={{top: '-13px', right: '60px'}} />
               <Hexagon width={54} fill='#197eee' position={{top: '25%', right: '-27px'}} />
               <Hexagon width={64} fill='#05b470' position={{bottom: '-18px', right: '35px'}} />
               <Hexagon width={32} fill='#60e0ae' position={{bottom: '-22px', right: '-17px'}} />

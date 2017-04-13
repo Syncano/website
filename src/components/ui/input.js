@@ -15,7 +15,7 @@ const Input = ({full, ...props}) => (
         background-color: #f5f5f5;
         box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.1);
         border: solid 1px #e5e5e5;
-        padding: 13px 15px;
+        padding: 14px 15px;
         width: 100%;
         transition: border-color .25s, box-shadow .25s;
       }
