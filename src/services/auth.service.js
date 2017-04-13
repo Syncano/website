@@ -2,9 +2,8 @@ import hello from 'hellojs'
 import Cookies from 'js-cookie'
 import {action} from 'mobx'
 
-const LOGIN_URL = 'https://api.syncano.io/v1.1/account/auth/'
-const REGISTER_URL = 'https://api.syncano.io/v1.1/account/register/'
-const DASHBOARD_URL = 'https://dashboard.syncano.io'
+const LOGIN_URL = `${process.env.API_URL}/v1.1/account/auth/`
+const REGISTER_URL = `${process.env.API_URL}/v1.1/account/register/`
 
 export default class Auth {
   constructor (props) {
@@ -73,10 +72,10 @@ export default class Auth {
   }
 
   redirectToDashboard = (token, signUpMode = false) => {
-    let redirectUrl = `${DASHBOARD_URL}/#/login?token=${token}`
+    let redirectUrl = `${process.env.DASHBOARD_URL}/#/login?token=${token}`
 
     if (signUpMode) {
-      redirectUrl = `${DASHBOARD_URL}#/setup?token=${token}&signUpMode=${signUpMode}`
+      redirectUrl = `${process.env.DASHBOARD_URL}#/setup?token=${token}&signUpMode=${signUpMode}`
     }
 
     window.location.href = redirectUrl
@@ -84,13 +83,14 @@ export default class Auth {
 
   initHello () {
     const credentials = {
-      facebook: process.env.FACEBOOK_CLIENT_ID,
-      google: process.env.GOOGLE_CLIENT_ID,
-      github: process.env.GITHUB_CLIENT_ID
+      facebook: process.env.HELLO_FACEBOOK,
+      google: process.env.HELLO_GOOGLE,
+      github: process.env.HELLO_GITHUB
     }
 
     const options = {
-      scope: 'email'
+      scope: 'email',
+      redirect_uri: process.env.HELLO_REDIRECT_URI
     }
 
     hello.init(credentials, options)
