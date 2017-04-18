@@ -75,7 +75,7 @@ export default class Auth {
     let redirectUrl = `${process.env.DASHBOARD_URL}/#/login?token=${token}`
 
     if (signUpMode) {
-      redirectUrl = `${process.env.DASHBOARD_URL}#/setup?token=${token}&signUpMode=${signUpMode}`
+      redirectUrl += `&signUpMode=${signUpMode}`
     }
 
     window.location.href = redirectUrl
