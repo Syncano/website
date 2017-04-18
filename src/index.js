@@ -33,6 +33,7 @@ Routes.init = ({
 }) => {
   auth.rebuildSession()
   ui.addHotjar()
+  ui.fetchServicesStatus()
 }
 
 export default Routes

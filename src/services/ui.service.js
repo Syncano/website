@@ -1,5 +1,8 @@
 import {action} from 'mobx'
 
+const STATUS_PAGE_URL = 'https://6l1kzwgr7t06.statuspage.io/api/v2/status.json'
+const STATUS_PAGE_TIMEOUT = 5000
+
 export default class UI {
   @action toggleFlag = (flag, value) => {
     if (this.store.flags.has(flag)) {
@@ -11,6 +14,18 @@ export default class UI {
 
   @action toggleModal = name => {
     this.store.modal = this.store.modal === name ? null : name
+  }
+
+  @action.bound async fetchServicesStatus () {
+    try {
+      const res = await this.services.request(STATUS_PAGE_URL)
+      const {indicator, description} = res.data.status
+
+      this.store.pageStatus.indicator = indicator
+      this.store.pageStatus.description = description
+
+      setTimeout(this.fetchServicesStatus, STATUS_PAGE_TIMEOUT)
+    } catch (e) {}
   }
 
   addHotjar () {

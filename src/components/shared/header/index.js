@@ -13,6 +13,7 @@ const Header = ({
   toggleSignUp,
   toggleSignIn,
   flags,
+  pageStatus,
   children
 }) => (
   <div className={`Header t-${theme}`}>
@@ -30,7 +31,7 @@ const Header = ({
         <span onClick={toggleNav} className='Header__nav-toggle fa fa-bars' />
 
         <SiteNav theme={theme} toggleSignIn={toggleSignIn} isOpen={flags.has('site-nav.open')} />
-        <UserNav theme={theme} toggleSignUp={toggleSignUp} toggleSignIn={toggleSignIn} />
+        <UserNav theme={theme} toggleSignUp={toggleSignUp} toggleSignIn={toggleSignIn} pageStatus={pageStatus} />
       </div>
 
       {title && (
@@ -187,13 +188,14 @@ const Header = ({
 
 Header.init = ({
   theme = 'light',
-  stores: {ui: {flags}},
+  stores: {ui: {flags, pageStatus}},
   services: {ui: {toggleFlag, toggleModal}},
   ...props
 }) => {
   return {
     theme,
     flags,
+    pageStatus,
     toggleSignUp: () => toggleModal('signup'),
     toggleSignIn: () => toggleModal('signin'),
     toggleNav: () => toggleFlag('site-nav.open'),
