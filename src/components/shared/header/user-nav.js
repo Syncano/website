@@ -6,7 +6,7 @@ const UserNav = ({theme, toggleSignUp, toggleSignIn, pageStatus}) => (
     <MatchAsGuest component={() => (
       <Nav>
         {pageStatus.indicator && (
-          <a className={`User-nav__item User-nav__item--status User-nav__item--${pageStatus.indicator}`} href='http://status.syncano.com/'>{pageStatus.description}</a>
+          <a className={`User-nav__item User-nav__item--status User-nav__item--status-${pageStatus.indicator}`} href='http://status.syncano.com/'>{pageStatus.description}</a>
         )}
 
         <a className='User-nav__item' onClick={toggleSignIn}>Sign in</a>
@@ -48,20 +48,27 @@ const UserNav = ({theme, toggleSignUp, toggleSignIn, pageStatus}) => (
 
       .User-nav__item--status {
         font-weight: 400;
-        color: #25b012;
+        color: #dac529;
         font-size: 12px;
       }
 
       .User-nav__item--status:hover {
-        color: #25b012;
+        color: #dac529;
         text-decoration: underline;
       }
 
-      .t-dark .User-nav__item--status {
-        color: #b8e986;
+      .User-nav__item--status-none,
+      .User-nav__item--status-none:hover {
+        color: #25b012;
       }
 
+      .t-dark .User-nav__item--status,
       .t-dark .User-nav__item--status:hover {
+        color: #efe17a;
+      }
+
+      .t-dark .User-nav__item--status-none,
+      .t-dark .User-nav__item--status-none:hover {
         color: #b8e986;
       }
 
@@ -73,12 +80,21 @@ const UserNav = ({theme, toggleSignUp, toggleSignIn, pageStatus}) => (
         margin-right: 8px;
         margin-bottom: 2px;
         border-radius: 4px;
-        background-color: #23ba15;
-        box-shadow: 0 0 7px 1px #b8e986;
+        background-color: #dac529;
+        box-shadow: 0 0 7px 1px #dac529;
         animation: pulse 3s infinite linear;
       }
 
+      .User-nav__item--status-none::before {
+        background-color: #25b012;
+        box-shadow: 0 0 7px 1px #b8e986;
+      }
+
       .t-dark .User-nav__item--status::before {
+        background-color: #efe17a;
+      }
+
+      .t-dark .User-nav__item--status-none::before {
         background-color: #b8e986;
       }
 
