@@ -1,5 +1,5 @@
 const ENV = {
-  'syncano-ascend': 'STAGING',
+  'syncano-ascend': 'ASCEND',
   devel: 'STAGING',
   master: 'PRODUCTION'
 }[process.env.CIRCLE_BRANCH || 'devel']
@@ -22,7 +22,5 @@ const variables = envVars
       [`process.env.${key}`]: value
     })
   }, {})
-
-console.log(variables)
 
 module.exports = variables
