@@ -3,6 +3,7 @@ import CommunityIcon from './icon-community.svg'
 import SocketRegistryIcon from './icon-socket-registry.svg'
 import CloudOSIcon from './icon-cloud-os.svg'
 import Hexagon from '../../../../components/ui/hexagon'
+import Link from '../../../../components/ui/link'
 import Grid from '../../../../components/ui/grid'
 
 const Features = () => (
@@ -30,50 +31,58 @@ const Features = () => (
           </p>
         </div>
         <div className='Feature-list'>
-          <a className='Feature'>
-            <div className='Feature__inner'>
-              <div className='Feature__icon'>
-                <SocketRegistryIcon />
+          <div className='Feature'>
+            <Link to='/features'>
+              <div className='Feature__inner'>
+                <div className='Feature__icon'>
+                  <SocketRegistryIcon />
+                </div>
+                <h4 className='Feature__title'>Syncano Registry</h4>
+                <p>
+                  The Syncano Registry is a toolbox of reusable backend code (called Syncano Sockets) and blueprints for you to use and adapt to your needs. Add your own blocks and assemble your backend, without backend development expertise. Blocks fit together, offering an endless possibility of unique solutions. Why rebuild what has already been built? Use Syncano instead.
+                </p>
               </div>
-              <h4 className='Feature__title'>Syncano Registry</h4>
-              <p>
-                The Syncano Registry is a toolbox of reusable backend code (called Syncano Sockets) and blueprints for you to use and adapt to your needs. Add your own blocks and assemble your backend, without backend development expertise. Blocks fit together, offering an endless possibility of unique solutions. Why rebuild what has already been built? Use Syncano instead.
-              </p>
-            </div>
-          </a>
-          <a className='Feature'>
-            <div className='Feature__inner'>
-              <div className='Feature__icon'>
-                <AutomationSDKIcon />
+            </Link>
+          </div>
+          <div className='Feature'>
+            <Link to='/features'>
+              <div className='Feature__inner'>
+                <div className='Feature__icon'>
+                  <AutomationSDKIcon />
+                </div>
+                <h4 className='Feature__title'>Automation SDK</h4>
+                <p>
+                  Unlike other Backend as a Service providers, with Syncano’s Automation SDK,  the  build & deployment process is almost effortless. Your workflow is now more efficient and streamlined, and your backend is built in real time.
+                </p>
               </div>
-              <h4 className='Feature__title'>Automation SDK</h4>
-              <p>
-                Unlike other Backend as a Service providers, with Syncano’s Automation SDK,  the  build & deployment process is almost effortless. Your workflow is now more efficient and streamlined, and your backend is built in real time.
-              </p>
-            </div>
-          </a>
-          <a className='Feature'>
-            <div className='Feature__inner'>
-              <div className='Feature__icon'>
-                <CommunityIcon />
+            </Link>
+          </div>
+          <div className='Feature'>
+            <Link to='/features'>
+              <div className='Feature__inner'>
+                <div className='Feature__icon'>
+                  <CommunityIcon />
+                </div>
+                <h4 className='Feature__title'>Community</h4>
+                <p>
+                  Crowd + Cloud. Harness the power of the Syncano community. Leverage existing blocks built by the community, and give yourself more creative freedom. Find developers  to increase your software development capacity. Share, build, collaborate.
+                </p>
               </div>
-              <h4 className='Feature__title'>Community</h4>
-              <p>
-                Crowd + Cloud. Harness the power of the Syncano community. Leverage existing blocks built by the community, and give yourself more creative freedom. Find developers  to increase your software development capacity. Share, build, collaborate.
-              </p>
-            </div>
-          </a>
-          <a className='Feature'>
-            <div className='Feature__inner'>
-              <div className='Feature__icon'>
-                <CloudOSIcon />
+            </Link>
+          </div>
+          <div className='Feature'>
+            <Link to='/features'>
+              <div className='Feature__inner'>
+                <div className='Feature__icon'>
+                  <CloudOSIcon />
+                </div>
+                <h4 className='Feature__title'>Cloud OS</h4>
+                <p>
+                  Once you’ve entered your development environment, you’ve only scratched the surface of the power of Syncano. The magic of accelerated software development is seamlessly powered by Syncano’s Cloud OS.
+                </p>
               </div>
-              <h4 className='Feature__title'>Cloud OS</h4>
-              <p>
-                Once you’ve entered your development environment, you’ve only scratched the surface of the power of Syncano. The magic of accelerated software development is seamlessly powered by Syncano’s Cloud OS.
-              </p>
-            </div>
-          </a>
+            </Link>
+          </div>
         </div>
       </Grid>
     </div>
