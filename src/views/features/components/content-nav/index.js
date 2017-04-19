@@ -3,10 +3,6 @@ import Icon2 from './icon-2.svg'
 import Icon3 from './icon-3.svg'
 import Icon4 from './icon-4.svg'
 
-function scrollTo (id) {
-  window.scroll(0, document.getElementById(id).offsetTop)
-}
-
 const ContentNav = ({active = 0}) => (
   <div className='ContentNav'>
     <div
@@ -124,5 +120,9 @@ const ContentNav = ({active = 0}) => (
     `}</style>
   </div>
 )
+
+function scrollTo (id) {
+  window.scroll(0, document.getElementById(id).offsetTop)
+}
 
 export default ContentNav

@@ -84,8 +84,8 @@ const RegistriesSection = () => (
        * ==================================================================== */
       .Section {
         background: #0e0e2b;
-        padding-bottom: 30px;
         padding-top: 30px;
+        padding-bottom: 30px;
         position: relative;
       }
 
@@ -148,8 +148,8 @@ const RegistriesSection = () => (
 
       @media screen and (min-width: 560px) {
         .Section {
-          padding-top: 60px;
           padding-bottom: 60px;
+          padding-top: 60px;
         }
 
         .Section__column--header {
@@ -163,11 +163,11 @@ const RegistriesSection = () => (
 
       @media screen and (min-width: 970px) {
         .Section {
+          padding-bottom: 0;
           padding-top: 100px;
-          padding-bottom: 100px;
           background:
             radial-gradient(1146.54px at 49.58% 17.9%, rgba(54, 55, 209, 0.25) 0%, rgba(54, 55, 209, 5e-05) 100%),
-            linear-gradient(0deg, rgba(11, 15, 21, 0.0001) 0%, #0B0F15 18.24%)
+            linear-gradient(to bottom, #0B0F15 90%, rgba(11, 15, 21, 0.0001))
         }
 
         .Section__column--header {

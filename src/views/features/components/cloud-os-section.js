@@ -75,21 +75,32 @@ const CloudOsSection = () => (
       /* = SECTION
        * ==================================================================== */
       .Section {
-        padding-bottom: 30px;
         padding-top: 30px;
+        padding-bottom: 30px;
         position: relative;
       }
 
       .Section__clouds {
         background-size: 100%;
         position: relative;
-        padding-top: 700px;
-        margin-bottom: -200px;
-        background-image:  linear-gradient(to bottom, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0) 80%, #ffffff), url(/static/features/clouds.jpg);
-        background-position: top center;
+        height: 1218px;
+        margin-bottom: -700px;
+        background-image:url(/static/features/clouds.jpg);
         z-index: -1;
-        margin-top: -350px;
+        transform: translateY(-200px);
         display: none;
+      }
+
+      @media screen and (max-width: 1440px) {
+        .Section__clouds {
+          background-size: 1440px;
+        }
+      }
+
+      @media screen and (min-width: 1441px) {
+        .Section__clouds {
+          margin-top: -12%;
+        }
       }
 
       .Section__inner {
@@ -121,12 +132,8 @@ const CloudOsSection = () => (
 
       @media screen and (min-width: 970px) {
         .Section {
-          padding-top: 100px;
+          padding-top: 0;
           padding-bottom: 100px;
-        }
-
-        .Section__clouds {
-          display: block;
         }
 
         .Section__column--primary,
@@ -153,6 +160,10 @@ const CloudOsSection = () => (
           transform: translate(80px, 0);
           margin-bottom: -260px;
         }
+          .Section__clouds {
+            display: block;
+          }
+
       }
 
       @media screen and (min-width: 1270px) {
