@@ -22,7 +22,7 @@ const AutomationSDKSection = () => (
           <p className='u-subtitle'>Syncano's serverless platform and your development environment (through SDKs) dynamically  assembles and deploys your app’s backend to the cloud, all while you build your app.</p>
           <p>The technology accelerates the software development process by greatly reducing time spent deploying DevOps and managing your backend through a leaner and more dynamic building phase. </p>
           <p>
-            <a href=''>
+            <a href='https://syncano.github.io/syncano-node-cli/#/'>
               Automation SDK docs <i className='fa fa-arrow-right' />
             </a>
           </p>
