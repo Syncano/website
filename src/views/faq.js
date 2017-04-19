@@ -4,6 +4,7 @@ import CTA from '../components/shared/cta'
 import Head from '../components/ui/head'
 import Page from '../components/ui/page'
 import Text from '../components/ui/text'
+import Link from '../components/ui/link'
 
 const Landing = () => (
   <Page>
@@ -31,10 +32,10 @@ const Landing = () => (
         <p>Will be as excited as you! You don’t need to worry about scaling issues, as our infrastructure will scale along with the load of your users. We have a proven track record of handling millions of API requests daily.</p>
 
         <h3>Where are the libraries for iOS and Android?</h3>
-        <p>Syncano is currently in beta and we provide a client library for JavaScript. We are also working on the iOS, Android and Unity libraries and they will be released very soon. <a href='https://www.syncano.io/slack-invite/'>Ask us on Slack</a> to get the ETAs.</p>
+        <p>Syncano is currently in beta and we provide a client library for JavaScript. We are also working on the iOS, Android and Unity libraries and they will be released very soon. <Link to='/slack-invite'>Ask us on Slack</Link> to get the ETAs.</p>
 
         <h3>How can I get support?</h3>
-        <p>You can join our <a href='https://www.syncano.io/slack-invite/'>Slack channel</a> for community support, talk to us via the messenger in the <a href='https://dashboard.syncano.io/'>Dashboard</a> after you log in, or simply <a href='mailto:support@syncano.io'>send us an email</a>. You can also browse through our documentation.</p>
+        <p>You can join our <Link to='/slack-invite'>Slack channel</Link> for community support, talk to us via the messenger in the <a href='https://dashboard.syncano.io/'>Dashboard</a> after you log in, or simply <a href='mailto:support@syncano.io'>send us an email</a>. You can also browse through our documentation.</p>
       </Text>
     </div>
 

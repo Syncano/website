@@ -4,6 +4,7 @@ import LandingView from './views/landing'
 import FeaturesView from './views/features'
 import PricingView from './views/pricing'
 import FaqView from './views/faq'
+import SlackInviteView from './views/slack-invite'
 import ToSView from './views/terms/terms-of-service'
 import PrivacyPolicyView from './views/terms/privacy-policy'
 import AccepatbleUsePolicyView from './views/terms/acceptable-use-policy'
@@ -19,6 +20,7 @@ const Routes = () => (
     <Match path='/pricing' exact component={PricingView} />
     <Match path='/faq' exact component={FaqView} />
     <Match path='/sockets' exact component={SocketsView} />
+    <Match path='/slack-invite' exact component={SlackInviteView} />
     <Match path='/terms-of-service' exact component={ToSView} />
     <Match path='/privacy-policy' exact component={PrivacyPolicyView} />
     <Match path='/acceptable-use-policy' exact component={AccepatbleUsePolicyView} />

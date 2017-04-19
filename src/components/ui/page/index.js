@@ -53,6 +53,7 @@ export default ({children}) => (
       }
 
       .AppContainer {
+        min-height: 100vh;
         overflow: hidden;
       }
 

@@ -142,6 +142,16 @@ const Button = ({
       .Button--outline:hover {
         color: rgba(141, 146, 153, 1);
       }
+
+      .Button[disabled],
+      .Button[disabled]:focus,
+      .Button[disabled]:hover,
+      .Button[disabled]:active {
+        background-color: #f5f5f5;
+      color: #bbb;
+        transform: none;
+        box-shadow: none;
+      }
     `}</style>
   </button>
 )

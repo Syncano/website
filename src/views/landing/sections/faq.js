@@ -1,4 +1,5 @@
 import Hexagon from '../../../components/ui/hexagon'
+import Link from '../../../components/ui/link'
 import Testimonials from '../../../components/shared/testimonials'
 
 const FAQ = () => (
@@ -30,16 +31,16 @@ const FAQ = () => (
         </div>
         <div className='FAQ'>
           <h4 className='FAQ__title'>Where are the libraries for iOS and Android?</h4>
-          <p>Syncano is currently in beta and we provide a client library for JavaScript. We are also working on the iOS, Android and Unity libraries and they will be released very soon. <a href='https://www.syncano.io/slack-invite/'>Ask us on Slack</a> to get the ETAs.</p>
+          <p>Syncano is currently in beta and we provide a client library for JavaScript. We are also working on the iOS, Android and Unity libraries and they will be released very soon. <Link to='/slack-invite'>Ask us on Slack</Link> to get the ETAs.</p>
         </div>
         <div className='FAQ'>
           <h4 className='FAQ__title'>How can I get support?</h4>
-          <p>You can join our <a href='https://www.syncano.io/slack-invite/'>Slack channel</a> for community support, talk to us via the messenger in the <a href='https://dashboard.syncano.io/'>Dashboard</a> after you log in, or simply <a href='mailto:hello@syncano.io'>send us an email</a>. You can also browse through our <a href='https://syncano.github.io/syncano-node-cli/#/'>documentation</a>.</p>
+          <p>You can join our <Link to='/slack-invite'>Slack channel</Link> for community support, talk to us via the messenger in the <a href='https://dashboard.syncano.io/'>Dashboard</a> after you log in, or simply <a href='mailto:hello@syncano.io'>send us an email</a>. You can also browse through our <a href='https://syncano.github.io/syncano-node-cli/#/'>documentation</a>.</p>
         </div>
       </div>
 
       <div className='CTA'>
-        <a href='https://syncano.github.io/syncano-node-cli/#/'>Read the docs</a> or <a href='mailto:hello@syncano.com'>ask your own question</a> to get instant answers.
+        <a href='https://syncano.github.io/syncano-node-cli/#/'>Read the docs</a>, <a href='mailto:hello@syncano.com'>ask your own question</a> or join our <Link to='/slack-invite'>Slack channel</Link> to get instant answers.
       </div>
     </div>
 

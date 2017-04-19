@@ -24,7 +24,7 @@ const SiteNav = ({isOpen, theme, toggleSignIn}) => (
         <a className='Site-nav__item' href='https://syncano.github.io/syncano-node-cli/'>Documentation</a>
         <div className='Site-nav__social'>
           <a href='https://github.com/syncano'><i className='fa fa-github' /></a>
-          {/* <a href='https://www.syncano.io/slack-invite/'><i className='fa fa-slack' /></a> */}
+          <Link to='/slack-invite'><i className='fa fa-slack' /></Link>
         </div>
         <a className='Site-nav__item Site-nav__item--login' onClick={toggleSignIn}>
           Sign in<i className='fa fa-arrow-right' />
@@ -50,11 +50,11 @@ const SiteNav = ({isOpen, theme, toggleSignIn}) => (
         cursor: pointer;
       }
 
-      .Site-nav__social a + a {
+      .Site-nav__social :global(a) + :global(a) {
         margin-left: 10px;
       }
 
-      .Site-nav__social a {
+      .Site-nav__social :global(a) {
         font-size: 14px;
         margin-right: 10px;
         text-decoration: none;
@@ -62,17 +62,17 @@ const SiteNav = ({isOpen, theme, toggleSignIn}) => (
         transition: color .25s ease;
       }
 
-      .t-dark .Site-nav__social a {
+      .t-dark .Site-nav__social :global(a) {
         color: rgba(255,255,255, .33);
       }
 
-      .Site-nav__social a:hover,
-      .Site-nav__social a:hover .fa {
+      .Site-nav__social :global(a):hover,
+      .Site-nav__social :global(a):hover .fa {
         color: rgba(56,113,208, .75);
       }
 
-      .t-dark .Site-nav__social a:hover,
-      .t-dark .Site-nav__social a:hover .fa {
+      .t-dark .Site-nav__social :global(a):hover,
+      .t-dark .Site-nav__social :global(a):hover .fa {
         color: rgba(255,255,255, 1);
       }
 
