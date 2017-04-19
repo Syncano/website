@@ -1,5 +1,5 @@
 import Grid from '../../../../components/ui/grid'
-import Button from '../../../../components/ui/button'
+// import Button from '../../../../components/ui/button'
 import Hexagon from '../../../../components/ui/hexagon'
 import Hexagons from './hexagons.svg'
 import IconSentry from './icon-sentry.svg'
@@ -51,27 +51,29 @@ const RegistriesSection = () => (
           <p>A Syncano Socket is defined in such a way that it can be connected to any other Syncano Socket, kinda the way LEGO works. Combining Syncano Sockets enables you to assemble tailor-made backends at lightning speed.</p>
         </div>
 
-        <div className='Section__column Section__column--secondary Feature-list'>
-          <div className='Feature Feature--full'>
-            <h4 className='Feature__title'>Private registry</h4>
-            <p>If a particular backend function you need is not available in the Public Syncano Socket Registry, you can create your own Syncano Sockets.</p>
-            <p>Your custom made Syncano Sockets are automatically put into your own private Socket Registry that only you and your team have access to. If you want to publish any of your private Syncano Sockets to the Public Syncano Socket Registry, you simply use the Automation SDK to remove the private flag.</p>
-            <p>If you don’t have the capacity to write a particular backend function you can find developers to build Syncano Sockets for you in the Syncano Socket Marketplace.</p>
-          </div>
-          <div className='Feature'>
-            <h4 className='Feature__title'>Using registries</h4>
-            <p>Browse the existing public Syncano Sockets by the Public Socket Registry web interface.</p>
-            <p>After you sign up you will access both your private Socket Registry and the Public Socket Registry using the Automation SDK, through which you can list, search, submit and deploy Syncano Sockets to your dedicated backend.</p>
-          </div>
-          <div className='Feature'>
-            <h4 className='Feature__title'>Public registry</h4>
-            <p>The publicly available Syncano Sockets are listed in the <a href='#'>Public Syncano Socket Registry</a>, and licensed under the <a href='#'>Berkeley Standard Distribution license</a>.</p>
-            <p>
-              <Button secondary>
-                <a href='#'>Browse Syncano Sockets</a>
-              </Button>
-            </p>
-            <p>There are more than 150 sockets available</p>
+        <div className='Section__column Section__column--secondary'>
+          <div className='Feature-list'>
+            <div className='Feature Feature--full'>
+              <h4 className='Feature__title'>Private registry</h4>
+              <p>If a particular backend function you need is not available in the Public Syncano Socket Registry, you can create your own Syncano Sockets.</p>
+              <p>Your custom made Syncano Sockets are automatically put into your own private Socket Registry that only you and your team have access to. If you want to publish any of your private Syncano Sockets to the Public Syncano Socket Registry, you simply use the Automation SDK to remove the private flag.</p>
+              <p>If you don’t have the capacity to write a particular backend function you can find developers to build Syncano Sockets for you in the Syncano Socket Marketplace.</p>
+            </div>
+            <div className='Feature Feature--full'>
+              <h4 className='Feature__title'>Using registries</h4>
+              <p>Browse the existing public Syncano Sockets by the Public Socket Registry web interface.</p>
+              <p>After you sign up you will access both your private Socket Registry and the Public Socket Registry using the Automation SDK, through which you can list, search, submit and deploy Syncano Sockets to your dedicated backend.</p>
+            </div>
+            {/* <div className='Feature'>
+              <h4 className='Feature__title'>Public registry</h4>
+              <p>The publicly available Syncano Sockets are listed in the <a href='#'>Public Syncano Socket Registry</a>, and licensed under the <a href='#'>Berkeley Standard Distribution license</a>.</p>
+              <p>
+                <Button secondary>
+                  <a href='#'>Browse Syncano Sockets</a>
+                </Button>
+              </p>
+              <p>There are more than 150 sockets available</p>
+            </div> */}
           </div>
         </div>
       </Grid>
@@ -85,10 +87,6 @@ const RegistriesSection = () => (
         padding-bottom: 30px;
         padding-top: 30px;
         position: relative;
-
-        /*background:
-          radial-gradient(1336.54px at 49.58% 17.9%, rgba(54, 55, 209, 0.25) 0%, rgba(54, 55, 209, 5e-05) 100%),
-          linear-gradient(0deg, rgba(11, 15, 21, 0.0001) 10.07%, #0B0F15 29.24%);*/
       }
 
       .u-title {
@@ -105,6 +103,11 @@ const RegistriesSection = () => (
       }
 
       /* ==================================================================== */
+
+      .Section__column--header {
+        position: relative;
+        z-index: 1;
+      }
 
       .Section__column--header .u-subtitle {
         color: #6382aa;
@@ -162,6 +165,9 @@ const RegistriesSection = () => (
         .Section {
           padding-top: 100px;
           padding-bottom: 100px;
+          background:
+            radial-gradient(1146.54px at 49.58% 17.9%, rgba(54, 55, 209, 0.25) 0%, rgba(54, 55, 209, 5e-05) 100%),
+            linear-gradient(0deg, rgba(11, 15, 21, 0.0001) 0%, #0B0F15 18.24%)
         }
 
         .Section__column--header {

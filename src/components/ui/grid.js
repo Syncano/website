@@ -1,5 +1,3 @@
-import {Children} from 'react'
-
 const Nav = ({children, wrap}) => (
   <div className={`
     Grid

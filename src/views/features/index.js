@@ -8,6 +8,7 @@ import Page from '../../components/ui/page'
 import ContentNav from './components/content-nav'
 import CommunitySection from './components/community-section'
 import AutomationSDKSection from './components/automation-sdk-section'
+import CloudOsSection from './components/cloud-os-section'
 import RegistriesSection from './components/registries-section'
 
 const Landing = () => (
@@ -24,6 +25,7 @@ const Landing = () => (
     <ContentNav />
     <AutomationSDKSection />
     <RegistriesSection />
+    <CloudOsSection />
     <CommunitySection />
     <CTA />
     <Footer />
