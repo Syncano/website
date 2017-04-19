@@ -74,7 +74,7 @@ Features.init = ({
     let i = -1
 
     while (i++ < 3) {
-      if (Features[`section${i}`].offsetTop <= scrollTop) {
+      if (Features[`section${i}`].offsetTop <= scrollTop + 55) {
         value = i
       }
     }

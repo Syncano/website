@@ -75,6 +75,10 @@ const ContentNav = ({active = 0}) => (
         display: none;
       }
 
+      :global(.sticky) .ContentNav__item {
+        padding: 7px 0;
+      }
+
       @media screen and (min-width: 720px) {
         .ContentNav__item {
           padding-bottom: 30px;
@@ -90,8 +94,10 @@ const ContentNav = ({active = 0}) => (
           opacity: 0;
         }
 
+
         :global(.sticky) .ContentNav__item {
           padding-top: 0;
+          padding-bottom: 15px;
         }
       }
 
@@ -110,10 +116,6 @@ const ContentNav = ({active = 0}) => (
         background-color: #fff;
       }
 
-      :global(.sticky) .ContentNav__item {
-        padding-bottom: 15px;
-      }
-
       :global(.sticky) .ContentNav__item-text {
         margin-top: 0;
       }
@@ -122,7 +124,19 @@ const ContentNav = ({active = 0}) => (
 )
 
 function scrollTo (id) {
-  window.scroll(0, document.getElementById(id).offsetTop)
+  window.scroll(0, findOffsetTop(document.getElementById(id)))
+}
+
+function findOffsetTop (obj) {
+  var curtop = 0
+
+  if (obj.offsetParent) {
+    do {
+      curtop += obj.offsetTop
+    } while ((obj = obj.offsetParent))
+
+    return [curtop - 55]
+  }
 }
 
 export default ContentNav

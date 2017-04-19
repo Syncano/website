@@ -80,31 +80,13 @@ const CloudOsSection = () => (
         position: relative;
       }
 
-      .Section__clouds {
-        background-size: 100%;
-        position: relative;
-        height: 1218px;
-        margin-bottom: -700px;
-        background-image:url(/static/features/clouds.jpg);
-        z-index: -1;
-        transform: translateY(-200px);
-        display: none;
-      }
-
-      @media screen and (max-width: 1440px) {
-        .Section__clouds {
-          background-size: 1440px;
-        }
-      }
-
-      @media screen and (min-width: 1441px) {
-        .Section__clouds {
-          margin-top: -12%;
-        }
-      }
-
       .Section__inner {
         max-width: 1230px;
+      }
+
+      .Section__column--primary .u-title {
+        padding-top: 90px;
+        margin-top: -90px;
       }
 
       .Section__column--secondary {
@@ -132,8 +114,20 @@ const CloudOsSection = () => (
 
       @media screen and (min-width: 970px) {
         .Section {
-          padding-top: 0;
+          padding-top: 300px;
           padding-bottom: 100px;
+        }
+
+        .Section__clouds {
+          background-size: 100%;
+          position: relative;
+          height: 1218px;
+          background-image:url(/static/features/clouds.jpg);
+          position: absolute;
+          top: 0;
+          width: 100%;
+          z-index: -1;
+          transform: translateY(-250px);
         }
 
         .Section__column--primary,
@@ -160,13 +154,17 @@ const CloudOsSection = () => (
           transform: translate(80px, 0);
           margin-bottom: -260px;
         }
-          .Section__clouds {
-            display: block;
-          }
-
       }
 
       @media screen and (min-width: 1270px) {
+        .Section {
+          padding-top: 300px;
+        }
+
+        .Section__clouds {
+          transform: translateY(-250px);
+        }
+
         .Section__column--primary {
           flex-basis: 41.5%;
         }
@@ -179,6 +177,18 @@ const CloudOsSection = () => (
 
         .Section__column--footer {
           margin-top: 80px;
+        }
+      }
+
+      @media screen and (max-width: 1440px) {
+        .Section__clouds {
+          background-size: 1440px;
+        }
+      }
+
+      @media screen and (min-width: 1650px) {
+        .Section__clouds {
+          transform: translateY(-30%);
         }
       }
 
