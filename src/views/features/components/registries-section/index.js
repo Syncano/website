@@ -87,6 +87,7 @@ const RegistriesSection = () => (
         padding-top: 30px;
         padding-bottom: 30px;
         position: relative;
+        z-index: 1;
       }
 
       .u-title {
