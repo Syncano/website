@@ -17,6 +17,7 @@
     "react": "15.4.2",
     "react-dom": "15.4.2",
     "react-hexagon": "1.1.1",
+    "react-sticky": "^5.0.5",
     "svg-react-loader": "0.3.7",
     "syncano-cli": "beta",
     "zefir": "beta"

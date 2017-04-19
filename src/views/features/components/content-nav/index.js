@@ -3,23 +3,47 @@ import Icon2 from './icon-2.svg'
 import Icon3 from './icon-3.svg'
 import Icon4 from './icon-4.svg'
 
-const ContentNav = () => (
+function scrollTo (id) {
+  window.scroll(0, document.getElementById(id).offsetTop)
+}
+
+const ContentNav = ({active = 0}) => (
   <div className='ContentNav'>
-    <div className='ContentNav__item is-active'>
-      <Icon1 />
-      <div className='ContentNav__item-text'>Automation SDK</div>
+    <div
+      className={`ContentNav__item ${active === 0 ? 'is-active' : ''}`}
+      onClick={() => { scrollTo('AutomationSDKSection') }}
+    >
+      <div>
+        <Icon1 />
+        <div className='ContentNav__item-text'>Automation SDK</div>
+      </div>
     </div>
-    <div className='ContentNav__item'>
-      <Icon2 />
-      <div className='ContentNav__item-text'>Socket Registry</div>
+    <div
+      className={`ContentNav__item ${active === 1 ? 'is-active' : ''}`}
+      onClick={() => { scrollTo('RegistriesSection') }}
+    >
+      <div>
+        <Icon2 />
+        <div className='ContentNav__item-text'>Socket Registry</div>
+      </div>
     </div>
-    <div className='ContentNav__item'>
-      <Icon3 />
-      <div className='ContentNav__item-text'>Cloud OS</div>
+    <div
+      className={`ContentNav__item ${active === 2 ? 'is-active' : ''}`}
+      onClick={() => { scrollTo('CloudOsSection') }}
+    >
+      <div>
+        <Icon3 />
+        <div className='ContentNav__item-text'>Cloud OS</div>
+      </div>
     </div>
-    <div className='ContentNav__item'>
-      <Icon4 />
-      <div className='ContentNav__item-text'>Community</div>
+    <div
+      className={`ContentNav__item ${active === 3 ? 'is-active' : ''}`}
+      onClick={() => { scrollTo('CommunitySection') }}
+    >
+      <div>
+        <Icon4 />
+        <div className='ContentNav__item-text'>Community</div>
+      </div>
     </div>
 
     <style jsx>{`
@@ -36,12 +60,14 @@ const ContentNav = () => (
         flex: 1;
         text-align: center;
         font-size: 18px;
-        padding: 0 0 15px 0;
+        padding: 15px 0 15px 0;
         cursor: pointer;
       }
 
       .ContentNav__item :global(svg) {
         width: 40%;
+        transition-property: width, height, opacity;
+        transition-duration: .25s;
       }
 
       .ContentNav__item.is-active {
@@ -61,6 +87,16 @@ const ContentNav = () => (
         .ContentNav__item-text {
           display: block;
         }
+
+        :global(.sticky) .ContentNav__item :global(svg) {
+          width: 0;
+          height: 0;
+          opacity: 0;
+        }
+
+        :global(.sticky) .ContentNav__item {
+          padding-top: 0;
+        }
       }
 
       .ContentNav__item + * {
@@ -73,6 +109,18 @@ const ContentNav = () => (
       .ContentNav__item:nth-child(2) {color: #3637d1}
       .ContentNav__item:nth-child(3) {color: #1765eb}
       .ContentNav__item:nth-child(4) {color: #5100d0}
+
+      :global(.sticky) .ContentNav {
+        background-color: #fff;
+      }
+
+      :global(.sticky) .ContentNav__item {
+        padding-bottom: 15px;
+      }
+
+      :global(.sticky) .ContentNav__item-text {
+        margin-top: 0;
+      }
     `}</style>
   </div>
 )
