@@ -42,6 +42,16 @@ const Button = ({
         width: 100%;
       }
 
+      .Button :global(a) {
+        color: inherit;
+      }
+
+      .Button :global(a):hover,
+      .Button :global(a):focus,
+      .Button :global(a):active {
+        text-decoration: none;
+      }
+
       .Button--primary {
         background-color: #e51148;
         box-shadow:

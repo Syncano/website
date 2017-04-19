@@ -103,6 +103,7 @@ const AutomationSDKSection = () => (
 
       .Section__cli {
         display: none;
+        min-height: 330px;
       }
 
       @media screen and (min-width: 560px) {
@@ -120,10 +121,10 @@ const AutomationSDKSection = () => (
 
       @media screen and (max-width: 969px) {
         .Section__cli {
-          max-width: 500px;
+          max-width: 570px;
           margin-left: auto;
           margin-right: auto;
-          min-height: 300px;
+          min-height: 320px;
         }
       }
 
@@ -155,17 +156,18 @@ const AutomationSDKSection = () => (
       @media screen and (min-width: 1270px) {
         .Section__cli,
         .Section__sdk {
-          flex-basis: 42%;
+          flex-basis: 48%;
         }
 
         .Section__cli-about,
         .Section__sdk-about {
-          flex-basis: 58%;
+          flex-basis: 52%;
+          margin-left: auto;
         }
 
         .Section__cli-about,
         .Section__sdk-about {
-          padding-left: 130px;
+          padding-left: 80px;
         }
       }
 
