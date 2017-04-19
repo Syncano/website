@@ -20,10 +20,12 @@ const Features = ({featuresPage}) => (
     </Head>
 
     <StickyContainer>
-      <Header
-        title='Product features'
-        subtitle='Lorem ipsum dolor sit amet curabitur'
+      <div className='Header'>
+        <Header
+          title='Product features'
+          subtitle='Syncano’s Serverless Platform and SDKs automatically assemble and deploy your backend to the cloud instantaneously - all while you build your app.'
         />
+      </div>
       <Sticky className='sticky-element'>
         <ContentNav active={featuresPage.activeSection} />
       </Sticky>
@@ -51,6 +53,12 @@ const Features = ({featuresPage}) => (
       :global(.sticky-element) {
         position: relative;
         z-index: 20;
+      }
+
+      .Header :global(.PageHead__subtitle) {
+        max-width: 860px;
+        margin-left: auto;
+        margin-right: auto;
       }
     `}</style>
   </Page>

@@ -12,8 +12,8 @@ const RegistriesSection = () => (
   <div className='Section'>
     <div className='Section__inner u-wrapper'>
       <div className='Section__column Section__column--header'>
-        <h2 className='u-title'>Socket Registries</h2>
-        <p className='u-subtitle'>We have a registry with 100s of ready to use components and backend blueprints, all created by the community, and that you can immediately start using to compose your dedicated and customized backend.</p>
+        <h2 className='u-title'>Syncano Socket Registry</h2>
+        <p className='u-subtitle'>We have a registry with 100s of ready to use components and backend blueprints, all created by the community, that you can immediately start using to compose your dedicated and customized backend.</p>
       </div>
 
       <div className='Hexagons'>
@@ -45,22 +45,21 @@ const RegistriesSection = () => (
 
       <Grid wrap>
         <div className='Section__column Section__column--primary'>
-          <h2 className='u-title'>Syncano Sockets</h2>
-          <p className='u-subtitle'>One of core concepts of the Syncano serverless cloud platform is the standardised backend building blocks which we call Syncano Sockets.</p>
-          <p>A Syncano Socket has one single and clear purpose —whether it is sending an email, translating a text file, or analysing a web page.</p>
-          <p>A Syncano Socket is defined in such a way that it can be connected to any other Syncano Socket, kinda the way LEGO works. Combining Syncano Sockets enables you to assemble tailor-made backends at lightning speed.</p>
+          <h2 className='u-title'>Building Syncano Sockets</h2>
+          <p className='u-subtitle'>One of the core concepts of the Syncano serverless cloud platform is the standardised backend building blocks which we call <i>Syncano Sockets</i>.</p>
+          <p>A Syncano Socket has one single and clear purpose —whether it is sending an email, translating a text file, storing data, or analysing a web page. A Syncano Socket is defined in such a way that it can be connected to any other Syncano Socket, kinda the way LEGO works. Combining Syncano Sockets enables you to assemble and deploy tailor-made backends at lightning speed.</p>
         </div>
 
         <div className='Section__column Section__column--secondary'>
           <div className='Feature-list'>
             <div className='Feature Feature--full'>
-              <h4 className='Feature__title'>Private registry</h4>
-              <p>If a particular backend function you need is not available in the Public Syncano Socket Registry, you can create your own Syncano Sockets.</p>
+              <h4 className='Feature__title'>Private registry - your own reusable code</h4>
+              <p>If a particular backend function you need is not available in the Public Syncano Socket Registry, you can create your <a href=''>own Syncano Sockets</a>.</p>
               <p>Your custom made Syncano Sockets are automatically put into your own private Socket Registry that only you and your team have access to. If you want to publish any of your private Syncano Sockets to the Public Syncano Socket Registry, you simply use the Automation SDK to remove the private flag.</p>
-              <p>If you don’t have the capacity to write a particular backend function you can find developers to build Syncano Sockets for you in the Syncano Socket Marketplace.</p>
+              <p>If you don’t have the capacity to write a particular backend function you can find developers to build Syncano Sockets for you in the <a href=''>Syncano Socket Marketplace</a>.</p>
             </div>
             <div className='Feature Feature--full'>
-              <h4 className='Feature__title'>Using registries</h4>
+              <h4 className='Feature__title'>Using the registries</h4>
               <p>Browse the existing public Syncano Sockets by the Public Socket Registry web interface.</p>
               <p>After you sign up you will access both your private Socket Registry and the Public Socket Registry using the Automation SDK, through which you can list, search, submit and deploy Syncano Sockets to your dedicated backend.</p>
             </div>

@@ -11,16 +11,16 @@ const AutomationSDKSection = () => (
 
         <div className='Section__cli-about'>
           <h3>The Syncano CLI</h3>
-          <p>Using the Syncano Command Line interface (CLI), you manage the whole build and deploy process from a simple, powerful, and local tool on your computer. No need to leave your working environment. The whole synchronization and deployment process happens automatically and seamlessly.</p>
-          <p><a href=''>Syncano CLI docs <i className='fa fa-arrow-right' /></a></p>
-          <div><a href=''>Join CLI project on GitHub <i className='fa fa-arrow-right' /></a></div>
+          <p>Manage the entire process of building and deploying from a simple, powerful and local tool on your computer. With the Syncano Command Line Interface (CLI), you never have to leave your local working environment, and the synchronization and deployment process dynamically occurs in the background. Save time and build more, faster.</p>
+          <p><a href='https://syncano.github.io/syncano-node-cli/'>Syncano CLI docs <i className='fa fa-arrow-right' /></a></p>
+          <div><a href='https://github.com/Syncano/syncano-node-cli/'>Join CLI project on GitHub <i className='fa fa-arrow-right' /></a></div>
           <div><a href=''>Download CLI now <i className='fa fa-arrow-right' /></a></div>
         </div>
 
         <div className='Section__sdk'>
-          <h2 className='u-title'>Automation SDK</h2>
-          <p className='u-subtitle'>Syncano's serverless platform and your development environment (SDK) automatically and instantly assemble and deploy your app backend to the cloud -while you build your app.</p>
-          <p>This enables an accelerated software development process by providing faster and more dynamic building phase, and greatly reducing the deployment time spent on DevOps and backend management.</p>
+          <h2 className='u-title'>Syncano Automation SDK</h2>
+          <p className='u-subtitle'>Syncano's serverless platform and your development environment (through SDKs) dynamically  assembles and deploys your app’s backend to the cloud, all while you build your app.</p>
+          <p>The technology accelerates the software development process by greatly reducing time spent deploying DevOps and managing your backend through a leaner and more dynamic building phase. </p>
           <p>
             <a href=''>
               Automation SDK docs <i className='fa fa-arrow-right' />
@@ -31,16 +31,18 @@ const AutomationSDKSection = () => (
         <div className='Section__sdk-about'>
           <div className='Feature-list'>
             <div className='Feature Feature--full'>
-              <h4 className='Feature__title'>Assembling your backend instance</h4>
-              <p>Through the Automation SDK you assemble the functions we call Syncano Sockets for your customized backend. You do the assembling process locally on your computer and the Syncano Automation SDK synchronises and deploys your changes to the Syncano cloud OS automatically -and continuously. Your customized backend lives inside your private and unique instance of the Syncano platform, held by the Syncano OS.</p>
+              <h4 className='Feature__title'>Assembling your Syncano backend instance</h4>
+              <p>Assemble functions called Syncano Sockets to customize your backend through the Automation SDK. This process happens locally, on your computer, and the Syncano Automation SDK dynamically and continuously synchronises and deploys your changes to the <a onClick={() => {
+                window.scroll(0, document.getElementById('CloudOsSection').offsetTop)
+              }}>Syncano Cloud OS</a>. Your customized backend lives inside your private and unique instance of the Syncano Platform, operationalized by the Syncano Cloud OS. </p>
             </div>
             <div className='Feature'>
-              <h4 className='Feature__title'>IDE plugins</h4>
-              <p>We are working on bringing the Automation SDK all the way into your IDE on more platforms and technologies, and we would appreciate your help. Join our Automation SDK project to influence which IDE to prioritize or just to get to know more about our plans by <a href=''>sending us an email</a>.</p>
+              <h4 className='Feature__title'>Building more IDE plugins</h4>
+              <p>We want to bring the Automation SDK into your IDE on more platforms and technologies, and you’re our best advocate. <a href=''>Join our Automation SDK project</a> to influence what we prioritize, or to simply learn more about our roadmap.</p>
             </div>
             <div className='Feature'>
-              <h4 className='Feature__title'>Automatic backend</h4>
-              <p>We are also working on making the building process even smarter and more automated by the usage of Artificial Intelligence. <a href=''>Join our AI and Machine Learning project</a> to know more about our software building software plans.</p>
+              <h4 className='Feature__title'>Wouldn't AI powered backends be great?</h4>
+              <p>We’re just getting started on making the development process automated and autonomous, and we’re eager to leverage Artificial Intelligence to make it even more efficient. <a href=''>Join our AI and Machine Learning project</a> to learn more about our software development roadmap. </p>
             </div>
           </div>
         </div>

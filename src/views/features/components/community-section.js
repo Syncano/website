@@ -1,46 +1,49 @@
+import Link from '../../../components/ui/link'
+import GitHubButton from '../../../components/ui/github-button'
+
 const CommunitySection = () => (
   <div className='Section'>
     <div className='Section__header u-wrapper u-ta-c'>
-      <h2 className='u-title'>Community</h2>
+      <h2 className='u-title'>Syncano Community</h2>
       <p>Syncano is a true multi-sided platform concept: The Syncano Core team builds a high-tech and high quality solution in the cloud, and powers it with the muscle of our growing community of Syncano users.</p>
-
-      <div className='Section__definition'>Syncano = Cloud + Crowd</div>
+      <div className='Section__definition'>Syncano = Cloud + Crowd!</div>
     </div>
     <div className='Section__content u-wrapper'>
       <div className='Feature-list'>
         <div className='Feature Feature--important'>
           <div className='Feature__inner'>
-            <h4 className='Feature__title'>Support</h4>
-            <p>If you get stuck and need some help you can reach out to our helpful community in our Slack channel. We also have plenty of documentation on our website and blog.</p>
-            <p>Come and join the Syncano community and chat with other developers. Share ideas, learn, build apps together or <a href=''>just ask us anything</a>!</p>
+            <h4 className='Feature__title'>Support from Syncano and our community</h4>
+            <p>If you get stuck and need some help you can reach out to our helpful community in our <Link to='/slack-invite'>Slack channel</Link>. We also have plenty of <a href='https://syncano.github.io/syncano-node-cli/'>documentation</a> on our web site and our <a href='https://www.syncano.io/blog/'>blog</a>.</p>
+            <p>Come and join the Syncano community and chat with other developers. Share ideas, learn, build apps together or just ask us anything!</p>
           </div>
         </div>
         <div className='Feature'>
-          <h4 className='Feature__title'>Developers hub</h4>
-          <p>Our vision is that developers will not have to build and scale backends again. We do believe that unique, extremely skilled and autonomous developers exist, at the same time that we believe that great minds are stronger together.</p>
-          <p>That’s why we are building functionality into Syncano where users can find and get in touch with other Syncano users to join their projects or to develop on demand for them.</p>
-          <p>Below, you will find the current projects that are present in the developer hub.</p>
+          <h4 className='Feature__title'>Developer Hub for more collaboration (coming soon)</h4>
+          <p><a href=''>Our vision</a> is for developers to never have to build and scale backends again, and rather spend all their time solving app specific challenges.</p>
+          <p>We know that unique, extremely skilled and autonomous developers exist, but we also believe that great minds are stronger together. That’s why we are building functionality into Syncano where users can find and get in touch with other Syncano users to join their projects, or to develop on demand for each other.</p>
+          <p>Below, you will find the our current projects that are present in the developer hub.</p>
         </div>
         <div className='Feature'>
-          <h4 className='Feature__title'>Machine Learning & AI</h4>
-          <p>The current generation of Syncano is only the beginning. Our vision is that developers will not have to build and scale backends ever again.</p>
-          <p>By leveraging Machine Learning and Artificial Intelligence we are working on making the backend assembling process even more automated! We believe that we are entering a world where software builds software, so that we never have to build and operate backend ever again. Apply to join our Syncano ML and AI project!</p>
+          <h4 className='Feature__title'>Join our Machine Learning & AI Project to make Syncano even more powerful</h4>
+          <p>The current generation of Syncano is only the beginning. Our vision is that developers won’t have to build and scale backends ever again. </p>
+          <p>By leveraging Machine Learning and Artificial Intelligence we are working on making the backend assembling process even more automated! We believe that we are entering a world where software builds software, where building and operating backends will become obsolete. <a href=''>Apply to join our Syncano ML and AI project</a>!</p>
         </div>
         <div className='Feature'>
-          <h4 className='Feature__title'>Cloud OS Project</h4>
-          <p>Our powerful Cloud OS software is infrastructure agnostic which means that it can run on any cloud computing provider, as well as on bare-metal. We haven’t open sourced the Cloud OS yet, but it is our plan to gradually move in that direction. Sign up here to get in touch with us. We will gladly share our plans, progress and how you potentially can contribute.</p>
+          <h4 className='Feature__title'>Join our Cloud OS Project</h4>
+          <p>Our powerful Cloud OS software is infrastructure agnostic which means that it can run on any cloud computing provider, as well as on bare-metal. We haven’t open sourced the Cloud OS yet, but it is our plan to gradually move in that direction. <a href=''>Sign up here</a> to get in touch with us. We will gladly share our plans, progress and how you potentially can contribute.</p>
         </div>
         <div className='Feature'>
-          <h4 className='Feature__title'>Socket marketplace</h4>
-          <p>We are currently working on making it even easier for you to get the backend functions you need for your project that are not already available in the Public Socket Registry. In the Syncano Marketplace, you can specify the Syncano Socket you need and get help from other users to build it.</p>
+          <h4 className='Feature__title'>Socket Marketplace to expand Syncano faster (coming soon)</h4>
+          <p>We are currently working on making it even easier for you to get the backend functions you need for your projects. If the functionality you need is not already available in the <a href=''>Public Socket Registry</a>, you can use the Syncano Marketplace to specify the Syncano Socket you need, and get help from other users to build it.</p>
         </div>
         <div className='Feature'>
-          <h4 className='Feature__title'>ReactJS Dashboard Project</h4>
-          <p>The Syncano Dashboard on the web is the largest ReactJS Open Source project. Check it out on GitHub where you can contribute, or fork it and tailor it to make your own Syncano dashboard</p>
+          <h4 className='Feature__title'><Link to='https://github.com/syncano/syncano-dashboard'>Join our ReactJS Dashboard Project</Link></h4>
+          <p>The Syncano Dashboard on the web is the largest ReactJS Open Source project. <a href='https://github.com/syncano/syncano-dashboard'>Check it out on GitHub</a>, where you can contribute, or fork it and tailor it to make your own Syncano web dashboard.</p>
+          <p><GitHubButton type='stargazers' namespace='syncano' repo='syncano-dashboard' /></p>
         </div>
         <div className='Feature'>
-          <h4 className='Feature__title'>Automation SDK Project</h4>
-          <p>Our Syncano-CLI is an open source (OSS) project, released under the BSD license. Our framework has been developed to integrate the Automation SDK with any IDE by building plugins for that particular IDE. Join our Automation SDK project to influence which IDE’s we will prioritize!</p>
+          <h4 className='Feature__title'><a href='https://github.com/syncano/syncano-node-cli'>Join our Automation SDK Project</a></h4>
+          <p>Our Syncano-CLI is an open source (OSS) project, released under the BSD license. Our framework has been developed to integrate the Automation SDK with any IDE by building plugins for that particular IDE. <a href=''>Join our Automation SDK project</a> to influence which IDEs we will prioritize!</p>
         </div>
       </div>
     </div>
@@ -121,9 +124,9 @@ const CommunitySection = () => (
       .Feature__title {
         font-size: 18px;
         font-weight: 500;
-        line-height: 1.67;
+        line-height: 24px;
         color: #2f3339;
-        margin-bottom: 7px;
+        margin-bottom: 10px;
       }
 
       .Feature--important {

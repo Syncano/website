@@ -110,6 +110,7 @@ export default ({children}) => (
 
       a {
         color: #2c59c5;
+        cursor: pointer;
         text-decoration: none;
       }
 
