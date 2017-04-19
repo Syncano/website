@@ -14,7 +14,7 @@ const AutomationSDKSection = () => (
           <p>Manage the entire process of building and deploying from a simple, powerful and local tool on your computer. With the Syncano Command Line Interface (CLI), you never have to leave your local working environment, and the synchronization and deployment process dynamically occurs in the background. Save time and build more, faster.</p>
           <p><a href='https://syncano.github.io/syncano-node-cli/'>Syncano CLI docs <i className='fa fa-arrow-right' /></a></p>
           <div><a href='https://github.com/Syncano/syncano-node-cli/'>Join CLI project on GitHub <i className='fa fa-arrow-right' /></a></div>
-          <div><a href=''>Download CLI now <i className='fa fa-arrow-right' /></a></div>
+          <div><a href='https://www.npmjs.com/package/syncano-cli'>Download CLI now <i className='fa fa-arrow-right' /></a></div>
         </div>
 
         <div className='Section__sdk'>
