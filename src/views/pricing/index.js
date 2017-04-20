@@ -24,11 +24,9 @@ const Pricing = ({toggleSignUpModal}) => (
       </div>
     </Header>
 
-    <div className='Section'>
-      <Scaling />
-      <FAQ />
-      <CTA />
-    </div>
+    <Scaling />
+    <FAQ />
+    <CTA />
 
     <Footer />
 

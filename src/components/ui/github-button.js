@@ -5,6 +5,10 @@ export default props => (
     <GitHubButton {...props} />
 
     <style jsx global>{`
+      span {
+        display: inline-block;
+      }
+
       .github-btn {
         font: bold 11px/14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
         height: 20px;

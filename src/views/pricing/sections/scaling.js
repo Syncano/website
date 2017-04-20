@@ -56,7 +56,6 @@ const Scaling = () => (
         max-width: 480px;
         margin-left: auto;
         margin-right: auto;
-        hyphens: auto
       }
 
       @media screen and (min-width: 560px) {
