@@ -108,7 +108,7 @@ const Modal = ({
         text-align: center;
       }
 
-      @media screen and (min-width: 780px) {
+      @media screen and (min-width: 490px) {
         .Modal {
           display: flex;
           align-items: center;
@@ -120,7 +120,7 @@ const Modal = ({
           padding: 50px;
           font-size: 18px;
           line-height: 24px;
-          max-width: 770px;
+          max-width: 490px;
           flex: 1;
         }
 

@@ -3,14 +3,14 @@ import Button from '../../ui/button'
 import Input from '../../ui/input'
 import InputList from '../../ui/input-list'
 import Style from './components/style'
-import SocialButtons from './components/social-buttons'
+// import SocialButtons from './components/social-buttons'
 
 const SignUpForm = ({email, password, toggleModal, register, messages}) => (
   <form className='AuthForm' onSubmit={register}>
-    <div className='AuthForm__column AuthForm__column--buttons'>
+    {/* <div className='AuthForm__column AuthForm__column--buttons'>
       <SocialButtons />
-    </div>
-    <div className='AuthForm__separator' />
+    </div> */}
+    {/* <div className='AuthForm__separator' /> */}
     <div className='AuthForm__column AuthForm__column--form'>
       <InputList errors={messages.get('auth.register')}>
         <Input full {...email} />
