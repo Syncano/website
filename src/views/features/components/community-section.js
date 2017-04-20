@@ -1,11 +1,15 @@
 import Link from '../../../components/ui/link'
 import GitHubButton from '../../../components/ui/github-button'
 
+const startIntercom = (msg) => {
+  window.Intercom('showNewMessage', msg);
+}
+
 const CommunitySection = () => (
   <div className='Section'>
     <div className='Section__header u-wrapper u-ta-c'>
       <h2 className='u-title'>Syncano Community</h2>
-      <p>Syncano is a true multi-sided platform concept: The Syncano Core team builds a high-tech and high quality solution in the cloud, and powers it with the muscle of our growing community of Syncano users.</p>
+      <p>Syncano is a true multi-sided platform concept: The Core Syncano Team is responsible for building a robust solution in the cloud, and it's powered by the muscle of you, our growing community.</p>
       <div className='Section__definition'>Syncano = Cloud + Crowd!</div>
     </div>
     <div className='Section__content u-wrapper'>
@@ -13,24 +17,25 @@ const CommunitySection = () => (
         <div className='Feature Feature--important'>
           <div className='Feature__inner'>
             <h4 className='Feature__title'>Support from Syncano and our community</h4>
-            <p>If you get stuck and need some help you can reach out to our helpful community in our <Link to='/slack-invite'>Slack channel</Link>. We also have plenty of <a href='https://syncano.github.io/syncano-node-cli/'>documentation</a> on our web site and our <a href='https://www.syncano.io/blog/'>blog</a>.</p>
-            <p>Come and join the Syncano community and chat with other developers. Share ideas, learn, build apps together or just ask us anything!</p>
+            <p>If you get stuck and need some help, simply reach out to your fellow community members in our <Link to='/slack-invite'>Slack channel</Link> for answers. We also have plenty of <a href='https://syncano.github.io/syncano-node-cli/'>documentation</a> on our web site and our <a href='https://www.syncano.io/blog/'>blog</a>.</p>
+            <p>Come and join the Syncano community and chat with other developers. Share ideas, learn from each other, build apps together, or just ask us anything!</p>
           </div>
         </div>
         <div className='Feature'>
           <h4 className='Feature__title'>Developer Hub for more collaboration (coming soon)</h4>
-          <p><a href=''>Our vision</a> is for developers to never have to build and scale backends again, and rather spend all their time solving app specific challenges.</p>
-          <p>We know that unique, extremely skilled and autonomous developers exist, but we also believe that great minds are stronger together. That’s why we are building functionality into Syncano where users can find and get in touch with other Syncano users to join their projects, or to develop on demand for each other.</p>
-          <p>Below, you will find the our current projects that are present in the developer hub.</p>
+          <p><a href=''>Our vision</a> is for developers to maximize their time by spending it on solving app specific challenges, and to never have to revisit building and scaling backends again.</p>
+          <p>We acknowledge and respect that skilled and autonomous developers exist, but we also believe that great minds are stronger together. That's why we built technology within Syncano to allows users to find other developers to collaborate on projects, in any shape or form.</p>
+          <p>Below you will find the current projects that are available in the developer hub.</p>
+          <div><a href='https://github.com/Syncano/'>Join our Automation SDK Project <i className='fa fa-arrow-right' /></a></div>
         </div>
         <div className='Feature'>
           <h4 className='Feature__title'>Join our Machine Learning & AI Project to make Syncano even more powerful</h4>
-          <p>The current generation of Syncano is only the beginning. Our vision is that developers won’t have to build and scale backends ever again. </p>
-          <p>By leveraging Machine Learning and Artificial Intelligence we are working on making the backend assembling process even more automated! We believe that we are entering a world where software builds software, where building and operating backends will become obsolete. <a href=''>Apply to join our Syncano ML and AI project</a>!</p>
+          <p>The current generation of Syncano is only the beginning.</p>
+          <p>By leveraging Machine Learning and Artificial Intelligence, the backend assembly process will be even more automated! We believe that we are entering a world where software builds software and where building and operating backends will become obsolete. <a href=''>Apply to join our Syncano ML and AI project</a>!</p>
         </div>
         <div className='Feature'>
           <h4 className='Feature__title'>Join our Cloud OS Project</h4>
-          <p>Our powerful Cloud OS software is infrastructure agnostic which means that it can run on any cloud computing provider, as well as on bare-metal. We haven’t open sourced the Cloud OS yet, but it is our plan to gradually move in that direction. <a href=''>Sign up here</a> to get in touch with us. We will gladly share our plans, progress and how you potentially can contribute.</p>
+          <p>Our powerful Cloud OS software is infrastructure agnostic! This means you can run it on any cloud computing provider, or even on bare metal! The Cloud OS is not currently open sourced, but we have plans to do so in our roadmap. <a href=''>Sign up here</a> to get in touch with us. We'd be delighted to share our plans, progress, and learn how you can help contribute!</p>
         </div>
         <div className='Feature'>
           <h4 className='Feature__title'>Socket Marketplace to expand Syncano faster (coming soon)</h4>
@@ -38,12 +43,12 @@ const CommunitySection = () => (
         </div>
         <div className='Feature'>
           <h4 className='Feature__title'><Link to='https://github.com/syncano/syncano-dashboard'>Join our ReactJS Dashboard Project</Link></h4>
-          <p>The Syncano Dashboard on the web is the largest ReactJS Open Source project. <a href='https://github.com/syncano/syncano-dashboard'>Check it out on GitHub</a>, where you can contribute, or fork it and tailor it to make your own Syncano web dashboard.</p>
+          <p>The Syncano Dashboard is one of the largest ReactJS Open Source project on the web. <a href='https://github.com/syncano/syncano-dashboard'>Check it out on GitHub</a>, where you can contribute, or fork it and tailor it to make your own Syncano web dashboard.</p>
           <p><GitHubButton type='stargazers' namespace='syncano' repo='syncano-dashboard' /></p>
         </div>
         <div className='Feature'>
           <h4 className='Feature__title'><a href='https://github.com/syncano/syncano-node-cli'>Join our Automation SDK Project</a></h4>
-          <p>Our Syncano-CLI is an open source (OSS) project, released under the BSD license. Our framework has been developed to integrate the Automation SDK with any IDE by building plugins for that particular IDE. <a href=''>Join our Automation SDK project</a> to influence which IDEs we will prioritize!</p>
+          <p>Our Syncano-CLI is an open source (OSS) project, released under the MIT license. Our framework has been developed to integrate the Automation SDK with any IDE by building plugins for that particular IDE. <a onClick={startIntercom.bind(this, 'I want to get involved in building Automation SDK! ;)')}>Join our Automation SDK project</a> to influence which IDEs we will prioritize!</p>
         </div>
       </div>
     </div>

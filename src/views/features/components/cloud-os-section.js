@@ -9,44 +9,40 @@ const CloudOsSection = ({toggleSignUpModal}) => (
           <div className='Feature-list'>
             <div className='Feature Feature--important Feature--full'>
               <h2 className='u-title'>Syncano Cloud OS</h2>
-              <p className='u-subtitle'>The Syncano Cloud OS is the core of the Syncano platform. It’s responsible for operating the Syncano Sockets in your dedicated Syncano backend - as well as ensuring that your backend scales elastically, meeting your frontend's capacity needs.</p>
+              <p className='u-subtitle'>The Syncano Cloud OS is the core of the Syncano platform. It hosts and executes all Syncano Sockets that make up your dedicated backend, and ensures that your backend elastically scales to meet your frontend’s needs.</p>
               <p>
-                The Syncano Cloud OS currently runs on AWS, but we've ensured that it can run on any private infrastructure; which enables the possibility to run on-premise, thus complying with <a href='https://en.wikipedia.org/wiki/International_Safe_Harbor_Privacy_Principles'>European Safe Harbour regulations</a>, and <a href='http://ec.europa.eu/justice/data-protection/'>EU’s Personal Data Act</a>.
+                The Syncano Cloud OS currently runs on AWS, but we've ensured that it can run on any private infrastructure, including running on-premise, and subsequently complying with <a href='https://en.wikipedia.org/wiki/International_Safe_Harbor_Privacy_Principles'>European Safe Harbour regulations</a>, and <a href='http://ec.europa.eu/justice/data-protection/'>EU’s Personal Data Act</a>.
               </p>
             </div>
             <div className='Feature Feature--important Feature--full'>
-              <h4 className='Feature__title'>Core API</h4>
-              <p>All the features of the Syncano Cloud OS can be managed through our Syncano Core API, enabling you to build powerful Syncano Sockets that have deep integrations with the Syncano Cloud OS. </p>
-              <p>It reveals ways of using the underlying Cloud OS to power your own proprietary backend. This makes Syncano a safe bet, since you will never ever be stuck! Syncano is among the <a href='http://thenewstack.io/tns-guide-serverless-technologies-best-frameworks-platforms-tools/'>most mature in the serverless space</a>. We are open-source advocates. <a href=''>Reach out to learn how you can contribute</a>.</p>
+              <h4 className='Feature__title'>Leverage the Core APIs for deeper integration</h4>
+              <p>All the features of the Syncano Cloud OS can be managed through the Syncano Core API, enabling you to build powerful Syncano Sockets with deep integrations to the Syncano Cloud OS.</p>
+              <p>The Core API’s exposes the underlying Cloud OS to power your own proprietary backend. This makes Syncano a safe bet, since you will never ever be stuck! Syncano is among the <a href='http://thenewstack.io/tns-guide-serverless-technologies-best-frameworks-platforms-tools/'>most mature in the serverless space</a>. We are opensource advocates. <a href=''>Reach out to learn how you can contribute</a>.</p>
             </div>
           </div>
         </div>
         <div className='Section__column Section__column--secondary'>
           <div className='Feature-list Feature-list--arrange'>
             <div className='Feature'>
-              <h4 className='Feature__title'>DevOps automation is scaling your backend</h4>
-              <p>The DevOps automation function is responsible for the set up and scaling of resources in the underlying infrastructure, thus meeting your front end's capacity needs. You have entered the era of NoOps!</p>
-            </div>
-            <div className='Feature'>
-              <h4 className='Feature__title'>Project Sync</h4>
-              <p>The backend functions you work on in your local development environment are continuously and automatically deployed to your dedicated backend running by the <a href=''>Automation SDK</a>. The Syncano Cloud OS will in turn configure the resources of the underlying infrastructure to support your front end’s needs.</p>
-            </div>
-            <div className='Feature'>
-              <h4 className='Feature__title'>Powerful NoSQL storage</h4>
-              <p>The Cloud OS provides its own built-in NoSQL solution that can be used by Syncano Sockets to store data. Syncano's NoSQL storage helps create data classes where you can store any data object types using built-in or customized fields. Syncano lets you order and filter your data, so you easily can retrieve your data in just the form your app needs.</p>
+              <h4 className='Feature__title'>Executing Syncano Cloud Functions</h4>
+              <p>Cloud Functions serve as Syncano's implementation of the server-side code, becoming the core of Syncano Sockets. These functions run the code that powers Syncano Sockets, executing at blazing speed with the right environment and runtime.</p>
             </div>
             <div className='Feature'>
               <h4 className='Feature__title'>Always up to date with real-time channels</h4>
-              <p>The Cloud OS has a built-in publish-subscribe real-time solution that aims to support any Syncano Socket.</p>
-              <p>Syncano’s real-time channels enables you to listen for changes in data, and to push real time messages to your front end or other subscriber of the data notifications.</p>
+              <p>The Cloud OS has a built-in publish-subscribe real-time solution that that can support any Syncano Socket.</p>
+              <p>Syncano’s real-time channels enable you to listen for changes in data, and to push real-time messages to your frontend or other subscribers of your data notifications.</p>
             </div>
             <div className='Feature'>
-              <h4 className='Feature__title'>Executing Syncano Cloud Functions</h4>
-              <p>Cloud functions are Syncano's implementation of the server-side code, and becomes the core of Syncano Sockets. These functions run the code that is powering the Syncano Sockets, and ensures that they are executed at blazing speed with the right environment and runtime.</p>
+              <h4 className='Feature__title'>Powerful NoSQL storage</h4>
+              <p>The Syncano Cloud OS can be used by Syncano Sockets to store data through its built in NoSQL solution. Syncano's NoSQL storage creates data classes where you can store any data object type using built in or customized fields. Easily order and filter your data so you can easily retrieve it in the exact form your app needs.</p>
             </div>
             <div className='Feature'>
               <h4 className='Feature__title'>Integrate Web hosting into your solution</h4>
-              <p>Syncano supports production grade static hosting. It supports deploying web apps to a global CDN in a single command and deployed apps are secured by SSL certificate.</p>
+              <p>Syncano supports production grade static hosting. The platform deploys web apps to a global CDN in a single command, and deployed apps are secured by SSL certificates.</p>
+            </div>
+            <div className='Feature'>
+              <h4 className='Feature__title'>DevOps automation scales your backend</h4>
+              <p>The DevOps automation function is responsible for the set up and scaling of resources in the underlying infrastructure, meeting your front end's capacity needs. You have entered the era of NoOps!</p>
             </div>
           </div>
         </div>
@@ -55,7 +51,7 @@ const CloudOsSection = ({toggleSignUpModal}) => (
           <div className='Feature-list'>
             <div className='Feature Feature--important Feature--full'>
               <h4 className='Feature__title'>Your own web dashboard</h4>
-              <p>The Syncano Dashboard is where you can manage your account on Syncano, like billing, usage and a list of your various backend instances’ state.</p>
+              <p>Use your Syncano Dashboard to manage all things specific to your account, such as billing and usage. You can also access your dashboard for details specific to your instance, such as a detailed list of their various state.</p>
               <p>
                 <a onClick={toggleSignUpModal}>Go to dashboard <i className='fa fa-arrow-right' /></a>
               </p>
