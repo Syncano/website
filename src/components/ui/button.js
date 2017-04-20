@@ -1,6 +1,6 @@
 const Button = ({
   children,
-  primary, secondary, outline, github, google, facebook, full,
+  primary, secondary, outline, github, google, facebook, full, square,
   ...props
 }) => (
   <button
@@ -13,6 +13,7 @@ const Button = ({
       ${google ? 'Button--google' : ''}
       ${facebook ? 'Button--facebook' : ''}
       ${full ? 'Button--full' : ''}
+      ${square ? 'Button--square' : ''}
     `}
     {...props}>
     {children}
@@ -143,12 +144,18 @@ const Button = ({
         color: rgba(141, 146, 153, 1);
       }
 
+      .Button--square {
+        width: 48px;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
       .Button[disabled],
       .Button[disabled]:focus,
       .Button[disabled]:hover,
       .Button[disabled]:active {
         background-color: #f5f5f5;
-      color: #bbb;
+        color: #bbb;
         transform: none;
         box-shadow: none;
       }

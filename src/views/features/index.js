@@ -7,6 +7,7 @@ import CTA from '../../components/shared/cta'
 
 import Head from '../../components/ui/head'
 import Page from '../../components/ui/page'
+import Button from '../../components/ui/button'
 
 import ContentNav from './components/content-nav'
 import CommunitySection from './components/community-section'
@@ -24,7 +25,7 @@ class Features extends Component {
   }
 
   render () {
-    const {featuresPage} = this.props
+    const {featuresPage, toggleSignUpModal, scrollToTop} = this.props
 
     return (
       <Page>
@@ -43,23 +44,28 @@ class Features extends Component {
             <ContentNav active={featuresPage.activeSection} />
           </Sticky>
 
-          <div ref={component => { Features.section0 = component }} id='AutomationSDKSection'>
+          <div ref={component => { Features.section0 = component }} className='AutomationSDKSection' id='AutomationSDKSection'>
             <AutomationSDKSection />
           </div>
 
           <div ref={component => { Features.section1 = component }} id='RegistriesSection'>
-            <RegistriesSection />
+            <RegistriesSection toggleSignUpModal={toggleSignUpModal} />
           </div>
 
           <div ref={component => { Features.section2 = component }} id='CloudOsSection'>
-            <CloudOsSection />
+            <CloudOsSection toggleSignUpModal={toggleSignUpModal} />
           </div>
 
           <div ref={component => { Features.section3 = component }} id='CommunitySection'>
             <CommunitySection />
           </div>
+
           <CTA />
           <Footer />
+
+          <div className='ScrollToTop'>
+            <Button square secondary onClick={scrollToTop}><i className='fa fa-arrow-up' /></Button>
+          </div>
         </StickyContainer>
 
         <style jsx>{`
@@ -72,6 +78,18 @@ class Features extends Component {
             max-width: 860px;
             margin-left: auto;
             margin-right: auto;
+          }
+
+          .AutomationSDKSection {
+            position: relative;
+            z-index: 10;
+          }
+
+          .ScrollToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9;
           }
         `}</style>
       </Page>
@@ -95,9 +113,15 @@ class Features extends Component {
 
 Features.init = ({
   stores: {featuresPage},
-  services: {featuresPage: {setActiveSection}}
+  services: {
+    featuresPage: {setActiveSection},
+    ui: {toggleModal}
+  }
 }) => ({
-  featuresPage, setActiveSection
+  featuresPage,
+  setActiveSection,
+  scrollToTop: () => window.scroll(0, 0),
+  toggleSignUpModal: () => toggleModal('signup')
 })
 
 export default Features

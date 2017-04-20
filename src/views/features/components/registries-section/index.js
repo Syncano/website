@@ -1,5 +1,5 @@
 import Grid from '../../../../components/ui/grid'
-// import Button from '../../../../components/ui/button'
+import Button from '../../../../components/ui/button'
 import Hexagon from '../../../../components/ui/hexagon'
 import Hexagons from './hexagons.svg'
 import IconSentry from './icon-sentry.svg'
@@ -8,7 +8,7 @@ import IconTwitter from './icon-twitter.svg'
 import IconDB from './icon-db.svg'
 import IconFacebook from './icon-fb.svg'
 
-const RegistriesSection = () => (
+const RegistriesSection = ({toggleSignUpModal}) => (
   <div className='Section'>
     <div className='Section__inner u-wrapper'>
       <div className='Section__column Section__column--header'>
@@ -60,8 +60,12 @@ const RegistriesSection = () => (
             </div>
             <div className='Feature Feature--full'>
               <h4 className='Feature__title'>Using the registries</h4>
-              <p>Browse the existing public Syncano Sockets by the Public Socket Registry web interface.</p>
+              {/* <p>Browse the existing public Syncano Sockets by the Public Socket Registry web interface.</p> */}
               <p>After you sign up you will access both your private Socket Registry and the Public Socket Registry using the Automation SDK, through which you can list, search, submit and deploy Syncano Sockets to your dedicated backend.</p>
+              <p>Get your backend up in 45 seconds</p>
+              <p>
+                <Button secondary onClick={toggleSignUpModal}>Sign up</Button>
+              </p>
             </div>
             {/* <div className='Feature'>
               <h4 className='Feature__title'>Public registry</h4>

@@ -1,6 +1,6 @@
 import Grid from '../../../components/ui/grid'
 
-const CloudOsSection = () => (
+const CloudOsSection = ({toggleSignUpModal}) => (
   <div className='Section'>
     <div className='Section__clouds' />
     <div className='Section__inner u-wrapper'>
@@ -56,6 +56,9 @@ const CloudOsSection = () => (
             <div className='Feature Feature--important Feature--full'>
               <h4 className='Feature__title'>Your own web dashboard</h4>
               <p>The Syncano Dashboard is where you can manage your account on Syncano, like billing, usage and a list of your various backend instances’ state.</p>
+              <p>
+                <a onClick={toggleSignUpModal}>Go to dashboard <i className='fa fa-arrow-right' /></a>
+              </p>
             </div>
           </div>
 
@@ -315,6 +318,18 @@ const CloudOsSection = () => (
 
       .u-subtitle {
         color: #3E434A;
+      }
+
+      .fa-arrow-right {
+        font-size: 12px;
+        top: -2px;
+        position: relative;
+        transform: translateX(3px);
+        transition: transform .25s;
+      }
+
+      a:hover .fa-arrow-right {
+        transform: translateX(5px);
       }
     `}</style>
   </div>
