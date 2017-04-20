@@ -22,7 +22,7 @@ const Landing = ({
     <Header theme='dark'>
       <div className='CTA'>
         <h1 className='Title'>Syncano means accelerated software development</h1>
-        <h2 className='Subtitle'>Set up your first scalable app in the cloud in just 45 seconds.</h2>
+        <h2 className='Subtitle'>Set up your first scalable app in the cloud in just 45 seconds</h2>
 
         <Button primary onClick={toggleSignUpModal}>Sign up now</Button>
         <div className='Separator' data-after='or' />

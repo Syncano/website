@@ -82,7 +82,7 @@ export default ({children}) => (
       @media screen and (min-width: 560px) {
         .u-title {
           font-size: 48px;
-          line-height: 48px;
+          line-height: 64px;
         }
       }
 

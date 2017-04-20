@@ -16,7 +16,7 @@ const Innovation = () => (
           <b>Syncano</b> is a development platform for building more, faster by leveraging existing backend code. Developers can finally spend their time solving app specific challenges.
         </div>
         <div className='Heading__item'>
-          Technology transforms the unthinkable into reality. The Pacemaker saves millions from the grief of loss. There’s still abundant untapped opportunity to change the world through the apps you build. At Syncano, we want to help you build technology that matters, faster.
+          Technology transforms the unthinkable into reality. The Pacemaker saves millions from the grief of loss. There’s still abundant untapped opportunity to change the world through the apps you build.
         </div>
       </Grid>
     </div>
@@ -70,7 +70,7 @@ const Innovation = () => (
       /* = HEADING
        * ==================================================================== */
       .Heading {
-        max-width: 830px;
+        max-width: 870px;
         color: #8d9299;
         font-size: 20px;
         line-height: 30px;

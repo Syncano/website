@@ -1,3 +1,4 @@
+import TypeOut from 'react-typeout'
 import Hexagon from '../../../../components/ui/hexagon'
 import Button from '../../../../components/ui/button'
 import IconFacebook from './icon-fb.svg'
@@ -18,9 +19,21 @@ const Sockets = ({
   <div className='Section'>
     <div className='Section__content u-wrapper u-ta-c'>
       <div className='Project'>
-        <h2 className='Project__headline'>Assemble your backend from Syncano Sockets to build your</h2>
+        <h2 className='Project__headline'>Assemble your backend from Syncano Sockets to build</h2>
         <p className='Project__title'>
-          Fintech innovation_
+          Your<TypeOut
+            typeSpeed={100}
+            words={[
+              ' Fintech innovation solution',
+              ' messenger bot',
+              ' mobile backend',
+              ' custom CMS',
+              ' analytics integration',
+              ' IoT backend',
+              ' payment gateway',
+              ' web hosting solution',
+              '... basically, whatever...'
+            ]} />
         </p>
       </div>
 
@@ -116,7 +129,7 @@ const Sockets = ({
       }
 
       .Section__content {
-        max-width: 720px;
+        max-width: 770px;
       }
 
       @media screen and (min-width: 560px) {
@@ -148,6 +161,7 @@ const Sockets = ({
         font-weight: normal;
         color: #fff;
         margin-top: 7px;
+        min-height: 41px;
       }
 
       .u-title {

@@ -19,6 +19,7 @@
     "react-github-button": "^0.1.10",
     "react-hexagon": "1.1.1",
     "react-sticky": "^5.0.5",
+    "react-typeout": "^0.6.1",
     "svg-react-loader": "0.3.7",
     "syncano-cli": "beta",
     "zefir": "beta"

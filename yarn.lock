@@ -4667,6 +4667,10 @@ react-sticky@^5.0.5:
   version "5.0.5"
   resolved "https://registry.yarnpkg.com/react-sticky/-/react-sticky-5.0.5.tgz#995871273f8a001fa4d462d3b96f381ee54b2649"
 
+react-typeout@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/react-typeout/-/react-typeout-0.6.1.tgz#7dea05ad3cd4bd4cbb0786e64eeb6f7a255601b3"
+
 react@15.4.2:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.4.2.tgz#41f7991b26185392ba9bae96c8889e7e018397ef"

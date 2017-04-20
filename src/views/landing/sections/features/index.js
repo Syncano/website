@@ -21,7 +21,7 @@ const Features = () => (
       <Grid wrap>
         <div className='Heading'>
           <p className='Heading__item Heading__item--important'>
-            Use Syncano to experiment and test your product with real users on a live production platform until you achieve product/market fit. Get results faster than any other solution. Adapt, tweak and deploy at blazing speed.
+            Use Syncano to experiment and test your product with real users on a live production platform until you achieve product/market fit. Get results faster than with any other solution. Adapt, tweak and deploy at blazing speed.
           </p>
           <p className='Heading__item'>
             Take the risk and friction out of application development.
@@ -37,7 +37,7 @@ const Features = () => (
                 </div>
                 <h4 className='Feature__title'>Syncano Registry</h4>
                 <p>
-                  This is a toolbox of reusable backend code and blueprints for you to use and adapt. All the blocks fit together, offering an endless possibility of unique solutions.
+                  Don’t rebuild what has already been built. The registry is your toolbox of reusable backend code.
                 </p>
               </div>
             </Link>
@@ -50,7 +50,7 @@ const Features = () => (
                 </div>
                 <h4 className='Feature__title'>Syncano Automation SDK</h4>
                 <p>
-                  Unlike other BasS providers, the Syncano build & deployment process is almost effortless. With a more efficient and streamlined  workflow, your backend is built in real time.
+                  Operate your backend directly from your local development environment. No, weird GUIs, no hassle, more efficiency!
                 </p>
               </div>
             </Link>
@@ -61,9 +61,9 @@ const Features = () => (
                 <div className='Feature__icon'>
                   <CommunityIcon />
                 </div>
-                <h4 className='Feature__title'>Community</h4>
+                <h4 className='Feature__title'>Syncano Community</h4>
                 <p>
-                  Crowd + Cloud. Harness the power of our community. Leverage existing blocks built by the community, and give yourself more creative freedom. Share, build, collaborate.
+                  Crowd + Cloud. Harness the power of our community, and give yourself more creative freedom. Share, build, collaborate.
                 </p>
               </div>
             </Link>
@@ -74,9 +74,9 @@ const Features = () => (
                 <div className='Feature__icon'>
                   <CloudOSIcon />
                 </div>
-                <h4 className='Feature__title'>Cloud OS</h4>
+                <h4 className='Feature__title'>Syncano Cloud OS</h4>
                 <p>
-                  What you see is only the surface of the power of Syncano. The magic of accelerated software development is seamlessly powered by our unique cloud OS.
+                  Throw any Socket from the Registry into the Syncano Cloud OS, and its functionality becomes immediately available.
                 </p>
               </div>
             </Link>
@@ -91,9 +91,21 @@ const Features = () => (
       .Section {
         margin-top: 30px;
         margin-bottom: 30px;
-        max-width: 980px;
+        max-width: 1130px;
         position: relative;
         z-index: 1;
+      }
+
+      .u-title {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .u-subtitle {
+        max-width: 820px;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .Section__content {
@@ -264,12 +276,12 @@ const Features = () => (
 
       @media screen and (min-width: 980px) {
         .Feature-list {
-          width: 530px;
+          width: 670px;
           margin-left: auto;
         }
 
         .Feature {
-          max-width: 250px;
+          max-width: 320px;
           float: none;
         }
       }
