@@ -7,8 +7,6 @@ export default ({children, opengraph}) => (
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' />
     {children}
 
-    {console.log(opengraph === true)}
-
     {opengraph === true ? ([
       <meta key='og:image' property='og:image' content='https://www.syncano.io/static/img/og-image.png' />,
       <meta key='og:title' property='og:title' content='Syncano means accelerated software development' />,

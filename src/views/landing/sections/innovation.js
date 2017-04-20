@@ -13,11 +13,10 @@ const Innovation = () => (
     <div className='Heading u-wrapper'>
       <Grid wrap>
         <div className='Heading__item Heading__item--important'>
-          <b>Syncano</b> is a versatile development platform that enables developers to build more, faster by leveraging existing backend code. Developers can now spend their time solving app specific challenges instead of managing backend code.
+          <b>Syncano</b> is a development platform for building more, faster by leveraging existing backend code. Developers can finally spend their time solving app specific challenges.
         </div>
         <div className='Heading__item'>
-          Technology has transformed the unthinkable into reality. Think of the impact of advances like the Pacemaker, saving millions from the grief of loss.
-          There’s still abundant untapped opportunity to change the world we live in with technology, through the apps you can build.
+          Technology transforms the unthinkable into reality. The Pacemaker saves millions from the grief of loss. There’s still abundant untapped opportunity to change the world through the apps you build. At Syncano, we want to help you build technology that matters, faster.
         </div>
       </Grid>
     </div>

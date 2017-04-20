@@ -21,10 +21,10 @@ const Features = () => (
       <Grid wrap>
         <div className='Heading'>
           <p className='Heading__item Heading__item--important'>
-            Use Syncano to experiment and test your product with real users until you achieve product/market fit. Get results faster than any other solution.
+            Use Syncano to experiment and test your product with real users on a live production platform until you achieve product/market fit. Get results faster than any other solution. Adapt, tweak and deploy at blazing speed.
           </p>
           <p className='Heading__item'>
-            Take the risk out of application development.
+            Take the risk and friction out of application development.
             As you grow, Syncano grows with you - Syncano’s infrastructure will automatically scale to support your needs.
           </p>
         </div>
@@ -37,7 +37,7 @@ const Features = () => (
                 </div>
                 <h4 className='Feature__title'>Syncano Registry</h4>
                 <p>
-                  The Syncano Registry is a toolbox of reusable backend code (called Syncano Sockets) and blueprints for you to use and adapt to your needs. Add your own blocks and assemble your backend, without backend development expertise. Blocks fit together, offering an endless possibility of unique solutions. Why rebuild what has already been built? Use Syncano instead.
+                  This is a toolbox of reusable backend code and blueprints for you to use and adapt. All the blocks fit together, offering an endless possibility of unique solutions.
                 </p>
               </div>
             </Link>
@@ -48,9 +48,9 @@ const Features = () => (
                 <div className='Feature__icon'>
                   <AutomationSDKIcon />
                 </div>
-                <h4 className='Feature__title'>Automation SDK</h4>
+                <h4 className='Feature__title'>Syncano Automation SDK</h4>
                 <p>
-                  Unlike other Backend as a Service providers, with Syncano’s Automation SDK,  the  build & deployment process is almost effortless. Your workflow is now more efficient and streamlined, and your backend is built in real time.
+                  Unlike other BasS providers, the Syncano build & deployment process is almost effortless. With a more efficient and streamlined  workflow, your backend is built in real time.
                 </p>
               </div>
             </Link>
@@ -63,7 +63,7 @@ const Features = () => (
                 </div>
                 <h4 className='Feature__title'>Community</h4>
                 <p>
-                  Crowd + Cloud. Harness the power of the Syncano community. Leverage existing blocks built by the community, and give yourself more creative freedom. Find developers  to increase your software development capacity. Share, build, collaborate.
+                  Crowd + Cloud. Harness the power of our community. Leverage existing blocks built by the community, and give yourself more creative freedom. Share, build, collaborate.
                 </p>
               </div>
             </Link>
@@ -76,7 +76,7 @@ const Features = () => (
                 </div>
                 <h4 className='Feature__title'>Cloud OS</h4>
                 <p>
-                  Once you’ve entered your development environment, you’ve only scratched the surface of the power of Syncano. The magic of accelerated software development is seamlessly powered by Syncano’s Cloud OS.
+                  What you see is only the surface of the power of Syncano. The magic of accelerated software development is seamlessly powered by our unique cloud OS.
                 </p>
               </div>
             </Link>
