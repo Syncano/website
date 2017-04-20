@@ -276,12 +276,12 @@ const Features = () => (
 
       @media screen and (min-width: 918px) {
         .Feature:nth-child(1),
-        .Feature:nth-child(4) {
+        .Feature:nth-child(3) {
           float: left;
         }
 
         .Feature:nth-child(2),
-        .Feature:nth-child(3) {
+        .Feature:nth-child(4) {
           float: right;
         }
 
