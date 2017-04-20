@@ -1,3 +1,4 @@
+import {Component} from 'react'
 import {StickyContainer, Sticky} from 'react-sticky'
 
 import Footer from '../../components/shared/footer'
@@ -13,62 +14,71 @@ import AutomationSDKSection from './components/automation-sdk-section'
 import CloudOsSection from './components/cloud-os-section'
 import RegistriesSection from './components/registries-section'
 
-const Features = ({featuresPage}) => (
-  <Page>
-    <Head>
-      <title>Syncano</title>
-    </Head>
+class Features extends Component {
+  componentWillUnmount () {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
 
-    <StickyContainer>
-      <div className='Header'>
-        <Header
-          title='Product features'
-          subtitle='Syncano’s Serverless Platform and SDKs automatically assemble and deploy your backend to the cloud instantaneously - all while you build your app.'
-        />
-      </div>
-      <Sticky className='sticky-element'>
-        <ContentNav active={featuresPage.activeSection} />
-      </Sticky>
+  componentDidMount () {
+    window.addEventListener('scroll', this.handleScroll)
+  }
 
-      <div ref={component => { Features.section0 = component }} id='AutomationSDKSection'>
-        <AutomationSDKSection />
-      </div>
+  render () {
+    const {featuresPage} = this.props
 
-      <div ref={component => { Features.section1 = component }} id='RegistriesSection'>
-        <RegistriesSection />
-      </div>
+    return (
+      <Page>
+        <Head>
+          <title>Syncano</title>
+        </Head>
 
-      <div ref={component => { Features.section2 = component }} id='CloudOsSection'>
-        <CloudOsSection />
-      </div>
+        <StickyContainer>
+          <div className='Header'>
+            <Header
+              title='Product features'
+              subtitle='Syncano’s Serverless Platform and SDKs automatically assemble and deploy your backend to the cloud instantaneously - all while you build your app.'
+            />
+          </div>
+          <Sticky className='sticky-element'>
+            <ContentNav active={featuresPage.activeSection} />
+          </Sticky>
 
-      <div ref={component => { Features.section3 = component }} id='CommunitySection'>
-        <CommunitySection />
-      </div>
-      <CTA />
-      <Footer />
-    </StickyContainer>
+          <div ref={component => { Features.section0 = component }} id='AutomationSDKSection'>
+            <AutomationSDKSection />
+          </div>
 
-    <style jsx>{`
-      :global(.sticky-element) {
-        position: relative;
-        z-index: 20;
-      }
+          <div ref={component => { Features.section1 = component }} id='RegistriesSection'>
+            <RegistriesSection />
+          </div>
 
-      .Header :global(.PageHead__subtitle) {
-        max-width: 860px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    `}</style>
-  </Page>
-)
+          <div ref={component => { Features.section2 = component }} id='CloudOsSection'>
+            <CloudOsSection />
+          </div>
 
-Features.init = ({
-  stores: {featuresPage},
-  services: {featuresPage: {setActiveSection}}
-}) => {
-  window.addEventListener('scroll', () => {
+          <div ref={component => { Features.section3 = component }} id='CommunitySection'>
+            <CommunitySection />
+          </div>
+          <CTA />
+          <Footer />
+        </StickyContainer>
+
+        <style jsx>{`
+          :global(.sticky-element) {
+            position: relative;
+            z-index: 20;
+          }
+
+          .Header :global(.PageHead__subtitle) {
+            max-width: 860px;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        `}</style>
+      </Page>
+    )
+  }
+
+  handleScroll = () => {
     const {scrollTop} = document.body
     let value = 0
     let i = -1
@@ -79,12 +89,15 @@ Features.init = ({
       }
     }
 
-    setActiveSection(value)
-  })
-
-  return ({
-    featuresPage
-  })
+    this.props.setActiveSection(value)
+  }
 }
+
+Features.init = ({
+  stores: {featuresPage},
+  services: {featuresPage: {setActiveSection}}
+}) => ({
+  featuresPage, setActiveSection
+})
 
 export default Features
