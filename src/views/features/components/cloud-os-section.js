@@ -66,7 +66,7 @@ const CloudOsSection = ({toggleSignUpModal}) => (
             <div className='Browser'>
               <div className='Browser__header'><i /><i /><i /></div>
               <div className='Browser__content'>
-                <img src='/static/features/dashboard.png' alt='' />
+                <img src='/static/img/features/dashboard.png' alt='' />
               </div>
             </div>
           </div>
@@ -125,7 +125,7 @@ const CloudOsSection = ({toggleSignUpModal}) => (
           background-size: 100%;
           position: relative;
           height: 1218px;
-          background-image:url(/static/features/clouds.jpg);
+          background-image:url(/static/img/features/clouds.jpg);
           position: absolute;
           top: 0;
           width: 100%;

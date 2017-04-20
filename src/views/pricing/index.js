@@ -8,7 +8,7 @@ import Scaling from './sections/scaling'
 import PricingTable from './components/pricing-table'
 
 const Pricing = ({toggleSignUpModal}) => (
-  <Page>
+  <Page opengraph>
     <Head>
       <title>Pricing - Syncano</title>
     </Head>

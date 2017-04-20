@@ -3,7 +3,7 @@ import Page from '../components/ui/page'
 import Link from '../components/ui/link'
 
 const Missing = () => (
-  <Page>
+  <Page opengraph>
     <Head>
       <title>Not Found - Syncano</title>
     </Head>

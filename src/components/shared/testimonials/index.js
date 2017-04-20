@@ -29,8 +29,8 @@ const Testimonials = () => (
       <blockquote className='Testimonial'>
         <div className='Testimonial__inner'>
           <Avatar
-            src='/static/testimonials/halvor-lande.png'
-            srcSet='/static/testimonials/halvor-lande.png 1x, /static/testimonials/halvor-lande@2x.png 2x'
+            src='/static/img/testimonials/halvor-lande.png'
+            srcSet='/static/img/testimonials/halvor-lande.png 1x, /static/img/testimonials/halvor-lande@2x.png 2x'
             />
           <p className='Testimonial__content'>
             We chose to work with Syncano to create MVPs faster, and to increase the speed of experimentation with Fintech.
@@ -49,8 +49,8 @@ const Testimonials = () => (
 
         <div className='Testimonial__inner'>
           <Avatar
-            src='/static/testimonials/stale-husby.png'
-            srcSet='/static/testimonials/stale-husby.png 1x, /static/testimonials/stale-husby@2x.png 2x'
+            src='/static/img/testimonials/stale-husby.png'
+            srcSet='/static/img/testimonials/stale-husby.png 1x, /static/img/testimonials/stale-husby@2x.png 2x'
             />
           <p className='Testimonial__content'>
             If Syncano was around at the time we created our MVP, it would have saved us a full year to get into the market.
@@ -68,8 +68,8 @@ const Testimonials = () => (
 
         <div className='Testimonial__inner'>
           <Avatar
-            src='/static/testimonials/ingar-bentzen.png'
-            srcSet='/static/testimonials/ingar-bentzen.png 1x, /static/testimonials/ingar-bentzen@2x.png 2x'
+            src='/static/img/testimonials/ingar-bentzen.png'
+            srcSet='/static/img/testimonials/ingar-bentzen.png 1x, /static/img/testimonials/ingar-bentzen@2x.png 2x'
             />
           <p className='Testimonial__content'>
             Syncano helps the startups in our Fintech and Insurtech accelerator programs to reach product market fit faster.

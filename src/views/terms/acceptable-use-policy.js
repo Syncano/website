@@ -9,7 +9,7 @@ import Grid from '../../components/ui/grid'
 import TermsSidebar from './components/sidebar'
 
 const TermsOfService = () => (
-  <Page>
+  <Page opengraph>
     <Head>
       <title>Terms and Legal - Syncano</title>
     </Head>

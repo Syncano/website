@@ -8,7 +8,7 @@ import CTA from '../../components/shared/cta'
 import Icon from './icon-1.svg'
 
 const Sockets = () => (
-  <Page>
+  <Page opengraph>
     <Head>
       <title>Sockets Registry - Syncano</title>
     </Head>
@@ -34,8 +34,8 @@ const Sockets = () => (
           <div className='Socket__author'>
             <Avatar
               size={32}
-              src='/static/testimonials/stale-husby.png'
-              srcSet='/static/testimonials/stale-husby.png 1x, /static/testimonials/stale-husby@2x.png 2x'
+              src='/static/img/testimonials/stale-husby.png'
+              srcSet='/static/img/testimonials/stale-husby.png 1x, /static/img/testimonials/stale-husby@2x.png 2x'
               />
             <div>maciej.kucharz</div>
           </div>
@@ -54,8 +54,8 @@ const Sockets = () => (
           <div className='Socket__author'>
             <Avatar
               size={32}
-              src='/static/testimonials/stale-husby.png'
-              srcSet='/static/testimonials/stale-husby.png 1x, /static/testimonials/stale-husby@2x.png 2x'
+              src='/static/img/testimonials/stale-husby.png'
+              srcSet='/static/img/testimonials/stale-husby.png 1x, /static/img/testimonials/stale-husby@2x.png 2x'
               />
             <div>ideredpl</div>
           </div>
