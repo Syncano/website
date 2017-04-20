@@ -14,6 +14,7 @@ const Header = ({
   toggleSignIn,
   flags,
   pageStatus,
+  closeNav,
   children
 }) => (
   <div className={`Header t-${theme}`}>
@@ -30,7 +31,7 @@ const Header = ({
 
         <span onClick={toggleNav} className='Header__nav-toggle fa fa-bars' />
 
-        <SiteNav theme={theme} toggleSignIn={toggleSignIn} isOpen={flags.has('site-nav.open')} />
+        <SiteNav theme={theme} toggleSignIn={toggleSignIn} isOpen={flags.has('site-nav.open')} closeNav={closeNav} />
         <UserNav theme={theme} toggleSignUp={toggleSignUp} toggleSignIn={toggleSignIn} pageStatus={pageStatus} />
       </div>
 
@@ -199,6 +200,7 @@ Header.init = ({
     toggleSignUp: () => toggleModal('signup'),
     toggleSignIn: () => toggleModal('signin'),
     toggleNav: () => toggleFlag('site-nav.open'),
+    closeNav: () => flags.delete('site-nav.open'),
     ...props
   }
 }
