@@ -12,15 +12,16 @@ export default class {
   @action.bound async sendInvitation ({email}) {
     const {request} = this.services
 
-    this.stores.messages.delete('slack.invite')
     this.stores.messages.set('slack.invite.pending')
+    this.stores.messages.delete('slack.invite.success')
+    this.stores.messages.delete('slack.invite.errors')
 
     try {
       const res = await request.post(INVITATION_URL, {email})
       const {ok, error} = JSON.parse(res.data.result.stdout)
 
       if (!ok) {
-        this.stores.messages.set('slack.invite', {email: MESSAGES[error]})
+        this.stores.messages.set('slack.invite.errors', {email: MESSAGES[error]})
       } else {
         this.stores.messages.set('slack.invite.success', MESSAGES.invite_sent)
       }

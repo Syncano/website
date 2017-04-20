@@ -37,15 +37,12 @@ const SlackInvite = ({
       <img src='/static/slack-invite/syncano-slack.svg' alt='Syncano plus Slack' />
 
       <form className='Form' onSubmit={sendInvitation}>
-        <InputList errors={messages.get('slack.invite')}>
+        <InputList errors={messages.get('slack.invite.errors')}>
           <div className='Form__group'>
             <Input {...email} full />
             <Button
               type='submit'
-              disabled={
-                messages.has('slack.invite.success') ||
-                messages.has('slack.invite.pending')
-              }
+              disabled={messages.has('slack.invite.pending')}
               secondary
               >Send me an invite</Button>
           </div>
