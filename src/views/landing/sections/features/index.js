@@ -25,8 +25,6 @@ const Features = () => (
           </p>
           <p className='Heading__item'>
             Take the risk out of application development.
-          </p>
-          <p className='Heading__item'>
             As you grow, Syncano grows with you - Syncano’s infrastructure will automatically scale to support your needs.
           </p>
         </div>
@@ -138,7 +136,7 @@ const Features = () => (
         line-height: 30px;
       }
 
-      @media screen and (min-width: 520px) and (max-width: 917px) {
+      @media screen and (min-width: 520px) and (max-width: 979px) {
         .Heading {
           display: flex;
           margin-left: -30px;
@@ -150,7 +148,7 @@ const Features = () => (
         }
       }
 
-      @media screen and (min-width: 918px) {
+      @media screen and (min-width: 980px) {
         .Heading {
           width: 420px;
         }
@@ -264,7 +262,7 @@ const Features = () => (
         }
       }
 
-      @media screen and (min-width: 918px) {
+      @media screen and (min-width: 980px) {
         .Feature-list {
           width: 530px;
           margin-left: auto;
