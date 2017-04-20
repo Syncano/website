@@ -98,7 +98,11 @@ const Pricing = ({toggleSignUpModal}) => (
 Pricing.init = ({
   services: {ui: {toggleModal}}
 }) => ({
-  toggleSignUpModal: () => toggleModal('signup')
+  toggleSignUpModal: () => {
+    window.analytics.track('Guest clicked CTA button')
+
+    toggleModal('signup')
+  }
 })
 
 export default Pricing

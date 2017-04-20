@@ -197,7 +197,10 @@ Header.init = ({
     theme,
     flags,
     pageStatus,
-    toggleSignUp: () => toggleModal('signup'),
+    toggleSignUp: () => {
+      window.analytics.track('Guest clicked CTA button')
+      toggleModal('signup')
+    },
     toggleSignIn: () => toggleModal('signin'),
     toggleNav: () => toggleFlag('site-nav.open'),
     closeNav: () => flags.delete('site-nav.open'),

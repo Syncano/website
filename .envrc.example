@@ -4,3 +4,4 @@ export HELLO_GITHUB=
 export HELLO_REDIRECT_URI=
 export DASHBOARD_URL=
 export API_URL=
+export ANALYTICS_WRITE_KEY=

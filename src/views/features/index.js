@@ -121,7 +121,11 @@ Features.init = ({
   featuresPage,
   setActiveSection,
   scrollToTop: () => window.scroll(0, 0),
-  toggleSignUpModal: () => toggleModal('signup')
+  toggleSignUpModal: () => {
+    window.analytics.track('Guest clicked CTA button')
+
+    toggleModal('signup')
+  }
 })
 
 export default Features

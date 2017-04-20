@@ -1,4 +1,5 @@
 import Head from 'zefir/head'
+import React from 'react'
 
 export default ({children, og}) => (
   <Head>
@@ -16,5 +17,13 @@ export default ({children, og}) => (
         <meta property='og:type' content='website' />
       </div>
     ) : ''}
+
+    {React.Children.map(children, item => {
+      if (item.type === 'title') {
+        window.analytics.page('Website', {
+          Page: item.props.children
+        })
+      }
+    })}
   </Head>
 )

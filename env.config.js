@@ -10,6 +10,7 @@ const envVars = [
   'HELLO_GITHUB',
   'HELLO_REDIRECT_URI',
   'DASHBOARD_URL',
+  'ANALYTICS_WRITE_KEY',
   'API_URL'
 ]
 

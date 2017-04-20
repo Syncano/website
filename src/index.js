@@ -35,6 +35,7 @@ Routes.init = ({
 }) => {
   auth.rebuildSession()
   ui.addHotjar()
+  ui.addSegment(process.env.ANALYTICS_WRITE_KEY)
   ui.fetchServicesStatus()
 }
 

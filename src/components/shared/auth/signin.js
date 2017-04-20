@@ -26,7 +26,10 @@ const SignInForm = ({
       </div>
 
       <div>
-        Don't have an account yet? <a onClick={() => toggleModal('signup')}>Sign up here</a>
+        Don't have an account yet? <a onClick={() => {
+          window.analytics.track('Guest clicked CTA button')
+          toggleModal('signup')
+        }}>Sign up here</a>
       </div>
     </div>
 
