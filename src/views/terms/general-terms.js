@@ -11,7 +11,7 @@ import TermsSidebar from './components/sidebar'
 const PrivacyPolicy = () => (
   <Page opengraph>
     <Head>
-      <title>Privacy Policy - Syncano</title>
+      <title>General Terms - Syncano</title>
     </Head>
 
     <div className='Header'>

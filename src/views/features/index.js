@@ -30,7 +30,7 @@ class Features extends Component {
     return (
       <Page opengraph>
         <Head>
-          <title>Syncano</title>
+          <title>Product - Syncano</title>
         </Head>
 
         <StickyContainer>
