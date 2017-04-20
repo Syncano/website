@@ -92,6 +92,7 @@ export default props => (
       .gh-count:before {
         top: 50%;
         left: -3px;
+        z-index: 1;
         margin-top: -4px;
         border-width: 4px 4px 4px 0;
         border-right-color: #fafafa;
@@ -99,7 +100,7 @@ export default props => (
       .gh-count:after {
         top: 50%;
         left: -4px;
-        z-index: -1;
+        z-index: 0;
         margin-top: -5px;
         border-width: 5px 5px 5px 0;
         border-right-color: #d4d4d4;
