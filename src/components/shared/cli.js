@@ -84,8 +84,8 @@ const CLI = () => (
         padding: 30px 40px 0;
         font-size: 14px;
         line-height: 20px;
-        font-family: Courier;
-        font-weight: bold;
+        font-family: Monaco, Courier;
+        font-weight: 600;
         letter-spacing: .1em;
         color: #b3bece;
       }
