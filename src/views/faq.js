@@ -7,8 +7,8 @@ import Text from '../components/ui/text'
 import Link from '../components/ui/link'
 
 const Landing = () => (
-  <Page opengraph>
-    <Head>
+  <Page>
+    <Head opengraph>
       <title>Syncano</title>
     </Head>
 

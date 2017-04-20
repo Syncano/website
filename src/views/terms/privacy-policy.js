@@ -9,8 +9,8 @@ import Grid from '../../components/ui/grid'
 import TermsSidebar from './components/sidebar'
 
 const PrivacyPolicy = () => (
-  <Page opengraph>
-    <Head>
+  <Page>
+    <Head opengraph>
       <title>Privacy Policy - Syncano</title>
     </Head>
 

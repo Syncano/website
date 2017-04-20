@@ -1,13 +1,13 @@
 import Head from 'zefir/head'
 import React from 'react'
 
-export default ({children, og}) => (
+export default ({children, opengraph}) => (
   <Head>
     <meta name='viewport' content='width=device-width, initial-scale=1' />
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' />
     {children}
 
-    {og === true ? (
+    {opengraph === true ? (
       <div>
         <meta property='og:image' content='https://www.syncano.io/static/img/og-image.png' />
         <meta property='og:title' content='Syncano means accelerated software development' />

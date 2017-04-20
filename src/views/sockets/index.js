@@ -8,8 +8,8 @@ import CTA from '../../components/shared/cta'
 import Icon from './icon-1.svg'
 
 const Sockets = () => (
-  <Page opengraph>
-    <Head>
+  <Page>
+    <Head opengraph>
       <title>Sockets Registry - Syncano</title>
     </Head>
 

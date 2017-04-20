@@ -14,8 +14,8 @@ import FAQ from './sections/faq'
 const Landing = ({
   toggleSignUpModal
 }) => (
-  <Page opengraph>
-    <Head>
+  <Page>
+    <Head opengraph>
       <title>Syncano</title>
     </Head>
 

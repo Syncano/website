@@ -28,8 +28,8 @@ class Features extends Component {
     const {featuresPage, toggleSignUpModal, scrollToTop} = this.props
 
     return (
-      <Page opengraph>
-        <Head>
+      <Page>
+        <Head opengraph>
           <title>Product - Syncano</title>
         </Head>
 
