@@ -19,6 +19,14 @@ export default () => (
         position: relative;
       }
 
+      .AuthForm__message {
+        margin-top: 30px;
+        margin-bottom: -20px;
+        text-align: center;
+        font-size: 14px;
+        color: #25b012;
+      }
+
       .AuthForm__separator::after {
         content: 'or';
         position: absolute;
@@ -41,6 +49,10 @@ export default () => (
         font-size: 14px;
         color: #8d9299;
         margin-top: 30px;
+      }
+
+      .AuthForm__footer > :only-child {
+        margin: auto;
       }
 
       .AuthForm__footer a {

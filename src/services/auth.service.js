@@ -4,6 +4,7 @@ import {action} from 'mobx'
 
 const LOGIN_URL = `${process.env.API_URL}/v1.1/account/auth/`
 const REGISTER_URL = `${process.env.API_URL}/v1.1/account/register/`
+const FORGOT_PASSWORD_URL = `${process.env.API_URL}/v1.1/account/password/reset/`
 
 export default class Auth {
   constructor (props) {
@@ -69,6 +70,27 @@ export default class Auth {
     }, err => {
       messages.set('auth.social', err)
     })
+  }
+
+  @action.bound async resetPassword (credentials) {
+    const {request} = this.services
+    const {messages} = this.stores
+
+    messages.delete('auth.forgot-password.errors')
+    messages.delete('auth.forgot-password.success')
+    messages.set('auth.forgot-password.pending')
+
+    try {
+      await request.post(FORGOT_PASSWORD_URL, credentials)
+
+      messages.set('auth.forgot-password.success', 'Check your inbox.')
+    } catch (err) {
+      const {data} = err.response
+
+      messages.set('auth.forgot-password.errors', data)
+    }
+
+    messages.delete('auth.forgot-password.pending')
   }
 
   redirectToDashboard = (token, signUpMode = false) => {

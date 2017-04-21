@@ -2,6 +2,7 @@ import FontAwesome from './styles/font-awesome'
 import Normalize from './styles/normalize'
 import Modal from '../modal'
 import ScrollManager from '../../ui/scroll-manager'
+import ForgotPasswordForm from '../../shared/auth/forgot-password'
 import SignUpForm from '../../shared/auth/signup'
 import SignInForm from '../../shared/auth/signin'
 
@@ -18,6 +19,14 @@ export default ({children}) => (
       subtitle='Build more and faster by leveraging existing backend code.'
       >
       <SignUpForm />
+    </Modal>
+
+    <Modal
+      name='forgot-password'
+      title='Forgot password'
+      subtitle='Lost your password? No problem.'
+      >
+      <ForgotPasswordForm />
     </Modal>
 
     <Modal
