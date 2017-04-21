@@ -60,7 +60,7 @@ const RegistriesSection = ({toggleSignUpModal}) => (
               <h4 className='Feature__title'>Build your own reusable code in your Private Registry</h4>
               <p>Can’t find what you’re looking for in the Public Registry? Simply create your <a href='https://syncano.github.io/syncano-node-cli/#/building-sockets/basics'>own Syncano Sockets</a> in your very own Private Registry.</p>
               <p>Once you build your own custom made Syncano Sockets, they are automatically placed into your own Private Socket Registry that only you and your team have access to. Want to share your Sockets with the community? Simply use the Automation SDK and remove the private flag, and they’re now in the Public Socket Registry.</p>
-              <p>Don’t have the bandwidth to build your own but need something immediately? Find developers to build Syncano Sockets for you in the Syncano Socket Marketplace.</p>
+              <p>Don’t have the bandwidth to build your own but need something immediately? Find developers to build Syncano Sockets for you in the <a href='/#/features#CommunitySection'>Syncano Socket Marketplace.</a></p>
             </div>
             <div className='Feature Feature--full'>
               <h4 className='Feature__title'>Using the registries</h4>

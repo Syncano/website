@@ -17,13 +17,13 @@ const CommunitySection = () => (
         <div className='Feature Feature--important'>
           <div className='Feature__inner'>
             <h4 className='Feature__title'>Support from Syncano and our community</h4>
-            <p>If you get stuck and need some help, simply reach out to your fellow community members in our <Link to='/slack-invite'>Slack channel</Link> for answers. We also have plenty of <a href='https://syncano.github.io/syncano-node-cli/'>documentation</a> on our web site and our <a href='https://www.syncano.io/blog/'>blog</a>.</p>
+            <p>If you get stuck and need some help, simply reach out to your fellow community members in our <Link to='/slack-invite'>Slack channel</Link> for answers. We also have plenty of <a href='https://syncano.github.io/syncano-node-cli/'>documentation</a> on our web site.</p>
             <p>Come and join the Syncano community and chat with other developers. Share ideas, learn from each other, build apps together, or just ask us anything!</p>
           </div>
         </div>
         <div className='Feature'>
           <h4 className='Feature__title'>Developer Hub for more collaboration (coming soon)</h4>
-          <p><a onClick={() => startIntercom('')}>Our vision</a> is for developers to maximize their time by spending it on solving app specific challenges, and to never have to revisit building and scaling backends again.</p>
+          <p><a href='https://www.syncano.io/blog/if-software-eats-the-world-syncano-feeds-it/'>Our vision</a> is for developers to maximize their time by spending it on solving app specific challenges, and to never have to revisit building and scaling backends again.</p>
           <p>We acknowledge and respect that skilled and autonomous developers exist, but we also believe that great minds are stronger together. That's why we built technology within Syncano to allows users to find other developers to collaborate on projects, in any shape or form.</p>
           <p>Below you will find the current projects that are available in the developer hub.</p>
           <div><a href='https://github.com/Syncano/'>Join our Automation SDK Project <i className='fa fa-arrow-right' /></a></div>
@@ -42,12 +42,12 @@ const CommunitySection = () => (
           <p>We are currently working on making it even easier for you to get the backend functions you need for your projects. If the functionality you need is not already available in the Public Socket Registry, you can use the Syncano Marketplace to specify the Syncano Socket you need, and get help from other users to build it.</p>
         </div>
         <div className='Feature'>
-          <h4 className='Feature__title'><a href='https://github.com/syncano/syncano-dashboard'>Join our ReactJS Dashboard Project</a></h4>
+          <h4 className='Feature__title'>Join our ReactJS Dashboard Project</h4>
           <p>The Syncano Dashboard is one of the largest ReactJS Open Source project on the web. <a href='https://github.com/syncano/syncano-dashboard'>Check it out on GitHub</a>, where you can contribute, or fork it and tailor it to make your own Syncano web dashboard.</p>
           <p><GitHubButton type='stargazers' namespace='syncano' repo='syncano-dashboard' /></p>
         </div>
         <div className='Feature'>
-          <h4 className='Feature__title'><a href='https://github.com/syncano/syncano-node-cli'>Join our Automation SDK Project</a></h4>
+          <h4 className='Feature__title'>Join our Automation SDK Project</h4>
           <p>Our Syncano-CLI is an open source (OSS) project, released under the MIT license. Our framework has been developed to integrate the Automation SDK with any IDE by building plugins for that particular IDE. <a onClick={() => startIntercom('I want to get involved in building Automation SDK! ;)')}>Join our Automation SDK project</a> to influence which IDEs we will prioritize!</p>
         </div>
       </div>

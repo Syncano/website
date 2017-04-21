@@ -53,7 +53,7 @@ const CloudOsSection = ({toggleSignUpModal}) => (
               <h4 className='Feature__title'>Your own web dashboard</h4>
               <p>Use your Syncano Dashboard to manage all things specific to your account, such as billing and usage. You can also access your dashboard for details specific to your instance, such as a detailed list of their various state.</p>
               <p>
-                <a onClick={toggleSignUpModal}>Go to dashboard <i className='fa fa-arrow-right' /></a>
+                <a href='https://dashboard.syncano.io/'>Go to dashboard <i className='fa fa-arrow-right' /></a>
               </p>
             </div>
           </div>
