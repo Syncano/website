@@ -1,5 +1,6 @@
 import {Component} from 'react'
 import {StickyContainer, Sticky} from 'react-sticky'
+import {scrollTo} from './helpers'
 
 import Footer from '../../components/shared/footer'
 import Header from '../../components/shared/header'
@@ -21,6 +22,12 @@ class Features extends Component {
   }
 
   componentDidMount () {
+    const {hash} = this.props
+
+    if (hash) {
+      setTimeout(() => scrollTo(hash.substr(1)), 10)
+    }
+
     window.addEventListener('scroll', this.handleScroll)
   }
 
@@ -112,12 +119,14 @@ class Features extends Component {
 }
 
 Features.init = ({
+  router: {route: {location: {hash}}},
   stores: {featuresPage},
   services: {
     featuresPage: {setActiveSection},
     ui: {toggleModal}
   }
 }) => ({
+  hash,
   featuresPage,
   setActiveSection,
   scrollToTop: () => window.scroll(0, 0),

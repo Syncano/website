@@ -30,7 +30,10 @@ const Features = () => (
         </div>
         <div className='Feature-list'>
           <div className='Feature'>
-            <Link to='/features'>
+            <Link to={{
+              pathname: '/features',
+              hash: '#RegistriesSection'
+            }}>
               <div className='Feature__inner'>
                 <div className='Feature__icon'>
                   <SocketRegistryIcon />
@@ -43,7 +46,10 @@ const Features = () => (
             </Link>
           </div>
           <div className='Feature'>
-            <Link to='/features'>
+            <Link to={{
+              pathname: '/features',
+              hash: '#AutomationSDKSection'
+            }}>
               <div className='Feature__inner'>
                 <div className='Feature__icon'>
                   <AutomationSDKIcon />
@@ -56,7 +62,10 @@ const Features = () => (
             </Link>
           </div>
           <div className='Feature'>
-            <Link to='/features'>
+            <Link to={{
+              pathname: '/features',
+              hash: '#CommunitySection'
+            }}>
               <div className='Feature__inner'>
                 <div className='Feature__icon'>
                   <CommunityIcon />
@@ -69,7 +78,10 @@ const Features = () => (
             </Link>
           </div>
           <div className='Feature'>
-            <Link to='/features'>
+            <Link to={{
+              pathname: '/features',
+              hash: '#CloudOsSection'
+            }}>
               <div className='Feature__inner'>
                 <div className='Feature__icon'>
                   <CloudOSIcon />
