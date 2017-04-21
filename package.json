@@ -18,8 +18,8 @@
     "react-dom": "15.4.2",
     "react-github-button": "^0.1.10",
     "react-hexagon": "1.1.1",
+    "react-rotating-text": "^1.2.0",
     "react-sticky": "^5.0.5",
-    "react-typeout": "^0.6.1",
     "svg-react-loader": "0.3.7",
     "syncano-cli": "beta",
     "zefir": "beta"

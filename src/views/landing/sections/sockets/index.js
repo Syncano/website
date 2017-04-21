@@ -1,4 +1,4 @@
-import TypeOut from 'react-typeout'
+import ReactRotatingText from 'react-rotating-text'
 import Hexagon from '../../../../components/ui/hexagon'
 import Button from '../../../../components/ui/button'
 import IconFacebook from './icon-fb.svg'
@@ -21,9 +21,8 @@ const Sockets = ({
       <div className='Project'>
         <h2 className='Project__headline'>Assemble your backend from Syncano Sockets to build your</h2>
         <p className='Project__title'>
-          <TypeOut
-            typeSpeed={100}
-            words={[
+          <ReactRotatingText
+            items={[
               ' fintech innovation solution',
               ' messenger bot',
               ' mobile backend',
@@ -307,6 +306,22 @@ const Sockets = ({
 
       a:hover {
         text-decoration: underline;
+      }
+
+      :global(.react-rotating-text-cursor) {
+        animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+      }
+
+      @keyframes blinking-cursor {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
       }
 
       /* = CTA

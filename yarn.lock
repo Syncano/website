@@ -1439,7 +1439,7 @@ clap@^1.0.9:
   dependencies:
     chalk "^1.1.3"
 
-classnames@^2.2.5:
+classnames@^2.1.2, classnames@^2.2.5:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
 
@@ -4646,6 +4646,12 @@ react-proxy@^3.0.0-alpha.0:
   dependencies:
     lodash "^4.6.1"
 
+react-rotating-text@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-rotating-text/-/react-rotating-text-1.2.0.tgz#566c90cfb464a076e039a7f4c93a15c15029a413"
+  dependencies:
+    classnames "^2.1.2"
+
 react-router-dom@^4.0.0-beta.6:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-4.0.0.tgz#4fa4418e14b8cfc5bcc0bdea0c4083fb8c2aef10"
@@ -4666,10 +4672,6 @@ react-router@^4.0.0:
 react-sticky@^5.0.5:
   version "5.0.5"
   resolved "https://registry.yarnpkg.com/react-sticky/-/react-sticky-5.0.5.tgz#995871273f8a001fa4d462d3b96f381ee54b2649"
-
-react-typeout@^0.6.1:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/react-typeout/-/react-typeout-0.6.1.tgz#7dea05ad3cd4bd4cbb0786e64eeb6f7a255601b3"
 
 react@15.4.2:
   version "15.4.2"
