@@ -1,3 +1,6 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const {join} = require('path')
+
 module.exports = {
   webpack: (config) => {
     config.devtool = false
@@ -22,6 +25,12 @@ module.exports = {
         ]
       }
     )
+
+    for (const plugin of config.plugins) {
+      if (plugin instanceof HtmlWebpackPlugin) {
+        plugin.options.template = join(__dirname, 'src', 'index.html')
+      }
+    }
 
     return config
   }

@@ -9,7 +9,7 @@ import Icon from './icon-1.svg'
 
 const Sockets = () => (
   <Page>
-    <Head opengraph>
+    <Head>
       <title>Sockets Registry - Syncano</title>
     </Head>
 

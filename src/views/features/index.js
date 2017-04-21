@@ -29,7 +29,7 @@ class Features extends Component {
 
     return (
       <Page>
-        <Head opengraph>
+        <Head>
           <title>Product - Syncano</title>
         </Head>
 

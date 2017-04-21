@@ -8,7 +8,7 @@ import Link from '../components/ui/link'
 
 const Landing = () => (
   <Page>
-    <Head opengraph>
+    <Head>
       <title>Syncano</title>
     </Head>
 

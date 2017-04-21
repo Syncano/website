@@ -9,7 +9,7 @@ import TermsSidebar from './components/sidebar'
 
 const PrivacyPolicy = () => (
   <Page>
-    <Head opengraph>
+    <Head>
       <title>Syncano Performance Insights - Syncano</title>
     </Head>
 

@@ -9,7 +9,7 @@ import PricingTable from './components/pricing-table'
 
 const Pricing = ({toggleSignUpModal}) => (
   <Page>
-    <Head opengraph>
+    <Head>
       <title>Pricing - Syncano</title>
     </Head>
 

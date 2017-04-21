@@ -10,7 +10,7 @@ import TermsSidebar from './components/sidebar'
 
 const TermsOfService = () => (
   <Page>
-    <Head opengraph>
+    <Head>
       <title>Acceptable Use Policy - Syncano</title>
     </Head>
 

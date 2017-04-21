@@ -15,7 +15,7 @@ const Landing = ({
   toggleSignUpModal
 }) => (
   <Page>
-    <Head opengraph>
+    <Head>
       <title>Syncano</title>
     </Head>
 
