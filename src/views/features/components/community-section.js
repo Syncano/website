@@ -42,7 +42,7 @@ const CommunitySection = () => (
           <p>We are currently working on making it even easier for you to get the backend functions you need for your projects. If the functionality you need is not already available in the Public Socket Registry, you can use the Syncano Marketplace to specify the Syncano Socket you need, and get help from other users to build it.</p>
         </div>
         <div className='Feature'>
-          <h4 className='Feature__title'><Link to='https://github.com/syncano/syncano-dashboard'>Join our ReactJS Dashboard Project</Link></h4>
+          <h4 className='Feature__title'><a href='https://github.com/syncano/syncano-dashboard'>Join our ReactJS Dashboard Project</a></h4>
           <p>The Syncano Dashboard is one of the largest ReactJS Open Source project on the web. <a href='https://github.com/syncano/syncano-dashboard'>Check it out on GitHub</a>, where you can contribute, or fork it and tailor it to make your own Syncano web dashboard.</p>
           <p><GitHubButton type='stargazers' namespace='syncano' repo='syncano-dashboard' /></p>
         </div>
