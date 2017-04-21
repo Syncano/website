@@ -91,7 +91,7 @@ const Features = () => (
       .Section {
         margin-top: 30px;
         margin-bottom: 30px;
-        max-width: 1130px;
+        max-width: 1080px;
         position: relative;
         z-index: 1;
       }
@@ -133,7 +133,7 @@ const Features = () => (
         }
       }
 
-      @media screen and (min-width: 960px) {
+      @media screen and (min-width: 1080px) {
         .Section {
           margin-top: 140px;
           margin-bottom: 140px;
@@ -148,7 +148,7 @@ const Features = () => (
         line-height: 30px;
       }
 
-      @media screen and (min-width: 520px) and (max-width: 979px) {
+      @media screen and (min-width: 520px) and (max-width: 1079px) {
         .Heading {
           display: flex;
           margin-left: -30px;
@@ -160,7 +160,7 @@ const Features = () => (
         }
       }
 
-      @media screen and (min-width: 980px) {
+      @media screen and (min-width: 1080px) {
         .Heading {
           width: 420px;
         }
@@ -274,14 +274,14 @@ const Features = () => (
         }
       }
 
-      @media screen and (min-width: 980px) {
+      @media screen and (min-width: 1080px) {
         .Feature-list {
-          width: 670px;
+          width: 630px;
           margin-left: auto;
         }
 
         .Feature {
-          max-width: 320px;
+          max-width: 300px;
           float: none;
         }
       }
