@@ -32,6 +32,8 @@ module.exports = {
       }
     }
 
+    config.output.filename = '[name].[hash]'
+
     return config
   }
 }
