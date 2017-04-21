@@ -17,7 +17,7 @@ const CloudOsSection = ({toggleSignUpModal}) => (
             <div className='Feature Feature--important Feature--full'>
               <h4 className='Feature__title'>Leverage the Core APIs for deeper integration</h4>
               <p>All the features of the Syncano Cloud OS can be managed through the Syncano Core API, enabling you to build powerful Syncano Sockets with deep integrations to the Syncano Cloud OS.</p>
-              <p>The Core API’s exposes the underlying Cloud OS to power your own proprietary backend. This makes Syncano a safe bet, since you will never ever be stuck! Syncano is among the <a href='http://thenewstack.io/tns-guide-serverless-technologies-best-frameworks-platforms-tools/'>most mature in the serverless space</a>. We are opensource advocates. <a href=''>Reach out to learn how you can contribute</a>.</p>
+              <p>The Core API’s exposes the underlying Cloud OS to power your own proprietary backend. This makes Syncano a safe bet, since you will never ever be stuck! Syncano is among the <a href='http://thenewstack.io/tns-guide-serverless-technologies-best-frameworks-platforms-tools/'>most mature in the serverless space</a>. We are opensource advocates. <a onClick={() => window.Intercom('showNewMessage')}>Reach out to learn how you can contribute</a>.</p>
             </div>
           </div>
         </div>
@@ -140,7 +140,6 @@ const CloudOsSection = ({toggleSignUpModal}) => (
 
         .Section__column--footer {
           display: flex;
-          align-items: flex-end;
           width: auto;
         }
 

@@ -38,11 +38,11 @@ The technology accelerates the software development process by greatly reducing 
             </div>
             <div className='Feature'>
               <h4 className='Feature__title'>Building more IDE plugins</h4>
-              <p>We want to bring the Automation SDK into your IDE on more platforms and technologies, and you’re our best advocate. <a href=''>Join our Automation SDK project</a> to influence what we prioritize, or to simply learn more about our roadmap.</p>
+              <p>We want to bring the Automation SDK into your IDE on more platforms and technologies, and you’re our best advocate. <a onClick={() => window.Intercom('showNewMessage')}>Join our Automation SDK project</a> to influence what we prioritize, or to simply learn more about our roadmap.</p>
             </div>
             <div className='Feature'>
               <h4 className='Feature__title'>Wouldn't AI powered backends be great?</h4>
-              <p>We’re just getting started on making the development process automated and autonomous, and we’re eager to leverage Artificial Intelligence to make it even more efficient. <a href=''>Join our AI and Machine Learning project</a> to learn more about our software development roadmap.</p>
+              <p>We’re just getting started on making the development process automated and autonomous, and we’re eager to leverage Artificial Intelligence to make it even more efficient. <a onClick={() => window.Intercom('showNewMessage')}>Join our AI and Machine Learning project</a> to learn more about our software development roadmap.</p>
             </div>
           </div>
         </div>
