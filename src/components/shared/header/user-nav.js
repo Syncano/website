@@ -16,7 +16,9 @@ const UserNav = ({theme, toggleSignUp, toggleSignIn, pageStatus}) => (
 
     <MatchAsMember component={() => (
       <Nav>
-        <a className='User-nav__item User-nav__item--status' href='http://status.syncano.com/'>All systems operational</a>
+        {pageStatus.indicator && (
+          <a className={`User-nav__item User-nav__item--status User-nav__item--status-${pageStatus.indicator}`} href='http://status.syncano.com/'>{pageStatus.description}</a>
+        )}
         <a className='User-nav__item' href='https://dashboard.syncano.io/'>Go to dashboard</a>
       </Nav>
     )} />
