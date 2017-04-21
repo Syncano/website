@@ -15,6 +15,7 @@ const Header = ({
   flags,
   pageStatus,
   closeNav,
+  before,
   children
 }) => (
   <div className={`Header t-${theme}`}>
@@ -37,6 +38,8 @@ const Header = ({
 
       {title && (
         <div className='PageHead'>
+          {before}
+
           <h1 className='PageHead__title'>{title}</h1>
           <h2 className='PageHead__subtitle'>{subtitle}</h2>
         </div>

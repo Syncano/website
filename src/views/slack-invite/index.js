@@ -28,14 +28,17 @@ const SlackInvite = ({
 
     <div className='Header'>
       <Header
+        before={(
+          <div className='Header__img'>
+            <img src='/static/img/slack-invite/syncano-slack.svg' alt='Syncano plus Slack' />
+          </div>
+        )}
         title='Join the Community'
         subtitle='Join the Syncano community and chat with other developers. Share ideas, learn, build together or ask us anything!'
         />
     </div>
 
     <div className='Section u-wrapper'>
-      <img src='/static/img/slack-invite/syncano-slack.svg' alt='Syncano plus Slack' />
-
       <form className='Form' onSubmit={sendInvitation}>
         <InputList errors={messages.get('slack.invite.errors')}>
           <div className='Form__group'>
@@ -79,6 +82,11 @@ const SlackInvite = ({
         max-width: 700px;
         margin-left: auto;
         margin-right: auto;
+      }
+
+      .Header__img {
+        text-align: center;
+        margin-bottom: 30px;
       }
 
       .Form {
