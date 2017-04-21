@@ -138,7 +138,7 @@ const Sockets = ({
         }
       }
 
-      @media screen and (min-width: 918px) {
+      @media screen and (min-width: 1100px) {
         .Section {
           margin-top: -213px;
           padding-top: 140px;

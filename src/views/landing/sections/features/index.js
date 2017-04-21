@@ -160,7 +160,7 @@ const Features = () => (
         line-height: 30px;
       }
 
-      @media screen and (min-width: 520px) and (max-width: 1079px) {
+      @media screen and (min-width: 520px) and (max-width: 1099px) {
         .Heading {
           display: flex;
           margin-left: -30px;
@@ -172,7 +172,7 @@ const Features = () => (
         }
       }
 
-      @media screen and (min-width: 1080px) {
+      @media screen and (min-width: 1100px) {
         .Heading {
           width: 420px;
         }
@@ -286,7 +286,7 @@ const Features = () => (
         }
       }
 
-      @media screen and (min-width: 1080px) {
+      @media screen and (min-width: 1100px) {
         .Feature-list {
           width: 630px;
           margin-left: auto;
