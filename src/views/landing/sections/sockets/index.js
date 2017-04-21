@@ -19,12 +19,12 @@ const Sockets = ({
   <div className='Section'>
     <div className='Section__content u-wrapper u-ta-c'>
       <div className='Project'>
-        <h2 className='Project__headline'>Assemble your backend from Syncano Sockets to build</h2>
+        <h2 className='Project__headline'>Assemble your backend from Syncano Sockets to build your</h2>
         <p className='Project__title'>
-          Your<TypeOut
+          <TypeOut
             typeSpeed={100}
             words={[
-              ' Fintech innovation solution',
+              ' fintech innovation solution',
               ' messenger bot',
               ' mobile backend',
               ' custom CMS',

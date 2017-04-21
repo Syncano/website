@@ -12,15 +12,15 @@ const AutomationSDKSection = () => (
         <div className='Section__cli-about'>
           <h3>The Syncano CLI</h3>
           <p>Manage the entire process of building and deploying from a simple, powerful and local tool on your computer. With the Syncano Command Line Interface (CLI), you never have to leave your local working environment, and the synchronization and deployment process dynamically occurs in the background. Save time and build more, faster.</p>
-          <p><a href='https://syncano.github.io/syncano-node-cli/'>Syncano CLI docs <i className='fa fa-arrow-right' /></a></p>
+          <p><a href='https://syncano.github.io/syncano-node-cli/'>Syncano CLI in the docs <i className='fa fa-arrow-right' /></a></p>
           <div><a href='https://github.com/Syncano/syncano-node-cli/'>Join CLI project on GitHub <i className='fa fa-arrow-right' /></a></div>
           <div><a href='https://www.npmjs.com/package/syncano-cli'>Download CLI now <i className='fa fa-arrow-right' /></a></div>
         </div>
 
         <div className='Section__sdk'>
           <h2 className='u-title'>Syncano Automation SDK</h2>
-          <p className='u-subtitle'>Syncano's serverless platform and your development environment (through SDKs) dynamically  assembles and deploys your app’s backend to the cloud, all while you build your app.</p>
-          <p>The technology accelerates the software development process by greatly reducing time spent deploying DevOps and managing your backend through a leaner and more dynamic building phase. </p>
+          <p className='u-subtitle'>Syncano's serverless platform and your development environment (through SDKs) dynamically  assembles and deploys your app’s backend to the cloud, all while you build your app.
+The technology accelerates the software development process by greatly reducing time spent deploying DevOps and managing your backend through a leaner and more dynamic building phase.</p>
           <p>
             <a href='https://syncano.github.io/syncano-node-cli/#/'>
               Automation SDK docs <i className='fa fa-arrow-right' />
@@ -34,7 +34,7 @@ const AutomationSDKSection = () => (
               <h4 className='Feature__title'>Assembling your Syncano backend instance</h4>
               <p>Assemble functions called Syncano Sockets to customize your backend through the Automation SDK. This process happens locally, on your computer, and the Syncano Automation SDK dynamically and continuously synchronises and deploys your changes to the <a onClick={() => {
                 window.scroll(0, document.getElementById('CloudOsSection').offsetTop)
-              }}>Syncano Cloud OS</a>. Your customized backend lives inside your private and unique instance of the Syncano Platform, operationalized by the Syncano Cloud OS. </p>
+              }}>Syncano Cloud OS</a>. Your customized backend lives inside your private and unique instance of the Syncano Platform, runs on the Syncano Cloud OS.</p>
             </div>
             <div className='Feature'>
               <h4 className='Feature__title'>Building more IDE plugins</h4>
@@ -42,7 +42,7 @@ const AutomationSDKSection = () => (
             </div>
             <div className='Feature'>
               <h4 className='Feature__title'>Wouldn't AI powered backends be great?</h4>
-              <p>We’re just getting started on making the development process automated and autonomous, and we’re eager to leverage Artificial Intelligence to make it even more efficient. <a href=''>Join our AI and Machine Learning project</a> to learn more about our software development roadmap. </p>
+              <p>We’re just getting started on making the development process automated and autonomous, and we’re eager to leverage Artificial Intelligence to make it even more efficient. <a href=''>Join our AI and Machine Learning project</a> to learn more about our software development roadmap.</p>
             </div>
           </div>
         </div>
