@@ -120,7 +120,7 @@ const Modal = ({
           padding: 50px;
           font-size: 18px;
           line-height: 24px;
-          max-width: 490px;
+          max-width: 770px;
           flex: 1;
         }
 
