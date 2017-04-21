@@ -47,6 +47,7 @@ export default () => (
         flex-wrap: wrap;
         justify-content: space-between;
         font-size: 14px;
+        line-height: 20px;
         color: #8d9299;
         margin-top: 30px;
       }

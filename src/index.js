@@ -11,6 +11,8 @@ import AccepatbleUsePolicyView from './views/terms/acceptable-use-policy'
 import SyncanoPerformanceInsightsView from './views/terms/syncano-performance-insights'
 import GeneralTermsView from './views/terms/general-terms'
 import SocketsView from './views/sockets'
+import SignUpView from './views/signup'
+import SignInView from './views/signin'
 import MissingView from './views/missing'
 
 const Routes = () => (
@@ -20,6 +22,8 @@ const Routes = () => (
     <Match path='/pricing' exact component={PricingView} />
     <Match path='/faq' exact component={FaqView} />
     <Match path='/sockets' exact component={SocketsView} />
+    <Match path='/signup' exact component={SignUpView} />
+    <Match path='/signin' exact component={SignInView} />
     <Match path='/slack-invite' exact component={SlackInviteView} />
     <Match path='/terms-of-service' exact component={ToSView} />
     <Match path='/privacy-policy' exact component={PrivacyPolicyView} />
