@@ -104,6 +104,7 @@ export default () => (
 
         .AuthForm__column--form {
           flex: 1;
+          min-width: 360px;
         }
 
         .AuthForm__footer {

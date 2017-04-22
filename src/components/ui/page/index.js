@@ -17,6 +17,7 @@ export default ({children}) => (
       name='signup'
       title='Sign up and get started'
       subtitle='Build more and faster by leveraging existing backend code.'
+      size='small'
       >
       <SignUpForm />
     </Modal>

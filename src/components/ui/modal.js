@@ -1,11 +1,11 @@
 import {connect} from 'zefir/utils'
 
 const Modal = ({
-  title, subtitle, children, name, ui, toggle
+  title, subtitle, children, name, ui, toggle, size
 }) => (
   <div className={`Modal ${ui.modal === name ? 'is-visible' : ''}`}>
     <div className='Modal__bg' onClick={toggle} />
-    <div className='Modal__content'>
+    <div className={`Modal__content ${size === 'small' ? 'small' : ''}`}>
       <span className='Modal__close' onClick={toggle} />
       {title && (
         <h3 className='Modal__title'>{title}</h3>
@@ -68,6 +68,10 @@ const Modal = ({
         transition-property: transform;
       }
 
+      .small {
+        max-width: 490px;
+      }
+
       .is-visible .Modal__content {
         transform: none;
       }
@@ -122,6 +126,10 @@ const Modal = ({
           line-height: 24px;
           max-width: 770px;
           flex: 1;
+        }
+
+        .small {
+          max-width: 490px;
         }
 
         .Modal__title {

@@ -50,7 +50,7 @@ const CLI = () => (
         border-radius: 6px;
         background-color: #0b0f15;
         box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.35);
-        min-height: 100%;
+        min-height: 398px;
         width: 100%;
         position: relative;
       }
