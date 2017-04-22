@@ -1,5 +1,6 @@
 const ENV = {
   'syncano-ascend': 'ASCEND',
+  'syncano-ascend-master': 'PRODUCTION',
   devel: 'STAGING',
   master: 'PRODUCTION'
 }[process.env.CIRCLE_BRANCH || 'devel']
