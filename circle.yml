@@ -24,12 +24,12 @@ deployment:
   staging:
     branch: syncano-ascend-master
     commands:
-      - echo "deploy"
+      - syncano-cli deploy
       - syncano-cli hosting sync production
   staging:
     branch: syncano-ascend
     commands:
-      - echo "deploy"
+      - syncano-cli deploy
       - syncano-cli hosting sync staging
 
 experimental:
