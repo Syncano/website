@@ -21,7 +21,7 @@ test:
     - yarn run build
 
 deployment:
-  staging:
+  production:
     branch: syncano-ascend-master
     commands:
       - syncano-cli deploy
