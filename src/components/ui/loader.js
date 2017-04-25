@@ -1,10 +1,9 @@
 const Loader = () => (
-  <div>
-    <div className='spinner' />
-
+  <span>
     <style jsx>{`
-      .spinner {
-        margin: 50px;
+      span {
+        display: inline-block;
+        vertical-align: middle;
         height: 28px;
         width: 28px;
         animation: rotate 0.8s infinite linear;
@@ -18,7 +17,7 @@ const Loader = () => (
         100%  { transform: rotate(360deg); }
       }
     `}</style>
-  </div>
+  </span>
 )
 
 export default Loader

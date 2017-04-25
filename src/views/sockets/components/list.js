@@ -12,7 +12,10 @@ const List = ({
     <ul className='Socket-list'>
       {pending.has('sockets.fetch') ? (
         <div className='Socket-list__loader'>
-          <Loader />
+          <div>
+            <Loader />
+            <div className='Socket-list__loader-text'>Loading sockets&hellip;</div>
+          </div>
         </div>
       )
       : sortedItems.length === 0 ? (
@@ -45,6 +48,12 @@ const List = ({
         display: flex;
         justify-content: center;
         margin-top: 60px;
+      }
+
+      .Socket-list__loader-text {
+        color: #7a7f87;
+        margin-top: 15px;
+        font-size: 14px;
       }
     `}</style>
   </div>

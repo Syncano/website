@@ -100,13 +100,13 @@ const UserNav = ({theme, toggleSignUp, toggleSignIn, pageStatus}) => (
         background-color: #b8e986;
       }
 
-      @media screen and (max-width: 989px) {
+      @media screen and (max-width: 1061px) {
         .User-nav {
           display: none;
         }
       }
 
-      @media screen and (min-width: 990px) {
+      @media screen and (min-width: 1062px) {
         .User-nav :global(li) :global(+) :global(li) {
           margin-left: 20px;
         }

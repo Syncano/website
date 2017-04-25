@@ -1,6 +1,7 @@
 import ReactRotatingText from 'react-rotating-text'
 import Hexagon from '../../../../components/ui/hexagon'
 import Button from '../../../../components/ui/button'
+import Link from '../../../../components/ui/link'
 import IconFacebook from './icon-fb.svg'
 import IconDB from './icon-db.svg'
 import IconGoogleAnalytics from './icon-google-analytics.svg'
@@ -97,8 +98,8 @@ const Sockets = ({
         </div>
       </div>
 
-      {/* <div className='Separator' data-after='or' /> */}
-      {/* <a href=''>Browse all 150 sockets</a> */}
+      <div className='Separator' data-after='or' />
+      <Link to='/sockets'>Browse all 150 sockets</Link>
 
       <div className='HiddenAtMd'>
         <Hexagon width={32} fill='#05a5b4' position={{top: '-15px', left: '10%'}} />
@@ -296,7 +297,7 @@ const Sockets = ({
 
       /* = OTHER
        * ==================================================================== */
-      a {
+      div :global(a) {
         color: #fff;
         text-decoration: none;
         font-weight: 500;
@@ -304,7 +305,7 @@ const Sockets = ({
         z-index: 1;
       }
 
-      a:hover {
+      div :global(a:hover) {
         text-decoration: underline;
       }
 

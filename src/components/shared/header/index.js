@@ -150,7 +150,7 @@ const Header = ({
         line-height: 23px;
       }
 
-      @media screen and (min-width: 591px) {
+      @media screen and (min-width: 705px) {
         .Header__nav-toggle {
           display: none;
         }
