@@ -1,8 +1,9 @@
-const Input = ({full, ...props}) => (
+const Input = ({full, white, ...props}) => (
   <div
     className={`
       Input
       ${full ? 'Input--full' : ''}
+      ${white ? 'Input--white' : ''}
     `}>
     <input {...props} />
     <style jsx>{`
@@ -28,6 +29,10 @@ const Input = ({full, ...props}) => (
 
       .Input--full {
         width: 100%;
+      }
+
+      .Input--white input {
+        background-color: #fff;
       }
     `}</style>
   </div>

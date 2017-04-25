@@ -4,7 +4,7 @@ const STATUS_PAGE_URL = 'https://6l1kzwgr7t06.statuspage.io/api/v2/status.json'
 const STATUS_PAGE_TIMEOUT = 5000
 
 export default class UI {
-  @action toggleFlag = (flag, value) => {
+  @action.bound toggleFlag (flag, value) {
     if (this.store.flags.has(flag)) {
       this.store.flags.delete(flag)
     } else {
@@ -12,7 +12,7 @@ export default class UI {
     }
   }
 
-  @action toggleModal = name => {
+  @action.bound toggleModal (name) {
     this.store.modal = this.store.modal === name ? null : name
   }
 
@@ -46,6 +46,17 @@ export default class UI {
   }
 
   addSegment (writeKey) {
+    const isLocal = window.location.hostname === 'localhost'
+
+    if (isLocal) {
+      window.analytics = {
+        page: () => {},
+        track: () => {}
+      }
+
+      return
+    }
+
     if (!writeKey) {
       return
     }

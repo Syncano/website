@@ -1,24 +1,32 @@
-const Button = ({src, srcSet, size}) => (
-  <div>
-    <img
-      width={size}
-      height={size}
-      src={src}
-      srcSet={srcSet}
-      rel='presentation'
-      className='Avatar'
-      />
+import md5 from 'md5'
 
-    <style jsx>{`
-      div {
-        display: inline-block;
-      }
+const GRAVATAR_URL = 'https://gravatar.com/avatar/'
 
-      .Avatar {
-        border-radius: 50%;
-      }
-    `}</style>
-  </div>
-)
+const Avatar = ({src, srcSet, size, email}) => {
+  const gravatar = src || `${GRAVATAR_URL}${md5(email)}?s=${size}&d=mm`
 
-export default Button
+  return (
+    <div>
+      <img
+        width={size}
+        height={size}
+        src={src || gravatar}
+        srcSet={srcSet}
+        rel='presentation'
+        className='Avatar'
+        />
+
+      <style jsx>{`
+        div {
+          display: inline-block;
+        }
+
+        .Avatar {
+          border-radius: 50%;
+        }
+      `}</style>
+    </div>
+  )
+}
+
+export default Avatar
