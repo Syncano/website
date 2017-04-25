@@ -1,3 +1,4 @@
+// import DevTools from 'mobx-react-devtools'
 import FontAwesome from './styles/font-awesome'
 import Normalize from './styles/normalize'
 import Modal from '../modal'
@@ -9,6 +10,7 @@ import SignInForm from '../../shared/auth/signin'
 export default ({children}) => (
   <div>
     {children}
+    {/* <DevTools /> */}
     <ScrollManager />
     <FontAwesome />
     <Normalize />
