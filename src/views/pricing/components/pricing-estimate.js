@@ -149,13 +149,13 @@ PricingEstimate.form = {
       min: CALLS_MIN,
       step: 1000000,
       max: CALLS_MAX,
-      value: CALLS_MIN * 10
+      value: CALLS_MIN
     },
     seconds: {
       min: SECONDS_MIN,
       step: 10000,
       max: SECONDS_MAX,
-      value: SECONDS_MIN * 5
+      value: SECONDS_MIN
     }
   }
 }
