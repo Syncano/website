@@ -1,8 +1,8 @@
-<svg width="36" height="36" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<svg width="36" height="36" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <title>logo_parse</title>
 <desc>Created using Figma</desc>
-<g id="Canvas" transform="translate(-922 -3303)" figma:type="canvas">
-<g id="logo_parse" figma:type="rectangle">
+<g id="Canvas" transform="translate(-922 -3303)">
+<g id="logo_parse">
 <use xlink:href="#path-parse_fill" fill="url(#pattern-parse)" transform="translate(922 3302)"/>
 </g>
 </g>

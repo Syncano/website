@@ -1,6 +1,6 @@
-<svg width="41" height="36" viewBox="0 0 41 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
-<g id="Canvas" transform="translate(-4520 -6246)" figma:type="canvas">
-<g id="icn" opacity="0.5" figma:type="text">
+<svg width="41" height="36" viewBox="0 0 41 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Canvas" transform="translate(-4520 -6246)">
+<g id="icn" opacity="0.5">
 <use xlink:href="#path-comment_fill" transform="translate(4520 6244)"/>
 </g>
 </g>

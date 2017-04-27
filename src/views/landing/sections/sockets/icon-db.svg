@@ -1,8 +1,8 @@
-<svg width="38" height="40" viewBox="0 0 38 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<svg width="38" height="40" viewBox="0 0 38 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <title>&#238;&#175;&#133;</title>
 <desc>Created using Figma</desc>
-<g id="Canvas" transform="translate(-482 -3300)" figma:type="canvas">
-<g id="&#238;&#175;&#133;" figma:type="text">
+<g id="Canvas" transform="translate(-482 -3300)">
+<g id="&#238;&#175;&#133;">
 <use xlink:href="#path-db_fill" transform="translate(483 3302)" fill="#FFFFFF"/>
 <use xlink:href="#path-db_stroke" transform="translate(483 3302)" fill="#FFFFFF"/>
 </g>

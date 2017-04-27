@@ -1,6 +1,6 @@
 <svg width="36" height="33" viewBox="0 0 36 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="Canvas" transform="translate(-9509 -360)" figma:type="canvas">
-<g id="icn_sdk" figma:type="text">
+<g id="Canvas" transform="translate(-9509 -360)">
+<g id="icn_sdk">
 <use xlink:href="#path-robot_fill" transform="translate(9494 358)" fill="#009BAC"/>
 </g>
 </g>

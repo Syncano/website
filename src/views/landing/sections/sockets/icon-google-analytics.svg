@@ -1,15 +1,15 @@
-<svg width="41" height="41" viewBox="0 0 41 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<svg width="41" height="41" viewBox="0 0 41 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <title>Icon/Google Analytics</title>
 <desc>Created using Figma</desc>
-<g id="Canvas" transform="translate(-589 -3362)" figma:type="canvas">
-<g id="Icon/Google Analytics" figma:type="instance">
-<g id="bar-1" figma:type="vector">
+<g id="Canvas" transform="translate(-589 -3362)">
+<g id="Icon/Google Analytics">
+<g id="bar-1">
 <use xlink:href="#path-google-analytics-0_fill" transform="translate(589 3389)" fill="#FFFFFF"/>
 </g>
-<g id="bar-2" opacity="0.5" figma:type="vector">
+<g id="bar-2" opacity="0.5">
 <use xlink:href="#path-google-analytics-1_fill" transform="translate(602 3375)" fill="#FFFFFF"/>
 </g>
-<g id="bar-3" opacity="0.25" figma:type="vector">
+<g id="bar-3" opacity="0.25">
 <use xlink:href="#path-google-analytics-2_fill" transform="translate(616 3362)" fill="#FFFFFF"/>
 </g>
 </g>

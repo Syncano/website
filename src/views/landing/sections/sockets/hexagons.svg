@@ -1,66 +1,66 @@
-<svg width="1290" height="709" viewBox="0 0 1290 709" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<svg width="1290" height="709" viewBox="0 0 1290 709" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <title>Polygons_background</title>
 <desc>Created using Figma</desc>
-<g id="Canvas" transform="translate(-55 -3020)" figma:type="canvas">
-<g id="Polygons_background" figma:type="frame">
-<g id="Polygon Copy 48" opacity="0.05" figma:type="vector">
+<g id="Canvas" transform="translate(-55 -3020)">
+<g id="Polygons_background">
+<g id="Polygon Copy 48" opacity="0.05">
 <use xlink:href="#path0_fill" transform="matrix(0.866025 -0.5 0.5 0.866025 447 3540.57)" fill="#FFFFFF"/>
 </g>
-<g id="Polygon Copy 84" opacity="0.05" figma:type="vector">
+<g id="Polygon Copy 84" opacity="0.05">
 <use xlink:href="#path0_fill" transform="matrix(0.866025 -0.5 0.5 0.866025 874 3540.57)" fill="#FFFFFF"/>
 </g>
-<g id="Polygon Copy 91" opacity="0.05" figma:type="vector">
+<g id="Polygon Copy 91" opacity="0.05">
 <use xlink:href="#path0_fill" transform="matrix(0.866025 -0.5 0.5 0.866025 43 3470.57)" fill="#FFFFFF"/>
 </g>
-<g id="Polygon Copy 85" opacity="0.1" figma:type="vector">
+<g id="Polygon Copy 85" opacity="0.1">
 <use xlink:href="#path1_fill" transform="matrix(0.866025 -0.5 0.5 0.866025 774 3267.92)" fill="#FFFFFF"/>
 </g>
-<g id="Polygon Copy 86" opacity="0.05" figma:type="vector">
+<g id="Polygon Copy 86" opacity="0.05">
 <use xlink:href="#path1_fill" transform="matrix(0.866025 -0.5 0.5 0.866025 376 3264.92)" fill="#FFFFFF"/>
 </g>
-<g id="Polygon Copy 97" opacity="0.05" figma:type="vector">
+<g id="Polygon Copy 97" opacity="0.05">
 <use xlink:href="#path1_fill" transform="matrix(0.866025 -0.5 0.5 0.866025 135 3045.92)" fill="#FFFFFF"/>
 </g>
-<g id="Polygon Copy 98" opacity="0.05" figma:type="vector">
+<g id="Polygon Copy 98" opacity="0.05">
 <use xlink:href="#path1_fill" transform="matrix(0.866025 -0.5 0.5 0.866025 1119 3203.92)" fill="#FFFFFF"/>
 </g>
-<g id="Polygon Copy 99" opacity="0.05" figma:type="vector">
+<g id="Polygon Copy 99" opacity="0.05">
 <use xlink:href="#path2_fill" transform="matrix(0.866025 -0.5 0.5 0.866025 1230.34 3664.57)" fill="#FFFFFF"/>
 </g>
-<g id="Polygon Copy 87" opacity="0.05" figma:type="vector">
+<g id="Polygon Copy 87" opacity="0.05">
 <use xlink:href="#path1_fill" transform="matrix(0.866025 -0.5 0.5 0.866025 584 3599.92)" fill="#FFFFFF"/>
 </g>
-<g id="Polygon Copy 88" opacity="0.05" figma:type="vector">
+<g id="Polygon Copy 88" opacity="0.05">
 <use xlink:href="#path3_fill" transform="matrix(0.866025 -0.5 0.5 0.866025 981 3249.93)" fill="#FFFFFF"/>
 </g>
-<g id="Polygon Copy 100" opacity="0.05" figma:type="vector">
+<g id="Polygon Copy 100" opacity="0.05">
 <use xlink:href="#path4_fill" transform="matrix(0.866025 -0.5 0.5 0.866025 258 3714.5)" fill="#FFFFFF"/>
 </g>
-<g id="Polygon Copy 101" opacity="0.1" figma:type="vector">
+<g id="Polygon Copy 101" opacity="0.1">
 <use xlink:href="#path4_fill" transform="matrix(0.866025 -0.5 0.5 0.866025 1078 3513.5)" fill="#FFFFFF"/>
 </g>
-<g id="Polygon Copy 102" opacity="0.15" figma:type="vector">
+<g id="Polygon Copy 102" opacity="0.15">
 <use xlink:href="#path4_fill" transform="matrix(0.866025 -0.5 0.5 0.866025 1162 3025.51)" fill="#FFFFFF"/>
 </g>
-<g id="Polygon Copy 93" opacity="0.05" figma:type="vector">
+<g id="Polygon Copy 93" opacity="0.05">
 <use xlink:href="#path3_fill" transform="matrix(0.866025 -0.5 0.5 0.866025 625 3236.93)" fill="#FFFFFF"/>
 </g>
-<g id="Polygon Copy 94" opacity="0.05" figma:type="vector">
+<g id="Polygon Copy 94" opacity="0.05">
 <use xlink:href="#path3_fill" transform="matrix(0.866025 -0.5 0.5 0.866025 780 3591.93)" fill="#FFFFFF"/>
 </g>
-<g id="Polygon Copy 95" opacity="0.05" figma:type="vector">
+<g id="Polygon Copy 95" opacity="0.05">
 <use xlink:href="#path5_fill" transform="matrix(0.866025 -0.5 0.5 0.866025 1281.86 3296.42)" fill="#FFFFFF"/>
 </g>
-<g id="Polygon Copy 96" opacity="0.1" figma:type="vector">
+<g id="Polygon Copy 96" opacity="0.1">
 <use xlink:href="#path5_fill" transform="matrix(0.866025 -0.5 0.5 0.866025 139 3520.96)" fill="#FFFFFF"/>
 </g>
-<g id="Polygon Copy 90" opacity="0.05" figma:type="vector">
+<g id="Polygon Copy 90" opacity="0.05">
 <use xlink:href="#path3_fill" transform="matrix(0.866025 -0.5 0.5 0.866025 424 3051.93)" fill="#FFFFFF"/>
 </g>
-<g id="Polygon Copy 92" opacity="0.05" figma:type="vector">
+<g id="Polygon Copy 92" opacity="0.05">
 <use xlink:href="#path3_fill" transform="matrix(0.866025 -0.5 0.5 0.866025 351 3507.93)" fill="#FFFFFF"/>
 </g>
-<g id="Polygon Copy 89" opacity="0.05" figma:type="vector">
+<g id="Polygon Copy 89" opacity="0.05">
 <use xlink:href="#path6_fill" transform="matrix(0.866025 -0.5 0.5 0.866025 994 3385.13)" fill="#FFFFFF"/>
 </g>
 </g>
