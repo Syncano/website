@@ -28,6 +28,8 @@ const Scaling = () => (
         </div>
         <div className='PricingEstimate'>
           <PricingEstimate />
+
+          <a className='PricingEstimate__contact' href='mailto:hello@syncano.com'>Contact us for enterprise pricing</a>
         </div>
       </Grid>
     </div>
@@ -135,6 +137,13 @@ const Scaling = () => (
       .PricingEstimate {
         width: 55%;
         margin-left: auto;
+      }
+
+      .PricingEstimate__contact {
+        margin-top: 30px;
+        display: inline-block;
+        font-size: 20px;
+        line-height: 30px;
       }
 
       @media screen and (max-width: 917px) {
