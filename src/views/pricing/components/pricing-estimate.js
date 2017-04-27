@@ -29,7 +29,7 @@ const PricingEstimate = ({
     })()}
     <div className='Estimate__group'>
       {/* TODO: Handle max value */}
-      <div className='Estimate__title'>API calls per month</div>
+      <div className='Estimate__title'>API calls per month <a className='Estimate__help' data-title='A request from your solution to a Syncano Socket hosted on the Syncano Cloud OS'>What is an API call?</a></div>
       <div className='Estimate__value'>{calls.value.toLocaleString()}</div>
       <div className='Estimate__slider'>
         <Slider {...calls} onChange={handleCallsChange} />
@@ -37,7 +37,7 @@ const PricingEstimate = ({
     </div>
 
     <div className='Estimate__group'>
-      <div className='Estimate__title'>Script seconds per month</div>
+      <div className='Estimate__title'>Script seconds per month <a className='Estimate__help' data-title='The time it takes to execute the script held by a Syncano Socket on the Syncano Cloud OS'>What is a script second?</a></div>
       <div className='Estimate__value'>{seconds.value.toLocaleString()}</div>
       <div className='Estimate__slider'>
         <Slider {...seconds} onChange={handleSecondsChange} />
@@ -88,6 +88,34 @@ const PricingEstimate = ({
       .Estimate__help {
         font-size: 12px;
         color: #3871d0;
+        position: relative;
+      }
+
+      .Estimate__help::after {
+        content: attr(data-title);
+        position: absolute;
+        min-width: 200px;
+        bottom: 100%;
+        z-index: 1;
+        background-color: rgba(0,0,0, .9);
+        border-radius: 6px;
+        color: rgba(255,255,255, .9);
+        padding: 10px 15px;
+        line-height: 18px;
+        left: 50%;
+        transition-property: visibility, opacity, transform;
+        visibility: hidden;
+        opacity: 0;
+        transition-duration: .25s;
+        transform: translate(-50%, -10px);
+      }
+
+      .Estimate__help:focus:after,
+      .Estimate__help:active:after,
+      .Estimate__help:hover::after {
+        visibility: visible;
+        opacity: 1;
+        transform: translate(-50%, -6px);
       }
 
       .Estimate__value {
