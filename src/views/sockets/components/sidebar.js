@@ -22,11 +22,6 @@ const Sidebar = ({
     </div>
 
     <style jsx>{`
-      .Sidebar {
-        max-width: 270px;
-        width: 100%;
-      }
-
       .Sidebar__title {
         font-size: 14px;
         color: #8d9299;

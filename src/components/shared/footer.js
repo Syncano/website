@@ -86,13 +86,21 @@ const Footer = () => (
     <style jsx>{`
       .Footer {
         max-width: 880px;
+        margin-top: 30px;
         padding-bottom: 30px;
         position: relative;
       }
 
       @media screen and (min-width: 560px) {
         .Footer {
+          margin-top: 60px;
           padding-bottom: 60px;
+        }
+      }
+
+      @media screen and (min-width: 960px) {
+        .Footer {
+          margin-top: 90px;
         }
       }
 

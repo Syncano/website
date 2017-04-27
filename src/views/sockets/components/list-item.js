@@ -16,18 +16,25 @@ const ListItem = ({item}) => (
       </div>
     )}
     <div className='Socket__meta'>
-      <h3>
+      <h3 className='Socket__title'>
         {item.config.url ? (
-          <a className='Socket__title' href={`${item.config.url}#readme`}>{item.name}</a>
+          <a href={`${item.config.url}#readme`}>{item.name}</a>
         ) : (
-          <span className='Socket__title'>{item.name}</span>
+          <span>{item.name}</span>
         )}
       </h3>
+      <div className='Socket__author Socket__author--mobile'>
+        <Avatar
+          size={32}
+          email={item.author.display_name}
+          />
+        <div>{item.author.display_name.split('@')[0]}</div>
+      </div>
       <p className='Socket__description'>{
         item.description.length > 70 ? `${item.description.substr(0, 70)}...` : item.description
       }</p>
     </div>
-    <div className='Socket__author'>
+    <div className='Socket__author Socket__author--desktop'>
       <Avatar
         size={32}
         email={item.author.display_name}
@@ -50,9 +57,9 @@ const ListItem = ({item}) => (
       .Socket__symbol {
         position: relative;
         font-size: 16px;
-        display: inline-block;
         width: 80px;
         margin-right: 30px;
+        display: none;
       }
 
       .Socket__icon {
@@ -71,24 +78,23 @@ const ListItem = ({item}) => (
       }
 
       .Socket__meta {
-        max-width: 340px;
-        padding-right: 20px;
         width: 100%;
       }
 
       .Socket__title {
         font-weight: 400;
         text-decoration: none;
+        display: inline-block;
         font-size: 18px;
         color: #0b0d11;
         transition: color .25s;
       }
 
-      a.Socket__title {
+      .Socket__title a {
         color: #3871d0;
       }
 
-      a.Socket__title:hover {
+      .Socket__title a:hover {
         color: #0b0d11;
       }
 
@@ -101,22 +107,63 @@ const ListItem = ({item}) => (
 
       .Socket__author {
         display: flex;
-        min-width: 200px;
         font-size: 14px;
         line-height: 1.29;
         color: rgba(47, 51, 57, .8);
       }
 
-      .Socket__author div {
+      .Socket__author--mobile {
+        float: right;
+      }
+
+      .Socket__author--mobile div {
+        padding-left: 5px;
+      }
+
+      .Socket__author--mobile :global(img) {
+        width: 16px;
+        height: auto;
+      }
+
+      .Socket__author--desktop {
+        display: none;
+        padding-left: 20px;
+      }
+
+      .Socket__author--desktop div {
         padding-left: 15px;
       }
 
-      .Socket__author div::before {
+      .Socket__author--desktop div::before {
         content: 'Made by';
         display: block;
         font-size: 12px;
         line-height: 1.5;
         color: rgba(122, 127, 135, .8);
+      }
+
+      @media screen and (min-width: 520px) {
+        .Socket__author--mobile {
+          display: none;
+        }
+
+        .Socket__author--desktop {
+          display: flex;
+        }
+
+        .Socket__icon {
+          display: inline-block;
+        }
+      }
+
+      @media screen and (min-width: 921px) {
+        .Socket__meta {
+          max-width: 340px;
+        }
+
+        .Socket__author--desktop {
+          min-width: 200px;
+        }
       }
     `}</style>
   </li>

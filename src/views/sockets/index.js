@@ -20,8 +20,12 @@ const Sockets = () => (
 
     <div className='Section u-wrapper'>
       <Grid wrap>
-        <Sidebar />
-        <List />
+        <div className='Section__sidebar'>
+          <Sidebar />
+        </div>
+        <div className='Section__list'>
+          <List />
+        </div>
       </Grid>
     </div>
 
@@ -35,6 +39,30 @@ const Sockets = () => (
 
       .Section {
         max-width: 980px;
+      }
+
+      .Section__sidebar {
+        flex: 1;
+      }
+
+      .Section__list {
+        flex: 100%;
+        margin-top: 30px;
+      }
+
+      @media screen and (min-width: 921px) {
+        div :global(.Grid) {
+          flex-wrap: nowrap;
+        }
+
+        .Section__sidebar {
+          max-width: 270px;
+        }
+
+        .Section__list {
+          margin-top: 0;
+          flex: 1;
+        }
       }
     `}</style>
   </Page>

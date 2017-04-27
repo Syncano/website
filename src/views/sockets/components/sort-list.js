@@ -47,6 +47,25 @@ const SortList = ({items, active, direction, handleClick}) => (
       div :global(.Menu__item::before) {
         display: none;
       }
+
+      @media screen and (min-width: 560px) and (max-width: 920px) {
+        div :global(.Menu) {
+          display: flex;
+        }
+
+        div :global(.Menu__item) {
+          flex: 1;
+        }
+
+        div :global(.Menu__item) + :global(.Menu__item) {
+          border-top: 0;
+          border-left: 1px solid #e5e5e5;
+        }
+
+        div :global(.Item.active::after) {
+          transform: rotate(90deg);
+        }
+      }
     `}</style>
   </div>
 )

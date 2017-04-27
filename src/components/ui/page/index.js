@@ -62,6 +62,7 @@ export default ({children}) => (
         -ms-text-size-adjust: 100%;
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
+        overflow-y: scroll;
       }
 
       .AppContainer {
