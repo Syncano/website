@@ -12,7 +12,8 @@ export default class Auth {
   }
 
   @action.bound rebuildSession () {
-    this.store.isLoggedIn = Boolean(Cookies.get('logged_in'))
+    this.store.isLoggedIn = true
+    // this.store.isLoggedIn = Boolean(Cookies.get('logged_in'))
   }
 
   @action.bound async login (credentials) {

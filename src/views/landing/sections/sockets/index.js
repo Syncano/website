@@ -1,6 +1,7 @@
 import ReactRotatingText from 'react-rotating-text'
 import Hexagon from '../../../../components/ui/hexagon'
 import Button from '../../../../components/ui/button'
+import {MatchAsGuest} from '../../../../components/ui/router'
 import Link from '../../../../components/ui/link'
 import IconFacebook from './icon-fb.svg'
 import IconDB from './icon-db.svg'
@@ -114,7 +115,9 @@ const Sockets = ({
         Together, let’s enable the autonomous developer.
       </p>
 
-      <Button primary onClick={toggleSignUpModal}>Get started for free</Button>
+      <MatchAsGuest component={() => (
+        <Button primary onClick={toggleSignUpModal}>Get started for free</Button>
+      )} />
     </div>
 
     <style jsx>{`

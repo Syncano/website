@@ -1,5 +1,6 @@
 import Button from '../../../components/ui/button'
 import Hexagon from '../../../components/ui/hexagon'
+import {MatchAsGuest, MatchAsMember} from '../../../components/ui/router'
 
 const PricingTable = ({
   toggleSignUpModal
@@ -33,10 +34,22 @@ const PricingTable = ({
     </ul>
 
     <div className='Pricing__footer'>
-      <Button primary full onClick={toggleSignUpModal}>Try free for 30 days</Button>
-      <div className='Pricing__meta'>
-        No credit card required
-      </div>
+      <MatchAsGuest component={() => (
+        <div>
+          <Button primary full onClick={toggleSignUpModal}>Try free for 30 days</Button>
+          <div className='Pricing__meta'>
+            No credit card required
+          </div>
+        </div>
+      )} />
+
+      <MatchAsMember component={() => (
+        <div>
+          <Button primary full onClick={() => {
+            window.location.href = process.env.DASHBOARD_URL
+          }}>Go to dashboard</Button>
+        </div>
+      )} />
     </div>
 
     <style jsx>{`

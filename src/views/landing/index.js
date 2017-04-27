@@ -2,6 +2,7 @@ import Footer from '../../components/shared/footer'
 import Header from '../../components/shared/header'
 import CTA from '../../components/shared/cta'
 import Hexagon from '../../components/ui/hexagon'
+import {MatchAsGuest, MatchAsMember} from '../../components/ui/router'
 import CLI from '../../components/shared/cli'
 import Head from '../../components/ui/head'
 import Button from '../../components/ui/button'
@@ -24,7 +25,16 @@ const Landing = ({
         <h1 className='Title'>Syncano means accelerated software development</h1>
         <h2 className='Subtitle'>Set up your first scalable app in the cloud in just 45 seconds</h2>
 
-        <Button primary onClick={toggleSignUpModal}>Sign up now</Button>
+        <MatchAsGuest component={() => (
+          <Button primary onClick={toggleSignUpModal}>Sign up now</Button>
+        )} />
+
+        <MatchAsMember component={() => (
+          <Button primary onClick={() => {
+            window.location.href = process.env.DASHBOARD_URL
+          }}>Go to dashboard</Button>
+        )} />
+
         <div className='Separator' data-after='or' />
 
         <p>

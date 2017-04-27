@@ -35,7 +35,7 @@ const Landing = () => (
         <p>Syncano is currently in beta and we provide a client library for JavaScript. We are also working on the iOS, Android and Unity libraries and they will be released very soon. <Link to='/slack-invite'>Ask us on Slack</Link> to get the ETAs.</p>
 
         <h3>How can I get support?</h3>
-        <p>You can join our <Link to='/slack-invite'>Slack channel</Link> for community support, talk to us via the messenger in the <a href='https://dashboard.syncano.io/'>Dashboard</a> after you log in, or simply <a href='mailto:support@syncano.io'>send us an email</a>. You can also browse through our documentation.</p>
+        <p>You can join our <Link to='/slack-invite'>Slack channel</Link> for community support, talk to us via the messenger in the <a href={process.env.DASHBOARD_URL}>Dashboard</a> after you log in, or simply <a href='mailto:support@syncano.io'>send us an email</a>. You can also browse through our documentation.</p>
       </Text>
     </div>
 

@@ -35,7 +35,7 @@ const FAQ = () => (
         </div>
         <div className='FAQ'>
           <h4 className='FAQ__title'>How can I get support?</h4>
-          <p>You can join our <Link to='/slack-invite'>Slack channel</Link> for community support, talk to us via the messenger in the <a href='https://dashboard.syncano.io/'>Dashboard</a> after you log in, or simply <a href='mailto:hello@syncano.io'>send us an email</a>. You can also browse through our <a href='https://syncano.github.io/syncano-node-cli/#/'>documentation</a>.</p>
+          <p>You can join our <Link to='/slack-invite'>Slack channel</Link> for community support, talk to us via the messenger in the <a href={process.env.DASHBOARD_URL}>Dashboard</a> after you log in, or simply <a href='mailto:hello@syncano.io'>send us an email</a>. You can also browse through our <a href='https://syncano.github.io/syncano-node-cli/#/'>documentation</a>.</p>
         </div>
       </div>
 

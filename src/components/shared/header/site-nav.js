@@ -1,5 +1,6 @@
 import Nav from '../../ui/nav'
 import Link from '../../ui/link'
+import {MatchAsMember, MatchAsGuest} from '../../ui/router'
 
 const SiteNav = ({isOpen, theme, toggleSignIn, closeNav}) => (
   <div className={`Site-nav t-${theme} ${isOpen ? 'is-open' : null}`} onClick={closeNav}>
@@ -29,9 +30,16 @@ const SiteNav = ({isOpen, theme, toggleSignIn, closeNav}) => (
           <a href='https://github.com/syncano'><i className='fa fa-github' /></a>
           <Link to='/slack-invite'><i className='fa fa-slack' /></Link>
         </div>
-        <a className='Site-nav__item Site-nav__item--login' onClick={toggleSignIn}>
-          Sign in<i className='fa fa-arrow-right' />
-        </a>
+
+        <MatchAsGuest component={() => (
+          <a className='Site-nav__item Site-nav__item--login' onClick={toggleSignIn}>
+            Sign in<i className='fa fa-arrow-right' />
+          </a>
+        )} />
+
+        <MatchAsMember component={() => (
+          <a className='Site-nav__item Site-nav__item--login' href={process.env.DASHBOARD_URL}>Go to dashboard</a>
+        )} />
       </Nav>
     </div>
 
@@ -91,7 +99,7 @@ const SiteNav = ({isOpen, theme, toggleSignIn, closeNav}) => (
         color: rgba(255,255,255, .5);
       }
 
-      @media screen and (max-width: 704px) {
+      @media screen and (max-width: 799px) {
         .Site-nav {
           position: absolute;
           z-index: 10;
@@ -151,7 +159,7 @@ const SiteNav = ({isOpen, theme, toggleSignIn, closeNav}) => (
         }
       }
 
-      @media screen and (min-width: 705px) {
+      @media screen and (min-width: 800px) {
         .Site-nav__item {
           font-weight: 500;
           color: rgba(56,113,208, 1);

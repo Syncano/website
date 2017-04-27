@@ -98,13 +98,13 @@ const Scaling = () => (
         margin-bottom: 20px;
       }
 
-      @media screen and (max-width: 917px) {
+      @media screen and (max-width: 935px) {
         .Heading__title {
           display: none;
         }
       }
 
-      @media screen and (min-width: 520px) and (max-width: 917px) {
+      @media screen and (min-width: 520px) and (max-width: 935px) {
         .Heading {
           display: flex;
           flex-wrap: wrap;
@@ -117,7 +117,7 @@ const Scaling = () => (
         }
       }
 
-      @media screen and (min-width: 918px) {
+      @media screen and (min-width: 936px) {
         .Heading {
           width: 400px;
         }
@@ -146,7 +146,7 @@ const Scaling = () => (
         line-height: 30px;
       }
 
-      @media screen and (max-width: 917px) {
+      @media screen and (max-width: 935px) {
         .PricingEstimate {
           width: 100%;
         }
