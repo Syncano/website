@@ -20,6 +20,7 @@
     "react-dom": "^15.5.4",
     "react-github-button": "^0.1.10",
     "react-hexagon": "1.1.1",
+    "react-remarkable": "^1.1.1",
     "react-rotating-text": "^1.2.0",
     "react-sticky": "^5.0.8",
     "svg-react-loader": "next",

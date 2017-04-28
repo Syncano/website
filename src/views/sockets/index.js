@@ -3,9 +3,11 @@ import Page from '../../components/ui/page'
 import Footer from '../../components/shared/footer'
 import Header from '../../components/shared/header'
 import Grid from '../../components/ui/grid'
+import Modal from '../../components/ui/modal'
 import CTA from '../../components/shared/cta'
 import Sidebar from './components/sidebar'
 import List from './components/list'
+import Details from './components/details'
 
 const Sockets = () => (
   <Page>
@@ -31,6 +33,10 @@ const Sockets = () => (
 
     <CTA />
     <Footer />
+
+    <Modal noPadding name='socket-details'>
+      <Details />
+    </Modal>
 
     <style jsx>{`
       :global(.AppContainer) {
@@ -69,9 +75,14 @@ const Sockets = () => (
 )
 
 Sockets.init = ({
-  services: {sockets}
+  services: {
+    sockets,
+    ui: {toggleModal}
+  }
 }) => {
   sockets.fetch()
+
+  return {toggleModal}
 }
 
 export default Sockets

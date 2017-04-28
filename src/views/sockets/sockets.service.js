@@ -1,6 +1,6 @@
 import {action} from 'mobx'
 
-const SOCKETS_LIST = 'https://socket-registry.syncano.space/registry/list-public/'
+const SOCKETS_LIST = 'https://socket-registry.syncano.space/registry/list/'
 
 export default class {
   @action.bound async fetch () {

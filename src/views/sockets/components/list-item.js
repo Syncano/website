@@ -1,27 +1,20 @@
-import Icon from './icon.svg'
-import Hexagon from '../../../components/ui/hexagon'
+import Hexagon from './hexagon'
 import Avatar from '../../../components/ui/avatar'
 
-const ListItem = ({item}) => (
+const ListItem = ({item, toggleModal}) => (
   <li key={item.id} className='Socket'>
-    {item.config.url ? (
-      <a className='Socket__symbol' title={item.name} href={`${item.config.url}#readme`}>
-        <div className='Socket__icon'><Icon /></div>
-        <Hexagon width={80} fill='#4c38d0' />
-      </a>
-    ) : (
-      <div className='Socket__symbol' title={item.name}>
-        <div className='Socket__icon'><Icon /></div>
-        <Hexagon width={80} fill='#4c38d0' />
-      </div>
-    )}
+    <div className='Socket__symbol'>
+      <Hexagon title={item.name} onClick={() => {
+        item.select()
+        toggleModal()
+      }} />
+    </div>
     <div className='Socket__meta'>
       <h3 className='Socket__title'>
-        {item.config.url ? (
-          <a href={`${item.config.url}#readme`}>{item.name}</a>
-        ) : (
-          <span>{item.name}</span>
-        )}
+        <a onClick={() => {
+          item.select()
+          toggleModal()
+        }}>{item.name}</a>
       </h3>
       <div className='Socket__author Socket__author--mobile'>
         <Avatar
@@ -55,26 +48,8 @@ const ListItem = ({item}) => (
       }
 
       .Socket__symbol {
-        position: relative;
-        font-size: 16px;
-        width: 80px;
         margin-right: 30px;
         display: none;
-      }
-
-      .Socket__icon {
-        color: #fff;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        max-height: 32px;
-        max-width: 32px;
-        transform: translate(-50%, -50%);
-      }
-
-      .Socket__icon :global(svg) {
-        height: 32px;
-        fill: #fff;
       }
 
       .Socket__meta {
@@ -91,11 +66,13 @@ const ListItem = ({item}) => (
       }
 
       .Socket__title a {
-        color: #3871d0;
+        color: #0b0d11;
+        transition: color .25s;
       }
 
       .Socket__title a:hover {
-        color: #0b0d11;
+        text-decoration: none;
+        color: #3871d0;
       }
 
       .Socket__description {
@@ -151,7 +128,7 @@ const ListItem = ({item}) => (
           display: flex;
         }
 
-        .Socket__icon {
+        .Socket__symbol {
           display: inline-block;
         }
       }

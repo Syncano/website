@@ -1,20 +1,29 @@
 import {connect} from 'zefir/utils'
 
 const Modal = ({
-  title, subtitle, children, name, ui, toggle, size
+  title, subtitle, children, name, ui, toggle, size, noPadding
 }) => (
   <div className={`Modal ${ui.modal === name ? 'is-visible' : ''}`}>
     <div className='Modal__bg' onClick={toggle} />
-    <div className={`Modal__content ${size === 'small' ? 'small' : ''}`}>
-      <span className='Modal__close' onClick={toggle} />
-      {title && (
-        <h3 className='Modal__title'>{title}</h3>
-      )}
-      {subtitle && (
-        <p className='Modal__subtitle'>{subtitle}</p>
-      )}
+    <div className={
+      `Modal__inner
+      ${size === 'small' ? 'small' : ''}
+      `
+    }>
+      <div className={`
+        Modal__content
+        ${noPadding ? 'no-padding' : ''}
+      `}>
+        <span className='Modal__close' onClick={toggle} />
+        {title && (
+          <h3 className='Modal__title'>{title}</h3>
+        )}
+        {subtitle && (
+          <p className='Modal__subtitle'>{subtitle}</p>
+        )}
 
-      {children}
+        {children}
+      </div>
     </div>
 
     <style jsx>{`
@@ -51,6 +60,11 @@ const Modal = ({
         background-image: linear-gradient(to bottom, #000000, #0b0f15);
       }
 
+      .Modal__inner {
+        max-height: 100%;
+        display: flex;
+      }
+
       .Modal__content {
         background-color: #ffffff;
         box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
@@ -59,11 +73,11 @@ const Modal = ({
         line-height: 22px;
         padding: 50px 30px 30px;
         position: relative;
-        max-height: 100%;
-        overflow: auto;
+        overflow-y: auto;
         will-change: transform, opacity;
         transform: rotate3d(1,1,0,-15deg);
         transform-origin: 100% 0;
+        flex-grow: 1;
         transition-duration: .25s;
         transition-property: transform;
       }
@@ -117,15 +131,23 @@ const Modal = ({
           display: flex;
           align-items: center;
           justify-content: center;
+          padding-top: 90px;
+          padding-bottom: 90px;
+        }
+
+        .Modal__inner {
+          border-radius: 8px;
+          overflow: hidden;
+          flex: 1;
+          max-width: 770px;
+          margin-left: 30px;
+          margin-right: 30px;
         }
 
         .Modal__content {
-          border-radius: 8px;
           padding: 50px;
           font-size: 18px;
           line-height: 24px;
-          max-width: 770px;
-          flex: 1;
         }
 
         .small {
@@ -135,6 +157,10 @@ const Modal = ({
         .Modal__title {
           font-size: 32px;
         }
+      }
+
+      .no-padding {
+        padding: 0;
       }
     `}</style>
   </div>

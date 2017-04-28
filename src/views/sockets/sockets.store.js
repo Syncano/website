@@ -2,6 +2,7 @@ import {computed, observable} from 'mobx'
 import get from 'lodash.get'
 
 export default {
+  @observable details: null,
   @observable search: null,
   @observable sortBy: 'None',
   @observable sortDirection: 'desc',
@@ -9,6 +10,13 @@ export default {
   @computed get sortedItems () {
     const sorter = composeSorter(this.sortBy, this.sortDirection)
     let items = this.items.sort(sorter)
+
+    items = items.map(item => ({
+      ...item,
+      select: () => {
+        this.details = item
+      }
+    }))
 
     if (this.search) {
       items = items.filter(item => new RegExp(this.search, 'ig').test(item.name))
