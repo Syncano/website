@@ -19,7 +19,7 @@ const Details = ({store, pending}) => (
           <div>
             <h2 className='Details__header-title'>{get(store, 'details.name')}</h2>
             <div className='Details__header-author'>
-              by <span>{get(store, 'details.author.display_name', '').split('@')[0]}</span>
+              by <span>{get(store, 'details.author', '').split('@')[0]}</span>
             </div>
           </div>
         </div>
@@ -67,6 +67,11 @@ const Details = ({store, pending}) => (
         overflow: auto;
       }
 
+      .Details__content :global(pre:first-of-type) {
+        margin-top: 0;
+        margin-bottom: 30px;
+      }
+
       @media screen and (min-width: 490px) {
         .Details__header {
           padding: 30px;
@@ -111,9 +116,11 @@ const Details = ({store, pending}) => (
 )
 
 function buildDocumentation ({
-  config, classes, endpoints, event_handlers, events, description
+  name, config, classes, endpoints, event_handlers, events, description
 }) {
-  let result = `${description} \n`
+  let result = ''
+  result += `\`\`\`\nsyncano-cli add ${name}\n\`\`\`\n\n`
+  result += `${description} \n`
   const sections = [
     {
       title: 'Config',
@@ -170,7 +177,17 @@ function buildDocumentation ({
           }
 
           key.response.examples.filter(item => Boolean(item.example)).forEach(example => {
-            result += `\`\`\`\n${example.example.replace(/\n+$/, '')}\n\`\`\`\n\n`
+            let code
+            example.example = example.example.replace(/\n+$/, '')
+
+            try {
+              code = JSON.parse(example.example)
+              code = JSON.stringify(code, null, 2)
+            } catch (e) {
+              code = example.example
+            }
+
+            result += `\`\`\`\n${code}\n\`\`\`\n\n`
 
             if (example.exit_code) {
               result += `**Exit code:** ${example.exit_code}\n\n`
