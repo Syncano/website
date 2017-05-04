@@ -1,9 +1,9 @@
 import {connect} from 'zefir/utils'
 
 const Modal = ({
-  title, subtitle, children, name, ui, toggle, size, noPadding
+  title, subtitle, children, name, ui, toggle, size, noPadding, visible
 }) => (
-  <div className={`Modal ${ui.modal === name ? 'is-visible' : ''}`}>
+  <div className={`Modal ${ui.modal === name || visible ? 'is-visible' : ''}`}>
     <div className='Modal__bg' onClick={toggle} />
     <div className={
       `Modal__inner
@@ -170,12 +170,13 @@ Modal.init = ({
   name,
   stores: {ui},
   services: {ui: {toggleModal}},
+  toggle,
   ...rest
 }) => {
   return {
     name,
     ui,
-    toggle: () => toggleModal(name),
+    toggle: toggle || (() => toggleModal(name)),
     ...rest
   }
 }

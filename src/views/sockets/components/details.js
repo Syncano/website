@@ -1,28 +1,41 @@
 import {connect} from 'zefir/utils'
 import Markdown from '../../../components/ui/markdown'
+import Loader from '../../../components/ui/loader'
 import Hexagon from './hexagon'
 import get from 'lodash.get'
 
-const Details = ({stores: {sockets: store}}) => (
+const Details = ({store, pending}) => (
   <div className='Details'>
-    <div className='Details__header'>
-      <div className='Details__header-symbol'>
-        <Hexagon />
+    {pending.has('sockets.fetchSocket') ? (
+      <div className='Details__loading'>
+        <Loader />
       </div>
+    ) : (
       <div>
-        <h2 className='Details__header-title'>{get(store, 'details.name')}</h2>
-        <div className='Details__header-author'>
-          by <span>{get(store, 'details.author.display_name', '').split('@')[0]}</span>
+        <div className='Details__header'>
+          <div className='Details__header-symbol'>
+            <Hexagon />
+          </div>
+          <div>
+            <h2 className='Details__header-title'>{get(store, 'details.name')}</h2>
+            <div className='Details__header-author'>
+              by <span>{get(store, 'details.author.display_name', '').split('@')[0]}</span>
+            </div>
+          </div>
+        </div>
+        <div className='Details__content'>
+          <Markdown
+            content={buildDocumentation(get(store, 'details.config', {}))}
+            />
         </div>
       </div>
-    </div>
-    <div className='Details__content'>
-      <Markdown
-        content={buildDocumentation(get(store, 'details.config', {}))}
-        />
-    </div>
+    )}
 
     <style jsx>{`
+      .Details__loading {
+        text-align: center;
+        padding: 100px 0;
+      }
       .Details__header {
         background-color: #f5f6f9;
         padding: 15px 20px;
@@ -156,8 +169,8 @@ function buildDocumentation ({
             result += `**Type:** ${key.response.mimetype} \n\n`
           }
 
-          key.response.examples.forEach(example => {
-            result += `\`\`\`\n${example.example}\n\`\`\`\n\n`
+          key.response.examples.filter(item => Boolean(item.example)).forEach(example => {
+            result += `\`\`\`\n${example.example.replace(/\n+$/, '')}\n\`\`\`\n\n`
 
             if (example.exit_code) {
               result += `**Exit code:** ${example.exit_code}\n\n`
@@ -172,6 +185,18 @@ function buildDocumentation ({
   })
 
   return result
+}
+
+Details.init = ({
+  router: {route: {match: {params}}},
+  stores: {sockets: store, pending},
+  services: {sockets}
+}) => {
+  sockets.fetchSocket({
+    name: params.socketName
+  })
+
+  return {store, pending}
 }
 
 export default connect(Details)

@@ -21,7 +21,7 @@ const Routes = () => (
     <Match path='/features' exact component={FeaturesView} />
     <Match path='/pricing' exact component={PricingView} />
     <Match path='/faq' exact component={FaqView} />
-    <Match path='/sockets' exact component={SocketsView} />
+    <Match path='/sockets' component={SocketsView} />
     <Match path='/signup' exact component={SignUpView} />
     <Match path='/signin' exact component={SignInView} />
     <Match path='/slack-invite' exact component={SlackInviteView} />

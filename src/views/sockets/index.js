@@ -1,3 +1,4 @@
+import {Match} from '../../components/ui/router'
 import Head from '../../components/ui/head'
 import Page from '../../components/ui/page'
 import Footer from '../../components/shared/footer'
@@ -9,7 +10,9 @@ import Sidebar from './components/sidebar'
 import List from './components/list'
 import Details from './components/details'
 
-const Sockets = () => (
+const Sockets = ({
+  router: {history: {push}}
+}) => (
   <Page>
     <Head>
       <title>Sockets Registry - Syncano</title>
@@ -34,9 +37,13 @@ const Sockets = () => (
     <CTA />
     <Footer />
 
-    <Modal noPadding name='socket-details'>
-      <Details />
-    </Modal>
+    <Match path='/sockets/:socketName' component={() => (
+      <Modal noPadding visible name='socket-details' toggle={() => {
+        push('/sockets')
+      }}>
+        <Details />
+      </Modal>
+    )} />
 
     <style jsx>{`
       :global(.AppContainer) {
@@ -75,14 +82,8 @@ const Sockets = () => (
 )
 
 Sockets.init = ({
-  services: {
-    sockets,
-    ui: {toggleModal}
-  }
-}) => {
-  sockets.fetch()
-
-  return {toggleModal}
-}
+  services: {ui: {toggleModal}},
+  router
+}) => ({toggleModal, router})
 
 export default Sockets

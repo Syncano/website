@@ -57,15 +57,24 @@ const List = ({store, pending, toggleDetailsModal}) => (
 )
 
 List.init = ({
-  services: {ui: {toggleModal}},
+  services: {
+    sockets,
+    ui: {toggleModal}
+  },
   stores: {
     sockets: store,
     pending
   }
-}) => ({
-  store,
-  pending,
-  toggleDetailsModal: () => toggleModal('socket-details')
-})
+}) => {
+  if (store.items.length === 0) {
+    sockets.fetch()
+  }
+
+  return ({
+    store,
+    pending,
+    toggleDetailsModal: () => toggleModal('socket-details')
+  })
+}
 
 export default connect(List)

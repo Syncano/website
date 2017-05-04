@@ -1,20 +1,15 @@
 import Hexagon from './hexagon'
 import Avatar from '../../../components/ui/avatar'
+import Link from '../../../components/ui/link'
 
 const ListItem = ({item, toggleModal}) => (
   <li key={item.id} className='Socket'>
     <div className='Socket__symbol'>
-      <Hexagon title={item.name} onClick={() => {
-        item.select()
-        toggleModal()
-      }} />
+      <Hexagon title={item.name} />
     </div>
     <div className='Socket__meta'>
       <h3 className='Socket__title'>
-        <a onClick={() => {
-          item.select()
-          toggleModal()
-        }}>{item.name}</a>
+        <Link to={`/sockets/${item.name}`}>{item.name}</Link>
       </h3>
       <div className='Socket__author Socket__author--mobile'>
         <Avatar
