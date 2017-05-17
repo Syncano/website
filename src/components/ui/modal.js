@@ -1,13 +1,17 @@
 import {connect} from 'zefir/utils'
 
 const Modal = ({
-  title, subtitle, children, name, ui, toggle, size, noPadding, visible
+  title, subtitle, children, name, ui, toggle, full, size, noPadding, visible
 }) => (
-  <div className={`Modal ${ui.modal === name || visible ? 'is-visible' : ''}`}>
+  <div className={`
+    Modal ${ui.modal === name || visible ? 'is-visible' : ''}
+    ${full ? 'Modal--full' : ''}
+    `}>
     <div className='Modal__bg' onClick={toggle} />
     <div className={
       `Modal__inner
       ${size === 'small' ? 'small' : ''}
+      ${size === 'wide' ? 'wide' : ''}
       `
     }>
       <div className={`
@@ -86,6 +90,10 @@ const Modal = ({
         max-width: 490px;
       }
 
+      .wide {
+        max-width: 970px;
+      }
+
       .is-visible .Modal__content {
         transform: none;
       }
@@ -127,7 +135,7 @@ const Modal = ({
       }
 
       @media screen and (min-width: 490px) {
-        .Modal {
+        .Modal:not(.Modal--full) {
           display: flex;
           align-items: center;
           justify-content: center;
@@ -139,6 +147,7 @@ const Modal = ({
           border-radius: 8px;
           overflow: hidden;
           flex: 1;
+          height: 100%;
           max-width: 770px;
           margin-left: 30px;
           margin-right: 30px;
@@ -150,8 +159,18 @@ const Modal = ({
           line-height: 24px;
         }
 
+        .Modal--full .Modal__inner {
+          border-radius: 0;
+          max-width: none;
+          margin: 0
+        }
+
         .small {
           max-width: 490px;
+        }
+
+        .wide {
+          max-width: 970px;
         }
 
         .Modal__title {

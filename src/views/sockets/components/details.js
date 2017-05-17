@@ -13,13 +13,15 @@ const Details = ({store, pending}) => (
     ) : (
       <div>
         <div className='Details__header'>
-          <div className='Details__header-symbol'>
-            <Hexagon />
-          </div>
-          <div>
-            <h2 className='Details__header-title'>{get(store, 'details.name')}</h2>
-            <div className='Details__header-author'>
-              by <span>{get(store, 'details.author', '').split('@')[0]}</span>
+          <div className='Details__header-inner'>
+            <div className='Details__header-symbol'>
+              <Hexagon />
+            </div>
+            <div>
+              <h2 className='Details__header-title'>{get(store, 'details.name')}</h2>
+              <div className='Details__header-author'>
+                by <span>{get(store, 'details.author', '').split('@')[0]}</span>
+              </div>
             </div>
           </div>
         </div>
@@ -32,6 +34,17 @@ const Details = ({store, pending}) => (
     )}
 
     <style jsx>{`
+      .Details {
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .Details > * {
+        width: 100%;
+      }
+
       .Details__loading {
         text-align: center;
         padding: 100px 0;
@@ -39,6 +52,9 @@ const Details = ({store, pending}) => (
       .Details__header {
         background-color: #f5f6f9;
         padding: 15px 20px;
+      }
+
+      .Details__header-inner {
         display: flex;
       }
 
@@ -64,7 +80,9 @@ const Details = ({store, pending}) => (
 
       .Details__content {
         padding: 15px;
-        overflow: auto;
+        max-width: 1040px;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .Details__content :global(pre:first-of-type) {
@@ -75,6 +93,12 @@ const Details = ({store, pending}) => (
       @media screen and (min-width: 490px) {
         .Details__header {
           padding: 30px;
+        }
+
+        .Details__header-inner {
+          max-width: 870px;
+          margin-left: auto;
+          margin-right: auto;
         }
 
         .Details__header-title {
@@ -92,10 +116,10 @@ const Details = ({store, pending}) => (
 
       @media screen and (min-width: 850px) {
         .Details__header {
-          padding: 50px 70px;
+          padding: 50px 100px;
         }
 
-        .Details__header > :global(*) + :global(*) {
+        .Details__header-inner > :global(*) + :global(*) {
           margin-left: 30px;
         }
 
@@ -176,26 +200,28 @@ function buildDocumentation ({
             result += `**Type:** ${key.response.mimetype} \n\n`
           }
 
-          key.response.examples.filter(item => Boolean(item.example)).forEach(example => {
-            let code
-            example.example = example.example.replace(/\n+$/, '')
+          if (key.response.examples) {
+            key.response.examples.filter(item => Boolean(item.example)).forEach(example => {
+              let code
+              example.example = example.example.replace(/\n+$/, '')
 
-            try {
-              code = JSON.parse(example.example)
-              code = JSON.stringify(code, null, 2)
-            } catch (e) {
-              code = example.example
-            }
+              try {
+                code = JSON.parse(example.example)
+                code = JSON.stringify(code, null, 2)
+              } catch (e) {
+                code = example.example
+              }
 
-            result += `\`\`\`\n${code}\n\`\`\`\n\n`
+              result += `\`\`\`\n${code}\n\`\`\`\n\n`
 
-            if (example.exit_code) {
-              result += `**Exit code:** ${example.exit_code}\n\n`
-            }
-            if (example.description) {
-              result += `**Description:** ${example.description}\n\n`
-            }
-          })
+              if (example.exit_code) {
+                result += `**Exit code:** ${example.exit_code}\n\n`
+              }
+              if (example.description) {
+                result += `**Description:** ${example.description}\n\n`
+              }
+            })
+          }
         }
       })
     }

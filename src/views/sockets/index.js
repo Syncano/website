@@ -19,8 +19,8 @@ const Sockets = ({
     </Head>
 
     <Header
-      title='Sockets Registry'
-      subtitle='Don’t build what’s already been built. Use sockets.'
+      title='Syncano Sockets Registry'
+      subtitle="Don't build what was already built. Stand on shoulders of giants. Use Sockets."
       />
 
     <div className='Section u-wrapper'>
@@ -38,7 +38,7 @@ const Sockets = ({
     <Footer />
 
     <Match path='/sockets/:socketName' component={() => (
-      <Modal noPadding visible name='socket-details' toggle={() => {
+      <Modal noPadding full visible name='socket-details' toggle={() => {
         push('/sockets')
       }}>
         <Details />

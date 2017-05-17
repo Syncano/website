@@ -11,26 +11,32 @@ const Markdown = ({content}) => (
       div :global(h5),
       div :global(h6) {
         margin-top: 40px;
-        font-weight: 400;
+        font-weight: 500;
         color: #0b0f15;
       }
 
       div :global(h2) {
-        font-weight: 400;
-        font-size: 24px;
+        font-weight: bold;
+        font-size: 28px;
+        border-bottom: 2px solid #e5e5e5;
+        padding-bottom: 10px;
         color: #0b0f15;
         margin-top: 40px;
       }
 
-      div :global(h4) {
-        margin-top:15px;
+      div :global(h3) {
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 5px;
       }
 
-      div :global(h2) + :global(h3),
       div :global(h3) + :global(h4),
       div :global(h4) + :global(h5),
       div :global(h5) + :global(h6) {
-        margin-top: 15px;
+        margin-top: 20px;
+      }
+
+      div :global(h2) + :global(h3) {
+        margin-top: 35px;
       }
 
       div :global(p) {
@@ -109,27 +115,34 @@ const Markdown = ({content}) => (
         width: 100%;
         margin-top: 15px;
         border-collapse: collapse;
+        border: 1px solid #e5e5e5;
+        border-radius: 5px;
       }
 
       div :global(th) {
-        padding: 3px 15px 3px 10px;
+        padding: 12px 15px 12px 15px;
         font-size: 14px;
-        font-weight: 500;
-        color: #2f3339;
+        font-weight: bold;
+        color: #0b0f15;
         table-layout: fixed;
+        background-color: #fafafa;
+        border-top: 1px solid #e5e5e5;
         border-left: 1px solid #e5e5e5;
       }
 
       div :global(td) {
-        padding: 3px 15px 3px 10px;
+        padding: 8px 15px 8px 15px;
         border-left: 1px solid #e5e5e5;
         border-top: 1px solid #e5e5e5;
-        padding-right: 15px;
       }
 
       div :global(th:first-child),
       div :global(td:first-child) {
         border-left: 0;
+      }
+
+      div :global(strong) {
+        color: #0b0f15;
       }
     `}</style>
   </div>

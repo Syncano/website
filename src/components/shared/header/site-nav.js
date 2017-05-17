@@ -22,9 +22,6 @@ const SiteNav = ({isOpen, theme, toggleSignIn, closeNav}) => (
         <Link to='/pricing'>
           <span className='Site-nav__item'>Plans &amp; Pricing</span>
         </Link>
-        <Link to='/sockets'>
-          <span className='Site-nav__item'>Socket Registry</span>
-        </Link>
         <a className='Site-nav__item' href='https://syncano.github.io/syncano-node-cli/'>Documentation</a>
         <div className='Site-nav__social'>
           <a href='https://github.com/syncano'><i className='fa fa-github' /></a>
