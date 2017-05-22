@@ -28,6 +28,7 @@ export default ({children}) => (
       name='forgot-password'
       title='Forgot password'
       subtitle='Lost your password? No problem.'
+      size='small'
       >
       <ForgotPasswordForm />
     </Modal>

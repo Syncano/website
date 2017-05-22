@@ -99,7 +99,7 @@ Pricing.init = ({
   services: {ui: {toggleModal}}
 }) => ({
   toggleSignUpModal: () => {
-    window.analytics.track('Guest clicked CTA button')
+    window.analytics.track('Sign up Website')
 
     toggleModal('signup')
   }
