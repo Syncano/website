@@ -44,8 +44,8 @@ const Footer = () => (
         <div className='Navigation__column'>
           <h5 className='Navigation__head'>Resources</h5>
           <Nav stack>
-            <a className='Navigation__link' href='https://syncano.github.io/syncano-node-cli/#/getting-started/quickstart'>Quickstart</a>
             <a className='Navigation__link' href='https://syncano.github.io/syncano-node-cli/#/'>Documentation</a>
+            <a className='Navigation__link' href='https://blog.syncano.io/'>Blog</a>
             <a className='Navigation__link' href='https://syncano.github.io/syncano-node-cli/#/client-lib-reference/installation'>Libraries</a>
           </Nav>
         </div>
