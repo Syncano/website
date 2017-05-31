@@ -1,12 +1,12 @@
-<svg width="48" height="36" viewBox="0 0 48 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<svg width="48" height="36" viewBox="0 0 48 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <title>icn_registry</title>
-<desc>Created using Figma</desc>
-<g id="Canvas" transform="translate(-9793 -359)" figma:type="canvas">
-<g id="icn_registry" figma:type="instance">
-<g id="socket" figma:type="vector-operation">
+
+<g id="Canvas" transform="translate(-9793 -359)">
+<g id="icn_registry">
+<g id="socket">
 <use xlink:href="#path-sockets_fill" transform="translate(9793 359)" fill="#3637D1"/>
 </g>
-<g id="socket" figma:type="vector-operation">
+<g id="socket">
 <use xlink:href="#path-sockets_fill" transform="translate(9815.15 372.846)" fill="#3637D1"/>
 </g>
 </g>

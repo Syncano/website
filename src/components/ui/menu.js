@@ -29,7 +29,7 @@ const Menu = ({children}) => (
       }
 
       .Menu__item + * {
-        border-top: solid 1px #e5e5e5;
+        border-top: 1px solid #e5e5e5;
       }
 
       .Menu :global(a) {
@@ -41,18 +41,28 @@ const Menu = ({children}) => (
         align-items: center;
       }
 
-      .Menu :global(.active) {
-        font-weight: 500;
-        color: #0b0d11;
-      }
-
-      .Menu :global(.active::after) {
+      .Menu :global(a::after) {
         content: '\\f054';
         margin-left: auto;
         margin-bottom: -2px;
         font-family: FontAwesome;
         font-size: 12px;
         color: #0b0d11;
+        will-change: opacity, transform;
+        transition-property: opacity, transform;
+        transition-duration: .25s;
+        opacity: 0;
+        transform: translateX(-5px);
+      }
+
+      .Menu :global(.active) {
+        font-weight: 500;
+        color: #0b0d11;
+      }
+
+      .Menu :global(.active::after) {
+        opacity: 1;
+        transform: none;
       }
     `}</style>
   </ul>

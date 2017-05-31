@@ -150,7 +150,7 @@ const Header = ({
         line-height: 23px;
       }
 
-      @media screen and (min-width: 591px) {
+      @media screen and (min-width: 800px) {
         .Header__nav-toggle {
           display: none;
         }
@@ -201,7 +201,7 @@ Header.init = ({
     flags,
     pageStatus,
     toggleSignUp: () => {
-      window.analytics.track('Guest clicked CTA button')
+      window.analytics.track('Sign up Website')
       toggleModal('signup')
     },
     toggleSignIn: () => toggleModal('signin'),

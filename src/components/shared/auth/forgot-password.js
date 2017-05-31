@@ -5,7 +5,7 @@ import InputList from '../../ui/input-list'
 import Style from './components/style'
 
 const ForgotPasswordForm = ({
-  email, password, toggleModal, resetPassword, messages
+  email, password, toggleSignInModal, resetPassword, messages
 }) => (
   <div className='AuthForm'>
     <form className='AuthForm__column AuthForm__column--form' onSubmit={resetPassword}>
@@ -24,10 +24,7 @@ const ForgotPasswordForm = ({
     </form>
     <div className='AuthForm__footer'>
       <div>
-        Remember your password? <a onClick={() => {
-          window.analytics.track('Guest clicked CTA button')
-          toggleModal('signup')
-        }}>Sign in here</a>
+        Remember your password? <a onClick={toggleSignInModal}>Sign in here</a>
       </div>
     </div>
 
@@ -46,6 +43,7 @@ ForgotPasswordForm.init = ({
   email,
   toggleModal,
   messages,
+  toggleSignInModal: () => toggleModal('signin'),
   resetPassword: (e) => submit(e, resetPassword)
 })
 

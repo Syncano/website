@@ -1,8 +1,8 @@
-<svg width="36" height="37" viewBox="0 0 36 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<svg width="36" height="37" viewBox="0 0 36 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <title>icn_cloud</title>
-<desc>Created using Figma</desc>
-<g id="Canvas" transform="translate(-10092 -358)" figma:type="canvas">
-<g id="icn_cloud" figma:type="text">
+
+<g id="Canvas" transform="translate(-10092 -358)">
+<g id="icn_cloud">
 <use xlink:href="#path-clout-os_fill" transform="translate(10077 358)" fill="#187EEF"/>
 </g>
 </g>

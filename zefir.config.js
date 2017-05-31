@@ -32,7 +32,7 @@ module.exports = {
       }
     }
 
-    config.output.filename = '[name].[hash]'
+    config.output.filename = '[hash].[name]'
 
     return config
   }

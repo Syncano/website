@@ -99,7 +99,7 @@ export default () => (
         }
 
         .AuthForm__column--buttons {
-          width: 240px;
+          width: 220px;
         }
 
         .AuthForm__column--form {

@@ -53,7 +53,7 @@ const Testimonials = () => (
             srcSet='/static/img/testimonials/stale-husby.png 1x, /static/img/testimonials/stale-husby@2x.png 2x'
             />
           <p className='Testimonial__content'>
-            If Syncano was around at the time we created our MVP, it would have saved us a full year to get into the market.
+            If Syncano was around at the time we started working on our MVP, it would have saved us a full year to reach product market-fit.
           </p>
           <footer>
             <div className='Testimonial__author'>Ståle Husby</div>

@@ -1,6 +1,7 @@
 import Grid from '../../../../components/ui/grid'
 import Button from '../../../../components/ui/button'
 import Hexagon from '../../../../components/ui/hexagon'
+import {MatchAsGuest} from '../../../../components/ui/router'
 import Hexagons from './hexagons.svg'
 import IconSentry from './icon-sentry.svg'
 import IconStripe from './icon-stripe.svg'
@@ -67,7 +68,9 @@ const RegistriesSection = ({toggleSignUpModal}) => (
               {/* <p>Browse the existing public Syncano Sockets by the Public Socket Registry web interface.</p> */}
               <p>After signing up, you’ll automatically have access to both your Private Socket Registry and the Public Socket Registry. By leveraging the Automation SDK, you can easily list, search, submit and deploy Syncano Sockets to your dedicated backend.</p>
               <p>
-                <Button secondary onClick={toggleSignUpModal}>Sign up</Button>
+                <MatchAsGuest component={() => (
+                  <Button secondary onClick={toggleSignUpModal}>Sign up</Button>
+                )} />
               </p>
             </div>
             {/* <div className='Feature'>

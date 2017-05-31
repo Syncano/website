@@ -1,3 +1,4 @@
+// import DevTools from 'mobx-react-devtools'
 import FontAwesome from './styles/font-awesome'
 import Normalize from './styles/normalize'
 import Modal from '../modal'
@@ -9,6 +10,7 @@ import SignInForm from '../../shared/auth/signin'
 export default ({children}) => (
   <div>
     {children}
+    {/* <DevTools /> */}
     <ScrollManager />
     <FontAwesome />
     <Normalize />
@@ -26,6 +28,7 @@ export default ({children}) => (
       name='forgot-password'
       title='Forgot password'
       subtitle='Lost your password? No problem.'
+      size='small'
       >
       <ForgotPasswordForm />
     </Modal>
@@ -60,6 +63,7 @@ export default ({children}) => (
         -ms-text-size-adjust: 100%;
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
+        overflow-y: scroll;
       }
 
       .AppContainer {

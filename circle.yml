@@ -25,11 +25,15 @@ deployment:
     branch: syncano-ascend-master
     commands:
       - syncano-cli deploy
+      - syncano-cli hosting config staging --cname syncano.rocks
+      - syncano-cli hosting config production --cname syncano.io
       - syncano-cli hosting sync production
   staging:
     branch: syncano-ascend
     commands:
       - syncano-cli deploy
+      - syncano-cli hosting config staging --cname syncano.rocks
+      - syncano-cli hosting config production --cname syncano.io
       - syncano-cli hosting sync staging
 
 experimental:

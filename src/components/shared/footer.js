@@ -44,8 +44,8 @@ const Footer = () => (
         <div className='Navigation__column'>
           <h5 className='Navigation__head'>Resources</h5>
           <Nav stack>
-            <a className='Navigation__link' href='https://syncano.github.io/syncano-node-cli/#/getting-started/quickstart'>Quickstart</a>
             <a className='Navigation__link' href='https://syncano.github.io/syncano-node-cli/#/'>Documentation</a>
+            <a className='Navigation__link' href='https://blog.syncano.io/'>Blog</a>
             <a className='Navigation__link' href='https://syncano.github.io/syncano-node-cli/#/client-lib-reference/installation'>Libraries</a>
           </Nav>
         </div>
@@ -86,13 +86,21 @@ const Footer = () => (
     <style jsx>{`
       .Footer {
         max-width: 880px;
+        margin-top: 30px;
         padding-bottom: 30px;
         position: relative;
       }
 
       @media screen and (min-width: 560px) {
         .Footer {
+          margin-top: 60px;
           padding-bottom: 60px;
+        }
+      }
+
+      @media screen and (min-width: 960px) {
+        .Footer {
+          margin-top: 90px;
         }
       }
 
