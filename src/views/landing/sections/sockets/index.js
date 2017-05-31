@@ -99,8 +99,8 @@ const Sockets = ({
         </div>
       </div>
 
-      <div className='Separator' data-after='or' />
-      <Link to='/sockets'>Browse all 150 sockets</Link>
+      {/* <div className='Separator' data-after='or' />
+      <Link to='/sockets'>Browse all 150 sockets</Link> */}
 
       <div className='HiddenAtMd'>
         <Hexagon width={32} fill='#05a5b4' position={{top: '-15px', left: '10%'}} />
