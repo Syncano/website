@@ -24,9 +24,9 @@ const Footer = () => (
             <Link to='/privacy-policy'>
               <span className='Navigation__link'>Privacy Policy</span>
             </Link>
-            <a href='https://www.privacyshield.gov/participant?id=a2zt0000000GnAKAA0'>
+            <Link to='/syncano-performance-insights'>
               <span className='Navigation__link'>Privacy Shield</span>
-            </a>
+            </Link>
           </Nav>
         </div>
         <div className='Navigation__column'>
