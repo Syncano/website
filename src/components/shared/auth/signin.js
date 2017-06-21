@@ -51,7 +51,10 @@ SignInForm.init = ({
   password,
   toggleModal,
   messages,
-  login: (e) => submit(e, login)
+  login: (e) => submit(e, data => {
+    window.analytics.track('Sign in Website Confirmed')
+    login(data)
+  })
 })
 
 SignInForm.form = {
