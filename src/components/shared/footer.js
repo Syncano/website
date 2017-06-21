@@ -83,6 +83,8 @@ const Footer = () => (
 
     <div className='Copyrights'>&copy; 2017 by Syncano. All rights reserved.</div>
 
+    <script src="https://cdn.optimizely.com/js/8415101584.js"></script>
+
     <style jsx>{`
       .Footer {
         max-width: 880px;

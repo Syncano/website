@@ -204,7 +204,10 @@ Header.init = ({
       window.analytics.track('Sign up Website')
       toggleModal('signup')
     },
-    toggleSignIn: () => toggleModal('signin'),
+    toggleSignIn: () => {
+      window.analytics.track('Sign in Website')
+      toggleModal('signin')
+    },
     toggleNav: () => toggleFlag('site-nav.open'),
     closeNav: () => flags.delete('site-nav.open'),
     ...props

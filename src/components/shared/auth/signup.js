@@ -24,7 +24,10 @@ const SignUpForm = ({email, password, toggleModal, register, messages}) => (
       </div>
 
       <div>
-        Already a member? <a onClick={() => toggleModal('signin')}>Sign in here</a>
+        Already a member? <a onClick={() => {
+          window.analytics.track('Sign in Website')
+          toggleModal('signin')
+        }}>Sign in here</a>
       </div>
     </div>
 
@@ -44,7 +47,10 @@ SignUpForm.init = ({
   password,
   toggleModal,
   messages,
-  register: (e) => submit(e, register)
+  register: (e) => submit(e, data => {
+    window.analytics.track('Sign up Website Confirmed')
+    register(data)
+  })
 })
 
 SignUpForm.form = {
