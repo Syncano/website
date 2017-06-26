@@ -25,13 +25,15 @@
     "react-sticky": "^5.0.8",
     "svg-react-loader": "next",
     "syncano-cli": "beta",
-    "zefir": "beta"
+    "zefir": "1.0.0-beta.24"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "babel-plugin-inline-react-svg": "0.4.0",
     "babel-plugin-transform-define": "^1.2.0",
+    "html-webpack-plugin": "^2.29.0",
     "mobx-react-devtools": "^4.2.11",
+    "pre-commit": "^1.2.2",
     "standard": "^10.0.2"
   },
   "standard": {

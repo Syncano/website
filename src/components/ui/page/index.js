@@ -6,22 +6,48 @@ import ScrollManager from '../../ui/scroll-manager'
 import ForgotPasswordForm from '../../shared/auth/forgot-password'
 import SignUpForm from '../../shared/auth/signup'
 import SignInForm from '../../shared/auth/signin'
+import SignDescription from '../sign-description'
+import SocialButtons from '../../shared/auth/components/social-buttons.js'
 
 export default ({children}) => (
   <div>
     {children}
-    {/* <DevTools /> */}
+    { /* <DevTools /> */ }
     <ScrollManager />
     <FontAwesome />
     <Normalize />
 
     <Modal
-      name='signup'
+      name='signupver1'
       title='Sign up and get started'
       subtitle='Build more and faster by leveraging existing backend code.'
       size='small'
       >
       <SignUpForm />
+    </Modal>
+
+    <Modal
+      name='signupver2'
+      title=''
+      subtitle=''
+      >
+
+      <div className="left">
+        <SignDescription />
+      </div>
+
+      <div className="right">
+        <SignUpForm  />
+      </div>
+
+    </Modal>
+
+    <Modal
+      name='signupver3'
+      title='Sign up and start building'
+      subtitle='Build serverless apps on Syncano for free. Set up your backend in minutes!'
+      >
+      <SignUpForm social />
     </Modal>
 
     <Modal
@@ -55,6 +81,16 @@ export default ({children}) => (
 
       h1, h2, h3, h4, h5, h6 {
         line-height: 1.25;
+      }
+
+      .left {
+        float: left;
+        width: 40%;
+      }
+
+      .right {
+        float: left;
+        width: 60%;
       }
 
       html {
