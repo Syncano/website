@@ -5,9 +5,7 @@ import InputList from '../../ui/input-list'
 import Style from './components/style'
 import SocialButtons from './components/social-buttons'
 
-const SignUpForm = ({email, password, toggleModal, register, messages,social}) => {
-
-return (
+const SignUpForm = ({email, password, toggleModal, register, messages,social}) => (
   <form className='AuthForm' onSubmit={register}>
     {social && (
       <div className='AuthForm__column AuthForm__column--buttons'>
@@ -41,7 +39,7 @@ return (
 
     <Style />
   </form>
-)}
+)
 
 SignUpForm.init = ({
   stores: {messages},

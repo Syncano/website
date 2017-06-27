@@ -2,7 +2,6 @@ import {Component} from 'react'
 import {connect} from 'zefir/utils'
 
 class Modal extends Component {
-
   componentWillMount (props) {
     window.addEventListener('keydown', this.props.handleEscKey)
   }
@@ -225,4 +224,4 @@ Modal.init = ({
   }
 }
 
-export default connect( Modal )
+export default connect(Modal)

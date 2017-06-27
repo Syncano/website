@@ -28,18 +28,13 @@ export default ({children}) => (
 
     <Modal
       name='signupver2'
-      title=''
-      subtitle=''
       >
-
       <div className="left">
         <SignDescription />
       </div>
-
       <div className="right">
         <SignUpForm  />
       </div>
-
     </Modal>
 
     <Modal
@@ -85,12 +80,11 @@ export default ({children}) => (
 
       .left {
         float: left;
-        width: 40%;
       }
 
       .right {
-        float: left;
-        width: 60%;
+        float: right;
+        max-width: 430px;
       }
 
       html {
