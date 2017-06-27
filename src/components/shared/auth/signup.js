@@ -1,32 +1,22 @@
-import { connect } from 'zefir/utils'
+import {connect} from 'zefir/utils'
 import Button from '../../ui/button'
 import Input from '../../ui/input'
 import InputList from '../../ui/input-list'
 import Style from './components/style'
-import SocialButtons from './components/social-buttons'
+// import SocialButtons from './components/social-buttons'
 
-const SignUpForm = ({email, password, toggleModal, register, messages,social}) => {
-
-return (
-
-  <form className='AuthForm' id='AuthForm' onSubmit={register}>
-
-    { social && (
-      <div className='AuthForm__column AuthForm__column--buttons'>
-        <SocialButtons />
-      </div>
-    )}
-
-    { social && (
-      <div className='AuthForm__separator'></div>
-    )}
-
+const SignUpForm = ({email, password, toggleModal, register, messages}) => (
+  <form className='AuthForm' onSubmit={register}>
+    {/* <div className='AuthForm__column AuthForm__column--buttons'>
+      <SocialButtons />
+    </div> */}
+    {/* <div className='AuthForm__separator' /> */}
     <div className='AuthForm__column AuthForm__column--form'>
       <InputList errors={messages.get('auth.register')}>
         <Input full {...email} />
         <Input full {...password} />
       </InputList>
-      <Button type="button" full secondary onClick={ () => { window.analytics.track('Sign up Website Confirmed'); document.getElementById("AuthForm").submit(); }}>Create your account</Button>
+      <Button full secondary>Create your account</Button>
     </div>
     <div className='AuthForm__footer'>
       <div>
@@ -43,7 +33,7 @@ return (
 
     <Style />
   </form>
-)}
+)
 
 SignUpForm.init = ({
   stores: {messages},
@@ -51,14 +41,12 @@ SignUpForm.init = ({
     ui: {toggleModal},
     auth: {register}
   },
-  form: {fields: {email, password}, submit},
-  social
+  form: {fields: {email, password}, submit}
 }) => ({
   email,
   password,
   toggleModal,
   messages,
-  social,
   register: (e) => submit(e, data => {
     window.analytics.track('Sign up Website Confirmed')
     register(data)
