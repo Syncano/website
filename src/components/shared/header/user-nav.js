@@ -5,7 +5,6 @@ const UserNav = ({theme, toggleSignUp, toggleSignIn, pageStatus}) => (
   <div className={`User-nav t-${theme}`}>
     <MatchAsGuest component={() => (
       <Nav>
-
         {pageStatus.indicator && (
           <a className={`User-nav__item User-nav__item--status User-nav__item--status-${pageStatus.indicator}`} href='http://status.syncano.com/'>{pageStatus.description}</a>
         )}
