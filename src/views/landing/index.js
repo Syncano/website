@@ -185,12 +185,10 @@ Landing.init = ({
   services: {ui: {toggleModal}}
 }) => ({
   toggleSignUpModal: (e) => {
-
     if (e.target.className.indexOf('version2') > 0){ toggleModal('signupver2') }
     else if (e.target.className.indexOf('version3') > 0){ toggleModal('signupver3') }
     else { toggleModal('signupver1') }
     window.analytics.track('Sign up Website')
-
   }
 })
 
