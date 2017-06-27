@@ -1,4 +1,4 @@
-import { connect } from 'zefir/utils'
+import {connect} from 'zefir/utils'
 import Button from '../../ui/button'
 import Input from '../../ui/input'
 import InputList from '../../ui/input-list'
@@ -8,16 +8,14 @@ import SocialButtons from './components/social-buttons'
 const SignUpForm = ({email, password, toggleModal, register, messages,social}) => {
 
 return (
-
-  <form className='AuthForm' id='AuthForm' onSubmit={register}>
-
-    { social && (
+  <form className='AuthForm' onSubmit={register}>
+    {social && (
       <div className='AuthForm__column AuthForm__column--buttons'>
         <SocialButtons />
       </div>
     )}
 
-    { social && (
+    {social && (
       <div className='AuthForm__separator'></div>
     )}
 
@@ -26,7 +24,7 @@ return (
         <Input full {...email} />
         <Input full {...password} />
       </InputList>
-      <Button type="button" full secondary onClick={ () => { window.analytics.track('Sign up Website Confirmed'); document.getElementById("AuthForm").submit(); }}>Create your account</Button>
+      <Button full secondary>Create your account</Button>
     </div>
     <div className='AuthForm__footer'>
       <div>
@@ -60,7 +58,9 @@ SignUpForm.init = ({
   messages,
   social,
   register: (e) => submit(e, data => {
-    window.analytics.track('Sign up Website Confirmed')
+    if((email.value != '') && (password.value != '')){
+      window.analytics.track('Sign up Website Confirmed')
+    }
     register(data)
   })
 })
