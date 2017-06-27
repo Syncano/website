@@ -18,7 +18,7 @@ export default ({children}) => (
     <Normalize />
 
     <Modal
-      name='signupver1'
+      name='signup-version1'
       title='Sign up and get started'
       subtitle='Build more and faster by leveraging existing backend code.'
       size='small'
@@ -26,9 +26,7 @@ export default ({children}) => (
       <SignUpForm />
     </Modal>
 
-    <Modal
-      name='signupver2'
-      >
+    <Modal name='signup-version2'>
       <div className="left">
         <SignDescription />
       </div>
@@ -38,7 +36,7 @@ export default ({children}) => (
     </Modal>
 
     <Modal
-      name='signupver3'
+      name='signup-version3'
       title='Sign up and start building'
       subtitle='Build serverless apps on Syncano for free. Set up your backend in minutes!'
       >

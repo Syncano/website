@@ -185,9 +185,8 @@ Landing.init = ({
   services: {ui: {toggleModal}}
 }) => ({
   toggleSignUpModal: (e) => {
-    let modalName = 'signupver1'
-    if (e.target.className.indexOf('version2') > 0){ modalName = 'signupver2' }
-    else if (e.target.className.indexOf('version3') > 0){ modalName = 'signupver3' }
+    const version = e.target.className.replace(/[\r\n]+/g," ").split(' ').find(item => /version/.test(item))
+    const modalName = `signup-${version || 'version1'}`
     toggleModal(modalName)
     window.analytics.track('Sign up Website')
   }
