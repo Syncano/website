@@ -27,11 +27,11 @@ export default ({children}) => (
     </Modal>
 
     <Modal name='signup-version2'>
-      <div className="SignUpVersion2>
-        <div className="SignUpVersion2__left-column">
+      <div className='SignUpVersion2'>
+        <div className='SignUpVersion2__left-column'>
           <SignDescription />
         </div>
-        <div className="SignUpVersion2__right-column">
+        <div className='SignUpVersion2__right-column'>
           <SignUpForm  />
         </div>
       </div>
