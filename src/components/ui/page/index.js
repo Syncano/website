@@ -27,11 +27,13 @@ export default ({children}) => (
     </Modal>
 
     <Modal name='signup-version2'>
-      <div className="left">
-        <SignDescription />
-      </div>
-      <div className="right">
-        <SignUpForm  />
+      <div className="SignUpVersion2>
+        <div className="SignUpVersion2__left-column">
+          <SignDescription />
+        </div>
+        <div className="SignUpVersion2__right-column">
+          <SignUpForm  />
+        </div>
       </div>
     </Modal>
 
@@ -59,6 +61,17 @@ export default ({children}) => (
       >
       <SignInForm />
     </Modal>
+  
+    <style jsx>{`
+      .SignUpVersion2__left-column {
+        float: left;
+      }
+
+      .SignUpVersion2__right-column {
+        float: right;
+        max-width: 430px;
+      }
+    `}</style>
 
     <style jsx global>{`
       body,
@@ -74,15 +87,6 @@ export default ({children}) => (
 
       h1, h2, h3, h4, h5, h6 {
         line-height: 1.25;
-      }
-
-      .left {
-        float: left;
-      }
-
-      .right {
-        float: right;
-        max-width: 430px;
       }
 
       html {
