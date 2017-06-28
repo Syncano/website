@@ -34,7 +34,7 @@ export default class UI {
       .split(' ')
       .find(item => /version/.test(item))
     suffix = suffix ? suffix : 'version1'
-    return `${baseName}${suffix ? `-${suffix}` : ''}`
+    return `${baseName}-${suffix}`
   }
 
   addHotjar () {
