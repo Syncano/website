@@ -182,7 +182,7 @@ const Landing = ({
 )
 
 Landing.init = ({
-  services: {ui: {toggleModal,getModalName}}
+  services: {ui: {toggleModal, getModalName}}
 }) => ({
   toggleSignUpModal: (e) => {
     toggleModal(getModalName(e.target.className));
