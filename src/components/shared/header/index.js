@@ -4,6 +4,7 @@ import Link from '../../ui/link'
 import SiteNav from './site-nav'
 import UserNav from './user-nav'
 import Hexagons from './hexagons.svg'
+import getModalName from '../../../services/modal.service.js'
 
 const Header = ({
   title,
@@ -200,9 +201,9 @@ Header.init = ({
     theme,
     flags,
     pageStatus,
-    toggleSignUp: () => {
-      window.analytics.track('Sign up Website')
-      toggleModal('signup')
+    toggleSignUp: (e) => {
+      toggleModal(getModalName(e.target.className));
+      window.analytics.track('Sign up Website');
     },
     toggleSignIn: () => {
       window.analytics.track('Sign in Website')

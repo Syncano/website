@@ -11,6 +11,7 @@ import Features from './sections/features'
 import Innovation from './sections/innovation'
 import Sockets from './sections/sockets'
 import FAQ from './sections/faq'
+import getModalName from '../../services/modal.service.js'
 
 const Landing = ({
   toggleSignUpModal
@@ -185,10 +186,8 @@ Landing.init = ({
   services: {ui: {toggleModal}}
 }) => ({
   toggleSignUpModal: (e) => {
-    const version = e.target.className.replace(/[\r\n]+/g," ").split(' ').find(item => /version/.test(item))
-    const modalName = `signup-${version || 'version1'}`
-    toggleModal(modalName)
-    window.analytics.track('Sign up Website')
+    toggleModal(getModalName(e.target.className));
+    window.analytics.track('Sign up Website');
   }
 })
 
