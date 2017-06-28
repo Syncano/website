@@ -202,7 +202,6 @@ Header.init = ({
     pageStatus,
     toggleSignUp: e => {
       const modalName = getOptimizelyModalName('signup', e.target.className)
-
       window.analytics.track('Sign up Website')
       toggleModal(modalName)
     },

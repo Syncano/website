@@ -29,11 +29,11 @@ export default class UI {
   }
 
   getOptimizelyModalName(baseName, className) {
-    const suffix = String(className)
+    let suffix = String(className)
       .replace(/[\r\n]+/g, '')
       .split(' ')
       .find(item => /version/.test(item))
-
+    suffix = suffix ? suffix : 'version1'
     return `${baseName}${suffix ? `-${suffix}` : ''}`
   }
 
