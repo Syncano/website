@@ -8,7 +8,6 @@ const UserNav = ({theme, toggleSignUp, toggleSignIn, pageStatus}) => (
         {pageStatus.indicator && (
           <a className={`User-nav__item User-nav__item--status User-nav__item--status-${pageStatus.indicator}`} href='http://status.syncano.com/'>{pageStatus.description}</a>
         )}
-
         <a className='User-nav__item' onClick={toggleSignIn}>Sign in</a>
         <a className='User-nav__item' onClick={toggleSignUp}>Sign up</a>
       </Nav>

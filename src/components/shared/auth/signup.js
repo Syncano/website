@@ -3,14 +3,20 @@ import Button from '../../ui/button'
 import Input from '../../ui/input'
 import InputList from '../../ui/input-list'
 import Style from './components/style'
-// import SocialButtons from './components/social-buttons'
+import SocialButtons from './components/social-buttons'
 
-const SignUpForm = ({email, password, toggleModal, register, messages}) => (
+const SignUpForm = ({email, password, toggleModal, register, messages, social}) => (
   <form className='AuthForm' onSubmit={register}>
-    {/* <div className='AuthForm__column AuthForm__column--buttons'>
-      <SocialButtons />
-    </div> */}
-    {/* <div className='AuthForm__separator' /> */}
+    {social && (
+      <div className='AuthForm__column AuthForm__column--buttons'>
+        <SocialButtons />
+      </div>
+    )}
+
+    {social && (
+      <div className='AuthForm__separator'></div>
+    )}
+
     <div className='AuthForm__column AuthForm__column--form'>
       <InputList errors={messages.get('auth.register')}>
         <Input full {...email} />
@@ -41,14 +47,18 @@ SignUpForm.init = ({
     ui: {toggleModal},
     auth: {register}
   },
-  form: {fields: {email, password}, submit}
+  form: {fields: {email, password}, submit},
+  social
 }) => ({
   email,
   password,
   toggleModal,
   messages,
+  social,
   register: (e) => submit(e, data => {
-    window.analytics.track('Sign up Website Confirmed')
+    if((email.value != '') && (password.value != '')){
+      window.analytics.track('Sign up Website Confirmed')
+    }
     register(data)
   })
 })

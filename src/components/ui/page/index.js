@@ -6,22 +6,43 @@ import ScrollManager from '../../ui/scroll-manager'
 import ForgotPasswordForm from '../../shared/auth/forgot-password'
 import SignUpForm from '../../shared/auth/signup'
 import SignInForm from '../../shared/auth/signin'
+import SignDescription from '../sign-description'
+import SocialButtons from '../../shared/auth/components/social-buttons.js'
 
 export default ({children}) => (
   <div>
     {children}
-    {/* <DevTools /> */}
+    { /* <DevTools /> */ }
     <ScrollManager />
     <FontAwesome />
     <Normalize />
 
     <Modal
-      name='signup'
+      name='signup-version1'
       title='Sign up and get started'
       subtitle='Build more and faster by leveraging existing backend code.'
       size='small'
       >
       <SignUpForm />
+    </Modal>
+
+    <Modal name='signup-version2'>
+      <div className='SignUpVersion2'>
+        <div className='SignUpVersion2__left-column'>
+          <SignDescription />
+        </div>
+        <div className='SignUpVersion2__right-column'>
+          <SignUpForm  />
+        </div>
+      </div>
+    </Modal>
+
+    <Modal
+      name='signup-version3'
+      title='Sign up and start building'
+      subtitle='Build serverless apps on Syncano for free. Set up your backend in minutes!'
+      >
+      <SignUpForm social />
     </Modal>
 
     <Modal
@@ -40,6 +61,17 @@ export default ({children}) => (
       >
       <SignInForm />
     </Modal>
+  
+    <style jsx>{`
+      .SignUpVersion2__left-column {
+        float: left;
+      }
+
+      .SignUpVersion2__right-column {
+        float: right;
+        max-width: 430px;
+      }
+    `}</style>
 
     <style jsx global>{`
       body,
