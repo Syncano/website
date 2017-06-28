@@ -11,7 +11,6 @@ import Features from './sections/features'
 import Innovation from './sections/innovation'
 import Sockets from './sections/sockets'
 import FAQ from './sections/faq'
-import getModalName from '../../services/modal.service.js'
 
 const Landing = ({
   toggleSignUpModal
@@ -183,7 +182,7 @@ const Landing = ({
 )
 
 Landing.init = ({
-  services: {ui: {toggleModal}}
+  services: {ui: {toggleModal,getModalName}}
 }) => ({
   toggleSignUpModal: (e) => {
     toggleModal(getModalName(e.target.className));

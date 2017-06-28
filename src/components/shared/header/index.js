@@ -4,7 +4,6 @@ import Link from '../../ui/link'
 import SiteNav from './site-nav'
 import UserNav from './user-nav'
 import Hexagons from './hexagons.svg'
-import getModalName from '../../../services/modal.service.js'
 
 const Header = ({
   title,
@@ -194,7 +193,7 @@ const Header = ({
 Header.init = ({
   theme = 'light',
   stores: {ui: {flags, pageStatus}},
-  services: {ui: {toggleFlag, toggleModal}},
+  services: {ui: {toggleFlag, toggleModal, getModalName}},
   ...props
 }) => {
   return {

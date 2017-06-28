@@ -70,4 +70,9 @@ export default class UI {
       }
     })
   }
+
+  getModalName(className){
+    const version = String(className).replace(/[\r\n]+/g," ").split(' ').find(item => /version/.test(item));
+    return `signup-${version || 'version1'}`
+  }
 }
