@@ -28,6 +28,15 @@ export default class UI {
     } catch (e) {}
   }
 
+  getOptimizelyModalName(baseName, className) {
+    const suffix = String(className)
+      .replace(/[\r\n]+/g, '')
+      .split(' ')
+      .find(item => /version/.test(item))
+
+    return `${baseName}${suffix ? `-${suffix}` : ''}`
+  }
+
   addHotjar () {
     const isLocal = window.location.hostname === 'localhost'
 
@@ -69,10 +78,5 @@ export default class UI {
         window.analytics.identify()
       }
     })
-  }
-
-  getModalName(className){
-    const version = String(className).replace(/[\r\n]+/g," ").split(' ').find(item => /version/.test(item));
-    return `signup-${version || 'version1'}`
   }
 }

@@ -193,16 +193,18 @@ const Header = ({
 Header.init = ({
   theme = 'light',
   stores: {ui: {flags, pageStatus}},
-  services: {ui: {toggleFlag, toggleModal, getModalName}},
+  services: {ui: {toggleFlag, toggleModal, getOptimizelyModalName}},
   ...props
 }) => {
   return {
     theme,
     flags,
     pageStatus,
-    toggleSignUp: (e) => {
-      toggleModal(getModalName(e.target.className));
-      window.analytics.track('Sign up Website');
+    toggleSignUp: e => {
+      const modalName = getOptimizelyModalName('signup', e.target.className)
+
+      window.analytics.track('Sign up Website')
+      toggleModal(modalName)
     },
     toggleSignIn: () => {
       window.analytics.track('Sign in Website')

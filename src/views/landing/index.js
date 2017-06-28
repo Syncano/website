@@ -182,11 +182,13 @@ const Landing = ({
 )
 
 Landing.init = ({
-  services: {ui: {toggleModal, getModalName}}
+  services: {ui: {toggleModal, getOptimizelyModalName}}
 }) => ({
-  toggleSignUpModal: (e) => {
-    toggleModal(getModalName(e.target.className));
-    window.analytics.track('Sign up Website');
+  toggleSignUpModal: e => {
+    const modalName = getOptimizelyModalName('signup', e.target.className)
+
+    window.analytics.track('Sign up Website')
+    toggleModal(modalName)
   }
 })
 
