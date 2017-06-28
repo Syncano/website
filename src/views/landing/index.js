@@ -182,13 +182,13 @@ const Landing = ({
 )
 
 Landing.init = ({
-  services: {ui: {toggleModal}}
+  services: {ui: {toggleModal, getOptimizelyModalName}}
 }) => ({
-  toggleSignUpModal: (e) => {
-    const version = e.target.className.replace(/[\r\n]+/g," ").split(' ').find(item => /version/.test(item))
-    const modalName = `signup-${version || 'version1'}`
-    toggleModal(modalName)
+  toggleSignUpModal: e => {
+    const modalName = getOptimizelyModalName('signup', e.target.className)
+
     window.analytics.track('Sign up Website')
+    toggleModal(modalName)
   }
 })
 

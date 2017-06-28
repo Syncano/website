@@ -28,6 +28,15 @@ export default class UI {
     } catch (e) {}
   }
 
+  getOptimizelyModalName(baseName, className) {
+    const suffix = String(className)
+      .replace(/[\r\n]+/g, '')
+      .split(' ')
+      .find(item => /version/.test(item))
+
+    return `${baseName}${suffix ? `-${suffix}` : ''}`
+  }
+
   addHotjar () {
     const isLocal = window.location.hostname === 'localhost'
 
