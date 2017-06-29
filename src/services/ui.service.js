@@ -33,8 +33,8 @@ export default class UI {
       .replace(/[\r\n]+/g, '')
       .split(' ')
       .find(item => /version/.test(item))
-
-    return `${baseName}${suffix ? `-${suffix}` : ''}`
+    
+    return `${baseName}-${suffix || 'version1'}`
   }
 
   addHotjar () {
