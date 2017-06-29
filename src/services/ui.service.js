@@ -29,12 +29,12 @@ export default class UI {
   }
 
   getOptimizelyModalName(baseName, className) {
-    let suffix = String(className)
+    const suffix = String(className)
       .replace(/[\r\n]+/g, '')
       .split(' ')
       .find(item => /version/.test(item))
-    suffix = suffix ? suffix : 'version1'
-    return `${baseName}-${suffix}`
+    
+    return `${baseName}-${suffix || 'version1'}`
   }
 
   addHotjar () {
