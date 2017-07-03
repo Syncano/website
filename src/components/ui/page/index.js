@@ -6,8 +6,6 @@ import ScrollManager from '../../ui/scroll-manager'
 import ForgotPasswordForm from '../../shared/auth/forgot-password'
 import SignUpForm from '../../shared/auth/signup'
 import SignInForm from '../../shared/auth/signin'
-import SignDescription from '../sign-description'
-import SocialButtons from '../../shared/auth/components/social-buttons.js'
 
 export default ({children}) => (
   <div>
@@ -26,15 +24,8 @@ export default ({children}) => (
       <SignUpForm />
     </Modal>
 
-    <Modal name='signup-version2'>
-      <div className='SignUpVersion2'>
-        <div className='SignUpVersion2__left-column'>
-          <SignDescription />
-        </div>
-        <div className='SignUpVersion2__right-column'>
-          <SignUpForm  />
-        </div>
-      </div>
+    <Modal name='signup-version2' hideClose>
+      <SignUpForm withQuotes />
     </Modal>
 
     <Modal
@@ -42,7 +33,7 @@ export default ({children}) => (
       title='Sign up and start building'
       subtitle='Build serverless apps on Syncano for free. Set up your backend in minutes!'
       >
-      <SignUpForm social />
+      <SignUpForm withSocialButtons />
     </Modal>
 
     <Modal
@@ -61,7 +52,7 @@ export default ({children}) => (
       >
       <SignInForm />
     </Modal>
-  
+
     <style jsx>{`
       .SignUpVersion2__left-column {
         float: left;

@@ -7,8 +7,12 @@ export default () => (
         margin-top: 30px;
       }
 
-      .AuthForm__column * + * {
+      .AuthForm__column .Button + .Button {
         margin-top: 15px;
+      }
+
+      .AuthForm__column--quotes {
+        margin: -30px -30px 30px -30px;
       }
 
       .AuthForm__separator {
@@ -41,6 +45,10 @@ export default () => (
         background-color: #fff;
       }
 
+      .AuthForm__submit {
+        margin-top: 15px;
+      }
+
       .AuthForm__footer {
         flex: 100%;
         display: flex;
@@ -63,16 +71,34 @@ export default () => (
         cursor: pointer;
       }
 
-      @media screen and (max-width: 599px) {
+      @media screen and (max-width: 759px) {
         .AuthForm__column {
           flex: 1 0 100%;
         }
+
+        .AuthForm--with-quotes {
+          margin-top: -20px;
+        }
+
+        .AuthForm__column--quotes {
+          background: #f5f5f5;
+          margin: -30px -50px 30px -50px;
+          padding: 30px 50px;
+        }
       }
 
-      @media screen and (min-width: 600px) {
+      @media screen and (min-width: 760px) {
         .AuthForm {
           display: flex;
           margin-top: 50px;
+        }
+
+        .AuthForm--quotes {
+          flex-wrap: nowrap;
+        }
+
+        .AuthForm--with-quotes {
+          margin-top: 0;
         }
 
         .AuthForm__separator {
@@ -102,6 +128,12 @@ export default () => (
           width: 220px;
         }
 
+        .AuthForm__column--quotes {
+          width: 285px;
+          margin: 0;
+          padding-right: 50px;
+        }
+
         .AuthForm__column--form {
           flex: 1;
           min-width: 360px;
@@ -109,6 +141,16 @@ export default () => (
 
         .AuthForm__footer {
           margin-top: 50px;
+        }
+
+        .AuthForm__footer--small-spacing {
+          margin-top: 30px;
+        }
+      }
+
+      @media screen and (max-width: 489px) {
+        .AuthForm__column--quotes {
+          margin: -30px -30px 30px -30px;
         }
       }
     `}</style>

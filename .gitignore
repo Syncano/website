@@ -13,6 +13,7 @@ node_modules
 .DS_Store
 Thumbs.db
 .envrc
+.vscode
 
 # Syncano
 syncano/.dist
