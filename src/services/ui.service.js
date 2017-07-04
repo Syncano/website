@@ -12,7 +12,8 @@ export default class UI {
     }
   }
 
-  @action.bound toggleModal (name) {
+  @action.bound toggleModal (name, data) {
+    this.store.modalData = data
     this.store.modal = this.store.modal === name ? null : name
   }
 
@@ -26,15 +27,6 @@ export default class UI {
 
       setTimeout(this.fetchServicesStatus, STATUS_PAGE_TIMEOUT)
     } catch (e) {}
-  }
-
-  getOptimizelyModalName(baseName, className) {
-    const suffix = String(className)
-      .replace(/[\r\n]+/g, '')
-      .split(' ')
-      .find(item => /version/.test(item))
-    
-    return `${baseName}-${suffix || 'version1'}`
   }
 
   addHotjar () {

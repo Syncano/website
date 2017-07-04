@@ -8,7 +8,7 @@ import SocialButtons from './components/social-buttons'
 const SignInForm = ({
   email, password, toggleModal, login, messages
 }) => (
-  <div className='AuthForm'>
+  <div className='AuthForm AuthForm--login'>
     <div className='AuthForm__column AuthForm__column--buttons'>
       <SocialButtons />
     </div>
@@ -18,7 +18,9 @@ const SignInForm = ({
         <Input full {...email} />
         <Input full {...password} />
       </InputList>
-      <Button full secondary>Sign in</Button>
+      <div className="AuthForm__submit">
+        <Button full secondary>Sign in</Button>
+      </div>
     </form>
     <div className='AuthForm__footer'>
       <div>

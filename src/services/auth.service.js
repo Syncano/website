@@ -4,6 +4,7 @@ import {action} from 'mobx'
 
 const LOGIN_URL = `${process.env.API_URL}/v1.1/account/auth/`
 const REGISTER_URL = `${process.env.API_URL}/v1.1/account/register/`
+const SET_PASSWORD_URL = `${process.env.API_URL}/v1.1/account/password/set/`
 const FORGOT_PASSWORD_URL = `${process.env.API_URL}/v1.1/account/password/reset/`
 
 export default class Auth {
@@ -51,7 +52,7 @@ export default class Auth {
 
   @action.bound socialAuth (network) {
     const {messages} = this.stores
-    const {request} = this.services
+    const {request, ui} = this.services
 
     this.hello(network).login(async social => {
       const {access_token} = social.authResponse
@@ -63,13 +64,43 @@ export default class Auth {
       try {
         const res = await request.post(`${LOGIN_URL}${social.network}/`, {access_token})
 
-        this.redirectToDashboard(res.data.account_key, res.data.created)
+        if (res.data.has_password) {
+          this.redirectToDashboard(res.data.account_key, res.data.created)
+        } else {
+          ui.toggleModal('set-password', res.data)
+        }
       } catch (err) {
+        console.log(err)
         messages.set('auth.social', err.message)
       }
     }, err => {
       messages.set('auth.social', err)
     })
+  }
+
+  @action.bound async setPassword ({password, account_key}) {
+    const {request} = this.services
+    const {messages} = this.stores
+
+    messages.delete('auth.set-password.errors')
+    messages.delete('auth.set-password.success')
+    messages.set('auth.set-password.pending')
+
+    try {
+      await request.post(SET_PASSWORD_URL, {password}, {
+        headers: {
+          'X-API-KEY': account_key
+        }
+      })
+
+      messages.set('auth.set-password.success', 'Check your inbox.')
+    } catch (err) {
+      const {data} = err.response
+
+      messages.set('auth.set-password.errors', data)
+    }
+
+    messages.delete('auth.set-password.pending')
   }
 
   @action.bound async resetPassword (credentials) {

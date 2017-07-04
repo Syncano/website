@@ -1,15 +1,16 @@
+import {connect} from 'zefir/utils'
+import {action} from 'mobx'
 // import DevTools from 'mobx-react-devtools'
 import FontAwesome from './styles/font-awesome'
 import Normalize from './styles/normalize'
 import Modal from '../modal'
 import ScrollManager from '../../ui/scroll-manager'
 import ForgotPasswordForm from '../../shared/auth/forgot-password'
+import SetPasswordForm from '../../shared/auth/set-password'
 import SignUpForm from '../../shared/auth/signup'
 import SignInForm from '../../shared/auth/signin'
-import SignDescription from '../sign-description'
-import SocialButtons from '../../shared/auth/components/social-buttons.js'
 
-export default ({children}) => (
+const Page = ({children, flags}) => (
   <div>
     {children}
     { /* <DevTools /> */ }
@@ -17,34 +18,46 @@ export default ({children}) => (
     <FontAwesome />
     <Normalize />
 
+    {{
+      'auth-version-1': (
+        <div key={1}>
+          <Modal
+
+            name='signup'
+            size='small'
+            title='Sign up and get started'
+            subtitle='Build more and faster by leveraging existing backend code.'>
+            <SignUpForm  />
+          </Modal>
+        </div>
+      ),
+      'auth-version-2': (
+        <div key={2}>
+          <Modal  name='signup' hideClose>
+            <SignUpForm withQuotes />
+          </Modal>
+        </div>
+      ),
+      'auth-version-3': (
+        <div key={3}>
+          <Modal
+            name='signup'
+            title='Sign up and start building'
+            subtitle='Build serverless apps on Syncano for free. Set up your backend in minutes!'>
+            <SignUpForm withSocialButtons />
+          </Modal>
+        </div>
+      ),
+    }[flags.get('page.auth-modal')]}
+
     <Modal
-      name='signup-version1'
-      title='Sign up and get started'
-      subtitle='Build more and faster by leveraging existing backend code.'
+      name='set-password'
+      title='Set up your password'
+      subtitle='You’re almost there!'
       size='small'
       >
-      <SignUpForm />
+      <SetPasswordForm />
     </Modal>
-
-    <Modal name='signup-version2'>
-      <div className='SignUpVersion2'>
-        <div className='SignUpVersion2__left-column'>
-          <SignDescription />
-        </div>
-        <div className='SignUpVersion2__right-column'>
-          <SignUpForm  />
-        </div>
-      </div>
-    </Modal>
-
-    <Modal
-      name='signup-version3'
-      title='Sign up and start building'
-      subtitle='Build serverless apps on Syncano for free. Set up your backend in minutes!'
-      >
-      <SignUpForm social />
-    </Modal>
-
     <Modal
       name='forgot-password'
       title='Forgot password'
@@ -61,17 +74,6 @@ export default ({children}) => (
       >
       <SignInForm />
     </Modal>
-  
-    <style jsx>{`
-      .SignUpVersion2__left-column {
-        float: left;
-      }
-
-      .SignUpVersion2__right-column {
-        float: right;
-        max-width: 430px;
-      }
-    `}</style>
 
     <style jsx global>{`
       body,
@@ -104,7 +106,7 @@ export default ({children}) => (
       }
 
       /* = WRAPPER
-       * ==================================================================== */
+      * ==================================================================== */
       .u-wrapper {
         padding-left: 30px;
         padding-right: 30px;
@@ -113,7 +115,7 @@ export default ({children}) => (
       }
 
       /* = HEADINGS
-       * ==================================================================== */
+      * ==================================================================== */
       .u-title {
         color: #0b0f15;
         font-weight: 300;
@@ -146,7 +148,7 @@ export default ({children}) => (
       }
 
       /* = TEXT-ALIGN
-       * ==================================================================== */
+      * ==================================================================== */
       .u-ta-c {
         text-align: center;
       }
@@ -167,3 +169,25 @@ export default ({children}) => (
     `}</style>
   </div>
 )
+
+Page.init = ({
+  stores: {ui: {flags}},
+  children
+}) => {
+  flags.set('page.auth-modal', 'auth-version-1')
+
+  const watchForAuthModalVersionClass = setInterval(action(() => {
+    const authModalVersion = document.body.className
+      .split(' ')
+      .find(item => /auth-version/.test(item))
+
+    if (authModalVersion) {
+      flags.set('page.auth-modal', authModalVersion)
+      clearInterval(watchForAuthModalVersionClass)
+    }
+  }), 100)
+
+  return {children, flags}
+}
+
+export default connect(Page)
