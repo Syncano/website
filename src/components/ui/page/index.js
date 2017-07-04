@@ -17,7 +17,6 @@ const Page = ({children, flags}) => (
     <FontAwesome />
     <Normalize />
 
-    {console.log(flags.get('page.auth-modal'))}
     {{
       'auth-version-1': (
         <div key={1}>
