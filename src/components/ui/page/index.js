@@ -6,6 +6,7 @@ import Normalize from './styles/normalize'
 import Modal from '../modal'
 import ScrollManager from '../../ui/scroll-manager'
 import ForgotPasswordForm from '../../shared/auth/forgot-password'
+import SetPasswordForm from '../../shared/auth/set-password'
 import SignUpForm from '../../shared/auth/signup'
 import SignInForm from '../../shared/auth/signin'
 
@@ -49,6 +50,14 @@ const Page = ({children, flags}) => (
       ),
     }[flags.get('page.auth-modal')]}
 
+    <Modal
+      name='set-password'
+      title='Set up your password'
+      subtitle='You’re almost there!'
+      size='small'
+      >
+      <SetPasswordForm />
+    </Modal>
     <Modal
       name='forgot-password'
       title='Forgot password'

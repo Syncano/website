@@ -7,20 +7,20 @@ const SocialButtons = ({authViaGithub, authViaGoogle, authViaFacebook, messages}
   <div>
     <div className='Join'>
       <div>
-        <Button full github onClick={authViaGithub}>
+        <Button full github type='button' onClick={authViaGithub}>
           <i className='fa fa-github' />
           <span className='Text'>Github</span>
         </Button>
       </div>
       <div>
-        <Button full google onClick={authViaGoogle}>
+        <Button full google type='button' onClick={authViaGoogle}>
           <i className='fa fa-google' />
           <i className='fa fa-plus' />
           <span className='Text'>Google</span>
         </Button>
       </div>
       <div>
-        <Button full facebook onClick={authViaFacebook}>
+        <Button full facebook type='button' onClick={authViaFacebook}>
           <i className='fa fa-facebook' />
           <span className='Text'>Facebook</span>
         </Button>
