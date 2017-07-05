@@ -4,10 +4,10 @@ import Avatar from '../../../ui/avatar'
 
 const quotes = [
   {
-    avatars: ['/static/img/testimonials/halvor-lande.png', '/static/img/testimonials/halvor-lande@2x.png'],
-    text: 'We chose to work with Syncano to create MVPs faster, and to increase the speed of experimentation with Fintech.',
-    author: 'Halvor Lande',
-    meta: 'CDO, DNB ASA'
+    avatars: ['/static/img/testimonials/artur-czmiel.png', '/static/img/testimonials/artur-czmiel@2x.png'],
+    text: 'We managed to build, launch and succeed with our Pokemon Go map app in just 48 hours of programming.',
+    author: 'Artur Czemiel',
+    meta: 'Developer & Founder, Aexol'
   },
   {
     avatars: ['/static/img/testimonials/stale-husby.png', '/static/img/testimonials/stale-husby@2x.png'],
@@ -16,10 +16,10 @@ const quotes = [
     meta: 'CEO, Relink'
   },
   {
-    avatars: ['/static/img/testimonials/artur-czmiel.png', '/static/img/testimonials/artur-czmiel@2x.png'],
-    text: 'We managed to build, launch and succeed with our Pokemon Go map app in just 48 hours of programming.',
-    author: 'Artur Czemiel',
-    meta: 'Developer & Founder, Aexol'
+    avatars: ['/static/img/testimonials/halvor-lande.png', '/static/img/testimonials/halvor-lande@2x.png'],
+    text: 'We chose to work with Syncano to create MVPs faster, and to increase the speed of experimentation with Fintech.',
+    author: 'Halvor Lande',
+    meta: 'CDO, DNB ASA'
   }
 ]
 
