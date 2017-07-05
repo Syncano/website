@@ -16,10 +16,10 @@ const quotes = [
     meta: 'CEO, Relink'
   },
   {
-    avatars: ['/static/img/testimonials/ingar-bentzen.png', '/static/img/testimonials/ingar-bentzen@2x.png'],
-    text: 'Syncano helps the startups in our Fintech and Insurtech accelerator programs to reach product market fit faster.',
-    author: 'Ingar S. Bentzen',
-    meta: 'CEO, The Factory'
+    avatars: ['/static/img/testimonials/artur-czmiel.png', '/static/img/testimonials/artur-czmiel@2x.png'],
+    text: 'We managed to build, launch and succeed with our Pokemon Go map app in just 48 hours of programming.',
+    author: 'Artur Czemiel',
+    meta: 'Developer & Founder, Aexol'
   }
 ]
 
