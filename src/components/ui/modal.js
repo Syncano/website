@@ -12,7 +12,8 @@ class Modal extends Component {
 
   render () {
     const {
-      title, subtitle, children, name, ui, toggle, full, size, noPadding, visible
+      title, subtitle, children, name, ui, toggle, full, size, noPadding,
+      visible, hideClose
     } = this.props
 
     return ui.modal === name || visible ? (
@@ -31,7 +32,9 @@ class Modal extends Component {
             Modal__content
             ${noPadding ? 'no-padding' : ''}
           `}>
-            <span className='Modal__close' onClick={toggle} />
+            {!hideClose && (
+              <span className='Modal__close' onClick={toggle} />
+            )}
             {title && (
               <h3 className='Modal__title'>{title}</h3>
             )}
@@ -152,8 +155,8 @@ class Modal extends Component {
               display: flex;
               align-items: center;
               justify-content: center;
-              padding-top: 90px;
-              padding-bottom: 90px;
+              padding-top: 30px;
+              padding-bottom: 30px;
             }
 
             .Modal--full .Modal__inner {

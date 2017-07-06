@@ -79,9 +79,8 @@ const CTA = ({toggleSignUpModal}) => (
 CTA.init = ({
   services: {ui: {toggleModal}}
 }) => ({
-  toggleSignUpModal: () => {
+  toggleSignUpModal: e => {
     window.analytics.track('Sign up Website')
-
     toggleModal('signup')
   }
 })

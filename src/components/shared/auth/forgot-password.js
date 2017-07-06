@@ -12,11 +12,14 @@ const ForgotPasswordForm = ({
       <InputList errors={messages.get('auth.forgot-password.errors')}>
         <Input full {...email} />
       </InputList>
-      <Button
-        full
-        secondary
-        disabled={messages.has('auth.forgot-password.pending')}
-        >Send instructions</Button>
+
+      <div className='AuthForm__submit'>
+        <Button
+          full
+          secondary
+          disabled={messages.has('auth.forgot-password.pending')}
+          >Send instructions</Button>
+      </div>
 
       {messages.has('auth.forgot-password.success') ? (
         <div className='AuthForm__message'>{messages.get('auth.forgot-password.success')}</div>

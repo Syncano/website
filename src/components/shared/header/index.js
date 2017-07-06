@@ -200,7 +200,7 @@ Header.init = ({
     theme,
     flags,
     pageStatus,
-    toggleSignUp: () => {
+    toggleSignUp: e => {
       window.analytics.track('Sign up Website')
       toggleModal('signup')
     },

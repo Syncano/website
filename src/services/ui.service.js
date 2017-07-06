@@ -12,7 +12,8 @@ export default class UI {
     }
   }
 
-  @action.bound toggleModal (name) {
+  @action.bound toggleModal (name, data) {
+    this.store.modalData = data
     this.store.modal = this.store.modal === name ? null : name
   }
 

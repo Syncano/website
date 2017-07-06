@@ -184,9 +184,8 @@ const Landing = ({
 Landing.init = ({
   services: {ui: {toggleModal}}
 }) => ({
-  toggleSignUpModal: () => {
+  toggleSignUpModal: e => {
     window.analytics.track('Sign up Website')
-
     toggleModal('signup')
   }
 })
