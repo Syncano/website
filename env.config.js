@@ -12,6 +12,7 @@ const envVars = [
   'HELLO_REDIRECT_URI',
   'DASHBOARD_URL',
   'ANALYTICS_WRITE_KEY',
+  'OPTIMIZELY_KEY',
   'API_URL'
 ]
 
