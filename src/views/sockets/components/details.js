@@ -20,7 +20,7 @@ const Details = ({store, pending}) => (
             <div>
               <h2 className='Details__header-title'>{get(store, 'details.name')}</h2>
               <div className='Details__header-author'>
-                by <span>{get(store, 'details.author', '').split('@')[0]}</span>
+                by <span>{get(store, 'details.author', '')}</span>
               </div>
             </div>
           </div>
