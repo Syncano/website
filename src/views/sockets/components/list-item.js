@@ -27,7 +27,7 @@ const ListItem = ({item, toggleModal}) => (
         size={32}
         email={item.author.display_name}
         />
-      <div>{item.author.display_name.split('@')[0]}</div>
+      <div>{item.author.display_name}</div>
     </div>
 
     <style jsx>{`
