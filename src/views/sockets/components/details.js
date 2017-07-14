@@ -184,10 +184,15 @@ function buildDocumentation ({
           result += '|----|----|-----------|-------|\n'
 
           Object.keys(key.parameters).forEach(parameter => {
-            const {type, example, description} = key.parameters[parameter]
+            let {type, example, description} = key.parameters[parameter]
+            if (typeof example === 'string' && example.match(/^\{|\[/))
+              example = JSON.parse(example)
+
             result += `${parameter || ''}|${type || '&mdash;'}|${description || '&mdash;'}|${
               ['object', 'array'].indexOf(typeof example) >= 0
                 ? JSON.stringify(example, null)
+                : typeof example === 'string'
+                ? example.replace('', '')
                 : example || '&mdash;'
             }\n`
           })
