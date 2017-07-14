@@ -201,25 +201,27 @@ function buildDocumentation ({
           }
 
           if (key.response.examples) {
-            key.response.examples.filter(item => Boolean(item.example)).forEach(example => {
-              let code
-              example.example = example.example.replace(/\n+$/, '')
+            key.response.examples
+              .filter(item => typeof item.example === 'string')
+              .forEach(example => {
+                let code
+                example.example = example.example.replace(/\n+$/, '')
 
-              try {
-                code = JSON.parse(example.example)
-                code = JSON.stringify(code, null, 2)
-              } catch (e) {
-                code = example.example
-              }
+                try {
+                  code = JSON.parse(example.example)
+                  code = JSON.stringify(code, null, 2)
+                } catch (e) {
+                  code = example.example
+                }
 
-              result += `\`\`\`\n${code}\n\`\`\`\n\n`
+                result += `\`\`\`\n${code}\n\`\`\`\n\n`
 
-              if (example.exit_code) {
-                result += `**Exit code:** ${example.exit_code}\n\n`
-              }
-              if (example.description) {
-                result += `**Description:** ${example.description}\n\n`
-              }
+                if (example.exit_code) {
+                  result += `**Exit code:** ${example.exit_code}\n\n`
+                }
+                if (example.description) {
+                  result += `**Description:** ${example.description}\n\n`
+                }
             })
           }
         }
