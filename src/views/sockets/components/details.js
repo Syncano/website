@@ -85,6 +85,13 @@ const Details = ({store, pending}) => (
         margin-right: auto;
       }
 
+      .Details__content :global(p),
+      .Details__content :global(h4),
+      .Details__content :global(pre),
+      .Details__content :global(table) {
+        margin-left: 30px;
+      }
+
       .Details__content :global(pre:first-of-type) {
         margin-top: 0;
         margin-bottom: 30px;
