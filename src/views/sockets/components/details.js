@@ -85,7 +85,7 @@ const Details = ({store, pending}) => (
         margin-right: auto;
       }
 
-      .Details__content :global(p),
+      .Details__content :global(p)),
       .Details__content :global(h4),
       .Details__content :global(pre),
       .Details__content :global(table) {
@@ -95,6 +95,11 @@ const Details = ({store, pending}) => (
       .Details__content :global(pre:first-of-type) {
         margin-top: 0;
         margin-bottom: 30px;
+        margin-left: 0;
+      }
+
+      .Details__content :global(p:first-of-type) {
+        margin-left: 0;
       }
 
       @media screen and (min-width: 490px) {
@@ -192,14 +197,17 @@ function buildDocumentation ({
 
           Object.keys(key.parameters).forEach(parameter => {
             let {type, example, description} = key.parameters[parameter]
-            if (typeof example === 'string' && example.match(/^\{|\[/))
-              example = JSON.parse(example)
+
+            try {
+              if (typeof example === 'string' && example.match(/^\{|\[/))
+                example = JSON.parse(example)
+            } catch (err) {}
 
             result += `${parameter || ''}|${type || '&mdash;'}|${description || '&mdash;'}|${
               ['object', 'array'].indexOf(typeof example) >= 0
                 ? JSON.stringify(example, null)
                 : typeof example === 'string'
-                ? example.replace('', '')
+                ? `\`${example.replace(/\n/g, '')}\``
                 : example || '&mdash;'
             }\n`
           })
