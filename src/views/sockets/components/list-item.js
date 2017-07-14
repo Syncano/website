@@ -16,7 +16,7 @@ const ListItem = ({item, toggleModal}) => (
           size={32}
           email={item.author.display_name}
           />
-        <div>{item.author.display_name.split('@')[0]}</div>
+        <div>{item.author.display_name}</div>
       </div>
       <p className='Socket__description'>{
         item.description.length > 70 ? `${item.description.substr(0, 70)}...` : item.description
@@ -114,7 +114,7 @@ const ListItem = ({item, toggleModal}) => (
         color: rgba(122, 127, 135, .8);
       }
 
-      @media screen and (min-width: 520px) {
+      @media screen and (min-width: 720px) {
         .Socket__author--mobile {
           display: none;
         }
@@ -131,10 +131,6 @@ const ListItem = ({item, toggleModal}) => (
       @media screen and (min-width: 921px) {
         .Socket__meta {
           max-width: 340px;
-        }
-
-        .Socket__author--desktop {
-          min-width: 200px;
         }
       }
     `}</style>
