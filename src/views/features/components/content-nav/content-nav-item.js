@@ -37,16 +37,14 @@ class ContentNavItem extends Component {
             font-size: 18px;
             padding: 15px 0 15px 0;
             cursor: pointer;
+            box-shadow: 0 4px 0 rgba(0, 0, 0, 0);
+            transition: box-shadow .6s ease
           }
 
           .ContentNav__item :global(svg) {
             width: 40%;
             transition-property: width, height, opacity;
             transition-duration: .25s;
-          }
-
-          .ContentNav__item.is-active {
-            box-shadow: 0 4px 0;
           }
 
           .ContentNav__item-text {
@@ -86,10 +84,10 @@ class ContentNavItem extends Component {
             border-image-slice: 1;
           }
 
-          .ContentNav__item:nth-child(1) {color: #009bac}
-          .ContentNav__item:nth-child(2) {color: #3637d1}
-          .ContentNav__item:nth-child(3) {color: #1765eb}
-          .ContentNav__item:nth-child(4) {color: #5100d0}
+          .ContentNav__item:nth-child(1).is-active {box-shadow: 0 4px 0 rgba(0, 155, 172, 1)}
+          .ContentNav__item:nth-child(2).is-active {box-shadow: 0 4px 0 rgba(54, 55, 209, 1)}
+          .ContentNav__item:nth-child(3).is-active {box-shadow: 0 4px 0 rgba(23, 101, 235, 1)}
+          .ContentNav__item:nth-child(4).is-active {box-shadow: 0 4px 0 rgba(81, 0, 208, 1)}
 
           :global(.sticky) .ContentNav {
             background-color: #fff;
@@ -108,13 +106,11 @@ ContentNavItem.init = ({
   section,
   sectionId,
   text,
-  active,
   stores: {featuresPage}
 }) => ({
   section,
   sectionId,
   text,
-  active,
   featuresPage
 })
 
