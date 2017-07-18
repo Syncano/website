@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "zefir",
     "build": "zefir build",
-    "start": "zefir start"
+    "start": "zefir start",
+    "lint": "jshint .",
+    "validate": "npm ls"
   },
   "dependencies": {
     "axios": "0.16.1",
@@ -32,6 +34,7 @@
     "babel-plugin-inline-react-svg": "0.4.0",
     "babel-plugin-transform-define": "^1.2.0",
     "mobx-react-devtools": "^4.2.11",
+    "precommit-hook": "^3.0.0",
     "standard": "^10.0.2"
   },
   "standard": {
