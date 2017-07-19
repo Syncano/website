@@ -17,7 +17,7 @@ const Landing = ({
 }) => (
   <Page>
     <Head>
-      <title>Syncano</title>
+      <title>Syncano - Accelerated Software Development</title>
     </Head>
 
     <Header theme='dark'>

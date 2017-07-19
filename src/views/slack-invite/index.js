@@ -11,7 +11,8 @@ const SlackInvite = ({
 }) => (
   <Page>
     <Head>
-      <title>Join Community - Syncano</title>
+      <title>Syncano - Join Community</title>
+      <meta name='description' content='Join the Syncano community and chat with other developers. Share ideas, learn, build together or ask us anything!' />
 
       <meta property='og:image' content='https://www.syncano.io/static/img/slack-invite/og-image.png' />
       <meta property='og:title' content='Get your Syncano Slack community invite' />

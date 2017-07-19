@@ -37,7 +37,8 @@ class Features extends Component {
     return (
       <Page>
         <Head>
-          <title>Product - Syncano</title>
+          <title>Syncano - Product Features</title>
+          <meta name="description">Syncano’s Serverless Platform and SDKs automatically assemble and deploy your backend to the cloud - all while you build your app.</meta>
         </Head>
 
         <StickyContainer>
