@@ -18,7 +18,7 @@ const Landing = ({
   <Page>
     <Head>
       <title>Syncano - Accelerated Software Development</title>
-      <meta name="Description" content="Don’t rebuild what has already been built. Syncano has hundreds of ready to use functions for your backend. Set up a scalable app in the cloud in just 45 seconds.">
+      <meta name="Description" content="Don’t rebuild what has already been built. Syncano has hundreds of ready to use functions for your backend. Set up a scalable app in the cloud in just 45 seconds."></meta>
     </Head>
 
     <Header theme='dark'>
