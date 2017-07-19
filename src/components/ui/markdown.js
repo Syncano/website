@@ -134,6 +134,12 @@ const Markdown = ({content}) => (
         padding: 8px 15px 8px 15px;
         border-left: 1px solid #e5e5e5;
         border-top: 1px solid #e5e5e5;
+        word-wrap: break-word;
+      }
+
+      div :global(td) :global(code) {
+        max-width: 410px;
+        display: block;
       }
 
       div :global(th:first-child),

@@ -259,9 +259,11 @@ const Sockets = ({
         font-size: 16px;
         display: inline-block;
         width: 130px;
-        /*cursor: pointer;*/
+        cursor: default;
         margin-bottom: 10px;
       }
+
+      .Socket--empty { cursor: pointer }
 
       .Socket__text {
         text-anchor: middle;

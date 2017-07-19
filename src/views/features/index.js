@@ -32,7 +32,7 @@ class Features extends Component {
   }
 
   render () {
-    const {featuresPage, toggleSignUpModal, scrollToTop} = this.props
+    const {toggleSignUpModal, scrollToTop} = this.props
 
     return (
       <Page>
@@ -48,22 +48,22 @@ class Features extends Component {
             />
           </div>
           <Sticky className='sticky-element'>
-            <ContentNav active={featuresPage.activeSection} />
+            <ContentNav />
           </Sticky>
 
-          <div ref={component => { Features.section0 = component }} className='AutomationSDKSection' id='AutomationSDKSection'>
+          <div  className='AutomationSDKSection' id='AutomationSDKSection'>
             <AutomationSDKSection />
           </div>
 
-          <div ref={component => { Features.section1 = component }} id='RegistriesSection'>
+          <div id='RegistriesSection'>
             <RegistriesSection toggleSignUpModal={toggleSignUpModal} />
           </div>
 
-          <div ref={component => { Features.section2 = component }} id='CloudOsSection'>
+          <div id='CloudOsSection'>
             <CloudOsSection toggleSignUpModal={toggleSignUpModal} />
           </div>
 
-          <div ref={component => { Features.section3 = component }} id='CommunitySection'>
+          <div id='CommunitySection'>
             <CommunitySection />
           </div>
 
@@ -103,18 +103,36 @@ class Features extends Component {
     )
   }
 
-  handleScroll = () => {
-    const {scrollTop} = document.body
-    let value = 0
-    let i = -1
+  // calculates the top offset for each of the features section
+  // add section ID to the sections array if a new section is added
+  getOffsetsArray() {
+    const sections = ['AutomationSDKSection', 'RegistriesSection', 'CloudOsSection', 'CommunitySection']
+    let offsets = []
 
-    while (i++ < 3) {
-      if (Features[`section${i}`].offsetTop <= scrollTop + 55) {
-        value = i
-      }
+    for (var i = 0; i < sections.length; i++) {
+      offsets.push(document.getElementById(sections[i]).offsetTop)
     }
 
-    this.props.setActiveSection(value)
+    return offsets
+  }
+
+  handleScroll = () => {
+    const {scrollTop} = document.body
+    const top = scrollTop + 55
+    const offsets = this.getOffsetsArray()
+
+    for (var i = 0; i < offsets.length; i++) {
+      const z = i + 1
+
+    // if between start and end of a section, set active section
+      if (top >= offsets[i] && top < offsets[z])  {
+        return this.props.setActiveSection(i)
+      } else if (top >= offsets[i] && z === offsets.length -1) {
+        const last = offsets.length - 1
+
+        this.props.setActiveSection(last)
+      }
+    }
   }
 }
 
