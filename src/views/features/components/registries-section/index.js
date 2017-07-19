@@ -247,6 +247,7 @@ const RegistriesSection = ({toggleSignUpModal}) => (
         display: inline-block;
         margin-bottom: 10px;
         position: absolute;
+        cursor: default;
       }
 
       .Socket:nth-child(2) { top: 63.7%; left: 12.2%; }
