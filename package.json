@@ -5,9 +5,7 @@
   "scripts": {
     "dev": "zefir",
     "build": "zefir build",
-    "start": "zefir start",
-    "lint": "jshint .",
-    "validate": "npm ls"
+    "start": "zefir start"
   },
   "dependencies": {
     "axios": "0.16.1",
