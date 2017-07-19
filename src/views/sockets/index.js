@@ -15,7 +15,8 @@ const Sockets = ({
 }) => (
   <Page>
     <Head>
-      <title>Sockets Registry - Syncano</title>
+      <title>Syncano - Sockets Registry</title>
+      <meta name="description">Sockets Registry is a collection of reusable backend components and integrations built by the Syncano community.</meta>
     </Head>
 
     <Header

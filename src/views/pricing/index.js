@@ -10,12 +10,13 @@ import PricingTable from './components/pricing-table'
 const Pricing = ({toggleSignUpModal}) => (
   <Page>
     <Head>
-      <title>Pricing - Syncano</title>
+      <title>Syncano - Pricing</title>
+      <meta name="description">Simple and flexible pricing model. 30-day money back guarantee. No contracts. Upgrade, downgrade, or cancel at any time.</meta>
     </Head>
 
     <Header theme='dark'>
       <div className='Header'>
-        <h1 className='Header_title'>At Syncano, we want to help you build technology that matters, faster</h1>
+        <h1 className='Header_title'>We help you build technology that matters, faster</h1>
         <h2 className='Header_subtitle'>30-day money back guarantee. No contracts. Upgrade, downgrade, or cancel at any time.</h2>
       </div>
 
