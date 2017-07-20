@@ -23,6 +23,7 @@ const Avatar = ({src, srcSet, size, email}) => {
 
         .Avatar {
           border-radius: 50%;
+          display: block;
         }
       `}</style>
     </div>

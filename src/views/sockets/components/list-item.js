@@ -2,38 +2,36 @@ import Hexagon from './hexagon'
 import Avatar from '../../../components/ui/avatar'
 import Link from '../../../components/ui/link'
 
-const ListItem = ({item, toggleModal}) => (
-  <li key={item.id} className='Socket'>
-    <div className='Socket__symbol'>
-      <Hexagon title={item.name} />
+const ListItem = ({item, toggleModal}) =>
+  <li key={item.id} className="Socket">
+    <div className="Socket__symbol">
+      <Link to={`/sockets/${item.name}`}>
+        <Hexagon title={item.name} />
+      </Link>
     </div>
-    <div className='Socket__meta'>
-      <h3 className='Socket__title'>
-        <Link to={`/sockets/${item.name}`}>{item.name}</Link>
+    <div className="Socket__meta">
+      <h3 className="Socket__title">
+        <Link to={`/sockets/${item.name}`}>
+          {item.name}
+        </Link>
       </h3>
-      <div className='Socket__author Socket__author--mobile'>
-        <Avatar
-          size={32}
-          email={item.author.display_name}
-          />
-        <div>{item.author.display_name}</div>
+      <p className="Socket__description">
+        {item.description.length > 140
+          ? `${item.description.substr(0, 140)}...`
+          : item.description}
+      </p>
+      <div className="Socket__author">
+        <Avatar size={16} email={item.author.display_name} />
+        <div className="Socket__author-name">
+          {item.author.display_name}
+        </div>
       </div>
-      <p className='Socket__description'>{
-        item.description.length > 70 ? `${item.description.substr(0, 70)}...` : item.description
-      }</p>
-    </div>
-    <div className='Socket__author Socket__author--desktop'>
-      <Avatar
-        size={32}
-        email={item.author.display_name}
-        />
-      <div>{item.author.display_name}</div>
     </div>
 
     <style jsx>{`
       .Socket {
         display: flex;
-        align-items: center;
+        align-items: top;
       }
 
       .Socket + .Socket {
@@ -45,10 +43,6 @@ const ListItem = ({item, toggleModal}) => (
       .Socket__symbol {
         margin-right: 30px;
         display: none;
-      }
-
-      .Socket__meta {
-        width: 100%;
       }
 
       .Socket__title {
@@ -82,59 +76,20 @@ const ListItem = ({item, toggleModal}) => (
         font-size: 14px;
         line-height: 1.29;
         color: rgba(47, 51, 57, .8);
+        align-items: center;
+        margin-top: 7px;
       }
 
-      .Socket__author--mobile {
-        float: right;
-      }
-
-      .Socket__author--mobile div {
-        padding-left: 5px;
-      }
-
-      .Socket__author--mobile :global(img) {
-        width: 16px;
-        height: auto;
-      }
-
-      .Socket__author--desktop {
-        display: none;
-        padding-left: 20px;
-      }
-
-      .Socket__author--desktop div {
-        padding-left: 15px;
-      }
-
-      .Socket__author--desktop div::before {
-        content: 'Made by';
-        display: block;
-        font-size: 12px;
-        line-height: 1.5;
-        color: rgba(122, 127, 135, .8);
+      .Socket__author-name {
+        margin-left: 7px;
       }
 
       @media screen and (min-width: 720px) {
-        .Socket__author--mobile {
-          display: none;
-        }
-
-        .Socket__author--desktop {
-          display: flex;
-        }
-
         .Socket__symbol {
           display: inline-block;
         }
       }
-
-      @media screen and (min-width: 921px) {
-        .Socket__meta {
-          max-width: 340px;
-        }
-      }
     `}</style>
   </li>
-)
 
 export default ListItem

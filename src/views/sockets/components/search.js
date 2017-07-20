@@ -22,7 +22,7 @@ Search.form = {
   formName: 'SocketsSearchForm',
   fields: {
     search: {
-      placeholder: 'Search for Search'
+      placeholder: 'Search for Syncano Sockets'
     }
   }
 }
