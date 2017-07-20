@@ -6,7 +6,7 @@ const ListItem = ({item, toggleModal}) =>
   <li key={item.id} className="Socket">
     <div className="Socket__symbol">
       <Link to={`/sockets/${item.name}`}>
-        <Hexagon title={item.name} />
+        <Hexagon title={item.name} fill={item.icon.background} />
       </Link>
     </div>
     <div className="Socket__meta">

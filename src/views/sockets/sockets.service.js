@@ -1,7 +1,7 @@
 import {action, runInAction} from 'mobx'
 
-const SOCKETS_LIST = `${process.env.SYNCANO_REGISTRY_URL}/registry/list/`
-const SOCKETS_GET = `${process.env.SYNCANO_REGISTRY_URL}/registry/get/`
+const SOCKETS_LIST = `${process.env.SYNCANO_REGISTRY_URL}/registry/list/`;
+const SOCKETS_GET = `${process.env.SYNCANO_REGISTRY_URL}/registry/get/`;
 
 export default class {
   @action.bound async fetch () {

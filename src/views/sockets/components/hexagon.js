@@ -1,11 +1,11 @@
 import Icon from './icon.svg'
 import Hexagon from '../../../components/ui/hexagon'
 
-export default ({onClick, title}) => (
+export default ({onClick, fill, title}) => (
   <div>
     <div className='Hexagon' title={title} onClick={onClick}>
       <div className='Hexagon__icon'><Icon /></div>
-      <Hexagon width={80} fill='#4c38d0' />
+      <Hexagon width={80} fill={fill || '#4c38d0'} />
     </div>
 
     <style jsx>{`
