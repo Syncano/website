@@ -1,8 +1,8 @@
-import Remarkable from 'react-remarkable'
+import {MarkdownPreview} from 'react-marked-markdown'
 
 const Markdown = ({content}) => (
   <div>
-    <Remarkable source={content} />
+    <MarkdownPreview value={content} />
 
     <style jsx>{`
       div :global(h2),

@@ -192,8 +192,8 @@ function buildDocumentation ({
 
         if (Object.keys(key.parameters || {}).length) {
           result += `#### Parameters \n\n`
-          result += '|Name|Type|Description|Example|\n'
-          result += '|----|----|-----------|-------|\n'
+          result += '| Name | Type | Description | Example |\n'
+          result += '| ---- | ---- | ----------- | ------- |\n'
 
           Object.keys(key.parameters).forEach(parameter => {
             let {type, example, description} = key.parameters[parameter]
@@ -203,13 +203,13 @@ function buildDocumentation ({
                 example = JSON.parse(example)
             } catch (err) {}
 
-            result += `${parameter || ''}|${type || '&mdash;'}|${description || '&mdash;'}|${
+            result += `| ${parameter || ''} | ${type || '&mdash;'} | ${description || '&mdash;'} | ${
               ['object', 'array'].indexOf(typeof example) >= 0
                 ? JSON.stringify(example, null)
                 : typeof example === 'string'
                 ? `\`${example.replace(/\n/g, '')}\``
                 : example || '&mdash;'
-            }\n`
+            } |\n`
           })
         }
 
