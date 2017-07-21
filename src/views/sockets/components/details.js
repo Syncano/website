@@ -15,7 +15,10 @@ const Details = ({store, pending}) => (
         <div className='Details__header'>
           <div className='Details__header-inner'>
             <div className='Details__header-symbol'>
-              <Hexagon />
+              <Hexagon
+                icon={get(store, 'details.icon.url')}
+                fill={get(store, 'details.icon.background')}
+              />
             </div>
             <div>
               <h2 className='Details__header-title'>{get(store, 'details.name')}</h2>
@@ -28,7 +31,7 @@ const Details = ({store, pending}) => (
         <div className='Details__content'>
           <Markdown
             content={buildDocumentation(get(store, 'details.config', {}))}
-            />
+          />
         </div>
       </div>
     )}
@@ -85,11 +88,15 @@ const Details = ({store, pending}) => (
         margin-right: auto;
       }
 
-      .Details__content :global(p)),
+      .Details__content :global(p),
       .Details__content :global(h4),
       .Details__content :global(pre),
       .Details__content :global(table) {
         margin-left: 30px;
+      }
+
+      .Details__content :global(table) {
+        width: calc(100% - 30px);
       }
 
       .Details__content :global(pre:first-of-type) {
