@@ -55,6 +55,15 @@ const CLI = () => (
         position: relative;
       }
 
+      @media screen and (max-width: 560px) {
+        .CLI {
+          width: 100vw;
+          left: calc(-50vw + 50%);
+          box-shadow: none;
+          min-height: 340px;
+        }
+      }
+
       .CLI__buttons {
         position: absolute;
         top: 12px;
@@ -88,6 +97,29 @@ const CLI = () => (
         font-weight: 600;
         letter-spacing: .1em;
         color: #b3bece;
+      }
+
+      @media screen and (max-width: 560px) {
+        .CLI__lines {
+          margin: 0 auto;
+          display: table;
+          font-weight: 100;
+          letter-spacing: initial;
+        }
+      }
+
+      @media screen and (min-width: 461px) and (max-width: 560px) {
+        .CLI__lines {
+          padding: 30px 16px 0;
+          font-size: 14px;
+        }
+      }
+
+      @media screen and (max-width: 460px) {
+        .CLI__lines {
+          padding: 30px 0 0;
+          font-size: 10px;
+        }
       }
 
       .CLI__line-scope {
