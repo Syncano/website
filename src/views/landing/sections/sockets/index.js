@@ -167,6 +167,19 @@ const Sockets = ({
         min-height: 41px;
       }
 
+      @media screen and (max-width: 680px) {
+        .Project__title {
+          min-height: 82px;
+          font-size: 28px;
+        }
+      }
+
+      @media screen and (max-width: 370px) {
+        .Project__title {
+          font-size: 24px;
+        }
+      }
+
       .u-title {
         color: #fff;
       }
