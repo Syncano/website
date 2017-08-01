@@ -1,3 +1,4 @@
+import get from 'lodash.get'
 import Hexagon from './hexagon'
 import Avatar from '../../../components/ui/avatar'
 import Link from '../../../components/ui/link'
@@ -8,8 +9,8 @@ const ListItem = ({item, toggleModal}) =>
       <Link to={`/sockets/${item.name}`}>
         <Hexagon
           title={item.name}
-          fill={item.icon.background}
-          icon={item.icon.url}
+          fill={get(item, 'icon.background')}
+          icon={get(item, 'icon.url')}
         />
       </Link>
     </div>
