@@ -19,6 +19,9 @@ const SiteNav = ({isOpen, theme, toggleSignIn, closeNav}) => (
             </Nav>
           </div>
         </div>
+        <Link to='/sockets'>
+          <span className='Site-nav__item'>Sockets</span>
+        </Link>
         <Link to='/pricing'>
           <span className='Site-nav__item'>Plans &amp; Pricing</span>
         </Link>
