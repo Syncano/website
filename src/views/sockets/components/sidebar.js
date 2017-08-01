@@ -2,23 +2,20 @@ import {connect} from 'zefir/utils'
 import SortList from './sort-list'
 import Search from './search'
 
-const Sidebar = ({
-  store: {sortDirection, sortBy},
-  handleSortChange
-}) => (
-  <aside className='Sidebar'>
-    <div className='Search'>
+const Sidebar = ({store: {sortDirection, sortBy}, handleSortChange}) =>
+  <aside className="Sidebar">
+    <div className="Search">
       <Search />
     </div>
 
-    <h4 className='Sidebar__title'>Order sockets</h4>
-    <div className='Sidebar__box'>
+    <h4 className="Sidebar__title">Order sockets</h4>
+    <div className="Sidebar__box">
       <SortList
         handleClick={handleSortChange}
         direction={sortDirection}
         active={sortBy}
         items={['None', 'Name', 'Author']}
-        />
+      />
     </div>
 
     <style jsx>{`
@@ -33,7 +30,7 @@ const Sidebar = ({
         border-radius: 4px;
         background-color: #ffffff;
         box-shadow: 0 1px 2px 0 rgba(11, 15, 21, 0.1);
-        border: solid 1px rgba(11, 15, 21, 0.07)
+        border: solid 1px rgba(11, 15, 21, 0.07);
       }
 
       .Sidebar :global(.Menu__item::before) {
@@ -41,24 +38,20 @@ const Sidebar = ({
       }
 
       .Search {
-        margin-bottom: 15px
+        margin-bottom: 15px;
       }
     `}</style>
   </aside>
-)
 
-Sidebar.init = ({
-  stores: {sockets: store},
-  services: {sockets}
-}) => ({
+Sidebar.init = ({stores: {sockets: store}, services: {sockets}}) => ({
   store,
-  handleSortChange: (name) => {
+  handleSortChange: name => {
     if (name === store.sortBy) {
       sockets.toggleSortDirection()
     }
 
     sockets.sortBy(name)
-  }
+  },
 })
 
 export default connect(Sidebar)

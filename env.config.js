@@ -13,7 +13,8 @@ const envVars = [
   'DASHBOARD_URL',
   'ANALYTICS_WRITE_KEY',
   'OPTIMIZELY_KEY',
-  'API_URL'
+  'API_URL',
+  'SYNCANO_REGISTRY_URL'
 ]
 
 const variables = envVars

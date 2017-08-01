@@ -6,16 +6,17 @@ import Header from '../../components/shared/header'
 import Grid from '../../components/ui/grid'
 import Modal from '../../components/ui/modal'
 import CTA from '../../components/shared/cta'
-import Sidebar from './components/sidebar'
 import List from './components/list'
 import Details from './components/details'
+import Search from './components/search'
 
 const Sockets = ({
   router: {history: {push}}
 }) => (
   <Page>
     <Head>
-      <title>Sockets Registry - Syncano</title>
+      <title>Syncano - Sockets Registry</title>
+      <meta name="description">Sockets Registry is a collection of reusable backend components and integrations built by the Syncano community.</meta>
     </Head>
 
     <Header
@@ -24,14 +25,13 @@ const Sockets = ({
       />
 
     <div className='Section u-wrapper'>
-      <Grid wrap>
-        <div className='Section__sidebar'>
-          <Sidebar />
-        </div>
-        <div className='Section__list'>
-          <List />
-        </div>
-      </Grid>
+      <div className="Seciton__search">
+        <Search />
+      </div>
+
+      <div className='Section__list'>
+        <List />
+      </div>
     </div>
 
     <CTA />
@@ -51,31 +51,11 @@ const Sockets = ({
       }
 
       .Section {
-        max-width: 980px;
-      }
-
-      .Section__sidebar {
-        flex: 1;
+        max-width: 660px;
       }
 
       .Section__list {
-        flex: 100%;
         margin-top: 30px;
-      }
-
-      @media screen and (min-width: 921px) {
-        div :global(.Grid) {
-          flex-wrap: nowrap;
-        }
-
-        .Section__sidebar {
-          max-width: 270px;
-        }
-
-        .Section__list {
-          margin-top: 0;
-          flex: 1;
-        }
       }
     `}</style>
   </Page>

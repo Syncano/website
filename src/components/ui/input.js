@@ -1,4 +1,4 @@
-const Input = ({full, white, ...props}) => (
+const Input = ({full, white, clearable, handleClear, ...props}) => (
   <div
     className={`
       Input
@@ -6,9 +6,14 @@ const Input = ({full, white, ...props}) => (
       ${white ? 'Input--white' : ''}
     `}>
     <input {...props} />
+
+    {clearable && props.value && (
+      <span className="Input__clear fa fa-times" onClick={handleClear} />
+    )}
     <style jsx>{`
       div {
         display: inline-block;
+        position: relative;
       }
 
       input {
@@ -25,6 +30,17 @@ const Input = ({full, white, ...props}) => (
         outline: none;
         border-color: #3871d0;
         box-shadow: 0 0 0 3px rgba(56, 113, 208, 0.15);
+      }
+
+      .Input__clear {
+        position: absolute;
+        top: 50%;
+        line-height: 20px;
+        font-size: 14px;
+        margin-top: -10px;
+        right: 16px;
+        cursor: pointer;
+        color: #999;
       }
 
       .Input--full {
