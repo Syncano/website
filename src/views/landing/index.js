@@ -168,6 +168,10 @@ const Landing = ({
       }
 
       @media screen and (max-width: 560px) {
+        .CLI__inner {
+          min-height: 360px;
+        }
+
         .HiddenAtSm {
           display: none;
         }

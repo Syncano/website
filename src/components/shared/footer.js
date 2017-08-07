@@ -41,7 +41,7 @@ const Footer = () => (
             <a className='Navigation__link' href='http://status.syncano.com/'>Help &amp; Status</a>
           </Nav>
         </div>
-        <div className='Navigation__column'>
+        <div className='Navigation__column Navigation__resources'>
           <h5 className='Navigation__head'>Resources</h5>
           <Nav stack>
             <a className='Navigation__link' href='https://syncano.github.io/syncano-node-cli/#/'>Documentation</a>
@@ -122,6 +122,20 @@ const Footer = () => (
 
       .Navigation__column--split :global(li) {
         flex-basis: 50%;
+      }
+
+      @media screen and (max-width: 460px) {
+        .Navigation__resources {
+          order: 2;
+        }
+
+        .Navigation__column.Navigation__column--split {
+          flex: 1 1 100%;
+        }
+
+        .Navigation__column--split :global(ul) {
+          width: 108%;
+        }
       }
 
       .Navigation__head {
