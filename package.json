@@ -24,7 +24,7 @@
     "react-marked-markdown": "^1.4.2",
     "react-rotating-text": "^1.2.0",
     "react-sticky": "^5.0.8",
-    "svg-react-loader": "next",
+    "svg-react-loader": "0.4.0",
     "syncano-cli": "beta",
     "zefir": "beta"
   },
@@ -32,8 +32,8 @@
     "babel-eslint": "^7.2.3",
     "babel-plugin-inline-react-svg": "0.4.0",
     "babel-plugin-transform-define": "^1.2.0",
+    "html-webpack-plugin": "^2.30.1",
     "mobx-react-devtools": "^4.2.11",
-    "precommit-hook": "^3.0.0",
     "standard": "^10.0.2"
   },
   "standard": {
