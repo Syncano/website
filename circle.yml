@@ -16,6 +16,8 @@ dependencies:
   override:
     - yarn
     - yarn global add syncano-cli@beta
+    # the line below is a hack for permissions issues in zefir package. remove when fixed.
+    - chmod -R u+x node_modules
 test:
   override:
     - yarn run build
