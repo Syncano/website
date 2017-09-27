@@ -4,6 +4,7 @@ import CTA from '../../components/shared/cta'
 import Hexagon from '../../components/ui/hexagon'
 import {MatchAsGuest, MatchAsMember} from '../../components/ui/router'
 import CLI from '../../components/shared/cli'
+import YouTube from '../../components/shared/youTube'
 import Head from '../../components/ui/head'
 import Button from '../../components/ui/button'
 import Page from '../../components/ui/page'
@@ -45,6 +46,14 @@ const Landing = ({
         <div className='CLI'>
           <div className='CLI__inner'>
             <CLI />
+            <div className="VideoPlayer VideoPlayer--hidden">
+              <YouTube
+                video='XC3-DoDFLLw'
+                autoplay='0'
+                rel='0'
+                showInfo='0'
+              />
+            </div>
             <div className='HiddenAtSm'>
               <Hexagon width={32} fill='#7C51CD' position={{top: '-13px', right: '60px'}} />
               <Hexagon width={54} fill='#197eee' position={{top: '25%', right: '-27px'}} />
@@ -181,6 +190,18 @@ const Landing = ({
         .HiddenAtMd {
           display: none;
         }
+      }
+
+      /* = VIDEO PLAYER
+       * ==================================================================== */
+
+       .VideoPlayer {
+         height: 100%;
+         width: 100%;
+       }
+
+      .VideoPlayer--hidden {
+        display: none;
       }
     `}</style>
   </Page>
