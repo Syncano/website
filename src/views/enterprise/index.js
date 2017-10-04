@@ -4,6 +4,7 @@ import Page from '../../components/ui/page'
 import Footer from '../../components/shared/footer'
 import Header from '../../components/shared/header'
 import EnterpriseCTA from './components/enterpriseCta'
+import EnterpriseTestimonials from './components/enterpriseTestimonials'
 
 const Enterprise = ({
   router: {history: {push}}
@@ -18,6 +19,7 @@ const Enterprise = ({
       title='Increase software development speed in your organization'
       subtitle="Tomorrow’s market is not won with yesterday’s services. Innovate at the speed of a startup."
       />
+    <EnterpriseTestimonials />
     <EnterpriseCTA />
     <Footer />
 
