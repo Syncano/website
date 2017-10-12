@@ -1,0 +1,115 @@
+import Header from '../../../components/shared/header'
+import IconServer from '../../../static/img/enterprise/server-check.svg'
+import IconIntegrations from '../../../static/img/enterprise/code-1.svg'
+import IconDevelopment from '../../../static/img/enterprise/window-code.svg'
+import IconTraining from '../../../static/img/enterprise/graduation-cap.svg'
+
+const EnterpriseFeatures = () => (
+  <div className='Section u-wrapper'>
+    <div className='Section__header u-ta-c'>
+      <h2 className='u-title'>Get access to exclusive enterprise features</h2>
+    </div>
+    <div className="Feature-list">
+      <div className="Feature">
+        <div className="Feature__icon Feature__icon-server">
+          <IconServer />
+        </div>
+        <div className="Feature__header">
+          <span>Self-hosted</span>
+        </div>
+        <div className="Feature__text">
+          Host Syncano on your infrastructure and get maximum control and security combined with the scalability of your solution.
+        </div>
+      </div>
+      <div className="Feature">
+        <div className="Feature__icon">
+          <IconIntegrations />
+        </div>
+        <div className="Feature__header">
+          <span>Custom integrations</span>
+        </div>
+        <div className="Feature__text">
+          Easily connect your existing API’s and databases with Syncano through Sockets - scripts that execute code in the cloud and make it simple to write any integration.
+        </div>
+      </div>
+      <div className="Feature">
+        <div className="Feature__icon">
+          <IconDevelopment />
+        </div>
+        <div className="Feature__header">
+          <span>Development</span>
+        </div>
+        <div className="Feature__text">
+          No resources? Get access to our crowd of developers who already use Syncano. They will help you build your next killer service on request.
+        </div>
+      </div>
+      <div className="Feature">
+        <div className="Feature__icon">
+          <IconTraining />
+        </div>
+        <div className="Feature__header">
+          <span>Support & Training</span>
+        </div>
+        <div className="Feature__text">
+          Receive first-class training and support from a dedicated team of Syncano specialists working for you on-site.
+        </div>
+      </div>
+    </div>
+    <style jsx>{`
+      .Section {
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.0), #ffffff), linear-gradient(#f5f6f9, #f5f6f9);
+      }
+
+      .Section__header {
+        padding-top: 111px;
+        margin-bottom: 100px;
+      }
+
+      .Section__header .u-title {
+        max-width: 526px;
+        margin: 0 auto;
+      }
+
+      .Feature-list {
+        display: flex;
+        justify-content: center;
+        height: 500px;
+      }
+
+      .Feature {
+        width: 273px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 13px;
+      }
+
+      .Feature__header {
+        font-weight: normal;
+        font-size: 24px;
+        color: #0b0f15;
+        margin: 13px 0;
+      }
+
+      .Feature__icon {
+        fill: #8d9299;
+        font-size: 72px;
+        opacity: 0.5;
+      }
+
+      .Feature__icon-server {
+        font-size: 46px;
+      }
+
+      .Feature__text {
+        font-size: 20px;
+        line-height: 30px;
+        color: #8d9299;
+        text-align: center;
+
+      }
+    `}</style>
+  </div>
+)
+
+export default EnterpriseFeatures

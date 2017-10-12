@@ -72,6 +72,7 @@ const EnterpriseTestimonials = () => (
         padding-top: 30px;
         max-width: 1230px;
         position: relative;
+        margin: 0 auto;
       }
 
       /* = TESTIMONIAL
@@ -84,7 +85,6 @@ const EnterpriseTestimonials = () => (
           display: flex;
           justify-content: center;
           flex-wrap: wrap;
-          align-items: center;
           margin-left: -30px;
           margin-bottom: -30px;
           margin-top: -90px;
