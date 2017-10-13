@@ -1,4 +1,5 @@
 import Logo from '../../../components/ui/logo'
+import Hexagon from '../../../components/ui/hexagon'
 
 const EnterpriseComponents = () => (
   <div className='Section u-wrapper'>
@@ -29,6 +30,11 @@ const EnterpriseComponents = () => (
             <li>Have our innovation specialists guide you through the process</li>
           </ul>
         </div>
+      </div>
+      <div className="HiddenAtMd">
+        <Hexagon width={70} fill='#45cdf2' position={{bottom: '-121%', right: '-35px'}} />
+        <Hexagon width={52} fill='#85b6ec' position={{bottom: '-87%', left: '96px'}} />
+        <Hexagon width={18} fill='#6345f2' position={{bottom: '-154%', left: '80px'}} />
       </div>
     </div>
     <style jsx>{`
@@ -92,6 +98,12 @@ const EnterpriseComponents = () => (
           margin-right: 1.6em;
           background-color: #3cdc9e;
           vertical-align: middle;
+      }
+
+      @media screen and (max-width: 960px) {
+        .HiddenAtMd {
+          display: none;
+        }
       }
     `}</style>
   </div>

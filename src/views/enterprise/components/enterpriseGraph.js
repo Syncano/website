@@ -1,4 +1,6 @@
 import IconTransformation from '../../../static/img/enterprise/transformation.svg'
+import Hexagon from '../../../components/ui/hexagon'
+
 
 const EnterpriseGraph = () => (
   <div className='Section u-wrapper'>
@@ -9,6 +11,14 @@ const EnterpriseGraph = () => (
       </div>
       <div className="EnterpriseGraph__image">
         <IconTransformation />
+      </div>
+      <div className='HiddenAtSm'>
+        <Hexagon width={42} fill='#4597f2' position={{bottom: '-6%', left: '-18px'}} />
+      </div>
+      <div className="HiddenAtMd">
+        <Hexagon width={32} fill='#2699cb' position={{bottom: '-20%', right: '150px'}} />
+        <Hexagon width={32} fill='#6345f2' position={{bottom: '-38%', left: '180px'}} />
+        <Hexagon width={52} fill='#4597f2' position={{bottom: '-68%', right: '-1%'}} />
       </div>
     </div>
     <style jsx>{`
@@ -47,6 +57,18 @@ const EnterpriseGraph = () => (
       @media screen and (max-width: 760px) {
         .EnterpriseGraph__image {
           padding-bottom: 60px;
+        }
+      }
+
+      @media screen and (max-width: 560px) {
+        .HiddenAtSm {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 960px) {
+        .HiddenAtMd {
+          display: none;
         }
       }
     `}</style>

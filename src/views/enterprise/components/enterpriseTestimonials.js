@@ -3,14 +3,13 @@ import Avatar from '../../../components/ui/avatar'
 
 const EnterpriseTestimonials = () => (
   <div className='Section u-wrapper'>
-    <Hexagon width={64} fill='#05b470' position={{top: '-22px', left: '-50px'}} />
-    <Hexagon width={42} fill='#b4f2da' position={{bottom: '-35px', left: '-40px'}} />
-
+    <div className="HiddenAtMd">
+      <Hexagon width={62} fill='#adcdf0' position={{top: '80px', right: '0px'}} />
+      <Hexagon width={52} fill='#4597f2' position={{top: '50%', left: '-206px'}} />
+      <Hexagon width={32} fill='#6345f2' position={{bottom: '-10%', left: '300px'}} />
+    </div>
     <div className='Testimonial-list'>
     <blockquote className='Testimonial'>
-      <Hexagon width={42} fill='#60e0ae' position={{top: '-25px', right: '15px'}} />
-      <Hexagon width={32} fill='#b4f2da' position={{bottom: '-45px', right: '20px'}} />
-
       <div className='Testimonial__inner'>
         <Avatar
           src='/static/img/testimonials/sven-sunde.png'
@@ -45,8 +44,6 @@ const EnterpriseTestimonials = () => (
         </div>
       </blockquote>
       <blockquote className='Testimonial'>
-        <Hexagon width={52} fill='#b4f2da' position={{bottom: '-35px', right: '20px'}} />
-
         <div className='Testimonial__inner'>
           <Avatar
             src='/static/img/testimonials/ingar-bentzen.png'
@@ -159,6 +156,12 @@ const EnterpriseTestimonials = () => (
 
       @media screen and (max-width: 780px) {
         .HiddenAtSm {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 960px) {
+        .HiddenAtMd {
           display: none;
         }
       }

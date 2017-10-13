@@ -3,6 +3,7 @@ import IconServer from '../../../static/img/enterprise/server-check.svg'
 import IconIntegrations from '../../../static/img/enterprise/code-1.svg'
 import IconDevelopment from '../../../static/img/enterprise/window-code.svg'
 import IconTraining from '../../../static/img/enterprise/graduation-cap.svg'
+import Hexagon from '../../../components/ui/hexagon'
 
 const EnterpriseFeatures = () => (
   <div className='Section u-wrapper'>
@@ -53,6 +54,11 @@ const EnterpriseFeatures = () => (
         <div className="Feature__text">
           Receive first-class training and support from a dedicated team of Syncano specialists working for you on-site.
         </div>
+      </div>
+      <div className="HiddenAtMd">
+        <Hexagon width={26} fill='#45c5f2' position={{bottom: '-163%', right: '260px'}} />
+        <Hexagon width={38} fill='#4597f2' position={{bottom: '-188%', right: '26%'}} />
+        <Hexagon width={28} fill='#3cdd9e' position={{bottom: '-192%', left: '21%'}} />
       </div>
     </div>
     <style jsx>{`
@@ -120,6 +126,12 @@ const EnterpriseFeatures = () => (
         color: #8d9299;
         text-align: center;
 
+      }
+
+      @media screen and (max-width: 960px) {
+        .HiddenAtMd {
+          display: none;
+        }
       }
     `}</style>
   </div>

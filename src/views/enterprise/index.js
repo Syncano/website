@@ -8,6 +8,7 @@ import EnterpriseTestimonials from './components/enterpriseTestimonials'
 import EnterpriseFeatures from './components/enterpriseFeatures'
 import EnterpriseComponents from './components/EnterpriseComponents'
 import EnterpriseGraph from './components/enterpriseGraph'
+import Hexagon from '../../components/ui/hexagon'
 
 const Enterprise = ({
   router: {history: {push}}
@@ -21,7 +22,19 @@ const Enterprise = ({
       <Header
         title='Increase software development speed in your organization'
         subtitle="Tomorrow’s market is not won with yesterday’s services. Innovate at the speed of a startup."
-      />
+      >
+
+      <div className='HiddenAtSm'>
+        <Hexagon width={32} fill='#60e0ae' position={{top: '40%', left: '-100px'}} />
+        <Hexagon width={32} fill='#60e0ae' position={{top: '44%', right: '-27px'}} />
+        <Hexagon width={24} fill='#60e0ae' position={{bottom: '-22px', left: '-17px'}} />
+      </div>
+      <div className="HiddenAtMd">
+        <Hexagon width={42} fill='#4597f2' position={{bottom: '-46px', right: '18%'}} />
+        <Hexagon width={24} fill='#20a5b4' position={{bottom: '42px', right: '7%'}} />
+        <Hexagon width={42} fill='#05a5b4' position={{bottom: '15%', left: '150px'}} />
+      </div>
+      </Header>
     </div>
     <h3 className="Customers">Our customers and partners include</h3>
     <div className="Logos">
@@ -63,6 +76,18 @@ const Enterprise = ({
 
       .Logos img {
         margin: 30px;
+      }
+
+      @media screen and (max-width: 560px) {
+        .HiddenAtSm {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 960px) {
+        .HiddenAtMd {
+          display: none;
+        }
       }
     `}</style>
   </Page>
