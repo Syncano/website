@@ -77,6 +77,19 @@ const EnterpriseTestimonials = () => (
 
       /* = TESTIMONIAL
        * ==================================================================== */
+
+      @media screen and (min-width: 1280px) {
+        .Testimonial-list {
+          margin-top: -90px;
+        }
+      }
+
+      @media screen and (max-width: 1279px) {
+        .Testimonial-list {
+          margin-top: 36px;
+        }
+      }
+
       @media screen and (min-width: 560px) {
         .Testimonial-list {
           position: relative;
@@ -87,7 +100,6 @@ const EnterpriseTestimonials = () => (
           flex-wrap: wrap;
           margin-left: -30px;
           margin-bottom: -30px;
-          margin-top: -90px;
         }
 
         .Testimonial {

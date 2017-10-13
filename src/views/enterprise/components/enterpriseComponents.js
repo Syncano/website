@@ -38,13 +38,21 @@ const EnterpriseComponents = () => (
 
       .EntComponents {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        margin: 120px 0 70px;
+        margin: 90px 0 70px;
       }
 
       .EntComponent {
-        max-width: 427px;
-        margin: 0 74px;
+        margin: 30px 74px;
+        flex: 0 1 0;
+        min-width: 26%
+      }
+
+      @media screen and (max-width: 759px) {
+        .EntComponent {
+          min-width: 52%;
+        }
       }
 
       .EntComponent__logo {

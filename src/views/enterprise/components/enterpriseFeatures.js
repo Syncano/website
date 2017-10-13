@@ -72,8 +72,21 @@ const EnterpriseFeatures = () => (
 
       .Feature-list {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        height: 500px;
+        min-height: 500px;
+      }
+
+      @media screen and (min-width: 760px) and (max-width: 1280px) {
+        .Feature {
+          flex-basis: 40%;
+        }
+      }
+
+      @media screen and (max-width: 759px) {
+        .Feature {
+          flex-basis: 70%;
+        }
       }
 
       .Feature {
