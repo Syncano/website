@@ -23,23 +23,21 @@ const EnterpriseCTA = ({toggleBookMeetingModal}) => (
         /* = SECTION
          * ==================================================================== */
         .Section {
-          margin-top: 60px;
-          margin-bottom: 60px;
+          margin-top: 90px;
+          margin-bottom: 90px;
           position: relative;
-        }
-
-        @media screen and (min-width: 560px) {
-          .Section {
-            margin-top: 90px;
-            margin-bottom: 90px;
-          }
         }
 
         @media screen and (min-width: 960px) {
           .Section {
-            margin-top: 190px;
-            margin-bottom: 190px;
+            margin-top: 120px;
+            margin-bottom: 160px;
           }
+        }
+
+        .u-subtitle {
+          max-width: 545px;
+          margin: 10px auto;
         }
 
         /* = SPLIT
