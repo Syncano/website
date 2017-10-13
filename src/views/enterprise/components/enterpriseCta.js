@@ -14,18 +14,9 @@ const EnterpriseCTA = ({toggleBookMeetingModal}) => (
       </div>
 
       <div className='HiddenAtSm'>
-        <Hexagon width={100} fill='#b4f1d9' position={{top: '-80px', left: '-60px'}} opacity='.25' />
-        <Hexagon width={24} fill='#60e0ae' position={{top: '0px', left: '150px'}} />
-        <Hexagon width={42} fill='#b4f1d9' position={{top: '-70px', left: '23%'}} />
-        <Hexagon width={32} fill='#05a5b4' position={{top: '90px', left: '18%'}} />
-        <Hexagon width={32} fill='#b4f1d9' position={{top: '-140px', right: '45%'}} opacity='.5' />
-        <Hexagon width={24} fill='#60e0ae' position={{top: '-70px', right: '20%'}} />
-        <Hexagon width={42} fill='#b4f2da' position={{top: '-40px', right: '16%'}} />
-        <Hexagon width={64} fill='#b4f1d9' position={{top: '-140px', right: '6%'}} opacity='.5' />
-        <Hexagon width={24} fill='#05a5b4' position={{bottom: '20px', right: '5%'}} />
-        <Hexagon width={14} fill='#60e0ae' position={{bottom: '-95px', left: '41%'}} />
-        <Hexagon width={32} fill='#b4f1d9' position={{bottom: '-120px', left: '44%'}} opacity='.5' />
-        <Hexagon width={24} fill='#60e0ae' position={{bottom: '-90px', right: '40%'}} />
+        <Hexagon width={36} fill='#b4f1d9' position={{bottom: '-40px', left: '32%'}} />
+        <Hexagon width={24} fill='#6345f2' position={{bottom: '10px', right: '30%'}} />
+        <Hexagon width={80} fill='#4597f2' position={{bottom: '-140px', right: '-36px'}} />
       </div>
 
       <style jsx>{`
