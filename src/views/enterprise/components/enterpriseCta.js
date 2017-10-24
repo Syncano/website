@@ -67,8 +67,8 @@ EnterpriseCTA.init = ({
   services: {ui: {toggleModal}}
 }) => ({
   toggleBookMeetingModal: e => {
-    window.analytics.track('Book Meeting Modal Opened')
-    toggleModal('meeting')
+    window.analytics.track('Booking Form Opened')
+    toggleModal('book-meeting')
   }
 })
 
