@@ -56,10 +56,12 @@ const EnterpriseFeatures = () => (
         </div>
       </div>
       <div className="HiddenAtMd">
-        <Hexagon width={26} fill='#45c5f2' position={{bottom: '-163%', right: '260px'}} />
-        <Hexagon width={38} fill='#4597f2' position={{bottom: '-188%', right: '26%'}} />
-        <Hexagon width={28} fill='#3cdd9e' position={{bottom: '-192%', left: '21%'}} />
+        <Hexagon width={38} fill='#4597f2' position={{bottom: '-215%', right: '24%'}} />
+        <Hexagon width={28} fill='#3cdd9e' position={{bottom: '-220%', left: '18%'}} />
       </div>
+      <div className="HiddenAtLg">
+        <Hexagon width={26} fill='#45c5f2' position={{bottom: '-190%', right: '260px'}} />
+      </div>  
     </div>
     <style jsx>{`
       .Section {
@@ -96,7 +98,7 @@ const EnterpriseFeatures = () => (
       }
 
       .Feature {
-        width: 273px;
+        max-width: 273px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -130,6 +132,12 @@ const EnterpriseFeatures = () => (
 
       @media screen and (max-width: 960px) {
         .HiddenAtMd {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 1280px) {
+        .HiddenAtLg {
           display: none;
         }
       }

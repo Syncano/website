@@ -32,9 +32,11 @@ const EnterpriseComponents = () => (
         </div>
       </div>
       <div className="HiddenAtMd">
-        <Hexagon width={70} fill='#45cdf2' position={{bottom: '-121%', right: '-35px'}} />
-        <Hexagon width={52} fill='#85b6ec' position={{bottom: '-87%', left: '96px'}} />
-        <Hexagon width={18} fill='#6345f2' position={{bottom: '-154%', left: '80px'}} />
+        <Hexagon width={70} fill='#45cdf2' position={{bottom: '-142%', right: '-35px'}} />
+        <Hexagon width={18} fill='#6345f2' position={{bottom: '-180%', left: '80px'}} />
+      </div>
+      <div className="HiddenAtLg">
+        <Hexagon width={52} fill='#85b6ec' position={{bottom: '-105%', left: '96px'}} />
       </div>
     </div>
     <style jsx>{`
@@ -102,6 +104,12 @@ const EnterpriseComponents = () => (
 
       @media screen and (max-width: 960px) {
         .HiddenAtMd {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 1280px) {
+        .HiddenAtLg {
           display: none;
         }
       }

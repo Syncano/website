@@ -5,8 +5,8 @@ const EnterpriseTestimonials = () => (
   <div className='Section u-wrapper'>
     <div className="HiddenAtMd">
       <Hexagon width={62} fill='#adcdf0' position={{top: '80px', right: '0px'}} />
-      <Hexagon width={52} fill='#4597f2' position={{top: '50%', left: '-206px'}} />
-      <Hexagon width={32} fill='#6345f2' position={{bottom: '-10%', left: '300px'}} />
+      <Hexagon width={52} fill='#4597f2' position={{top: '55%', left: '-124px'}} />
+      <Hexagon width={32} fill='#6345f2' position={{bottom: '-14%', left: '300px'}} />
     </div>
     <div className='Testimonial-list'>
     <blockquote className='Testimonial'>
