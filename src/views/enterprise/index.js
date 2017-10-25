@@ -6,7 +6,7 @@ import Header from '../../components/shared/header'
 import EnterpriseCTA from './components/enterpriseCta'
 import EnterpriseTestimonials from './components/enterpriseTestimonials'
 import EnterpriseFeatures from './components/enterpriseFeatures'
-import EnterpriseComponents from './components/EnterpriseComponents'
+import EnterpriseComponents from './components/enterpriseComponents'
 import EnterpriseGraph from './components/enterpriseGraph'
 import Hexagon from '../../components/ui/hexagon'
 
