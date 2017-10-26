@@ -23,6 +23,7 @@
     "react-hexagon": "1.1.1",
     "react-marked-markdown": "^1.4.2",
     "react-rotating-text": "^1.2.0",
+    "react-router": "~4.2.0",
     "react-sticky": "^5.0.8",
     "svg-react-loader": "0.4.0",
     "syncano-cli": "beta",

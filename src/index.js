@@ -14,6 +14,7 @@ import SocketsView from './views/sockets'
 import SignUpView from './views/signup'
 import SignInView from './views/signin'
 import MissingView from './views/missing'
+import EnterpriseView from './views/enterprise'
 
 const Routes = () => (
   <Switch>
@@ -30,6 +31,7 @@ const Routes = () => (
     <Match path='/acceptable-use-policy' exact component={AccepatbleUsePolicyView} />
     <Match path='/syncano-performance-insights' exact component={SyncanoPerformanceInsightsView} />
     <Match path='/general-terms' exact component={GeneralTermsView} />
+    <Match path='/enterprise' exact component={EnterpriseView} />
     <Match component={MissingView} />
   </Switch>
 )
