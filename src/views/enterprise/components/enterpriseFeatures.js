@@ -19,7 +19,8 @@ const EnterpriseFeatures = () => (
           <span>Self-hosted</span>
         </div>
         <div className="Feature__text">
-          Host Syncano on your infrastructure and get maximum control and security combined with the scalability of your solution.
+          Host Syncano on your infrastructure and get maximum control and security
+          combined with the scalability of your solution.
         </div>
       </div>
       <div className="Feature">
@@ -30,7 +31,8 @@ const EnterpriseFeatures = () => (
           <span>Custom integrations</span>
         </div>
         <div className="Feature__text">
-          Easily connect your existing API’s and databases with Syncano through Sockets - scripts that execute code in the cloud and make it simple to write any integration.
+          Easily connect your existing API’s and databases with Syncano through Sockets
+          - scripts that execute code in the cloud and make it simple to write any integration.
         </div>
       </div>
       <div className="Feature">
@@ -41,7 +43,8 @@ const EnterpriseFeatures = () => (
           <span>Development</span>
         </div>
         <div className="Feature__text">
-          No resources? Get access to our crowd of developers who already use Syncano. They will help you build your next killer service on request.
+          No resources? Get access to our crowd of developers who already use Syncano.
+          They will help you build your next killer service on request.
         </div>
       </div>
       <div className="Feature">
@@ -56,16 +59,17 @@ const EnterpriseFeatures = () => (
         </div>
       </div>
       <div className="HiddenAtMd">
-        <Hexagon width={38} fill='#4597f2' position={{bottom: '-215%', right: '24%'}} />
-        <Hexagon width={28} fill='#3cdd9e' position={{bottom: '-220%', left: '18%'}} />
+        <Hexagon width={38} fill='#4597f2' position={{top: '22%', right: '24%'}} />
+        <Hexagon width={28} fill='#3cdd9e' position={{top: '29%', left: '18%'}} />
       </div>
       <div className="HiddenAtLg">
-        <Hexagon width={26} fill='#45c5f2' position={{bottom: '-190%', right: '260px'}} />
-      </div>  
+        <Hexagon width={26} fill='#45c5f2' position={{top: '-1%', right: '260px'}} />
+      </div>
     </div>
     <style jsx>{`
       .Section {
         background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.0), #ffffff), linear-gradient(#f5f6f9, #f5f6f9);
+        position: relative;
       }
 
       .Section__header {
@@ -141,7 +145,8 @@ const EnterpriseFeatures = () => (
           display: none;
         }
       }
-    `}</style>
+    `}
+    </style>
   </div>
 )
 

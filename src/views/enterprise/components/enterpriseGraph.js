@@ -13,17 +13,18 @@ const EnterpriseGraph = () => (
         <IconTransformation />
       </div>
       <div className='HiddenAtSm'>
-        <Hexagon width={42} fill='#4597f2' position={{bottom: '-6%', left: '-18px'}} />
+        <Hexagon width={42} fill='#4597f2' position={{bottom: '70%', left: '-18px'}} />
       </div>
       <div className="HiddenAtMd">
-        <Hexagon width={32} fill='#2699cb' position={{bottom: '-20%', right: '150px'}} />
-        <Hexagon width={32} fill='#6345f2' position={{bottom: '-38%', left: '180px'}} />
-        <Hexagon width={52} fill='#4597f2' position={{bottom: '-68%', right: '-1%'}} />
+        <Hexagon width={32} fill='#2699cb' position={{bottom: '68%', right: '150px'}} />
+        <Hexagon width={32} fill='#6345f2' position={{bottom: '46%', left: '180px'}} />
+        <Hexagon width={52} fill='#4597f2' position={{bottom: '15%', right: '-1%'}} />
       </div>
     </div>
     <style jsx>{`
       .Section {
         background-image: radial-gradient(circle at 50% 50%, rgba(0, 100, 255, 0.3), rgba(0, 100, 255, 0.0)), linear-gradient(#0b0f15, #0b0f15);
+        position: relative;
       }
 
       .Section__header {
@@ -71,7 +72,8 @@ const EnterpriseGraph = () => (
           display: none;
         }
       }
-    `}</style>
+    `}
+    </style>
   </div>
 )
 
