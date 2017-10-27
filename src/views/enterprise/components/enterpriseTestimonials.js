@@ -9,31 +9,32 @@ const EnterpriseTestimonials = () => (
       <Hexagon width={32} fill='#6345f2' position={{bottom: '-14%', left: '300px'}} />
     </div>
     <div className='Testimonial-list'>
-    <blockquote className='Testimonial'>
-      <div className='Testimonial__inner'>
-        <Avatar
-          src='/static/img/testimonials/sven-sunde.png'
-          srcSet='/static/img/testimonials/sven-sunde.png 1x, /static/img/testimonials/sven-sunde@2x.png 2x'
+      <blockquote className='Testimonial'>
+        <div className='Testimonial__inner'>
+          <Avatar
+            src='/static/img/testimonials/sven-sunde.png'
+            srcSet='/static/img/testimonials/sven-sunde.png 1x, /static/img/testimonials/sven-sunde@2x.png 2x'
           />
-        <p className='Testimonial__content'>
-          Syncano Sockets can greatly increase speed of configuring cloud infrastructure.
-        </p>
-        <footer>
-          <div className='Testimonial__author'>Sven Sunde</div>
-          <div className='Testimonial__author-about'>
-            Country Manager AWS
-          </div>
-        </footer>
-      </div>
-    </blockquote>
+          <p className='Testimonial__content'>
+            Syncano Sockets can greatly increase speed of configuring cloud infrastructure.
+          </p>
+          <footer>
+            <div className='Testimonial__author'>Sven Sunde</div>
+            <div className='Testimonial__author-about'>
+              Country Manager AWS
+            </div>
+          </footer>
+        </div>
+      </blockquote>
       <blockquote className='Testimonial'>
         <div className='Testimonial__inner'>
           <Avatar
             src='/static/img/testimonials/halvor-lande.png'
             srcSet='/static/img/testimonials/halvor-lande.png 1x, /static/img/testimonials/halvor-lande@2x.png 2x'
-            />
+          />
           <p className='Testimonial__content'>
-            We chose to work with Syncano to create MVPs faster, and to increase the speed of experimentation with Fintech.
+            We chose to work with Syncano to create MVPs faster, and to increase
+            the speed of experimentation with Fintech.
           </p>
           <footer>
             <div className='Testimonial__author'>Halvor Lande</div>
@@ -48,9 +49,10 @@ const EnterpriseTestimonials = () => (
           <Avatar
             src='/static/img/testimonials/ingar-bentzen.png'
             srcSet='/static/img/testimonials/ingar-bentzen.png 1x, /static/img/testimonials/ingar-bentzen@2x.png 2x'
-            />
+          />
           <p className='Testimonial__content'>
-            Syncano helps the startups in our Fintech and Insurtech accelerator programs to reach product market fit faster.
+            Syncano helps the startups in our Fintech and Insurtech accelerator
+            programs to reach product market fit faster.
           </p>
           <footer>
             <div className='Testimonial__author'>Ingar S. Bentzen</div>
@@ -165,7 +167,8 @@ const EnterpriseTestimonials = () => (
           display: none;
         }
       }
-    `}</style>
+    `}
+    </style>
   </div>
 )
 

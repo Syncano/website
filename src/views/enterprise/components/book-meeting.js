@@ -15,23 +15,23 @@ const addIntercomLead = ({ email, env, customAttributes = {} }) => {
 }
 
 const BookMeetingForm = ({
-  email, name, company, toggleModal, login, messages, addLead
+  email, name, company, addLead
 }) => (
   <div className='AuthForm AuthForm--login'>
     <div className='AuthForm__column AuthForm__column--quotes'>
       <Quotes />
     </div>
     <div className='AuthForm__column AuthForm__column--form'>
-      <form id='enterprise-form' className='AuthForm__column AuthForm__column--form' onSubmit={addLead}>
+      <div id='enterprise-form' className='AuthForm__column AuthForm__column--form'>
         <InputList>
           <Input full {...name} />
           <Input full {...company} />
           <Input full {...email} />
         </InputList>
         <div className="AuthForm__submit">
-          <Button full secondary>Book my meeting</Button>
+          <Button primary onClick={addLead}>Book my meeting</Button>
         </div>
-      </form>
+      </div>
     </div>
     <Style />
   </div>
@@ -41,23 +41,32 @@ BookMeetingForm.init = ({
   services: {
     ui: {toggleModal}
   },
-  form: {fields: {name, email, company}, submit}
+  form: {fields: {name, email, company}}
 }) => ({
   email,
   name,
   company,
   toggleModal,
-  addLead: (e) => {
-    submit(e, data => {
-      e.preventDefault()
-      const { email, name, company } = data
-      const env = process.env.CIRCLE_BRANCH === 'syncano-ascend-master' ? 'production' : 'staging'
+  addLead: () => {
+    const env = process.env.CIRCLE_BRANCH === 'syncano-ascend-master' ? 'production' : 'staging'
+    const emailValue = email.value
+    const nameValue = name.value
+    const companyValue = company.value
 
-      addIntercomLead({ email, env, customAttributes: { enterprise: true, name, company }})
-      window.analytics.track('Book Meeting')
-      toggleModal('book-meeting')
-      toggleModal('booking-confirmed')
+    addIntercomLead({
+      email: emailValue,
+      env,
+      customAttributes:
+        {
+          enterprise: true,
+          name: nameValue,
+          company: companyValue
+        }
     })
+
+    window.analytics.track('Book Meeting')
+    toggleModal('book-meeting')
+    toggleModal('booking-confirmed')
   }
 })
 

@@ -14,7 +14,10 @@ const EnterpriseComponents = () => (
             <li>Iterate faster with less resources thanks to the developer friendly Syncano Automation SDK</li>
             <li>Reuse your code and connect legacy IT with Syncano Sockets</li>
             <li>Scale instantaneously to thousands of users with Syncano Cloud OS</li>
-            <li>Don’t reinvent the wheel. Browse Syncano Socket Registry and reuse solutions created by the community</li>
+            <li>
+              Don’t reinvent the wheel.
+              Browse Syncano Socket Registry and reuse solutions created by the community
+            </li>
           </ul>
         </div>
       </div>
@@ -25,23 +28,26 @@ const EnterpriseComponents = () => (
         <div className="EntComponent__title">Crowdsourced Development</div>
         <div className="EntComponent__list">
           <ul>
-            <li>Embrace the digital transformation with the power of crowdsourcing. Get access to a pool of 60.000 Syncano Developers</li>
+            <li>
+              Embrace the digital transformation with the power of crowdsourcing.
+              Get access to a pool of 60.000 Syncano Developers
+            </li>
             <li>Launch MVPs faster with smaller teams thanks to our innovative work methodologies</li>
             <li>Have our innovation specialists guide you through the process</li>
           </ul>
         </div>
       </div>
       <div className="HiddenAtMd">
-        <Hexagon width={70} fill='#45cdf2' position={{bottom: '-142%', right: '-35px'}} />
-        <Hexagon width={18} fill='#6345f2' position={{bottom: '-180%', left: '80px'}} />
+        <Hexagon width={70} fill='#45cdf2' position={{bottom: '54%', right: '-35px'}} />
+        <Hexagon width={18} fill='#6345f2' position={{bottom: '0%', left: '80px'}} />
       </div>
       <div className="HiddenAtLg">
-        <Hexagon width={52} fill='#85b6ec' position={{bottom: '-105%', left: '96px'}} />
+        <Hexagon width={52} fill='#85b6ec' position={{top: '-19%', left: '96px'}} />
       </div>
     </div>
     <style jsx>{`
       .Section {
-        min-height: 500px;
+        position: relative;
       }
 
       .EntComponents {
@@ -113,7 +119,8 @@ const EnterpriseComponents = () => (
           display: none;
         }
       }
-    `}</style>
+    `}
+    </style>
   </div>
 )
 
