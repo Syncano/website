@@ -9,6 +9,7 @@ import ForgotPasswordForm from '../../shared/auth/forgot-password'
 import SetPasswordForm from '../../shared/auth/set-password'
 import SignUpForm from '../../shared/auth/signup'
 import SignInForm from '../../shared/auth/signin'
+import BookMeetingForm from '../../../views/enterprise/components/book-meeting'
 
 const Page = ({children, flags}) => (
   <div>
@@ -73,6 +74,21 @@ const Page = ({children, flags}) => (
       subtitle='Continue solving unique customer problems, not building and operating backend code.'
       >
       <SignInForm />
+    </Modal>
+
+    <Modal
+      name='book-meeting'
+      title='Book a meeting'
+      subtitle='Submit your contact details and give us a way to reach you.'
+      >
+      <BookMeetingForm />
+    </Modal>
+
+    <Modal
+      name='booking-confirmed'
+      title='Thank you!'
+      subtitle='One of our enterprise experts will reach out to you and schedule a call.'
+      >
     </Modal>
 
     <style jsx global>{`

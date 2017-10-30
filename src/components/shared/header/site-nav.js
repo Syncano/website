@@ -14,7 +14,7 @@ const SiteNav = ({isOpen, theme, toggleSignIn, closeNav}) => (
             <Nav stack>
               <a href=''>Automation SDK</a>
               <a href=''>Socket Registry</a>
-              <a href=''>Clout OS</a>
+              <a href=''>Cloud OS</a>
               <a href=''>Community</a>
             </Nav>
           </div>
@@ -24,6 +24,9 @@ const SiteNav = ({isOpen, theme, toggleSignIn, closeNav}) => (
         </Link>
         <Link to='/pricing'>
           <span className='Site-nav__item'>Plans &amp; Pricing</span>
+        </Link>
+        <Link to='/enterprise'>
+          <span className='Site-nav__item'>Enterprise</span>
         </Link>
         <a className='Site-nav__item' href='https://syncano.github.io/syncano-node-cli/'>Documentation</a>
         <div className='Site-nav__social'>
