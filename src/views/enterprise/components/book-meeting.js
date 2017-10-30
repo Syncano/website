@@ -48,7 +48,7 @@ BookMeetingForm.init = ({
   company,
   toggleModal,
   addLead: () => {
-    const env = process.env.CIRCLE_BRANCH === 'syncano-ascend-master' ? 'production' : 'staging'
+    const env = process.env.API_URL === 'https://api.syncano.io/' ? 'production' : 'staging'
     const emailValue = email.value
     const nameValue = name.value
     const companyValue = company.value
