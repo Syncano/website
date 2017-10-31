@@ -19,8 +19,11 @@ export default ({children}) => (
     { isDesktop && robotoFontLink }
     {React.Children.map(children, item => {
       if (item.type === 'title') {
-        window.analytics.page('Website', {
-          Page: item.props.children
+        const title = item.props.children
+        const page = title.indexOf('-') >= 0 ? title.split('-')[1] : title
+
+        window.analytics.page(`Website -${page}`, {
+          path: window.location.hash
         })
       }
     })}
