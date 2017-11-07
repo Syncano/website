@@ -1,3 +1,14 @@
+/*
+Usage:
+
+<YouTube
+   video='XC3-DoDFLLw'
+   autoplay='0'
+   rel='0'
+   showInfo='0'
+/>
+*/
+
 const YouTube = ({ video, autoplay, rel, showInfo }) => (
   <iframe
     title="youtube"
