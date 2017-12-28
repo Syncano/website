@@ -2,13 +2,9 @@ import Head from '../../components/ui/head'
 import Page from '../../components/ui/page'
 import Footer from '../../components/shared/footer'
 import Header from '../../components/shared/header'
-import Input from '../../components/ui/input'
-import Button from '../../components/ui/button'
-import InputList from '../../components/ui/input-list'
+import SlackInviteForm from './slackInviteForm'
 
-const SlackInvite = ({
-  messages, email, sendInvitation
-}) => (
+const SlackInvite = () => (
   <Page>
     <Head>
       <title>Syncano - Join Community</title>
@@ -36,28 +32,11 @@ const SlackInvite = ({
         )}
         title='Join the Community'
         subtitle='Join the Syncano community and chat with other developers. Share ideas, learn, build together or ask us anything!'
-        />
+      />
     </div>
-
-    <div className='Section u-wrapper'>
-      <form className='Form' onSubmit={sendInvitation}>
-        <InputList errors={messages.get('slack.invite.errors')}>
-          <div className='Form__group'>
-            <Input {...email} full />
-            <Button
-              type='submit'
-              disabled={messages.has('slack.invite.pending')}
-              secondary
-              >Send me an invite</Button>
-          </div>
-        </InputList>
-
-        {messages.has('slack.invite.success') ? (
-          <div className='Form__message'>{messages.get('slack.invite.success')}</div>
-        ) : ''}
-      </form>
+    <div className="Section u-wrapper">
+      <SlackInviteForm />
     </div>
-
     <Footer />
 
     <style jsx>{`
@@ -89,52 +68,8 @@ const SlackInvite = ({
         text-align: center;
         margin-bottom: 30px;
       }
-
-      .Form {
-        text-align: left;
-        margin-top: 30px;
-      }
-
-      .Form__group {
-        display: flex;
-      }
-
-      .Form__message {
-        color: #25b012;
-        margin-top: 30px;
-        text-align: center;
-      }
-
-      .Form__group > :global(*) + :global(*) {
-        margin-left: 15px;
-      }
-
-      .Form__group :global(.Button) {
-        white-space: nowrap;
-      }
     `}</style>
   </Page>
 )
-
-SlackInvite.form = {
-  formName: 'SlackInviteForm',
-  fields: {
-    email: {
-      required: 'true',
-      type: 'email',
-      placeholder: 'E-mail address'
-    }
-  }
-}
-
-SlackInvite.init = ({
-  stores: {messages},
-  services: {slackInvite: {sendInvitation}},
-  form: {fields: {email}, submit}
-}) => ({
-  messages,
-  email,
-  sendInvitation: e => submit(e, sendInvitation)
-})
 
 export default SlackInvite
