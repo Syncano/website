@@ -12,7 +12,7 @@ const AutomationSDKSection = () => (
         <div className='Section__cli-about'>
           <h3>The Syncano CLI</h3>
           <p>Manage the entire process of building and deploying from a simple, powerful and local tool on your computer. With the Syncano Command Line Interface (CLI), you never have to leave your local working environment, and the synchronization and deployment process dynamically occurs in the background. Save time and build more, faster.</p>
-          <p><a href='https://syncano.github.io/syncano-node-cli/'>Syncano CLI in the docs <i className='fa fa-arrow-right' /></a></p>
+          <p><a href='https://docs.syncano.io/'>Syncano CLI in the docs <i className='fa fa-arrow-right' /></a></p>
           <div><a href='https://github.com/Syncano'>Join CLI project on GitHub <i className='fa fa-arrow-right' /></a></div>
           <div><a href='https://www.npmjs.com/package/syncano-cli'>Download CLI now <i className='fa fa-arrow-right' /></a></div>
         </div>
@@ -22,7 +22,7 @@ const AutomationSDKSection = () => (
           <p className='u-subtitle'>Syncano's serverless platform and your development environment (through SDKs) dynamically  assembles and deploys your app’s backend to the cloud, all while you build your app.
 The technology accelerates the software development process by greatly reducing time spent deploying DevOps and managing your backend through a leaner and more dynamic building phase.</p>
           <p>
-            <a href='https://syncano.github.io/syncano-node-cli/#/'>
+            <a href='https://docs.syncano.io/#/'>
               Automation SDK docs <i className='fa fa-arrow-right' />
             </a>
           </p>

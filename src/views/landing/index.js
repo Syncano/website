@@ -39,7 +39,7 @@ const Landing = ({
         <div className='Separator' data-after='or' />
 
         <p>
-          Ready to build? <a href='https://syncano.github.io/syncano-node-cli/#/cli-reference/installation'>Download the CLI</a>, <br /> the rest you can do from there.
+          Ready to build? <a href='https://docs.syncano.io/#/cli-reference/installation'>Download the CLI</a>, <br /> the rest you can do from there.
         </p>
 
         <div className='CLI'>

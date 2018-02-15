@@ -79,7 +79,7 @@ const Sockets = ({
           <div className='Socket__icon'><IconSegment /></div>
           <Hexagon width={130} style={{fill: '#3bb075', stroke: 'none'}} />
         </a>
-        <a className='Socket Socket--empty' href='https://syncano.github.io/syncano-node-cli/#/building-sockets/basics' title='Build your socket'>
+        <a className='Socket Socket--empty' href='https://docs.syncano.io/#/building-sockets/basics' title='Build your socket'>
           <i className='Socket__icon fa fa-plus' />
           <Hexagon width={130} style={{
             fill: '#111',
