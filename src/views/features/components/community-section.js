@@ -17,7 +17,7 @@ const CommunitySection = () => (
         <div className='Feature Feature--important'>
           <div className='Feature__inner'>
             <h4 className='Feature__title'>Support from Syncano and our community</h4>
-            <p>If you get stuck and need some help, simply reach out to your fellow community members in our <Link to='/slack-invite'>Slack channel</Link> for answers. We also have plenty of <a href='https://syncano.github.io/syncano-node-cli/'>documentation</a> on our web site.</p>
+            <p>If you get stuck and need some help, simply reach out to your fellow community members in our <Link to='/slack-invite'>Slack channel</Link> for answers. We also have plenty of <a href='https://docs.syncano.io/'>documentation</a> on our web site.</p>
             <p>Come and join the Syncano community and chat with other developers. Share ideas, learn from each other, build apps together, or just ask us anything!</p>
           </div>
         </div>
