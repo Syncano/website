@@ -8,7 +8,7 @@ const CLI = () => (
     <div className='CLI__header'>Syncano CLI</div>
 
     <ul className='CLI__lines'>
-      <li className='CLI__line'>$ syncano-cli hot</li>
+      <li className='CLI__line'>$ npx syncano-cli hot</li>
       <li className='CLI__line CLI__line--break' />
       <li className='CLI__line CLI__line--result'>🔥  Hot deploy started (Hit Ctrl-C to stop)</li>
       <li className='CLI__line CLI__line--break' />
