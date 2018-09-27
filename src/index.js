@@ -8,7 +8,6 @@ import SlackInviteView from './views/slack-invite'
 import ToSView from './views/terms/terms-of-service'
 import PrivacyPolicyView from './views/terms/privacy-policy'
 import AccepatbleUsePolicyView from './views/terms/acceptable-use-policy'
-import SyncanoPerformanceInsightsView from './views/terms/syncano-performance-insights'
 import GeneralTermsView from './views/terms/general-terms'
 import SocketsView from './views/sockets'
 import SignUpView from './views/signup'
@@ -29,7 +28,6 @@ const Routes = () => (
     <Match path='/terms-of-service' exact component={ToSView} />
     <Match path='/privacy-policy' exact component={PrivacyPolicyView} />
     <Match path='/acceptable-use-policy' exact component={AccepatbleUsePolicyView} />
-    <Match path='/syncano-performance-insights' exact component={SyncanoPerformanceInsightsView} />
     <Match path='/general-terms' exact component={GeneralTermsView} />
     <Match path='/enterprise' exact component={EnterpriseView} />
     <Match component={MissingView} />
