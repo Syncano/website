@@ -3,6 +3,7 @@ import Link from '../ui/link'
 import Grid from '../ui/grid'
 import Hexagon from '../ui/hexagon'
 
+const currentYear = new Date().getFullYear()
 const Footer = () => (
   <footer className='Footer u-wrapper'>
     <div className='HiddenAtSm'>
@@ -81,7 +82,7 @@ const Footer = () => (
       </Grid>
     </div>
 
-    <div className='Copyrights'>&copy; 2017 by Syncano. All rights reserved.</div>
+    <div className='Copyrights'>&copy; {currentYear} by Syncano. All rights reserved.</div>
 
     <style jsx>{`
       .Footer {
