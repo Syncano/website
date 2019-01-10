@@ -1,8 +1,41 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+@charset "UTF-8";
 
-body {
-  font-family: 'Heebo'
-}
+@import "firo/tools.maths";
+
+/* Settings
+   ========================================================================== */
+@import "firo/settings.global";
+@import "firo/settings.responsive";
+
+/* Tools - mixins and functions
+   ========================================================================== */
+@import "firo/tools.clearfix";
+@import "firo/tools.at";
+@import "firo/tools.at2x";
+@import "firo/tools.element";
+@import "firo/tools.font-size";
+@import "firo/tools.headings";
+@import "firo/tools.widths";
+
+/* Generic - high level styles, resets, etc.
+   ========================================================================== */
+
+/* Base - styling of non classed tags
+   ========================================================================== */
+@import "firo/base.images";
+
+/* Objects - reusable, non-cosmetic design patterns
+   ========================================================================== */
+@import "firo/objects.join";
+@import "firo/objects.split";
+@import "firo/objects.stack";
+@import "firo/objects.pack";
+
+/* Components - implementation of specific piece of UI
+   ========================================================================== */
+
+/* Trumps - utility classes with specific role, overrides
+   ========================================================================== */
+@import "firo/trumps.clearfix";
+@import "firo/trumps.widths";
+@import "firo/trumps.headings";

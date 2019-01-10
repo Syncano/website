@@ -1,0 +1,44 @@
+/**
+ * = trumps.headings - manage your font sizes.
+ *
+ * == Usage
+  <h1 class="u-alpha u-gamma@md-">Heading</h1>
+ */
+
+/*
+ * Trump namespace */
+$headings-namespace: $namespace-trumps !default;
+/*
+ * Is trump responsive */
+$headings-responsive: $responsive !default;
+/*
+ * List of heading font sizes and line heights */
+$headings-enable: (
+  // Extra large sizes
+  giga: 60px 68px,
+  mega: 45px 52px,
+  kilo: 36px 46px,
+  // Primary font sizes
+  alpha: 32px 42px,
+  beta: 28px 36px,
+  gamma: 24px 32px,
+  delta: 20px 28px,
+  epsilon: 18px 26px,
+  zeta: 16px 24px,
+  // Extra small sizes
+  milli: 14px 20px,
+  micro: 13px 18px,
+  nano: 12px 16px,
+) !default;
+
+// Include basic headings
+@include headings($headings-enable);
+
+// Include responsive headings
+@if $headings-responsive == true {
+  @each $alias, $condition in $breakpoints {
+    @include at($alias) {
+      @include headings($headings-enable, \@#{$alias});
+    }
+  } // end @each
+} // end @if

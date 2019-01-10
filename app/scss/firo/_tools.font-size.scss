@@ -1,0 +1,19 @@
+/**
+ * = tools.font-size
+ *
+ * == Usage
+  .element {
+    @include font-size(16px, 24px);
+  }
+ */
+
+@mixin font-size($font-size, $line-height: auto) {
+  font-size: $font-size;
+  font-size: ($font-size / $base-font-size) * 1rem;
+
+  @if $line-height == auto {
+    line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+  } @else if type-of($line-height) == number or $line-height == inherit or $line-height == normal {
+    line-height: $line-height;
+  } // end @else if
+} // end @mixin

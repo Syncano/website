@@ -1,0 +1,56 @@
+ /**
+ * = tools.element - generate given class at breakpoints.
+ *
+ * == Usage
+  @include responsive(u-red) { color: red; }
+ * will generate this classes(based on default breakpoints):
+ * u-red, u-red@sm, u-red@md, u-red@md-, u-red@md+, u-red@lg
+ */
+
+ /*
+  * Current responsive element */
+$responsive-element: null !global;
+ /*
+  * Current breakpoint alias */
+$responsive-alias: null !global;
+
+@mixin element($name, $is-responsive: false) {
+  $responsive-element: $name !global;
+
+  .#{$name},
+  %#{$name} {
+    @content;
+  }
+
+  @if $is-responsive {
+    @each $breakpoint in $breakpoints {
+      $alias: nth($breakpoint, 1);
+      $condition: nth($breakpoint, 2);
+
+      @include at($alias) {
+        $responsive-alias: \@#{$alias} !global;
+
+        .#{$name}#{$responsive-alias},
+        %#{$name}#{$responsive-alias} {
+          @content
+        }
+      } // end @include
+    } // end @each
+  } // end @id
+} // end @mixin
+
+@mixin modifier($modifier, $enabled: true) {
+  @if $enabled == true or index($enabled, $modifier) {
+      @at-root .#{$responsive-element}--#{$modifier}#{$responsive-alias} {
+        @content
+      }
+  } // end @index
+} // end @mixin
+
+@mixin child($child, $enabled) {
+  @if index($enabled, $child) {
+    @at-root .#{$responsive-element}__#{$child}#{$responsive-alias} {
+      @content
+    }
+  } // end @index
+} // end @mixin

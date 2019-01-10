@@ -1,0 +1,30 @@
+/**
+ * = objects.split - separate two elements.
+ *
+ * == Usage
+  <div class="o-split">
+    <div>Foo</div>
+    <div>Baz</div>
+  </div>
+ */
+
+/*
+ * Object namespace */
+$split-namespace: $namespace-objects !default;
+/*
+ * Is object responsive */
+$split-responsive: $responsive !default;
+
+/*
+ * o-split */
+@include element(#{$split-namespace}split, $split-responsive) {
+  @include clearfix;
+
+  > * {
+    float: left;
+  }
+
+  > :first-child + * {
+    float: right;
+  }
+} // end @include

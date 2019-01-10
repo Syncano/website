@@ -1,0 +1,77 @@
+/**
+ * = objects.join - join elements into horizontal list.
+ *
+ * == Modifiers
+  * .o-join--flush: remove whitespace between elements
+  * .o-join--[xs|sm|md|lg|xl]: spacing between elements
+  * .o-join--[middle|bottom]: vertical alignment of elements
+ * == Usage
+  <div class="o-join">
+    <div>Foo</div>
+    <div>Bar</div>
+    <div>Baz</div>
+  </div>
+ */
+
+/*
+ * Object namespace */
+$join-namespace: $namespace-objects !default;
+/*
+ * Is object responsive */
+$join-responsive: true !default;
+/*
+ * Spacing between childs */
+$join-spacing: $base-spacing !default;
+/*
+ * Object spacing sizes */
+$join-sizes: (
+  xs: quarter($join-spacing),
+  sm: halve($join-spacing),
+  md: $join-spacing,
+  lg: double($join-spacing),
+  xl: quadruple($join-spacing)
+) !default;
+/*
+/* Enabled modifiers */
+$join-enable: (flush, bottom, middle) !default;
+
+/*
+ * o-join */
+@include element(#{$join-namespace}join, $join-responsive) {
+  list-style-type: none;
+
+  > * {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  /*
+    * o-join--flush */
+  @include modifier(flush, $join-enable) {
+    @include clearfix;
+
+    > * {
+      float: left;
+    }
+  }
+
+  /*
+    * o-join-[middle|bottom] */
+  @each $align in (middle, bottom) {
+    @include modifier(#{$align}, $join-enable) {
+      > * {
+        vertical-align: $align;
+      }
+    }
+  }
+
+  /*
+    * o-join-[xs|sm|md|lg|xl] */
+  @each $size, $spacing in $join-sizes {
+    @include modifier(#{$size}) {
+      > * + * {
+        margin-left: $spacing;
+      }
+    }
+  }
+} // end @include

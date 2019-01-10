@@ -1,0 +1,9 @@
+/**
+ * = trumps.clearfix - micro clearfix trump.
+ */
+
+.u-cf:after {
+  content: "";
+  display: table;
+  clear: both;
+}
