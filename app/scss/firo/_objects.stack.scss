@@ -38,11 +38,11 @@ $stack-sizes: (
   }
 
   /*
-    * o-stack-[xs|sm|md|lg|xl] */
+    * o-stack--[xs|sm|md|lg|xl] */
   @each $size, $spacing in $stack-sizes {
     @include modifier(#{$size}) {
       > * + * {
-        margin-top: $spacing
+        margin-top: $spacing;
       }
     }
   } // end @each

@@ -9,8 +9,20 @@
   // background-repeat: repeat-x;
   // padding-top: 160px;
 
-  @include at(md\+) {
-    display: grid;
+  &__head {grid-area: head;}
+  &__platform {grid-area: platform;}
+  &__products {
+    grid-area: products;
+
+    @include at(sm) {
+      display: none;
+    }
+  }
+  &__developers {grid-area: developers;}
+  &__support {grid-area: support;}
+  &__social {grid-area: social;}
+  &__copyright {
+    grid-area: copyright;
   }
 
   &__mobile-background {
@@ -28,9 +40,27 @@
     background-color: #1E2144;
   }
 
+  &__grid {
+    display: grid;
+    grid-template-areas:
+      "head head"
+      "social social"
+      "platform developers"
+      "support support"
+      "copyright copyright";
+
+    @include at(md\+) {
+    }
+  }
+
   &__title {
     text-align: center;
     color: $white;
+  }
+
+  &__subtitle {
+    color: $cold-purple;
+    text-align: center;
   }
 
   &__heading {
@@ -39,6 +69,19 @@
   }
 
   &__link {
+    @include font-size(14px, 20px);
+    letter-spacing: -.05px;
+    color: $cold-purple;
+    display: block;
 
+    &:hover {
+      color: $white;
+    }
+
+    &-desc {
+      @include at(sm) {
+        display: none;
+      }
+    }
   }
 }

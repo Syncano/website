@@ -1,0 +1,13 @@
+/**
+ * = base.links
+ */
+
+ a {
+  text-decoration: none;
+  color: #666;
+  transition: color .25s;
+
+  &:hover {
+    color: #0070d3;
+  }
+}
