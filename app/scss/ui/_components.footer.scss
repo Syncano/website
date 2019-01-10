@@ -3,14 +3,42 @@
  */
 
 .c-footer {
-  background: url('/assets/img/footer-bg.svg');
-  
-  @include at(md+) {
+  // background: url('/assets/img/footer-bg@sm.svg');
+  // background-size: 930px 320px;
+  // background-position-x: center;
+  // background-repeat: repeat-x;
+  // padding-top: 160px;
+
+  @include at(md\+) {
     display: grid;
-    g
+  }
+
+  &__mobile-background {
+    @include at(md\+) {
+      display: none;
+    }
+
+    svg {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &__inner {
+    background-color: #1E2144;
+  }
+
+  &__title {
+    text-align: center;
+    color: $white;
   }
 
   &__heading {
+    @include font-size(16px, 20px);
+    color: $white;
+  }
+
+  &__link {
 
   }
 }

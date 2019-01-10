@@ -6,6 +6,7 @@
    ========================================================================== */
 @import "firo/settings.global";
 @import "firo/settings.responsive";
+@import "ui/settings.colors";
 
 /* Tools - mixins and functions
    ========================================================================== */
@@ -41,4 +42,5 @@
    ========================================================================== */
 @import "firo/trumps.clearfix";
 @import "firo/trumps.widths";
+@import "firo/trumps.spacing";
 @import "firo/trumps.headings";
