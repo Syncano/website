@@ -1,0 +1,102 @@
+version: 2
+
+setup-env: &setup-env
+  run:
+    name: Setting up env variables
+    command: |
+      if [ "${CIRCLE_BRANCH}" == "unleashed-production" ]; then
+        env=PRODUCTION
+      fi
+      if [ "${CIRCLE_BRANCH}" == "unleashed-master" ]; then
+        env=STAGING
+      fi
+
+      eval echo "export SYNCANO_PROJECT_INSTANCE=\$${env}_SYNCANO_PROJECT_INSTANCE" >> $BASH_ENV
+
+jobs:
+  install:
+    docker:
+      - image: circleci/node:9.10.0
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - dependencies-{{ checksum "package-lock.json" }}
+            - dependencies-
+      - run:
+          name: Installing dependencies
+          command: npm i
+      - save_cache:
+          paths:
+            - node_modules
+          key: dependencies-{{ checksum "package-lock.json" }}
+      - persist_to_workspace:
+          root: .
+          paths:
+            - node_modules
+  build:
+    docker:
+      - image: circleci/node:9.10.0
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - *setup-env
+      - attach_workspace:
+          at: .
+      - run:
+          name: Build website workspace
+          command: npm run build
+      - store_artifacts:
+          path: dist
+      - persist_to_workspace:
+          root: .
+          paths:
+            - dist
+  deploy-staging:
+    docker:
+      - image: circleci/node:9.10.0
+    working_directory: ~/repo
+    steps:
+      - *setup-env
+      - attach_workspace:
+          at: .
+      - run:
+          name: Uploading website to staging and setting CNAME
+          command: |
+            npx s hosting sync website
+            npx s hosting config website -b true --cname syncano.rocks
+  deploy-production:
+    docker:
+      - image: circleci/node:9.10.0
+    working_directory: ~/repo
+    steps:
+      - *setup-env
+      - attach_workspace:
+          at: .
+      - run:
+          name: Uploading website to production and setting CNAME
+          command: |
+            npx s hosting sync website
+            npx s hosting config website -b true --cname syncano.io
+
+workflows:
+  version: 2
+  build-test-deploy:
+    jobs:
+      - install
+      - build:
+          requires:
+            - install
+      # - deploy-staging:
+      #     requires:
+      #       - build
+      #     filters:
+      #       branches:
+      #         only: unleashed-master
+      # - deploy-production:
+      #     requires:
+      #       - build
+      #     filters:
+      #       branches:
+      #         only: unleashed-production
