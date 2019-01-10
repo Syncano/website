@@ -34,7 +34,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - node_modules
+            - .
   build:
     docker:
       - image: circleci/node:9.10.0
@@ -64,8 +64,9 @@ jobs:
       - run:
           name: Uploading website to staging and setting CNAME
           command: |
+            npx s deploy
             npx s hosting sync website
-            npx s hosting config website -b true --cname syncano.rocks
+            npx s hosting config website -b true # --cname syncano.rocks
   deploy-production:
     docker:
       - image: circleci/node:9.10.0
@@ -77,8 +78,9 @@ jobs:
       - run:
           name: Uploading website to production and setting CNAME
           command: |
+            npx s deploy
             npx s hosting sync website
-            npx s hosting config website -b true --cname syncano.io
+            npx s hosting config website -b true # --cname syncano.io
 
 workflows:
   version: 2
@@ -88,15 +90,15 @@ workflows:
       - build:
           requires:
             - install
-      # - deploy-staging:
-      #     requires:
-      #       - build
-      #     filters:
-      #       branches:
-      #         only: unleashed-master
-      # - deploy-production:
-      #     requires:
-      #       - build
-      #     filters:
-      #       branches:
-      #         only: unleashed-production
+      - deploy-staging:
+          requires:
+            - build
+          filters:
+            branches:
+              only: unleashed-master
+      - deploy-production:
+          requires:
+            - build
+          filters:
+            branches:
+              only: unleashed-production
