@@ -1,9 +1,0 @@
-export HELLO_FACEBOOK=
-export HELLO_GOOGLE=
-export HELLO_GITHUB=
-export HELLO_REDIRECT_URI=
-export DASHBOARD_URL=
-export API_URL=
-export ANALYTICS_WRITE_KEY=
-export OPTIMIZELY_KEY=
-export SYNCANO_REGISTRY_URL=https://socket-registry.syncano.link
