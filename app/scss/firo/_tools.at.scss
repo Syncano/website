@@ -1,0 +1,28 @@
+/**
+ * = tools.at - generate css at given breakpoint.
+ *
+ * == Usage
+  .c-card {
+    @include at(sm) {
+      padding: 5px;
+    }
+  }
+ */
+
+@mixin at($breakpoint) {
+  $breakpoint-found: false;
+
+  @each $alias, $condition in $breakpoints {
+    @if $breakpoint == $alias and $condition {
+      $breakpoint-found: true;
+
+      @media #{$condition} {
+        @content;
+      }
+    } //end @if
+  } // end @each
+
+  @if $breakpoint-found == false {
+    @warn "Breakpoint '#{$breakpoint}' does not exist.";
+  } //end @if
+} // end @mixin

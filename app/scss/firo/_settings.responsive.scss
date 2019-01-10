@@ -1,0 +1,16 @@
+/**
+ * = settings.responsive
+ */
+
+/*
+ * Map of website breakpoints */
+$breakpoints: (
+  sm    "screen and (max-width: 719px)",
+  md    "screen and (min-width: 720px) and (max-width: 1023px)",
+  md\+  "screen and (min-width: 720px)",
+  md-   "screen and (max-width: 1023px)",
+  lg    "screen and (min-width: 1024px)"
+)  !default;
+/*
+ * Enable responsive objects */
+$responsive: true !default;

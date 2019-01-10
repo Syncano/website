@@ -1,0 +1,49 @@
+/**
+ * = objects.stack - stack elements and apply spacing.
+ *
+ * == Modifiers
+  * .o-stack--[xs|sm|md|lg|xl]: spacing between elements
+ * == Usage
+  <div class="o-stack">
+    <div>Foo</div>
+    <div>Bar</div>
+    <div>Baz</div>
+  </div>
+ */
+
+/*
+ * Object namespace */
+$stack-namespace: $namespace-objects !default;
+/*
+ * Is object responsive */
+$stack-responsive: $responsive !default;
+/*
+ * Object child spacing */
+$stack-spacing: $base-spacing !default;
+/*
+ * Object spacing sizes */
+$stack-sizes: (
+  xs: quarter($stack-spacing),
+  sm: halve($stack-spacing),
+  md: $stack-spacing,
+  lg: double($stack-spacing),
+  xl: quadruple($stack-spacing)
+) !default;
+
+/*
+ * o-stack */
+@include element(#{$stack-namespace}stack, $stack-responsive) {
+  > * {
+    display: block;
+  }
+
+  /*
+    * o-stack-[xs|sm|md|lg|xl] */
+  @each $size, $spacing in $stack-sizes {
+    @include modifier(#{$size}) {
+      > * + * {
+        margin-top: $spacing
+      }
+    }
+  } // end @each
+} // end @include

@@ -1,0 +1,18 @@
+/**
+ * = tools.headings - mixin used to generate headings.
+ */
+
+@mixin headings($headings, $breakpoint: null) {
+  @each $alias, $values in $headings {
+    $font-size: nth($values, 1);
+    $line-height: auto;
+
+    @if length($values) == 2 {
+      $line-height: nth($values, 2);
+    }
+
+    .#{$namespace-trumps}#{$alias}#{$breakpoint} {
+      @include font-size($font-size, $line-height);
+    }
+  } // end @each
+} // end @mixin

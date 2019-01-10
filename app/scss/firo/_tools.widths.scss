@@ -1,0 +1,19 @@
+/**
+ * = tools.widths - mixin used to generate width columns.
+ */
+
+@mixin widths($widths, $breakpoint: null) {
+  @each $denominator in $widths {
+    @if ($denominator == 1) {
+      .#{$widths-namespace}1\/1#{$breakpoint} {
+        width: 100% !important;
+      }
+    } @else {
+      @for $numerator from 1 to $denominator {
+        .#{$widths-namespace}#{$numerator}\/#{$denominator}#{$breakpoint} {
+          width: ($numerator / $denominator) * 100% !important;
+        }
+      } // end @for
+    } // end @each
+  } // end @each
+} // end @mixin

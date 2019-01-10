@@ -1,0 +1,66 @@
+/**
+ * = objects.pack - pack elements into one line.
+ *
+ * == Modifiers
+  * .o-pack--equal: make object children the equal width
+  * .o-pack--justify: children elements fills space evenly
+  * .o-pack--[middle|bottom]: vertical alignment of elements
+ * == Usage
+  <div class="o-pack">
+    <div>Foo</div>
+    <div>Bar</div>
+    <div>Baz</div>
+  </div>
+ */
+
+/*
+ * Object namespace */
+$pack-namespace: $namespace-objects !default;
+/*
+ * Is object responsive */
+$pack-responsive: $responsive !default;
+/*
+ * Enabled modifiers */
+$pack-enable: (equal, justify, middle, bottom) !default;
+
+/*
+ * o-pack */
+@include element(#{$pack-namespace}pack, $pack-responsive) {
+  display: table;
+  width: 100%;
+
+  > * {
+    display: table-cell;
+    vertical-align: top;
+  }
+
+  /*
+    * o-pack--equal */
+  @include modifier(equal, $pack-enable) {
+    table-layout: fixed;
+  }
+
+  /*
+    * o-pack--justify */
+  @include modifier(justify, $pack-enable) {
+    text-align: center;
+
+    > :last-child {
+      text-align: right;
+    }
+
+    > :first-child {
+      text-align: left;
+    }
+  }
+
+  /*
+    * o-pack--[middle|bottom] */
+  @each $align in (middle, bottom) {
+    @include modifier(#{$align}, $pack-enable) {
+      > * {
+        vertical-align: $align;
+      }
+    }
+  }
+} // end @include
