@@ -6,6 +6,7 @@
    ========================================================================== */
 @import "firo/settings.global";
 @import "firo/settings.responsive";
+@import "ui/settings.colors";
 
 /* Tools - mixins and functions
    ========================================================================== */
@@ -24,6 +25,7 @@
 /* Base - styling of non classed tags
    ========================================================================== */
 @import "firo/base.images";
+@import "ui/base.typography";
 
 /* Objects - reusable, non-cosmetic design patterns
    ========================================================================== */
@@ -34,9 +36,11 @@
 
 /* Components - implementation of specific piece of UI
    ========================================================================== */
+@import "ui/components.footer";
 
 /* Trumps - utility classes with specific role, overrides
    ========================================================================== */
 @import "firo/trumps.clearfix";
 @import "firo/trumps.widths";
+@import "firo/trumps.spacing";
 @import "firo/trumps.headings";

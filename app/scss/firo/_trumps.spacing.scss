@@ -1,0 +1,81 @@
+/**
+ * = trumps.spacing - generate paddings and margins.
+ *
+ * == Usage
+  <div class="u-mt u-ml@sm u-p u-pb++"></div>
+ */
+
+/*
+ * Trump namespace */
+$spacing-namespace: $namespace-trumps !default;
+/*
+ * Is trump responsive */
+$spacing-responsive: $responsive !default;
+
+$base-spacing: 32px !default;
+
+$spacing-types: (
+    'p':padding,
+    'm':margin
+);
+
+$spacing-sizes: (
+    '--':     quarter($base-spacing),
+    '-':      halve($base-spacing),
+    '':       $base-spacing,
+    '\\+':    double($base-spacing),
+    '\\+\\+': quadruple($base-spacing),
+    '0':      0,
+);
+
+$spacing-directions: (
+    '':'',
+    't':'-top',
+    'r':'-right',
+    'b':'-bottom',
+    'l':'-left',
+    'v':vertical,
+    'h':horizontal
+);
+
+// Include responsive enabled widths
+@if $widths-responsive {
+  // 'p': padding
+  @each $type,$attr in $spacing-types {
+    // '-': halve($base-spacing)
+    @each $size-alias,$size in $spacing-sizes {
+      // 't: '-top'
+      @each $direction-alias, $direction in $spacing-directions {
+        .#{$spacing-namespace}#{$type}#{$direction-alias}#{$size-alias} {
+          @if ($direction-alias=='v') {
+            // Generate vertical spacing
+            #{$attr+'-top'}: $size !important;
+            #{$attr+'-bottom'}: $size !important;
+          } @else if ($direction-alias=='h') {
+            // Generate horizontal spacing
+            #{$attr+'-left'}: $size !important;
+            #{$attr+'-right'}: $size !important;
+          } @else {
+            // Generate one direction spacing
+            #{$attr+$direction}: $size !important;
+          }
+        }
+
+        .#{$spacing-namespace}-#{$type}#{$direction-alias}#{$size-alias} {
+          @if ($direction-alias=='v') {
+            // Generate vertical spacing
+            #{$attr+'-top'}: -$size !important;
+            #{$attr+'-bottom'}: -$size !important;
+          } @else if ($direction-alias=='h') {
+            // Generate horizontal spacing
+            #{$attr+'-left'}: -$size !important;
+            #{$attr+'-right'}: -$size !important;
+          } @else {
+            // Generate one direction spacing
+            #{$attr+$direction}: -$size !important;
+          }
+        }
+      } // end @each
+    } // end @each
+  } // end @each
+} // end @if
