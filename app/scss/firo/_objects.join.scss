@@ -41,7 +41,7 @@ $join-enable: (flush, bottom, middle) !default;
   list-style-type: none;
 
   > * {
-    display: inline-block;
+    display: inline-block !important;
     vertical-align: top;
   }
 

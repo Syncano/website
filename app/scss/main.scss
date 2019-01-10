@@ -39,6 +39,7 @@
 
 /* Components - implementation of specific piece of UI
    ========================================================================== */
+@import "ui/components.button";
 @import "ui/components.footer";
 
 /* Trumps - utility classes with specific role, overrides
@@ -47,3 +48,4 @@
 @import "firo/trumps.widths";
 @import "firo/trumps.spacing";
 @import "firo/trumps.headings";
+@import "ui/trumps.other";

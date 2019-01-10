@@ -24,10 +24,10 @@ $stack-spacing: $base-spacing !default;
  * Object spacing sizes */
 $stack-sizes: (
   xs: quarter($stack-spacing),
-  sm: halve($stack-spacing),
-  md: $stack-spacing,
-  lg: double($stack-spacing),
-  xl: quadruple($stack-spacing)
+  sm: triple(quarter($stack-spacing)),
+  md: halve($stack-spacing),
+  lg: triple(halve($stack-spacing)),
+  xl: double($stack-spacing)
 ) !default;
 
 /*

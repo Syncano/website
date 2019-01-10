@@ -60,7 +60,7 @@ $spacing-directions: (
           }
         }
 
-        .#{$spacing-namespace}-#{$type}#{$direction-alias}#{$size-alias} {
+        @include element(#{$spacing-namespace}-#{$type}#{$direction-alias}#{$size-alias}, true) {
           @if ($direction-alias=='v') {
             // Generate vertical spacing
             #{$attr+'-top'}: -$size !important;
