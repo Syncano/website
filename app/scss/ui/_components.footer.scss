@@ -1,0 +1,16 @@
+/**
+ * = components.footer
+ */
+
+.c-footer {
+  background: url('/assets/img/footer-bg.svg');
+  
+  @include at(md+) {
+    display: grid;
+    g
+  }
+
+  &__heading {
+
+  }
+}

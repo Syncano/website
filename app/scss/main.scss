@@ -24,6 +24,7 @@
 /* Base - styling of non classed tags
    ========================================================================== */
 @import "firo/base.images";
+@import "ui/base.typography";
 
 /* Objects - reusable, non-cosmetic design patterns
    ========================================================================== */
@@ -34,6 +35,7 @@
 
 /* Components - implementation of specific piece of UI
    ========================================================================== */
+@import "ui/components.footer";
 
 /* Trumps - utility classes with specific role, overrides
    ========================================================================== */
