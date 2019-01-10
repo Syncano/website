@@ -1,0 +1,5 @@
+# GOOGLE TAG MANAGER & environment
+export GTM_ID=
+export GTM_ENV=
+
+export APP_URL=
