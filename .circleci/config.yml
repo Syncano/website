@@ -34,7 +34,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - node_modules
+            - .
   build:
     docker:
       - image: circleci/node:9.10.0
