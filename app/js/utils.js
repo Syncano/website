@@ -22,3 +22,8 @@ const setupDemo = (demo) => {
     return this.command(str, {onCompleteDelay: delay})
   }
 }
+
+const highlight = (lang, code) => {
+  return Prism.highlight(code, Prism.languages[lang], lang)
+}
+
