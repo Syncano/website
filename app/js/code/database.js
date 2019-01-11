@@ -1,45 +1,39 @@
-const databaseClasses = (demo) => {
-  const classesYMLCode = `
-  classes:
-    book:
-      - name: book_title
-        type: string
-      - name: author
-        type: reference
-        target: author
-      - name: publish_date
-        type: datetime
-    author:
-      - name: name
-        type: string
-  `
-
-  const classesYMLCodeHighlighted = Prism.highlight(
-    classesYMLCode,
-    Prism.languages.yaml,
-    'yaml'
-  )
+const createClasses = (demo) => {
+  const code = highlight('yaml', `
+classes:
+  book:
+    - name: book_title
+      type: string
+    - name: author
+      type: reference
+      target: author
+    - name: publish_date
+      type: datetime
+  author:
+    - name: name
+      type: string
+`)
 
   return demo
-    .openApp('editor', {minHeight: '350px', windowTitle: 'my_project'})
-    .write(classesYMLCodeHighlighted)
+    .openApp('editor', {minHeight: '350px', windowTitle: '~/my_project/syncano/books/socket.yml'})
+    .write(code)
 }
 
-const databaseSocketCreate = (demo) => {
-  const classesYMLCode = `
+const createSocket = (demo) => {
+  const code = highlight('js', `
 const book = await data.book.create({
   book_title: ctx.args.title,
   publish_date: new Date()
 })
 
-response.json(book)`
+response.json(book)`)
 
-  const classesYMLCodeHighlighted = Prism.highlight(
-    classesYMLCode,
-    Prism.languages.js,
-    'js'
-  )
   return demo
-    .openApp('editor', {minHeight: '350px', windowTitle: 'my_project/socket.yml'})
-    .write(classesYMLCodeHighlighted)
+    .openApp('editor', {minHeight: '350px', windowTitle: 'my_project/syncano/books/socket.js'})
+    .write(code)
+}
+
+const databaseDemo = {
+  createClasses,
+  createSocket
 }
