@@ -135,9 +135,10 @@
     &-dropdown-list { 
       position: relative;
       width: 384px;
-      transition: all .3s;
+      overflow: hidden;
       z-index: 3;
-      &  > ul {
+      transition: transform .3s;
+      &  ul {
         position: relative;
         z-index: 1;
         height: 100%;

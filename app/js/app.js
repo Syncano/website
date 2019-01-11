@@ -24,8 +24,8 @@ dropdowns.forEach((item) => {
     const targetWidth = target.offsetWidth
     const targetHeight = target.offsetHeight
     const left = offset(item).left + (item.offsetWidth / 2) - (targetWidth / 2)
-    container.style.transform = `translateX(${left}px)`;    
     Object.assign(bg.style, {width: targetWidth+'px', height: targetHeight+'px', 'transform':  `translate(${left}px)`})
+    Object.assign(container.style, {width: targetWidth+'px', height: targetHeight+'px', 'transform':  `translate(${left}px)`})
   })
 })
 
