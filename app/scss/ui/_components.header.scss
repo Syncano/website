@@ -89,32 +89,43 @@
 
 
     &-bg {
-      /* morph dropdown background */
       position: absolute;
       top: 0;
       left: 0;
-      height: 1px;
-      width: 1px;
+      height: 0;
+      width: 0;
       background: #FFFFFF;
       opacity: 0;
-      transition: opacity .3s;
+      transition: all .3s;
       transform-origin: top left;
       border-radius: 8px;
+      z-index: 1;
       
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: calc(100%);
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        height: 0;
+        width: 0;
+        border: 8px solid transparent;
+        border-bottom-color: #FFFFFF;
+      }
 
       .c-header__navigation.--dropdown & {
         opacity: 1;
-        transition: width .2s, height .2s, transform .3s, opacity .3s;
+        transition: width .2s, height .2s, left .2s, transform .3s, opacity .3s;
       }
     }
 
     &-dropdown {
       opacity: 0;
       width: 100%;
-      transition: opacity .3s, visibility .3s;
+      transition: all .3s;
       visibility: hidden;
       position: absolute;
-      z-index: 1;
       &.--active {
         opacity: 1;
         visibility: visible;
@@ -124,23 +135,8 @@
     &-dropdown-list { 
       position: relative;
       width: 384px;
-      &:before {
-        content: '';
-        position: absolute;
-        bottom: 100%;
-        left: 50%;
-        right: auto;
-        transform: translateX(-50%);
-        height: 0;
-        width: 0;
-        border: 8px solid transparent;
-        border-bottom-color: #FFFFFF;
-        opacity: 0;
-        transition: opacity .3s;
-        .--dropdown & {
-          opacity: 1;
-        }
-      }
+      transition: all .3s;
+      z-index: 3;
       &  > ul {
         position: relative;
         z-index: 1;
