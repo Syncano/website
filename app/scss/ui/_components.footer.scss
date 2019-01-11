@@ -3,24 +3,20 @@
  */
 
 .c-footer {
-  // background: url('/assets/img/footer-bg@sm.svg');
-  // background-size: 930px 320px;
-  // background-position-x: center;
-  // background-repeat: repeat-x;
-  // padding-top: 160px;
+  &__head {grid-area: head;}
+  &__platform {grid-area: platform;}
+  &__products {grid-area: products;}
+  &__developers {grid-area: developers;}
+  &__support {grid-area: support;}
+  &__social {grid-area: social;}
+  &__copyright {grid-area: copyright;}
 
-  @include at(md\+) {
-    display: grid;
-  }
+  &__background svg {
+    width: 100%;
+    display: block;
 
-  &__mobile-background {
     @include at(md\+) {
-      display: none;
-    }
-
-    svg {
-      width: 100%;
-      display: block;
+      max-height: 360px;
     }
   }
 
@@ -28,17 +24,89 @@
     background-color: #1E2144;
   }
 
+  &__grid {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+      "head head"
+      "social social"
+      "platform developers"
+      "support products"
+      "copyright copyright";
+
+    @include at(md) {
+      grid-template-areas:
+        "head head head head"
+        "platform developers support products"
+        "social social social social"
+        "copyright copyright copyright copyright";
+    }
+
+    @include at(lg) {
+      grid-column-gap: 4px;
+      grid-auto-columns: auto;
+      grid-template-areas:
+        "head head head head head"
+        "platform products developers support social"
+        "copyright copyright copyright copyright copyright";
+    }
+  }
+
   &__title {
     text-align: center;
     color: $white;
   }
 
+  &__subtitle {
+    color: $cold-purple;
+    text-align: center;
+  }
+
   &__heading {
     @include font-size(16px, 20px);
     color: $white;
+    margin-top: 0;
   }
 
   &__link {
+    @include font-size(14px, 20px);
+    letter-spacing: -.05px;
+    color: $cold-purple;
+    display: block;
+    padding: 4px 0;
 
+    &:hover {
+      color: $white;
+    }
+
+    &-desc {
+      @include font-size(12px, 16px);
+      display: block;
+      color: $san-marino;
+      
+      @include at(md-) {
+        display: none;
+      }
+    }
+  }
+
+  &__social-button {
+    @include font-size(14px, 20px);
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 8px;
+    text-align: right;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  &__copyright {
+    @include font-size(12px, 16px);
+    text-align: center;
+    color: $san-marino;
   }
 }

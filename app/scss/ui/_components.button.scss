@@ -1,0 +1,36 @@
+/**
+ * = components.button
+ */
+
+ .c-btn {
+  cursor: pointer;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 16px;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 40px;
+  line-height: 20px;
+  transition: background-color .25s ease-in-out,
+              color .25s ease-in-out,
+              box-shadow .25s ease-in-out, color .25s ease-in-out;
+
+  &:hover {
+    outline: 0;
+  }
+
+  &--brand {
+    font-weight: 400;
+    color: $cold-purple;
+    background-color: $brand;
+    box-shadow: 0 12px 25px rgba(19,67,65, .25);
+
+    &:hover {
+      background-color: rgba($brand, .75);
+      box-shadow: 0 2px 30px rgba(19,67,65, .5);
+      color: $cold-purple;
+      border-color: #0070d3;
+    }
+  }
+}

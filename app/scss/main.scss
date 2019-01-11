@@ -21,10 +21,12 @@
 /* Generic - high level styles, resets, etc.
 ========================================================================== */
 @import "ui/generic.normalizecss";
+@import "ui/generic.box-sizing";
 
 /* Base - styling of non classed tags
    ========================================================================== */
 @import "firo/base.images";
+@import "ui/base.links";
 @import "ui/base.typography";
 
 /* Objects - reusable, non-cosmetic design patterns
@@ -33,10 +35,14 @@
 @import "firo/objects.split";
 @import "firo/objects.stack";
 @import "firo/objects.pack";
+@import "ui/objects.wrapper";
 
 /* Components - implementation of specific piece of UI
    ========================================================================== */
+@import "ui/components.button";
 @import "ui/components.footer";
+@import "ui/components.header";
+@import "ui/components.hero";
 
 /* Trumps - utility classes with specific role, overrides
    ========================================================================== */
@@ -44,3 +50,4 @@
 @import "firo/trumps.widths";
 @import "firo/trumps.spacing";
 @import "firo/trumps.headings";
+@import "ui/trumps.other";

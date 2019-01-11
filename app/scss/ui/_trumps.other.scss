@@ -1,0 +1,16 @@
+/**
+ * = trumps.other
+ */
+
+ @include element(u-ta-c, true) { text-align: center; }
+ .u-ta-l { text-align: left; }
+ .u-ta-r { text-align: right; }
+ .u-va-m { vertical-align: middle; }
+
+ .u-bold { font-weight: bold; }
+ .u-semibold { font-weight: 500; }
+ .u-fs-i { font-style: italic; }
+ .u-fs-n { font-style: normal; }
+ .u-td-u { text-decoration: underline; }
+
+ @include element(u-hidden, true) { display: none; }
