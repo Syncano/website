@@ -1,0 +1,36 @@
+/**
+ * = components.tutorial
+ */
+
+.c-tutorial-list {
+  display: grid;
+  justify-content: center;
+  grid-row-gap: 40px;
+
+  @include at(md\+) {
+    grid-row-gap: 80px;
+    grid-column-gap: 20px;
+    padding-bottom: 60px;
+    grid-template-areas:
+      "a b"
+      "c d";
+
+    > *:nth-child(1) {
+      grid-area: a;
+    }
+
+    > *:nth-child(2) {
+      grid-area: b;
+      transform: translateY(60px);
+    }
+
+    > *:nth-child(3) {
+      grid-area: c;
+    }
+
+    > *:nth-child(4) {
+      grid-area: d;
+      transform: translateY(60px);
+    }
+  }
+}

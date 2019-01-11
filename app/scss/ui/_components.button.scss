@@ -33,4 +33,17 @@
       border-color: #0070d3;
     }
   }
+
+  &--primary {
+    font-weight: 400;
+    color: $white;
+    background-color: $san-marino;
+    // box-shadow: 0 12px 25px rgba(19,67,65, .25);
+
+    &:hover {
+      background-color: rgba($san-marino, .9);
+      box-shadow: 0 2px 30px rgba(17, 29, 56, .15);
+      color: $white;
+    }
+  }
 }
