@@ -6,7 +6,12 @@ setupDemo(demo)
 // databaseSocketCreate(demo).end()
 
 // usersDemo.userCreate(demo).end()
-realtimeDemo.realtimeSubscribe(demo).end()
-// setTimeout(() => {
-  // eventDemo.eventHandler(demo).end()
-// }, 10000)
+// realtimeDemo.realtimeSubscribe(demo).end()
+
+demo
+  .openApp('website', {minHeight: '350px', windowTitle: '~/my_project/syncano/user/src/create.js'})
+  .print(highlight('js', JSON.stringify({
+    test: 123,
+    aaa: 'bbb'
+  }, null, 2)))
+  .end()
