@@ -13,6 +13,16 @@
   justify-content: space-between;
   align-items: center;
 
+  &:before {
+    display: none;
+  }
+
+  @media (min-width: 1000px) {
+    &:before {
+      content: 'desktop';
+    }
+  }
+
   &__navigation {
     position: relative;
 
@@ -37,12 +47,17 @@
     }
 
     &-wrapper {
-      display: none;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-
+      display: block;
+      top: 58px;
+      /* overwrite mobile style */
+      width: auto;
+      padding: 0;
+      box-shadow: none;
+      background-color: transparent;
+      transform: translateZ(0);
+      will-change: transform;
+      transform: translateY(20px);
+      transition: transform .3s;
       .c-header__navigation.--open & {
         display: block;
       }
@@ -60,6 +75,7 @@
       opacity: 0;
       transition: opacity .3s;
       transform-origin: top left;
+
       .--dropdown-visible & {
         opacity: 1;
         transition: transform .3s, opacity .3s;
@@ -74,17 +90,46 @@
       visibility: hidden;
       width: 100%;
       transition: opacity .3s, visibility .3s;
-      .--active  & {
+
+      &.--active {
         opacity: 1;
         visibility: visible;
       }
     }
-    
-    &-dropdown-list {
+
+    &-dropdown-list { 
       position: absolute;
       top: 0;
       left: 0;
-      visibility: hidden;
+      visibility: hidden; 
+      transform: translateZ(0);
+      will-change: transform, width, height; 
+      transition: visibility .3s;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        height: 0;
+        width: 0;
+        border: 8px solid transparent;
+        border-bottom-color: #FFFFFF;
+        opacity: 0;
+        transition: opacity .3s;
+      }
+      &  > ul {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+      }
+      .--dropdown-visible & {
+        visibility: visible;
+      }
     }
   }
 }

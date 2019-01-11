@@ -20,7 +20,7 @@ const errorHandler = r => {
 };
 
 gulp.task('runBrowserify', function() {
-  // Single entry point to browserify 
+  // Single entry point to browserify
   var entry = browserify({
     //do your config here
     entries: ['./dist/js/app.js'],
@@ -31,7 +31,7 @@ gulp.task('runBrowserify', function() {
   return entry.bundle()
     .pipe(source('app.js')) //this converts to stream
     .pipe(buffer()) // <----- convert from streaming to buffered vinyl file object
-    .pipe(uglify())
+   // .pipe(uglify())
     .pipe(gulp.dest('./dist/js/'))
 });
 
@@ -43,14 +43,14 @@ gulp.task('assets', function() {
 
 gulp.task('scripts', function() {
   return gulp
-    .src('app/js/app.js')
+    .src('app/js/**/*')
 		.pipe( plumber( errorHandler ) )
     .pipe(
       babel({
-        presets: ['env']
+        presets: ['@babel/preset-env']
       })
-    ) 
-    .pipe(uglify())
+    )
+    //.pipe(uglify())
     .pipe(gulp.dest('./dist/js'));
 });
 
@@ -81,7 +81,7 @@ gulp.task('serve', gulp.series('sass', 'html', 'scripts', 'runBrowserify', 'asse
   gulp.watch('app/scss/**/*', gulp.series('sass'));
   gulp.watch('app/content/*.html',  gulp.series('html'));
   gulp.watch('app/partials/*.html', gulp.series('html'));
-  gulp.watch('app/js/*.js',  gulp.series('scripts'));
+  gulp.watch('app/js/**/*.js',  gulp.series('scripts'));
   gulp.watch('app/assets/**/*', gulp.series('assets'));
   gulp.watch('dist/*.html').on('change', browserSync.reload);
   gulp.watch('dist/js/*.js').on('change', browserSync.reload);

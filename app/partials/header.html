@@ -10,6 +10,22 @@
   <link href="https://fonts.googleapis.com/css?family=Heebo:300,400,500,700&amp;subset=latin-ext" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
 
+  <link rel="stylesheet" href="https://unpkg.com/@glorious/demo/dist/gdemo.min.css">
+  <script src="https://unpkg.com/@glorious/demo/dist/gdemo.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-yaml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-javascript.min.js"></script>
+
+  <style>
+    .token.operator {
+      background: none !important;
+    }
+
+  </style>
+
+
   <!-- Google Tag Manager -->
   <script>
     (function (w, d, s, l, i) {
@@ -40,7 +56,7 @@
     <img src="/assets/img/syncano.svg" />
 
 
-<!--
+    <!--
     <a href="#0" class="nav-trigger">Open Nav<span aria-hidden="true"></span></a>
 -->
 
@@ -66,11 +82,11 @@
         </li>
 
         <li>
-            <a href="https://github.com/syncano/syncano-node" target="_blank">Github</a>
-          </li>
-          <li>
-            <a href="#">Sign In</a>
-          </li>
+          <a href="https://github.com/syncano/syncano-node" target="_blank">Github</a>
+        </li>
+        <li>
+          <a href="#">Sign In</a>
+        </li>
 
       </ul>
     </nav>
@@ -79,104 +95,115 @@
       <div class="c-header__navigation-dropdown-list">
         <ul>
           <li id="platform" class="c-header__navigation-dropdown --links">
-            <ul>
-              <li>
-                <a href="#">Hosting
-                  <span>With custom domain name &amp; SSL</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">Database
-                  <span>Store your app data in the fast NoSQL DB</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">Functions (Syncano Sockets)
-                  <span>Create your own backend in the cloud </span>
-                </a>
-              </li>
-              <li>
-                <a href="#">Users &amp; groups
-                  <span>Users management out of the box</span>
-                </a>
-              </li>
-            </ul>
+            <div class="content">
+
+              <ul>
+                <li>
+                  <a href="#">Hosting
+                    <span>With custom domain name &amp; SSL</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Database
+                    <span>Store your app data in the fast NoSQL DB</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Functions (Syncano Sockets)
+                    <span>Create your own backend in the cloud </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Users &amp; groups
+                    <span>Users management out of the box</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </li>
 
           <li id="products" class="c-header__navigation-dropdown --links">
-            <ul>
-              <li>
-                <a href="#">Syncano Cloud
-                  <span>You take care about your code, we do the best</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">Syncano Self-Hosted
-                  <span>Use your own infrastracture</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">Enterprise Support Plan
-                  <span>Close collaboration with Syncano team</span>
-                </a>
-              </li>
-            </ul>
+            <div class="content">
+
+              <ul>
+                <li>
+                  <a href="#">Syncano Cloud
+                    <span>You take care about your code, we do the best</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Syncano Self-Hosted
+                    <span>Use your own infrastracture</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Enterprise Support Plan
+                    <span>Close collaboration with Syncano team</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </li>
 
           <li id="developers" class="c-header__navigation-dropdown --list">
-            <ul>
-              <li>
-                <a href="#">Documentation
-                  <span>Start using Syncano</span>
-                </a>
-              </li>
-              <li>
-                <ul>
-                  <li>
-                    <a href="#">Get Started</a>
-                    <ul>
-                      <li>
-                        <a href="#">Hosting</a>
-                      </li>
-                      <li>
-                        <a href="#">Database</a>
-                      </li>
-                      <li>
-                        <a href="#">Functions</a>
-                      </li>
-                      <li>
-                        <a href="#">Users &amp; groups</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">Cheatsheet</a>
-                  </li>
-                  <li>
-                    <a href="#">Tutorials</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+            <div class="content">
+              <ul>
+                <li>
+                  <a href="#">Documentation
+                    <span>Start using Syncano</span>
+                  </a>
+                </li>
+                <li>
+                  <ul>
+                    <li>
+                      <a href="#">Get Started</a>
+                      <ul>
+                        <li>
+                          <a href="#">Hosting</a>
+                        </li>
+                        <li>
+                          <a href="#">Database</a>
+                        </li>
+                        <li>
+                          <a href="#">Functions</a>
+                        </li>
+                        <li>
+                          <a href="#">Users &amp; groups</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Cheatsheet</a>
+                    </li>
+                    <li>
+                      <a href="#">Tutorials</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </li>
 
           <li id="support" class="c-header__navigation-dropdown --list">
-            <ul>
-              <li>
-                <a href="#">Spectrum
-                  <span>Talk with other Syncano developers</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">Contact us
-                  <span>Need help?</span>
-                </a>
-              </li>
-            </ul>
+            <div class="content">
+              <ul>
+                <li>
+                  <a href="#">Spectrum
+                    <span>Talk with other Syncano developers</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Contact us
+                    <span>Need help?</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </li>
         </ul>
 
         <div class="c-header__navigation-bg" aria-hidden="true"></div>
+        <a class="nav-trigger">nav</a>
       </div> <!-- dropdown-list -->
     </div> <!-- morph-dropdown-wrapper -->
   </header>
