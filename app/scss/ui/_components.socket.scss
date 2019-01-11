@@ -1,0 +1,42 @@
+/**
+ * = components.socket
+ */
+
+ .c-socket {
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow .25s ease, transform .25s ease;
+  border-radius: 8px;
+  padding: 8px;
+  display: block;
+  text-align: center;
+
+  &:hover {
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+  }
+
+  @include at(md\+) {
+    padding: 20px;
+  }
+
+  &__image {
+    justify-items: center;
+    align-items: center;
+    display: grid;
+    height: 60px;
+  }
+
+  &__title {
+    @include font-size(18px, 24px);
+    color: $grey-400;
+    font-weight: bold;
+    margin: 16px 0 0 0;
+  }
+
+  &__description {
+    @include font-size(12px, 18px);
+    color: $grey-800;
+    margin: 0;
+  }
+}

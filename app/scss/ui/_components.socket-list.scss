@@ -1,0 +1,22 @@
+/**
+ * = components.socket-list
+ */
+
+.c-socket-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+
+  @include at(md) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 14px;
+    grid-row-gap: 14px;
+  }
+
+  @include at(lg) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+}
