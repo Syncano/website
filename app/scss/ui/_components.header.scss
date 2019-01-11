@@ -8,5 +8,35 @@
   top: 0;
   left: 0;
   padding: 70px;
-  
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  &__navigation {
+    align-items: center;
+    display: flex; 
+    list-style-type: none;
+    & > li {
+      list-style-type: none;
+      position: relative;
+      display: block;
+      & > a {
+        font-size: 16px;
+        color: $cold-purple;
+        margin-left: 30px;
+        text-decoration: none;
+      }
+      & > ul {
+        display: none;
+      }
+      &:hover > ul {
+        position: absolute;
+        display: block;
+        overflow: hidden;
+        top: 18px; 
+        transform: translateX(-50%);
+        background: #fff;
+      }
+    } 
+  }
 }
