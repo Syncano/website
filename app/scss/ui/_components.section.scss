@@ -1,0 +1,84 @@
+/**
+ * = components.section
+ */
+
+.c-section {
+  &--features {
+    .c-section__title {
+      max-width: 480px;
+    }
+  }
+
+  &--sockets {
+    background: url('/assets/img/sockets-bg.svg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding-top: 40px;
+    padding-bottom: 400px;
+    margin-bottom: -400px;
+
+    @include at(sm) {
+      background-size: 1600px;
+      }
+
+    @include at(md\+) {
+      background-position: center 70px;
+      padding-top: 256px;
+    }
+
+    .c-section__title {
+      max-width: 550px;
+    }
+  }
+
+  &--location {
+    .c-section__title {
+      max-width: 480px;
+    }
+    .c-section__subtitle {
+      max-width: 680px;
+    }
+  }
+
+  &__meta {
+    text-align: center;
+    color: $grey-1000;
+  }
+
+  &__separator {
+    width: 23px;
+    height: 15px;
+    background: url('/assets/img/section-separator.svg');
+    margin: 40px auto 40px auto;
+
+    @include at(md\+) {
+      margin: 120px auto;
+    }
+  }
+
+  &__title {
+    @include font-size(24px, 28px);
+    color: $brand;
+    display: block;
+    text-align: center;
+    margin: 0 auto 16px auto;
+
+    @include at(md\+) {
+      @include font-size(40px, 52px);
+      margin: 0 auto 40px auto;
+    }
+  }
+
+  &__subtitle {
+    @include font-size(12px, 16px);
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: $san-marino;
+
+    @include at(md\+) {
+      @include font-size(20px, 24px);
+    }
+  }
+}

@@ -9,4 +9,12 @@
   margin-right: auto;
   padding-left: $base-spacing;
   padding-right: $base-spacing;
+
+  &--narrow {
+    max-width: 780 + $base-spacing * 2;
+  }
+
+  &--thin {
+    max-width: 980 + $base-spacing * 2;
+  }
 }

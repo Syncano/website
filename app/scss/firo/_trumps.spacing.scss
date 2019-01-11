@@ -20,12 +20,12 @@ $spacing-types: (
 );
 
 $spacing-sizes: (
-    '--':     quarter($base-spacing),
-    '-':      halve($base-spacing),
-    '':       $base-spacing,
-    '\\+':    triple(halve($base-spacing)),
-    '\\+\\+': double($base-spacing),
-    '0':      0,
+    '--':        8px,
+    '-':         16px,
+    '':          32px,
+    '\\+':       40px,
+    '\\+\\+':    80px,
+    '0':         0,
 );
 
 $spacing-directions: (

@@ -13,7 +13,6 @@ const beep = require('beepbeep');
 const notify = require('gulp-notify');
 const preprocess = require("gulp-preprocess");
 
-
 const errorHandler = r => {
 	notify.onError( '\n\n❌  ===> ERROR: <%= error.message %>\n' )( r );
 	beep();
@@ -39,6 +38,10 @@ gulp.task('runBrowserify', function() {
 
 gulp.task('assets', function() {
   return gulp.src('./app/assets/**/*').pipe(gulp.dest('./dist/assets/'));
+});
+
+gulp.task('vendor', function() {
+  return gulp.src('./app/vendor/glorious-demo/dist/*').pipe(gulp.dest('./dist/vendor/'));
 });
 
 gulp.task('scripts', function() {
@@ -73,21 +76,22 @@ gulp.task('html', function() {
     .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('serve', gulp.series('sass', 'html', 'scripts', 'runBrowserify', 'assets', function() {
+gulp.task('serve', gulp.series('sass', 'html', 'scripts', 'runBrowserify', 'assets', 'vendor', function() {
   browserSync.init({
     server: './dist',
     open: true // set to false to disable browser autostart
   });
   gulp.watch('app/scss/**/*', gulp.series('sass'));
-  gulp.watch('app/content/*.html',  gulp.series('html'));
+  gulp.watch('app/content/*.html', gulp.series('html'));
   gulp.watch('app/partials/*.html', gulp.series('html'));
   gulp.watch('app/js/**/*.js',  gulp.series('scripts'));
   gulp.watch('app/assets/**/*', gulp.series('assets'));
+  gulp.watch('app/vendor/glorious-demo/dist/**/*', gulp.series('vendor'));
   gulp.watch('dist/*.html').on('change', browserSync.reload);
   gulp.watch('dist/js/*.js').on('change', browserSync.reload);
 }));
 
-gulp.task('build', gulp.series('sass', 'html' ,'scripts', 'runBrowserify', 'assets'));
+gulp.task('build', gulp.series('sass', 'html' ,'scripts', 'runBrowserify', 'assets', 'vendor'));
 gulp.task('default', gulp.series('serve'));
 
 

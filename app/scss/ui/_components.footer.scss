@@ -3,6 +3,14 @@
  */
 
 .c-footer {
+  @include at(sm) {
+    margin-top: 40px;
+  }
+
+  @include at(md\+) {
+    margin-top: 180px;
+  }
+
   &__head {grid-area: head;}
   &__platform {grid-area: platform;}
   &__products {grid-area: products;}
@@ -83,7 +91,11 @@
       @include font-size(12px, 16px);
       display: block;
       color: $san-marino;
-      
+
+      &.is-link:hover {
+        color: $white;
+      }
+
       @include at(md-) {
         display: none;
       }

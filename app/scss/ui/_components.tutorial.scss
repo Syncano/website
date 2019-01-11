@@ -1,0 +1,61 @@
+/**
+ * = components.tutorial
+ */
+
+.c-tutorial {
+  display: grid;
+  max-width: 380px;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  grid-template-rows: auto;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "image image"
+    "time title"
+    "time description";
+
+
+  &__image {
+    grid-area: image;
+  }
+
+  &__title {
+    @include font-size(16px, 20px);
+    grid-area: title;
+    letter-spacing: -.05px;
+    margin: 0;
+    color: $san-marino;
+  }
+
+  &__description {
+    @include font-size(12px, 16px);
+    grid-area: description;
+    color: $grey-800;
+  }
+
+  &__time {
+    @include font-size(10px, 12px);
+    grid-area: time;
+    width: 40px;
+    height: 40px;
+    background: #F4F6FF;
+    border: 1px solid #EAEDFC;
+    border-radius: 20px;
+    color: $cold-purple;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-row-gap: 1px;
+    font-weight: 500;
+
+    &::before {
+      content: '';
+      width: 16px;
+      height: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      display: inline-block;
+      background: url('/assets/img/time.svg');
+    }
+  }
+}
