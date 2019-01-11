@@ -83,7 +83,11 @@
       @include font-size(12px, 16px);
       display: block;
       color: $san-marino;
-      
+
+      &.is-link:hover {
+        color: $white;
+      }
+
       @include at(md-) {
         display: none;
       }

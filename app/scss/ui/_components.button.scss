@@ -24,11 +24,11 @@
     font-weight: 400;
     color: $cold-purple;
     background-color: $brand;
-    box-shadow: 0 12px 25px rgba(19,67,65, .25);
+    // box-shadow: 0 12px 25px rgba(19,67,65, .25);
 
     &:hover {
       background-color: rgba($brand, .75);
-      box-shadow: 0 2px 30px rgba(19,67,65, .5);
+      box-shadow: 0 2px 30px rgba(17, 29, 56, 1);
       color: $cold-purple;
       border-color: #0070d3;
     }
