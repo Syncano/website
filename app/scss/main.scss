@@ -40,12 +40,15 @@
 /* Components - implementation of specific piece of UI
    ========================================================================== */
 @import "ui/components.button";
+@import "ui/components.demo";
 @import "ui/components.footer";
 @import "ui/components.header";
 @import "ui/components.hero";
 @import "ui/components.section";
-@import "ui/components.socket";
 @import "ui/components.socket-list";
+@import "ui/components.socket";
+@import "ui/components.tutorial";
+@import "ui/components.tutorial-list";
 
 /* Trumps - utility classes with specific role, overrides
    ========================================================================== */
