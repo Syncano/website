@@ -16,6 +16,7 @@ $responsive-alias: null !global;
 
 @mixin element($name, $is-responsive: false) {
   $responsive-element: $name !global;
+  $responsive-alias: null !global;
 
   .#{$name},
   %#{$name} {
@@ -41,9 +42,9 @@ $responsive-alias: null !global;
 
 @mixin modifier($modifier, $enabled: true) {
   @if $enabled == true or index($enabled, $modifier) {
-      @at-root .#{$responsive-element}--#{$modifier}#{$responsive-alias} {
-        @content
-      }
+    @at-root .#{$responsive-element}--#{$modifier}#{$responsive-alias} {
+      @content
+    }
   } // end @index
 } // end @mixin
 
