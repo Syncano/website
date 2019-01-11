@@ -3,6 +3,14 @@
  */
 
 .c-footer {
+  @include at(sm) {
+    margin-top: 40px;
+  }
+
+  @include at(md\+) {
+    margin-top: 180px;
+  }
+
   &__head {grid-area: head;}
   &__platform {grid-area: platform;}
   &__products {grid-area: products;}
