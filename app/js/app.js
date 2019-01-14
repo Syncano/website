@@ -9,7 +9,10 @@ setupDemo(demo)
 // realtimeDemo.realtimeSubscribe(demo).end()
 
 demo
-  .openApp('website', {minHeight: '350px', windowTitle: '~/my_project/syncano/user/src/create.js'})
+  .openApp('website', {
+    minHeight: '350px',
+    windowTitle: 'http://instance.syncano.space/user/create'
+  })
   .print(highlight('js', JSON.stringify({
     test: 123,
     aaa: 'bbb'
