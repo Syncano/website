@@ -30,7 +30,7 @@ gulp.task('runBrowserify', function() {
   return entry.bundle()
     .pipe(source('app.js')) //this converts to stream
     .pipe(buffer()) // <----- convert from streaming to buffered vinyl file object
-    .pipe(uglify())
+   // .pipe(uglify())
     .pipe(gulp.dest('./dist/js/'))
 });
 
@@ -53,7 +53,7 @@ gulp.task('scripts', function() {
         presets: ['@babel/preset-env']
       })
     )
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(gulp.dest('./dist/js'));
 });
 

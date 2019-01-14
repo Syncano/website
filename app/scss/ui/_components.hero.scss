@@ -2,14 +2,98 @@
  * = components.hero
  */
 
- .s-hero {
-   background: url('/assets/img/hero.svg');
-   background-size: cover;
-   background-position: bottom center;
-   padding-top: 256px;
- }
+@keyframes planet {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1) rotate(0);
+  }
 
- .c-hero {
-   display: flex;
-   
- }
+  50% {
+    transform: translate3d(-0.3%, 0.3%, 0) scale(0.99) rotate(1deg);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1) rotate(0);
+  }
+}
+
+@keyframes syncano {
+  0% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 1;
+  }
+  53% {
+    opacity: 0.62;
+  }
+  79% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes screen {
+  0% {
+    opacity: .7;
+  }
+  42% {
+    opacity: .4;
+  }
+  53% {
+    opacity: .7;
+  }
+  79% {
+    opacity: .4;
+  }
+  100% {
+    opacity: .7;
+  }
+}
+
+.s-hero {
+  background: url('/assets/img/hero.svg');
+  background-size: cover;
+  background-position: bottom center;
+  padding-top: 256px;
+}
+
+.c-hero {
+  display: flex;
+
+  &__image {
+    transform: translateZ(0);
+  }
+
+  &__icon {
+    will-change: transform;
+    animation: planet 10s ease-in-out infinite;
+
+    &.--angular {
+      animation: planet 14s ease-in-out infinite;
+    }
+    &.--npm {
+      animation: planet 9.4s ease-in-out infinite;
+    }
+    &.--vue {
+      animation: planet 10.4s ease-in-out infinite;
+    }
+    &.--js {
+      animation: planet 12.4s ease-in-out infinite;
+    }
+    &.--react {
+      animation: planet 7.4s ease-in-out infinite;
+    }
+  }
+
+  &__screen {
+    animation: screen 14s ease-in-out infinite;
+  }
+
+  &__syncano {
+    animation: syncano 4s ease-in-out infinite;
+  }
+
+}
