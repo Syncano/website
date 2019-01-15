@@ -20,12 +20,16 @@ dropdowns.forEach((item) => {
     }
     catch (e) {}
     navigation.classList.add('--dropdown')
-    target.classList.add('--active')
-    const targetWidth = target.offsetWidth
-    const targetHeight = target.offsetHeight
-    const left = offset(item).left + (item.offsetWidth / 2) - (targetWidth / 2)
-    Object.assign(bg.style, {width: targetWidth+'px', height: targetHeight+'px', 'transform':  `translate(${left}px)`})
-    Object.assign(container.style, {width: targetWidth+'px', height: targetHeight+'px', 'transform':  `translate(${left}px)`})
+    if (target){
+      target.classList.add('--active')
+      const targetWidth = target.offsetWidth
+      const targetHeight = target.offsetHeight
+      const left = offset(item).left + (item.offsetWidth / 2) - (targetWidth / 2)
+      Object.assign(bg.style, {width: targetWidth+'px', height: targetHeight+'px', 'transform':  `translate(${left}px)`})
+      Object.assign(container.style, {width: targetWidth+'px', height: targetHeight+'px', 'transform':  `translate(${left}px)`})
+    } else {
+      navigation.classList.remove('--dropdown')
+    }
   })
 })
 
