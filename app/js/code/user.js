@@ -1,4 +1,4 @@
-const userClasses = (demo) => {
+const usersDemo = (demo) => {
   const classesYMLCode = `
 classes:
   user:
@@ -15,12 +15,6 @@ classes:
     'yaml'
   )
 
-  return demo
-    .openApp('editor', {minHeight: '350px', windowTitle: 'my_project'})
-    .write(classesYMLCodeHighlighted)
-}
-
-const userCreate = (demo) => {
   const code = highlight('js',`
 // Create user
 await user.create({
@@ -30,11 +24,16 @@ await user.create({
 })`)
 
   return demo
-    .openApp('editor', {minHeight: '350px', windowTitle: '~/my_project/syncano/user/src/create.js'})
+    .openApp('editor', {
+      minHeight: '350px',
+      windowTitle: 'my_project',
+      id: 'users-1'
+    })
+    .write(classesYMLCodeHighlighted)
+    .openApp('editor', {
+      minHeight: '350px',
+      windowTitle: '~/my_project/syncano/user/src/create.js',
+      id: 'users-2'
+    })
     .write(code)
-}
-
-const userDemo = {
-  userClasses,
-  userCreate,
 }

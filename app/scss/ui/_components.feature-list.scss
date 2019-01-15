@@ -1,0 +1,83 @@
+/**
+ * = components.feature-list
+ */
+
+$feature-list-items-count: 7;
+$feature-list-item-height: 34px;
+$feature-list-spacing: 24px;
+
+.c-feature-list {
+  color: $cold-purple;
+  display: grid;
+  grid-row-gap: $feature-list-spacing;
+  position: relative;
+  padding-left: 10px;
+  grid-auto-rows: min-content;
+
+  @for $i from 1 to $feature-list-items-count + 1 {
+    &__item:nth-child(#{$i}).is-active ~ .c-feature-list__indicator {
+      transform: translateY(($feature-list-spacing + $feature-list-item-height) * ($i - 1));
+    }
+  }
+
+  &__indicator {
+    position: absolute;
+    width: 4px;
+    left: 0;
+    border-radius: 2px;
+    height: $feature-list-item-height - 2;
+    background-color: $jungle-green;
+    transition: transform .25s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  }
+
+  &__item {
+    cursor: pointer;
+    transition: color .125s ease;
+    white-space: nowrap;
+    user-select: none;
+
+    &.is-active,
+    &:hover {
+      color: $grey-200;
+
+      .c-feature-list__item-description {
+        color: $grey-800;
+      }
+    }
+
+    &-title {
+      @include font-size(16px, 16px);
+      display: inline-block;
+      letter-spacing: -.05px;
+    }
+
+    &-description {
+      @include font-size(12px, 16px);
+      display: block;
+    }
+
+    &-link {
+      @include font-size(10px, 16px);
+      font-weight: 500;
+      visibility: hidden;
+      transition: visibility .25s, background-color .25s, opacity .25s;
+      vertical-align: middle;
+      padding: 2px 9px 0 9px;
+      border-radius: 8px;
+      background-color: $spindle;
+      color: $san-marino;
+      opacity: 0;
+      margin-left: 8px;
+
+      &:hover {
+        color: $san-marino;
+        background-color: $white;
+      }
+
+      .is-active & {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}

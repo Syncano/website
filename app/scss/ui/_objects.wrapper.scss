@@ -10,6 +10,11 @@
   padding-left: $base-spacing;
   padding-right: $base-spacing;
 
+  @include at(sm) {
+    padding-left: quarter($base-spacing);
+    padding-right: quarter($base-spacing);
+  }
+
   &--narrow {
     max-width: 780 + $base-spacing * 2;
   }

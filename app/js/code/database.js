@@ -1,4 +1,4 @@
-const createClasses = (demo) => {
+const databaseDemo = (demo) => {
   const code = highlight('yaml', `
 classes:
   book:
@@ -15,25 +15,22 @@ classes:
 `)
 
   return demo
-    .openApp('editor', {minHeight: '350px', windowTitle: '~/my_project/syncano/books/socket.yml'})
+    .openApp('editor', {
+      minHeight: '350px',
+      windowTitle: '~/my_project/syncano/books/socket.yml',
+      id: 'database-1',
+    })
     .write(code)
-}
-
-const createSocket = (demo) => {
-  const code = highlight('js', `
+    .openApp('editor', {
+      minHeight: '350px',
+      windowTitle: 'my_project/syncano/books/socket.js',
+      id: 'database-2',
+    })
+    .write(highlight('js', `
 const book = await data.book.create({
   book_title: ctx.args.title,
   publish_date: new Date()
 })
 
-response.json(book)`)
-
-  return demo
-    .openApp('editor', {minHeight: '350px', windowTitle: 'my_project/syncano/books/socket.js'})
-    .write(code)
-}
-
-const databaseDemo = {
-  createClasses,
-  createSocket
+response.json(book)`))
 }
