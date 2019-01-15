@@ -54,19 +54,27 @@
       }
     }
 
-    &-link {
+    &-description {
       display: block;
+      color: $cold-purple;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    &-link {
+      display: flex;
       color: $brand-light;
       font-size: 16px;
-      margin: 32px;
-      span {
-        display: block;
-        color: $cold-purple;
-        font-size: 14px;
-        margin-top: 8px;
-      }
+      margin: 32px 24px;
       &:hover {
         color: $brand-light;
+      }
+      & > span {
+        display: block;
+      }
+      img {
+        display: block;
+        margin-right: 16px;
       }
     }
 
