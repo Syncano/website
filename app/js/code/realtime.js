@@ -7,7 +7,11 @@ endpoints:
 `)
 
   return demo
-    .openApp('editor', {minHeight: '350px', windowTitle: '~/my_project/syncano/logs/socket.yml'})
+    .openApp('editor', {
+      minHeight: '350px',
+      windowTitle: '~/my_project/syncano/logs/socket.yml',
+      id: 'realtime-1'
+    })
     .write(code)
 }
 
@@ -17,7 +21,11 @@ const realtimeSend = (demo) => {
 await channel.publish('chat', {message: 'Operation started!'})
 `)
   return demo
-    .openApp('editor', {minHeight: '350px', windowTitle: '~/my_project/syncano/chat/src/send.js'})
+    .openApp('editor', {
+      minHeight: '350px',
+      windowTitle: '~/my_project/syncano/chat/src/send.js',
+      id: 'realtime-2'
+    })
     .write(code)
 }
 
@@ -32,7 +40,11 @@ syncano.listen('chat/stream')
 `)
 
   return demo
-    .openApp('editor', {minHeight: '350px', windowTitle: '~/my_project/src/app.js'})
+    .openApp('editor', {
+      minHeight: '350px',
+      windowTitle: '~/my_project/src/app.js',
+      id: 'realtime-3'
+    })
     .write(code)
 }
 

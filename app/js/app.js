@@ -12,7 +12,7 @@ const offset = (element) => {
   }
 }
 
-dropdowns.forEach((item) => { 
+dropdowns.forEach((item) => {
   item.addEventListener('mouseenter', (event) => {
     const target = document.querySelector(`[data-dropdown-content=${item.getAttribute('data-dropdown')}]`)
     try {
@@ -44,20 +44,58 @@ navigation.addEventListener('mouseleave', (event) => {
 
 
 
-const demo = new GDemo('#terminal')
-setupDemo(demo)
 
-// hostingSync(demo).end()
-// databaseClasses(demo).end()
-// databaseSocketCreate(demo).end()
+;(function() {
+  const select = document.querySelector('[data-feature-select]')
+  const features = document.querySelectorAll('[data-feature-list-item]')
+  const demos = {
+    hosting: (config) => hostingDemo(config).end(),
+    database: (config) => databaseDemo(config).end(),
+    users: (config) => usersDemo(config).end(),
+    events: (config) => eventsDemo(config).end(),
+  }
 
-// usersDemo.userCreate(demo).end()
-// realtimeDemo.realtimeSubscribe(demo).end()
+  createDemo(demos.hosting)
 
-demo
-  .openApp('website', {minHeight: '350px', windowTitle: '~/my_project/syncano/user/src/create.js'})
-  .print(highlight('js', JSON.stringify({
-    test: 123,
-    aaa: 'bbb'
-  }, null, 2)))
-  .end()
+  select.addEventListener('change', handleChange)
+  features.forEach(item => item.addEventListener('click', handleClick))
+
+  function createDemo(callback) {
+    const terminal = document.querySelector('[data-terminal]')
+    const demo = new GDemo('[data-terminal]')
+    terminal.innerHTML = ''
+    setupDemo(demo)
+    callback(demo)
+  }
+
+  function handleChange(event) {
+    const value = event.currentTarget.value
+    const selectedFeatureListItem = document.querySelector(`[data-feature-list-item="${value}"]`)
+
+    Array.from(features).forEach(item => {
+      item.classList.remove('is-active')
+    })
+
+    try {
+      createDemo(demos[value])
+    } catch(err) {}
+
+    selectedFeatureListItem.classList.add('is-active')
+  }
+
+  function handleClick(event) {
+    const target = event.currentTarget
+    const value = target.dataset['featureListItem']
+
+    Array.from(target.parentElement.children).forEach(item => {
+      item.classList.remove('is-active')
+    })
+
+    select.value = value
+    target.classList.add('is-active')
+
+    try {
+      createDemo(demos[value])
+    } catch(err) {}
+  }
+})()

@@ -2,6 +2,36 @@
  * = components.demo
  */
 
-.desktop .application {
-  // position: relative !important;
+// .desktop .application {
+//   position: relative !important;
+// }
+
+.c-demo {
+  @include at(md\+) {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 32px;
+  }
+
+  .desktop .application {
+    position: relative;
+    // transform: scale(1) !important;
+    // opacity: 1 !important;
+  }
+
+  .desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .editor-application,
+  .terminal-application {
+    position: relative;
+  }
+
+  .desktop > * + * {
+    transform: translate(-20px, 40px);
+    position: relative;
+    z-index: 12;
+  }
 }

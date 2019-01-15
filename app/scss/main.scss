@@ -22,6 +22,7 @@
 ========================================================================== */
 @import "ui/generic.normalizecss";
 @import "ui/generic.box-sizing";
+@import "ui/generic.reset";
 
 /* Base - styling of non classed tags
    ========================================================================== */
@@ -41,11 +42,13 @@
    ========================================================================== */
 @import "ui/components.button";
 @import "ui/components.demo";
+@import "ui/components.feature-list";
 @import "ui/components.footer";
 @import "ui/components.header";
 @import "ui/components.hero";
 @import "ui/components.map";
 @import "ui/components.section";
+@import "ui/components.select";
 @import "ui/components.socket-list";
 @import "ui/components.socket";
 @import "ui/components.tutorial-list";
