@@ -9,6 +9,7 @@
   top: 0;
   left: 0;
 
+  transform: translateZ(0);
   &__wrapper {
     padding: 70px;
     display: flex;
@@ -113,6 +114,7 @@
       width: 0;
       background: #FFFFFF;
       opacity: 0;
+      will-change: transform, width, height, opacity;
       transition: all .3s;
       transform-origin: top left;
       border-radius: 8px;
