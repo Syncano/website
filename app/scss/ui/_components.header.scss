@@ -11,7 +11,8 @@
 
   transform: translateZ(0);
   &__wrapper {
-    padding: 70px;
+    max-width: 1244px;
+    padding: 70px 32px;
     display: flex;
     box-sizing: border-box;
     justify-content: space-between;
@@ -114,8 +115,10 @@
       width: 0;
       background: #FFFFFF;
       opacity: 0;
-      will-change: transform, width, height, opacity;
-      transition: all .3s;
+      will-change: width, height, transform, opacity;
+      transition: width .3s, height .3s, transform .3s, opacity .3s;
+      backface-visibility: hidden;
+      perspective: 1000;
       transform-origin: top left;
       border-radius: 8px;
       z-index: 1;
@@ -156,7 +159,10 @@
       width: 384px;
       overflow: hidden;
       z-index: 3;
-      transition: all .3s;
+      backface-visibility: hidden;
+      perspective: 1000;
+      will-change: width, height, transform;
+      transition: width .3s, height .3s, transform .3s;
       &  ul {
         position: relative;
         z-index: 1;
