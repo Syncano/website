@@ -3,6 +3,7 @@ const dropdowns = document.querySelectorAll('[data-dropdown]')
 const dropdownsContent = document.querySelectorAll('[data-dropdown-content]')
 const container = document.querySelector('.c-header__navigation-dropdown-list')
 const bg = document.querySelector('.c-header__navigation-bg')
+const burger = document.querySelector('.c-hamburger-js')
 
 const offset = (element) => {
   const rect = element.getBoundingClientRect()
@@ -41,6 +42,10 @@ navigation.addEventListener('mouseleave', (event) => {
   catch (e) {}
 })
 
+burger.addEventListener("click", () => {
+  burger.classList.toggle("-active");
+  activeMenu.classList.toggle("-mobile_active");
+})
 
 
 

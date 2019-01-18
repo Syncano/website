@@ -58,6 +58,9 @@
   background-size: cover;
   background-position: bottom center;
   padding-top: 256px;
+  @media only screen and (max-width: 900px) {
+    padding-top: 100px;
+  }
 }
 
 .c-hero {
@@ -67,7 +70,6 @@
   transform: translateZ(0);
   backface-visibility: hidden;
   perspective: 1000;
-
   &__image {
     transform: translateZ(0);
     backface-visibility: hidden;
@@ -108,7 +110,7 @@
     padding: 16px;
     border-radius: 24px;
   }
-  
+
   &__description {
     color: $cold-purple;
     font-size: 20px;
@@ -143,4 +145,39 @@
     animation: syncano 3s ease-in-out infinite;
   }
 
+  @media only screen and (max-width: 900px) {
+    flex-wrap: wrap;
+    &__content {
+      text-align: center;
+      width: 100%;
+    }
+    &__heading {
+      margin: 30px auto;
+      margin-bottom: 15px;
+      font-weight: normal;
+      line-height: 28px;
+      font-size: 24px;
+    }
+    &__description {
+      margin: 0 auto;
+      line-height: 16px;
+      font-size: 12px;
+      max-width: 350px;
+    }
+    &__install {
+      margin: 0 auto;
+      font-size: 12px;
+      margin-top: 40px;
+    }
+    &__command {
+      font-size:10px;
+      display: inline-flex;
+      margin: 13px 20px;
+      margin-bottom: 30px;
+    }
+    &__image {
+      margin: 0px auto;
+      max-height: 400px;
+    }
+  }
 }
