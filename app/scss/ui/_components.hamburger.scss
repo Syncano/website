@@ -1,0 +1,46 @@
+/**
+ * = components.hamburger
+ */
+
+
+.c-hamburger {
+  cursor: pointer;
+  color: white;
+  display: none;
+  @media only screen and (max-width: 1120px) {
+    display: block;
+  }
+  &__bar {
+    cursor: pointer;
+      width: 35px;
+      height: 5px;
+      background-color: white;
+      margin: 5px 0;
+      transition: 0.4s;
+      border-radius: 4px;
+      @media only screen and (max-width: 500px) {
+        width: 25px;
+        height: 4px;
+      }
+    }
+    &.-active {
+
+      .-bar1 {
+        transform: rotate(-45deg) translate(-7px, 6px);
+      }
+      .-bar2 {
+        opacity: 0;
+      }
+      .-bar3 {
+        transform: rotate(45deg) translate(-7px, -7px);
+    }
+    @media only screen and (max-width: 500px) {
+      .-bar1 {
+        transform: rotate(-45deg) translate(-6px, 6px);
+      }
+      .-bar3 {
+        transform: rotate(45deg) translate(-6px, -7px);
+      }
+    }
+  }
+}
