@@ -34,4 +34,8 @@
     position: relative;
     z-index: 12;
   }
+  &__overflow {
+    overflow: auto;
+    min-height: 430px;
+  }
 }
