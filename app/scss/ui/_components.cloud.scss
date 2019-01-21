@@ -1,0 +1,130 @@
+/**
+ * = components.cloud
+ */
+ .c-cloud {
+  max-width: 844px;
+  &__title {
+    @include font-size(24px, 28px);
+    color: $brand;
+    display: block;
+    text-align: center;
+    margin: 0 auto 16px auto;
+
+    @include at(md\+) {
+      @include font-size(40px, 52px);
+      margin: 0 auto 40px auto;
+    }
+  }
+  &__subtitle {
+    @include font-size(12px, 16px);
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: $san-marino;
+    @include at(md\+) {
+      @include font-size(20px, 24px);
+    }
+    @media only screen and (max-width: 720px) {
+      margin: 0 5px;
+    }
+  }
+  &__image {
+    width: 100%;
+  }
+  &__image img {
+    width: 96px;
+    display: block;
+    margin: 30px auto;
+    @media only screen and (max-width: 720px) {
+      width: 65px;
+    }
+  }
+  &__properties {
+    width: 100%;
+    display: flex;
+    margin: 80px auto;
+    max-width: 930px;
+    align-items: flex-start;
+    @media only screen and (max-width: 1000px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @media only screen and (max-width: 720px) {
+      margin: 20px auto;
+    }
+  }
+  &__properties-column {
+    min-width: 230px;
+    width: 25%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 200px;
+    @media only screen and (max-width: 1000px) {
+      width: 35%;
+      margin: 20px 0;
+    }
+    @media only screen and (max-width: 720px) {
+      width: 70%;
+      margin: 20px 0;
+    }
+  }
+  &__header {
+    width: 100%;
+    display: flex;
+    margin-bottom: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    font-size: 20px;
+    color: $brand-light;
+    align-items: center;
+  }
+  &__header img {
+    width: 40px;
+    display: block;
+    margin-right: 8px;
+  }
+  &__feature {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 12px 0;
+    @media only screen and (max-width: 720px) {
+      margin: 8px 0;
+    }
+  }
+  &__feature-header {
+    width: 100%;
+    font-weight: bold;
+    line-height: 20px;
+    font-size: 14px;
+    letter-spacing: -0.05px;
+    font-weight: bold;
+    line-height: 20px;
+    font-size: 14px;
+    letter-spacing: -0.05px;
+    color: $brand-light;
+    @media only screen and (max-width: 720px) {
+      display: flex;
+      font-weight: normal;
+    }
+  }
+  &__feature-header img {
+    display: none;
+    margin-right: 7px;
+    @media only screen and (max-width: 720px) {
+      display: block;
+    }
+  }
+ 
+  &__feature-description {
+    font-weight: normal;
+    line-height: 16px;
+    font-size: 12px;
+    color: $grey-800;
+    @media only screen and (max-width: 720px) {
+      display: none;
+    }
+  }
+}
