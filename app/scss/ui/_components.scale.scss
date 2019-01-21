@@ -30,11 +30,50 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    color: $cold-purple;
     @include at(md\+) {
       @include font-size(20px, 24px);
     }
     @media only screen and (max-width: 720px) {
       margin: 0 5px;
     }
+  }
+  &__questions {
+    width: 100%;
+    max-width: 844px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 80px auto;
+    color: white
+  }
+  &__faq {
+    width: 50%;
+    height: auto;
+  }
+  &__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    line-height: 20px;
+    font-size: 16px;
+    letter-spacing: -0.05px;
+  }
+  &__header img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    display: block;
+  }
+  &__answer {
+    margin-top: 25px;
+    margin-bottom: 60px;
+    padding-left: 34px;
+    width: 100%;
+    font-weight: normal;
+    line-height: 20px;
+    font-size: 14px;
+    color: $cold-purple;
+    max-width: 370px;
   }
 }
