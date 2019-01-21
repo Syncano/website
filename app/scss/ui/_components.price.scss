@@ -2,9 +2,6 @@
  * = components.price
  */
 .s-pricing {
-  background: url('/assets/img/pricing_plans/group.svg'), url('/assets/img/pricing_plans/bgpricing.svg');
-  background-size: cover;
-  background-position: bottom center;
   padding-top: 256px;
   @media only screen and (max-width: 900px) {
     padding-top: 100px;
@@ -51,14 +48,18 @@
   &__conatainer {
     width: 50%;
     height: 100%;
+    max-width: 380px;
+    min-width: 300px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 10px 0px;
     border-radius: 16px;
     background-color: white;
-    min-width: 300px;
     &.-description-container {
       background-color: #F4F6FF;
       margin-left: 10px;
       margin-top: 90px;
+      @media only screen and (max-width: 500px) {
+        margin-top: 25px;
+      }
     }
     &.-version-container {
       margin-right: 10px;
@@ -89,12 +90,19 @@
     &.-description {
       background-color: #A6B1DC;
     }
+    @media only screen and (max-width: 500px) {
+      font-size: 14px;
+      padding: 8px 0px;
+    }
   }
   &__version-title {
     width: 100%;
     justify-content: center;
     display: flex;
     margin-top: 30px;
+    @media only screen and (max-width: 500px) {
+      margin-top: 25px;
+    }
   }
   &__start {
     font-weight: 500;
@@ -139,11 +147,11 @@
     margin: 50px auto;
     flex-wrap: wrap;
     &.mg- {
-      margin: 30px auto;
+      margin: 0px auto;
       max-width: 170px;
     }
     @media only screen and (max-width: 500px) {
-      margin: 20px auto;
+      margin: 15px auto;
     }
   }
   &__properties {
@@ -151,6 +159,9 @@
     display: flex;
     align-items: center;
     margin: 10px 0;
+    @media only screen and (max-width: 500px) {
+      margin: 7px 0;
+    }
   }
   &__check-text {
     line-height: 20px;
@@ -176,6 +187,9 @@
     &.-margin {
       margin-top: 15px;
       margin-bottom: 40px;
+      @media only screen and (max-width: 500px) {
+        margin-bottom: 30px;
+      }
     }
   }
   &__range {
@@ -193,6 +207,9 @@
     position: relative;
     margin-top: 10px;
     margin-bottom: 10px;
+    @media only screen and (max-width: 800px) {
+      max-width: 240px;
+    }
   }
   &__slider {
     &::-webkit-slider-thumb {
@@ -262,16 +279,22 @@
     font-size: 16px;
     letter-spacing: 0.18px;
     color: lightblue;
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 500px) {
       font-size: 12px;
     }
   }
   &__image {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    margin-top: 45px;
-
+    margin: 45px auto;
+    @media only screen and (max-width: 500px) {
+      margin: 25px auto;
+    }
+  }
+  &__image svg {
+    width: 100%;
+    display: block;
+    @media only screen and (max-width: 500px) {
+      max-height: 150px;
+    }
   }
 }
