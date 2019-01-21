@@ -1,0 +1,6 @@
+{
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#313A75"
+  },
+  "window.title": "SYNCANO LANDING 🚀 ${separator} ${activeEditorMedium}"
+}

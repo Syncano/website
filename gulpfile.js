@@ -4,6 +4,7 @@ const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
 const autoprefixer = require('gulp-autoprefixer');
 const headerfooter = require('gulp-headerfooter');
+const fileinclude = require('gulp-file-include');
 const browserSync = require('browser-sync').create();
 const browserify = require('browserify');
 const uglify = require('gulp-uglify');
@@ -72,6 +73,10 @@ gulp.task('html', function() {
     .src('./app/content/*.html')
     .pipe(headerfooter.header('./app/partials/header.html'))
     .pipe(headerfooter.footer('./app/partials/footer.html'))
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
     .pipe(preprocess())
     .pipe(gulp.dest('./dist/'));
 });
