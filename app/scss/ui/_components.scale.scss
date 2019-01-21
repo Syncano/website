@@ -1,0 +1,40 @@
+/**
+ * = components.scale
+ */
+ .s-scale {
+  background: url('/assets/img/pricing_plans/bg.svg');
+  background-size: cover;
+  background-position: top center;
+  padding-top: 660px;
+  @media only screen and (max-width: 900px) {
+    padding-top: 100px;
+  }
+}
+.c-scale {
+  color: white;
+  max-width: 844px;
+  &__title {
+    @include font-size(24px, 28px);
+    display: block;
+    text-align: center;
+    margin: 0 auto 16px auto;
+
+    @include at(md\+) {
+      @include font-size(40px, 52px);
+      margin: 0 auto 40px auto;
+    }
+  }
+  &__subtitle {
+    @include font-size(12px, 16px);
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    @include at(md\+) {
+      @include font-size(20px, 24px);
+    }
+    @media only screen and (max-width: 720px) {
+      margin: 0 5px;
+    }
+  }
+}
