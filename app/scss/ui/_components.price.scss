@@ -54,7 +54,7 @@
     border-radius: 16px;
     background-color: white;
     margin-right: 10px;
-    &.-description-container {
+    &.--alternative {
       background-color: $spindle-light;
       margin-left: 10px;
       margin-top: 90px;
@@ -65,7 +65,7 @@
     @media only screen and (max-width: 800px) {
       width: 60%;
       margin-right: inherit;
-      &.-description-container {
+      &.--alternative {
         margin-left: inherit;
       }
     }
@@ -80,10 +80,10 @@
     letter-spacing: -0.07px;
     padding: 12px 0px;
     border-radius: 16px 16px 0 0;
-    &.-version {
+    &.--version {
       background-color: $spindle-light;
     }
-    &.-description {
+    &.--description {
       background-color: $cold-purple;
     }
     @media only screen and (max-width: 500px) {
@@ -164,9 +164,6 @@
     font-size: 14px;
     letter-spacing: -0.05px;
     color: $grey-800;
-    .text_blue {
-      color: $san-marino;
-    }
   }
   &__check-img {
     width: 15px;
@@ -177,10 +174,10 @@
     font-size: 14px;
     text-align: center;
     color:$brand-light;
-    &.-lightgrey {
+    &.--lightgrey {
       color: $grey-1000;
     }
-    &.-margin {
+    &.--with-margin {
       margin-top: 15px;
       margin-bottom: 40px;
       @media only screen and (max-width: 500px) {
@@ -234,7 +231,7 @@
     }
     &.--gradient {
       width: 0%;
-      background: linear-gradient(90deg, #5162AA 0%, #D34E92 100%);
+      background: linear-gradient(90deg, $brand-light 0%, $medium-violet-red 100%);
     }
   }
   &__zipimage {
