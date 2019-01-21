@@ -40,7 +40,8 @@
       background: #D34E92;
       padding: 5px 22px;
       border-radius: 18px;
-      .c-header & {
+      .c-header.--light &,
+      .c-header.--dark & {
         color: #fff;
       }
     }
@@ -61,6 +62,9 @@
           color: $cold-purple;
           margin: 0 16px;
           text-decoration: none;
+          .--light & {
+            color: $san-marino;
+          }
         }
       }
     }
@@ -208,6 +212,14 @@
 
     }
   }
+
+  &__logo-text {
+    fill: #fff;
+    .--light & {
+      fill: $grey-200;
+    }
+  }
+
   .nav-trigger {
     display: none;
   }
