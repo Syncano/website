@@ -116,7 +116,3 @@ burger.addEventListener("click", () => {
     } catch(err) {}
   }
 })()
-
-
-
-
