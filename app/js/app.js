@@ -13,33 +13,58 @@ const offset = (element) => {
   }
 }
 
+
+
+
 dropdowns.forEach((item) => {
+  const dropdownTarget = item.getAttribute('data-dropdown')
+
+
+  if (dropdownTarget !== 'clear')
+    item.querySelector('.c-header__navigation-mobile').innerHTML = document.querySelector(`[data-dropdown-content=${item.getAttribute('data-dropdown')}]`).innerHTML
+
   item.addEventListener('mouseenter', (event) => {
-    const target = document.querySelector(`[data-dropdown-content=${item.getAttribute('data-dropdown')}]`)
-    try {
-      document.querySelector('[data-dropdown-content].--active').classList.remove('--active')
+
+    const windowMode = window.getComputedStyle(document.querySelector('body'), '::before').getPropertyValue('content').replace(/'/g, "").replace(/"/g, "").split(', ')[0]
+
+    if (windowMode === 'desktop') {
+
+      const target = document.querySelector(`[data-dropdown-content=${item.getAttribute('data-dropdown')}]`)
+      
+      try {
+        document.querySelector('[data-dropdown-content].--active').classList.remove('--active')
+      } catch (e) {}
+
+      navigation.classList.add('--dropdown')
+      if (target) {
+        target.classList.add('--active')
+        const targetWidth = target.offsetWidth
+        const targetHeight = target.offsetHeight
+        const left = offset(item).left + (item.offsetWidth / 2) - (targetWidth / 2)
+        Object.assign(bg.style, {
+          width: targetWidth + 'px',
+          height: targetHeight + 'px',
+          'transform': `translate(${left}px)`
+        })
+        Object.assign(container.style, {
+          width: targetWidth + 'px',
+          height: targetHeight + 'px',
+          'transform': `translate(${left}px)`
+        })
+      } else {
+        navigation.classList.remove('--dropdown')
+      }
     }
-    catch (e) {}
-    navigation.classList.add('--dropdown')
-    if (target){
-      target.classList.add('--active')
-      const targetWidth = target.offsetWidth
-      const targetHeight = target.offsetHeight
-      const left = offset(item).left + (item.offsetWidth / 2) - (targetWidth / 2)
-      Object.assign(bg.style, {width: targetWidth+'px', height: targetHeight+'px', 'transform':  `translate(${left}px)`})
-      Object.assign(container.style, {width: targetWidth+'px', height: targetHeight+'px', 'transform':  `translate(${left}px)`})
-    } else {
-      navigation.classList.remove('--dropdown')
-    }
+
   })
+
 })
 
 navigation.addEventListener('mouseleave', (event) => {
   try {
     navigation.classList.remove('--dropdown')
     document.querySelector('[data-dropdown-content].--active').classList.remove('--active')
-  }
-  catch (e) {}
+  } catch (e) {}
 })
 
 burger.addEventListener("click", () => {
@@ -50,7 +75,8 @@ burger.addEventListener("click", () => {
 
 
 
-;(function() {
+;
+(function () {
   const select = document.querySelector('[data-feature-select]')
   const features = document.querySelectorAll('[data-feature-list-item]')
   const demos = {
@@ -83,7 +109,7 @@ burger.addEventListener("click", () => {
 
     try {
       createDemo(demos[value])
-    } catch(err) {}
+    } catch (err) {}
 
     selectedFeatureListItem.classList.add('is-active')
   }
@@ -101,6 +127,22 @@ burger.addEventListener("click", () => {
 
     try {
       createDemo(demos[value])
-    } catch(err) {}
+    } catch (err) {}
   }
 })()
+
+
+console.log(`%c
+.                               .
+.    Curious person, huh?       .
+.    Want to hear something?    .
+.    type: play() below         .
+.                               .
+`, 'background: #000; color: #fefefe; font-size: 14px; line-height:18px; margin:0; font-family: Menlo, monospace;');
+
+
+const play = () => {
+  const audio = document.createElement('audio')
+  audio.src = '/assets/toto.mp3'
+  audio.play()
+}
