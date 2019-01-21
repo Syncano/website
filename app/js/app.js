@@ -1,4 +1,5 @@
 const navigation = document.querySelector('.c-header__navigation')
+const header = document.querySelector('.c-header')
 const dropdowns = document.querySelectorAll('[data-dropdown]')
 const dropdownsContent = document.querySelectorAll('[data-dropdown-content]')
 const container = document.querySelector('.c-header__dropdown-list')
@@ -41,12 +42,12 @@ const left = offset(item).left + (item.offsetWidth / 2) - (targetWidth / 2)
 Object.assign(bg.style, {
   width: targetWidth + 'px',
   height: targetHeight + 'px',
-  'transform': `translate(${left}px, 0)`
+  'transform': `translateX(${left}px)`
 })
 Object.assign(container.style, {
   width: targetWidth + 'px',
   height: targetHeight + 'px',
-  'transform': `translate(${left}px, 0)`
+  'transform': `translateX(${left}px)`
 })
 
 
@@ -105,17 +106,21 @@ navigation.addEventListener('mouseleave', (event) => {
   } catch (e) {}
 })
 
+try {
 burger.addEventListener("click", () => {
-  burger.classList.toggle("-active");
-  activeMenu.classList.toggle("-mobile_active");
+  burger.classList.toggle("--active");
+  document.querySelector('body').classList.toggle("--mobile-active");
 })
+} catch(e) {}
 
 
 
 
-;
+
 (function () {
   const select = document.querySelector('[data-feature-select]')
+  if (select) {
+    
   const features = document.querySelectorAll('[data-feature-list-item]')
   const demos = {
     hosting: (config) => hostingDemo(config).end(),
@@ -123,9 +128,11 @@ burger.addEventListener("click", () => {
     users: (config) => usersDemo(config).end(),
     events: (config) => eventsDemo(config).end(),
   }
-
+  try {
   createDemo(demos.hosting)
+  } catch (e) {
 
+  }
   select.addEventListener('change', handleChange)
   features.forEach(item => item.addEventListener('click', handleClick))
 
@@ -167,6 +174,7 @@ burger.addEventListener("click", () => {
       createDemo(demos[value])
     } catch (err) {}
   }
+}
 })()
 
 

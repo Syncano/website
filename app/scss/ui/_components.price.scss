@@ -3,6 +3,8 @@
  */
 .s-pricing {
   padding-top: 256px;
+  background: url('/assets/img/light-bg.svg') top right no-repeat;
+  background-size: contain;
   @media only screen and (max-width: 900px) {
     padding-top: 100px;
   }
