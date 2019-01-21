@@ -4,6 +4,18 @@ const dropdownsContent = document.querySelectorAll('[data-dropdown-content]')
 const container = document.querySelector('.c-header__navigation-dropdown-list')
 const bg = document.querySelector('.c-header__navigation-bg')
 const burger = document.querySelector('.c-hamburger-js')
+const blueRange = document.querySelector('.bluerange--js');
+const slider = document.querySelector('.slider--js');
+const SECONDS_PRICE = 5;
+const SECONDS_MAX = 20000000;
+const SECONDS_MIN = 270000;
+
+if (slider) {
+  slider.oninput = ({target}) =>  {
+    const value = parseInt(target.value, 10);
+    blueRange.style.setProperty("width", (value - SECONDS_MIN) / (SECONDS_MAX - SECONDS_MIN) * 100 + "%");
+  }
+}
 
 const offset = (element) => {
   const rect = element.getBoundingClientRect()
@@ -104,3 +116,7 @@ burger.addEventListener("click", () => {
     } catch(err) {}
   }
 })()
+
+
+
+

@@ -1,0 +1,277 @@
+/**
+ * = components.price
+ */
+.s-pricing {
+  background: url('/assets/img/pricing_plans/group.svg'), url('/assets/img/pricing_plans/bgpricing.svg');
+  background-size: cover;
+  background-position: bottom center;
+  padding-top: 256px;
+  @media only screen and (max-width: 900px) {
+    padding-top: 100px;
+  }
+}
+.c-pricing {
+  max-width: 844px;
+  &__title {
+    @include font-size(24px, 28px);
+    color: $brand;
+    display: block;
+    text-align: center;
+    margin: 0 auto 16px auto;
+
+    @include at(md\+) {
+      @include font-size(40px, 52px);
+      margin: 0 auto 40px auto;
+    }
+  }
+  &__subtitle {
+    @include font-size(12px, 16px);
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: $san-marino;
+
+    @include at(md\+) {
+      @include font-size(20px, 24px);
+    }
+  }
+  &__plans {
+    padding-top: 80px;
+    width: 100%;
+    display: flex;
+    @media only screen and (max-width: 800px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @media only screen and (max-width: 500px) {
+      padding-top: 40px;
+    }
+  }
+  &__conatainer {
+    width: 50%;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 10px 0px;
+    border-radius: 16px;
+    background-color: white;
+    min-width: 300px;
+    &.-description-container {
+      background-color: #F4F6FF;
+      margin-left: 10px;
+      margin-top: 90px;
+    }
+    &.-version-container {
+      margin-right: 10px;
+    }
+    @media only screen and (max-width: 800px) {
+      width: 60%;
+      &.-description-container {
+        margin-left: inherit;
+      }
+      &.-version-container {
+        margin-right: inherit;
+      }
+    }
+  }
+  &__package-title {
+    color: #7E8ABF;
+    text-align: center;
+    font-style: normal;
+    font-weight: lighter;
+    line-height: 24px;
+    font-size: 20px;
+    letter-spacing: -0.07px;
+    padding: 12px 0px;
+    border-radius: 16px 16px 0 0;
+    &.-version {
+      background-color: #F7F8FE;
+    }
+    &.-description {
+      background-color: #A6B1DC;
+    }
+  }
+  &__version-title {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin-top: 30px;
+  }
+  &__start {
+    font-weight: 500;
+    line-height: 24px;
+    font-size: 20px;
+    text-align: center;
+    color: #A6B1DC;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    @media only screen and (max-width: 500px) {
+      font-size: 16px;
+    }
+  }
+  &__price {
+    display: flex;
+    font-weight: bold;
+    line-height: 40px;
+    font-size: 48px;
+    text-align: center;
+    letter-spacing: -0.2px;
+    color: $brand;
+    @media only screen and (max-width: 500px) {
+      font-size: 40px;
+    }
+  }
+  &__time {
+    display: flex;
+    align-items: flex-end;
+    font-weight: bold;
+    line-height: 20px;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: -0.05px;
+    color: $brand;
+  }
+  &__check-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    max-width: 185px;
+    margin: 50px auto;
+    flex-wrap: wrap;
+    &.mg- {
+      margin: 30px auto;
+      max-width: 170px;
+    }
+    @media only screen and (max-width: 500px) {
+      margin: 20px auto;
+    }
+  }
+  &__properties {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  &__check-text {
+    line-height: 20px;
+    font-size: 14px;
+    letter-spacing: -0.05px;
+    color: #808080;
+    .blue_text {
+      color: #5162AA;
+    }
+  }
+  &__check-img {
+    width: 15px;
+    margin-right: 8px;
+  }
+  &__title-range {
+    line-height: 20px;
+    font-size: 14px;
+    text-align: center;
+    color:#353F80;
+    &.-lightgrey {
+      color: #C4C4C4;
+    }
+    &.-margin {
+      margin-top: 15px;
+      margin-bottom: 40px;
+    }
+  }
+  &__range {
+    width: 300px;
+    margin: 20px auto;
+    @media only screen and (max-width: 800px) {
+      width: 250px;
+    }
+  }
+  &__range-container {
+    width: 100%;
+    height: 7px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  &__slider {
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 15px;
+      height: 20px;
+      border: 1px solid $brand;
+      border-radius: 5px;
+      background-image: url("/assets/img/pricing_plans/grip.png");
+      cursor: pointer;
+    }
+  }
+  &__range-width {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 7px;
+    background: rgba(0, 0, 0, 0);
+    outline: none;
+    opacity: 1;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 5px;
+    position: absolute;
+    &.-grayrange {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 7px;
+      background: #909397;
+      outline: none;
+      opacity: 1;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+      border-radius: 5px;
+      position: absolute;
+    }
+    &.-bluerange {
+      -webkit-appearance: none;
+      width: 0;
+      height: 7px;
+      background: linear-gradient(90deg, #5162AA 0%, #D34E92 100%);
+      outline: none;
+      opacity: 1;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+      border-radius: 5px;
+      position: absolute;
+
+    }
+  }
+  &__zipimage {
+    position: absolute;
+    left: 50%;
+    top: -7px;
+    img {
+      cursor: pointer;
+      width: 15px;
+      height: 20px;
+      display: block;
+    }
+  }
+  &__ziptitle {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    letter-spacing: 0.18px;
+    color: lightblue;
+    @media only screen and (max-width: 600px) {
+      font-size: 12px;
+    }
+  }
+  &__image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 45px;
+
+  }
+}
