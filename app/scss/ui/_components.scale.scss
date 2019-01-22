@@ -5,14 +5,29 @@
   background: url('/assets/img/pricing_plans/bg.svg');
   background-size: cover;
   background-position: top center;
-  padding-top: 660px;
+  padding-top: 630px;
+  padding-bottom: 400px;
+  margin-bottom: -400px;
+  // margin-bottom: -510px;
+  @media only screen and (max-width: 1200px) {
+    padding-top: 490px;
+  }
   @media only screen and (max-width: 900px) {
-    padding-top: 100px;
+    padding-top: 380px;
+  }
+  @media only screen and (max-width: 500px) {
+    padding-top: 420px;
+  }
+  @media only screen and (min-width: 1500px) {
+    padding-top: 700px;
   }
 }
 .c-scale {
   color: white;
   max-width: 844px;
+  @media only screen and (max-width: 700px) {
+    padding-top: 50px;
+  }
   &__title {
     @include font-size(24px, 28px);
     display: block;
@@ -38,16 +53,27 @@
       margin: 0 5px;
     }
   }
-  &__questions {
-    width: 100%;
-    max-width: 844px;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 80px auto;
-    color: white
-  }
   &__faq {
+    width: 100%;
+    display: flex;
+    max-width: 844px;
+    margin: 80px auto;
+    @media only screen and (max-width: 700px) {
+      flex-wrap: wrap;
+      padding: 0px 10px;
+      margin-bottom: 0px;
+    }
+  }
+  &__column {
     width: 50%;
+    flex-direction: column;
+    color: white;
+    @media only screen and (max-width: 700px) {
+      width: 100%;
+    }
+  }
+  &__question {
+    width: 100%;
     height: auto;
   }
   &__header {
@@ -67,7 +93,7 @@
   }
   &__answer {
     margin-top: 25px;
-    margin-bottom: 60px;
+    margin-bottom: 45px;
     padding-left: 34px;
     width: 100%;
     font-weight: normal;
@@ -75,5 +101,8 @@
     font-size: 14px;
     color: $cold-purple;
     max-width: 370px;
+    @media only screen and (max-width: 700px) {
+      padding-left: 0px;
+    }
   }
 }
