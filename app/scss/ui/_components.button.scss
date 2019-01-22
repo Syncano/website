@@ -46,4 +46,13 @@
       color: $white;
     }
   }
+  &--white {
+    font-weight: 400;
+    color: $san-marino;
+    background-color: white;
+    &:hover {
+      background-color: rgba(white, .9);
+      color: $san-marino;;
+    }
+  }
 }
