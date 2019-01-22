@@ -7,7 +7,7 @@
   cursor: pointer;
   color: white;
   display: none;
-  @media only screen and (max-width: 1120px) {
+  @media only screen and (max-width: 1024px) {
     display: block;
   }
   &__bar {
@@ -18,12 +18,17 @@
       margin: 5px 0;
       transition: 0.4s;
       border-radius: 4px;
+      position: relative;
+      z-index: 2000;
       @media only screen and (max-width: 500px) {
         width: 25px;
         height: 4px;
       }
+      .--active & {
+        background: #000;
+      }
     }
-    &.-active {
+    &.--active {
 
       .-bar1 {
         transform: rotate(-45deg) translate(-7px, 6px);

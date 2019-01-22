@@ -3,6 +3,8 @@
  */
 .s-pricing {
   padding-top: 256px;
+  background: url('/assets/img/light-bg.svg') top right no-repeat;
+  background-size: contain;
   @media only screen and (max-width: 900px) {
     padding-top: 100px;
   }
@@ -49,7 +51,7 @@
     width: 50%;
     height: 100%;
     max-width: 380px;
-    min-width: 300px;
+    min-width: 280px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 10px 0px;
     border-radius: 16px;
     background-color: white;
@@ -190,6 +192,9 @@
     margin: 20px auto;
     @media only screen and (max-width: 800px) {
       width: 250px;
+    }
+    @media only screen and (max-width: 800px) {
+      width: 220px;
     }
   }
   &__range-container {

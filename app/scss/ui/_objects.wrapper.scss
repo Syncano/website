@@ -22,4 +22,10 @@
   &--thin {
     max-width: 980 + $base-spacing * 2;
   }
+  &--margin-top {
+    margin-top: 200px;
+    @media only screen and (max-width: 720px) {
+      margin-top: 80px;
+    }
+  }
 }

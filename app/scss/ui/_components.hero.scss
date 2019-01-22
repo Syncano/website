@@ -40,8 +40,8 @@
   background: url('/assets/img/hero.svg');
   background-size: cover;
   background-position: bottom center;
-  padding-top: 256px;
-  @media only screen and (max-width: 900px) {
+  padding-top: 200px;
+  @media only screen and (max-width: 1120px) {
     padding-top: 100px;
   }
 }

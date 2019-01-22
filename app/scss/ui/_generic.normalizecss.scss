@@ -22,6 +22,15 @@
 
 body {
   margin: 0;
+  &:before {
+    display: none;
+    content: 'desktop';
+  }
+  @media (max-width: 1120px) {
+    &:before {
+      content: 'mobile';
+    }
+  }
 }
 
 /**
