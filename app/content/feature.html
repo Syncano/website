@@ -1,0 +1,69 @@
+@@include('../partials/topbar.html', {
+  "theme": "--light"
+})
+
+
+
+<div class="s-feature">
+  <div class="c-feature">
+      <div class="c-feature__container">
+        <div class="c-feature__description">
+          <h2 class="c-feature__title">Store your app data </h2>
+          <h2 class="c-feature__title">in the fast <span class="text-pink">NoSQL database</span></h2>
+          <div class="c-feature__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in efficitur metus. Nulla facilisi. Phasellus suscipit, nulla et ultrices rhoncus.</div>
+        </div>
+        <div class="c-feature__image">
+          <img src="/assets/img/feature/db.svg" />
+
+        </div>
+      </div>
+  </div>
+  <div class="c-section c-section--features u-mt++">
+    <!-- /.o-wrapper -->
+
+    <div class="c-select u-ta-c u-hidden@md+ u-mt+@sm u-mh">
+      <select data-feature-select>
+        <option value="hosting">Hosting</option>
+        <option value="database">Database</option>
+        <option value="functions">Functions</option>
+        <option value="users">Users &amp; Groups</option>
+      </select>
+    </div>
+    <!-- /.c-select -->
+
+    <div class="o-wrapper u-mt++@md+ u-mt@sm">
+      <div class="c-demo c-demo__overflow">
+        <aside class="c-feature-list u-hidden@sm">
+          <div class="c-feature-list__item is-active" data-feature-list-item="hosting">
+            <h4 class="c-feature-list__item-title">Hosting</h4>
+            <a href="#" class="c-feature-list__item-link">View docs</a>
+            <span class="c-feature-list__item-description">Your website online in seconds</span>
+          </div>
+          <div class="c-feature-list__item" data-feature-list-item="database">
+            <h4 class="c-feature-list__item-title">Database</h4>
+            <a href="#" class="c-feature-list__item-link">View docs</a>
+            <span class="c-feature-list__item-description">Tightly integrated NoSQL database</span>
+          </div>
+          <div class="c-feature-list__item" data-feature-list-item="functions">
+            <h4 class="c-feature-list__item-title">Functions</h4>
+            <a href="#" class="c-feature-list__item-link">View docs</a>
+            <span class="c-feature-list__item-description">Create your own backend in the cloud</span>
+          </div>
+          <div class="c-feature-list__item" data-feature-list-item="users">
+            <h4 class="c-feature-list__item-title">Users &amp; Groups</h4>
+            <a href="#" class="c-feature-list__item-link">View docs</a>
+            <span class="c-feature-list__item-description">User management out of the box</span>
+          </div>
+          <div class="c-feature-list__indicator"></div>
+        </aside>
+        <!-- /.c-feature-list -->
+
+        <div data-terminal></div>
+      </div>
+      <!-- /.o-wrapper -->
+    </div>
+    <!-- /.c-demo -->
+  </div>
+@@include('../partials/footercontent.html', {
+  "theme": "--margin"
+})
