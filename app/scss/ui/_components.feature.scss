@@ -1,0 +1,65 @@
+/**
+ * = components.price
+ */
+.s-feature {
+  padding-top: 256px;
+  background: url('/assets/img/light-pink-bg.svg') top right no-repeat;
+  background-size: contain;
+  @media only screen and (max-width: 900px) {
+    padding-top: 100px;
+  }
+}
+.c-feature {
+  max-width: 1000px;
+  margin: 0 auto;
+  &__title {
+    @include font-size(24px, 28px);
+    color: $brand;
+    display: block;
+
+    @include at(md\+) {
+      @include font-size(40px, 52px);
+    }
+  }
+  &__subtitle {
+    @include font-size(12px, 16px);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: $san-marino;
+    margin-top: 24px;
+
+    @include at(md\+) {
+      @include font-size(20px, 24px);
+    }
+  }
+  &__container {
+    width: 100%;
+    display: flex;
+    @media only screen and (max-width: 1024px) {
+      margin: 0 5px;
+    }
+    @media only screen and (max-width: 900px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  &__image {
+    width: 50%;
+    @media only screen and (max-width: 900px) {
+      width: 100%;
+    }
+  }
+  &__image {
+    max-width: 650px;
+    display: block;
+  }
+  &__description {
+    width: 50%;
+    max-width: 500px;
+    @media only screen and (max-width: 900px) {
+      width: 100%;
+      padding-top: 30px;
+    }
+  }
+}
