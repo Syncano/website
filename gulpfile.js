@@ -7,6 +7,7 @@ const headerfooter = require('gulp-headerfooter');
 const fileinclude = require('gulp-file-include');
 const browserSync = require('browser-sync').create();
 const browserify = require('browserify');
+const strip = require('gulp-strip-comments');
 const uglify = require('gulp-uglify');
 const babel = require('gulp-babel');
 const plumber = require('gulp-plumber');
@@ -78,6 +79,7 @@ gulp.task('html', function() {
       basepath: '@file'
     }))
     .pipe(preprocess())
+    .pipe(strip())
     .pipe(gulp.dest('./dist/'));
 });
 
