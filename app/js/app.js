@@ -189,14 +189,11 @@ burger.addEventListener("click", () => {
   dropdownLink.forEach((link) => {
     link.classList.remove('is-active')
     link.addEventListener("click", (e) => {
-      console.log(e.currentTarget);
-
       showFeatures(e.currentTarget.dataset.featureLink)
     })
   })
   }
 })()
-
 
 console.log(`%c
 .                               .
@@ -211,4 +208,11 @@ const play = () => {
   const audio = document.createElement('audio')
   audio.src = '/assets/toto.mp3'
   audio.play()
+}
+
+const locationPricing = window.location.pathname
+// console.log(locationPricing)
+if (locationPricing == '/pricing.html') {
+  console.log('ok');
+  const aa = document.querySelectorAll('.c-hamburger__bar').style.backgroundColor = 'black';
 }
