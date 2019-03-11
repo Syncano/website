@@ -160,9 +160,6 @@ burger.addEventListener("click", () => {
   }
 
   const scrollToFeatures = () => {
-    console.log('scroll');
-    console.log(document.querySelector(".features--js"));
-
     document.querySelector(".features--js").scrollIntoView({
       block: "end",
       behavior: "smooth"
@@ -183,6 +180,8 @@ burger.addEventListener("click", () => {
 
   const showFeatures = (featureLinkName) => {
     scrollToFeatures()
+    document.querySelector('body').classList.remove("--mobile-active");
+    burger.classList.remove("--active");
     const dataFeature = document.querySelector(`[data-feature-list-item=${featureLinkName}]`)
     handleFeatureClick(dataFeature)
   }
