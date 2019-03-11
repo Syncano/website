@@ -209,10 +209,3 @@ const play = () => {
   audio.src = '/assets/toto.mp3'
   audio.play()
 }
-
-const locationPricing = window.location.pathname
-// console.log(locationPricing)
-if (locationPricing == '/pricing.html') {
-  console.log('ok');
-  const aa = document.querySelectorAll('.c-hamburger__bar').style.backgroundColor = 'black';
-}
