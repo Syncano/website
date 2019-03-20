@@ -5,10 +5,8 @@ const dropdownsContent = document.querySelectorAll('[data-dropdown-content]')
 const container = document.querySelector('.c-header__dropdown-list')
 const bg = document.querySelector('.c-header__navigation-bg')
 const burger = document.querySelector('.c-hamburger-js')
-const range = document.querySelector('.range--js');
-const slider = document.querySelector('.slider--js');
-
-
+const range = document.querySelector('.range--js')
+const slider = document.querySelector('.slider--js')
 
 const SECONDS_PRICE = 5;
 const SECONDS_MAX = 20000000;
@@ -31,9 +29,6 @@ const offset = (element) => {
   }
 }
 
-
-
-
 const target = document.querySelectorAll(`[data-dropdown-content]`)[0]
 const item = dropdowns[0]
 const targetWidth = target.offsetWidth
@@ -49,11 +44,6 @@ Object.assign(container.style, {
   height: targetHeight + 'px',
   'transform': `translateX(${left}px)`
 })
-
-
-
-
-
 
 dropdowns.forEach((item) => {
   const dropdownTarget = item.getAttribute('data-dropdown')
@@ -113,20 +103,16 @@ burger.addEventListener("click", () => {
 })
 } catch(e) {}
 
-
-
-
-
 (function () {
   const select = document.querySelector('[data-feature-select]')
   if (select) {
-    
+
   const features = document.querySelectorAll('[data-feature-list-item]')
   const demos = {
     hosting: (config) => hostingDemo(config).end(),
     database: (config) => databaseDemo(config).end(),
     users: (config) => usersDemo(config).end(),
-    events: (config) => eventsDemo(config).end(),
+    sockets: (config) => eventsDemo(config).end(),
   }
   try {
   createDemo(demos.hosting)
@@ -134,7 +120,7 @@ burger.addEventListener("click", () => {
 
   }
   select.addEventListener('change', handleChange)
-  features.forEach(item => item.addEventListener('click', handleClick))
+  features.forEach(item => item.addEventListener('click', () => handleFeatureClick(item)))
 
   function createDemo(callback) {
     const terminal = document.querySelector('[data-terminal]')
@@ -158,9 +144,7 @@ burger.addEventListener("click", () => {
 
     selectedFeatureListItem.classList.add('is-active')
   }
-
-  function handleClick(event) {
-    const target = event.currentTarget
+  function handleFeatureClick(target) {
     const value = target.dataset['featureListItem']
 
     Array.from(target.parentElement.children).forEach(item => {
@@ -174,9 +158,42 @@ burger.addEventListener("click", () => {
       createDemo(demos[value])
     } catch (err) {}
   }
-}
-})()
 
+  const scrollToFeatures = () => {
+    document.querySelector(".features--js").scrollIntoView({
+      block: "end",
+      behavior: "smooth"
+    })
+  }
+
+  const locationHref = window.location.hash
+
+  document.onreadystatechange = function() {
+    if(['#hosting', '#sockets', '#database', '#users'].indexOf(locationHref) > -1) {
+      const dataFeature = document.querySelector(`[data-feature-list-item=${locationHref.slice(1)}]`)
+      handleFeatureClick(dataFeature)
+      scrollToFeatures()
+    }
+  }
+
+  const dropdownLink = document.querySelectorAll('[data-feature-link]')
+
+  const showFeatures = (featureLinkName) => {
+    scrollToFeatures()
+    document.querySelector('body').classList.remove("--mobile-active");
+    burger.classList.remove("--active");
+    const dataFeature = document.querySelector(`[data-feature-list-item=${featureLinkName}]`)
+    handleFeatureClick(dataFeature)
+  }
+
+  dropdownLink.forEach((link) => {
+    link.classList.remove('is-active')
+    link.addEventListener("click", (e) => {
+      showFeatures(e.currentTarget.dataset.featureLink)
+    })
+  })
+  }
+})()
 
 console.log(`%c
 .                               .
