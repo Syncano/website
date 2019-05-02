@@ -26,7 +26,7 @@ await user.create({
   return demo
     .openApp('editor', {
       minHeight: '350px',
-      windowTitle: 'my_project',
+      windowTitle: '~/my_project/syncano/user/socket.yml',
       id: 'users-1'
     })
     .write(classesYMLCodeHighlighted)

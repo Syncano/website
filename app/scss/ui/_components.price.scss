@@ -76,7 +76,7 @@
     color: $wild-blue;
     text-align: center;
     font-style: normal;
-    font-weight: lighter;
+    font-weight: 400;
     line-height: 24px;
     font-size: 20px;
     letter-spacing: -0.07px;
@@ -141,12 +141,12 @@
     width: 100%;
     display: flex;
     align-items: center;
-    max-width: 185px;
+    max-width: 195px;
     margin: 50px auto;
     flex-wrap: wrap;
     &.mg- {
       margin: 0px auto;
-      max-width: 170px;
+      max-width: 180px;
     }
     @media only screen and (max-width: 500px) {
       margin: 15px auto;
@@ -166,6 +166,10 @@
     font-size: 14px;
     letter-spacing: -0.05px;
     color: $grey-800;
+
+    &.--alternative {
+      color: #6677C0;
+    }
   }
   &__check-img {
     width: 15px;

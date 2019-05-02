@@ -7,7 +7,10 @@ const bg = document.querySelector('.c-header__navigation-bg')
 const burger = document.querySelector('.c-hamburger-js')
 const range = document.querySelector('.range--js')
 const slider = document.querySelector('.slider--js')
+const price = document.querySelector('.price--js')
+const seconds = document.querySelector('.seconds--js')
 
+const BASE_PRICE = 20;
 const SECONDS_PRICE = 5;
 const SECONDS_MAX = 20000000;
 const SECONDS_MIN = 270000;
@@ -17,6 +20,12 @@ if (slider) {
     target
   }) => {
     const value = parseInt(target.value, 10);
+    const secondsPrice = Math.floor(
+      value / SECONDS_MIN * SECONDS_PRICE - // calculate base price
+      ((value - SECONDS_MIN) * 122 / SECONDS_MAX) // calculate discount
+    )
+    price.innerHTML = BASE_PRICE + secondsPrice
+    seconds.innerHTML = value.toLocaleString()
     range.style.setProperty("width", (value - SECONDS_MIN) / (SECONDS_MAX - SECONDS_MIN) * 100 + "%");
   }
 }

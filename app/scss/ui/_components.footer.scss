@@ -8,7 +8,7 @@
     @include at(sm) {
       margin-top: 40px;
     }
-  
+
     @include at(md\+) {
       margin-top: 180px;
     }
@@ -107,12 +107,13 @@
 
   &__social-button {
     @include font-size(14px, 20px);
+    text-align: left;
+    width: 100%;
     display: grid;
     align-items: center;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 8px;
-    text-align: right;
-    max-width: 250px;
+    column-gap: 8px;
+    grid-template-columns: 24px 1fr;
+    max-width: 170px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 16px;
