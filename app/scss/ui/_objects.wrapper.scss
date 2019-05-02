@@ -11,8 +11,8 @@
   padding-right: $base-spacing;
 
   @include at(sm) {
-    padding-left: quarter($base-spacing);
-    padding-right: quarter($base-spacing);
+    padding-left: halve($base-spacing);
+    padding-right: halve($base-spacing);
   }
 
   &--narrow {

@@ -330,33 +330,29 @@
   }
 
   &__wrapper {
-    padding: 35px;
     display: flex;
     box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
     position: relative;
+    padding-top: 25px;
+    padding-bottom: 25px;
 
     svg {
-      position: relative;
-      z-index: 2019;
+      max-height: 32px;
+      width: auto;
     }
 
-    @media only screen and (max-width: 1000px) {
-      padding: 40px;
-    }
-
-    @media only screen and (max-width: 500px) {
-      padding: 25px 10px;
+    @media only screen and (min-width: 900px) {
+      padding-top: 35px;
+      padding-bottom: 35px;
 
       svg {
-        max-height: 32px;
-        width: auto;
+        position: relative;
+        z-index: 2019;
       }
     }
   }
-
-
 }
 
 

@@ -42,6 +42,10 @@ gulp.task('assets', function() {
   return gulp.src('./app/assets/**/*').pipe(gulp.dest('./dist/assets/'));
 });
 
+gulp.task('public', function() {
+  return gulp.src('./app/public/**/*').pipe(gulp.dest('./dist'));
+});
+
 gulp.task('vendor', function() {
   return gulp.src('./app/vendor/glorious-demo/dist/*').pipe(gulp.dest('./dist/vendor/'));
 });
@@ -83,7 +87,7 @@ gulp.task('html', function() {
     .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('serve', gulp.series('sass', 'html', 'scripts', 'runBrowserify', 'assets', 'vendor', function() {
+gulp.task('serve', gulp.series('sass', 'html', 'scripts', 'runBrowserify', 'public', 'assets', 'vendor', function() {
   browserSync.init({
     server: './dist',
     open: true // set to false to disable browser autostart
@@ -98,7 +102,7 @@ gulp.task('serve', gulp.series('sass', 'html', 'scripts', 'runBrowserify', 'asse
   gulp.watch('dist/js/*.js').on('change', browserSync.reload);
 }));
 
-gulp.task('build', gulp.series('sass', 'html' ,'scripts', 'runBrowserify', 'assets', 'vendor'));
+gulp.task('build', gulp.series('sass', 'html' ,'scripts', 'runBrowserify', 'public', 'assets', 'vendor'));
 gulp.task('default', gulp.series('serve'));
 
 
