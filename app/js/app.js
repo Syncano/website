@@ -2,6 +2,7 @@ const navigation = document.querySelector('.c-header__navigation')
 const header = document.querySelector('.c-header')
 const dropdowns = document.querySelectorAll('[data-dropdown]')
 const dropdownsContent = document.querySelectorAll('[data-dropdown-content]')
+const headerWrapper = document.querySelector('.c-header__wrapper')
 const container = document.querySelector('.c-header__dropdown-list')
 const bg = document.querySelector('.c-header__navigation-bg')
 const burger = document.querySelector('.c-hamburger-js')
@@ -42,7 +43,7 @@ const target = document.querySelectorAll(`[data-dropdown-content]`)[0]
 const item = dropdowns[0]
 const targetWidth = target.offsetWidth
 const targetHeight = target.offsetHeight
-const left = offset(item).left + (item.offsetWidth / 2) - (targetWidth / 2)
+const left = offset(item).left + (item.offsetWidth / 2) - (targetWidth / 2) - offset(headerWrapper).left
 Object.assign(bg.style, {
   width: targetWidth + 'px',
   height: targetHeight + 'px',
@@ -78,7 +79,7 @@ dropdowns.forEach((item) => {
         target.classList.add('--active')
         const targetWidth = target.offsetWidth
         const targetHeight = target.offsetHeight
-        const left = offset(item).left + (item.offsetWidth / 2) - (targetWidth / 2)
+        const left = offset(item).left + (item.offsetWidth / 2) - (targetWidth / 2) - offset(headerWrapper).left
         Object.assign(bg.style, {
           width: targetWidth + 'px',
           height: targetHeight + 'px',

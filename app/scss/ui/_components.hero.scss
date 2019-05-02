@@ -34,13 +34,23 @@
   }
 }
 
-
+body {
+  @media only screen and (min-width: 901px) {
+    background: url('/assets/img/hero.svg');
+    background-repeat: no-repeat;
+    background-position: center -140px;
+  }
+}
 
 .s-hero {
-  background: url('/assets/img/hero.svg');
-  background-size: cover;
-  background-position: bottom center;
   padding-top: 200px;
+
+  @media only screen and (max-width: 900px) {
+    background: url('/assets/img/hero.svg');
+    background-repeat: no-repeat;
+    background-position: center -140px;
+  }
+
   @media only screen and (max-width: 1120px) {
     padding-top: 100px;
   }
@@ -143,24 +153,23 @@
     }
     &__description {
       margin: 0 auto;
-      line-height: 16px;
-      font-size: 12px;
+      line-height: 20px;
+      font-size: 16px;
       max-width: 350px;
     }
     &__install {
       margin: 0 auto;
-      font-size: 12px;
+      font-size: 14px;
       margin-top: 40px;
     }
     &__command {
-      font-size:10px;
+      font-size: 13px;
       display: inline-flex;
       margin: 13px 20px;
       margin-bottom: 30px;
     }
     &__image {
-      margin: 0px auto;
-      max-height: 400px;
+      display: none;
     }
   }
 }
