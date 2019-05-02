@@ -42,24 +42,24 @@
       "head head"
       "social social"
       "platform developers"
-      "support products"
+      "support support"
       "copyright copyright";
 
     @include at(md) {
       grid-template-areas:
-        "head head head head"
-        "platform developers support products"
-        "social social social social"
-        "copyright copyright copyright copyright";
+        "head head head"
+        "platform developers support"
+        "social social social"
+        "copyright copyright copyright";
     }
 
     @include at(lg) {
       grid-column-gap: 4px;
       grid-auto-columns: auto;
       grid-template-areas:
-        "head head head head head"
-        "platform products developers support social"
-        "copyright copyright copyright copyright copyright";
+        "head head head head"
+        "platform developers support social"
+        "copyright copyright copyright copyright";
     }
   }
 
@@ -114,10 +114,13 @@
     column-gap: 8px;
     grid-template-columns: 24px 1fr;
     max-width: 170px;
-    margin-left: auto;
-    margin-right: auto;
     padding-left: 16px;
     padding-right: 16px;
+
+    @include at(md-) {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   &__copyright {
