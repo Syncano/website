@@ -1,4 +1,12 @@
   <!-- /.c-footer -->
+
+  <script>
+    if (/logged_in\=true/.test(document.cookie)) {
+      const signIn = document.querySelector('.sign-in--js')
+      signIn.innerHTML = "Go to Dashboard"
+      signIn.setAttribute('href', 'https://dashboard.syncano.io') = "Go to Dashboard"
+    }
+  </script>
   <script src="/js/utils.js"></script>
   <script src="/js/code/hosting.js"></script>
   <script src="/js/code/user.js"></script>
